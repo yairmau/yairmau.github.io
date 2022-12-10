@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  title: "Yair Mau"
+  search: false
+  favicon: archive/site_images/favicon.ico
+  navbar:
+    logo: archive/site_images/site-logo-light.png
+    pinned: false
+    collapse: true
+    search: false
+    right:
+      - science.qmd
+      - papers.qmd
+      - group.qmd
+      - courses/index.qmd
+      - more/index.qmd
+      # - blog.qmd
+format:
+  html:
+    theme:
+      # - litera
+      # - custom.scss
+      light: [flatly, custom.scss, custom-light.scss]
+      dark: [darkly, custom.scss, custom-dark.scss]
+    css: styles.css
+    highlight: false
+    # https://quarto.org/docs/output-formats/html-code.html#highlighting
+    highlight-style: gruvbox
+    mainfont: Ubuntu
+    monofont: Ubuntu Mono
+    max-width: "700"
+    include-in-header:
+      - includes.html
+    output-dir: docso 
+    # embed-resources: true
+# theme list: https://bootswatch.com/3/
+
+
+# body-header: This page brought to you by <https://example.com>
+# margin-header: |
+#   ![Logo image](logo.png)
+
