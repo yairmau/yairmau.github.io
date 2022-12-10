@@ -1,0 +1,12 @@
+---
+title: "{{< fa magnifying-glass-plus >}} More"
+echo: false
+jupyter: python3
+section-divs: false
+---
+
+## <i class="fab fa-python fa-fw fa-lg fa-notbold svv"></i> [Python tutorial](/tutorials/python/)
+
+## <i class="fa-solid fa-quote-left fa-fw fa-lg fa-notbold svv"></i> [Quotes](/more/quotes.html)
+
+## <i class="fa-solid fa-microphone-lines fa-fw fa-lg fa-notbold svv"></i> [Science Communication](/more/communication.html)

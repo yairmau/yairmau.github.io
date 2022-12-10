@@ -1,0 +1,11 @@
+
+/*-- scss:defaults --*/
+//   FreeSerif, serif !default;
+// $max-width: 500px;
+// $max-width: 400px;
+/*-- scss:rules --*/
+
+
+.my-btn-style{
+    @extend .btn-outline-primary;
+}

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Yair Mau -  Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../science.html"><i class="fa-solid fa-compass-drafting" aria-hidden="true"></i> Science</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../papers.html"><i class="fa-solid fa-file" aria-hidden="true"></i> Papers</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../group.html"><i class="fa-solid fa-circle-user" aria-hidden="true"></i> Group</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../courses/index.html"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i> Courses</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../more/index.html"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> More</a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Python is a great language for scientific computing, most of the programming done by our group is in python. We provide below some links for learning this language, and below we offer many python code examples. You are invited to download these codes, tweak with them, break them, hack them as you wish!</p>
+<p>Most codes focus on plotting, but other algorithms such as numerical integration and Fourier transforms can also be found.</p>
+<p>Some useful links for learning python:</p>
+<ul>
+<li><a href="http://nbviewer.jupyter.org/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/Index.ipynb" target="_blank">Python Data Science Handbook</a></li>
+<li><a href="https://learnpythonthehardway.org/book/" target="_blank">Learn Python the Hard Way</a></li>
+<li><a href="http://nbviewer.jupyter.org/gist/rpmuller/5920182" target="_blank">A Crash Course in Python for Scientists</a></li>
+<li><a href="http://swcarpentry.github.io/python-novice-inflammation/" target="_blank">Software Carpentry</a></li>
+<li><a href="http://matthiaseisen.com/fwl/py/" target="_blank">Fun with Lists</a></li>
+<li><a href="https://www.codecademy.com/learn/python" target="_blank">Python | Codecademy</a></li>
+<li><a href="http://www.scipy-lectures.org/index.html" target="_blank">Scipy Lecture Notes</a></li>
+<li><a href="https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks" target="_blank">A gallery of interesting IPython Notebooks</a></li>
+<li><a href="http://greenteapress.com/thinkpython/html/index.html" target="_blank">Think Python: How to Think Like a Computer Scientist</a><br>
+</li>
+<li><a href="https://python-graph-gallery.com/" target="_blank">The Python Graph Gallery</a></li>
+</ul>
+This might be overwhelming, so I suggest you to follow this:
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a problem you're interested in and learn to solve it with Python.
+</p>
+— Jake VanderPlas (<span class="citation" data-cites="jakevdp">@jakevdp</span>) <a href="https://twitter.com/jakevdp/status/906901174728536066?ref_src=twsrc%5Etfw">September 10, 2017</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Start by downloading <a href="https://www.anaconda.com/distribution/" target="_blank">Anaconda</a>, a package manager application that will help you get started with python in all platforms.</p>
+<p>Make sure you are acquainted with ipython (interactive python, <a href="https://www.pythonanywhere.com/try-ipython/" target="_blank">try it here</a>), and with <a href="http://jupyter.org/" target="_blank">Jupyter notebook</a>. ​</p>
+<p>I recommend <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a> for writing code, and you can install the Anaconda package to it to have a smooth IDE. [not the same anaconda as mentioned above! Yes, it’s confusing, I know.]</p>
+<hr>
+<h2 id="fitzhugh-nagumo-labyrinthine-patterns" class="anchored">Fitzhugh-Nagumo — Labyrinthine Patterns</h2>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="https://yairmau.github.io/website/jupyter/2020/01/01/fhn.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
+<p>Main features: how to make a movie, time-integration methods (semi-spectral and Euler)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5au-G5FuI_A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="conways-game-of-life-acorn-initial-condition" class="anchored">Conway’s Game of Life, acorn initial condition</h2>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="https://yairmau.github.io/website/jupyter/2020/01/01/gol.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
+<p>This is a (slightly) modified version of <a href="https://glowingpython.blogspot.co.il/2015/10/game-of-life-with-python.html" target="_blank">Glowing Python</a>’s code. I make it available here because it features a few nice things:</p>
+<ul>
+<li>how to make a movie using matplotlib.animation</li>
+<li>how to write a generator (function with yield)</li>
+<li>how to plot a sparce array (spy)</li>
+</ul>
+<p>Main features: <code>matplotlib.animation, yield, with, matplotlib.pyplot.spy</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lelsVltLZe4?rel=0" frameborder="0" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="least-squares-fit-of-nonlinear-function" class="anchored">Least squares fit of nonlinear function</h2>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="leastsquares.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
+<p>Main features: <code>LaTeX text, scipy.optimize.curve_fit, matplotlib.patches</code><br>
+<img src="least-squares.png" class="img-fluid"></p>
+<hr>
+<h2 id="fun-with-histograms" class="anchored">Fun with histograms</h2>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="histograms.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
+<p>Main features: <code>np.histogram, plt.hist, plt.bar, plt.barh, gridspec, least squares fit of nonlinear function, plt.hist2d</code><br>
+<img src="histograms.png" class="img-fluid"></p>
+<hr>
+<h2 id="fancy-subplot-grid" class="anchored">Fancy subplot grid</h2>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="subplotgrid.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
+<p>Highly customizable subplot structure. Also, figure contains several axis configurations and labeling options.<br>
+Main features: <code>gridspec subplots; numpy-compatible heaviside; label, ticks and axis manipulations; log scale</code> <img src="subplot-grid.png" class="img-fluid"></p>
+<hr>
+<h2 id="streamplot" class="anchored">Streamplot</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/streamplot.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Streamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.<br>
+Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code> <img src="../../images/python_figures/streamplot.png" class="img-fluid"></p>
+<hr>
+<h2 id="the-time-dependent-ginzburg-landau-equation" class="anchored">The time dependent Ginzburg-Landau equation</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/tdgle.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Numerical integration of a parabolic partial differential equation, using finite differences: Euler step to advance time, and a 5-point stencil to approximate the Laplacian.<br>
+Main features: <code>imshow, colorbar, set_data</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JgE9Px7zsQE" frameborder="0" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="the-double-pendulum" class="anchored">The double pendulum</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/doublependulum.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Numerical integration of the equations of motion of the double pendulum. This time, scipy’s ode itegrator was used. Nice example of how to make a movie.<br>
+Main features: <code>scipy.integrate.ode, set_data, set_aspect('equal'), remove plot, movie</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-76LN_Kph7A" frameborder="0" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="the-hilbert-curve" class="anchored">The Hilbert curve</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/hilbertcurve.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Construction of the Hilbert curve as a Lindenmayer system (L-system).<br>
+Main features: <code>string operations, movie</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Oudyl56GPJU" frameborder="0" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="a-hysteresis-mechanism" class="anchored">A hysteresis mechanism</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/hysteresis.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Hysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional <span class="math inline">\(f=u^4-2u^2+hu\)</span>. The parameter <span class="math inline">\(h\)</span> is ramped down and up during this simulation.<br>
+Main features: <code>sympy analytical calculations, numpy dtypes, movie</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xgRDhOifFow" frameborder="0" allowfullscreen="">
+</iframe>
+<hr class="my_hr">
+<!-- ------------------------------------- -->
+<!-- ------------------------------------- -->
+<h2 id="contour-plot" class="anchored">Contour plot</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/contours.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Contour plot with many customizable options. Also, a nice way to truncate a colormap so it gives the color range that you want.<br>
+Main features: <code>truncate_colormap, contour, contourf (fill), clabel (contour label)</code></p>
+<p><img src="http://www.bitbucket.org/yairmau/notebooks/raw/master/figures/cont.png" class="img-fluid"></p>
+<hr class="my_hr">
+<!-- ------------------------------------- -->
+<!-- ------------------------------------- -->
+<h2 id="least-action-principle-on-the-beach" class="anchored">Least action principle on the beach</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/bestpath.html', '_blank');">
+Jupyter notebook
+</button>
+<p>How should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell’s law of refraction!<br>
+This is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, “annotations” are used, where things can be labeled with the help of arrows.<br>
+Main features: <code>spines, matplotlib.patches.Rectangle, annotate</code></p>
+<p><img src="../../images/python_figures/bestpath.png" class="img-fluid"></p>
+<hr class="my_hr">
+<!-- ------------------------------------- -->
+<!-- ------------------------------------- -->
+<h2 id="this-websites-logo" class="anchored">This website’s logo</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/websitelogo.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Simple example of how to make a figure without any visible axes.<br>
+Main features: <code>set_axis_off, fill_between, matplotlib inline plot on Jupyter</code></p>
+<p><img src="../../images/python_figures/site-logo.png" class="img-fluid"></p>
+<hr class="my_hr">
+<!-- ------------------------------------- -->
+<!-- ------------------------------------- -->
+<h2 id="bars" class="anchored">Bars</h2>
+<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/bars.html', '_blank');">
+Jupyter notebook
+</button>
+<p>Horizontal and vertical bars, with numeric legends. Unicode support.<br>
+Main features: <code>unicode, bar, barh, grid</code></p>
+<p><img src="../../images/python_figures/bars.png" class="img-fluid"></p>
+<p>some text here</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random piece of code</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>i<span class="op">**</span><span class="dv">2</span><span class="sc">:e}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

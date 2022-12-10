@@ -1,0 +1,173 @@
+---
+title: "{{< fa file >}} Papers"
+echo: false
+jupyter: python3
+section-divs: false
+keep-md: true
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: Contents
+filters:
+   - nutshell
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+<!-- code inspired by https://ddimmery.com/posts/quarto-website/ -->
+
+
+<!-- {{< fa thumbs-up >}}  -->
+
+```{python}
+#| label: "software"
+#| id: "software"
+#| output: asis
+import yaml
+from IPython.display import display, Markdown, HTML
+
+
+ticks3 = """```"""
+
+# yaml_papers = yaml.safe_load(open("papers.yaml"))
+
+def button(url, str, icon):
+    icon_base = icon[:2]
+    return f"""<a class="btn my-btn-style btn-sm rounded", href="{url}" target="_blank" rel="noopener noreferrer">
+        <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
+        {str}
+    </a>"""
+
+def new_bib_button(name, content):
+    return (f"""<button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#{name}" aria-expanded="false" aria-controls="{name}">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    """
+    )
+
+def bib_nutshell(name, content):
+    # return f"## :x {name}"
+    return f"""&nbsp;&nbsp;<a href="#x-{name}">:bib</a></p>"""
+    
+def bib_nutshell2(name, content):
+    display(Markdown(f"""## :x {name}\n```python\n{content}\n```"""))
+
+def print_paper(data):
+    h6start = '###### '
+    h6end = ". {#" + f"publication:{data['handle']}" + "}"
+    paper_icon = '<i class="fa-regular fa-file svv"></i> '
+    journal = ' *' + data["journal"] + '*, '
+    if "doi" in data:
+        journal = ' [*' + data["journal"] + '*](https://doi.org/' + data["doi"] + '), '
+    # display(Markdown(f"###### {data['handle']}"))
+    # display(HTML(f"""<span id="{data['handle']}"></span>"""))
+    display(Markdown(
+        h6start +
+        paper_icon +
+        data["authors"] + '. ' + 
+        data["title"] + '. ' + 
+        journal +
+        data["year"] + h6end#'. \n'
+        ))
+    buttons = []
+    if "pdf" in data:
+        buttons.append(button(data['pdf'], "PDF", "bi-file-earmark-pdf-fill"))
+    if "website" in data:
+        buttons.append(button(data['website'], "PDF", "bi-file-earmark-pdf-fill"))
+    if "github" in data:
+        buttons.append(button(data['github'], "Github", "bi-github"))
+    if "bib" in data:
+        buttons.append(new_bib_button(data['handle'], data['bib']))
+    # if "bib" in data:
+    #     buttons.append(bib_nutshell(data['handle'], data['bib']))
+    display(HTML(" ".join(buttons)))
+    if "bib" in data:
+        display(HTML(f"""
+            <div class="collapse" id="{data['handle']}">
+            <div class="card card-body border-0">
+        """))
+        display(Markdown(ticks3 + 
+            f"bib\n{data['bib']}\n" + 
+            ticks3))
+        display(HTML("""
+            </div>
+            </div>
+            """
+        ))
+    # if "bib" in data:
+    #     bib_nutshell2(data['handle'], data['bib'])
+    display(Markdown("\n"))
+    display(HTML("<hr/>"))
+
+yaml_data = yaml.safe_load(open("papers.yaml"))
+```
+
+<!-- ## Papers -->
+
+```{python}
+#| output: asis
+
+display(Markdown("### 2022"))
+display(HTML("</br>"))
+print_paper(yaml_data['kramer2022sustainability'][0])
+print_paper(yaml_data['adeyemo2022salinity'][0])
+print_paper(yaml_data['goldberg2022compaction'][0])
+
+display(Markdown("### 2021"))
+display(HTML("</br>"))
+print_paper(yaml_data['zelnik2021high'][0])
+print_paper(yaml_data['kramer2021hysteresis'][0])
+
+display(Markdown("### 2020"))
+display(HTML("</br>"))
+print_paper(yaml_data['kramer2020soil'][0])
+print_paper(yaml_data['chen2020impact'][0])
+print_paper(yaml_data['kaner2020internal'][0])
+
+display(Markdown("### 2016"))
+display(HTML("</br>"))
+print_paper(yaml_data['mau2016optimal'][0])
+
+display(Markdown("### 2015"))
+display(HTML("</br>"))
+print_paper(yaml_data['porporato2015ecohydrological'][0])
+print_paper(yaml_data['mau2015dynamical'][0])
+print_paper(yaml_data['mau2015reversing'][0])
+
+display(Markdown("### 2014"))
+display(HTML("</br>"))
+print_paper(yaml_data['mau2014multiplicative'][0])
+print_paper(yaml_data['haim2014spatial'][0])
+
+display(Markdown("### 2013"))
+display(HTML("</br>"))
+print_paper(yaml_data['mau2013competing'][0])
+
+display(Markdown("### 2012"))
+display(HTML("</br>"))
+print_paper(yaml_data['mau2012spatial'][0])
+
+display(Markdown("### 2009"))
+display(HTML("</br>"))
+print_paper(yaml_data['mau2009dual'][0])
+```
+
+## Theses
+
+### PhD Thesis
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+```{python}
+print_paper(yaml_data['mau2013phdthesis'][0])
+```
+
+
+### MSc Thesis
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+```{python}
+print_paper(yaml_data['mau2009mscthesis'][0])
+```

@@ -1,0 +1,406 @@
+kramer2022sustainability:
+- title: "kramer2022sustainability"
+  handle: "kramer2022sustainability"
+  authors: Isaac Kramer, Yuval Bayer, and Yair Mau
+  title: "The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity"
+  journal: Water Resources Research
+  year: "2022"
+  doi: 10.1029/2021WR031307
+  pdf: archive/papers/kramer-2020-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf
+  bib: |
+      @article{kramer2022sustainability,
+          doi = {10.1029/2021WR031307},
+          url = {https://doi.org/10.1029/2021WR031307},
+          year = {2022},
+          author = {Isaac Kramer and Yuval Bayer and Yair Mau},
+          title = {The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity},
+          journal = {Water Resources Research},
+      }
+
+goldberg2022compaction:
+- title: "goldberg2022compaction"
+  handle: "goldberg2022compaction"
+  authors: Nurit Goldberg Yehuda, Shmuel Assouline, Yair Mau, and Uri Nachshon
+  title: "Compaction effects on evaporation and salt precipitation in drying porous media"
+  journal: HESS
+  year: "2022"
+  doi: 10.5194/hess-26-2499-2022
+  pdf: archive/papers/goldberg-2022-Compaction effects on evaporation and salt precipitation in drying porous media.pdf
+  bib: |
+      @article{goldberg2022compaction,
+          title={Compaction effects on evaporation and salt precipitation in drying porous media},
+          author={Goldberg-Yehuda, Nurit and Assouline, Shmuel and Mau, Yair and Nachshon, Uri},
+          journal={Hydrology and Earth System Sciences},
+          volume={26},
+          number={9},
+          pages={2499--2517},
+          year={2022},
+          publisher={Copernicus GmbH}
+      }
+
+adeyemo2022salinity:
+- title: "adeyemo2022salinity"
+  handle: "adeyemo2022salinity"
+  authors: Taiwo Adeyemo, Isaac Kramer, Guy J. Levy, and Yair Mau
+  title: "Salinity and sodicity can cause hysteresis in soil hydraulic conductivity"
+  journal: Geoderma
+  year: "2022"
+  doi: 10.1016/j.geoderma.2022.115765
+  pdf: archive/papers/adeyemo-2021-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf
+  bib: |
+      @article{adeyemo2022salinity,
+          doi = {10.1016/j.geoderma.2022.115765},
+          url = {https://doi.org/10.1016/j.geoderma.2022.115765},
+          year = {2022},
+          month = may,
+          publisher = {Elsevier {BV}},
+          volume = {413},
+          pages = {115765},
+          author = {Taiwo Adeyemo and Isaac Kramer and Guy J. Levy and Yair Mau},
+          title = {Salinity and sodicity can cause hysteresis in soil hydraulic conductivity},
+          journal = {Geoderma}
+      }
+
+zelnik2021high:
+- title: zelnik2021high
+  handle: zelnik2021high
+  authors: Yuval R. Zelnik, Yair Mau, Moshe Shachak, and Ehud Meron
+  title: "High-integrity human intervention in ecosystems: Tracking self-organization modes"
+  journal: PLOS Computational Biology
+  year: "2021"
+  doi: 10.1371/journal.pcbi.1009427
+  pdf: archive/papers/zelnik-2021-High-integrity human intervention in ecosystems- Tracking self-organization modes.pdf
+  bib: |
+    @article{zelnik2021high,
+          doi = {10.1371/journal.pcbi.1009427},
+          url = {https://doi.org/10.1371/journal.pcbi.1009427},
+          year = {2021},
+          author = {Yuval R. Zelnik and Yair Mau and Moshe Shachak and Ehud Meron},
+          title = {High-integrity human intervention in ecosystems: Tracking self-organization modes},
+          journal = {PLOS Computational Biology},
+          volume = {17},
+          number = {9},
+          pages = {e1009427}
+    }
+
+kramer2021hysteresis:
+- title: kramer2021hysteresis
+  handle: kramer2021hysteresis
+  authors: Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and Yair Mau
+  title: "Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework"
+  journal: HESS
+  year: "2021"
+  doi: 10.5194/hess-25-1993-2021
+  pdf: archive/papers/kramer-2021-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf
+  github: https://github.com/yairmau/hysteresis-python
+  bib: |
+    @article{kramer2020hysteresis,
+          doi = {10.5194/hess-25-1993-2021},
+          url = {https://doi.org/10.5194/hess-25-1993-2021},
+          year = {2021},
+          author = {Isaac Kramer and Yuval Bayer and Taiwo Adeyemo and Yair Mau},
+          title = {Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework},
+          journal = {Hydrology and Earth System Sciences},
+          volume={25},
+          number={4},
+          pages={1993--2008}
+    }
+
+kramer2020soil:
+- title: kramer2020soil
+  handle: kramer2020soil
+  authors: Isaac Kramer and Yair Mau
+  title: "Soil degradation risks assessed by the SOTE model for salinity and sodicity"
+  journal: Water Resources Research
+  year: "2020"
+  doi: 10.1029/2020WR027456
+  pdf: archive/papers/kramer-2020-Soil degradation risks assessed by the SOTE model for salinity and sodicity.pdf
+  github: https://github.com/isaackramer/SOTE
+  bib: |
+    @article{kramer2020soil,
+          doi = {10.1029/2020WR027456},
+          url = {https://doi.org/10.1029/2020WR027456},
+          year = {2020},
+          publisher = {Wiley},
+          volume = {56},
+          number = {10},
+          author = {Isaac Kramer and Yair Mau},
+          title = {Soil degradation risks assessed by the SOTE model for salinity and sodicity},
+          journal = {Water Resources Research}
+    }
+
+chen2020impact:
+- title: chen2020impact
+  handle: chen2020impact
+  authors: Xing Chen, Mukesh Kumar, Daniel de B. Richter, and Yair Mau
+  title: "Impact of gully incision on hillslope hydrology"
+  journal: Hydrological Processes
+  year: "2020"
+  doi: 10.1002/hyp.13845
+  pdf: archive/papers/chen-2020-Impact of gully incision on hillslope hydrology.pdf
+  bib: |
+    @article{chen2020impact,
+      doi = {10.1002/hyp.13845},
+      url = {https://doi.org/10.1002/hyp.13845},
+      year = {2020},
+      publisher = {Wiley},
+      volume = {34},
+      number = {19},
+      pages = {3848--3866},
+      author = {Xing Chen and Mukesh Kumar and Daniel B. Richter and Yair Mau},
+      title = {Impact of gully incision on hillslope hydrology},
+      journal = {Hydrological Processes}
+    }
+
+kaner2020internal:
+- title: kaner2020internal
+  handle: kaner2020internal
+  authors: Avigail Kaner, Yakir Preisler, José M. Grünzweig, and Yair Mau
+  title: Internal water storage buffering maintains plant function under drought as described by a general hydraulic model
+  journal: bioRxiv
+  year: "2020"
+  doi: 10.1101/2020.02.11.943563
+  pdf: archive/papers/kaner-2020-Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.pdf
+  bib: |
+    @article{kaner2020internal,
+      doi = {10.1101/2020.02.11.943563},
+      url = {https://doi.org/10.1101/2020.02.11.943563},
+      year = {2020},
+      publisher = {Cold Spring Harbor Laboratory},
+      volume = {},
+      number = {},
+      pages = {},
+      author = {Avigail Kaner and Yakir Preisler and Jos{\'{e}} M Gr\"{u}nzweig and Yair Mau},
+      title = {Internal water storage buffering maintains plant function under drought as described by a general hydraulic model},
+      journal = {}
+    }
+
+mau2016optimal:
+- title: mau2016optimal
+  handle: mau2016optimal
+  authors: Yair Mau and Amilcare Porporato
+  title: Optimal control solutions to sodic soil reclamation
+  journal: Advances in Water Resources
+  year: "2016"
+  doi: 10.1016/j.advwatres.2016.02.014
+  pdf: archive/papers/mau-2016-Optimal control solutions to sodic soil reclamation.pdf
+  bib: |
+    @article{mau2016optimal,
+      doi = {10.1016/j.advwatres.2016.02.014},
+      year  = {2016},
+      publisher = {Elsevier {BV}},
+      volume = {91},
+      pages = {37--45},
+      author = {Yair Mau and Amilcare Porporato},
+      title = {Optimal control solutions to sodic soil reclamation},
+      journal = {Advances in Water Resources}
+    }
+
+porporato2015ecohydrological:
+- title: porporato2015ecohydrological
+  handle: porporato2015ecohydrological
+  authors: Amilcare Porporato, Xue Feng, Stefano Manzoni, Yair Mau, Anthony J. Parolari, and Giulia Vico
+  title: "Ecohydrological modeling in agroecosystems: Examples and challenges"
+  journal: Water Resources Research
+  year: "2015"
+  doi: 10.1002/2015WR017289
+  pdf: archive/papers/porporato-2015-Ecohydrological modeling in agroecosystems-Examples and challenges.pdf
+  bib: |
+    @article{porporato2015ecohydrological,
+      doi = {10.1002/2015wr017289},
+      year  = {2015},
+      publisher = {Wiley-Blackwell},
+      author = {Amilcare Porporato and Xue Feng and Stefano Manzoni and Yair Mau and Anthony J. Parolari and Giulia Vico},
+      title = {Ecohydrological modeling in agroecosystems: Examples and challenges},
+      journal = {Water Resources Research},
+      volume = {51},
+      number = {7},
+      pages = {5081--5099}
+    }
+
+mau2015dynamical:
+- title: mau2015dynamical
+  handle: mau2015dynamical
+  authors: Yair Mau and Amilcare Porporato
+  title: A dynamical system approach to soil salinity and sodicity
+  journal: Advances in Water Resources
+  year: "2015"
+  doi: 10.1016/j.advwatres.2015.05.010
+  pdf: archive/papers/mau-2015-A dynamical system approach to soil salinity and sodicity.pdf
+  bib: |
+    @article{mau2015dynamical,
+      year  = {2015},
+      publisher = {Elsevier {BV}},
+      volume = {83},
+      pages = {68--76},
+      author = {Yair Mau and Amilcare Porporato},
+      title = {A dynamical system approach to soil salinity and sodicity},
+      journal = {Advances in Water Resources},
+      doi = {10.1016/j.advwatres.2015.05.010}
+    }
+
+mau2015reversing:
+- title: mau2015reversing
+  handle: mau2015reversing
+  authors: Yair Mau, Lev Haim, and Ehud Meron
+  title: Reversing desertification as a spatial resonance problem
+  journal: Physical Review E
+  year: "2015"
+  doi: 10.1103/PhysRevE.91.012903
+  pdf: archive/papers/mau-2015-Reversing desertification as a spatial resonance problem.pdf
+  bib: |
+    @article{mau2015reversing,
+      title={Reversing desertification as a spatial resonance problem},
+      author={Yair Mau and Lev Haim and Ehud Meron},
+      journal={Physical Review E},
+      volume={91},
+      number={1},
+      pages={012903},
+      year={2015},
+      publisher={APS},
+      doi = {10.1103/physreve.91.012903},
+    }
+
+mau2014multiplicative:
+- title: mau2014multiplicative
+  handle: mau2014multiplicative
+  authors: Yair Mau, Xue Feng, and Amilcare Porporato
+  title: Multiplicative jump processes and applications to leaching of salt and contaminants in the soil
+  journal: Physical Review E
+  year: "2014"
+  doi: 10.1103/PhysRevE.90.052128
+  pdf: archive/papers/mau-2014-Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.pdf
+  bib: |
+    @article{mau2014multiplicative,
+      title={Multiplicative jump processes and applications to leaching of salt and contaminants in the soil},
+      author={Yair Mau and Xue Feng and Amilcare Porporato},
+      journal={Physical Review E},
+      volume={90},
+      number={5},
+      pages={052128},
+      year={2014},
+      publisher={APS},
+      doi = {10.1103/physreve.90.052128},
+    }
+
+haim2014spatial:
+- title: haim2014spatial
+  handle: haim2014spatial
+  authors: Lev Haim, Yair Mau, and Ehud Meron
+  title: Spatial forcing of pattern-forming systems that lack inversion symmetry
+  journal: Physical Review E
+  year: "2014"
+  doi: 10.1103/PhysRevE.90.022904
+  pdf: archive/papers/haim-2014-Spatial forcing of pattern-forming systems that lack inversion symmetry.pdf
+  bib: |
+    @article{haim2014spatial,
+      title={Spatial forcing of pattern-forming systems that lack inversion symmetry},
+      author={Lev Haim and Yair Mau and Ehud Meron},
+      journal={Physical Review E},
+      volume={90},
+      number={2},
+      pages={022904},
+      year={2014},
+      publisher={APS},
+      doi = {10.1103/physreve.90.022904},
+    }
+
+
+mau2013competing:
+- title: mau2013competing
+  handle: mau2013competing
+  authors: Yair Mau, Lev Haim, Aric Hagberg, and Ehud Meron
+  title: Competing resonances in spatially forced pattern-forming systems
+  journal: Physical Review E
+  year: "2013"
+  doi: 10.1103/PhysRevE.88.032917
+  pdf: archive/papers/mau-2013-Competing resonances in spatially forced pattern-forming systems.pdf
+  bib: |
+    @article{mau2013competing,
+      title={Competing resonances in spatially forced pattern-forming systems},
+      author={Yair Mau and Lev Haim and Aric Hagberg and Ehud Meron},
+      journal={Physical Review E},
+      volume={88},
+      number={3},
+      pages={032917},
+      year={2013},
+      publisher={APS},
+      doi = {10.1103/physreve.88.032917},
+    }
+
+
+mau2012spatial:
+- title: mau2012spatial
+  handle: mau2012spatial
+  authors: Yair Mau, Aric Hagberg, and Ehud Meron
+  title: Spatial periodic forcing can displace patterns it is intended to control
+  journal: Physical Review Letters
+  year: "2012"
+  doi: 10.1103/PhysRevLett.109.034102
+  pdf: archive/papers/mau-2012-Spatial periodic forcing can displace patterns it is intended to control.pdf
+  bib: |
+    @article{mau2012spatial,
+      title={Spatial periodic forcing can displace patterns it is intended to control},
+      author={Yair Mau and Aric Hagberg and Ehud Meron},
+      journal={Physical Review Letters},
+      volume={109},
+      number={3},
+      pages={034102},
+      year={2012},
+      publisher={APS},
+      doi = {10.1103/physrevlett.109.034102},
+    }
+
+mau2009dual:
+- title: mau2009dual
+  handle: mau2009dual
+  authors: Yair Mau, Aric Hagberg, and Ehud Meron
+  title: Dual-mode spiral vortices
+  journal: Physical Review E
+  year: "2009"
+  doi: 10.1103/physreve.80.065203
+  pdf: archive/papers/mau-2009-Dual-mode spiral vortices.pdf
+  bib: |
+    @article{mau2009dual,
+      title={Dual-mode spiral vortices},
+      author={Yair Mau and Aric Hagberg and Ehud Meron},
+      journal={Physical Review E},
+      volume={80},
+      number={6},
+      pages={065203},
+      year={2009},
+      publisher={APS},
+      doi = {10.1103/physreve.80.065203},
+    } 
+
+mau2013phdthesis:
+- title: mau2013phdthesis
+  handle: mau2013phdthesis
+  authors: Yair Mau
+  title: "Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx)"
+  journal: PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel
+  year: "2013"
+  pdf: archive/papers/mau2013-phd_final_version.pdf
+  bib: |
+    @phdthesis{mau2013phdthesis,
+      title={Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration},
+      author={Yair Mau},
+      school={Physics Department, Ben-Gurion University of the Neveg, Israel},
+      year={2013},
+    } 
+
+mau2009mscthesis:
+- title: mau2009mscthesis
+  handle: mau2009mscthesis
+  authors: Yair Mau
+  title: "Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx)"
+  journal: MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel
+  year: "2009"
+  pdf: archive/papers/msc_thesis_yair11.pdf
+  bib: |
+    @phdthesis{mau2009mscthesis,
+      title={Localized Spatial Structures in Non-Equilibrium Systems},
+      author={Yair Mau},
+      school={Physics Department, Ben-Gurion University of the Neveg, Israel},
+      year={2009},
+    }

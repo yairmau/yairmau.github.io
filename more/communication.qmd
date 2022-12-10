@@ -1,0 +1,63 @@
+---
+title: "{{< fa microphone-alt >}} Science Communication"
+echo: false
+jupyter: python3
+section-divs: false
+---
+
+## Talks
+
+A scientific talk **is not** a scientific paper, it is a completely different medium! Here are a few tips that I find useful.
+
+### How To Give a Talk
+
+[[How To Give a Talk, by David L Stern.](http://www.howtogiveatalk.com/)]
+
+**Excerpt:**
+
+> **Principle 1 - Don't Put Words On Slides**  
+It may not seem intuitive, but including words on slides has a bigger detrimental effect on the quality of a talk than any other issue I will address. 
+
+> The slides in most science talks contain many words. This simple fact has many consequences, none positive. Most obviously, words on slides impel listeners to read the words on the slide. If you are talking while they are reading, then you generate cognitive dissonance that makes it difficult for the audience to understand either your spoken words or your written words. So, if you want your audience to read the words on a slide, then, presumably, you should shut up. But, I don’t recommend that. Instead, just cut all the words form your slides. 
+
+### The David Attenborough Style of Scientific Presentation
+
+[[The David Attenborough Style of Scientific Presentation.](https://www.dropbox.com/s/j1vv2baheiduvip/David%20Attenborough%20talk%20technique%202018.pdf?dl=0)]
+
+**Excerpt:**
+
+> Get into this mindset: your main job is to be an entertainer, not a scientist. Most scientists don’t do this, which is why most scientific talks are bad. The fact of the matter is that if the audience doesn’t understand and enjoy your talk, they won’t care if your science is good. 
+
+### A LaTeX template
+
+Check out a nice LaTeX template for presentations [[here](/tutorials/latex/#presentation)].
+
+----------
+
+## Visualizations
+
+Visualizations can take a message very, very far.
+I put a lot of thinking into how to best express an idea.
+I believe that great graphs greatly improve a scientific paper, and a thoughful graph/animation surely brings home the main point of a talk.
+Here are a few thoughts on visualizations.
+
+### Inspiration
+
+* Hans Rosling, <a href="https://www.gapminder.org/" target="_blank">Gapminder</a>
+* Max Roser, <a href="https://ourworldindata.org/" target="_blank">Our World in Data</a>
+* Stephen Malinowski, <a href="https://www.youtube.com/user/smalin" target="_blank">Music Animation Machine</a>
+* The Economist, <a href="http://www.economist.com/blogs/graphicdetail" target="_blank">Daily Chart</a>
+
+### Colors
+Don't use the <span style="color:red">r</span><span style="color:orange">a</span><span style="color:olive">i</span><span style="color:green">n</span><span style="color:teal">b</span><span style="color:blue">o</span><span style="color:fuchsia">w</span> color map.    
+Why? [<a href="https://eagereyes.org/basics/rainbow-color-map" target="_blank">Read this</a>], by <a href="https://twitter.com/eagereyes" target="_blank">Robert Kosara</a>.
+
+So how should you choose the colors for a graph?
+
+* Visit <a href="http://colorbrewer2.org/" target="_blank">colorbrewer</a>. It gives sequential, diverging and qualitative colormaps that can be chosen to be "colorblind safe", "print safe", or "photocopy safe". Usually, it is the first and only tool I use. It's just great!
+* Visit <a href="https://color.adobe.com/create/color-wheel/" target="_blank">Adobe Color CC</a>. It gives you much more freedom to play with the colors than colorbrewer. Use it wisely!
+
+More on color: read <a href="https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/" target="_blank">Subtleties of Color</a>, by Robert Simmon.
+
+### Browse for ideas
+* <a href="http://datavizcatalogue.com/index.html" target="_blank">The Data Visualisation Catalogue</a>

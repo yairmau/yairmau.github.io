@@ -1,0 +1,51 @@
+---
+title: ""
+page-layout: article
+section-divs: false
+---
+
+<!-- {{< fa thumbs-up >}}  -->
+
+<!-- trick from here
+https://stackoverflow.com/questions/18032220/how-to-change-source-of-img-tag-on-hover -->
+::: {layout="[20,30]" layout-valign="center"}
+
+:::: image_here
+<img src="archive/images/group/yair2022_primitive.png" 
+    onmouseover="this.src='archive/images/group/yair2022.png'"
+    onmouseout="this.src='archive/images/group/yair2022_primitive.png'"
+    border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+
+:::: name_here
+# Yair Mau
+
+----
+
+<span class="iconify" data-icon="bi:person-circle"></span> **Senior Lecturer**  
+<span class="iconify" data-icon="icomoon-free:leaf" data-rotate="270deg"></span> **Institute of Environmental Sciences**  
+ <img src="archive/images/huji-gray.png" width="18" style='vertical-align:top;' align="left"> &nbsp; **The Hebrew University of Jerusalem**
+::::
+
+:::
+
+## Contact
+<i class="fas fa-envelope fa-fw fa-lg svv" aria-hidden="true"></i> <span>&ensp;</span> yair.mau@mail.huji.ac.il   
+<i class="fa-solid fa-phone fa-fw fa-lg svv"></i>
+<span>&ensp;</span> +972 8 948 9386  
+<i class="fas fa-map-marked-alt fa-fw fa-lg svv"></i> <span>&ensp;</span> Rehovot Campus, Lubell building, office 19. <a href="https://goo.gl/maps/DM62y5VXAxJ2" target="_blank">Map here</a>
+
+## About
+
+I'm fascinated by the natural world.
+I started out studying Physics, and then decided to use mathematical tools to understand processes in the *critical zone*, especially those concerning fluxes of water and carbon in the **soil-plant-atmosphere** continuum, both in the natural and agricultural environments.
+
+I'm interested in understanding how the feedbacks between climate, human stressors, and ecosystems, create interesting environmental dynamics.
+The main topics I deal with include **plant resilience and survival under drought, soil degradation, sustainable resource use**.
+Go the to [{{< fa compass-drafting >}} Science page](/science) to learn more about some of my current projects, and check out the [{{< fa file >}} Papers page](/papers) for details on already published works.
+
+Besides the usual academic pages (Science, Papers, Group, Courses), I hid a lot of material in the [{{< fa magnifying-glass-plus >}} More page](/more): tutorials (python, latex), quotes, recommendations, etc.
+
+> **Philosophy of life:** if you're not having fun, you're doing it wrong.
+
+

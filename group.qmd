@@ -1,0 +1,128 @@
+---
+title: "{{< fa circle-user >}} Group"
+echo: false
+jupyter: python3
+section-divs: false
+---
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+
+<!-- learn more about fenced divs here:
+https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html -->
+
+::: {layout="[30,20]" layout-valign="center"}
+:::: text_here
+## Yair Mau
+### Principal Investigator
+> *“Problems worthy of attack prove their worth by fighting back.”*  **Piet Hein**
+::::
+:::: picture_here
+<img src="archive/images/group/yair2022.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
+## Isaac Kramer
+### PhD student
+
+soil salinization, irreversible soil degradation processes, sustainable resource use
+
+[website](https://github.com/isaackramer)
+
+::::
+:::: picture_here
+<img src="archive/images/group/isaac-500px.jpg" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
+## Nurit Goldberg
+### PhD student
+
+soil compaction, soil salinization
+
+::::
+:::: picture_here
+<img src="archive/images/group/nurit-goldberg.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
+## Laura Rez
+### MSc student
+
+plant water fluxes, heatwave impact on fruit trees
+
+::::
+:::: picture_here
+<img src="archive/images/group/laura-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+# Former members
+
+<!-- vertical alignment
+https://quarto.org/docs/authoring/figures.html#vertical-alignment -->
+
+<!-- ::: {layout="[5,30]" layout-valign="center"}
+:::: picture_here
+<img src="archive/images/group/laura-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Laura Rez
+**2020--2022**, MSc student  
+::::
+::: -->
+
+::: {layout="[5,5,30]"  layout-valign="center"}
+:::: stam
+::::
+:::: picture_here
+<img src="archive/images/group/yuval-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Yuval Bayer
+**2020--2022**, BSc Amirim project  
+::::
+:::
+
+::: {layout="[5,30]" layout-valign="center"}
+:::: picture_here
+<img src="archive/images/group/avi-500px.jpg" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Avi Gross
+**2018--2020**, MSc student  
+::::
+:::
+
+::: {layout="[5,5,30]" layout-valign="center"}
+:::: stam
+::::
+:::: picture_here
+<img src="archive/images/group/taiwo-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Taiwo Adeyemo
+**2018--2020**, MSc student  
+::::
+:::
+
+::: {layout="[5,30]" layout-valign="center"}
+:::: picture_here
+<img src="archive/images/group/avigail-500px.jpg" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Avigail Kaner
+**2017--2021**, Research Specialist  
+::::
+:::

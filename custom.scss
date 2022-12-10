@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+//   FreeSerif, serif !default;
+// $max-width: 500px;
+// $max-width: 400px;
+/*-- scss:rules --*/
+
+// rotating fontawesome icons
+// https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hover/34379054
+.svv:hover {
+  animation: fa-spin 2s linear;
+}
+@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+
+// Buttons
+.btn {
+  font-size: 90%;
+  }
+
+// Links
+a {
+  text-decoration: none;
+}
+
+// Headers
+h1, h2, h3, h4, h5{
+  font-weight: bold;
+}
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+  line-height: $line-height-base;
+}
+h1 {
+  text-align: center;
+}
+
+// Font family, size, etc
+p {
+  font-size: 20px;
+  font-family:
+    Ubuntu,
+    sans-serif
+    !important; }
+
+// Code font
+pre code{
+  font-family:
+    "Ubuntu Mono";
+  font-size: 1.1*$font-size-base;
+}
+
+code {
+  font-family:
+    "Ubuntu Mono";
+  font-size: 1.1*$font-size-base;
+}
+
+// Navigation bar
+.navbar{
+  // max-height: 68px;
+  background-color: #444;
+  font-weight: bold;
+  font-size: 110%;
+}
+/* make navbar of the same width and website ::content */
+/* https://www.ddanieltan.com/posts/blogtips/ */
+.navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
+  max-width: 800px;
+  margin: 0 auto;
+} 
+
+// .navbar-collapse {
+//   background:#444; /*replace with desired color*/
+//   flex-basis: 100%;
+// }
+
+.zoom {
+  transition: transform .4s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(3);
+}
+
+.collapse {
+  background-color: #444;
+  background: #444;
+}
+
+
+
+// .img_hover1 {
+//     position: absolute;
+//   }
+// .img_hover2 {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: none;
+//   }
+// .test:hover .img_hover2 {
+//     display: inline;
+//     }
+
