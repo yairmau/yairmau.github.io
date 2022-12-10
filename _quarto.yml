@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Yair Mau"
@@ -33,7 +34,7 @@ format:
     max-width: "700"
     include-in-header:
       - includes.html
-    output-dir: docso 
+    
     # embed-resources: true
 # theme list: https://bootswatch.com/3/
 
