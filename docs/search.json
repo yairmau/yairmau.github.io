@@ -53,7 +53,7 @@
     "href": "courses/index.html",
     "title": " Courses",
     "section": "",
-    "text": "Some text here. Evapotranspiration \\(ET\\) is\n\\[\n\\lambda = \\frac{\\sqrt{x^2-b+\\sin(\\theta)}}{1}\n\\]\nSome inline code like this. Now italics and even bold\nimport numpy as np\nfor i in range(5):\n    print(i**2)\na = np.random.random((10, 2))\n Agrotech Lab\n Time Series Analysis\n Physics 1"
+    "text": "Agrotech Lab\n Time Series Analysis\n Physics 1"
   },
   {
     "objectID": "tutorials/python/histograms.html",

@@ -5,22 +5,7 @@ jupyter: python3
 section-divs: false
 ---
 
-## <i class="bi bi-cloud-rain-fill"></i> Surface Hydrology
-
-Some text here. Evapotranspiration $ET$ is
-
-$$
-\lambda = \frac{\sqrt{x^2-b+\sin(\theta)}}{1}
-$$
-
-Some inline code `like this`. Now *italics* and **even bold**   
-
-```python
-import numpy as np
-for i in range(5):
-    print(i**2)
-a = np.random.random((10, 2))
-```
+## [<i class="bi bi-cloud-rain-fill"></i> Surface Hydrology](/surface-hydrology)
 
 ## [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io)
 
