@@ -26,6 +26,22 @@ https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html -->
 
 ::: {layout="[30,20]"}
 :::: text_here
+## Erez Feuer
+### PhD student
+
+plant responses to drought and heatwaves
+
+::::
+:::: picture_here
+<img src="archive/images/group/erez-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+
+::: {layout="[30,20]"}
+:::: text_here
 ## Isaac Kramer
 ### PhD student
 
