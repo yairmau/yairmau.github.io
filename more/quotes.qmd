@@ -1,7 +1,7 @@
 ---
 title: "{{< fa quote-left >}} Quotes"
 echo: false
-jupyter: python3
+# jupyter: python3
 section-divs: false
 ---
 

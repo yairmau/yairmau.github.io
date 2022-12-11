@@ -2,5 +2,8 @@
 title: ""
 ---
 
-![](archive/site_images/404.png)
+<p align="center">
+  <img style="width:80%;" src="archive/site_images/404.png" />
+</p>
+<!-- ![](archive/site_images/404.png) -->
 

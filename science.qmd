@@ -1,9 +1,110 @@
 ---
 title: "{{< fa compass-drafting >}} Science"
 echo: false
-jupyter: python3
+# jupyter: python3
 section-divs: false
 ---
+
+<!-- HEATWAVE -->
+
+::: {layout="[5,20]"}
+:::: image_here
+
+![](archive/images/sun-with-glasses2.png)
+
+::::
+:::: project_name__here
+
+## Heatwave impact on plants
+
+How resilient can plants be to severe heatwaves?
+
+::::
+:::
+
+A warming climate means higher climatic variability, including harsher heatwave events.
+Severe heatwaves impose great stress on plants, increasing the risk of desiccation and, ultimately, hydraulic failure.
+
+Guiding questions:
+
+* What is the relative impact of soil drought and atmospheric drought on plant functioning?
+* How important are water storages (internal and in the soil) in maintaining transpiration and cooling?
+* How do plant resilience and survival chances depend on plant traits?
+
+We investigate these questions through field and lab experiments with native Mediterranean species, continuously monitoring water fluxes and plant status.
+We analyze the data using time-series tools and machine-learning techniques.
+Through mathematical modeling, we investigate plant response to expected future climate.
+
+<!-- OPTIMAL CONTROL -->
+
+::: {layout="[5,20]"}
+:::: image_here
+
+![](archive/images/plant-circle.png)
+
+::::
+:::: project_name__here
+
+## Plant optimal control
+
+How can plants best regulate gas exchange, maximizing carbon uptake while minimizing water losses?
+
+::::
+:::
+
+<!-- PLANT WATER STRESS -->
+
+::: {layout="[5,20]"}
+:::: image_here
+
+![](archive/images/fruit-tree.png)
+
+::::
+:::: project_name__here
+
+## Fruit-tree water stress
+
+Can we minimize water stress with smart irrigation scheduling? Can we do it optimally?
+
+::::
+:::
+
+<!-- SOIL SALINIZATION -->
+
+::: {layout="[5,20]"}
+:::: image_here
+
+![](archive/images/salt-shaker1.png)
+
+::::
+:::: project_name__here
+
+## Soil salinization
+
+How can we ensure healthy soils for generations to come?
+
+::::
+:::
+
+<!-- SOIL COMPACTION -->
+
+::: {layout="[5,20]"}
+:::: image_here
+
+![](archive/images/footprints.png)
+
+::::
+:::: project_name__here
+
+## Soil compaction
+
+What are the soil physical changes that follow compaction? How do they affect water and solute dynamics, and ultimately soil degradation? 
+
+::::
+:::
+
+
+
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
