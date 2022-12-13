@@ -10,7 +10,7 @@ section-divs: false
 ::: {layout="[5,20]"}
 :::: image_here
 
-![](archive/images/sun-with-glasses2.png)
+<img class="invert" src="archive/images/sun-with-glasses2.png" alt="sun with glasses">
 
 ::::
 :::: project_name__here
@@ -40,7 +40,8 @@ Through mathematical modeling, we investigate plant response to expected future 
 ::: {layout="[5,20]"}
 :::: image_here
 
-![](archive/images/plant-circle.png)
+<br>
+<img class="invert" src="archive/images/plant-circle.png" alt="plant circle">
 
 ::::
 :::: project_name__here
@@ -57,7 +58,8 @@ How can plants best regulate gas exchange, maximizing carbon uptake while minimi
 ::: {layout="[5,20]"}
 :::: image_here
 
-![](archive/images/fruit-tree.png)
+<br>
+<img class="invert" src="archive/images/fruit-tree.png" alt="fruit tree">
 
 ::::
 :::: project_name__here
@@ -74,7 +76,8 @@ Can we minimize water stress with smart irrigation scheduling? Can we do it opti
 ::: {layout="[5,20]"}
 :::: image_here
 
-![](archive/images/salt-shaker1.png)
+<br>
+<img class="invert" src="archive/images/salt-shaker1.png" alt="salt shaker">
 
 ::::
 :::: project_name__here
@@ -91,7 +94,8 @@ How can we ensure healthy soils for generations to come?
 ::: {layout="[5,20]"}
 :::: image_here
 
-![](archive/images/footprints.png)
+<br>
+<img class="invert" src="archive/images/footprints.png" alt="footprints">
 
 ::::
 :::: project_name__here

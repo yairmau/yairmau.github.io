@@ -1,7 +1,7 @@
 ---
 title: "{{< fa magnifying-glass-plus >}} More"
 echo: false
-jupyter: python3
+# jupyter: python3
 section-divs: false
 ---
 

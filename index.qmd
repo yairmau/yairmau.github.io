@@ -26,7 +26,7 @@ https://stackoverflow.com/questions/18032220/how-to-change-source-of-img-tag-on-
 
 <span class="iconify" data-icon="bi:person-circle"></span> **Senior Lecturer**  
 <span class="iconify" data-icon="icomoon-free:leaf" data-rotate="270deg"></span> **Institute of Environmental Sciences**  
- <img src="archive/images/huji-gray.png" width="18" style='vertical-align:top;' align="left"> &nbsp; **The Hebrew University of Jerusalem**
+ <img class="invert" src="archive/images/huji-gray-transparent.png" width="18" style='vertical-align:top;' align="left"> &nbsp; **The Hebrew University of Jerusalem**
 ::::
 
 :::

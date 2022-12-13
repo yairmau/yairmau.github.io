@@ -12,3 +12,7 @@
 .my-btn-style{
     @extend .btn-outline-success;
 }
+
+.invert{
+    filter: invert(100%);
+  }
