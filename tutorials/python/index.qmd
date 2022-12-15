@@ -143,12 +143,21 @@ Main features:
 
 ## Streamplot
 
-<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/streamplot.html', '_blank');">Jupyter notebook</button>
+```{python}
+from IPython.display import display, Markdown, HTML
+display(HTML(
+"""
+<a class="btn btn-success btn-sm rounded", href="streamplot.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+"""
+))
+```
 
 Streamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.  
 Main features:
 `meshgrid, streamplot, contour, legend, LaTeX`
-![](/images/python_figures/streamplot.png)
+![](streamplot.png)
 
 --------------------------------
 

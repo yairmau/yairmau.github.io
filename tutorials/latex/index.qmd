@@ -1,0 +1,26 @@
+---
+title: "{{< iconify cib latex >}} LaTeX"
+echo: false
+# jupyter: python3
+section-divs: false
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: Tips
+---
+
+### Avoid hyphenization
+```latex
+\pretolerance=10000
+\tolerance=2000 
+\emergencystretch=10pt
+```
+
+### Line numbers
+
+See more details [here](https://texblog.org/2012/02/08/adding-line-numbers-to-documents/).
+```latex
+\usepackage{lineno}
+\linenumbers
+```
