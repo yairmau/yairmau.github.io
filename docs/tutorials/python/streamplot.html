@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau – streamplot</title>
+<title>Yair Mau - Streamplot</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -177,13 +177,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Streamplot</h1>
+<p class="subtitle lead">Streamplot of a two-dimensional linear system</p>
+</div>
 
 
-<section id="streamplot" class="level1">
-<h1>Streamplot</h1>
-<blockquote class="blockquote">
-<p>Streamplot of a two-dimensional linear system</p>
-</blockquote>
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
 <p><img src="streamplot.png" class="img-fluid"></p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -214,7 +224,7 @@ Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code></p>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update(params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>define parameters, system of equations, and equation for eigenvectors</p>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib widget</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.08</span>, right<span class="op">=</span><span class="fl">0.68</span>, top<span class="op">=</span><span class="fl">0.87</span>, bottom<span class="op">=</span><span class="fl">0.10</span>,</span>
@@ -278,7 +288,7 @@ Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code></p>
 <span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>n1, <span class="op">=</span> ax.plot([<span class="dv">100</span>,<span class="dv">101</span>], [<span class="dv">100</span>,<span class="dv">101</span>], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co"># some text</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.0</span>, <span class="fl">1.02</span>, (<span class="vs">r"$\frac</span><span class="sc">{d}{dt}</span><span class="vs">\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">=$"</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.0</span>, <span class="fl">1.02</span>, (<span class="vs">r"$\displaystyle\frac</span><span class="sc">{d}{dt}</span><span class="vs">\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">=$"</span></span>
 <span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">a&amp;b\\c&amp;d\end</span><span class="sc">{pmatrix}</span><span class="vs">\cdot$"</span></span>
 <span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">$"</span>),</span>
 <span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>                    transform<span class="op">=</span>ax.transAxes, va<span class="op">=</span><span class="st">"bottom"</span>)</span>
@@ -286,37 +296,30 @@ Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code></p>
 <span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
 <span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.0</span>, <span class="fl">1.03</span>, <span class="vs">r"$c=</span><span class="sc">{:.1f}</span><span class="vs">\qquad d=</span><span class="sc">{:.1f}</span><span class="vs">$"</span>.<span class="bu">format</span>(p[<span class="st">'c'</span>], p[<span class="st">'d'</span>]),</span>
 <span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="co"># param_latex = (r"\begin{align}" +</span></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="co">#                r"a&amp;=1 &amp; b\\" +</span></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="co">#                r"a&amp;=1 &amp; b" +</span></span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="co">#                r"\end{align}"</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="co">#               )</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="co"># ax.text(0.8, 1.1, param_latex, transform=ax.transAxes, ha="right")</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>ax.legend([n0, n1, eigen_0, eigen_1],</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>          [<span class="vs">r'$dx/dt=0$'</span>, <span class="vs">r'$dy/dt=0$'</span>,</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"eigenvector 1"</span>, <span class="vs">r"eigenvector 2"</span>],</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>          loc<span class="op">=</span><span class="st">"center left"</span>,</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor<span class="op">=</span>(<span class="fl">1.0</span>,<span class="fl">0.5</span>),</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>          frameon<span class="op">=</span><span class="va">False</span>, fancybox<span class="op">=</span><span class="va">False</span>, shadow<span class="op">=</span><span class="va">False</span>, ncol<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>          borderpad<span class="op">=</span><span class="fl">0.5</span>, labelspacing<span class="op">=</span><span class="fl">0.5</span>, handlelength<span class="op">=</span><span class="dv">3</span>, handletextpad<span class="op">=</span><span class="fl">1.1</span>,</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>          borderaxespad<span class="op">=</span><span class="fl">0.3</span>, columnspacing<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$x$"</span>, labelpad<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>ax.axis([min_x, max_x, min_y, max_y])</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"streamplot.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>ax.legend([n0, n1, eigen_0, eigen_1],</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>          [<span class="vs">r'$dx/dt=0$'</span>, <span class="vs">r'$dy/dt=0$'</span>,</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"eigenvector 1"</span>, <span class="vs">r"eigenvector 2"</span>],</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>          loc<span class="op">=</span><span class="st">"center left"</span>,</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor<span class="op">=</span>(<span class="fl">1.0</span>,<span class="fl">0.5</span>),</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>          frameon<span class="op">=</span><span class="va">False</span>, fancybox<span class="op">=</span><span class="va">False</span>, shadow<span class="op">=</span><span class="va">False</span>, ncol<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>          borderpad<span class="op">=</span><span class="fl">0.5</span>, labelspacing<span class="op">=</span><span class="fl">0.5</span>, handlelength<span class="op">=</span><span class="dv">3</span>, handletextpad<span class="op">=</span><span class="fl">1.1</span>,</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>          borderaxespad<span class="op">=</span><span class="fl">0.3</span>, columnspacing<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$x$"</span>, labelpad<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>ax.axis([min_x, max_x, min_y, max_y])</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"streamplot.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"7cd8de0bfd6d4d9499a14234358a76ff","version_major":2,"version_minor":0}
+{"model_id":"25ce5a06be8a4f9dbbc77eb0b42f0c84","version_major":2,"version_minor":0}
 </script>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -269,12 +269,3 @@ Main features:
 `unicode, bar, barh, grid`
 
 ![](/images/python_figures/bars.png)
-
-
-some text here  
-```python
-# random piece of code
-import numpy as np
-for i in range(5):
-	print(f"{i**2:e}")
-```
