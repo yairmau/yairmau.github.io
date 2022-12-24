@@ -1,0 +1,75 @@
+---
+title: "First presentation"
+subtitle: "sometimes we need also a subtitle"
+author: "Yair Mau"
+figure: "/archive/images/fruit-tree.png"
+format:
+  revealjs: 
+    theme: my_presentation.scss
+    chalkboard: true
+
+---
+
+
+# In the morning
+
+## Slide Title {background-iframe="https://yairmau.com" background-interactive=true} 
+
+## Getting up
+#### subtitle
+
+- Turn off alarm
+- Get out of bed
+
+$$
+x_{1,2} = 
+\frac{-b\pm \sqrt{b^2 -4ac}}{2a}
+$$
+
+## Breakfast
+
+- Eat eggs
+- Drink coffeex
+
+::: {.fragment .fade-in fragment-index=1}
+::: {.fragment .fade-out fragment-index=3}
+![](/archive/images/fruit-tree.png){.absolute right=0% width="200"}
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=2}
+![](/archive/images/salt-shaker1.png){.absolute right=20% width="200"}
+:::
+
+::: {.fragment .fade-in fragment-index=3}
+![](/archive/images/footprints.png){.absolute right=0% width="200"}
+:::
+
+# In the evening
+
+## Dinner
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Left column
+
+![](/archive/images/salt-shaker1.png){width="100%"}
+
+:::
+
+::: {.column width="50%" .fragment .fade-in fragment-index=2}
+
+Right column
+
+![](/archive/images/plant-circle.png){width="100%"}
+
+:::
+
+::::
+
+## Going to sleep
+
+- Get in bed
+- Count sheepc

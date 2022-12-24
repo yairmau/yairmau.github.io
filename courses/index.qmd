@@ -9,6 +9,6 @@ section-divs: false
 
 ## [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io)
 
-## {{< iconify bi clock-history >}} Time Series Analysis
+## [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
 
 ## {{< iconify whh solarsystem >}} Physics 1
