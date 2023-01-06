@@ -30,10 +30,52 @@ execute:
 </br>
 ```
 
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yaara Tsairi, Michael Buchdahl Roth, Alon Tal, and Yair Mau. Effects of population growth on Israel’s demand for desalinated water.  [*npj Clean Water*](https://doi.org/10.1038/s41545-022-00215-9), 2022. {#publication:kramer2022effects}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-Effects of population growth on Israels demand for desalinated water.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#kramer2022effects" aria-expanded="false" aria-controls="kramer2022effects">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="kramer2022effects">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{kramer2022effects,
+    doi = {10.1038/s41545-022-00215-9},
+    url = {https://doi.org/10.1038/s41545-022-00215-9},
+    year = {2022},
+    author = {Isaac Kramer and Yaara Tsairi and Michael Buchdahl Roth and Alon Tal and Yair Mau},
+    title = {Effects of population growth on Israel’s demand for desalinated water},
+    journal = {npj Clean Water},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, and Yair Mau. The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.  [*Water Resources Research*](https://doi.org/10.1029/2021WR031307), 2022. {#publication:kramer2022sustainability}
 
 ```{=html}
-<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2020-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf" target="_blank" rel="noopener noreferrer">
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-The Sustainability of Treated Wastewater Irrigation- The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
         PDF
     </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#kramer2022sustainability" aria-expanded="false" aria-controls="kramer2022sustainability">
@@ -994,4 +1036,9 @@ execute:
 :::
 :::
 
+
+<div class="alert alert-success">
+  The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.  
+  <strong>— Pedro Domingos, The Master Algorithm</strong>
+</div>
 

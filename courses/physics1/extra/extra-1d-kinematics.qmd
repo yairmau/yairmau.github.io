@@ -1,0 +1,142 @@
+---
+title: Extra materials - 1d Kinematics
+---
+
+## The Physics Classroom
+
+This is an *excellent* interactive website, with lots of useful exercises:  
+[Distance vs. Displacement](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Distance-vs-Displacement/Interactive), [Acceleration](Acceleration), [Name That Motion](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Name-That-Motion/Concept-Builder), [Motion Diagrams](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Motion-Diagrams/Interactive), [Graph That Motion](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Graph-That-Motion/Concept-Builder), [Match That Graph](Match That Graph), [Position-Time Graphs - Conceptual Analysis](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Position-Time-Graphs-Conceptual-Analysis/Concept-Builder), [Position-Time Graphs - Numerical Analysis](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Position-Time-Graphs/Concept-Builder), [Dots and Graphs](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Dots-And-Graphs/Concept-Builder), [Which One Doesn't Belong?](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Which-One-Doesnt-Belong/Concept-Builder), [Free Fall](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Free-Fall/Concept-Builder), [Up and Down](http://www.physicsclassroom.com/Concept-Builders/Kinematics/Up-and-Down/Concept-Builder).
+
+
+## Video Lectures
+
+[Khan Academy - One-dimensional motion](https://www.khanacademy.org/science/physics/one-dimensional-motion)  
+[Motion in a Straight Line: Crash Course Physics #1](https://www.youtube.com/watch?v=ZM8ECpBuQYE)  
+[Michel van Biezen - Lectures in MOTION IN ONE DIMENSION](http://www.ilectureonline.com/lectures/subject/PHYSICS/1/9)  
+[Michel van Biezen - Lectures in Motion in 1 Dimension: GRAPHIC SOLUTIONS](http://www.ilectureonline.com/lectures/subject/PHYSICS/1/230)
+
+## $x$, $v$, $a$ graphs
+
+Draw the missing curves, with black dots in the same instants in time as in the given curve. All curved lines are parabolas.
+
+**Exercise 1**
+![](../../../archive/physics/gifs/3graphs_001_ques.png)
+
+**Exercise 2**
+![](../../../archive/physics/gifs/3graphs_002_ques.png)
+[](../../../archive/physics/gifs/3graphs_002_answ.png)
+
+**Exercise 3**
+![](../../../archive/physics/gifs/3graphs_003_ques.png)
+[](../../../archive/physics/gifs/3graphs_003_answ.png)
+
+**Exercise 4**
+![](../../../archive/physics/gifs/3graphs_004_ques.png)
+[](../../../archive/physics/gifs/3graphs_004_answ.png)
+
+**Exercise 5**
+![](../../../archive/physics/gifs/3graphs_005_ques.png)
+[](../../../archive/physics/gifs/3graphs_005_answ.png)
+
+**Exercise 6**
+![](../../../archive/physics/gifs/3graphs_006_ques.png)
+[](../../../archive/physics/gifs/3graphs_006_answ.png)
+
+## Match the graphs, $x$ and $v$
+
+Match the curve on the left with one of the curves on the right.
+
+**Exercise 1**
+![](../../../archive/physics/gifs/match_x_v_001.png)
+
+**Exercise 2**
+![](../../../archive/physics/gifs/match_x_v_002.png)
+
+**Exercise 3**
+![](../../../archive/physics/gifs/match_x_v_003.png)
+
+**Exercise 4**
+![](../../../archive/physics/gifs/match_x_v_004.png)
+
+**Exercise 5**
+![](../../../archive/physics/gifs/match_x_v_005.png)
+
+**Exercise 6**
+![](../../../archive/physics/gifs/match_x_v_006.png)
+
+**Exercise 7**
+![](../../../archive/physics/gifs/match_x_v_007.png)
+
+**Exercise 8**
+![](../../../archive/physics/gifs/match_x_v_008.png)
+
+**Exercise 9**
+![](../../../archive/physics/gifs/match_x_v_009.png)
+
+**Exercise 10**
+![](../../../archive/physics/gifs/match_x_v_010.png)
+
+**Exercise 11**
+![](../../../archive/physics/gifs/match_x_v_011.png)
+
+**Exercise 12**
+![](../../../archive/physics/gifs/match_x_v_012.png)
+
+## Oil drop patterns
+
+Oil drips from a car *at fixed time intervals*. Match the oil drop pattern the car leaves on the road with the curves on the right. Attention: there might be more than one solution!
+
+**Exercise 1**
+![](../../../archive/physics/gifs/match_drop_001.png)
+
+**Exercise 2**
+![](../../../archive/physics/gifs/match_drop_002.png)
+
+**Exercise 3**
+![](../../../archive/physics/gifs/match_drop_003.png)
+
+**Exercise 4**
+![](../../../archive/physics/gifs/match_drop_004.png)
+
+**Exercise 5**
+![](../../../archive/physics/gifs/match_drop_005.png)
+
+**Exercise 6**
+![](../../../archive/physics/gifs/match_drop_006.png)
+
+**Exercise 7**
+![](../../../archive/physics/gifs/match_drop_007.png)
+
+**Exercise 8**
+![](../../../archive/physics/gifs/match_drop_008.png)
+
+**Exercise 9**
+![](../../../archive/physics/gifs/match_drop_009.png)
+
+**Exercise 10**
+![](../../../archive/physics/gifs/match_drop_010.png)
+
+**Exercise 11**
+![](../../../archive/physics/gifs/match_drop_011.png)
+
+**Exercise 12**
+![](../../../archive/physics/gifs/match_drop_012.png)
+
+**Exercise 13**
+![](../../../archive/physics/gifs/match_drop_013.png)
+
+**Exercise 14**
+![](../../../archive/physics/gifs/match_drop_014.png)
+
+**Exercise 15**
+![](../../../archive/physics/gifs/match_drop_015.png)
+
+**Exercise 16**
+![](../../../archive/physics/gifs/match_drop_016.png)
+
+**Exercise 17**
+![](../../../archive/physics/gifs/match_drop_017.png)
+
+**Exercise 18**
+![](../../../archive/physics/gifs/match_drop_018.png)
+

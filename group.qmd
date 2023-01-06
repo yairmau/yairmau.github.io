@@ -37,23 +37,7 @@ plant responses to drought and heatwaves
 ::::
 :::
 
-<!-- ------------ -->
 
-
-::: {layout="[30,20]"}
-:::: text_here
-## Isaac Kramer
-### PhD student
-
-soil salinization, irreversible soil degradation processes, sustainable resource use
-
-[website](https://github.com/isaackramer)
-
-::::
-:::: picture_here
-<img src="archive/images/group/isaac-500px.jpg" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
-:::
 
 <!-- ------------ -->
 
@@ -71,18 +55,7 @@ soil compaction, soil salinization
 :::
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
-## Laura Rez
-### MSc student
 
-plant water fluxes, heatwave impact on fruit trees
-
-::::
-:::: picture_here
-<img src="archive/images/group/laura-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
-:::
 
 # Former members
 
@@ -99,46 +72,99 @@ https://quarto.org/docs/authoring/figures.html#vertical-alignment -->
 ::::
 ::: -->
 
-::: {layout="[5,5,30]"  layout-valign="center"}
+<!-- ------------ -->
+
+<br>
+
+::: {layout="[5,10,30]"  layout-valign="center"}
 :::: stam
 ::::
 :::: picture_here
-<img src="archive/images/group/yuval-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+<img src="archive/images/group/isaac-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Isaac Kramer
+**2018--2022**, PhD student  
+soil salinization, irreversible soil degradation processes, sustainable resource use  
+[website](https://github.com/isaackramer)
+::::
+:::
+
+<br>
+
+::: {layout="[10,30,5]" layout-valign="center"}
+:::: picture_here
+<img src="archive/images/group/laura-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Laura Rez
+**2020--2022**, MSc student  
+plant water fluxes, heatwave impact on fruit trees
+::::
+:::: stam
+::::
+:::
+
+<br>
+
+::: {layout="[5,10,30]"  layout-valign="center"}
+:::: stam
+::::
+:::: picture_here
+<img src="archive/images/group/yuval-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
 ::::
 :::: text_here
 ##### Yuval Bayer
 **2020--2022**, BSc Amirim project  
+Optimal stomatal control
 ::::
 :::
 
-::: {layout="[5,30]" layout-valign="center"}
+<br>
+
+::: {layout="[10,30,5]" layout-valign="center"}
 :::: picture_here
-<img src="archive/images/group/avi-500px.jpg" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+<img src="archive/images/group/avi-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
 ::::
 :::: text_here
 ##### Avi Gross
 **2018--2020**, MSc student  
+Plant water storage dynamics
+::::
+:::: stam
 ::::
 :::
 
-::: {layout="[5,5,30]" layout-valign="center"}
+<br>
+
+::: {layout="[5,10,30]" layout-valign="center"}
 :::: stam
 ::::
 :::: picture_here
-<img src="archive/images/group/taiwo-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+<img src="archive/images/group/taiwo-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
 ::::
 :::: text_here
 ##### Taiwo Adeyemo
 **2018--2020**, MSc student  
+Irreversible soil degradation
 ::::
 :::
 
-::: {layout="[5,30]" layout-valign="center"}
+<br>
+
+::: {layout="[10,30,5]" layout-valign="center"}
 :::: picture_here
-<img src="archive/images/group/avigail-500px.jpg" border="0" alt="" width="100px" class="rounded-circle zoom"/>
+<img src="archive/images/group/avigail-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
 ::::
 :::: text_here
 ##### Avigail Kaner
 **2017--2021**, Research Specialist  
 ::::
+:::: stam
+::::
 :::
+
+<div class="alert alert-success">
+  Theory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.  
+  <strong>— Unknown</strong>
+</div>

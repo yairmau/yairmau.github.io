@@ -58,6 +58,18 @@ How can plants best regulate gas exchange, maximizing carbon uptake while minimi
 ::::
 :::
 
+In order to make photosynthesis, plants capture CO2 from the atmosphere through the pores in their leaves (stomata).
+However, at the same time that CO2 enters the plant, water vapor exits.
+If too much water leaves the plant, it will desiccate and die, so the plant should keep its stomata mostly closed.
+On the other hand, the plant will starve from lack of carbon if it doesn't open its stomata.
+We apply the tools of optimal control theory to study this fascinating problem.
+
+Guiding questions:
+
+* Which plant traits produce different water management strategies (e.g. isohydricity)? 
+* What is the plant really optimizing for? Instantaneous carbon assimilation? Maximum carbon gains over long periods? Fitness?
+* How do plants respond to stochastic environmental conditions?
+
 <!-- PLANT WATER STRESS -->
 
 ::: {layout="[5,20]"}
@@ -118,3 +130,7 @@ What are the soil physical changes that follow compaction? How do they affect wa
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 
+<div class="alert alert-success">
+  What is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.  
+  <strong>— Epictetus</strong>
+</div>

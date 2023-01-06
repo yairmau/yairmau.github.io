@@ -269,3 +269,8 @@ Main features:
 `unicode, bar, barh, grid`
 
 ![](/images/python_figures/bars.png)
+
+<div class="alert alert-success">
+  “The comments aren’t there to explain the code to the programmers, the code is there to explain the comments to the computer.”  
+  <strong>—Andy Harris, How to begin thinking like a programmer</strong>
+</div>

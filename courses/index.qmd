@@ -11,4 +11,9 @@ section-divs: false
 
 ## [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
 
-## {{< iconify whh solarsystem >}} Physics 1
+## [{{< iconify whh solarsystem >}} Physics 1](/courses/physics1)
+
+<div class="alert alert-success">
+  True science teaches, above all, to doubt and to be ignorant.  
+  <strong>— Miguel de Unamuno</strong>
+</div>

@@ -1,3 +1,22 @@
+kramer2022effects:
+- title: "kramer2022effects"
+  handle: "kramer2022effects"
+  authors: Isaac Kramer, Yaara Tsairi, Michael Buchdahl Roth, Alon Tal, and Yair Mau
+  title: "Effects of population growth on Israel’s demand for desalinated water"
+  journal: npj Clean Water
+  year: "2022"
+  doi: 10.1038/s41545-022-00215-9
+  pdf: archive/papers/kramer-2022-Effects of population growth on Israels demand for desalinated water.pdf
+  bib: |
+      @article{kramer2022effects,
+          doi = {10.1038/s41545-022-00215-9},
+          url = {https://doi.org/10.1038/s41545-022-00215-9},
+          year = {2022},
+          author = {Isaac Kramer and Yaara Tsairi and Michael Buchdahl Roth and Alon Tal and Yair Mau},
+          title = {Effects of population growth on Israel’s demand for desalinated water},
+          journal = {npj Clean Water},
+      }
+
 kramer2022sustainability:
 - title: "kramer2022sustainability"
   handle: "kramer2022sustainability"
@@ -6,7 +25,7 @@ kramer2022sustainability:
   journal: Water Resources Research
   year: "2022"
   doi: 10.1029/2021WR031307
-  pdf: archive/papers/kramer-2020-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf
+  pdf: archive/papers/kramer-2022-The Sustainability of Treated Wastewater Irrigation- The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.pdf
   bib: |
       @article{kramer2022sustainability,
           doi = {10.1029/2021WR031307},

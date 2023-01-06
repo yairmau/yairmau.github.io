@@ -15,8 +15,10 @@ https://stackoverflow.com/questions/18032220/how-to-change-source-of-img-tag-on-
     onmouseover="this.src='archive/images/group/yair2022.png'"
     onmouseout="this.src='archive/images/group/yair2022_primitive.png'"
     border="0" alt="" width="300px" class="rounded-circle"/> -->
-<img src="archive/images/group/yair2022.png"
-    border="0" alt="" width="300px" class="rounded-circle"/>
+<!-- <img src="archive/images/group/150.png"
+    border="0" alt="" width="300px" class="rounded-circle"/> -->
+<img src="archive/images/group/6.png"
+    border="0" alt="" width="300px"/>
 ::::
 
 :::: name_here
@@ -48,6 +50,50 @@ Go the to [{{< fa compass-drafting >}} Science page](/science.html) to learn mor
 
 Besides the usual academic pages (Science, Papers, Group, Courses), I hid a lot of material in the [{{< fa magnifying-glass-plus >}} More page](/more): tutorials (python, latex), quotes, recommendations, etc.
 
+## Short Bio
+**2005:** BSc in Physics, University of São Paulo  
+**2009:** MSc in Physics, Ben-Gurion University of the Negev  
+**2013:** PhD in Physics, Ben-Gurion University of the Negev  
+**2013--2016:** Postdoc in Environmental Engineering, Duke University  
+**2016--to date:** Faculty member at the Hebrew University of Jerusalem
+
+```{python}
+#| label: "software"
+#| id: "software"
+#| output: asis
+#| echo: false
+import yaml
+from IPython.display import display, Markdown, HTML
+
+display(HTML(
+"""
+<a class="btn my-btn-style btn-sm rounded", href="https://orcid.org/0000-0001-6987-7597" target="_blank">ORCID</a>
+"""
+))
+
+display(HTML(
+"""
+<a class="btn my-btn-style btn-sm rounded", href="https://scholar.google.com/citations?user=kiKmEQMAAAAJ&hl=en&oi=ao" target="_blank">Scholar</a>
+"""
+))
+
+display(HTML(
+"""
+<a class="btn my-btn-style btn-sm rounded", href="https://twitter.com/MauYair" target="_blank">Twitter</a>
+"""
+))
+
+display(HTML(
+"""
+<a class="btn my-btn-style btn-sm rounded", href="https://huji.zoom.us/my/yairmau" target="_blank">Zoom</a>
+"""
+))
+
+
+
+
+```
+
+---
+
 > **Philosophy of life:** if you're not having fun, you're doing it wrong.
-
-

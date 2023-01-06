@@ -1,0 +1,80 @@
+---
+title: Newton's Laws
+---
+
+## Newton's first law
+
+### The fall of the dinosaurs
+
+<iframe src="https://giphy.com/embed/5LO4Bngh7xABEGRc4j" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### Trampoline with leaves
+
+<iframe src="https://giphy.com/embed/xTiN0uS9AK5eEh68sU" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### At the Kibo ISS module
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yC64gk117cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### [Rollerblades on a moving table](https://youtu.be/wUeSW0rUkao?t=174)
+
+### What is Inertia?
+<!--
+Michael Stevens playing with two balls
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ISGCkWOerlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+<iframe src="https://giphy.com/embed/fXxwnQSlBsqHzS2QJe" width="480" height="462" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<iframe src="https://giphy.com/embed/u1Gz6PkS40ITseJMqT" width="480" height="368" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+![](/archive/physics/gifs/inertia.jpg)
+
+## Newton's second law
+
+
+### Man with superhuman strength
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/es0nPjLNsi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Inside the ISS
+
+![](https://media1.tenor.com/images/1791a81c6fe1c1091f1464754266d254/tenor.gif?itemid=5669484)
+
+### Whack-a-Stack
+<iframe src="https://giphy.com/embed/wJx6IzPVvaNhU5AL09" width="480" height="458" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### Apollo 15 hammer-feather drop
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oYEgdZ3iEKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Newton's third law
+
+### Newton cartoon
+
+![](/archive/physics/gifs/newton-slaps-car.jpg)
+
+### Motorcycle kicks car
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SKMv4Xtm73c?start=63" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Friction
+
+### Static friction
+
+<iframe src="https://giphy.com/embed/O2mpPdl8k1WqyjEpJt" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### Static vs. kinetic friction
+
+<iframe src="https://giphy.com/embed/7o7QmUDWa6rfrHSxYr" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### No friction on inclined plane
+
+<iframe src="https://giphy.com/embed/8mc90nBoPaQsw8iVvv" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### Cat fails to jump, not enough friction
+
+<iframe src="https://giphy.com/embed/qLQwqW8JmfD8EixDge" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+### Spidergirl
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PKlFOqVMUpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

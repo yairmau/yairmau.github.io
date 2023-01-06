@@ -110,6 +110,7 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 display(Markdown("### 2022"))
 display(HTML("</br>"))
+print_paper(yaml_data['kramer2022effects'][0])
 print_paper(yaml_data['kramer2022sustainability'][0])
 print_paper(yaml_data['adeyemo2022salinity'][0])
 print_paper(yaml_data['goldberg2022compaction'][0])
@@ -171,3 +172,9 @@ print_paper(yaml_data['mau2013phdthesis'][0])
 ```{python}
 print_paper(yaml_data['mau2009mscthesis'][0])
 ```
+
+<div class="alert alert-success">
+  The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.  
+  <strong>— Pedro Domingos, The Master Algorithm</strong>
+</div>
+

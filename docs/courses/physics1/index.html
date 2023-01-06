@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Yair Mau -  Physics 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../science.html"><i class="fa-solid fa-compass-drafting" aria-hidden="true"></i> Science</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../papers.html"><i class="fa-solid fa-file" aria-hidden="true"></i> Papers</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../group.html"><i class="fa-solid fa-circle-user" aria-hidden="true"></i> Group</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../courses/index.html"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i> Courses</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../more/index.html"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> More</a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><iconify-icon inline="" icon="whh:solarsystem"></iconify-icon> Physics 1</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"></p>
+<h2 id="goals" class="anchored">Goals</h2>
+<p>This basic Physics course has three main goals:</p>
+<ul>
+<li>By the end of this course you will be able to look at the world around you and start describing it in a formal (mathematical) language.</li>
+<li>By the end of this course you will be able to read a graph and tell the story behind it, i.e., you will translate a formal (mathematical) language into regular speech any human can understand.</li>
+<li>We will get acquainted with the concept of Energy. This, in my humblest opinion, is one of the most important ideas in Science.</li>
+</ul>
+<h2 id="patron-saint" class="anchored">Patron saint</h2>
+<p>Galileo is undoubtedly our hero in this course. Honorable runners-up: Archimedes and Newton.</p>
+<p><img src="../../archive/physics/gifs/Galileo-quote.png" class="img-fluid"></p>
+<h2 id="lecture-notes-in-hebrew-and-more" class="anchored">Lecture Notes (in hebrew) and more</h2>
+<p><strong>Book:</strong> I loosely use Halliday &amp; Resnick’s <em>Principles of Physics</em> (11th edtion).<br>
+<strong>Software:</strong> I use <a href="http://www.styluslabs.com/">Stylus Labs Write</a> to write my classnotes, it is available for Windows, Mac, Linux, Android, and iOS.<br>
+<strong>Hardware:</strong> I use both a Wacom Cintiq 16 and an iPad air.<br>
+<strong>Legend:</strong><br>
+<span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span> lecture notes pdf<br>
+<span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span> lecture notes source (write) svgz<br>
+<span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span> powerpoint<br>
+<span class="iconify" data-icon="simple-icons:jupyter" data-inline="false"></span> widget in jupyter notebook (might take a while to load…)<br>
+<span class="iconify" data-icon="fa-solid:images" data-inline="false"></span> other materials<br>
+<span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span> animations and gifs</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">subject</th>
+<th style="text-align: left;">lectures</th>
+<th style="text-align: left;">other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">basic math</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="../../courses/physics1/extra/extra-basic-math.html"><span class="iconify" data-icon="fa-solid:images" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">units</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-00-units.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-00-units.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../courses/physics1/extra/extra-units.html"><span class="iconify" data-icon="fa-solid:images" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/units.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1d kinematics</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-01-kinematics1d.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-01-kinematics1d.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/kinematics1d.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a>   <a href="https://mybinder.org/v2/gh/yairmau/website/HEAD?labpath=archive%2Fphysics%2Fwidgets%2Finstantaneous_velocity.ipynb"><span class="iconify" data-icon="simple-icons:jupyter" data-inline="false"></span></a>   <a href="../../courses/physics1/extra/extra-1d-kinematics.html"><span class="iconify" data-icon="fa-solid:images" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/kinematics.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vectors</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-02-vectors.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-02-vectors.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2d kinematics</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-02-kinematics-2d.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-kinematics-2d.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="https://mybinder.org/v2/gh/yairmau/website/HEAD?labpath=archive%2Fphysics%2Fwidgets%2Fmax_range_alpha.ipynb"><span class="iconify" data-icon="simple-icons:jupyter" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/kinematics.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">circular motion</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-02-circular-motion.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-02-circular-motion.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/circular-motion.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/kinematics.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Newton’s laws</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-03-newtons-laws.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-03-newtons-laws.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/newton1and2.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/newton3.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/newtons-laws.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">work-energy theorem</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-04-work-energy.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-04-work-energy.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="https://mybinder.org/v2/gh/yairmau/website/HEAD?labpath=archive%2Fphysics%2Fwidgets%2Friemann_integral.ipynb"><span class="iconify" data-icon="simple-icons:jupyter" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/energy.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">potential energy</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-04-potential-energy-U.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-04-potential-energy-U.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../courses/physics1/gifs/energy.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">potential energy diagrams</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-04-potential-energy-diagram.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-04-potential-energy-diagram.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">linear momentum</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-05-linear-momentum.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-05-linear-momentum.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../courses/physics1/gifs/linear-momentum.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a>   <a href="../../courses/physics1/extra/extra-momentum.html"><span class="iconify" data-icon="fa-solid:images" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gravitation</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-06-gravitation.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-06-gravitation.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/earth-moon.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">hydrostatics</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-07-hydrostatics.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-07-hydrostatics.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../courses/physics1/gifs/fluids.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hydrodynamics</td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/guide-07-hydrodynamics.pdf"><span class="iconify" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span></a>   <a href="../../archive/physics/lectures/guide-07-hydrodynamics.svgz"><span class="iconify" data-icon="teenyicons:svg-outline" data-inline="false"></span></a></td>
+<td style="text-align: left;"><a href="../../archive/physics/lectures/hydrodynamics.pptx"><span class="iconify" data-icon="fa-regular:file-powerpoint" data-inline="false"></span></a>   <a href="../../courses/physics1/gifs/fluids.html"><span class="iconify" data-icon="teenyicons:gif-outline" data-inline="false"></span></a></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://docs.google.com/spreadsheets/d/1b0t98d7-tW82mCmukKrkjHK8gLdNHGRLrD-HxN_luNc/edit#gid=0">Click here</a> for details on all lectures of the 2021-22 academic year.<br>
+Here are other <a href="../../courses/physics1/gifs/wow.html">very nice videos</a> not directly related to any specific topic.</p>
+<h2 id="some-past-exams-in-hebrew" class="anchored">Some past exams (in hebrew)</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Midterm</th>
+<th style="text-align: center;">Moed A</th>
+<th style="text-align: center;">Moed B</th>
+<th style="text-align: center;">Moed C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2021-2022</td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2022-71031-bochan.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2022-71031-bochan-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2022-71031-moed-A.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2022-71031-moed-A-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2022-71031-moed-B.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2022-71031-moed-B-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2020-2021</td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2021-71031-bochan.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2021-71031-bochan-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2021-71031-moed-A.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2021-71031-moed-A-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2021-71031-moed-B.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2021-71031-moed-B-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019-2020</td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2020-71031-bochan.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2020-71031-bochan-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2020-71031-moed-A.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2020-71031-moed-A-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2020-71031-moed-B.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2020-71031-moed-B-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2020-71031-moed-C.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2020-71031-moed-C-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018-2019</td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2019-71031-bochan.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2019-71031-bochan-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2019-71031-moed-A.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2019-71031-moed-A-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2019-71031-moed-B.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2019-71031-moed-B-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2017-2018</td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2018-71031-bochan.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2018-71031-bochan-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2018-71031-moed-A.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2018-71031-moed-A-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"><a href="../../archive/physics/exams/2018-71031-moed-B.pdf"><span class="iconify" data-icon="bi:question-square-fill" data-inline="false"></span></a>   <a href="../../archive/physics/exams/2018-71031-moed-B-solution.pdf"><span class="iconify" data-icon="bi:exclamation-square" data-inline="false"></span></a></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="extra-stuff" class="anchored">Extra stuff</h2>
+<p><a href="../../courses/physics1/gifs/cartoons.html">Physics cartoons</a></p>
+<p>Great online Physics resources: * <a href="https://www.khanacademy.org/science/physics">Khan Academy - English</a> * <a href="http://www.hebrewkhan.org/#physics">Khan Academy - עברית</a> * <a href="https://www.youtube.com/c/MichelvanBiezen/playlists">Michel van Biezen</a> * <a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e">Walter Lewin’s 8.01x - MIT Physics I: Classical Mechanics</a> * <a href="https://phet.colorado.edu/en/simulations/filter?subjects=motion,work-energy-and-power&amp;type=html&amp;sort=alpha&amp;view=grid">PhET: fun, free, interactive, research-based science and mathematics simulations</a></p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
