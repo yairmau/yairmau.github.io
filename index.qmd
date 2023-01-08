@@ -2,6 +2,12 @@
 title: ""
 page-layout: article
 section-divs: false
+<<<<<<< HEAD
+=======
+jupyter: python3
+execute:
+  freeze: auto  # re-render only when source changes
+>>>>>>> 0184af8 (quotes fixed)
 ---
 
 <!-- {{< fa thumbs-up >}}  -->

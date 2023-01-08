@@ -3,6 +3,8 @@ title: "{{< fa brands python >}} Python"
 echo: false
 jupyter: python3
 section-divs: false
+execute:
+  freeze: auto  # re-render only when source changes
 ---
 
 
