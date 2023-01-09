@@ -15,7 +15,8 @@ https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html -->
 :::: text_here
 ## Yair Mau
 ### Principal Investigator
-> *“Problems worthy of attack prove their worth by fighting back.”*  **Piet Hein**
+> *Problems worthy of attack prove their worth by fighting back.*  
+> --- **Piet Hein**
 ::::
 :::: picture_here
 <img src="archive/images/group/yair2022.png" border="0" alt="" width="300px" class="rounded-circle"/>
@@ -166,5 +167,4 @@ Irreversible soil degradation
 
 <div class="alert alert-success">
   Theory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.  
-  <strong>— Unknown</strong>
-</div>
+  <strong>— Unknown</strong></div>

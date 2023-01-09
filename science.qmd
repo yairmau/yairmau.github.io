@@ -132,5 +132,4 @@ What are the soil physical changes that follow compaction? How do they affect wa
 
 <div class="alert alert-success">
   What is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.  
-  <strong>— Epictetus</strong>
-</div>
+  <strong>— Epictetus</strong></div>

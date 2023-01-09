@@ -17,4 +17,7 @@ section-divs: false
 This website was build using [Quarto](https://quarto.org), edited on [VSCode](https://code.visualstudio.com), hosted on [Github Pages](https://pages.github.com).
 The code for the whole website can be found on this [GitHub repository](https://github.com/yairmau/yairmau.github.io).
 
-[link for zoom meetings](https://huji.zoom.us/my/yairmau)
+
+<div class="alert alert-success">
+  Computers are useless. They can only give you answers.  
+  <strong>— Pablo Picasso</strong></div>

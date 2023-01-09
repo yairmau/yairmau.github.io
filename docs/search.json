@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "archive/physics/lectures/instantaneous_velocity.html",
+    "href": "archive/physics/lectures/instantaneous_velocity.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib inline\n\ndef f(Tmiddle, deltaT, show_deltas, show_tangent):\n    fig, ax = plt.subplots(figsize=(8,6))\n    t = np.linspace(0,20,101)\n    foo = lambda t: (t**3 - 15*t**2 + 300) / 100\n    x = foo(t)\n    ax.plot(t, x, color=\"red\", lw=3)\n    ax.set(xlim=[0,20], ylim=[-5,20], ylabel=\"y\", xticks=np.arange(0,21,5))\n    ax.set_xlabel(\"time\")\n    ax.set_ylabel(\"x(t)\", rotation=\"horizontal\",labelpad=15)\n    t0 = Tmiddle - deltaT/2\n    t1 = Tmiddle + deltaT/2\n    x0 = foo(t0)\n    x1 = foo(t1)\n    ax.plot([t0,t1], [x0,x1], color=\"blue\", lw=2)\n    if show_deltas:\n        ax.plot([t0,t1], [x0,x0], color=\"gray\")\n        ax.plot([t1,t1], [x0,x1], color=\"gray\")\n        ax.text(Tmiddle, x0, r\"$\\Delta t$\", fontsize=20,va=\"top\")\n        ax.text(t1, (x1+x0)/2, r\"$\\Delta x$\", fontsize=20)\n    if show_tangent:\n        slope = (3*Tmiddle**2 - 30*Tmiddle) / 100\n        intercept = foo(Tmiddle) - slope*Tmiddle\n        Tmin = -100\n        Tmax = 100\n        line = lambda t: slope*t + intercept\n        ax.plot([Tmin, Tmax], [line(Tmin), line(Tmax)],\n                color=\"black\", ls=\":\")\n        \ninteractive_plot = interactive(f, Tmiddle=widgets.FloatSlider(min=1, max=17, step=0.5, value=15),\n                                  deltaT=widgets.FloatSlider(min=0, max=8, step=0.2, value=5),\n                                  show_deltas=widgets.Checkbox(value=True),\n                                  show_tangent=widgets.Checkbox(value=True))\noutput = interactive_plot.children[-1]\n# to avoid flickering: https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html#Flickering-and-jumping-output\noutput.layout.height = '450px'\ninteractive_plot"
+  },
+  {
+    "objectID": "archive/physics/lectures/riemann_integral.html",
+    "href": "archive/physics/lectures/riemann_integral.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib inline\n\ndef f(n):\n    fig, ax = plt.subplots(figsize=(8,6))\n    x = np.linspace(0,10,101)\n    foo = lambda x: (1*x**3 - 12*x**2 + 300) / 5\n    y = foo(x)\n    ax.plot(x, y, color=\"red\")\n    a=n\n    ax.set(ylim=[0,65], ylabel=\"y\")\n    ax.set_xlabel(\"x\")\n    ax.set_ylabel(\"y\", rotation=\"horizontal\",labelpad=15)\n    ax.fill_between(x,y1=y, y2=0, color=\"red\", alpha=0.2)\n    r_x = np.linspace(0,10,n+1)\n    blue_area = 0.0\n    for i,v in enumerate(r_x[:-1]):\n        Y1 = foo(np.mean([r_x[i], r_x[i+1]]))\n        ax.fill_between([r_x[i], r_x[i+1]],\n                        y1 = Y1, y2=0, color=\"blue\", alpha=0.2)\n        blue_area = blue_area + (r_x[i+1] - r_x[i])*Y1\n    red_area = 300\n    ax.text(10, 60, f\"Red Area = {red_area:.2f}\", ha=\"right\", fontsize=16)\n    ax.text(10, 55, f\"Blue Area = {blue_area:.2f}\", ha=\"right\", fontsize=16)\n\ninteractive_plot = interactive(f, n=widgets.IntSlider(min=1, max=25))\noutput = interactive_plot.children[-1]\n# to avoid flickering: https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html#Flickering-and-jumping-output\noutput.layout.height = '400px'\ninteractive_plot"
+  },
+  {
+    "objectID": "archive/physics/lectures/max_range.html",
+    "href": "archive/physics/lectures/max_range.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib inline\n\npi = np.pi\ndef f(alpha, v0, show_v):\n    fig, ax = plt.subplots(figsize=(8,6))\n    x = np.linspace(-2,18,501)\n    t = np.linspace(0,5,101)\n    g = 9.8\n    trajectory = lambda x: np.tan(alpha)*x - (g/(2*v0**2*(np.cos(alpha))**2)*x**2)\n    xoft = lambda t: v0*np.cos(alpha)*t\n    yoft = lambda t: v0*np.sin(alpha)*t - g*t**2/2\n    y = trajectory(x)\n    ax.plot(x, y, color=\"red\", lw=3)\n    ax.set(xlim=[-2,12], ylim=[-1,6], ylabel=\"y\")\n    ax.set_xlabel(\"x (m)\", fontsize=14)\n    ax.set_ylabel(\"y (m)\", fontsize=14, rotation=\"horizontal\",labelpad=15)\n    ax.fill_between(x,y1=0,y2=-10, color=\"xkcd:grass\", zorder=10)\n    ax.fill_between(x,y1=0,y2=10, color=\"xkcd:sky\", zorder=-10)\n    ax.scatter(9, 5, s=4000, facecolor=\"yellow\")\n    if show_v:\n        v = v0*0.4\n        vx = v * np.cos(alpha)\n        vy = v * np.sin(alpha)\n        ax.annotate(\"\", xy=(vx, vy), xytext=(0, 0),\n                    arrowprops=dict(facecolor='black',\n                                    #shrink=0.0,\n                                    connectionstyle=\"arc3\",\n                                    arrowstyle=\"simple\")\n                   )\n        ax.text(vx, vy, r\"$v_0$\", fontsize=20)\n        \ninteractive_plot = interactive(f, alpha=widgets.FloatSlider(min=0, max=pi/2-0.001, step=pi/50, value=np.pi/6, description=r'$\\alpha$ (rad)'),\n                                  v0=widgets.FloatSlider(min=1, max=10, step=1, value=5, description=r'$v_0$ (m/s)'),\n                                  show_v=widgets.Checkbox(value=True))\noutput = interactive_plot.children[-1]\n# to avoid flickering: https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html#Flickering-and-jumping-output\noutput.layout.height = '400px'\ninteractive_plot"
+  },
+  {
+    "objectID": "archive/physics/widgets/instantaneous_velocity.html",
+    "href": "archive/physics/widgets/instantaneous_velocity.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib widget\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport ipywidgets as widgets\nfrom ipywidgets import interactive\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\n\nfig, ax = plt.subplots(figsize=(9,6))\nt = np.linspace(-5, 20, 101)\nfoo = lambda t: (t**3 - 15*t**2 + 300) / 100\nx = foo(t)\nTmiddle = 15\ndeltaT = 5\n\nax.set(xlim=[-5,20],\n       ylim=[-5,20],\n       ylabel=\"y\",\n       xticks=np.arange(-5,21,5),\n       xlabel=\"time\",\n      )\nax.set_ylabel(\"x(t)\", rotation=\"horizontal\",labelpad=15)\n\n\ndef plot_all_lines(T, dt):\n    ax.plot(t, x, color=\"red\", lw=3)\n    t0 = T - dt/2\n    t1 = T + dt/2\n    x0 = foo(t0)\n    x1 = foo(t1)\n    ax.plot([t0,t1], [x0,x1], color=\"blue\", lw=2)\n    \n    ax.plot([t0,t1], [x0,x0], color=\"gray\")\n    ax.plot([t1,t1], [x0,x1], color=\"gray\")\n    ax.text(T, x0, r\"$\\Delta t$\", fontsize=20, va=\"top\")\n    ax.text(t1, (x1+x0)/2, r\"$\\Delta x$\", fontsize=20)\n    \n    slope = (3*T**2 - 30*T) / 100\n    intercept = foo(T) - slope*T\n    Tmin = -100\n    Tmax = 100\n    line = lambda t: slope*t + intercept\n    ax.plot([Tmin, Tmax], [line(Tmin), line(Tmax)],\n            color=\"black\", ls=\":\")\n    \nplot_all_lines(Tmiddle, deltaT)\n\n@widgets.interact(Tmiddle=(-4, 17, 0.5), deltaT=(0, 8, 0.2))\ndef update(Tmiddle = 15, deltaT = 5):\n    \"\"\"Remove old lines from plot and plot new one\"\"\"\n    [l.remove() for l in ax.lines]\n    [l.remove() for l in ax.lines]\n    [l.remove() for l in ax.lines]\n    [l.remove() for l in ax.texts]\n    [l.remove() for l in ax.texts]\n    plot_all_lines(Tmiddle, deltaT)"
+  },
+  {
+    "objectID": "archive/physics/widgets/riemann_integral.html",
+    "href": "archive/physics/widgets/riemann_integral.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib widget\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport ipywidgets as widgets\nfrom ipywidgets import interactive\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\n\nfig, ax = plt.subplots(figsize=(6,6))\nfig.subplots_adjust(left=0.14, right=0.97, top=0.99, bottom=0.10,\n                    hspace=0.05, wspace=0.02)\nx = np.linspace(0,10,101)\nfoo = lambda x: (1*x**3 - 12*x**2 + 300) / 5\ny = foo(x)\nax.plot(x, y, color=\"red\")\nax.set(xlim=[0, 10],\n       ylim=[0, 65],\n       xlabel=\"x\",\n      )\nax.set_ylabel(\"y\", rotation=\"horizontal\",labelpad=15)\nax.fill_between(x,y1=y, y2=0, color=\"red\", alpha=0.2)\nred_area = 300\nax.text(10, 60, f\"Red Area = {red_area:.2f}\", ha=\"right\", fontsize=16)\n\ndef draw_blue_rect(axx, n):\n    r_x = np.linspace(0,10,n+1)\n    blue_area = 0.0\n    rects = []\n    for i,v in enumerate(r_x[:-1]):\n        Y1 = foo(np.mean([r_x[i], r_x[i+1]]))\n        rect = ax.fill_between([r_x[i], r_x[i+1]],\n                               y1 = Y1, y2=0, color=\"blue\", alpha=0.2,\n                               edgecolor=\"black\")\n        rects.append(rect)\n        blue_area = blue_area + (r_x[i+1] - r_x[i])*Y1\n        ax.rects = rects\n    ax.blue_area = ax.text(10, 55, f\"Blue Area = {blue_area:.2f}\",\n                           ha=\"right\", fontsize=16)\n\ndraw_blue_rect(ax, 1)\n\n@widgets.interact(n=(1, 25, 1))\ndef update(n = 1):\n    \"\"\"Remove old lines from plot and plot new one\"\"\"\n    [l.remove() for l in ax.rects]\n    ax.blue_area.remove()\n    draw_blue_rect(ax, n)"
+  },
+  {
+    "objectID": "archive/physics/widgets/max_range_alpha.html",
+    "href": "archive/physics/widgets/max_range_alpha.html",
+    "title": "Yair Mau",
+    "section": "",
+    "text": "%matplotlib widget\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport ipywidgets as widgets\nfrom ipywidgets import interactive\nimport seaborn as sns\nsns.set(style=\"ticks\", font_scale=1.5)\n\n\npi = np.pi\ng = 9.8 \nfig, (ax0, ax1) = plt.subplots(1, 2, figsize=(9,5))\nfig.subplots_adjust(left=0.02, right=0.90, top=0.99, bottom=0.16,\n                    hspace=0.05, wspace=0.02)\nx = np.linspace(-2,18,501)\nt = np.linspace(0,5,101)\ng = 9.8\nv0 = 10.0\nalpha0 = 0.1*pi\n\na = np.linspace(0, pi/2, 101)\n\ndef trajectory(x, alpha, v0):\n    return np.tan(alpha)*x - (g/(2*v0**2*(np.cos(alpha))**2)*x**2)\n\ndef max_range_func(a, v0):\n    return v0**2 * np.sin(2*a) / g\n\ndef max_range(alpha, v0):\n    return v0**2 * np.sin(2*alpha) / g\n\nxoft = lambda alpha: v0*np.cos(alpha)*t\nyoft = lambda alpha: v0*np.sin(alpha)*t - g*t**2/2\ny = trajectory(x, alpha0, v0)\nax0.fill_between(x,y1=0,y2=-10, color=\"xkcd:grass\", zorder=10)\nax0.fill_between(x,y1=0,y2=12, color=\"xkcd:sky\", zorder=-10)\nax0.scatter(9, 9, s=4000, facecolor=\"yellow\")\n\ndef plot_left(ax, alpha, v0):\n    ax.plot(x, trajectory(x, alpha, v0), color=\"red\", lw=3)\n    make_arrow(ax, v0, alpha)\n    ax.plot([max_range(alpha, v0)], [0], 'o', zorder=10,\n            markerfacecolor=\"white\", markeredgecolor=\"black\", markersize=10, markeredgewidth=3)\n\ndef plot_right(ax, alpha, v0):\n    mr = max_range(alpha, v0)\n    ax.plot(a, max_range_func(a, v0), color=\"tab:red\", lw=3)\n    ax.plot([alpha], mr, 'o', clip_on = False, \n            markerfacecolor=\"white\", markeredgecolor=\"black\", markersize=10, markeredgewidth=3)\n    ax.plot(a, a*0 + mr, color=\"black\", ls=\":\", zorder=0)\n    ax.plot([alpha]*2, [0, mr], color=\"black\", ls=\":\", zorder=0)\n\ndef make_arrow(ax, v, alpha):\n    vx = v * np.cos(alpha)\n    vy = v * np.sin(alpha)\n    ax.ann = ax.annotate(\"\", xytext=(0, 0), xy=(vx*0.6, vy*0.6), zorder=0,\n                arrowprops=dict(facecolor='black',\n                                connectionstyle=\"arc3\",\n                                arrowstyle=\"simple\",)\n               )\n    ax.v0text = ax.text(vx*0.6, vy*0.6, r\"$\\vec{v}$\", fontsize=20)\n\nplot_right(ax1, alpha0, v0)\nplot_left(ax0, alpha0, v0)\n\nax0.set(xlim=[-2, 12],\n        ylim=[-2, 12],\n        xticks=np.arange(0,11,2),\n        yticks=[],\n        xlabel=\"x (m)\"\n       )\n\nax1.set(xlim=[0, pi/2],\n        ylim=[0, 11],\n        xticks=[0, pi/4, pi/2],\n        xticklabels=['0', r'$\\frac{\\pi}{4}$', r'$\\frac{\\pi}{2}$'],\n        xlabel=r\"angle, $\\alpha$\",\n        ylabel=\"horizontal range, L (m)\"\n       )\nax1.yaxis.set_label_position(\"right\")\nax1.yaxis.tick_right()\n\nax1.text(0, 10, r\"$ L=\\frac{v_0^2 \\sin(2\\alpha)}{g}$\")\n\n@widgets.interact(alpha=(0, 1.57, 0.01), v0=(0.1, 10.0-0.1, 0.1))\ndef update(alpha = pi*0.1, v0 = 10):\n    \"\"\"Remove old lines from plot and plot new one\"\"\"\n    [l.remove() for l in ax0.lines]\n    [l.remove() for l in ax0.lines]\n    ax0.ann.remove()\n    ax0.v0text.remove()\n    plot_left(ax0, alpha, v0)\n    [l.remove() for l in ax1.lines]\n    [l.remove() for l in ax1.lines]\n    [l.remove() for l in ax1.lines]\n    plot_right(ax1, alpha, v0)"
+  },
+  {
     "objectID": "papers.html",
     "href": "papers.html",
     "title": " Papers",
@@ -11,14 +53,14 @@
     "href": "science.html",
     "title": " Science",
     "section": "",
-    "text": "Heatwave impact on plants\nHow resilient can plants be to severe heatwaves?\n\n\n\nA warming climate means higher climatic variability, including harsher heatwave events. Severe heatwaves impose great stress on plants, increasing the risk of desiccation and, ultimately, hydraulic failure.\nGuiding questions:\n\nWhat is the relative impact of soil drought and atmospheric drought on plant functioning?\nHow important are water storages (internal and in the soil) in maintaining transpiration and cooling?\nHow do plant resilience and survival chances depend on plant traits?\n\nWe investigate these questions through field and lab experiments with native Mediterranean species, continuously monitoring water fluxes and plant status. We analyze the data using time-series tools and machine-learning techniques. Through mathematical modeling, we investigate plant response to expected future climate.\n\n\n\n\n \n\n\nPlant optimal control\nHow can plants best regulate gas exchange, maximizing carbon uptake while minimizing water losses?\n\n\n\n\n\n\n\n \n\n\nFruit-tree water stress\nCan we minimize water stress with smart irrigation scheduling? Can we do it optimally?\n\n\n\n\n\n\n\n \n\n\nSoil salinization\nHow can we ensure healthy soils for generations to come?\n\n\n\n\n\n\n\n \n\n\nSoil compaction\nWhat are the soil physical changes that follow compaction? How do they affect water and solute dynamics, and ultimately soil degradation?"
+    "text": "Heatwave impact on plants\nHow resilient can plants be to severe heatwaves?\n\n\n\nA warming climate means higher climatic variability, including harsher heatwave events. Severe heatwaves impose great stress on plants, increasing the risk of desiccation and, ultimately, hydraulic failure.\nGuiding questions:\n\nWhat is the relative impact of soil drought and atmospheric drought on plant functioning?\nHow important are water storages (internal and in the soil) in maintaining transpiration and cooling?\nHow do plant resilience and survival chances depend on plant traits?\n\nWe investigate these questions through field and lab experiments with native Mediterranean species, continuously monitoring water fluxes and plant status. We analyze the data using time-series tools and machine-learning techniques. Through mathematical modeling, we investigate plant response to expected future climate.\n\n\n\n\n \n\n\nPlant optimal control\nHow can plants best regulate gas exchange, maximizing carbon uptake while minimizing water losses?\n\n\n\nIn order to make photosynthesis, plants capture CO2 from the atmosphere through the pores in their leaves (stomata). However, at the same time that CO2 enters the plant, water vapor exits. If too much water leaves the plant, it will desiccate and die, so the plant should keep its stomata mostly closed. On the other hand, the plant will starve from lack of carbon if it doesn’t open its stomata. We apply the tools of optimal control theory to study this fascinating problem.\nGuiding questions:\n\nWhich plant traits produce different water management strategies (e.g. isohydricity)?\nWhat is the plant really optimizing for? Instantaneous carbon assimilation? Maximum carbon gains over long periods? Fitness?\nHow do plants respond to stochastic environmental conditions?\n\n\n\n\n\n \n\n\nFruit-tree water stress\nCan we minimize water stress with smart irrigation scheduling? Can we do it optimally?\n\n\n\n\n\n\n\n \n\n\nSoil salinization\nHow can we ensure healthy soils for generations to come?\n\n\n\n\n\n\n\n \n\n\nSoil compaction\nWhat are the soil physical changes that follow compaction? How do they affect water and solute dynamics, and ultimately soil degradation?\n\n\n\n\n\nWhat is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.\n— Epictetus"
   },
   {
     "objectID": "group.html",
     "href": "group.html",
     "title": " Group",
     "section": "",
-    "text": "Yair Mau\nPrincipal Investigator\n\n“Problems worthy of attack prove their worth by fighting back.” Piet Hein\n\n\n\n\n\n\n\n\n\n\n\nErez Feuer\nPhD student\nplant responses to drought and heatwaves\n\n\n\n\n\n\n\n\n\n\nNurit Goldberg\nPhD student\nsoil compaction, soil salinization\n\n\n\n\n\n\n\nFormer members\n\n\n\n\n\n\n\n\n\n\n\n\n\nIsaac Kramer\n2018–2022, PhD student\nsoil salinization, irreversible soil degradation processes, sustainable resource use\nwebsite\n\n\n\n\n\n\n\n\n\n\nLaura Rez\n2020–2022, MSc student\nplant water fluxes, heatwave impact on fruit trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYuval Bayer\n2020–2022, BSc Amirim project\nOptimal stomatal control\n\n\n\n\n\n\n\n\n\n\nAvi Gross\n2018–2020, MSc student\nPlant water storage dynamics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTaiwo Adeyemo\n2018–2020, MSc student\nIrreversible soil degradation\n\n\n\n\n\n\n\n\n\n\nAvigail Kaner\n2017–2021, Research Specialist\n\n\n\n\n\n\n\nTheory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.\n— Unknown"
+    "text": "Yair Mau\nPrincipal Investigator\n\nProblems worthy of attack prove their worth by fighting back.\n— Piet Hein\n\n\n\n\n\n\n\n\n\n\n\nErez Feuer\nPhD student\nplant responses to drought and heatwaves\n\n\n\n\n\n\n\n\n\n\nNurit Goldberg\nPhD student\nsoil compaction, soil salinization\n\n\n\n\n\n\n\nFormer members\n\n\n\n\n\n\n\n\n\n\n\n\n\nIsaac Kramer\n2018–2022, PhD student\nsoil salinization, irreversible soil degradation processes, sustainable resource use\nwebsite\n\n\n\n\n\n\n\n\n\n\nLaura Rez\n2020–2022, MSc student\nplant water fluxes, heatwave impact on fruit trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYuval Bayer\n2020–2022, BSc Amirim project\nOptimal stomatal control\n\n\n\n\n\n\n\n\n\n\nAvi Gross\n2018–2020, MSc student\nPlant water storage dynamics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTaiwo Adeyemo\n2018–2020, MSc student\nIrreversible soil degradation\n\n\n\n\n\n\n\n\n\n\nAvigail Kaner\n2017–2021, Research Specialist\n\n\n\n\n\n\n\nTheory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.\n— Unknown"
   },
   {
     "objectID": "index.html",
@@ -28,18 +70,53 @@
     "text": "Contact\n   yair.mau@mail.huji.ac.il\n   +972 8 948 9386\n   Rehovot Campus, Lubell building, office 19. Map here\nAbout\nI’m fascinated by the natural world. I started out studying Physics, and then decided to use mathematical tools to understand processes in the critical zone, especially those concerning fluxes of water and carbon in the soil-plant-atmosphere continuum, both in the natural and agricultural environments.\nI’m interested in understanding how the feedbacks between climate, human stressors, and ecosystems, create interesting environmental dynamics. The main topics I deal with include plant resilience and survival under drought, soil degradation, sustainable resource use. Go the to  Science page to learn more about some of my current projects, and check out the  Papers page for details on already published works.\nBesides the usual academic pages (Science, Papers, Group, Courses), I hid a lot of material in the  More page: tutorials (python, latex), quotes, recommendations, etc.\nShort Bio\n2005: BSc in Physics, University of São Paulo\n2009: MSc in Physics, Ben-Gurion University of the Negev\n2013: PhD in Physics, Ben-Gurion University of the Negev\n2013–2016: Postdoc in Environmental Engineering, Duke University\n2016–to date: Faculty member at the Hebrew University of Jerusalem\n\nORCID\n\nScholar\n\nTwitter\n\nZoom\n\n\nPhilosophy of life: if you’re not having fun, you’re doing it wrong."
   },
   {
+    "objectID": "more/test/pres1.html#slide-title",
+    "href": "more/test/pres1.html#slide-title",
+    "title": "First presentation",
+    "section": "Slide Title",
+    "text": "Slide Title"
+  },
+  {
+    "objectID": "more/test/pres1.html#getting-up",
+    "href": "more/test/pres1.html#getting-up",
+    "title": "First presentation",
+    "section": "Getting up",
+    "text": "Getting up\nsubtitle\n\nTurn off alarm\nGet out of bed\n\n\\[\nx_{1,2} =\n\\frac{-b\\pm \\sqrt{b^2 -4ac}}{2a}\n\\]"
+  },
+  {
+    "objectID": "more/test/pres1.html#breakfast",
+    "href": "more/test/pres1.html#breakfast",
+    "title": "First presentation",
+    "section": "Breakfast",
+    "text": "Breakfast\n\nEat eggs\nDrink coffeex"
+  },
+  {
+    "objectID": "more/test/pres1.html#dinner",
+    "href": "more/test/pres1.html#dinner",
+    "title": "First presentation",
+    "section": "Dinner",
+    "text": "Dinner\n\n\nLeft column\n\n\nRight column"
+  },
+  {
+    "objectID": "more/test/pres1.html#going-to-sleep",
+    "href": "more/test/pres1.html#going-to-sleep",
+    "title": "First presentation",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheepc"
+  },
+  {
     "objectID": "more/index.html",
     "href": "more/index.html",
     "title": " More",
     "section": "",
-    "text": "Quotes\n Science Communication\ntest"
+    "text": "Quotes\n Science Communication\nHow I made this website\nThis website was build using Quarto, edited on VSCode, hosted on Github Pages. The code for the whole website can be found on this GitHub repository.\n\nComputers are useless. They can only give you answers.\n— Pablo Picasso"
   },
   {
     "objectID": "more/quotes.html",
     "href": "more/quotes.html",
     "title": " Quotes",
     "section": "",
-    "text": "The scientist is not a person who gives the right answers, he’s one who asks the right questions.\nClaude Lévi-Strauss\nThe most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ (I found it!) but ‘That’s funny…’\nIsaac Asimov\nIn theory, there is no difference between theory and practice. But, in practice, there is.\nJan L. A. van de Snepscheut\nContrary to what Asimov says, the most exciting phrase in science, the one that heralds new discoveries, is not ‘Eureka!’ or ‘That’s funny…,’ it’s ‘Your research grant has been approved.’\nJohn Alejandro King\nA theory is something nobody believes, except the person who made it. An experiment is something everybody believes, except the person who made it.\nAttributed to Albert Einstein\nThe purpose of models is not to fit the data but to sharpen the questions.\nSamuel Karlin\nResearch is what I’m doing when I don’t know what I’m doing.\nWernher von Braun\nNothing is more practical than a good theory.\nKurt Lewin\nJust as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark, “Perhaps there are thoughts we cannot think,” surprise you?\nRichard Hamming\nAn expert is a person who has made all the mistakes that can be made in a very narrow field.\nNiels Bohr\nAn expert is one who knows more and more about less and less until he knows absolutely everything about nothing.\nNicholas Butler\nEssentially, all models are wrong, but some are useful.\nGeorge E. P. Box\nTheory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one know why.\nUnknown\nThe great tragedy of Science — the slaying of a beautiful hypothesis by an ugly fact.\nThomas Henry Huxley\nSo, in the face of overwhelming odds, I’m left with only one option, I’m gonna have to science the shit out of this.\nMark Watney\nThe fact that we live at the bottom of a deep gravity well, on the surface of a gas covered planet going around a nuclear fireball 90 million miles away and think this to be normal is obviously some indication of how skewed our perspective tends to be.\nDouglas Adams, The Salmon of Doubt: Hitchhiking the Galaxy One Last Time\nYou’d be amazed how much research you can get done when you have no life whatsoever.\nErnest Cline, Ready Player One\nWhen you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.\nSherlock Holmes\nWith four parameters I can fit an elephant, and with five I can make him wiggle his trunk.\nJohn von Neumann\nThe purpose of computing is insight, not numbers.\nRichard Hamming\nThe most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.\nPedro Domingos, The Master Algorithm\nThermodynamics is easy – I’ve learned it many times.\nHarvey S. Leff\nFar better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.\nJohn Tukey, The future of data analysis\nAn article about computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.\nBuckheit and Donoho (1995)\n”Forty-two!” yelled Loonquawl. ”Is that all you’ve got to show for seven and a half million years’ work?”\n”I checked it very thoroughly,” said the computer, ”and that quite definitely is the answer. I think the problem, to be quite honest with you, is that you’ve never actually known what the question is.”\n”But it was the Great Question! The Ultimate Question of Life, the Universe and Everything!” howled Loonquawl.\n”Yes,” said Deep Thought with the air of one who suffers fools gladly, ”but what actually is it?”\nA slow stupefied silence crept over the men as they stared at the computer and then at each other.\n”Well, you know, it’s just Everything … Everything … ” offered Phouchg weakly.\n”Exactly!” said Deep Thought. ”So once you do know what the question actually is, you’ll know what the answer means.”\nDouglas Adams, The Hitchiker’s Guide to the Galaxy\nComputers are useless. They can only give you answers.\nPablo Picasso\nThe true and only goal of science is to reveal unity rather than mechanism.\nHenri Poincaré\nOne of the principal objects of theoretical research is to find the point of view from which the subject appears in the greatest simplicity.\nJosiah Willard Gibbs\nThe future is already here — it’s just not very evenly distributed.\nWilliam Gibson\nTrue science teaches, above all, to doubt and to be ignorant.\nMiguel de Unamuno\nIf you are the smartest person in the room, then you are in the wrong room. Unknown\nDividing one number by another is mere computation; knowing what to divide by what is mathematics.\nJordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking\nI’ve been in this argument a thousand times. Won them all and convinced nobody.\nAmos Tversky, on the hot hand fallacy\nMathematics is the extension of common sense by other means.\nJordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking\nIf I had more time, I would have written a shorter letter.\nBlaise Pascal\nI am going to give what I will call an elementary demonstration. But elementary does not mean easy to understand. Elementary means that very little is required to know ahead of time in order to understand it, except to have an infinite amount of intelligence. There may be a large number of steps that hard to follow, but to each does not require already knowing the calculus or Fourier transforms.\nRichard P. Feynman\nIn this section a mathematical model of the growing embryo will be described. This model will be a simplification and an idealization, and consequently a falsification. It is to be hoped that the features retained for discussion are those of greatest importance in the present state of knowledge.\nAlan Turing, The Chemical Basis of Morphogenesis\nProblems worthy of attack prove their worth by hitting back.\nPiet Hein\nArt is solving problems that cannot be formulated before they have been solved. The shaping of the question is part of the answer.\nPiet Hein\nPhysics is the simplest of all the sciences, and fundamental physics⁠⁠—the study of the basic pieces of reality at the deepest level⁠—is the simplest of all. Not “simple” in the sense that the homework problems are easy, but simple in the sense that Galileo’s trick of ignoring friction and air resistance makes our lives easier. The reason why physics classes seem so hard is not because physics is so hard—it’s because we understand so much of it that there’s a lot to learn, and that’s because it’s fundamentally pretty simple.\nSean Carroll, The Big Picture\nSimplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.\nEdsger W. Dijkstra\nThe fundamental role of a teacher is not to deliver information. It is guide the social process of learning. The job of a teacher is to inspire, to challenge, to excite their students to want to learn. Yes, they also do explain and demonstrate and show things, but fundamentally that is beside the point. The most important thing a teacher does is make every student feel like they are important, to make them feel accountable for doing the work of learning.\nDerek Alexander Muller, youtube\nWhat is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.\nEpictetus\nConfusion is a feeling that precedes learning something. It means you should pay closer attention, not disengage.\nThe Stoic Emperor, twitter\nLet no one ignorant of geometry enter here.\nSaid to be engraved on the door of Plato’s Academy, the oldest recorded entrance requirement of a college\nWe don’t use heuristics just because they are fast and efficient. We use them because they are less precise and thus less vulnerable to be misled by noise. A good heuristic is to distrust whoever adds or requires unnecessary precision. Another good heuristic is to distrust whoever thinks that precision always correlates with correctness.\nLuca Dellanna, twitter\nThe comments aren’t there to explain the code to the programmers, the code is there to explain the comments to the computer.\nAndy Harris, How to begin thinking like a programmer"
+    "text": "The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ (I found it!) but ‘That’s funny…’— Isaac Asimov\nIn theory, there is no difference between theory and practice. But, in practice, there is.— Jan L. A. van de Snepscheut\nTheory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.— Unknown\nThe great tragedy of Science — the slaying of a beautiful hypothesis by an ugly fact.— Thomas Henry Huxley\nSo, in the face of overwhelming odds, I’m left with only one option, I’m gonna have to science the shit out of this.— Mark Watney\nThe fact that we live at the bottom of a deep gravity well, on the surface of a gas covered planet going around a nuclear fireball 90 million miles away and think this to be normal is obviously some indication of how skewed our perspective tends to be.— Douglas Adams, The Salmon of Doubt: Hitchhiking the Galaxy One Last Time\nEssentially, all models are wrong, but some are useful.— George E. P. Box\nAn expert is a person who has made all the mistakes that can be made in a very narrow field.— Niels Bohr\nAn expert is one who knows more and more about less and less until he knows absolutely everything about nothing.— Nicholas Butler\nJust as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark, “Perhaps there are thoughts we cannot think,” surprise you?— Richard Hamming\nNothing is more practical than a good theory.— Kurt Lewin\nResearch is what I’m doing when I don’t know what I’m doing.— Wernher von Braun\nThe purpose of models is not to fit the data but to sharpen the questions.— Samuel Karlin\nA theory is something nobody believes, except the person who made it. An experiment is something everybody believes, except the person who made it.— Attributed to Albert Einstein\nContrary to what Asimov says, the most exciting phrase in science, the one that heralds new discoveries, is not ‘Eureka!’ or ‘That’s funny…,’ it’s ‘Your research grant has been approved.’— John Alejandro King\nYou’d be amazed how much research you can get done when you have no life whatsoever.— Ernest Cline, Ready Player One\nWhen you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth.— Sherlock Holmes\nWith four parameters I can fit an elephant, and with five I can make him wiggle his trunk.— John von Neumann\nThe purpose of computing is insight, not numbers.— Richard Hamming\nThe most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.— Pedro Domingos, The Master Algorithm\nThermodynamics is easy – I’ve learned it many times.— Harvey S. Leff\nFar better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.— John Tukey, The future of data analysis\nAn article about computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.— Buckheit and Donoho (1995)\n”Forty-two!” yelled Loonquawl. ”Is that all you’ve got to show for seven and a half million years’ work?”\n”I checked it very thoroughly,” said the computer, ”and that quite definitely is the answer. I think the problem, to be quite honest with you, is that you’ve never actually known what the question is.”\n”But it was the Great Question! The Ultimate Question of Life, the Universe and Everything!” howled Loonquawl.\n”Yes,” said Deep Thought with the air of one who suffers fools gladly, ”but what actually is it?”\nA slow stupefied silence crept over the men as they stared at the computer and then at each other.\n”Well, you know, it’s just Everything … Everything … ” offered Phouchg weakly.\n”Exactly!” said Deep Thought. ”So once you do know what the question actually is, you’ll know what the answer means.”\n— Douglas Adams, The Hitchiker’s Guide to the Galaxy\nComputers are useless. They can only give you answers.— Pablo Picasso\nThe true and only goal of science is to reveal unity rather than mechanism.— Henri Poincaré\nOne of the principal objects of theoretical research is to find the point of view from which the subject appears in the greatest simplicity.— Josiah Willard Gibbs\nThe future is already here — it’s just not very evenly distributed.— William Gibson\nTrue science teaches, above all, to doubt and to be ignorant.— Miguel de Unamuno\nIf you are the smartest person in the room, then you are in the wrong room.— Unknown\nDividing one number by another is mere computation; knowing what to divide by what is mathematics.— Jordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking\nI’ve been in this argument a thousand times. Won them all and convinced nobody.— Amos Tversky, on the hot hand fallacy\nMathematics is the extension of common sense by other means.— Jordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking\nIf I had more time, I would have written a shorter letter.— Blaise Pascal\nI am going to give what I will call an elementary demonstration. But elementary does not mean easy to understand. Elementary means that very little is required to know ahead of time in order to understand it, except to have an infinite amount of intelligence. There may be a large number of steps that hard to follow, but to each does not require already knowing the calculus or Fourier transforms.— Richard P. Feynman\nIn this section a mathematical model of the growing embryo will be described. This model will be a simplification and an idealization, and consequently a falsification. It is to be hoped that the features retained for discussion are those of greatest importance in the present state of knowledge.— Alan Turing, The Chemical Basis of Morphogenesis\nProblems worthy of attack prove their worth by hitting back.— Piet Hein\nArt is solving problems that cannot be formulated before they have been solved. The shaping of the question is part of the answer.— Piet Hein\nPhysics is the simplest of all the sciences, and fundamental physics⁠⁠—the study of the basic pieces of reality at the deepest level⁠—is the simplest of all. Not \"simple” in the sense that the homework problems are easy, but simple in the sense that Galileo's trick of ignoring friction and air resistance makes our lives easier. The reason why physics classes seem so hard is not because physics is so hard—it's because we understand so much of it that there's a lot to learn, and that's because it's fundamentally pretty simple.\n— Sean Carroll, The Big Picture\nSimplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.— Edsger W. Dijkstra\n\nThe fundamental role of a teacher is not to deliver information. It is guide the social process of learning. The job of a teacher is to inspire, to challenge, to excite their students to want to learn. Yes, they also do explain and demonstrate and show things, but fundamentally that is beside the point. The most important thing a teacher does is make every student feel like they are important, to make them feel accountable for doing the work of learning.— Derek Alexander Muller, https://youtu.be/GEmuEWjHr5c\nWhat is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.— Epictetus\nConfusion is a feeling that precedes learning something. It means you should pay closer attention, not disengage.— The Stoic Emperor, https://twitter.com/TheStoicEmperor/status/1309998964796567552\nWe don't use heuristics just because they are fast and efficient. We use them because they are less precise and thus less vulnerable to be misled by noise. A good heuristic is to distrust whoever adds or requires unnecessary precision. Another good heuristic is to distrust whoever thinks that precision always correlates with correctness.— Luca Dellanna, https://twitter.com/DellAnnaLuca/status/1287644735016927234\nLet no one ignorant of geometry enter here.— Said to be engraved on the door of Plato's Academy, the oldest recorded entrance requirement of a college\nThe comments aren't there to explain the code to the programmers, the code is there to explain the comments to the computer.— Andy Harris, How to begin thinking like a programmer, https://youtu.be/YWwBhjQN-Qw?t=1165"
   },
   {
     "objectID": "more/communication.html",
@@ -61,6 +138,272 @@
     "title": " Courses",
     "section": "",
     "text": "Agrotech Lab\n Time Series Analysis\n Physics 1\n\nTrue science teaches, above all, to doubt and to be ignorant.\n— Miguel de Unamuno"
+  },
+  {
+    "objectID": "courses/physics1/index.html",
+    "href": "courses/physics1/index.html",
+    "title": " Physics 1",
+    "section": "",
+    "text": "Goals\nThis basic Physics course has three main goals:\n\nBy the end of this course you will be able to look at the world around you and start describing it in a formal (mathematical) language.\nBy the end of this course you will be able to read a graph and tell the story behind it, i.e., you will translate a formal (mathematical) language into regular speech any human can understand.\nWe will get acquainted with the concept of Energy. This, in my humblest opinion, is one of the most important ideas in Science.\n\nPatron saint\nGalileo is undoubtedly our hero in this course. Honorable runners-up: Archimedes and Newton.\n\nLecture Notes (in hebrew) and more\nBook: I loosely use Halliday & Resnick’s Principles of Physics (11th edtion).\nSoftware: I use Stylus Labs Write to write my classnotes, it is available for Windows, Mac, Linux, Android, and iOS.\nHardware: I use both a Wacom Cintiq 16 and an iPad air.\nLegend:\n lecture notes pdf\n lecture notes source (write) svgz\n powerpoint\n widget in jupyter notebook (might take a while to load…)\n other materials\n animations and gifs\n\n\n\nsubject\nlectures\nother\n\n\n\n\nbasic math\n\n\n\n\nunits\n   \n   \n\n\n1d kinematics\n   \n         \n\n\nvectors\n   \n\n\n\n2d kinematics\n   \n   \n\n\ncircular motion\n   \n   \n\n\nNewton’s laws\n   \n      \n\n\nwork-energy theorem\n   \n   \n\n\npotential energy\n   \n\n\n\npotential energy diagrams\n   \n\n\n\nlinear momentum\n   \n   \n\n\ngravitation\n   \n\n\n\nhydrostatics\n   \n\n\n\nhydrodynamics\n   \n   \n\n\n\nClick here for details on all lectures of the 2021-22 academic year.\nHere are other very nice videos not directly related to any specific topic.\nSome past exams (in hebrew)\n\n\n\nYear\nMidterm\nMoed A\nMoed B\nMoed C\n\n\n\n\n2021-2022\n   \n   \n   \n\n\n\n2020-2021\n   \n   \n   \n\n\n\n2019-2020\n   \n   \n   \n   \n\n\n2018-2019\n   \n   \n   \n\n\n\n2017-2018\n   \n   \n   \n\n\n\n\nExtra stuff\nPhysics cartoons\nGreat online Physics resources: * Khan Academy - English * Khan Academy - עברית * Michel van Biezen * Walter Lewin’s 8.01x - MIT Physics I: Classical Mechanics * PhET: fun, free, interactive, research-based science and mathematics simulations"
+  },
+  {
+    "objectID": "courses/physics1/gifs/energy.html",
+    "href": "courses/physics1/gifs/energy.html",
+    "title": "Energy",
+    "section": "",
+    "text": "https://youtu.be/iN1beukMJJc"
+  },
+  {
+    "objectID": "courses/physics1/gifs/energy.html#potential-and-kinetic-energy",
+    "href": "courses/physics1/gifs/energy.html#potential-and-kinetic-energy",
+    "title": "Energy",
+    "section": "Potential and Kinetic Energy",
+    "text": "Potential and Kinetic Energy\n\nVisualization of conservation of energy\n\n\n\n\nHigh road low road track race, potential-kinetic energy tracks\nhttps://youtu.be/_GJujClGYJQ\n\n\nMondo Duplantis 2018, play at 0.25 speed\n\n\n\n\n150 Ton Hydraulic Guillotine Vs Deck of Cards"
+  },
+  {
+    "objectID": "courses/physics1/gifs/units.html",
+    "href": "courses/physics1/gifs/units.html",
+    "title": "Units",
+    "section": "",
+    "text": "Any time you pick up a well shuffled deck, you are almost certainly holding an arrangement of cards that has never before existed and will likely never exist again. - Yannay Khaikin pic.twitter.com/afOpu0y7qA\n\n— 〈 Berger | Dillon 〉 (@InertialObservr) September 18, 2019\n\n\nIf you worked every single day, making $5000/day, from the time Columbus sailed to America, to the time you are reading this tweet, you would still not be a billionaire.\nHow much larger/heavier/longer was the Megalodon compared with a great white? \nThis is the mass damper of the Taipei 101 skyscraper: it has a mass of 728 tons and a diameter of 5.4 meters. It helps stabilize the building in high winds and this is the record movement realized during typhoon Soudelor with 160 km/h winds what is the mass density of this ball?\n\n\n\nThis is the mass damper of the Taipei 101 skyscraper: it has a mass of 728 tons and a diameter of 5.4 meters. It helps stabilize the building in high winds and this is the record movement realized during typhoon Soudelor with 160 km/h winds https://t.co/e0MxA0iOG5 pic.twitter.com/xqcbyUNJWs\n\n— Massimo (@Rainmaker1973) September 8, 2018\n\n\n\nhttps://www.youtube.com/watch?v=xqELmBNyWfU\n\n\n\norders of magnitude, from\n\nhttps://twitter.com/Rainmaker1973/status/1125710475378012161"
+  },
+  {
+    "objectID": "courses/physics1/gifs/linear-momentum.html#elastic-collisions",
+    "href": "courses/physics1/gifs/linear-momentum.html#elastic-collisions",
+    "title": "Linear Momentum & Center of Mass",
+    "section": "Elastic collisions",
+    "text": "Elastic collisions\n\nfailed collision\n\n\n\n\nbullets ricochet off water\n\n\n\n\nperiodic billiard collision\n\n\n\n\nAlthea Reinhardt’s face save\n{% twitter https://twitter.com/BeardedGenius/status/1472221793595310084 %}"
+  },
+  {
+    "objectID": "courses/physics1/gifs/linear-momentum.html#inelastic-collisions",
+    "href": "courses/physics1/gifs/linear-momentum.html#inelastic-collisions",
+    "title": "Linear Momentum & Center of Mass",
+    "section": "Inelastic collisions",
+    "text": "Inelastic collisions\n\nApple collision at 90 km/h."
+  },
+  {
+    "objectID": "courses/physics1/gifs/linear-momentum.html#center-of-mass",
+    "href": "courses/physics1/gifs/linear-momentum.html#center-of-mass",
+    "title": "Linear Momentum & Center of Mass",
+    "section": "Center of mass",
+    "text": "Center of mass\n\ncenter of mass parabolic trajectory\n\n\n\n\nJosh Imatorbhebhe vertical jump"
+  },
+  {
+    "objectID": "courses/physics1/gifs/linear-momentum.html#internal-vs-external-forces",
+    "href": "courses/physics1/gifs/linear-momentum.html#internal-vs-external-forces",
+    "title": "Linear Momentum & Center of Mass",
+    "section": "Internal vs external forces",
+    "text": "Internal vs external forces\n\nHow to push your pickup truck"
+  },
+  {
+    "objectID": "courses/physics1/gifs/fluids.html",
+    "href": "courses/physics1/gifs/fluids.html",
+    "title": "Fluids",
+    "section": "",
+    "text": "f"
+  },
+  {
+    "objectID": "courses/physics1/gifs/fluids.html#fluids",
+    "href": "courses/physics1/gifs/fluids.html#fluids",
+    "title": "Fluids",
+    "section": "Fluids",
+    "text": "Fluids\n\nHow a 50 kg iron working anvil floats on liquid mercury From https://twitter.com/Rainmaker1973/status/1194215829199605765?s=09"
+  },
+  {
+    "objectID": "courses/physics1/gifs/fluids.html#hydrostatic-pressure",
+    "href": "courses/physics1/gifs/fluids.html#hydrostatic-pressure",
+    "title": "Fluids",
+    "section": "Hydrostatic pressure",
+    "text": "Hydrostatic pressure\n\nPressure change during diving\n{% twitter https://twitter.com/physicsastronmy/status/1464007031367602181?s=12 %}\n\n\nFish tower\n\n\n\n\nThe Hydrostatic Paradox - Explained!\n\n\n\n\nPascal’s Blaising Barrel - Exploding Glass Barrel with Water Pressure\n\n\n\n\nThe Pressure Paradox #VeritasiumContest #GrandPrizeWinner"
+  },
+  {
+    "objectID": "courses/physics1/gifs/fluids.html#surface-tension",
+    "href": "courses/physics1/gifs/fluids.html#surface-tension",
+    "title": "Fluids",
+    "section": "Surface tension",
+    "text": "Surface tension\nfrom https://twitter.com/Rainmaker1973/status/1191329332926570497?s=09"
+  },
+  {
+    "objectID": "courses/physics1/gifs/kinematics.html",
+    "href": "courses/physics1/gifs/kinematics.html",
+    "title": "Kinematics",
+    "section": "",
+    "text": "firefighting airplanes in action, dogs jumping into a car, woman walking the wrong way"
+  },
+  {
+    "objectID": "courses/physics1/gifs/kinematics.html#x-and-y-movements-are-independent",
+    "href": "courses/physics1/gifs/kinematics.html#x-and-y-movements-are-independent",
+    "title": "Kinematics",
+    "section": "X and Y movements are independent",
+    "text": "X and Y movements are independent\n\n\n\n\n\n\n\n\n\n\n\n\n#PhysicsFactlet (179)The rate of change of position is velocity.The rate of change of velocity is acceleration.The rate of change of acceleration is jerk.The rate of change of jerk is jounce.The rate of change of jounce is crackle.The rate of change of crackle is pop.\n\n— Jacopo Bertolotti (@j_bertolotti) October 8, 2019"
+  },
+  {
+    "objectID": "courses/physics1/gifs/kinematics.html#d-kinematics",
+    "href": "courses/physics1/gifs/kinematics.html#d-kinematics",
+    "title": "Kinematics",
+    "section": "2d kinematics",
+    "text": "2d kinematics\n\nHarlem Globetrotter Makes Incredible Trick Shot From Plane Flying 70 MPH\n\n\n\n\njumping goats\n\n\n\n\nKevin failed Physics\n\n\nYes, Kevin failed physics and math, but he knew how to build a helluva ramp! 🍺 🥴 pic.twitter.com/8rPrtRmCYy\n\n— 🍺 Hold My Beer 🍺 (@HldMyBeer) August 31, 2021"
+  },
+  {
+    "objectID": "courses/physics1/gifs/kinematics.html#galilean-relativity",
+    "href": "courses/physics1/gifs/kinematics.html#galilean-relativity",
+    "title": "Kinematics",
+    "section": "Galilean relativity",
+    "text": "Galilean relativity\n\nswimming against the current\n\n\n\n\nMythbusters - Soccer Ball Shot from Truck\nhttps://youtu.be/BLuI118nhzc"
+  },
+  {
+    "objectID": "courses/physics1/gifs/kinematics.html#circular-motion",
+    "href": "courses/physics1/gifs/kinematics.html#circular-motion",
+    "title": "Kinematics",
+    "section": "Circular motion",
+    "text": "Circular motion\n\nHamster, from https://twitter.com/SJSchauer/status/1186484325451227136?s=09\n\n\n\n\nHuman Loop the Loop with Damien Walters\n\n\n\n\nBall in a pie pan: Testing Experiment\n\n\n\n\nBeer flipping\n\n\n\n\n2001: A Space Odyssey\n\n\n\n\nCentripetal force\nMany forces can take the role of the centripetal force."
+  },
+  {
+    "objectID": "courses/physics1/gifs/wow.html",
+    "href": "courses/physics1/gifs/wow.html",
+    "title": "Wow",
+    "section": "",
+    "text": "Time-Lapse: Lose Yourself in the Night Sky\n\n\n\n\nfastest response time\nThe kangaroo rat’s escape response to a snake attack is less than 70 milliseconds and the quickest mammalian startle response. \n\n\nSelected solar system objects to scale in size, rotation speed and axial tilt\n\n\n\n\nMilky Way and Earth\nMilky Way spinning around Earth\n\n\nMilky Way fixed, earth spinning round\n\n\n\n\nThe Milky Way Fly Out\nStefan Payne-Wardenaar \n\n\nLeast action, path of bowling ball minimizes action\n\n\n\n\n\n\nA free-falling frame of reference cancels gravity\n{% twitter https://twitter.com/sfera314/status/1173284029900173315 %}\n\n\nMesmerising Mass Sheep Herding\n\n\n\n\n\nSolar eclipse from space\n\n\n\n\n\n\n150 Ton Hydraulic Guillotine Vs Deck of Cards"
+  },
+  {
+    "objectID": "courses/physics1/gifs/newtons-laws.html#newtons-second-law",
+    "href": "courses/physics1/gifs/newtons-laws.html#newtons-second-law",
+    "title": "Newton’s Laws",
+    "section": "Newton’s second law",
+    "text": "Newton’s second law\n\nMan with superhuman strength\n\n\n\n\nInside the ISS\n\n\n\nWhack-a-Stack\n\n\n\n\nApollo 15 hammer-feather drop"
+  },
+  {
+    "objectID": "courses/physics1/gifs/newtons-laws.html#newtons-third-law",
+    "href": "courses/physics1/gifs/newtons-laws.html#newtons-third-law",
+    "title": "Newton’s Laws",
+    "section": "Newton’s third law",
+    "text": "Newton’s third law\n\nNewton cartoon\n\n\n\nMotorcycle kicks car"
+  },
+  {
+    "objectID": "courses/physics1/gifs/newtons-laws.html#friction",
+    "href": "courses/physics1/gifs/newtons-laws.html#friction",
+    "title": "Newton’s Laws",
+    "section": "Friction",
+    "text": "Friction\n\nStatic friction\n\n\n\n\nStatic vs. kinetic friction\n\n\n\n\nNo friction on inclined plane\n\n\n\n\nCat fails to jump, not enough friction\n\n\n\n\nSpidergirl"
+  },
+  {
+    "objectID": "courses/physics1/gifs/cartoons.html",
+    "href": "courses/physics1/gifs/cartoons.html",
+    "title": "Cartoons",
+    "section": "",
+    "text": "https://xkcd.com/2207/ \n\nhttps://www.smbc-comics.com/comic/2013-06-16 \n\nScience: Abridged Beyond the Point of Usefulness \n\nhttp://www.sciencecartoonsplus.com/gallery/physics/galphys2j.php#"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-units.html",
+    "href": "courses/physics1/extra/extra-units.html",
+    "title": "Extra materials - Units",
+    "section": "",
+    "text": "Units for three SI base quantities\n\n\n\nQuantity\nUnit Name\nUnit Symbol\n\n\n\n\nLength [L]\nmeter\nm\n\n\nTime [T]\nsecond\ns\n\n\nMass [M]\nkilogram\nkg\n\n\n\nSome prefixes for SI Units that you must remember!\n\n\n\nFactor\nPrefix\nSymbol\n\n\n\n\n\\(10^9\\)\ngiga-\nG\n\n\n\\(10^6\\)\nmega-\nM\n\n\n\\(10^3\\)\nkilo-\nk\n\n\n\\(10^{-2}\\)\ncenti-\nc\n\n\n\\(10^{-3}\\)\nmilli-\nm\n\n\n\\(10^{-6}\\)\nmicro-\n\\(\\mu\\)\n\n\n\\(10^{-9}\\)\nnano-\nn"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-units.html#exponent-rules",
+    "href": "courses/physics1/extra/extra-units.html#exponent-rules",
+    "title": "Extra materials - Units",
+    "section": "exponent rules",
+    "text": "exponent rules"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-units.html#volume-and-surface-area",
+    "href": "courses/physics1/extra/extra-units.html#volume-and-surface-area",
+    "title": "Extra materials - Units",
+    "section": "volume and surface area",
+    "text": "volume and surface area"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-units.html#horse-sized-duck-or-100-duck-sized-horses",
+    "href": "courses/physics1/extra/extra-units.html#horse-sized-duck-or-100-duck-sized-horses",
+    "title": "Extra materials - Units",
+    "section": "1 horse-sized duck or 100 duck-sized horses?",
+    "text": "1 horse-sized duck or 100 duck-sized horses?"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-basic-math.html",
+    "href": "courses/physics1/extra/extra-basic-math.html",
+    "title": "Extra materials - Basic Math",
+    "section": "",
+    "text": "I will assume that student in this course have a minimal proficiency in math. Find below some links for basic math that we will need during this course. I will not teach any of these topics, if you feel that you don’t fully know this stuff, please go ahead and study these topics asap."
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-basic-math.html#trigonometry",
+    "href": "courses/physics1/extra/extra-basic-math.html#trigonometry",
+    "title": "Extra materials - Basic Math",
+    "section": "Trigonometry",
+    "text": "Trigonometry\nKhan Academy\nMichel van Biezen"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-basic-math.html#pre-algebra",
+    "href": "courses/physics1/extra/extra-basic-math.html#pre-algebra",
+    "title": "Extra materials - Basic Math",
+    "section": "Pre-algebra",
+    "text": "Pre-algebra\nArithmetic properties; factors and multiples; fractions; decimals; negative numbers and coordinate plane; rations, rates, proportions; equations, expressions, and inequalities; exponents, radicals, and scientific notation.\nKhan Academy"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-basic-math.html#algebra",
+    "href": "courses/physics1/extra/extra-basic-math.html#algebra",
+    "title": "Extra materials - Basic Math",
+    "section": "Algebra",
+    "text": "Algebra\nMichel van Biezen"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-basic-math.html#עברית",
+    "href": "courses/physics1/extra/extra-basic-math.html#עברית",
+    "title": "Extra materials - Basic Math",
+    "section": "עברית",
+    "text": "עברית\nקיים אתר של אקדמיית קהאן בעברית, כדאי להכיר אותו"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-momentum.html#momentum-lecture-2",
+    "href": "courses/physics1/extra/extra-momentum.html#momentum-lecture-2",
+    "title": "Extra materials - Momentum",
+    "section": "Momentum, Lecture 2",
+    "text": "Momentum, Lecture 2\n\n\nVideos of people flying backwards after being shot: * Bruce Willis (watch the few first seconds) * Uma Thurman * Morgan Freeman (watch from 1:10)"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-momentum.html#momentum-lecture-3",
+    "href": "courses/physics1/extra/extra-momentum.html#momentum-lecture-3",
+    "title": "Extra materials - Momentum",
+    "section": "Momentum, Lecture 3",
+    "text": "Momentum, Lecture 3\n\n\nVideos of a Newton’s Cradle * Newton’s Cradle with a High-Speed Video Camera * Amazing Demonstration Of A Giant Newton’s Cradle!"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-1d-kinematics.html",
+    "href": "courses/physics1/extra/extra-1d-kinematics.html",
+    "title": "Extra materials - 1d Kinematics",
+    "section": "",
+    "text": "This is an excellent interactive website, with lots of useful exercises:\nDistance vs. Displacement, Acceleration, Name That Motion, Motion Diagrams, Graph That Motion, Match That Graph, Position-Time Graphs - Conceptual Analysis, Position-Time Graphs - Numerical Analysis, Dots and Graphs, Which One Doesn’t Belong?, Free Fall, Up and Down."
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-1d-kinematics.html#video-lectures",
+    "href": "courses/physics1/extra/extra-1d-kinematics.html#video-lectures",
+    "title": "Extra materials - 1d Kinematics",
+    "section": "Video Lectures",
+    "text": "Video Lectures\nKhan Academy - One-dimensional motion\nMotion in a Straight Line: Crash Course Physics #1\nMichel van Biezen - Lectures in MOTION IN ONE DIMENSION\nMichel van Biezen - Lectures in Motion in 1 Dimension: GRAPHIC SOLUTIONS"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-1d-kinematics.html#x-v-a-graphs",
+    "href": "courses/physics1/extra/extra-1d-kinematics.html#x-v-a-graphs",
+    "title": "Extra materials - 1d Kinematics",
+    "section": "\\(x\\), \\(v\\), \\(a\\) graphs",
+    "text": "\\(x\\), \\(v\\), \\(a\\) graphs\nDraw the missing curves, with black dots in the same instants in time as in the given curve. All curved lines are parabolas.\nExercise 1 \nExercise 2  \nExercise 3  \nExercise 4  \nExercise 5  \nExercise 6"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-1d-kinematics.html#match-the-graphs-x-and-v",
+    "href": "courses/physics1/extra/extra-1d-kinematics.html#match-the-graphs-x-and-v",
+    "title": "Extra materials - 1d Kinematics",
+    "section": "Match the graphs, \\(x\\) and \\(v\\)",
+    "text": "Match the graphs, \\(x\\) and \\(v\\)\nMatch the curve on the left with one of the curves on the right.\nExercise 1 \nExercise 2 \nExercise 3 \nExercise 4 \nExercise 5 \nExercise 6 \nExercise 7 \nExercise 8 \nExercise 9 \nExercise 10 \nExercise 11 \nExercise 12"
+  },
+  {
+    "objectID": "courses/physics1/extra/extra-1d-kinematics.html#oil-drop-patterns",
+    "href": "courses/physics1/extra/extra-1d-kinematics.html#oil-drop-patterns",
+    "title": "Extra materials - 1d Kinematics",
+    "section": "Oil drop patterns",
+    "text": "Oil drop patterns\nOil drips from a car at fixed time intervals. Match the oil drop pattern the car leaves on the road with the curves on the right. Attention: there might be more than one solution!\nExercise 1 \nExercise 2 \nExercise 3 \nExercise 4 \nExercise 5 \nExercise 6 \nExercise 7 \nExercise 8 \nExercise 9 \nExercise 10 \nExercise 11 \nExercise 12 \nExercise 13 \nExercise 14 \nExercise 15 \nExercise 16 \nExercise 17 \nExercise 18"
   },
   {
     "objectID": "tutorials/python/histograms.html",
@@ -102,7 +445,7 @@
     "href": "tutorials/python/index.html",
     "title": " Python",
     "section": "",
-    "text": "Most codes focus on plotting, but other algorithms such as numerical integration and Fourier transforms can also be found.\nSome useful links for learning python:\n\nPython Data Science Handbook\nLearn Python the Hard Way\nA Crash Course in Python for Scientists\nSoftware Carpentry\nFun with Lists\nPython | Codecademy\nScipy Lecture Notes\nA gallery of interesting IPython Notebooks\nThink Python: How to Think Like a Computer Scientist\n\nThe Python Graph Gallery\n\nThis might be overwhelming, so I suggest you to follow this:\n\n\nMy advice on learning Python:Don't set out to \"learn Python\". Choose a problem you're interested in and learn to solve it with Python.\n\n— Jake VanderPlas (@jakevdp) September 10, 2017\n\n\nStart by downloading Anaconda, a package manager application that will help you get started with python in all platforms.\nMake sure you are acquainted with ipython (interactive python, try it here), and with Jupyter notebook. ​\nI recommend Sublime Text for writing code, and you can install the Anaconda package to it to have a smooth IDE. [not the same anaconda as mentioned above! Yes, it’s confusing, I know.]\n\nFitzhugh-Nagumo — Labyrinthine Patterns\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: how to make a movie, time-integration methods (semi-spectral and Euler)\n\n\n\nConway’s Game of Life, acorn initial condition\n\n\n\n\n        Jupyter notebook\n\n\n\nThis is a (slightly) modified version of Glowing Python’s code. I make it available here because it features a few nice things:\n\nhow to make a movie using matplotlib.animation\nhow to write a generator (function with yield)\nhow to plot a sparce array (spy)\n\nMain features: matplotlib.animation, yield, with, matplotlib.pyplot.spy\n\n\n\nLeast squares fit of nonlinear function\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: LaTeX text, scipy.optimize.curve_fit, matplotlib.patches\n\n\nFun with histograms\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: np.histogram, plt.hist, plt.bar, plt.barh, gridspec, least squares fit of nonlinear function, plt.hist2d\n\n\nFancy subplot grid\n\n\n\n\n        Jupyter notebook\n\n\n\nHighly customizable subplot structure. Also, figure contains several axis configurations and labeling options.\nMain features: gridspec subplots; numpy-compatible heaviside; label, ticks and axis manipulations; log scale \n\nStreamplot\n\n\n\n\n        Jupyter notebook\n\n\n\nStreamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.\nMain features: meshgrid, streamplot, contour, legend, LaTeX \n\nThe time dependent Ginzburg-Landau equation\n\nJupyter notebook\n\nNumerical integration of a parabolic partial differential equation, using finite differences: Euler step to advance time, and a 5-point stencil to approximate the Laplacian.\nMain features: imshow, colorbar, set_data\n\n\n\nThe double pendulum\n\nJupyter notebook\n\nNumerical integration of the equations of motion of the double pendulum. This time, scipy’s ode itegrator was used. Nice example of how to make a movie.\nMain features: scipy.integrate.ode, set_data, set_aspect('equal'), remove plot, movie\n\n\n\nThe Hilbert curve\n\nJupyter notebook\n\nConstruction of the Hilbert curve as a Lindenmayer system (L-system).\nMain features: string operations, movie\n\n\n\nA hysteresis mechanism\n\nJupyter notebook\n\nHysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional \\(f=u^4-2u^2+hu\\). The parameter \\(h\\) is ramped down and up during this simulation.\nMain features: sympy analytical calculations, numpy dtypes, movie\n\n\n\n\n\nContour plot\n\nJupyter notebook\n\nContour plot with many customizable options. Also, a nice way to truncate a colormap so it gives the color range that you want.\nMain features: truncate_colormap, contour, contourf (fill), clabel (contour label)\n\n\n\n\nLeast action principle on the beach\n\nJupyter notebook\n\nHow should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell’s law of refraction!\nThis is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, “annotations” are used, where things can be labeled with the help of arrows.\nMain features: spines, matplotlib.patches.Rectangle, annotate\n\n\n\n\nThis website’s logo\n\nJupyter notebook\n\nSimple example of how to make a figure without any visible axes.\nMain features: set_axis_off, fill_between, matplotlib inline plot on Jupyter\n\n\n\n\nBars\n\nJupyter notebook\n\nHorizontal and vertical bars, with numeric legends. Unicode support.\nMain features: unicode, bar, barh, grid"
+    "text": "Most codes focus on plotting, but other algorithms such as numerical integration and Fourier transforms can also be found.\nSome useful links for learning python:\n\nPython Data Science Handbook\nLearn Python the Hard Way\nA Crash Course in Python for Scientists\nSoftware Carpentry\nFun with Lists\nPython | Codecademy\nScipy Lecture Notes\nA gallery of interesting IPython Notebooks\nThink Python: How to Think Like a Computer Scientist\n\nThe Python Graph Gallery\n\nThis might be overwhelming, so I suggest you to follow this:\n\n\nMy advice on learning Python:Don't set out to \"learn Python\". Choose a problem you're interested in and learn to solve it with Python.\n\n— Jake VanderPlas (@jakevdp) September 10, 2017\n\n\nStart by downloading Anaconda, a package manager application that will help you get started with python in all platforms.\nMake sure you are acquainted with ipython (interactive python, try it here), and with Jupyter notebook. ​\nI recommend Sublime Text for writing code, and you can install the Anaconda package to it to have a smooth IDE. [not the same anaconda as mentioned above! Yes, it’s confusing, I know.]\n\nFitzhugh-Nagumo — Labyrinthine Patterns\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: how to make a movie, time-integration methods (semi-spectral and Euler)\n\n\n\nConway’s Game of Life, acorn initial condition\n\n\n\n\n        Jupyter notebook\n\n\n\nThis is a (slightly) modified version of Glowing Python’s code. I make it available here because it features a few nice things:\n\nhow to make a movie using matplotlib.animation\nhow to write a generator (function with yield)\nhow to plot a sparce array (spy)\n\nMain features: matplotlib.animation, yield, with, matplotlib.pyplot.spy\n\n\n\nLeast squares fit of nonlinear function\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: LaTeX text, scipy.optimize.curve_fit, matplotlib.patches\n\n\nFun with histograms\n\n\n\n\n        Jupyter notebook\n\n\n\nMain features: np.histogram, plt.hist, plt.bar, plt.barh, gridspec, least squares fit of nonlinear function, plt.hist2d\n\n\nFancy subplot grid\n\n\n\n\n        Jupyter notebook\n\n\n\nHighly customizable subplot structure. Also, figure contains several axis configurations and labeling options.\nMain features: gridspec subplots; numpy-compatible heaviside; label, ticks and axis manipulations; log scale \n\nStreamplot\n\n\n\n\n        Jupyter notebook\n\n\n\nStreamplot of a two-dimensional linear system, with eigenvectors and nullclines. Python shows LaTeX equations beautifully.\nMain features: meshgrid, streamplot, contour, legend, LaTeX \n\nThe time dependent Ginzburg-Landau equation\n\nJupyter notebook\n\nNumerical integration of a parabolic partial differential equation, using finite differences: Euler step to advance time, and a 5-point stencil to approximate the Laplacian.\nMain features: imshow, colorbar, set_data\n\n\n\nThe double pendulum\n\nJupyter notebook\n\nNumerical integration of the equations of motion of the double pendulum. This time, scipy’s ode itegrator was used. Nice example of how to make a movie.\nMain features: scipy.integrate.ode, set_data, set_aspect('equal'), remove plot, movie\n\n\n\nThe Hilbert curve\n\nJupyter notebook\n\nConstruction of the Hilbert curve as a Lindenmayer system (L-system).\nMain features: string operations, movie\n\n\n\nA hysteresis mechanism\n\nJupyter notebook\n\nHysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional \\(f=u^4-2u^2+hu\\). The parameter \\(h\\) is ramped down and up during this simulation.\nMain features: sympy analytical calculations, numpy dtypes, movie\n\n\n\n\n\nContour plot\n\nJupyter notebook\n\nContour plot with many customizable options. Also, a nice way to truncate a colormap so it gives the color range that you want.\nMain features: truncate_colormap, contour, contourf (fill), clabel (contour label)\n\n\n\n\nLeast action principle on the beach\n\nJupyter notebook\n\nHow should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell’s law of refraction!\nThis is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, “annotations” are used, where things can be labeled with the help of arrows.\nMain features: spines, matplotlib.patches.Rectangle, annotate\n\n\n\n\nThis website’s logo\n\nJupyter notebook\n\nSimple example of how to make a figure without any visible axes.\nMain features: set_axis_off, fill_between, matplotlib inline plot on Jupyter\n\n\n\n\nBars\n\nJupyter notebook\n\nHorizontal and vertical bars, with numeric legends. Unicode support.\nMain features: unicode, bar, barh, grid\n\n\n“The comments aren’t there to explain the code to the programmers, the code is there to explain the comments to the computer.”\n—Andy Harris, How to begin thinking like a programmer"
   },
   {
     "objectID": "tutorials/python/widgets/parabola.html",
@@ -117,47 +460,5 @@
     "title": " LaTeX",
     "section": "",
     "text": "\\pretolerance=10000\n\\tolerance=2000 \n\\emergencystretch=10pt\nLine numbers\nSee more details here.\n\\usepackage{lineno}\n\\linenumbers"
-  },
-  {
-    "objectID": "more/test/pres1.html#getting-up",
-    "href": "more/test/pres1.html#getting-up",
-    "title": "First presentation",
-    "section": "Getting up",
-    "text": "Getting up\nsubtitle\n\nTurn off alarm\nGet out of bed\n\n\\[\nx_{1,2} =\n\\frac{-b\\pm \\sqrt{b^2 -4ac}}{2a}\n\\]"
-  },
-  {
-    "objectID": "more/test/pres1.html#breakfast",
-    "href": "more/test/pres1.html#breakfast",
-    "title": "First presentation",
-    "section": "Breakfast",
-    "text": "Breakfast\n\nEat eggs\nDrink coffeex"
-  },
-  {
-    "objectID": "more/test/pres1.html#dinner",
-    "href": "more/test/pres1.html#dinner",
-    "title": "First presentation",
-    "section": "Dinner",
-    "text": "Dinner\n\n\nLeft column\n\n\nRight column"
-  },
-  {
-    "objectID": "more/test/pres1.html#going-to-sleep",
-    "href": "more/test/pres1.html#going-to-sleep",
-    "title": "First presentation",
-    "section": "Going to sleep",
-    "text": "Going to sleep\n\nGet in bed\nCount sheepc"
-  },
-  {
-    "objectID": "more/test/pres1.html#slide-title",
-    "href": "more/test/pres1.html#slide-title",
-    "title": "First presentation",
-    "section": "Slide Title",
-    "text": "Slide Title"
-  },
-  {
-    "objectID": "archive/physics/lectures/instantaneous_velocity.html",
-    "href": "archive/physics/lectures/instantaneous_velocity.html",
-    "title": "Yair Mau",
-    "section": "",
-    "text": "%matplotlib inline\n\ndef f(Tmiddle, deltaT, show_deltas, show_tangent):\n    fig, ax = plt.subplots(figsize=(8,6))\n    t = np.linspace(0,20,101)\n    foo = lambda t: (t**3 - 15*t**2 + 300) / 100\n    x = foo(t)\n    ax.plot(t, x, color=\"red\", lw=3)\n    ax.set(xlim=[0,20], ylim=[-5,20], ylabel=\"y\", xticks=np.arange(0,21,5))\n    ax.set_xlabel(\"time\")\n    ax.set_ylabel(\"x(t)\", rotation=\"horizontal\",labelpad=15)\n    t0 = Tmiddle - deltaT/2\n    t1 = Tmiddle + deltaT/2\n    x0 = foo(t0)\n    x1 = foo(t1)\n    ax.plot([t0,t1], [x0,x1], color=\"blue\", lw=2)\n    if show_deltas:\n        ax.plot([t0,t1], [x0,x0], color=\"gray\")\n        ax.plot([t1,t1], [x0,x1], color=\"gray\")\n        ax.text(Tmiddle, x0, r\"$\\Delta t$\", fontsize=20,va=\"top\")\n        ax.text(t1, (x1+x0)/2, r\"$\\Delta x$\", fontsize=20)\n    if show_tangent:\n        slope = (3*Tmiddle**2 - 30*Tmiddle) / 100\n        intercept = foo(Tmiddle) - slope*Tmiddle\n        Tmin = -100\n        Tmax = 100\n        line = lambda t: slope*t + intercept\n        ax.plot([Tmin, Tmax], [line(Tmin), line(Tmax)],\n                color=\"black\", ls=\":\")\n        \ninteractive_plot = interactive(f, Tmiddle=widgets.FloatSlider(min=1, max=17, step=0.5, value=15),\n                                  deltaT=widgets.FloatSlider(min=0, max=8, step=0.2, value=5),\n                                  show_deltas=widgets.Checkbox(value=True),\n                                  show_tangent=widgets.Checkbox(value=True))\noutput = interactive_plot.children[-1]\n# to avoid flickering: https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html#Flickering-and-jumping-output\noutput.layout.height = '450px'\ninteractive_plot"
   }
 ]

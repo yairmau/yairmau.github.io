@@ -1039,6 +1039,5 @@ execute:
 
 <div class="alert alert-success">
   The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.  
-  <strong>— Pedro Domingos, The Master Algorithm</strong>
-</div>
+  <strong>— Pedro Domingos, The Master Algorithm</strong></div>
 

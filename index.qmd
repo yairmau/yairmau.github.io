@@ -88,10 +88,6 @@ display(HTML(
 <a class="btn my-btn-style btn-sm rounded", href="https://huji.zoom.us/my/yairmau" target="_blank">Zoom</a>
 """
 ))
-
-
-
-
 ```
 
 ---
