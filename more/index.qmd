@@ -11,7 +11,7 @@ section-divs: false
 
 ## <i class="fa-solid fa-microphone-lines fa-fw fa-lg fa-notbold svv"></i> [Science Communication](/more/communication.html)
 
-## <i class="fa-solid fa-comment fa-fw fa-lg fa-notbold svv"></i> [Talks](/talks)
+## <i class="fa-solid fa-comment fa-fw fa-lg fa-notbold svv"></i> [Talks](/talks-posters)
 
 ## How I made this website
 
