@@ -13,6 +13,8 @@ section-divs: false
 
 ## <i class="fa-solid fa-comment fa-fw fa-lg fa-notbold svv"></i> [Talks](/talks-posters)
 
+## <i class="fas fa-blog fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> [Blog](/blog)
+
 ## How I made this website
 
 This website was build using [Quarto](https://quarto.org), edited on [VSCode](https://code.visualstudio.com), hosted on [Github Pages](https://pages.github.com).

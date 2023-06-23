@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Widget Example</title>
+</head>
+<body>
+
+h
+
+<div id="widget-container"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/base@6.0.4/dist/jupyter-widgets-base.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/base@6.0.4/lib/index.min.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/controls@1.2.0/dist/controls.js"></script>
+<script type="text/javascript" src="widget2.html"></script>
+
+
+<script type="text/javascript">
+    requirejs.config({
+        paths: {
+            'jquery': 'https://code.jquery.com/jquery-3.3.1.min',
+            'underscore': 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min'
+        }
+    });
+
+    require(['widgets/js/widget'], function(widget) {
+        var container = document.getElementById('widget-container');
+        var widgetEl = container.querySelector('.widget-html-widget');
+        var modelId = widgetEl.getAttribute('data-widget-model-id');
+        var widgetManager = new widget.WidgetManager();
+        widgetManager.setStates([JSON.parse(document.getElementById(modelId).textContent)]);
+        widgetManager.displayWidget(widgetEl);
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
