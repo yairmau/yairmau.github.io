@@ -1,3 +1,24 @@
+kramer2023review:
+- title: "kramer2023review"
+  handle: "kramer2023review"
+  authors: Isaac Kramer and Yair Mau
+  title: "Review: Modeling the Effects of Salinity and Sodicity in Agricultural Systems"
+  journal: Water Resources Research
+  year: "2023"
+  doi: 10.1029/2023WR034750
+  pdf: archive/papers/kramer-2023-Review- Modeling the Effects of Salinity and Sodicity in Agricultural Systems.pdf
+  bib: |
+      @article{kramer2022effects,
+          doi = {10.1029/2023WR034750},
+          url = {https://doi.org/10.1029/2023WR034750},
+          year = {2023},
+          volume = {59},
+          number = {6},
+          author = {Isaac Kramer and Yair Mau},
+          title = {Review: Modeling the Effects of Salinity and Sodicity in Agricultural Systems},
+          journal = {Water Resources Research},
+      }
+
 kramer2022effects:
 - title: "kramer2022effects"
   handle: "kramer2022effects"

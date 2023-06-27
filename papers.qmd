@@ -108,6 +108,10 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 ```{python}
 #| output: asis
 
+display(Markdown("### 2023"))
+display(HTML("</br>"))
+print_paper(yaml_data['kramer2023review'][0])
+
 display(Markdown("### 2022"))
 display(HTML("</br>"))
 print_paper(yaml_data['kramer2022effects'][0])
