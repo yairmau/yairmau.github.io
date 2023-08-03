@@ -167,7 +167,7 @@ execute:
 ###### <i class="fa-regular fa-file svv"></i> Taiwo Adeyemo, Isaac Kramer, Guy J. Levy, and Yair Mau. Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.  [*Geoderma*](https://doi.org/10.1016/j.geoderma.2022.115765), 2022. {#publication:adeyemo2022salinity}
 
 ```{=html}
-<a class="btn my-btn-style btn-sm rounded", href="archive/papers/adeyemo-2021-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf" target="_blank" rel="noopener noreferrer">
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/adeyemo-2022-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
         PDF
     </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#adeyemo2022salinity" aria-expanded="false" aria-controls="adeyemo2022salinity">
