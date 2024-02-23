@@ -9,17 +9,12 @@ format:
     toc-depth: 3
     toc-title: Contents
     code-summary: Show the code
-    code-tools:
-      source: true
-      toggle: false
-filters:
-  - nutshell
 execute:
   freeze: auto
 ---
 
 
-<!-- in the future, substitute Bibtex button for bootstrap collapse:
+<!-- collapsable bibtex is achieved thus:
 https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- code inspired by https://ddimmery.com/posts/quarto-website/ -->

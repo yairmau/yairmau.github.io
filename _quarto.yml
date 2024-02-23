@@ -24,7 +24,7 @@ format:
       # - litera
       # - custom.scss
       light: [flatly, custom.scss, custom-light.scss]
-      dark: [darkly, custom.scss, custom-dark.scss]
+      # dark: [darkly, custom.scss, custom-dark.scss]
     css: styles.css
     highlight: false
     # https://quarto.org/docs/output-formats/html-code.html#highlighting

@@ -10,16 +10,14 @@ format:
     toc-depth: 3
     toc-title: Contents
     code-summary: "Show the code"
-    code-tools: 
-      source: true
-      toggle: false
-filters:
-   - nutshell
+    # code-tools: 
+    #   source: true
+    #   toggle: false
 execute:
   freeze: auto  # re-render only when source changes
 ---
 
-<!-- in the future, substitute Bibtex button for bootstrap collapse:
+<!-- collapsable bibtex is achieved thus:
 https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- code inspired by https://ddimmery.com/posts/quarto-website/ -->
@@ -53,30 +51,32 @@ def new_bib_button(name, content):
     """
     )
 
-def bib_nutshell(name, content):
-    # return f"## :x {name}"
-    return f"""&nbsp;&nbsp;<a href="#x-{name}">:bib</a></p>"""
-    
-def bib_nutshell2(name, content):
-    display(Markdown(f"""## :x {name}\n```python\n{content}\n```"""))
-
 def print_paper(data):
+    # in order to get a link to each paper with a hash (URI fragment)
+    # each paper is actually written as a h6 header, modified so it looks good
     h6start = '###### '
+    # this comes at the end of the paper, and gives a name for the URI fragment: #publication:author2024word
     h6end = ". {#" + f"publication:{data['handle']}" + "}"
+    # font awesome icon that rotates
     paper_icon = '<i class="fa-regular fa-file svv"></i> '
+    # journal in italics
     journal = ' *' + data["journal"] + '*, '
+    # if doi data is available, give journal name a hyperlink to the paper
     if "doi" in data:
         journal = ' [*' + data["journal"] + '*](https://doi.org/' + data["doi"] + '){target="_blank"}, '
-    # display(Markdown(f"###### {data['handle']}"))
-    # display(HTML(f"""<span id="{data['handle']}"></span>"""))
+    # finally, show all these elemens
     display(Markdown(
         h6start +
         paper_icon +
         data["authors"] + '. ' + 
         data["title"] + '. ' + 
         journal +
-        data["year"] + h6end#'. \n'
+        data["year"] + 
+        h6end
         ))
+    # add a bunch of buttons, depending on the availability of various elements
+    # use "button" function from above for all of them,
+    # except for bibtex which has its own function
     buttons = []
     if "pdf" in data:
         buttons.append(button(data['pdf'], "PDF", "bi-file-earmark-pdf-fill"))
@@ -86,27 +86,33 @@ def print_paper(data):
         buttons.append(button(data['github'], "Github", "bi-github"))
     if "bib" in data:
         buttons.append(new_bib_button(data['handle'], data['bib']))
-    # if "bib" in data:
-    #     buttons.append(bib_nutshell(data['handle'], data['bib']))
+    # now show buttons
     display(HTML(" ".join(buttons)))
+    # if bibtex button exists, put the second part of the "collapse" element
+    # this is invisible and shows only upon Bibtex button click
     if "bib" in data:
+        # this is how the invisible part begins
         display(HTML(f"""
             <div class="collapse" id="{data['handle']}">
             <div class="card card-body border-0">
         """))
+        # that's the actual content: the data['bib'] content, 
+        # with ```bib to give is the necessary highlights
         display(Markdown(ticks3 + 
             f"bib\n{data['bib']}\n" + 
             ticks3))
+        # now close element
         display(HTML("""
             </div>
             </div>
             """
         ))
-    # if "bib" in data:
-    #     bib_nutshell2(data['handle'], data['bib'])
+    # skip line to space out papers
     display(Markdown("\n"))
+    # horizontal line
     display(HTML("<hr/>"))
 
+# load all data from papers.yaml
 yaml_data = yaml.safe_load(open("papers.yaml"))
 ```
 
