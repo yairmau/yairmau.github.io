@@ -9,11 +9,18 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Contents
+    code-summary: "Show the code"
+    code-tools: 
+      source: true
+      toggle: false
 filters:
    - nutshell
 execute:
   freeze: auto  # re-render only when source changes
 ---
+
+<!-- in the future, substitute Bibtex button for bootstrap collapse:
+https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- code inspired by https://ddimmery.com/posts/quarto-website/ -->
 
@@ -59,7 +66,7 @@ def print_paper(data):
     paper_icon = '<i class="fa-regular fa-file svv"></i> '
     journal = ' *' + data["journal"] + '*, '
     if "doi" in data:
-        journal = ' [*' + data["journal"] + '*](https://doi.org/' + data["doi"] + '), '
+        journal = ' [*' + data["journal"] + '*](https://doi.org/' + data["doi"] + '){target="_blank"}, '
     # display(Markdown(f"###### {data['handle']}"))
     # display(HTML(f"""<span id="{data['handle']}"></span>"""))
     display(Markdown(
@@ -107,6 +114,10 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 ```{python}
 #| output: asis
+
+display(Markdown("### 2024"))
+display(HTML("</br>"))
+print_paper(yaml_data['mantova2024monitoring'][0])
 
 display(Markdown("### 2023"))
 display(HTML("</br>"))

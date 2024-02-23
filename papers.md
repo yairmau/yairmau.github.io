@@ -8,12 +8,19 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Contents
+    code-summary: Show the code
+    code-tools:
+      source: true
+      toggle: false
 filters:
   - nutshell
 execute:
   freeze: auto
 ---
 
+
+<!-- in the future, substitute Bibtex button for bootstrap collapse:
+https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- code inspired by https://ddimmery.com/posts/quarto-website/ -->
 
@@ -24,13 +31,62 @@ execute:
 
 <!-- ## Papers -->
 
+### 2024
+
+```{=html}
+</br>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Mantova et al.. Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.  [*New Phytologist*](https://doi.org/10.1111/nph.19621){target="_blank"}, 2024. {#publication:mantova2024monitoring}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/mantova-2024-monitoring urban trees across the world Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#mantova2024monitoring" aria-expanded="false" aria-controls="mantova2024monitoring">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="mantova2024monitoring">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{mantova2024monitoring,
+    title = {Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network (<scp>UTEN</scp>) inaugural workshop: The Urban Trees Ecophysiology Network inaugural workshop,  Georgia Center at the University of Georgia,  Athens,  United States,  March 2023},
+    url = {http://dx.doi.org/10.1111/nph.19621},
+    DOI = {10.1111/nph.19621},
+    journal = {New Phytologist},
+    publisher = {Wiley},
+    author = {Mantova,  Marylou and Johnson,  Daniel M. and Antebi,  Jonathan and Beery,  Sara and Blumstein,  Meghan and Cohen,  Ron and Defavari,  Felipe and Feng,  Xue and Feuer,  Erez and Gersony,  Jess and Hammond,  William M. and John,  Grace and Marchin,  Renée M. and Mau,  Yair and Miller,  Bill and Nibbelink,  Clara and Ossola,  Alessandro and Paquette,  Alain and Rademacher,  Tim and Rissanen,  Kaisa and Shemesh‐Mayer,  Einat and Skelton,  Robert and Wilkening,  Jean V. and Preisler,  Yakir},
+    year = {2024},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
 ### 2023
 
 ```{=html}
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Review: Modeling the Effects of Salinity and Sodicity in Agricultural Systems.  [*Water Resources Research*](https://doi.org/10.1029/2023WR034750), 2023. {#publication:kramer2023review}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Review: Modeling the Effects of Salinity and Sodicity in Agricultural Systems.  [*Water Resources Research*](https://doi.org/10.1029/2023WR034750){target="_blank"}, 2023. {#publication:kramer2023review}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2023-Review- Modeling the Effects of Salinity and Sodicity in Agricultural Systems.pdf" target="_blank" rel="noopener noreferrer">
@@ -80,7 +136,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yaara Tsairi, Michael Buchdahl Roth, Alon Tal, and Yair Mau. Effects of population growth on Israel’s demand for desalinated water.  [*npj Clean Water*](https://doi.org/10.1038/s41545-022-00215-9), 2022. {#publication:kramer2022effects}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yaara Tsairi, Michael Buchdahl Roth, Alon Tal, and Yair Mau. Effects of population growth on Israel’s demand for desalinated water.  [*npj Clean Water*](https://doi.org/10.1038/s41545-022-00215-9){target="_blank"}, 2022. {#publication:kramer2022effects}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-Effects of population growth on Israels demand for desalinated water.pdf" target="_blank" rel="noopener noreferrer">
@@ -122,7 +178,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, and Yair Mau. The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.  [*Water Resources Research*](https://doi.org/10.1029/2021WR031307), 2022. {#publication:kramer2022sustainability}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, and Yair Mau. The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.  [*Water Resources Research*](https://doi.org/10.1029/2021WR031307){target="_blank"}, 2022. {#publication:kramer2022sustainability}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-The Sustainability of Treated Wastewater Irrigation- The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.pdf" target="_blank" rel="noopener noreferrer">
@@ -164,7 +220,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Taiwo Adeyemo, Isaac Kramer, Guy J. Levy, and Yair Mau. Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.  [*Geoderma*](https://doi.org/10.1016/j.geoderma.2022.115765), 2022. {#publication:adeyemo2022salinity}
+###### <i class="fa-regular fa-file svv"></i> Taiwo Adeyemo, Isaac Kramer, Guy J. Levy, and Yair Mau. Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.  [*Geoderma*](https://doi.org/10.1016/j.geoderma.2022.115765){target="_blank"}, 2022. {#publication:adeyemo2022salinity}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/adeyemo-2022-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf" target="_blank" rel="noopener noreferrer">
@@ -210,7 +266,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Nurit Goldberg Yehuda, Shmuel Assouline, Yair Mau, and Uri Nachshon. Compaction effects on evaporation and salt precipitation in drying porous media.  [*HESS*](https://doi.org/10.5194/hess-26-2499-2022), 2022. {#publication:goldberg2022compaction}
+###### <i class="fa-regular fa-file svv"></i> Nurit Goldberg Yehuda, Shmuel Assouline, Yair Mau, and Uri Nachshon. Compaction effects on evaporation and salt precipitation in drying porous media.  [*HESS*](https://doi.org/10.5194/hess-26-2499-2022){target="_blank"}, 2022. {#publication:goldberg2022compaction}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/goldberg-2022-Compaction effects on evaporation and salt precipitation in drying porous media.pdf" target="_blank" rel="noopener noreferrer">
@@ -260,7 +316,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yuval R. Zelnik, Yair Mau, Moshe Shachak, and Ehud Meron. High-integrity human intervention in ecosystems: Tracking self-organization modes.  [*PLOS Computational Biology*](https://doi.org/10.1371/journal.pcbi.1009427), 2021. {#publication:zelnik2021high}
+###### <i class="fa-regular fa-file svv"></i> Yuval R. Zelnik, Yair Mau, Moshe Shachak, and Ehud Meron. High-integrity human intervention in ecosystems: Tracking self-organization modes.  [*PLOS Computational Biology*](https://doi.org/10.1371/journal.pcbi.1009427){target="_blank"}, 2021. {#publication:zelnik2021high}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/zelnik-2021-High-integrity human intervention in ecosystems- Tracking self-organization modes.pdf" target="_blank" rel="noopener noreferrer">
@@ -305,7 +361,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and Yair Mau. Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework.  [*HESS*](https://doi.org/10.5194/hess-25-1993-2021), 2021. {#publication:kramer2021hysteresis}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and Yair Mau. Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework.  [*HESS*](https://doi.org/10.5194/hess-25-1993-2021){target="_blank"}, 2021. {#publication:kramer2021hysteresis}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2021-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf" target="_blank" rel="noopener noreferrer">
@@ -359,7 +415,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Soil degradation risks assessed by the SOTE model for salinity and sodicity.  [*Water Resources Research*](https://doi.org/10.1029/2020WR027456), 2020. {#publication:kramer2020soil}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Soil degradation risks assessed by the SOTE model for salinity and sodicity.  [*Water Resources Research*](https://doi.org/10.1029/2020WR027456){target="_blank"}, 2020. {#publication:kramer2020soil}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2020-Soil degradation risks assessed by the SOTE model for salinity and sodicity.pdf" target="_blank" rel="noopener noreferrer">
@@ -407,7 +463,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Xing Chen, Mukesh Kumar, Daniel de B. Richter, and Yair Mau. Impact of gully incision on hillslope hydrology.  [*Hydrological Processes*](https://doi.org/10.1002/hyp.13845), 2020. {#publication:chen2020impact}
+###### <i class="fa-regular fa-file svv"></i> Xing Chen, Mukesh Kumar, Daniel de B. Richter, and Yair Mau. Impact of gully incision on hillslope hydrology.  [*Hydrological Processes*](https://doi.org/10.1002/hyp.13845){target="_blank"}, 2020. {#publication:chen2020impact}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/chen-2020-Impact of gully incision on hillslope hydrology.pdf" target="_blank" rel="noopener noreferrer">
@@ -453,7 +509,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Avigail Kaner, Yakir Preisler, José M. Grünzweig, and Yair Mau. Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.  [*bioRxiv*](https://doi.org/10.1101/2020.02.11.943563), 2020. {#publication:kaner2020internal}
+###### <i class="fa-regular fa-file svv"></i> Avigail Kaner, Yakir Preisler, José M. Grünzweig, and Yair Mau. Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.  [*bioRxiv*](https://doi.org/10.1101/2020.02.11.943563){target="_blank"}, 2020. {#publication:kaner2020internal}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kaner-2020-Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.pdf" target="_blank" rel="noopener noreferrer">
@@ -505,7 +561,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. Optimal control solutions to sodic soil reclamation.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2016.02.014), 2016. {#publication:mau2016optimal}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. Optimal control solutions to sodic soil reclamation.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2016.02.014){target="_blank"}, 2016. {#publication:mau2016optimal}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2016-Optimal control solutions to sodic soil reclamation.pdf" target="_blank" rel="noopener noreferrer">
@@ -555,7 +611,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Amilcare Porporato, Xue Feng, Stefano Manzoni, Yair Mau, Anthony J. Parolari, and Giulia Vico. Ecohydrological modeling in agroecosystems: Examples and challenges.  [*Water Resources Research*](https://doi.org/10.1002/2015WR017289), 2015. {#publication:porporato2015ecohydrological}
+###### <i class="fa-regular fa-file svv"></i> Amilcare Porporato, Xue Feng, Stefano Manzoni, Yair Mau, Anthony J. Parolari, and Giulia Vico. Ecohydrological modeling in agroecosystems: Examples and challenges.  [*Water Resources Research*](https://doi.org/10.1002/2015WR017289){target="_blank"}, 2015. {#publication:porporato2015ecohydrological}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/porporato-2015-Ecohydrological modeling in agroecosystems-Examples and challenges.pdf" target="_blank" rel="noopener noreferrer">
@@ -600,7 +656,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. A dynamical system approach to soil salinity and sodicity.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2015.05.010), 2015. {#publication:mau2015dynamical}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. A dynamical system approach to soil salinity and sodicity.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2015.05.010){target="_blank"}, 2015. {#publication:mau2015dynamical}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2015-A dynamical system approach to soil salinity and sodicity.pdf" target="_blank" rel="noopener noreferrer">
@@ -644,7 +700,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, and Ehud Meron. Reversing desertification as a spatial resonance problem.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.91.012903), 2015. {#publication:mau2015reversing}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, and Ehud Meron. Reversing desertification as a spatial resonance problem.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.91.012903){target="_blank"}, 2015. {#publication:mau2015reversing}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2015-Reversing desertification as a spatial resonance problem.pdf" target="_blank" rel="noopener noreferrer">
@@ -695,7 +751,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau, Xue Feng, and Amilcare Porporato. Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.052128), 2014. {#publication:mau2014multiplicative}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau, Xue Feng, and Amilcare Porporato. Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.052128){target="_blank"}, 2014. {#publication:mau2014multiplicative}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2014-Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.pdf" target="_blank" rel="noopener noreferrer">
@@ -740,7 +796,7 @@ execute:
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Lev Haim, Yair Mau, and Ehud Meron. Spatial forcing of pattern-forming systems that lack inversion symmetry.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.022904), 2014. {#publication:haim2014spatial}
+###### <i class="fa-regular fa-file svv"></i> Lev Haim, Yair Mau, and Ehud Meron. Spatial forcing of pattern-forming systems that lack inversion symmetry.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.022904){target="_blank"}, 2014. {#publication:haim2014spatial}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/haim-2014-Spatial forcing of pattern-forming systems that lack inversion symmetry.pdf" target="_blank" rel="noopener noreferrer">
@@ -791,7 +847,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, Aric Hagberg, and Ehud Meron. Competing resonances in spatially forced pattern-forming systems.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.88.032917), 2013. {#publication:mau2013competing}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, Aric Hagberg, and Ehud Meron. Competing resonances in spatially forced pattern-forming systems.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.88.032917){target="_blank"}, 2013. {#publication:mau2013competing}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2013-Competing resonances in spatially forced pattern-forming systems.pdf" target="_blank" rel="noopener noreferrer">
@@ -842,7 +898,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Spatial periodic forcing can displace patterns it is intended to control.  [*Physical Review Letters*](https://doi.org/10.1103/PhysRevLett.109.034102), 2012. {#publication:mau2012spatial}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Spatial periodic forcing can displace patterns it is intended to control.  [*Physical Review Letters*](https://doi.org/10.1103/PhysRevLett.109.034102){target="_blank"}, 2012. {#publication:mau2012spatial}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2012-Spatial periodic forcing can displace patterns it is intended to control.pdf" target="_blank" rel="noopener noreferrer">
@@ -893,7 +949,7 @@ execute:
 </br>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Dual-mode spiral vortices.  [*Physical Review E*](https://doi.org/10.1103/physreve.80.065203), 2009. {#publication:mau2009dual}
+###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Dual-mode spiral vortices.  [*Physical Review E*](https://doi.org/10.1103/physreve.80.065203){target="_blank"}, 2009. {#publication:mau2009dual}
 
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2009-Dual-mode spiral vortices.pdf" target="_blank" rel="noopener noreferrer">

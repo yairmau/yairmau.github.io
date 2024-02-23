@@ -1,3 +1,26 @@
+mantova2024monitoring:
+- title: "mantova2024monitoring"
+  handle: "mantova2024monitoring"
+  authors: Mantova et al.
+  title: "Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop"
+  journal: New Phytologist
+  year: "2024"
+  doi: 10.1111/nph.19621
+  pdf: archive/papers/mantova-2024-monitoring urban trees across the world Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.pdf
+  bib: |
+      @article{mantova2024monitoring,
+          title = {Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network (<scp>UTEN</scp>) inaugural workshop: The Urban Trees Ecophysiology Network inaugural workshop,  Georgia Center at the University of Georgia,  Athens,  United States,  March 2023},
+          url = {http://dx.doi.org/10.1111/nph.19621},
+          DOI = {10.1111/nph.19621},
+          journal = {New Phytologist},
+          publisher = {Wiley},
+          author = {Mantova,  Marylou and Johnson,  Daniel M. and Antebi,  Jonathan and Beery,  Sara and Blumstein,  Meghan and Cohen,  Ron and Defavari,  Felipe and Feng,  Xue and Feuer,  Erez and Gersony,  Jess and Hammond,  William M. and John,  Grace and Marchin,  Renée M. and Mau,  Yair and Miller,  Bill and Nibbelink,  Clara and Ossola,  Alessandro and Paquette,  Alain and Rademacher,  Tim and Rissanen,  Kaisa and Shemesh‐Mayer,  Einat and Skelton,  Robert and Wilkening,  Jean V. and Preisler,  Yakir},
+          year = {2024},
+      }
+
+
+
+
 kramer2023review:
 - title: "kramer2023review"
   handle: "kramer2023review"
