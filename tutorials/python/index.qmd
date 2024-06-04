@@ -163,6 +163,24 @@ Main features:
 
 --------------------------------
 
+## Palette
+
+```{python}
+from IPython.display import display, Markdown, HTML
+display(HTML(
+"""
+<a class="btn btn-success btn-sm rounded", href="palette.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+"""
+))
+```
+
+Given a named color, returns palettes with varying hue, lightness, and saturation.  
+![](palette-gold.png)
+
+--------------------------------
+
 ## The time dependent Ginzburg-Landau equation
 
 <button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/tdgle.html', '_blank');">Jupyter notebook</button>
