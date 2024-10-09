@@ -1,0 +1,18 @@
+---
+title: "{{< fa seedling >}} Environmental Quality MSc Program"
+echo: false
+# jupyter: python3
+section-divs: false
+---
+
+## Forms
+
+Make a copy of the form to your own google account, and after filling it out, `Share` with me the link. Attention: 
+
+1. go to `General access`, 
+1. choose `Anyone with the link`, and 
+1. give them `Editor` privileges.
+
+* [Master’s registration request form](https://docs.google.com/document/d/1tsL4N1mGwwVAhV1mElg323rLKMldn7AsDHN3mdfPt40/edit?usp=sharing)
+* [Master’s course plan — research track](https://docs.google.com/document/d/1dOBUhBwdqe5FDYGKTEbAKdZ9o77CYv2QXzlM23hG2Ag/edit?usp=sharing)
+* [Thesis submission form](https://docs.google.com/document/d/1g38ETNi98lWgo5mLTkmCiN98ewAxxdhrlWCeFAU0eYA/edit?usp=sharing)

@@ -13,6 +13,9 @@ section-divs: false
 
 ## [{{< iconify whh solarsystem >}} Physics 1](/courses/physics1)
 
+## [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment)
+
+
 <div class="alert alert-success">
   True science teaches, above all, to doubt and to be ignorant.  
   <strong>— Miguel de Unamuno</strong>
