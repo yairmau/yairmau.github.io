@@ -7,12 +7,17 @@ section-divs: false
 
 ## Forms
 
-Make a copy of the form to your own google account, and after filling it out, `Share` with me the link. Attention: 
+If you need to have multiple people filling out the same form, follow this:
 
+1. Make a copy of the form to your own google account, and after filling it out,
+1. click `Share`, 
 1. go to `General access`, 
 1. choose `Anyone with the link`, and 
 1. give them `Editor` privileges.
+1. copy the link and share it with the relevant people.
 
 * [Master’s registration request form](https://docs.google.com/document/d/1tsL4N1mGwwVAhV1mElg323rLKMldn7AsDHN3mdfPt40/edit?usp=sharing)
 * [Master’s course plan — research track](https://docs.google.com/document/d/1dOBUhBwdqe5FDYGKTEbAKdZ9o77CYv2QXzlM23hG2Ag/edit?usp=sharing)
 * [Thesis submission form](https://docs.google.com/document/d/1g38ETNi98lWgo5mLTkmCiN98ewAxxdhrlWCeFAU0eYA/edit?usp=sharing)
+* [MSc thesis referee grading form](https://docs.google.com/document/d/1D6j2L6hgikY22bT4vYs_XWJ-XQlx5QczNwyNAm0CqOc/edit?usp=sharing)
+* [MSc thesis final grade](https://docs.google.com/document/d/1yjP_MPHi_aJ4yTeFpwq2yCAW0HygX1J-oHusAEwoJN0/edit?usp=sharing)
