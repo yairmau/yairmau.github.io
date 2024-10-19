@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau -  Python</title>
+<title> Python – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,22 @@ ul.task-list li input[type="checkbox"] {
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -106,7 +120,7 @@ window.Quarto = {
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -133,7 +147,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -194,7 +208,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 <p>I recommend <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a> for writing code, and you can install the Anaconda package to it to have a smooth IDE. [not the same anaconda as mentioned above! Yes, it’s confusing, I know.]</p>
 <hr>
 <h2 id="fitzhugh-nagumo-labyrinthine-patterns" class="anchored">Fitzhugh-Nagumo — Labyrinthine Patterns</h2>
-<div id="3eedeba9" class="cell" data-execution_count="1">
+<div id="7ffd427d" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="https://yairmau.github.io/website/jupyter/2020/01/01/fhn.html" target="_blank" rel="noopener noreferrer">
@@ -207,7 +221,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 </iframe>
 <hr>
 <h2 id="conways-game-of-life-acorn-initial-condition" class="anchored">Conway’s Game of Life, acorn initial condition</h2>
-<div id="c5d12126" class="cell" data-execution_count="2">
+<div id="983f4b89" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="https://yairmau.github.io/website/jupyter/2020/01/01/gol.html" target="_blank" rel="noopener noreferrer">
@@ -226,7 +240,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 </iframe>
 <hr>
 <h2 id="least-squares-fit-of-nonlinear-function" class="anchored">Least squares fit of nonlinear function</h2>
-<div id="d4f04978" class="cell" data-execution_count="3">
+<div id="47520043" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="leastsquares.html" target="_blank" rel="noopener noreferrer">
@@ -238,7 +252,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 <img src="least-squares.png" class="img-fluid"></p>
 <hr>
 <h2 id="fun-with-histograms" class="anchored">Fun with histograms</h2>
-<div id="d8f918b9" class="cell" data-execution_count="4">
+<div id="ca0101aa" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="histograms.html" target="_blank" rel="noopener noreferrer">
@@ -250,7 +264,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 <img src="histograms.png" class="img-fluid"></p>
 <hr>
 <h2 id="fancy-subplot-grid" class="anchored">Fancy subplot grid</h2>
-<div id="74e1673d" class="cell" data-execution_count="5">
+<div id="357ce281" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="subplotgrid.html" target="_blank" rel="noopener noreferrer">
@@ -262,7 +276,7 @@ My advice on learning Python:<br><br>Don't set out to "learn Python". Choose a p
 Main features: <code>gridspec subplots; numpy-compatible heaviside; label, ticks and axis manipulations; log scale</code> <img src="subplot-grid.png" class="img-fluid"></p>
 <hr>
 <h2 id="streamplot" class="anchored">Streamplot</h2>
-<div id="dbee6632" class="cell" data-execution_count="6">
+<div id="0acd8083" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="streamplot.html" target="_blank" rel="noopener noreferrer">
@@ -274,7 +288,7 @@ Main features: <code>gridspec subplots; numpy-compatible heaviside; label, ticks
 Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code> <img src="streamplot.png" class="img-fluid"></p>
 <hr>
 <h2 id="palette" class="anchored">Palette</h2>
-<div id="2657dceb" class="cell" data-execution_count="7">
+<div id="4425877d" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 
 <a class="btn btn-success btn-sm rounded" ,="" href="palette.html" target="_blank" rel="noopener noreferrer">
@@ -316,7 +330,7 @@ Main features: <code>string operations, movie</code></p>
 <button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/hysteresis.html', '_blank');">
 Jupyter notebook
 </button>
-<p>Hysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional <span class="math inline">\(f=u^4-2u^2+hu\)</span>. The parameter <span class="math inline">\(h\)</span> is ramped down and up during this simulation.<br>
+<p>Hysteresis mechanism created by the bistability of states. System goes to minimum points u in the energy functional <span class="math inline">f=u^4-2u^2+hu</span>. The parameter <span class="math inline">h</span> is ramped down and up during this simulation.<br>
 Main features: <code>sympy analytical calculations, numpy dtypes, movie</code></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xgRDhOifFow" frameborder="0" allowfullscreen="">
 </iframe>
@@ -334,13 +348,18 @@ Main features: <code>truncate_colormap, contour, contourf (fill), clabel (contou
 <!-- ------------------------------------- -->
 <!-- ------------------------------------- -->
 <h2 id="least-action-principle-on-the-beach" class="anchored">Least action principle on the beach</h2>
-<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/bestpath.html', '_blank');">
-Jupyter notebook
-</button>
+<div id="c61a16d0" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+
+<a class="btn btn-success btn-sm rounded" ,="" href="best_path.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+</div>
+</div>
 <p>How should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell’s law of refraction!<br>
 This is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, “annotations” are used, where things can be labeled with the help of arrows.<br>
 Main features: <code>spines, matplotlib.patches.Rectangle, annotate</code></p>
-<p><img src="../../images/python_figures/bestpath.png" class="img-fluid"></p>
+<p><img src="best_path.png" class="img-fluid"></p>
 <hr class="my_hr">
 <!-- ------------------------------------- -->
 <!-- ------------------------------------- -->
@@ -404,18 +423,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -447,7 +455,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -455,7 +485,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

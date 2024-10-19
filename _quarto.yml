@@ -34,6 +34,10 @@ format:
     max-width: "700"
     include-in-header:
       - includes.html
+    code-line-numbers: true
+    # the default MathJax rendering option yields ugly results, use katex
+    html-math-method: katex
+    fig-align: center
     
     # embed-resources: true
 # theme list: https://bootswatch.com/3/
