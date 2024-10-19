@@ -284,13 +284,21 @@ Main features:
 
 ## This website's logo
 
-<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/websitelogo.html', '_blank');">Jupyter notebook</button>
-
+```{python}
+from IPython.display import display, Markdown, HTML
+display(HTML(
+"""
+<a class="btn btn-success btn-sm rounded", href="website_logo.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+"""
+))
+```
 Simple example of how to make a figure without any visible axes.  
 Main features:
 `set_axis_off, fill_between, matplotlib inline plot on Jupyter`
 
-![](/images/python_figures/site-logo.png)
+![](logo_white_bg_withborder.png)
 
 <hr class="my_hr">
 
