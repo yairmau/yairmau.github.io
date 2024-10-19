@@ -7,6 +7,11 @@ section-divs: false
 
 ## Forms
 
+<div class="alert alert-danger">
+The forms below are Google Docs. Do not "Request edit access", instead copy them to your personal Google account:  
+`File` then `Make a copy`.
+</div>
+
 If you need to have multiple people filling out the same form, follow this:
 
 1. Make a copy of the form to your own google account, and after filling it out,
