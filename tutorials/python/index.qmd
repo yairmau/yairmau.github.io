@@ -288,7 +288,7 @@ Main features:
 from IPython.display import display, Markdown, HTML
 display(HTML(
 """
-<a class="btn btn-success btn-sm rounded", href="website_logo.html" target="_blank" rel="noopener noreferrer">
+<a class="btn btn-success btn-sm rounded", href="website-logo.html" target="_blank" rel="noopener noreferrer">
         Jupyter notebook
 </a>
 """
