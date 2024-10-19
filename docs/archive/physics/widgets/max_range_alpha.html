@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - To use this widget, click on: Run &gt; Run All Cells, then scroll down and move the sliders</title>
+<title>To use this widget, click on: Run &gt; Run All Cells, then scroll down and move the sliders – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -172,102 +172,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div id="cell-2" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib widget</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interactive</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">%</span>matplotlib widget</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interactive</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-7"><a href="#cb1-7"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-3" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> np.pi</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.8</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fig, (ax0, ax1) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">9</span>,<span class="dv">5</span>))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.02</span>, right<span class="op">=</span><span class="fl">0.90</span>, top<span class="op">=</span><span class="fl">0.99</span>, bottom<span class="op">=</span><span class="fl">0.16</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                    hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>,<span class="dv">18</span>,<span class="dv">501</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">101</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.8</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>v0 <span class="op">=</span> <span class="fl">10.0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>alpha0 <span class="op">=</span> <span class="fl">0.1</span><span class="op">*</span>pi</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.linspace(<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">2</span>, <span class="dv">101</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> trajectory(x, alpha, v0):</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.tan(alpha)<span class="op">*</span>x <span class="op">-</span> (g<span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>v0<span class="op">**</span><span class="dv">2</span><span class="op">*</span>(np.cos(alpha))<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>x<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> max_range_func(a, v0):</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(<span class="dv">2</span><span class="op">*</span>a) <span class="op">/</span> g</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> max_range(alpha, v0):</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(<span class="dv">2</span><span class="op">*</span>alpha) <span class="op">/</span> g</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>xoft <span class="op">=</span> <span class="kw">lambda</span> alpha: v0<span class="op">*</span>np.cos(alpha)<span class="op">*</span>t</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>yoft <span class="op">=</span> <span class="kw">lambda</span> alpha: v0<span class="op">*</span>np.sin(alpha)<span class="op">*</span>t <span class="op">-</span> g<span class="op">*</span>t<span class="op">**</span><span class="dv">2</span><span class="op">/</span><span class="dv">2</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> trajectory(x, alpha0, v0)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax0.fill_between(x,y1<span class="op">=</span><span class="dv">0</span>,y2<span class="op">=-</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"xkcd:grass"</span>, zorder<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>ax0.fill_between(x,y1<span class="op">=</span><span class="dv">0</span>,y2<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">"xkcd:sky"</span>, zorder<span class="op">=-</span><span class="dv">10</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax0.scatter(<span class="dv">9</span>, <span class="dv">9</span>, s<span class="op">=</span><span class="dv">4000</span>, facecolor<span class="op">=</span><span class="st">"yellow"</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_left(ax, alpha, v0):</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, trajectory(x, alpha, v0), color<span class="op">=</span><span class="st">"red"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    make_arrow(ax, v0, alpha)</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    ax.plot([max_range(alpha, v0)], [<span class="dv">0</span>], <span class="st">'o'</span>, zorder<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            markerfacecolor<span class="op">=</span><span class="st">"white"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>, markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_right(ax, alpha, v0):</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    mr <span class="op">=</span> max_range(alpha, v0)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    ax.plot(a, max_range_func(a, v0), color<span class="op">=</span><span class="st">"tab:red"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    ax.plot([alpha], mr, <span class="st">'o'</span>, clip_on <span class="op">=</span> <span class="va">False</span>, </span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>            markerfacecolor<span class="op">=</span><span class="st">"white"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>, markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    ax.plot(a, a<span class="op">*</span><span class="dv">0</span> <span class="op">+</span> mr, color<span class="op">=</span><span class="st">"black"</span>, ls<span class="op">=</span><span class="st">":"</span>, zorder<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    ax.plot([alpha]<span class="op">*</span><span class="dv">2</span>, [<span class="dv">0</span>, mr], color<span class="op">=</span><span class="st">"black"</span>, ls<span class="op">=</span><span class="st">":"</span>, zorder<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_arrow(ax, v, alpha):</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    vx <span class="op">=</span> v <span class="op">*</span> np.cos(alpha)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    vy <span class="op">=</span> v <span class="op">*</span> np.sin(alpha)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    ax.ann <span class="op">=</span> ax.annotate(<span class="st">""</span>, xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), xy<span class="op">=</span>(vx<span class="op">*</span><span class="fl">0.6</span>, vy<span class="op">*</span><span class="fl">0.6</span>), zorder<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>                arrowprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">'black'</span>,</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>                                connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>                                arrowstyle<span class="op">=</span><span class="st">"simple"</span>,)</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    ax.v0text <span class="op">=</span> ax.text(vx<span class="op">*</span><span class="fl">0.6</span>, vy<span class="op">*</span><span class="fl">0.6</span>, <span class="vs">r"$\vec</span><span class="sc">{v}</span><span class="vs">$"</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>plot_right(ax1, alpha0, v0)</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>plot_left(ax0, alpha0, v0)</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>ax0.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="op">-</span><span class="dv">2</span>, <span class="dv">12</span>],</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        ylim<span class="op">=</span>[<span class="op">-</span><span class="dv">2</span>, <span class="dv">12</span>],</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        xticks<span class="op">=</span>np.arange(<span class="dv">0</span>,<span class="dv">11</span>,<span class="dv">2</span>),</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        yticks<span class="op">=</span>[],</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="st">"x (m)"</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>       )</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>ax1.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">2</span>],</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>        ylim<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">11</span>],</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>        xticks<span class="op">=</span>[<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">4</span>, pi<span class="op">/</span><span class="dv">2</span>],</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>        xticklabels<span class="op">=</span>[<span class="st">'0'</span>, <span class="vs">r'$\frac{\pi}</span><span class="sc">{4}</span><span class="vs">$'</span>, <span class="vs">r'$\frac{\pi}</span><span class="sc">{2}</span><span class="vs">$'</span>],</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="vs">r"angle, $\alpha$"</span>,</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>        ylabel<span class="op">=</span><span class="st">"horizontal range, L (m)"</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>       )</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>ax1.yaxis.set_label_position(<span class="st">"right"</span>)</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>ax1.yaxis.tick_right()</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>ax1.text(<span class="dv">0</span>, <span class="dv">10</span>, <span class="vs">r"$ L=\frac{v_0^2 \sin(2\alpha)}</span><span class="sc">{g}</span><span class="vs">$"</span>)</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="at">@widgets.interact</span>(alpha<span class="op">=</span>(<span class="dv">0</span>, <span class="fl">1.57</span>, <span class="fl">0.01</span>), v0<span class="op">=</span>(<span class="fl">0.1</span>, <span class="fl">10.0</span><span class="op">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>))</span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update(alpha <span class="op">=</span> pi<span class="op">*</span><span class="fl">0.1</span>, v0 <span class="op">=</span> <span class="dv">10</span>):</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Remove old lines from plot and plot new one"""</span></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax0.lines]</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax0.lines]</span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    ax0.ann.remove()</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>    ax0.v0text.remove()</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    plot_left(ax0, alpha, v0)</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    plot_right(ax1, alpha, v0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>pi <span class="op">=</span> np.pi</span>
+<span id="cb2-2"><a href="#cb2-2"></a>g <span class="op">=</span> <span class="fl">9.8</span> </span>
+<span id="cb2-3"><a href="#cb2-3"></a>fig, (ax0, ax1) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">9</span>,<span class="dv">5</span>))</span>
+<span id="cb2-4"><a href="#cb2-4"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.02</span>, right<span class="op">=</span><span class="fl">0.90</span>, top<span class="op">=</span><span class="fl">0.99</span>, bottom<span class="op">=</span><span class="fl">0.16</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>                    hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>,<span class="dv">18</span>,<span class="dv">501</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">101</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>g <span class="op">=</span> <span class="fl">9.8</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>v0 <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>alpha0 <span class="op">=</span> <span class="fl">0.1</span><span class="op">*</span>pi</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a>a <span class="op">=</span> np.linspace(<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">2</span>, <span class="dv">101</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="kw">def</span> trajectory(x, alpha, v0):</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">return</span> np.tan(alpha)<span class="op">*</span>x <span class="op">-</span> (g<span class="op">/</span>(<span class="dv">2</span><span class="op">*</span>v0<span class="op">**</span><span class="dv">2</span><span class="op">*</span>(np.cos(alpha))<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>x<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="kw">def</span> max_range_func(a, v0):</span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="cf">return</span> v0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(<span class="dv">2</span><span class="op">*</span>a) <span class="op">/</span> g</span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="kw">def</span> max_range(alpha, v0):</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="cf">return</span> v0<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(<span class="dv">2</span><span class="op">*</span>alpha) <span class="op">/</span> g</span>
+<span id="cb2-22"><a href="#cb2-22"></a></span>
+<span id="cb2-23"><a href="#cb2-23"></a>xoft <span class="op">=</span> <span class="kw">lambda</span> alpha: v0<span class="op">*</span>np.cos(alpha)<span class="op">*</span>t</span>
+<span id="cb2-24"><a href="#cb2-24"></a>yoft <span class="op">=</span> <span class="kw">lambda</span> alpha: v0<span class="op">*</span>np.sin(alpha)<span class="op">*</span>t <span class="op">-</span> g<span class="op">*</span>t<span class="op">**</span><span class="dv">2</span><span class="op">/</span><span class="dv">2</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>y <span class="op">=</span> trajectory(x, alpha0, v0)</span>
+<span id="cb2-26"><a href="#cb2-26"></a>ax0.fill_between(x,y1<span class="op">=</span><span class="dv">0</span>,y2<span class="op">=-</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"xkcd:grass"</span>, zorder<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-27"><a href="#cb2-27"></a>ax0.fill_between(x,y1<span class="op">=</span><span class="dv">0</span>,y2<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">"xkcd:sky"</span>, zorder<span class="op">=-</span><span class="dv">10</span>)</span>
+<span id="cb2-28"><a href="#cb2-28"></a>ax0.scatter(<span class="dv">9</span>, <span class="dv">9</span>, s<span class="op">=</span><span class="dv">4000</span>, facecolor<span class="op">=</span><span class="st">"yellow"</span>)</span>
+<span id="cb2-29"><a href="#cb2-29"></a></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="kw">def</span> plot_left(ax, alpha, v0):</span>
+<span id="cb2-31"><a href="#cb2-31"></a>    ax.plot(x, trajectory(x, alpha, v0), color<span class="op">=</span><span class="st">"red"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-32"><a href="#cb2-32"></a>    make_arrow(ax, v0, alpha)</span>
+<span id="cb2-33"><a href="#cb2-33"></a>    ax.plot([max_range(alpha, v0)], [<span class="dv">0</span>], <span class="st">'o'</span>, zorder<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb2-34"><a href="#cb2-34"></a>            markerfacecolor<span class="op">=</span><span class="st">"white"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>, markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-35"><a href="#cb2-35"></a></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="kw">def</span> plot_right(ax, alpha, v0):</span>
+<span id="cb2-37"><a href="#cb2-37"></a>    mr <span class="op">=</span> max_range(alpha, v0)</span>
+<span id="cb2-38"><a href="#cb2-38"></a>    ax.plot(a, max_range_func(a, v0), color<span class="op">=</span><span class="st">"tab:red"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-39"><a href="#cb2-39"></a>    ax.plot([alpha], mr, <span class="st">'o'</span>, clip_on <span class="op">=</span> <span class="va">False</span>, </span>
+<span id="cb2-40"><a href="#cb2-40"></a>            markerfacecolor<span class="op">=</span><span class="st">"white"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>, markersize<span class="op">=</span><span class="dv">10</span>, markeredgewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-41"><a href="#cb2-41"></a>    ax.plot(a, a<span class="op">*</span><span class="dv">0</span> <span class="op">+</span> mr, color<span class="op">=</span><span class="st">"black"</span>, ls<span class="op">=</span><span class="st">":"</span>, zorder<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-42"><a href="#cb2-42"></a>    ax.plot([alpha]<span class="op">*</span><span class="dv">2</span>, [<span class="dv">0</span>, mr], color<span class="op">=</span><span class="st">"black"</span>, ls<span class="op">=</span><span class="st">":"</span>, zorder<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-43"><a href="#cb2-43"></a></span>
+<span id="cb2-44"><a href="#cb2-44"></a><span class="kw">def</span> make_arrow(ax, v, alpha):</span>
+<span id="cb2-45"><a href="#cb2-45"></a>    vx <span class="op">=</span> v <span class="op">*</span> np.cos(alpha)</span>
+<span id="cb2-46"><a href="#cb2-46"></a>    vy <span class="op">=</span> v <span class="op">*</span> np.sin(alpha)</span>
+<span id="cb2-47"><a href="#cb2-47"></a>    ax.ann <span class="op">=</span> ax.annotate(<span class="st">""</span>, xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), xy<span class="op">=</span>(vx<span class="op">*</span><span class="fl">0.6</span>, vy<span class="op">*</span><span class="fl">0.6</span>), zorder<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb2-48"><a href="#cb2-48"></a>                arrowprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">'black'</span>,</span>
+<span id="cb2-49"><a href="#cb2-49"></a>                                connectionstyle<span class="op">=</span><span class="st">"arc3"</span>,</span>
+<span id="cb2-50"><a href="#cb2-50"></a>                                arrowstyle<span class="op">=</span><span class="st">"simple"</span>,)</span>
+<span id="cb2-51"><a href="#cb2-51"></a>               )</span>
+<span id="cb2-52"><a href="#cb2-52"></a>    ax.v0text <span class="op">=</span> ax.text(vx<span class="op">*</span><span class="fl">0.6</span>, vy<span class="op">*</span><span class="fl">0.6</span>, <span class="vs">r"$\vec</span><span class="sc">{v}</span><span class="vs">$"</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb2-53"><a href="#cb2-53"></a></span>
+<span id="cb2-54"><a href="#cb2-54"></a>plot_right(ax1, alpha0, v0)</span>
+<span id="cb2-55"><a href="#cb2-55"></a>plot_left(ax0, alpha0, v0)</span>
+<span id="cb2-56"><a href="#cb2-56"></a></span>
+<span id="cb2-57"><a href="#cb2-57"></a>ax0.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="op">-</span><span class="dv">2</span>, <span class="dv">12</span>],</span>
+<span id="cb2-58"><a href="#cb2-58"></a>        ylim<span class="op">=</span>[<span class="op">-</span><span class="dv">2</span>, <span class="dv">12</span>],</span>
+<span id="cb2-59"><a href="#cb2-59"></a>        xticks<span class="op">=</span>np.arange(<span class="dv">0</span>,<span class="dv">11</span>,<span class="dv">2</span>),</span>
+<span id="cb2-60"><a href="#cb2-60"></a>        yticks<span class="op">=</span>[],</span>
+<span id="cb2-61"><a href="#cb2-61"></a>        xlabel<span class="op">=</span><span class="st">"x (m)"</span></span>
+<span id="cb2-62"><a href="#cb2-62"></a>       )</span>
+<span id="cb2-63"><a href="#cb2-63"></a></span>
+<span id="cb2-64"><a href="#cb2-64"></a>ax1.<span class="bu">set</span>(xlim<span class="op">=</span>[<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">2</span>],</span>
+<span id="cb2-65"><a href="#cb2-65"></a>        ylim<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">11</span>],</span>
+<span id="cb2-66"><a href="#cb2-66"></a>        xticks<span class="op">=</span>[<span class="dv">0</span>, pi<span class="op">/</span><span class="dv">4</span>, pi<span class="op">/</span><span class="dv">2</span>],</span>
+<span id="cb2-67"><a href="#cb2-67"></a>        xticklabels<span class="op">=</span>[<span class="st">'0'</span>, <span class="vs">r'$\frac{\pi}</span><span class="sc">{4}</span><span class="vs">$'</span>, <span class="vs">r'$\frac{\pi}</span><span class="sc">{2}</span><span class="vs">$'</span>],</span>
+<span id="cb2-68"><a href="#cb2-68"></a>        xlabel<span class="op">=</span><span class="vs">r"angle, $\alpha$"</span>,</span>
+<span id="cb2-69"><a href="#cb2-69"></a>        ylabel<span class="op">=</span><span class="st">"horizontal range, L (m)"</span></span>
+<span id="cb2-70"><a href="#cb2-70"></a>       )</span>
+<span id="cb2-71"><a href="#cb2-71"></a>ax1.yaxis.set_label_position(<span class="st">"right"</span>)</span>
+<span id="cb2-72"><a href="#cb2-72"></a>ax1.yaxis.tick_right()</span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a>ax1.text(<span class="dv">0</span>, <span class="dv">10</span>, <span class="vs">r"$ L=\frac{v_0^2 \sin(2\alpha)}</span><span class="sc">{g}</span><span class="vs">$"</span>)</span>
+<span id="cb2-75"><a href="#cb2-75"></a></span>
+<span id="cb2-76"><a href="#cb2-76"></a><span class="at">@widgets.interact</span>(alpha<span class="op">=</span>(<span class="dv">0</span>, <span class="fl">1.57</span>, <span class="fl">0.01</span>), v0<span class="op">=</span>(<span class="fl">0.1</span>, <span class="fl">10.0</span><span class="op">-</span><span class="fl">0.1</span>, <span class="fl">0.1</span>))</span>
+<span id="cb2-77"><a href="#cb2-77"></a><span class="kw">def</span> update(alpha <span class="op">=</span> pi<span class="op">*</span><span class="fl">0.1</span>, v0 <span class="op">=</span> <span class="dv">10</span>):</span>
+<span id="cb2-78"><a href="#cb2-78"></a>    <span class="co">"""Remove old lines from plot and plot new one"""</span></span>
+<span id="cb2-79"><a href="#cb2-79"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax0.lines]</span>
+<span id="cb2-80"><a href="#cb2-80"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax0.lines]</span>
+<span id="cb2-81"><a href="#cb2-81"></a>    ax0.ann.remove()</span>
+<span id="cb2-82"><a href="#cb2-82"></a>    ax0.v0text.remove()</span>
+<span id="cb2-83"><a href="#cb2-83"></a>    plot_left(ax0, alpha, v0)</span>
+<span id="cb2-84"><a href="#cb2-84"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
+<span id="cb2-85"><a href="#cb2-85"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
+<span id="cb2-86"><a href="#cb2-86"></a>    [l.remove() <span class="cf">for</span> l <span class="kw">in</span> ax1.lines]</span>
+<span id="cb2-87"><a href="#cb2-87"></a>    plot_right(ax1, alpha, v0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"acb83fee3a7749b88c9c3bdefff1d56e","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -318,18 +318,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -361,7 +350,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -369,7 +380,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

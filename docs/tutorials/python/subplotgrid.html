@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - Fancy subplot grid</title>
+<title>Fancy subplot grid – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -178,152 +178,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-code" class="level2">
 <h2 class="anchored" data-anchor-id="the-code">The code</h2>
 <div id="cell-3" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> FuncFormatter</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> FuncFormatter</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-7"><a href="#cb1-7"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-4" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># figsize accepts only inches.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">3</span>, <span class="dv">2</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>,<span class="fl">0.5</span>], height_ratios<span class="op">=</span>[<span class="dv">1</span>,<span class="fl">0.7</span>,<span class="fl">0.3</span>])</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gs.update(left<span class="op">=</span><span class="fl">0.16</span>, right<span class="op">=</span><span class="fl">0.86</span>,top<span class="op">=</span><span class="fl">0.88</span>, bottom<span class="op">=</span><span class="fl">0.13</span>, hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># subplot a</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>ax0 <span class="op">=</span> plt.subplot(gs[<span class="dv">0</span>, :])</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>heaviside <span class="op">=</span> <span class="kw">lambda</span> x: <span class="fl">0.5</span> <span class="op">*</span> (np.sign(x) <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="fl">10.01</span>, <span class="fl">0.01</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax0.plot(x, heaviside(x <span class="op">-</span> <span class="dv">2</span>), color<span class="op">=</span><span class="st">'purple'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ax0.text(<span class="fl">2.5</span>, <span class="fl">1.1</span>, <span class="vs">r"$\longleftarrow$ heaviside"</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># y ticks as a percentage</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax0.set_yticks(np.arange(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">2.0</span>, <span class="fl">0.5</span>))</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> to_percent(y, position):</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ignore the passed in position. This has the effect of scaling the default</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># tick locations.</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="st">"</span><span class="sc">{:+.0f}</span><span class="st">"</span>.<span class="bu">format</span>(y <span class="op">*</span> <span class="dv">100</span>)  <span class="co"># str(100 * y)</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The percent symbol needs escaping in latex</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> matplotlib.rcParams[<span class="st">'text.usetex'</span>] <span class="kw">is</span> <span class="va">True</span>:</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="vs">r'$\%$'</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">'%'</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the formatter using the function to_percent. This multiplies all the</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># default labels by 100, making them all percentages</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>formatter <span class="op">=</span> FuncFormatter(to_percent)</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the formatter</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>ax0.yaxis.set_major_formatter(formatter)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>ax0.set_ylabel(<span class="st">"heaviside, percentage"</span>)</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># x ticks on top</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>ax0.axis([x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>])</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>ax0.xaxis.tick_top()</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>ax0.set_xlabel(<span class="vs">r"x labels on top"</span>)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>ax0.xaxis.set_label_position(<span class="st">"top"</span>)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="co"># transAxes makes position relative to axes</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>ax0.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"a"</span>, transform<span class="op">=</span>ax0.transAxes,</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>         horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>         fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co"># copy window with same x axis (y will be different)</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>ax0b <span class="op">=</span> ax0.twinx()</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>ax0b.plot(x, np.tanh(x <span class="op">-</span> <span class="dv">5</span>), color<span class="op">=</span><span class="st">"green"</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>ax0b.axis([x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="op">-</span><span class="fl">1.1</span>, <span class="fl">2.5</span>])</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>ax0b.text(<span class="fl">5.5</span>, <span class="dv">0</span>, <span class="vs">r"tanh $\longrightarrow$"</span>)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>ax0b.set_ylabel(<span class="vs">r'tanh, offset label'</span>)</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>ax0b.yaxis.set_label_coords(<span class="fl">1.1</span>, <span class="fl">0.70</span>)</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co"># subplot b</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>ax10 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.01</span>)</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.exp(<span class="op">-</span>x)</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>ax10.plot(x, y, color<span class="op">=</span><span class="st">"orange"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>ax10.set_yscale(<span class="st">'log'</span>, base<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>ax10.set_yticks(<span class="fl">2.0</span> <span class="op">**</span> np.arange(<span class="op">-</span><span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">3</span>))</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>ax10.text(<span class="fl">1.0</span>, <span class="dv">1</span>, <span class="vs">r"$y=e^{-x}$"</span>)</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>ax10.set_xticks(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>))</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>ax10.set_xticklabels(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>), y<span class="op">=</span><span class="fl">0.15</span>)</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>ax10.get_yaxis().set_tick_params(direction<span class="op">=</span><span class="st">'out'</span>)</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>ax10.set_ylabel(<span class="st">"log scale base 2"</span>, labelpad<span class="op">=</span><span class="dv">15</span>)</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>ax10.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"b"</span>, transform<span class="op">=</span>ax10.transAxes,</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="co"># subplot c</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>ax11 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="fl">1.0</span>, np.e <span class="op">**</span> <span class="dv">4</span>, <span class="fl">0.01</span>)</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">**</span> (<span class="op">-</span><span class="fl">0.8</span>)</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>ax11.plot(x, y, color<span class="op">=</span><span class="st">"cyan"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>ax11.text(<span class="dv">2</span>, <span class="dv">1</span>, <span class="vs">r"$y=x^{-0.8}$"</span>)</span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>ax11.loglog(x, y)</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>ax11.set_xscale(<span class="st">"log"</span>, base<span class="op">=</span>np.e)</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>ax11.set_yscale(<span class="st">"log"</span>, base<span class="op">=</span>np.e)</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>xt <span class="op">=</span> np.exp(np.arange(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">1</span>))</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>yt <span class="op">=</span> np.pi <span class="op">**</span> (np.arange(<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>ax11.set_xticks(xt)</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>ax11.set_xticklabels(xt, y<span class="op">=</span><span class="fl">0.15</span>)</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>ax11.set_yticks(yt)</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ticks_e(y, pos):   <span class="co"># base e</span></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">r'$e^</span><span class="sc">{:.0f}</span><span class="vs">$'</span>.<span class="bu">format</span>(np.log(y))</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ticks_pi(y, pos):  <span class="co"># base pi, why not?</span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">r'$\pi^{%+.0f}$'</span><span class="op">%</span>(np.log(y)<span class="op">/</span>np.log(np.pi))</span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>ax11.xaxis.set_major_formatter(FuncFormatter(ticks_e))</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>ax11.yaxis.set_major_formatter(FuncFormatter(ticks_pi))</span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>ax11.yaxis.tick_right()</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>ax11.yaxis.set_label_position(<span class="st">"right"</span>)</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>ax11.set_ylabel(<span class="st">"right side"</span>, labelpad<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>ax11.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"c"</span>, transform<span class="op">=</span>ax11.transAxes,</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="co"># subplot d</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>ax20 <span class="op">=</span> plt.subplot(gs[<span class="dv">2</span>, <span class="dv">0</span>])</span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>ax20.axis([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>ax20.set_xticks(np.arange(<span class="dv">0</span>, <span class="fl">1.1</span>, <span class="fl">0.2</span>))</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>ax20.set_xticklabels([<span class="st">"January"</span>, <span class="st">"February"</span>,</span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"March"</span>, <span class="st">"April"</span>,</span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"May"</span>, <span class="st">"June"</span>],</span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>                      rotation<span class="op">=</span><span class="dv">30</span>, horizontalalignment<span class="op">=</span><span class="st">"right"</span>)</span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>ax20.set_yticks([])</span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>ax20.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"d"</span>, transform<span class="op">=</span>ax20.transAxes,</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="co"># subplot e</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="co">###########</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>ax21 <span class="op">=</span> plt.subplot(gs[<span class="dv">2</span>, <span class="dv">1</span>])</span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>ax21.set_xticks([])</span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>ax21.set_yticks([])</span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>ax21.axis([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>ax21.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"e"</span>, transform<span class="op">=</span>ax21.transAxes,</span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"subplot-grid.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># figsize accepts only inches.</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>fig <span class="op">=</span> plt.figure(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb2-3"><a href="#cb2-3"></a>gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">3</span>, <span class="dv">2</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>,<span class="fl">0.5</span>], height_ratios<span class="op">=</span>[<span class="dv">1</span>,<span class="fl">0.7</span>,<span class="fl">0.3</span>])</span>
+<span id="cb2-4"><a href="#cb2-4"></a>gs.update(left<span class="op">=</span><span class="fl">0.16</span>, right<span class="op">=</span><span class="fl">0.86</span>,top<span class="op">=</span><span class="fl">0.88</span>, bottom<span class="op">=</span><span class="fl">0.13</span>, hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">###########</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># subplot a</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">###########</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>ax0 <span class="op">=</span> plt.subplot(gs[<span class="dv">0</span>, :])</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>heaviside <span class="op">=</span> <span class="kw">lambda</span> x: <span class="fl">0.5</span> <span class="op">*</span> (np.sign(x) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="fl">10.01</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>ax0.plot(x, heaviside(x <span class="op">-</span> <span class="dv">2</span>), color<span class="op">=</span><span class="st">'purple'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a>ax0.text(<span class="fl">2.5</span>, <span class="fl">1.1</span>, <span class="vs">r"$\longleftarrow$ heaviside"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="co"># y ticks as a percentage</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>ax0.set_yticks(np.arange(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">2.0</span>, <span class="fl">0.5</span>))</span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="kw">def</span> to_percent(y, position):</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="co"># Ignore the passed in position. This has the effect of scaling the default</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="co"># tick locations.</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>    s <span class="op">=</span> <span class="st">"</span><span class="sc">{:+.0f}</span><span class="st">"</span>.<span class="bu">format</span>(y <span class="op">*</span> <span class="dv">100</span>)  <span class="co"># str(100 * y)</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="co"># The percent symbol needs escaping in latex</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>    <span class="cf">if</span> matplotlib.rcParams[<span class="st">'text.usetex'</span>] <span class="kw">is</span> <span class="va">True</span>:</span>
+<span id="cb2-24"><a href="#cb2-24"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="vs">r'$\%$'</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-26"><a href="#cb2-26"></a>        <span class="cf">return</span> s <span class="op">+</span> <span class="st">'%'</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="co"># Create the formatter using the function to_percent. This multiplies all the</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a><span class="co"># default labels by 100, making them all percentages</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>formatter <span class="op">=</span> FuncFormatter(to_percent)</span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="co"># Set the formatter</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a>ax0.yaxis.set_major_formatter(formatter)</span>
+<span id="cb2-32"><a href="#cb2-32"></a>ax0.set_ylabel(<span class="st">"heaviside, percentage"</span>)</span>
+<span id="cb2-33"><a href="#cb2-33"></a></span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="co"># x ticks on top</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a>ax0.axis([x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>])</span>
+<span id="cb2-36"><a href="#cb2-36"></a>ax0.xaxis.tick_top()</span>
+<span id="cb2-37"><a href="#cb2-37"></a>ax0.set_xlabel(<span class="vs">r"x labels on top"</span>)</span>
+<span id="cb2-38"><a href="#cb2-38"></a>ax0.xaxis.set_label_position(<span class="st">"top"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39"></a></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="co"># transAxes makes position relative to axes</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a>ax0.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"a"</span>, transform<span class="op">=</span>ax0.transAxes,</span>
+<span id="cb2-42"><a href="#cb2-42"></a>         horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
+<span id="cb2-43"><a href="#cb2-43"></a>         fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-44"><a href="#cb2-44"></a></span>
+<span id="cb2-45"><a href="#cb2-45"></a><span class="co"># copy window with same x axis (y will be different)</span></span>
+<span id="cb2-46"><a href="#cb2-46"></a>ax0b <span class="op">=</span> ax0.twinx()</span>
+<span id="cb2-47"><a href="#cb2-47"></a>ax0b.plot(x, np.tanh(x <span class="op">-</span> <span class="dv">5</span>), color<span class="op">=</span><span class="st">"green"</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-48"><a href="#cb2-48"></a>ax0b.axis([x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="op">-</span><span class="fl">1.1</span>, <span class="fl">2.5</span>])</span>
+<span id="cb2-49"><a href="#cb2-49"></a>ax0b.text(<span class="fl">5.5</span>, <span class="dv">0</span>, <span class="vs">r"tanh $\longrightarrow$"</span>)</span>
+<span id="cb2-50"><a href="#cb2-50"></a>ax0b.set_ylabel(<span class="vs">r'tanh, offset label'</span>)</span>
+<span id="cb2-51"><a href="#cb2-51"></a>ax0b.yaxis.set_label_coords(<span class="fl">1.1</span>, <span class="fl">0.70</span>)</span>
+<span id="cb2-52"><a href="#cb2-52"></a></span>
+<span id="cb2-53"><a href="#cb2-53"></a><span class="co">###########</span></span>
+<span id="cb2-54"><a href="#cb2-54"></a><span class="co"># subplot b</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="co">###########</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a>ax10 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb2-57"><a href="#cb2-57"></a></span>
+<span id="cb2-58"><a href="#cb2-58"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-59"><a href="#cb2-59"></a>y <span class="op">=</span> np.exp(<span class="op">-</span>x)</span>
+<span id="cb2-60"><a href="#cb2-60"></a>ax10.plot(x, y, color<span class="op">=</span><span class="st">"orange"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-61"><a href="#cb2-61"></a>ax10.set_yscale(<span class="st">'log'</span>, base<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-62"><a href="#cb2-62"></a>ax10.set_yticks(<span class="fl">2.0</span> <span class="op">**</span> np.arange(<span class="op">-</span><span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">3</span>))</span>
+<span id="cb2-63"><a href="#cb2-63"></a>ax10.text(<span class="fl">1.0</span>, <span class="dv">1</span>, <span class="vs">r"$y=e^{-x}$"</span>)</span>
+<span id="cb2-64"><a href="#cb2-64"></a>ax10.set_xticks(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>))</span>
+<span id="cb2-65"><a href="#cb2-65"></a>ax10.set_xticklabels(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">2</span>), y<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb2-66"><a href="#cb2-66"></a>ax10.get_yaxis().set_tick_params(direction<span class="op">=</span><span class="st">'out'</span>)</span>
+<span id="cb2-67"><a href="#cb2-67"></a>ax10.set_ylabel(<span class="st">"log scale base 2"</span>, labelpad<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb2-68"><a href="#cb2-68"></a>ax10.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"b"</span>, transform<span class="op">=</span>ax10.transAxes,</span>
+<span id="cb2-69"><a href="#cb2-69"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
+<span id="cb2-70"><a href="#cb2-70"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-71"><a href="#cb2-71"></a></span>
+<span id="cb2-72"><a href="#cb2-72"></a><span class="co">###########</span></span>
+<span id="cb2-73"><a href="#cb2-73"></a><span class="co"># subplot c</span></span>
+<span id="cb2-74"><a href="#cb2-74"></a><span class="co">###########</span></span>
+<span id="cb2-75"><a href="#cb2-75"></a>ax11 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb2-76"><a href="#cb2-76"></a></span>
+<span id="cb2-77"><a href="#cb2-77"></a>x <span class="op">=</span> np.arange(<span class="fl">1.0</span>, np.e <span class="op">**</span> <span class="dv">4</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-78"><a href="#cb2-78"></a>y <span class="op">=</span> x <span class="op">**</span> (<span class="op">-</span><span class="fl">0.8</span>)</span>
+<span id="cb2-79"><a href="#cb2-79"></a>ax11.plot(x, y, color<span class="op">=</span><span class="st">"cyan"</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb2-80"><a href="#cb2-80"></a>ax11.text(<span class="dv">2</span>, <span class="dv">1</span>, <span class="vs">r"$y=x^{-0.8}$"</span>)</span>
+<span id="cb2-81"><a href="#cb2-81"></a>ax11.loglog(x, y)</span>
+<span id="cb2-82"><a href="#cb2-82"></a>ax11.set_xscale(<span class="st">"log"</span>, base<span class="op">=</span>np.e)</span>
+<span id="cb2-83"><a href="#cb2-83"></a>ax11.set_yscale(<span class="st">"log"</span>, base<span class="op">=</span>np.e)</span>
+<span id="cb2-84"><a href="#cb2-84"></a>xt <span class="op">=</span> np.exp(np.arange(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">1</span>))</span>
+<span id="cb2-85"><a href="#cb2-85"></a>yt <span class="op">=</span> np.pi <span class="op">**</span> (np.arange(<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb2-86"><a href="#cb2-86"></a>ax11.set_xticks(xt)</span>
+<span id="cb2-87"><a href="#cb2-87"></a>ax11.set_xticklabels(xt, y<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb2-88"><a href="#cb2-88"></a>ax11.set_yticks(yt)</span>
+<span id="cb2-89"><a href="#cb2-89"></a></span>
+<span id="cb2-90"><a href="#cb2-90"></a></span>
+<span id="cb2-91"><a href="#cb2-91"></a><span class="kw">def</span> ticks_e(y, pos):   <span class="co"># base e</span></span>
+<span id="cb2-92"><a href="#cb2-92"></a>    <span class="cf">return</span> <span class="vs">r'$e^</span><span class="sc">{:.0f}</span><span class="vs">$'</span>.<span class="bu">format</span>(np.log(y))</span>
+<span id="cb2-93"><a href="#cb2-93"></a></span>
+<span id="cb2-94"><a href="#cb2-94"></a></span>
+<span id="cb2-95"><a href="#cb2-95"></a><span class="kw">def</span> ticks_pi(y, pos):  <span class="co"># base pi, why not?</span></span>
+<span id="cb2-96"><a href="#cb2-96"></a>    <span class="cf">return</span> <span class="vs">r'$\pi^{%+.0f}$'</span><span class="op">%</span>(np.log(y)<span class="op">/</span>np.log(np.pi))</span>
+<span id="cb2-97"><a href="#cb2-97"></a></span>
+<span id="cb2-98"><a href="#cb2-98"></a></span>
+<span id="cb2-99"><a href="#cb2-99"></a>ax11.xaxis.set_major_formatter(FuncFormatter(ticks_e))</span>
+<span id="cb2-100"><a href="#cb2-100"></a>ax11.yaxis.set_major_formatter(FuncFormatter(ticks_pi))</span>
+<span id="cb2-101"><a href="#cb2-101"></a>ax11.yaxis.tick_right()</span>
+<span id="cb2-102"><a href="#cb2-102"></a>ax11.yaxis.set_label_position(<span class="st">"right"</span>)</span>
+<span id="cb2-103"><a href="#cb2-103"></a>ax11.set_ylabel(<span class="st">"right side"</span>, labelpad<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-104"><a href="#cb2-104"></a>ax11.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"c"</span>, transform<span class="op">=</span>ax11.transAxes,</span>
+<span id="cb2-105"><a href="#cb2-105"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
+<span id="cb2-106"><a href="#cb2-106"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-107"><a href="#cb2-107"></a></span>
+<span id="cb2-108"><a href="#cb2-108"></a><span class="co">###########</span></span>
+<span id="cb2-109"><a href="#cb2-109"></a><span class="co"># subplot d</span></span>
+<span id="cb2-110"><a href="#cb2-110"></a><span class="co">###########</span></span>
+<span id="cb2-111"><a href="#cb2-111"></a>ax20 <span class="op">=</span> plt.subplot(gs[<span class="dv">2</span>, <span class="dv">0</span>])</span>
+<span id="cb2-112"><a href="#cb2-112"></a></span>
+<span id="cb2-113"><a href="#cb2-113"></a>ax20.axis([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb2-114"><a href="#cb2-114"></a>ax20.set_xticks(np.arange(<span class="dv">0</span>, <span class="fl">1.1</span>, <span class="fl">0.2</span>))</span>
+<span id="cb2-115"><a href="#cb2-115"></a>ax20.set_xticklabels([<span class="st">"January"</span>, <span class="st">"February"</span>,</span>
+<span id="cb2-116"><a href="#cb2-116"></a>                      <span class="st">"March"</span>, <span class="st">"April"</span>,</span>
+<span id="cb2-117"><a href="#cb2-117"></a>                      <span class="st">"May"</span>, <span class="st">"June"</span>],</span>
+<span id="cb2-118"><a href="#cb2-118"></a>                      rotation<span class="op">=</span><span class="dv">30</span>, horizontalalignment<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb2-119"><a href="#cb2-119"></a>ax20.set_yticks([])</span>
+<span id="cb2-120"><a href="#cb2-120"></a>ax20.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"d"</span>, transform<span class="op">=</span>ax20.transAxes,</span>
+<span id="cb2-121"><a href="#cb2-121"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
+<span id="cb2-122"><a href="#cb2-122"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-123"><a href="#cb2-123"></a></span>
+<span id="cb2-124"><a href="#cb2-124"></a><span class="co">###########</span></span>
+<span id="cb2-125"><a href="#cb2-125"></a><span class="co"># subplot e</span></span>
+<span id="cb2-126"><a href="#cb2-126"></a><span class="co">###########</span></span>
+<span id="cb2-127"><a href="#cb2-127"></a>ax21 <span class="op">=</span> plt.subplot(gs[<span class="dv">2</span>, <span class="dv">1</span>])</span>
+<span id="cb2-128"><a href="#cb2-128"></a></span>
+<span id="cb2-129"><a href="#cb2-129"></a>ax21.set_xticks([])</span>
+<span id="cb2-130"><a href="#cb2-130"></a>ax21.set_yticks([])</span>
+<span id="cb2-131"><a href="#cb2-131"></a>ax21.axis([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb2-132"><a href="#cb2-132"></a>ax21.text(<span class="fl">0.97</span>, <span class="fl">0.97</span>, <span class="vs">r"e"</span>, transform<span class="op">=</span>ax21.transAxes,</span>
+<span id="cb2-133"><a href="#cb2-133"></a>          horizontalalignment<span class="op">=</span><span class="st">'right'</span>, verticalalignment<span class="op">=</span><span class="st">'top'</span>,</span>
+<span id="cb2-134"><a href="#cb2-134"></a>          fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb2-135"><a href="#cb2-135"></a></span>
+<span id="cb2-136"><a href="#cb2-136"></a>fig.savefig(<span class="st">"subplot-grid.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb2-137"><a href="#cb2-137"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 <figure class="figure">
@@ -379,18 +379,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -422,7 +411,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -430,7 +441,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

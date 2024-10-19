@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - Fun with histograms</title>
+<title>Fun with histograms – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -178,133 +178,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-code" class="level2">
 <h2 class="anchored" data-anchor-id="the-code">The code</h2>
 <div id="cell-4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.special</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> scipy.special</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-7"><a href="#cb1-7"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-5" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))  <span class="co"># figsize accepts only inches.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">##################################</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Panels on the left of the figure</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">##################################</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">2</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="fl">0.2</span>], height_ratios<span class="op">=</span>[<span class="fl">0.2</span>, <span class="dv">1</span>])</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>gs.update(left<span class="op">=</span><span class="fl">0.10</span>, right<span class="op">=</span><span class="fl">0.50</span>, top<span class="op">=</span><span class="fl">0.95</span>, bottom<span class="op">=</span><span class="fl">0.13</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># standard deviation (spread)</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="fl">0.0</span>  <span class="co"># mean (center) of the distribution</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(loc<span class="op">=</span>mu, scale<span class="op">=</span>sigma, size<span class="op">=</span><span class="dv">5000</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">2.0</span>  <span class="co"># shape</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># scale</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.gamma(shape<span class="op">=</span>k, scale<span class="op">=</span>theta, size<span class="op">=</span><span class="dv">5000</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom left panel</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax10 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>counts, xedges, yedges, image <span class="op">=</span> ax10.hist2d(x, y, bins<span class="op">=</span><span class="dv">40</span>, cmap<span class="op">=</span><span class="st">"YlOrRd"</span>,</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                                            density<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>dx <span class="op">=</span> xedges[<span class="dv">1</span>] <span class="op">-</span> xedges[<span class="dv">0</span>]</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>dy <span class="op">=</span> yedges[<span class="dv">1</span>] <span class="op">-</span> yedges[<span class="dv">0</span>]</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>xvec <span class="op">=</span> xedges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dx <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>yvec <span class="op">=</span> yedges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax10.set_xlabel(<span class="vs">r"$x$"</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>ax10.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">"horizontal"</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax10.text(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>, <span class="vs">r"$p(x,y)$"</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>ax10.set_xlim([xedges.<span class="bu">min</span>(), xedges.<span class="bu">max</span>()])</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>ax10.set_ylim([yedges.<span class="bu">min</span>(), yedges.<span class="bu">max</span>()])</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># top left panel</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>ax00 <span class="op">=</span> plt.subplot(gs[<span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>gaussian <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> np.pi <span class="op">*</span> sigma <span class="op">**</span> <span class="dv">2</span>)) <span class="op">*</span> <span class="op">\</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    np.exp(<span class="op">-</span>((xvec <span class="op">-</span> mu) <span class="op">**</span> <span class="dv">2</span>) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> sigma <span class="op">**</span> <span class="dv">2</span>))</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>xdist <span class="op">=</span> counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="op">*</span> dy</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>ax00.bar(xvec, xdist, width<span class="op">=</span>dx, fill<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>         edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>ax00.plot(xvec, gaussian, color<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>ax00.set_xlim([xedges.<span class="bu">min</span>(), xedges.<span class="bu">max</span>()])</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>ax00.set_xticklabels([])</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>ax00.set_yticks([])</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>ax00.set_xlabel(<span class="st">"Normal distribution"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>ax00.xaxis.set_label_position(<span class="st">"top"</span>)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>ax00.set_ylabel(<span class="vs">r"$p(x)$"</span>, rotation<span class="op">=</span><span class="st">"horizontal"</span>, labelpad<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co"># bottom right panel</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>ax11 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>gamma_dist <span class="op">=</span> yvec <span class="op">**</span> (k <span class="op">-</span> <span class="fl">1.0</span>) <span class="op">*</span> np.exp(<span class="op">-</span>yvec <span class="op">/</span> theta) <span class="op">/</span> <span class="op">\</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    (theta <span class="op">**</span> k <span class="op">*</span> scipy.special.gamma(k))</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>ydist <span class="op">=</span> counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>) <span class="op">*</span> dx</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>ax11.barh(yvec, ydist, height<span class="op">=</span>dy, fill<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>          edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>ax11.plot(gamma_dist, yvec, color<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>ax11.set_ylim([yedges.<span class="bu">min</span>(), yedges.<span class="bu">max</span>()])</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>ax11.set_xticks([])</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>ax11.set_yticklabels([])</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>ax11.set_ylabel(<span class="st">"Gamma distribution"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>ax11.yaxis.set_label_position(<span class="st">"right"</span>)</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>ax11.set_xlabel(<span class="vs">r"$p(y)$"</span>)</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>ax11.xaxis.set_label_position(<span class="st">"top"</span>)</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co">###################################</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Panels on the right of the figure</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="co">###################################</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>gs2 <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">1</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>], height_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">1</span>])</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>gs2.update(left<span class="op">=</span><span class="fl">0.60</span>, right<span class="op">=</span><span class="fl">0.98</span>, top<span class="op">=</span><span class="fl">0.95</span>, bottom<span class="op">=</span><span class="fl">0.13</span>,</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>           hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.gamma(shape<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>bx10 <span class="op">=</span> plt.subplot(gs2[<span class="dv">1</span>, <span class="dv">0</span>])</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>bx00 <span class="op">=</span> plt.subplot(gs2[<span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.random.gamma(shape<span class="op">=</span><span class="dv">5</span>, size<span class="op">=</span>N)</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>my_bins <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="dv">15</span>,<span class="fl">1.5</span>)</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>n1, bins1, patches1 <span class="op">=</span> bx00.hist(a, bins<span class="op">=</span>my_bins, density<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>                                histtype<span class="op">=</span><span class="st">'stepfilled'</span>, alpha<span class="op">=</span><span class="fl">0.2</span>, hatch<span class="op">=</span><span class="st">'/'</span>)</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>bx00.set_xlim([<span class="dv">0</span>, <span class="dv">15</span>])</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>bx00.set_ylim([<span class="dv">0</span>, <span class="fl">0.28</span>])</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>bx00.set_xticklabels([])</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>bx00.set_xlabel(<span class="st">"plt.hist"</span>, fontfamily<span class="op">=</span><span class="st">"monospace"</span>)</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>bx00.xaxis.set_label_position(<span class="st">"top"</span>)</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="co"># the following way is equivalent to plt.hist, but it gives</span></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="co"># the user more flexibility when plotting and analysing the results</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>n2, bins2 <span class="op">=</span> np.histogram(a, bins<span class="op">=</span>my_bins, density<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>wid <span class="op">=</span> bins2[<span class="dv">1</span>] <span class="op">-</span> bins2[<span class="dv">0</span>]</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>red, <span class="op">=</span> bx10.plot(bins2[:<span class="op">-</span><span class="dv">1</span>]<span class="op">+</span>wid<span class="op">/</span><span class="dv">2</span>, n2, marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>bx10.bar(bins2[:<span class="op">-</span><span class="dv">1</span>], n2, width<span class="op">=</span>wid, fill<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>         edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">3</span>, alpha<span class="op">=</span><span class="fl">0.8</span>, align<span class="op">=</span><span class="st">"edge"</span>)</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>bx10.set_xlim([<span class="dv">0</span>, <span class="dv">15</span>])</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>bx10.set_ylim([<span class="dv">0</span>, <span class="fl">0.28</span>])</span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>bx10.set_xlabel(<span class="vs">r"np.histogram;  plt.bar"</span>, fontfamily<span class="op">=</span><span class="st">"monospace"</span>)</span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="co"># best fit</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>xdata <span class="op">=</span> my_bins[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> wid<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>ydata <span class="op">=</span> n2</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x, p1, p2):</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> (p1 <span class="op">-</span> <span class="fl">1.0</span>) <span class="op">*</span> np.exp(<span class="op">-</span>x <span class="op">/</span> p2) <span class="op">/</span> (p2 <span class="op">**</span> p1 <span class="op">*</span> scipy.special.gamma(p1))</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>popt, pcov <span class="op">=</span> curve_fit(func, xdata, ydata, p0<span class="op">=</span>(<span class="fl">1.5</span>, <span class="fl">1.5</span>))  <span class="co"># p0 = initial guess</span></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>p1, p2 <span class="op">=</span> popt</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>SStot <span class="op">=</span> ((ydata <span class="op">-</span> ydata.mean()) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>SSres <span class="op">=</span> ((ydata <span class="op">-</span> func(xdata, p1, p2)) <span class="op">**</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>Rsquared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> SSres <span class="op">/</span> SStot</span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">15</span>,<span class="dv">101</span>)</span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>bx00.plot(h, func(h, p1, p2), color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="co"># dummy plot, just so we can have a legend on the bottom panel</span></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>blue, <span class="op">=</span> ax10.plot([<span class="dv">100</span>],[<span class="dv">100</span>], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Best fit"</span>)</span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>bx10.legend([red,blue],[<span class="vs">r'Data'</span>,<span class="vs">r'Best fit, $r^2=$</span><span class="sc">{:.2f}</span><span class="vs">'</span>.<span class="bu">format</span>(Rsquared)],</span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>            loc<span class="op">=</span><span class="st">'upper right'</span>, frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>,</span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>            markerfirst<span class="op">=</span><span class="va">False</span>, numpoints<span class="op">=</span><span class="dv">3</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"histograms.png"</span>,dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>fig <span class="op">=</span> plt.figure(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))  <span class="co"># figsize accepts only inches.</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co">##################################</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Panels on the left of the figure</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">##################################</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>gs <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">2</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="fl">0.2</span>], height_ratios<span class="op">=</span>[<span class="fl">0.2</span>, <span class="dv">1</span>])</span>
+<span id="cb2-8"><a href="#cb2-8"></a>gs.update(left<span class="op">=</span><span class="fl">0.10</span>, right<span class="op">=</span><span class="fl">0.50</span>, top<span class="op">=</span><span class="fl">0.95</span>, bottom<span class="op">=</span><span class="fl">0.13</span>,</span>
+<span id="cb2-9"><a href="#cb2-9"></a>          hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>sigma <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># standard deviation (spread)</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>mu <span class="op">=</span> <span class="fl">0.0</span>  <span class="co"># mean (center) of the distribution</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>x <span class="op">=</span> np.random.normal(loc<span class="op">=</span>mu, scale<span class="op">=</span>sigma, size<span class="op">=</span><span class="dv">5000</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a>k <span class="op">=</span> <span class="fl">2.0</span>  <span class="co"># shape</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>theta <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># scale</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>y <span class="op">=</span> np.random.gamma(shape<span class="op">=</span>k, scale<span class="op">=</span>theta, size<span class="op">=</span><span class="dv">5000</span>)</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># bottom left panel</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>ax10 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb2-20"><a href="#cb2-20"></a>counts, xedges, yedges, image <span class="op">=</span> ax10.hist2d(x, y, bins<span class="op">=</span><span class="dv">40</span>, cmap<span class="op">=</span><span class="st">"YlOrRd"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21"></a>                                            density<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-22"><a href="#cb2-22"></a>dx <span class="op">=</span> xedges[<span class="dv">1</span>] <span class="op">-</span> xedges[<span class="dv">0</span>]</span>
+<span id="cb2-23"><a href="#cb2-23"></a>dy <span class="op">=</span> yedges[<span class="dv">1</span>] <span class="op">-</span> yedges[<span class="dv">0</span>]</span>
+<span id="cb2-24"><a href="#cb2-24"></a>xvec <span class="op">=</span> xedges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dx <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>yvec <span class="op">=</span> yedges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> dy <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>ax10.set_xlabel(<span class="vs">r"$x$"</span>)</span>
+<span id="cb2-27"><a href="#cb2-27"></a>ax10.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">"horizontal"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28"></a>ax10.text(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>, <span class="vs">r"$p(x,y)$"</span>)</span>
+<span id="cb2-29"><a href="#cb2-29"></a>ax10.set_xlim([xedges.<span class="bu">min</span>(), xedges.<span class="bu">max</span>()])</span>
+<span id="cb2-30"><a href="#cb2-30"></a>ax10.set_ylim([yedges.<span class="bu">min</span>(), yedges.<span class="bu">max</span>()])</span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># top left panel</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>ax00 <span class="op">=</span> plt.subplot(gs[<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb2-34"><a href="#cb2-34"></a>gaussian <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> np.pi <span class="op">*</span> sigma <span class="op">**</span> <span class="dv">2</span>)) <span class="op">*</span> <span class="op">\</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a>    np.exp(<span class="op">-</span>((xvec <span class="op">-</span> mu) <span class="op">**</span> <span class="dv">2</span>) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> sigma <span class="op">**</span> <span class="dv">2</span>))</span>
+<span id="cb2-36"><a href="#cb2-36"></a>xdist <span class="op">=</span> counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="op">*</span> dy</span>
+<span id="cb2-37"><a href="#cb2-37"></a>ax00.bar(xvec, xdist, width<span class="op">=</span>dx, fill<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-38"><a href="#cb2-38"></a>         edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-39"><a href="#cb2-39"></a>ax00.plot(xvec, gaussian, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40"></a>ax00.set_xlim([xedges.<span class="bu">min</span>(), xedges.<span class="bu">max</span>()])</span>
+<span id="cb2-41"><a href="#cb2-41"></a>ax00.set_xticklabels([])</span>
+<span id="cb2-42"><a href="#cb2-42"></a>ax00.set_yticks([])</span>
+<span id="cb2-43"><a href="#cb2-43"></a>ax00.set_xlabel(<span class="st">"Normal distribution"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb2-44"><a href="#cb2-44"></a>ax00.xaxis.set_label_position(<span class="st">"top"</span>)</span>
+<span id="cb2-45"><a href="#cb2-45"></a>ax00.set_ylabel(<span class="vs">r"$p(x)$"</span>, rotation<span class="op">=</span><span class="st">"horizontal"</span>, labelpad<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb2-46"><a href="#cb2-46"></a></span>
+<span id="cb2-47"><a href="#cb2-47"></a><span class="co"># bottom right panel</span></span>
+<span id="cb2-48"><a href="#cb2-48"></a>ax11 <span class="op">=</span> plt.subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb2-49"><a href="#cb2-49"></a>gamma_dist <span class="op">=</span> yvec <span class="op">**</span> (k <span class="op">-</span> <span class="fl">1.0</span>) <span class="op">*</span> np.exp(<span class="op">-</span>yvec <span class="op">/</span> theta) <span class="op">/</span> <span class="op">\</span></span>
+<span id="cb2-50"><a href="#cb2-50"></a>    (theta <span class="op">**</span> k <span class="op">*</span> scipy.special.gamma(k))</span>
+<span id="cb2-51"><a href="#cb2-51"></a>ydist <span class="op">=</span> counts.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>) <span class="op">*</span> dx</span>
+<span id="cb2-52"><a href="#cb2-52"></a>ax11.barh(yvec, ydist, height<span class="op">=</span>dy, fill<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-53"><a href="#cb2-53"></a>          edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-54"><a href="#cb2-54"></a>ax11.plot(gamma_dist, yvec, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-55"><a href="#cb2-55"></a>ax11.set_ylim([yedges.<span class="bu">min</span>(), yedges.<span class="bu">max</span>()])</span>
+<span id="cb2-56"><a href="#cb2-56"></a>ax11.set_xticks([])</span>
+<span id="cb2-57"><a href="#cb2-57"></a>ax11.set_yticklabels([])</span>
+<span id="cb2-58"><a href="#cb2-58"></a>ax11.set_ylabel(<span class="st">"Gamma distribution"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb2-59"><a href="#cb2-59"></a>ax11.yaxis.set_label_position(<span class="st">"right"</span>)</span>
+<span id="cb2-60"><a href="#cb2-60"></a>ax11.set_xlabel(<span class="vs">r"$p(y)$"</span>)</span>
+<span id="cb2-61"><a href="#cb2-61"></a>ax11.xaxis.set_label_position(<span class="st">"top"</span>)</span>
+<span id="cb2-62"><a href="#cb2-62"></a></span>
+<span id="cb2-63"><a href="#cb2-63"></a><span class="co">###################################</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a><span class="co"># Panels on the right of the figure</span></span>
+<span id="cb2-65"><a href="#cb2-65"></a><span class="co">###################################</span></span>
+<span id="cb2-66"><a href="#cb2-66"></a></span>
+<span id="cb2-67"><a href="#cb2-67"></a>gs2 <span class="op">=</span> gridspec.GridSpec(<span class="dv">2</span>, <span class="dv">1</span>, width_ratios<span class="op">=</span>[<span class="dv">1</span>], height_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb2-68"><a href="#cb2-68"></a>gs2.update(left<span class="op">=</span><span class="fl">0.60</span>, right<span class="op">=</span><span class="fl">0.98</span>, top<span class="op">=</span><span class="fl">0.95</span>, bottom<span class="op">=</span><span class="fl">0.13</span>,</span>
+<span id="cb2-69"><a href="#cb2-69"></a>           hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb2-70"><a href="#cb2-70"></a></span>
+<span id="cb2-71"><a href="#cb2-71"></a>x <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb2-72"><a href="#cb2-72"></a>y <span class="op">=</span> np.random.gamma(shape<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a>bx10 <span class="op">=</span> plt.subplot(gs2[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb2-75"><a href="#cb2-75"></a>bx00 <span class="op">=</span> plt.subplot(gs2[<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb2-76"><a href="#cb2-76"></a></span>
+<span id="cb2-77"><a href="#cb2-77"></a>N <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb2-78"><a href="#cb2-78"></a>a <span class="op">=</span> np.random.gamma(shape<span class="op">=</span><span class="dv">5</span>, size<span class="op">=</span>N)</span>
+<span id="cb2-79"><a href="#cb2-79"></a>my_bins <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="dv">15</span>,<span class="fl">1.5</span>)</span>
+<span id="cb2-80"><a href="#cb2-80"></a>n1, bins1, patches1 <span class="op">=</span> bx00.hist(a, bins<span class="op">=</span>my_bins, density<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-81"><a href="#cb2-81"></a>                                histtype<span class="op">=</span><span class="st">'stepfilled'</span>, alpha<span class="op">=</span><span class="fl">0.2</span>, hatch<span class="op">=</span><span class="st">'/'</span>)</span>
+<span id="cb2-82"><a href="#cb2-82"></a>bx00.set_xlim([<span class="dv">0</span>, <span class="dv">15</span>])</span>
+<span id="cb2-83"><a href="#cb2-83"></a>bx00.set_ylim([<span class="dv">0</span>, <span class="fl">0.28</span>])</span>
+<span id="cb2-84"><a href="#cb2-84"></a>bx00.set_xticklabels([])</span>
+<span id="cb2-85"><a href="#cb2-85"></a>bx00.set_xlabel(<span class="st">"plt.hist"</span>, fontfamily<span class="op">=</span><span class="st">"monospace"</span>)</span>
+<span id="cb2-86"><a href="#cb2-86"></a>bx00.xaxis.set_label_position(<span class="st">"top"</span>)</span>
+<span id="cb2-87"><a href="#cb2-87"></a></span>
+<span id="cb2-88"><a href="#cb2-88"></a><span class="co"># the following way is equivalent to plt.hist, but it gives</span></span>
+<span id="cb2-89"><a href="#cb2-89"></a><span class="co"># the user more flexibility when plotting and analysing the results</span></span>
+<span id="cb2-90"><a href="#cb2-90"></a>n2, bins2 <span class="op">=</span> np.histogram(a, bins<span class="op">=</span>my_bins, density<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-91"><a href="#cb2-91"></a>wid <span class="op">=</span> bins2[<span class="dv">1</span>] <span class="op">-</span> bins2[<span class="dv">0</span>]</span>
+<span id="cb2-92"><a href="#cb2-92"></a>red, <span class="op">=</span> bx10.plot(bins2[:<span class="op">-</span><span class="dv">1</span>]<span class="op">+</span>wid<span class="op">/</span><span class="dv">2</span>, n2, marker<span class="op">=</span><span class="st">'o'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb2-93"><a href="#cb2-93"></a>bx10.bar(bins2[:<span class="op">-</span><span class="dv">1</span>], n2, width<span class="op">=</span>wid, fill<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb2-94"><a href="#cb2-94"></a>         edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">3</span>, alpha<span class="op">=</span><span class="fl">0.8</span>, align<span class="op">=</span><span class="st">"edge"</span>)</span>
+<span id="cb2-95"><a href="#cb2-95"></a>bx10.set_xlim([<span class="dv">0</span>, <span class="dv">15</span>])</span>
+<span id="cb2-96"><a href="#cb2-96"></a>bx10.set_ylim([<span class="dv">0</span>, <span class="fl">0.28</span>])</span>
+<span id="cb2-97"><a href="#cb2-97"></a>bx10.set_xlabel(<span class="vs">r"np.histogram;  plt.bar"</span>, fontfamily<span class="op">=</span><span class="st">"monospace"</span>)</span>
+<span id="cb2-98"><a href="#cb2-98"></a></span>
+<span id="cb2-99"><a href="#cb2-99"></a><span class="co"># best fit</span></span>
+<span id="cb2-100"><a href="#cb2-100"></a></span>
+<span id="cb2-101"><a href="#cb2-101"></a>xdata <span class="op">=</span> my_bins[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> wid<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb2-102"><a href="#cb2-102"></a>ydata <span class="op">=</span> n2</span>
+<span id="cb2-103"><a href="#cb2-103"></a><span class="kw">def</span> func(x, p1, p2):</span>
+<span id="cb2-104"><a href="#cb2-104"></a>    <span class="cf">return</span> x <span class="op">**</span> (p1 <span class="op">-</span> <span class="fl">1.0</span>) <span class="op">*</span> np.exp(<span class="op">-</span>x <span class="op">/</span> p2) <span class="op">/</span> (p2 <span class="op">**</span> p1 <span class="op">*</span> scipy.special.gamma(p1))</span>
+<span id="cb2-105"><a href="#cb2-105"></a>popt, pcov <span class="op">=</span> curve_fit(func, xdata, ydata, p0<span class="op">=</span>(<span class="fl">1.5</span>, <span class="fl">1.5</span>))  <span class="co"># p0 = initial guess</span></span>
+<span id="cb2-106"><a href="#cb2-106"></a>p1, p2 <span class="op">=</span> popt</span>
+<span id="cb2-107"><a href="#cb2-107"></a>SStot <span class="op">=</span> ((ydata <span class="op">-</span> ydata.mean()) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb2-108"><a href="#cb2-108"></a>SSres <span class="op">=</span> ((ydata <span class="op">-</span> func(xdata, p1, p2)) <span class="op">**</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span>
+<span id="cb2-109"><a href="#cb2-109"></a>Rsquared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> SSres <span class="op">/</span> SStot</span>
+<span id="cb2-110"><a href="#cb2-110"></a>h <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">15</span>,<span class="dv">101</span>)</span>
+<span id="cb2-111"><a href="#cb2-111"></a>bx00.plot(h, func(h, p1, p2), color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-112"><a href="#cb2-112"></a><span class="co"># dummy plot, just so we can have a legend on the bottom panel</span></span>
+<span id="cb2-113"><a href="#cb2-113"></a>blue, <span class="op">=</span> ax10.plot([<span class="dv">100</span>],[<span class="dv">100</span>], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Best fit"</span>)</span>
+<span id="cb2-114"><a href="#cb2-114"></a>bx10.legend([red,blue],[<span class="vs">r'Data'</span>,<span class="vs">r'Best fit, $r^2=$</span><span class="sc">{:.2f}</span><span class="vs">'</span>.<span class="bu">format</span>(Rsquared)],</span>
+<span id="cb2-115"><a href="#cb2-115"></a>            loc<span class="op">=</span><span class="st">'upper right'</span>, frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb2-116"><a href="#cb2-116"></a>            markerfirst<span class="op">=</span><span class="va">False</span>, numpoints<span class="op">=</span><span class="dv">3</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb2-117"><a href="#cb2-117"></a></span>
+<span id="cb2-118"><a href="#cb2-118"></a>fig.savefig(<span class="st">"histograms.png"</span>,dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -353,18 +353,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -396,7 +385,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -404,7 +415,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

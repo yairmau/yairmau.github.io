@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - Streamplot</title>
+<title>Streamplot – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -181,115 +181,115 @@ Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code></p>
 <section id="the-code" class="level2">
 <h2 class="anchored" data-anchor-id="the-code">The code</h2>
 <div id="cell-3" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>make graph look pretty</p>
 <div id="cell-5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># learn how to configure:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># http://matplotlib.sourceforge.net/users/customizing.html</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">'font.family'</span>: <span class="st">'serif'</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">'ps.usedistiller'</span>: <span class="st">'xpdf'</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          <span class="st">'text.usetex'</span>: <span class="va">True</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          <span class="co"># include here any neede package for latex</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="st">'text.latex.preamble'</span>: <span class="vs">r'\usepackage</span><span class="sc">{amsmath}</span><span class="vs">'</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update(params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># learn how to configure:</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># http://matplotlib.sourceforge.net/users/customizing.html</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>params <span class="op">=</span> {</span>
+<span id="cb2-5"><a href="#cb2-5"></a>          <span class="st">'font.family'</span>: <span class="st">'serif'</span>,</span>
+<span id="cb2-6"><a href="#cb2-6"></a>          <span class="st">'ps.usedistiller'</span>: <span class="st">'xpdf'</span>,</span>
+<span id="cb2-7"><a href="#cb2-7"></a>          <span class="st">'text.usetex'</span>: <span class="va">True</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>          <span class="co"># include here any neede package for latex</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>          <span class="st">'text.latex.preamble'</span>: <span class="vs">r'\usepackage</span><span class="sc">{amsmath}</span><span class="vs">'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>          }</span>
+<span id="cb2-11"><a href="#cb2-11"></a>plt.rcParams.update(params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>define parameters, system of equations, and equation for eigenvectors</p>
 <div id="cell-7" class="cell" data-scrolled="false" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib widget</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.08</span>, right<span class="op">=</span><span class="fl">0.68</span>, top<span class="op">=</span><span class="fl">0.87</span>, bottom<span class="op">=</span><span class="fl">0.10</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                    hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters as a dictionary</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> {<span class="st">'a'</span>: <span class="op">-</span><span class="fl">1.0</span>, <span class="st">'b'</span>: <span class="op">+</span><span class="fl">0.2</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">'c'</span>: <span class="op">+</span><span class="fl">1.2</span>, <span class="st">'d'</span>: <span class="op">-</span><span class="fl">1.5</span>}</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># the equations</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> system_equations(x,y):</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [p[<span class="st">'a'</span>] <span class="op">*</span> x <span class="op">+</span> p[<span class="st">'b'</span>] <span class="op">*</span> y,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            p[<span class="st">'c'</span>] <span class="op">*</span> x <span class="op">+</span> p[<span class="st">'d'</span>] <span class="op">*</span> y,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>           ]</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># eigenvectors</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>eigen_vec <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> np.array([            </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                           [(p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>] <span class="op">-</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                            np.sqrt((p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>]) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                                    <span class="fl">4.0</span> <span class="op">*</span> p[<span class="st">'b'</span>] <span class="op">*</span> p[<span class="st">'c'</span>])) <span class="op">/</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                            (<span class="fl">2.0</span> <span class="op">*</span> p[<span class="st">'c'</span>]), <span class="fl">1.0</span>],</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                           [(p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>] <span class="op">+</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                            np.sqrt((p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>]) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                                    <span class="fl">4.0</span> <span class="op">*</span> p[<span class="st">'b'</span>] <span class="op">*</span> p[<span class="st">'c'</span>])) <span class="op">/</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                            (<span class="fl">2.0</span> <span class="op">*</span> p[<span class="st">'c'</span>]), <span class="fl">1.0</span>],</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                           ])</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>min_x, max_x <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>min_y, max_y <span class="op">=</span> [<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>]</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>divJ <span class="op">=</span> <span class="ot">50j</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>div <span class="op">=</span> <span class="dv">50</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 1st way</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Y, X = np.mgrid[min_y:max_y:div,min_x:max_x:div]</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 2nd way</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(np.linspace(min_x, max_x, div),</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>                   np.linspace(min_y, max_y, div))</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co"># streamplot</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>density <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> [<span class="fl">0.80</span>]</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>minlength <span class="op">=</span> <span class="fl">0.2</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>arrow_color <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> [<span class="fl">0.5</span>]</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>ax.streamplot(X, Y, system_equations(X, Y)[<span class="dv">0</span>], system_equations(X, Y)[<span class="dv">1</span>],</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>              density<span class="op">=</span>density, color<span class="op">=</span>arrow_color, arrowsize<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>              linewidth<span class="op">=</span><span class="dv">2</span>, minlength<span class="op">=</span>minlength)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># eigenvectors</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>eigen_0, <span class="op">=</span> ax.plot([eigen_vec[<span class="dv">0</span>, <span class="dv">0</span>],<span class="op">-</span>eigen_vec[<span class="dv">0</span>, <span class="dv">0</span>]],</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>                   [eigen_vec[<span class="dv">0</span>, <span class="dv">1</span>],<span class="op">-</span>eigen_vec[<span class="dv">0</span>, <span class="dv">1</span>]],</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>                   color<span class="op">=</span><span class="st">'red'</span>, lw<span class="op">=</span><span class="dv">3</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>eigen_1, <span class="op">=</span> ax.plot([eigen_vec[<span class="dv">1</span>, <span class="dv">0</span>],<span class="op">-</span>eigen_vec[<span class="dv">1</span>, <span class="dv">0</span>]],</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>                   [eigen_vec[<span class="dv">1</span>, <span class="dv">1</span>],<span class="op">-</span>eigen_vec[<span class="dv">1</span>, <span class="dv">1</span>]],</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>                   color<span class="op">=</span><span class="st">'orange'</span>, lw<span class="op">=</span><span class="dv">3</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>dash <span class="op">=</span> (<span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>eigen_0.set_dashes(dash)</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>eigen_1.set_dashes(dash)</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co"># nullclines</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>null_0 <span class="op">=</span> ax.contour(X, Y, system_equations(X, Y)[<span class="dv">0</span>],</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>                    levels<span class="op">=</span>[<span class="dv">0</span>], colors<span class="op">=</span><span class="st">'black'</span>, linewidths<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>null_1 <span class="op">=</span> ax.contour(X, Y,system_equations(X, Y)[<span class="dv">1</span>],</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>                    levels<span class="op">=</span>[<span class="dv">0</span>], colors<span class="op">=</span><span class="st">'blue'</span>, linewidths<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>n0, <span class="op">=</span> ax.plot([<span class="dv">100</span>,<span class="dv">101</span>], [<span class="dv">100</span>,<span class="dv">101</span>], color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>n1, <span class="op">=</span> ax.plot([<span class="dv">100</span>,<span class="dv">101</span>], [<span class="dv">100</span>,<span class="dv">101</span>], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co"># some text</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.0</span>, <span class="fl">1.02</span>, (<span class="vs">r"$\displaystyle\frac</span><span class="sc">{d}{dt}</span><span class="vs">\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">=$"</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">a&amp;b\\c&amp;d\end</span><span class="sc">{pmatrix}</span><span class="vs">\cdot$"</span></span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">$"</span>),</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>                    transform<span class="op">=</span>ax.transAxes, va<span class="op">=</span><span class="st">"bottom"</span>)</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.0</span>, <span class="fl">1.1</span>, <span class="vs">r"$a=</span><span class="sc">{:.1f}</span><span class="vs">\qquad b=</span><span class="sc">{:.1f}</span><span class="vs">$"</span>.<span class="bu">format</span>(p[<span class="st">'a'</span>], p[<span class="st">'b'</span>]),</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.0</span>, <span class="fl">1.03</span>, <span class="vs">r"$c=</span><span class="sc">{:.1f}</span><span class="vs">\qquad d=</span><span class="sc">{:.1f}</span><span class="vs">$"</span>.<span class="bu">format</span>(p[<span class="st">'c'</span>], p[<span class="st">'d'</span>]),</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>ax.legend([n0, n1, eigen_0, eigen_1],</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>          [<span class="vs">r'$dx/dt=0$'</span>, <span class="vs">r'$dy/dt=0$'</span>,</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"eigenvector 1"</span>, <span class="vs">r"eigenvector 2"</span>],</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>          loc<span class="op">=</span><span class="st">"center left"</span>,</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>          bbox_to_anchor<span class="op">=</span>(<span class="fl">1.0</span>,<span class="fl">0.5</span>),</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>          frameon<span class="op">=</span><span class="va">False</span>, fancybox<span class="op">=</span><span class="va">False</span>, shadow<span class="op">=</span><span class="va">False</span>, ncol<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>          borderpad<span class="op">=</span><span class="fl">0.5</span>, labelspacing<span class="op">=</span><span class="fl">0.5</span>, handlelength<span class="op">=</span><span class="dv">3</span>, handletextpad<span class="op">=</span><span class="fl">1.1</span>,</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>          borderaxespad<span class="op">=</span><span class="fl">0.3</span>, columnspacing<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r"$x$"</span>, labelpad<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>ax.axis([min_x, max_x, min_y, max_y])</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"streamplot.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">%</span>matplotlib widget</span>
+<span id="cb3-2"><a href="#cb3-2"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb3-3"><a href="#cb3-3"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.08</span>, right<span class="op">=</span><span class="fl">0.68</span>, top<span class="op">=</span><span class="fl">0.87</span>, bottom<span class="op">=</span><span class="fl">0.10</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                    hspace<span class="op">=</span><span class="fl">0.02</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># parameters as a dictionary</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>p <span class="op">=</span> {<span class="st">'a'</span>: <span class="op">-</span><span class="fl">1.0</span>, <span class="st">'b'</span>: <span class="op">+</span><span class="fl">0.2</span>,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>     <span class="st">'c'</span>: <span class="op">+</span><span class="fl">1.2</span>, <span class="st">'d'</span>: <span class="op">-</span><span class="fl">1.5</span>}</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># the equations</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">def</span> system_equations(x,y):</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="cf">return</span> [p[<span class="st">'a'</span>] <span class="op">*</span> x <span class="op">+</span> p[<span class="st">'b'</span>] <span class="op">*</span> y,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>            p[<span class="st">'c'</span>] <span class="op">*</span> x <span class="op">+</span> p[<span class="st">'d'</span>] <span class="op">*</span> y,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>           ]</span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="co"># eigenvectors</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>eigen_vec <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> np.array([            </span>
+<span id="cb3-16"><a href="#cb3-16"></a>                           [(p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>] <span class="op">-</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>                            np.sqrt((p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>]) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>                                    <span class="fl">4.0</span> <span class="op">*</span> p[<span class="st">'b'</span>] <span class="op">*</span> p[<span class="st">'c'</span>])) <span class="op">/</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>                            (<span class="fl">2.0</span> <span class="op">*</span> p[<span class="st">'c'</span>]), <span class="fl">1.0</span>],</span>
+<span id="cb3-20"><a href="#cb3-20"></a>                           [(p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>] <span class="op">+</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a>                            np.sqrt((p[<span class="st">'a'</span>] <span class="op">-</span> p[<span class="st">'d'</span>]) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a>                                    <span class="fl">4.0</span> <span class="op">*</span> p[<span class="st">'b'</span>] <span class="op">*</span> p[<span class="st">'c'</span>])) <span class="op">/</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a>                            (<span class="fl">2.0</span> <span class="op">*</span> p[<span class="st">'c'</span>]), <span class="fl">1.0</span>],</span>
+<span id="cb3-24"><a href="#cb3-24"></a>                           ])</span>
+<span id="cb3-25"><a href="#cb3-25"></a></span>
+<span id="cb3-26"><a href="#cb3-26"></a>min_x, max_x <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb3-27"><a href="#cb3-27"></a>min_y, max_y <span class="op">=</span> [<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>]</span>
+<span id="cb3-28"><a href="#cb3-28"></a>divJ <span class="op">=</span> <span class="ot">50j</span></span>
+<span id="cb3-29"><a href="#cb3-29"></a>div <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb3-30"><a href="#cb3-30"></a><span class="co"># 1st way</span></span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="co"># Y, X = np.mgrid[min_y:max_y:div,min_x:max_x:div]</span></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="co"># 2nd way</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a>X, Y <span class="op">=</span> np.meshgrid(np.linspace(min_x, max_x, div),</span>
+<span id="cb3-34"><a href="#cb3-34"></a>                   np.linspace(min_y, max_y, div))</span>
+<span id="cb3-35"><a href="#cb3-35"></a></span>
+<span id="cb3-36"><a href="#cb3-36"></a><span class="co"># streamplot</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a>density <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> [<span class="fl">0.80</span>]</span>
+<span id="cb3-38"><a href="#cb3-38"></a>minlength <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb3-39"><a href="#cb3-39"></a>arrow_color <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> [<span class="fl">0.5</span>]</span>
+<span id="cb3-40"><a href="#cb3-40"></a>ax.streamplot(X, Y, system_equations(X, Y)[<span class="dv">0</span>], system_equations(X, Y)[<span class="dv">1</span>],</span>
+<span id="cb3-41"><a href="#cb3-41"></a>              density<span class="op">=</span>density, color<span class="op">=</span>arrow_color, arrowsize<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb3-42"><a href="#cb3-42"></a>              linewidth<span class="op">=</span><span class="dv">2</span>, minlength<span class="op">=</span>minlength)</span>
+<span id="cb3-43"><a href="#cb3-43"></a></span>
+<span id="cb3-44"><a href="#cb3-44"></a><span class="co"># eigenvectors</span></span>
+<span id="cb3-45"><a href="#cb3-45"></a>eigen_0, <span class="op">=</span> ax.plot([eigen_vec[<span class="dv">0</span>, <span class="dv">0</span>],<span class="op">-</span>eigen_vec[<span class="dv">0</span>, <span class="dv">0</span>]],</span>
+<span id="cb3-46"><a href="#cb3-46"></a>                   [eigen_vec[<span class="dv">0</span>, <span class="dv">1</span>],<span class="op">-</span>eigen_vec[<span class="dv">0</span>, <span class="dv">1</span>]],</span>
+<span id="cb3-47"><a href="#cb3-47"></a>                   color<span class="op">=</span><span class="st">'red'</span>, lw<span class="op">=</span><span class="dv">3</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-48"><a href="#cb3-48"></a>eigen_1, <span class="op">=</span> ax.plot([eigen_vec[<span class="dv">1</span>, <span class="dv">0</span>],<span class="op">-</span>eigen_vec[<span class="dv">1</span>, <span class="dv">0</span>]],</span>
+<span id="cb3-49"><a href="#cb3-49"></a>                   [eigen_vec[<span class="dv">1</span>, <span class="dv">1</span>],<span class="op">-</span>eigen_vec[<span class="dv">1</span>, <span class="dv">1</span>]],</span>
+<span id="cb3-50"><a href="#cb3-50"></a>                   color<span class="op">=</span><span class="st">'orange'</span>, lw<span class="op">=</span><span class="dv">3</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-51"><a href="#cb3-51"></a>dash <span class="op">=</span> (<span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb3-52"><a href="#cb3-52"></a>eigen_0.set_dashes(dash)</span>
+<span id="cb3-53"><a href="#cb3-53"></a>eigen_1.set_dashes(dash)</span>
+<span id="cb3-54"><a href="#cb3-54"></a></span>
+<span id="cb3-55"><a href="#cb3-55"></a><span class="co"># nullclines</span></span>
+<span id="cb3-56"><a href="#cb3-56"></a>null_0 <span class="op">=</span> ax.contour(X, Y, system_equations(X, Y)[<span class="dv">0</span>],</span>
+<span id="cb3-57"><a href="#cb3-57"></a>                    levels<span class="op">=</span>[<span class="dv">0</span>], colors<span class="op">=</span><span class="st">'black'</span>, linewidths<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-58"><a href="#cb3-58"></a>null_1 <span class="op">=</span> ax.contour(X, Y,system_equations(X, Y)[<span class="dv">1</span>],</span>
+<span id="cb3-59"><a href="#cb3-59"></a>                    levels<span class="op">=</span>[<span class="dv">0</span>], colors<span class="op">=</span><span class="st">'blue'</span>, linewidths<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-60"><a href="#cb3-60"></a>n0, <span class="op">=</span> ax.plot([<span class="dv">100</span>,<span class="dv">101</span>], [<span class="dv">100</span>,<span class="dv">101</span>], color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-61"><a href="#cb3-61"></a>n1, <span class="op">=</span> ax.plot([<span class="dv">100</span>,<span class="dv">101</span>], [<span class="dv">100</span>,<span class="dv">101</span>], color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-62"><a href="#cb3-62"></a></span>
+<span id="cb3-63"><a href="#cb3-63"></a><span class="co"># some text</span></span>
+<span id="cb3-64"><a href="#cb3-64"></a>ax.text(<span class="fl">0.0</span>, <span class="fl">1.02</span>, (<span class="vs">r"$\displaystyle\frac</span><span class="sc">{d}{dt}</span><span class="vs">\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">=$"</span></span>
+<span id="cb3-65"><a href="#cb3-65"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">a&amp;b\\c&amp;d\end</span><span class="sc">{pmatrix}</span><span class="vs">\cdot$"</span></span>
+<span id="cb3-66"><a href="#cb3-66"></a>                    <span class="vs">r"$\begin</span><span class="sc">{pmatrix}</span><span class="vs">x\\y\end</span><span class="sc">{pmatrix}</span><span class="vs">$"</span>),</span>
+<span id="cb3-67"><a href="#cb3-67"></a>                    transform<span class="op">=</span>ax.transAxes, va<span class="op">=</span><span class="st">"bottom"</span>)</span>
+<span id="cb3-68"><a href="#cb3-68"></a>ax.text(<span class="fl">1.0</span>, <span class="fl">1.1</span>, <span class="vs">r"$a=</span><span class="sc">{:.1f}</span><span class="vs">\qquad b=</span><span class="sc">{:.1f}</span><span class="vs">$"</span>.<span class="bu">format</span>(p[<span class="st">'a'</span>], p[<span class="st">'b'</span>]),</span>
+<span id="cb3-69"><a href="#cb3-69"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb3-70"><a href="#cb3-70"></a>ax.text(<span class="fl">1.0</span>, <span class="fl">1.03</span>, <span class="vs">r"$c=</span><span class="sc">{:.1f}</span><span class="vs">\qquad d=</span><span class="sc">{:.1f}</span><span class="vs">$"</span>.<span class="bu">format</span>(p[<span class="st">'c'</span>], p[<span class="st">'d'</span>]),</span>
+<span id="cb3-71"><a href="#cb3-71"></a>        transform<span class="op">=</span>ax.transAxes, ha<span class="op">=</span><span class="st">"right"</span>)</span>
+<span id="cb3-72"><a href="#cb3-72"></a></span>
+<span id="cb3-73"><a href="#cb3-73"></a>ax.legend([n0, n1, eigen_0, eigen_1],</span>
+<span id="cb3-74"><a href="#cb3-74"></a>          [<span class="vs">r'$dx/dt=0$'</span>, <span class="vs">r'$dy/dt=0$'</span>,</span>
+<span id="cb3-75"><a href="#cb3-75"></a>           <span class="vs">r"eigenvector 1"</span>, <span class="vs">r"eigenvector 2"</span>],</span>
+<span id="cb3-76"><a href="#cb3-76"></a>          loc<span class="op">=</span><span class="st">"center left"</span>,</span>
+<span id="cb3-77"><a href="#cb3-77"></a>          bbox_to_anchor<span class="op">=</span>(<span class="fl">1.0</span>,<span class="fl">0.5</span>),</span>
+<span id="cb3-78"><a href="#cb3-78"></a>          frameon<span class="op">=</span><span class="va">False</span>, fancybox<span class="op">=</span><span class="va">False</span>, shadow<span class="op">=</span><span class="va">False</span>, ncol<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb3-79"><a href="#cb3-79"></a>          borderpad<span class="op">=</span><span class="fl">0.5</span>, labelspacing<span class="op">=</span><span class="fl">0.5</span>, handlelength<span class="op">=</span><span class="dv">3</span>, handletextpad<span class="op">=</span><span class="fl">1.1</span>,</span>
+<span id="cb3-80"><a href="#cb3-80"></a>          borderaxespad<span class="op">=</span><span class="fl">0.3</span>, columnspacing<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-81"><a href="#cb3-81"></a></span>
+<span id="cb3-82"><a href="#cb3-82"></a>ax.set_ylabel(<span class="vs">r"$y$"</span>, rotation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
+<span id="cb3-83"><a href="#cb3-83"></a>ax.set_xlabel(<span class="vs">r"$x$"</span>, labelpad<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-84"><a href="#cb3-84"></a></span>
+<span id="cb3-85"><a href="#cb3-85"></a>ax.axis([min_x, max_x, min_y, max_y])</span>
+<span id="cb3-86"><a href="#cb3-86"></a></span>
+<span id="cb3-87"><a href="#cb3-87"></a>fig.savefig(<span class="st">"streamplot.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"25ce5a06be8a4f9dbbc77eb0b42f0c84","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -336,18 +336,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -379,7 +368,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -387,7 +398,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

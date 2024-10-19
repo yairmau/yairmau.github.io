@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - Least Squares</title>
+<title>Least Squares – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -138,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -181,109 +181,109 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-code" class="level2">
 <h2 class="anchored" data-anchor-id="the-code">The code</h2>
 <div id="cell-4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.special</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> patches</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.gridspec <span class="im">as</span> gridspec</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> scipy.special</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> patches</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-8"><a href="#cb1-8"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"ticks"</span>, font_scale<span class="op">=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Define some functions</p>
 <div id="cell-6" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">12</span>, <span class="fl">0.4</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x, par0, par1, par2):</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> par0 <span class="op">+</span> np.cos(par1 <span class="op">*</span> x <span class="op">+</span> par2)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_rec(ax, c, v, col):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        patches.Rectangle(</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            c,          <span class="co"># (x,y)</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            np.<span class="bu">abs</span>(v),  <span class="co"># width</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            v,          <span class="co"># height</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.4</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span>col</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">12</span>, <span class="fl">0.4</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">def</span> func(x, par0, par1, par2):</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">return</span> par0 <span class="op">+</span> np.cos(par1 <span class="op">*</span> x <span class="op">+</span> par2)</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">def</span> add_rec(ax, c, v, col):</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    ax.add_patch(</span>
+<span id="cb2-9"><a href="#cb2-9"></a>        patches.Rectangle(</span>
+<span id="cb2-10"><a href="#cb2-10"></a>            c,          <span class="co"># (x,y)</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>            np.<span class="bu">abs</span>(v),  <span class="co"># width</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>            v,          <span class="co"># height</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>            alpha<span class="op">=</span><span class="fl">0.4</span>,</span>
+<span id="cb2-14"><a href="#cb2-14"></a>            color<span class="op">=</span>col</span>
+<span id="cb2-15"><a href="#cb2-15"></a>        )</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now let’s plot some stuff</p>
 <div id="cell-8" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib notebook</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fig, [ax1, ax2] <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                               subplot_kw<span class="op">=</span>{<span class="st">'aspect'</span>:<span class="st">'equal'</span>}</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                              )</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.04</span>, right<span class="op">=</span><span class="fl">0.98</span>, top<span class="op">=</span><span class="fl">0.93</span>, bottom<span class="op">=</span><span class="fl">0.15</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                    hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {<span class="co">#'backend': 'ps',</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>          <span class="st">'font.family'</span>: <span class="st">'serif'</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          <span class="st">'font.serif'</span>: [<span class="st">'Computer Modern Roman'</span>],</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          <span class="st">'ps.usedistiller'</span>: <span class="st">'xpdf'</span>,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>          <span class="st">'text.usetex'</span>: <span class="va">True</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>          <span class="co"># include here any neede package for latex</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>          <span class="st">'text.latex.preamble'</span>: [<span class="vs">r'\usepackage</span><span class="sc">{amsmath}</span><span class="vs">'</span>],</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># the parameter values</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>par <span class="op">=</span> (<span class="fl">1.3</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># generating data with noise</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> func(x, <span class="op">*</span>par) <span class="op">+</span> (np.random.random(<span class="bu">len</span>(x)) <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y, marker<span class="op">=</span><span class="st">'o'</span>, ls<span class="op">=</span><span class="st">'None'</span>, markerfacecolor<span class="op">=</span><span class="st">"blue"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, y, marker<span class="op">=</span><span class="st">'o'</span>, ls<span class="op">=</span><span class="st">'None'</span>, markerfacecolor<span class="op">=</span><span class="st">"red"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># best fit</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>popt, pcov <span class="op">=</span> curve_fit(func, x, y, p0<span class="op">=</span>(<span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">2.5</span>))  <span class="co"># p0 = initial guess</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>p0, p1, p2 <span class="op">=</span> popt</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># The total sum of squares (proportional to the variance of the data)</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>SStot <span class="op">=</span> ((y <span class="op">-</span> y.mean()) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># The sum of squares of residuals</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>SSres <span class="op">=</span> ((y <span class="op">-</span> func(x, p0, p1, p2)) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>Rsquared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> SSres <span class="op">/</span> SStot</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># plot best fit</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> np.linspace(x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="dv">1001</span>)</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>fit, <span class="op">=</span> ax1.plot(h, func(h, p0, p1, p2), color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>ax1.legend([fit], [<span class="st">"Best fit"</span>], loc<span class="op">=</span><span class="st">"upper right"</span>,</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>           frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co"># plot mean</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>mean, <span class="op">=</span> ax2.plot(h, h <span class="op">*</span> <span class="dv">0</span> <span class="op">+</span> np.mean(y), ls<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax2.legend([mean], [<span class="st">"Mean"</span>], loc<span class="op">=</span><span class="st">"upper right"</span>, frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># plot blue and red squares</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ind <span class="kw">in</span> np.arange(<span class="bu">len</span>(x)):</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    x0 <span class="op">=</span> x[ind]</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    y0 <span class="op">=</span> y[ind]</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(x0,y0)</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    v1 <span class="op">=</span> y0 <span class="op">-</span> func(x0, p0, p1, p2)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    v2 <span class="op">=</span> y0 <span class="op">-</span> y.mean()</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    add_rec(ax1, (x0, y0), <span class="op">-</span>v1, <span class="st">"blue"</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    add_rec(ax2, (x0, y0), <span class="op">-</span>v2, <span class="st">"red"</span>)</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="fl">0.5</span>, <span class="fl">2.9</span>, <span class="vs">r"Total sum of squares: </span><span class="sc">{:.1f}</span><span class="vs">"</span>.<span class="bu">format</span>(SStot))</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>ax1.text(<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.8</span>, <span class="vs">r"Sum of squares of residuals: </span><span class="sc">{:.1f}</span><span class="vs">"</span>.<span class="bu">format</span>(SSres))</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="co"># ax2.set_xlabel(</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">#          r"R-squared = $1 - \frac{\text{blue area}}{\text{red area}}$ = " +</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co">#          "{:.2f}".format(Rsquared))</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>              <span class="vs">r"R-squared = $1 - \frac{\mathrm{blue\ area</span><span class="sc">}}</span><span class="vs">{\mathrm{red\ area</span><span class="sc">}}</span><span class="vs">$"</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>              )</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>               <span class="vs">r"Data: $f(x) = p_0 + \cos(p_1 x + p_2)+ $ noise "</span>,</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>               labelpad<span class="op">=</span><span class="dv">12</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>               )</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_label_position(<span class="st">"top"</span>)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>ax1.<span class="bu">set</span>(xlim<span class="op">=</span>[x.<span class="bu">min</span>(), x.<span class="bu">max</span>()],</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        ylim<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="fl">3.5</span>],</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        xticklabels<span class="op">=</span>[],</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>        yticks<span class="op">=</span>np.arange(<span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>)</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>       )</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>ax2.<span class="bu">set</span>(</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>        xticklabels<span class="op">=</span>np.arange(<span class="dv">0</span>,<span class="dv">13</span>,<span class="dv">2</span>)</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>       )</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">"least-squares.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">%</span>matplotlib notebook</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>fig, [ax1, ax2] <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                               subplot_kw<span class="op">=</span>{<span class="st">'aspect'</span>:<span class="st">'equal'</span>}</span>
+<span id="cb3-5"><a href="#cb3-5"></a>                              )</span>
+<span id="cb3-6"><a href="#cb3-6"></a>fig.subplots_adjust(left<span class="op">=</span><span class="fl">0.04</span>, right<span class="op">=</span><span class="fl">0.98</span>, top<span class="op">=</span><span class="fl">0.93</span>, bottom<span class="op">=</span><span class="fl">0.15</span>,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>                    hspace<span class="op">=</span><span class="fl">0.05</span>, wspace<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb3-8"><a href="#cb3-8"></a>params <span class="op">=</span> {<span class="co">#'backend': 'ps',</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>          <span class="st">'font.family'</span>: <span class="st">'serif'</span>,</span>
+<span id="cb3-10"><a href="#cb3-10"></a>          <span class="st">'font.serif'</span>: [<span class="st">'Computer Modern Roman'</span>],</span>
+<span id="cb3-11"><a href="#cb3-11"></a>          <span class="st">'ps.usedistiller'</span>: <span class="st">'xpdf'</span>,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>          <span class="st">'text.usetex'</span>: <span class="va">True</span>,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>          <span class="co"># include here any neede package for latex</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>          <span class="st">'text.latex.preamble'</span>: [<span class="vs">r'\usepackage</span><span class="sc">{amsmath}</span><span class="vs">'</span>],</span>
+<span id="cb3-15"><a href="#cb3-15"></a>          }</span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="co"># the parameter values</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>par <span class="op">=</span> (<span class="fl">1.3</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="co"># generating data with noise</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>y <span class="op">=</span> func(x, <span class="op">*</span>par) <span class="op">+</span> (np.random.random(<span class="bu">len</span>(x)) <span class="op">-</span> <span class="fl">0.5</span>)</span>
+<span id="cb3-20"><a href="#cb3-20"></a>ax1.plot(x, y, marker<span class="op">=</span><span class="st">'o'</span>, ls<span class="op">=</span><span class="st">'None'</span>, markerfacecolor<span class="op">=</span><span class="st">"blue"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21"></a>ax2.plot(x, y, marker<span class="op">=</span><span class="st">'o'</span>, ls<span class="op">=</span><span class="st">'None'</span>, markerfacecolor<span class="op">=</span><span class="st">"red"</span>, markeredgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22"></a></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="co"># best fit</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>popt, pcov <span class="op">=</span> curve_fit(func, x, y, p0<span class="op">=</span>(<span class="fl">1.5</span>, <span class="fl">1.5</span>, <span class="fl">2.5</span>))  <span class="co"># p0 = initial guess</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a>p0, p1, p2 <span class="op">=</span> popt</span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="co"># The total sum of squares (proportional to the variance of the data)</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a>SStot <span class="op">=</span> ((y <span class="op">-</span> y.mean()) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="co"># The sum of squares of residuals</span></span>
+<span id="cb3-29"><a href="#cb3-29"></a>SSres <span class="op">=</span> ((y <span class="op">-</span> func(x, p0, p1, p2)) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb3-30"><a href="#cb3-30"></a>Rsquared <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> SSres <span class="op">/</span> SStot</span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="co"># plot best fit</span></span>
+<span id="cb3-32"><a href="#cb3-32"></a>h <span class="op">=</span> np.linspace(x.<span class="bu">min</span>(), x.<span class="bu">max</span>(), <span class="dv">1001</span>)</span>
+<span id="cb3-33"><a href="#cb3-33"></a>fit, <span class="op">=</span> ax1.plot(h, func(h, p0, p1, p2), color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-34"><a href="#cb3-34"></a>ax1.legend([fit], [<span class="st">"Best fit"</span>], loc<span class="op">=</span><span class="st">"upper right"</span>,</span>
+<span id="cb3-35"><a href="#cb3-35"></a>           frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb3-36"><a href="#cb3-36"></a><span class="co"># plot mean</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a>mean, <span class="op">=</span> ax2.plot(h, h <span class="op">*</span> <span class="dv">0</span> <span class="op">+</span> np.mean(y), ls<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-38"><a href="#cb3-38"></a>ax2.legend([mean], [<span class="st">"Mean"</span>], loc<span class="op">=</span><span class="st">"upper right"</span>, frameon<span class="op">=</span><span class="va">False</span>, handlelength<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb3-39"><a href="#cb3-39"></a></span>
+<span id="cb3-40"><a href="#cb3-40"></a><span class="co"># plot blue and red squares</span></span>
+<span id="cb3-41"><a href="#cb3-41"></a><span class="cf">for</span> ind <span class="kw">in</span> np.arange(<span class="bu">len</span>(x)):</span>
+<span id="cb3-42"><a href="#cb3-42"></a>    x0 <span class="op">=</span> x[ind]</span>
+<span id="cb3-43"><a href="#cb3-43"></a>    y0 <span class="op">=</span> y[ind]</span>
+<span id="cb3-44"><a href="#cb3-44"></a>    <span class="co"># print(x0,y0)</span></span>
+<span id="cb3-45"><a href="#cb3-45"></a>    v1 <span class="op">=</span> y0 <span class="op">-</span> func(x0, p0, p1, p2)</span>
+<span id="cb3-46"><a href="#cb3-46"></a>    v2 <span class="op">=</span> y0 <span class="op">-</span> y.mean()</span>
+<span id="cb3-47"><a href="#cb3-47"></a>    add_rec(ax1, (x0, y0), <span class="op">-</span>v1, <span class="st">"blue"</span>)</span>
+<span id="cb3-48"><a href="#cb3-48"></a>    add_rec(ax2, (x0, y0), <span class="op">-</span>v2, <span class="st">"red"</span>)</span>
+<span id="cb3-49"><a href="#cb3-49"></a></span>
+<span id="cb3-50"><a href="#cb3-50"></a>ax2.text(<span class="fl">0.5</span>, <span class="fl">2.9</span>, <span class="vs">r"Total sum of squares: </span><span class="sc">{:.1f}</span><span class="vs">"</span>.<span class="bu">format</span>(SStot))</span>
+<span id="cb3-51"><a href="#cb3-51"></a>ax1.text(<span class="fl">0.5</span>, <span class="op">-</span><span class="fl">0.8</span>, <span class="vs">r"Sum of squares of residuals: </span><span class="sc">{:.1f}</span><span class="vs">"</span>.<span class="bu">format</span>(SSres))</span>
+<span id="cb3-52"><a href="#cb3-52"></a><span class="co"># ax2.set_xlabel(</span></span>
+<span id="cb3-53"><a href="#cb3-53"></a><span class="co">#          r"R-squared = $1 - \frac{\text{blue area}}{\text{red area}}$ = " +</span></span>
+<span id="cb3-54"><a href="#cb3-54"></a><span class="co">#          "{:.2f}".format(Rsquared))</span></span>
+<span id="cb3-55"><a href="#cb3-55"></a>ax2.set_xlabel(</span>
+<span id="cb3-56"><a href="#cb3-56"></a>              <span class="vs">r"R-squared = $1 - \frac{\mathrm{blue\ area</span><span class="sc">}}</span><span class="vs">{\mathrm{red\ area</span><span class="sc">}}</span><span class="vs">$"</span></span>
+<span id="cb3-57"><a href="#cb3-57"></a>              )</span>
+<span id="cb3-58"><a href="#cb3-58"></a>ax1.set_xlabel(</span>
+<span id="cb3-59"><a href="#cb3-59"></a>               <span class="vs">r"Data: $f(x) = p_0 + \cos(p_1 x + p_2)+ $ noise "</span>,</span>
+<span id="cb3-60"><a href="#cb3-60"></a>               labelpad<span class="op">=</span><span class="dv">12</span></span>
+<span id="cb3-61"><a href="#cb3-61"></a>               )</span>
+<span id="cb3-62"><a href="#cb3-62"></a>ax1.xaxis.set_label_position(<span class="st">"top"</span>)</span>
+<span id="cb3-63"><a href="#cb3-63"></a></span>
+<span id="cb3-64"><a href="#cb3-64"></a>ax1.<span class="bu">set</span>(xlim<span class="op">=</span>[x.<span class="bu">min</span>(), x.<span class="bu">max</span>()],</span>
+<span id="cb3-65"><a href="#cb3-65"></a>        ylim<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="fl">3.5</span>],</span>
+<span id="cb3-66"><a href="#cb3-66"></a>        xticklabels<span class="op">=</span>[],</span>
+<span id="cb3-67"><a href="#cb3-67"></a>        yticks<span class="op">=</span>np.arange(<span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>)</span>
+<span id="cb3-68"><a href="#cb3-68"></a>       )</span>
+<span id="cb3-69"><a href="#cb3-69"></a>ax2.<span class="bu">set</span>(</span>
+<span id="cb3-70"><a href="#cb3-70"></a>        xticklabels<span class="op">=</span>np.arange(<span class="dv">0</span>,<span class="dv">13</span>,<span class="dv">2</span>)</span>
+<span id="cb3-71"><a href="#cb3-71"></a>       )</span>
+<span id="cb3-72"><a href="#cb3-72"></a></span>
+<span id="cb3-73"><a href="#cb3-73"></a>fig.savefig(<span class="st">"least-squares.png"</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 /* Put everything inside the global mpl namespace */
@@ -1290,18 +1290,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1333,7 +1322,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1341,7 +1352,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

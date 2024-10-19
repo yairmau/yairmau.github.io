@@ -235,13 +235,21 @@ Main features:
 
 ## Contour plot
 
-<button class="my_button" onclick="window.open('https://yairmau.github.io/website/jupyter/2020/01/01/contours.html', '_blank');">Jupyter notebook</button>
-
+```{python}
+from IPython.display import display, Markdown, HTML
+display(HTML(
+"""
+<a class="btn btn-success btn-sm rounded", href="contour_plot.html" target="_blank" rel="noopener noreferrer">
+        Jupyter notebook
+</a>
+"""
+))
+```
 Contour plot with many customizable options. Also, a nice way to truncate a colormap so it gives the color range that you want.  
 Main features:
 `truncate_colormap, contour, contourf (fill), clabel (contour label)`
 
-![](http://www.bitbucket.org/yairmau/notebooks/raw/master/figures/cont.png)
+![](contour_plot.png)
 
 <hr class="my_hr">
 
@@ -260,6 +268,7 @@ display(HTML(
 """
 ))
 ```
+
 How should ​lifeguard run in order to save a drowning person in minimal time? Answer: by using Snell's law of refraction!  
 This is a nice example how to use spines (x and y axis form a cross), instead of rectangular figures as usual. Also, "annotations" are used, where things can be labeled with the help of arrows.  
 Main features:

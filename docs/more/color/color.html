@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau - Color</title>
+<title>Color – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -207,10 +207,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="https://jiffyclub.github.io/palettable/">Click Here</a></p>
 <p><img src="https://jiffyclub.github.io/palettable/colorbrewer/diverging/img/BrBG_11_continuous.png" class="img-fluid"><br>
 <img src="https://jiffyclub.github.io/palettable/colorbrewer/diverging/img/BrBG_11_discrete.png" class="img-fluid"></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># how to import colormap</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palettable.colorbrewer.qualitative <span class="im">import</span> Dark2_7</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># how to retrieve color list</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Dark2_7.hex_colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># how to import colormap</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">from</span> palettable.colorbrewer.qualitative <span class="im">import</span> Dark2_7</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># how to retrieve color list</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>Dark2_7.hex_colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="image-color-picker" class="level2">
 <h2 class="anchored" data-anchor-id="image-color-picker">Image Color Picker</h2>
@@ -231,23 +231,23 @@ Upload your own image, use a picture from the internet, load a whole website!</p
 </section>
 <section id="changing-lightness-of-matplotlib-color" class="level2">
 <h2 class="anchored" data-anchor-id="changing-lightness-of-matplotlib-color">Changing Lightness of Matplotlib Color</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.colors</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> colorsys</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_lightness(color_name, L):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Receives a color name ("red", "tab:blue", "xkcd:green", etc),</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns RGB values of same color with lightness L added to it (can be negative too)</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    color_hls <span class="op">=</span> colorsys.rgb_to_hls(<span class="op">*</span>matplotlib.colors.to_rgb(color_name))</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    new_color_hls <span class="op">=</span> np.array(color_hls)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    new_color_hls[<span class="dv">1</span>] <span class="op">=</span> new_color_hls[<span class="dv">1</span>] <span class="op">+</span> L</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> new_color_hls[<span class="dv">1</span>] <span class="op">&gt;</span> <span class="fl">1.0</span>: new_color_hls[<span class="dv">1</span>] <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> new_color_hls[<span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.0</span>: new_color_hls[<span class="dv">1</span>] <span class="op">=</span> <span class="fl">0.0</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    new_shade_rgb <span class="op">=</span> colorsys.hls_to_rgb(<span class="op">*</span>new_color_hls)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_shade_rgb</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>add_lightness(<span class="st">"gold"</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.colors</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> colorsys</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="kw">def</span> add_lightness(color_name, L):</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="co">"""</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">    Receives a color name ("red", "tab:blue", "xkcd:green", etc),</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">    Returns RGB values of same color with lightness L added to it (can be negative too)</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">    """</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    color_hls <span class="op">=</span> colorsys.rgb_to_hls(<span class="op">*</span>matplotlib.colors.to_rgb(color_name))</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    new_color_hls <span class="op">=</span> np.array(color_hls)</span>
+<span id="cb2-11"><a href="#cb2-11"></a>    new_color_hls[<span class="dv">1</span>] <span class="op">=</span> new_color_hls[<span class="dv">1</span>] <span class="op">+</span> L</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="cf">if</span> new_color_hls[<span class="dv">1</span>] <span class="op">&gt;</span> <span class="fl">1.0</span>: new_color_hls[<span class="dv">1</span>] <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="cf">if</span> new_color_hls[<span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.0</span>: new_color_hls[<span class="dv">1</span>] <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    new_shade_rgb <span class="op">=</span> colorsys.hls_to_rgb(<span class="op">*</span>new_color_hls)</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">return</span> new_shade_rgb</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a>add_lightness(<span class="st">"gold"</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -288,18 +288,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -331,7 +320,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -339,7 +350,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
