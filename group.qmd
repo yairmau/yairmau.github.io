@@ -56,6 +56,50 @@ soil compaction, soil salinization
 :::
 <!-- ------------ -->
 
+::: {layout="[30,20]"}
+:::: text_here
+## Oded Hollander
+### MSc student
+
+Plant-plant interactions in a consumer-resource framework
+
+::::
+:::: picture_here
+<img src="archive/images/group/oded-hollander-350px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
+## Dolev Arav
+### MSc student
+
+Urban tree resilience across the globe
+::::
+:::: picture_here
+<img src="archive/images/group/dolev-arav-450px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
+## Matar Tal
+### Undergraduate student (Amirim)
+
+Water dynamics in the soil-plant-atmosphere continuum
+
+::::
+:::: picture_here
+<img src="archive/images/group/matar-tal-380px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
 
 
 # Former members
