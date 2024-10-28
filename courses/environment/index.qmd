@@ -5,6 +5,13 @@ echo: false
 section-divs: false
 ---
 
+
+## General information
+
+* The Faculty of Agriculture's regulations for Master's studies, [Hebrew](https://study.agri.huji.ac.il/master-info) and [English](https://en.study.agri.huji.ac.il/master-info).
+* Course catalog for [research track](http://catalog.huji.ac.il/pages/wfrMaslulDetails.aspx?year=2025&faculty=8&entityId=728&chugId=728&degreeCode=72&maslulId=82840&language=en) and [non-research track](http://catalog.huji.ac.il/pages/wfrMaslulDetails.aspx?year=2025&faculty=8&entityId=728&chugId=728&degreeCode=72&maslulId=82841&language=en).
+
+
 ## Forms
 
 <div class="alert alert-danger">
