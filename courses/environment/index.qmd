@@ -11,6 +11,11 @@ section-divs: false
 * The Faculty of Agriculture's regulations for Master's studies, [Hebrew](https://study.agri.huji.ac.il/master-info) and [English](https://en.study.agri.huji.ac.il/master-info).
 * Course catalog for [research track](http://catalog.huji.ac.il/pages/wfrMaslulDetails.aspx?year=2025&faculty=8&entityId=728&chugId=728&degreeCode=72&maslulId=82840&language=en) and [non-research track](http://catalog.huji.ac.il/pages/wfrMaslulDetails.aspx?year=2025&faculty=8&entityId=728&chugId=728&degreeCode=72&maslulId=82841&language=en).
 
+## MSc defense
+
+* Referees must send their evaluation of the thesis to `yair.mau@mail.huji.ac.il` up to one day before the defense. See form `MSc thesis referee grading form` below.
+* MSc student will prepare a presentation of 15-25 minutes.
+* No food is allowed in the meeting room before and during the defense, just coffee/tea.
 
 ## Forms
 
