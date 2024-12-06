@@ -123,6 +123,11 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 display(Markdown("### 2024"))
 display(HTML("</br>"))
+display(Markdown("**The paper below is the one I talked about at AGU 2024. At the moment, it has not yet been processed by bioRxiv, but it should be online soon.**  "))
+display(HTML("</br>"))
+print_paper(yaml_data['feuer2024dry'][0])
+print_paper(yaml_data['rez2024stem'][0])
+print_paper(yaml_data['kramer2024climate'][0])
 print_paper(yaml_data['mantova2024monitoring'][0])
 
 display(Markdown("### 2023"))

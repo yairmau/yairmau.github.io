@@ -1,3 +1,66 @@
+feuer2024dry:
+- title: "feuer2024dry"
+  handle: "feuer2024dry"
+  authors: Erez Feuer, Yakir Preisler, Dan Yakir and Yair Mau
+  title: "Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does"
+  journal: bioRxiv
+  year: "2024"
+  doi: not available
+  bib: |
+      @article{feuer2024dry,
+          doi = {not available},
+          url = {https://doi.org/not available},
+          year = {2024},
+          volume = {not available},
+          number = {not available},
+          author = {Erez Feuer and Yakir Preisler and Dan Yakir and Yair Mau},
+          title = {Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does},
+          journal = {bioRxiv},
+      }
+
+
+rez2024stem:
+- title: "rez2024stem"
+  handle: "rez2024stem"
+  authors: Laura Rez, Justine Missik, Gil Bohrer and Yair Mau
+  title: "Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate"
+  journal: bioRxiv
+  year: "2024"
+  doi: 10.1101/2024.09.29.615635
+  bib: |
+      @article{rez2024stem,
+          doi = {10.1101/2024.09.29.615635},
+          url = {https://doi.org/10.1101/2024.09.29.615635},
+          year = {2024},
+          volume = {not available},
+          number = {not available},
+          author = {Laura Rez and Justine Missik and Gil Bohrer and Yair Mau},
+          title = {Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate},
+          journal = {bioRxiv},
+      }
+
+kramer2024climate:
+- title: "kramer2024climate"
+  handle: "kramer2024climate"
+  authors: Isaac Kramer, Nadav Peleg and Yair Mau
+  title: "Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions"
+  journal: Agricultural Water Management
+  year: "*accepted for publication*, 2024"
+  doi: not available
+  pdf: archive/papers/kramer-2024-Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.pdf
+  bib: |
+      @article{kramer2024climate,
+          doi = {not available},
+          url = {https://doi.org/not available},
+          year = {2024},
+          volume = {not available},
+          number = {not available},
+          author = {Isaac Kramer and Nadav Peleg and Yair Mau},
+          title = {Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions},
+          journal = {Agricultural Water Management},
+      }
+
+
 mantova2024monitoring:
 - title: "mantova2024monitoring"
   handle: "mantova2024monitoring"

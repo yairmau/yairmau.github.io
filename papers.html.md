@@ -32,6 +32,138 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 </br>
 ```
 
+**The paper below is the one I talked about at AGU 2024. At the moment, it has not yet been processed by bioRxiv, but it should be online soon.**  
+
+```{=html}
+</br>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Yakir Preisler, Dan Yakir and Yair Mau. Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does.  [*bioRxiv*](https://doi.org/not available){target="_blank"}, 2024. {#publication:feuer2024dry}
+
+```{=html}
+<button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#feuer2024dry" aria-expanded="false" aria-controls="feuer2024dry">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="feuer2024dry">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{feuer2024dry,
+    doi = {not available},
+    url = {https://doi.org/not available},
+    year = {2024},
+    volume = {not available},
+    number = {not available},
+    author = {Erez Feuer and Yakir Preisler and Dan Yakir and Yair Mau},
+    title = {Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does},
+    journal = {bioRxiv},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Laura Rez, Justine Missik, Gil Bohrer and Yair Mau. Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.  [*bioRxiv*](https://doi.org/10.1101/2024.09.29.615635){target="_blank"}, 2024. {#publication:rez2024stem}
+
+```{=html}
+<button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#rez2024stem" aria-expanded="false" aria-controls="rez2024stem">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="rez2024stem">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{rez2024stem,
+    doi = {10.1101/2024.09.29.615635},
+    url = {https://doi.org/10.1101/2024.09.29.615635},
+    year = {2024},
+    volume = {not available},
+    number = {not available},
+    author = {Laura Rez and Justine Missik and Gil Bohrer and Yair Mau},
+    title = {Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate},
+    journal = {bioRxiv},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Nadav Peleg and Yair Mau. Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.  [*Agricultural Water Management*](https://doi.org/not available){target="_blank"}, *accepted for publication*, 2024. {#publication:kramer2024climate}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2024-Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#kramer2024climate" aria-expanded="false" aria-controls="kramer2024climate">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="kramer2024climate">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{kramer2024climate,
+    doi = {not available},
+    url = {https://doi.org/not available},
+    year = {2024},
+    volume = {not available},
+    number = {not available},
+    author = {Isaac Kramer and Nadav Peleg and Yair Mau},
+    title = {Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions},
+    journal = {Agricultural Water Management},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
 ###### <i class="fa-regular fa-file svv"></i> Mantova et al.. Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.  [*New Phytologist*](https://doi.org/10.1111/nph.19621){target="_blank"}, 2024. {#publication:mantova2024monitoring}
 
 ```{=html}
@@ -997,9 +1129,9 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {.cell execution_count=3}
+::: {#6651a7d5 .cell execution_count=3}
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
 :::
 
@@ -1028,7 +1160,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 :::
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ```bib
 @phdthesis{mau2013phdthesis,
   title={Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration},
@@ -1051,7 +1183,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 :::
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 
 
 :::
@@ -1070,9 +1202,9 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {.cell execution_count=4}
+::: {#cfbb9a22 .cell execution_count=4}
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}
 :::
 
@@ -1101,7 +1233,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 :::
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ```bib
 @phdthesis{mau2009mscthesis,
   title={Localized Spatial Structures in Non-Equilibrium Systems},
@@ -1123,7 +1255,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 :::
 
-::: {.cell-output .cell-output-display}
+::: {.cell-output .cell-output-display .cell-output-markdown}
 
 
 :::
