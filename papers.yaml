@@ -60,6 +60,26 @@ kramer2024climate:
           journal = {Agricultural Water Management},
       }
 
+goldberg2024effect:
+- title: "goldberg2024effect"
+  handle: "goldberg2024effect"
+  authors: Nurit Goldberg-Yehuda, Uri Nachshon, Shmuel Assouline and Yair Mau
+  title: "The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning"
+  journal: Catena
+  year: "2024"
+  doi: 10.1016/j.catena.2024.108068
+  pdf: archive/papers/goldberg-2024-The effect of mechanical compaction on the soil water retention curve- Insights from a rapid image analysis of micro-CT scanning.pdf
+  bib: |
+      @article{goldberg2024effect,
+          doi = {10.1016/j.catena.2024.108068},
+          url = {https://doi.org/10.1016/j.catena.2024.108068},
+          year = {2024},
+          volume = {242},
+          pages={108068},
+          author = {Goldberg-Yehuda, Nurit and Nachshon, Uri and Assouline, Shmuel and Mau, Yair},
+          title = {The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning},
+          journal = {Catena},
+      }
 
 mantova2024monitoring:
 - title: "mantova2024monitoring"

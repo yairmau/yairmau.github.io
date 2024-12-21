@@ -164,6 +164,51 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 <hr/>
 ```
 
+###### <i class="fa-regular fa-file svv"></i> Nurit Goldberg-Yehuda, Uri Nachshon, Shmuel Assouline and Yair Mau. The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning.  [*Catena*](https://doi.org/10.1016/j.catena.2024.108068){target="_blank"}, 2024. {#publication:goldberg2024effect}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/goldberg-2024-The effect of mechanical compaction on the soil water retention curve- Insights from a rapid image analysis of micro-CT scanning.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#goldberg2024effect" aria-expanded="false" aria-controls="goldberg2024effect">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="goldberg2024effect">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{goldberg2024effect,
+    doi = {10.1016/j.catena.2024.108068},
+    url = {https://doi.org/10.1016/j.catena.2024.108068},
+    year = {2024},
+    volume = {242},
+    number = {not available},
+    pages={108068},
+    author = {Goldberg-Yehuda, Nurit and Nachshon, Uri and Assouline, Shmuel and Mau, Yair},
+    title = {The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning},
+    journal = {Catena},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
+```
+
 ###### <i class="fa-regular fa-file svv"></i> Mantova et al.. Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.  [*New Phytologist*](https://doi.org/10.1111/nph.19621){target="_blank"}, 2024. {#publication:mantova2024monitoring}
 
 ```{=html}
@@ -1129,7 +1174,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#6651a7d5 .cell execution_count=3}
+::: {#16605b2e .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1202,7 +1247,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#cfbb9a22 .cell execution_count=4}
+::: {#65744098 .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}

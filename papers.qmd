@@ -128,6 +128,7 @@ display(HTML("</br>"))
 print_paper(yaml_data['feuer2024dry'][0])
 print_paper(yaml_data['rez2024stem'][0])
 print_paper(yaml_data['kramer2024climate'][0])
+print_paper(yaml_data['goldberg2024effect'][0])
 print_paper(yaml_data['mantova2024monitoring'][0])
 
 display(Markdown("### 2023"))
