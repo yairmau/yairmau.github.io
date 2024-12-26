@@ -24,7 +24,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 
 
-<!-- ## Papers -->
+<!-- ## Papers --> 
 
 ### 2024
 
@@ -120,10 +120,10 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 <hr/>
 ```
 
-###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Nadav Peleg and Yair Mau. Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.  [*Agricultural Water Management*](https://doi.org/not available){target="_blank"}, *accepted for publication*, 2024. {#publication:kramer2024climate}
+###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Nadav Peleg and Yair Mau. Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.  [*Agricultural Water Management*](https://doi.org/10.1016/j.agwat.2024.109223){target="_blank"}, 2024. {#publication:kramer2024climate}
 
 ```{=html}
-<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2024-Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.pdf" target="_blank" rel="noopener noreferrer">
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2025-Climate change shifts risk of soil salinity and land degradation in water-scarce regions.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
         PDF
     </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#kramer2024climate" aria-expanded="false" aria-controls="kramer2024climate">
@@ -142,7 +142,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 ```bib
 @article{kramer2024climate,
     doi = {not available},
-    url = {https://doi.org/not available},
+    url = {https://doi.org/10.1016/j.agwat.2024.109223},
     year = {2024},
     volume = {not available},
     number = {not available},
@@ -189,7 +189,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     url = {https://doi.org/10.1016/j.catena.2024.108068},
     year = {2024},
     volume = {242},
-    number = {not available},
     pages={108068},
     author = {Goldberg-Yehuda, Nurit and Nachshon, Uri and Assouline, Shmuel and Mau, Yair},
     title = {The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning},
@@ -1174,7 +1173,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#16605b2e .cell execution_count=3}
+::: {#e3c93220 .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1247,7 +1246,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#65744098 .cell execution_count=4}
+::: {#2562a852 .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}

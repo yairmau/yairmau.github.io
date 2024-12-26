@@ -116,7 +116,7 @@ def print_paper(data):
 yaml_data = yaml.safe_load(open("papers.yaml"))
 ```
 
-<!-- ## Papers -->
+<!-- ## Papers --> 
 
 ```{python}
 #| output: asis
