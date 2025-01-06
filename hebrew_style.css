@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+
+body {
+  font-family: 'Alef', sans-serif;
+}
+
+/* Apply Alef font to Hebrew text within specific elements
+body:lang(he), p:lang(he), span:lang(he), div:lang(he), 
+h1:lang(he), h2:lang(he), h3:lang(he), h4:lang(he), h5:lang(he), h6:lang(he) {
+  font-family: 'Alef', sans-serif !important; 
+/* Force the use of Alef for Hebrew */
+/*} */
+
+/* @font-face {
+  font-family: 'Alef';
+  src: url('https://fonts.gstatic.com/s/alef/v14/FeVQS0Fbvbc14VogXLI.woff2') format('woff2');
+  unicode-range: U+0590-05FF; /* Hebrew Unicode range */
+/*} */
