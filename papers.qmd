@@ -118,14 +118,24 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 <!-- ## Papers --> 
 
+<div class="alert alert-danger">
+  **New preprint!** 
+  </br>
+  Tree Growth, Contraction, and Recovery: Disentangling Soil and Atmospheric Drought Effects.  
+  Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir, Yair Mau.  
+[link to bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.24.650406v1){target="_blank"}
+  </strong></div>
+
+
 ```{python}
 #| output: asis
 
+display(Markdown("### 2025"))
+display(HTML("</br>"))
+print_paper(yaml_data['missik2025using'][0])
+
 display(Markdown("### 2024"))
 display(HTML("</br>"))
-display(Markdown("**The paper below is the one I talked about at AGU 2024. At the moment, it has not yet been processed by bioRxiv, but it should be online soon.**  "))
-display(HTML("</br>"))
-print_paper(yaml_data['feuer2024dry'][0])
 print_paper(yaml_data['rez2024stem'][0])
 print_paper(yaml_data['kramer2024climate'][0])
 print_paper(yaml_data['goldberg2024effect'][0])

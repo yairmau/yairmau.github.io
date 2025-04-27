@@ -18,6 +18,27 @@ feuer2024dry:
           journal = {bioRxiv},
       }
 
+missik2025using:
+- title: "missik2025using"
+  handle: "missik2025using"
+  authors: Justine E. C. Missik, Gil Bohrer, Madeline E. Scyphers, Ashley M. Matheny, Ana Maria Restrepo Acevedo, Marcela Silva, Golnazalsadat Mirfenderesgi, Yair Mau
+  title: "Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest"
+  journal: "Journal of Geophysical Research: Biogeosciences"
+  year: "2025"
+  doi: 10.1029/2024JG008198
+  pdf: archive/papers/missik2025-Using a Plant Hydrodynamic Model FETCH4 to Supplement Measurements and Characterize.pdf
+  bib: |
+      @article{missik2025using,
+        title={Using a plant hydrodynamic model, FETCH4, to supplement measurements and characterize hydraulic traits in a mixed temperate forest},
+        author={Missik, Justine EC and Bohrer, Gil and Scyphers, Madeline E and Matheny, Ashley M and Restrepo Acevedo, Ana Maria and Silva, Marcela and Mirfenderesgi, Golnazalsadat and Mau, Yair},
+        journal={Journal of Geophysical Research: Biogeosciences},
+        volume={130},
+        number={4},
+        pages={e2024JG008198},
+        year={2025},
+        publisher={Wiley Online Library}
+      }
+
 
 rez2024stem:
 - title: "rez2024stem"

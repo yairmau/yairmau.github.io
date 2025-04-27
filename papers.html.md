@@ -26,22 +26,27 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- ## Papers --> 
 
-### 2024
+<div class="alert alert-danger">
+  **New preprint!** 
+  </br>
+  Tree Growth, Contraction, and Recovery: Disentangling Soil and Atmospheric Drought Effects.  
+  Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir, Yair Mau.  
+[link to bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.24.650406v1){target="_blank"}
+  </strong></div>
+
+### 2025
 
 ```{=html}
 </br>
 ```
 
-**The paper below is the one I talked about at AGU 2024. At the moment, it has not yet been processed by bioRxiv, but it should be online soon.**  
+###### <i class="fa-regular fa-file svv"></i> Justine E. C. Missik, Gil Bohrer, Madeline E. Scyphers, Ashley M. Matheny, Ana Maria Restrepo Acevedo, Marcela Silva, Golnazalsadat Mirfenderesgi, Yair Mau. Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest.  [*Journal of Geophysical Research: Biogeosciences*](https://doi.org/10.1029/2024JG008198){target="_blank"}, 2025. {#publication:missik2025using}
 
 ```{=html}
-</br>
-```
-
-###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Yakir Preisler, Dan Yakir and Yair Mau. Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does.  [*bioRxiv*](https://doi.org/not available){target="_blank"}, 2024. {#publication:feuer2024dry}
-
-```{=html}
-<button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#feuer2024dry" aria-expanded="false" aria-controls="feuer2024dry">
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/missik2025-Using a Plant Hydrodynamic Model FETCH4 to Supplement Measurements and Characterize.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#missik2025using" aria-expanded="false" aria-controls="missik2025using">
     <i class="bi bi-bookmarks-fill"></i> BIBTEX
     </button>
     
@@ -49,21 +54,21 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 ```{=html}
 
-            <div class="collapse" id="feuer2024dry">
+            <div class="collapse" id="missik2025using">
             <div class="card card-body border-0">
         
 ```
 
 ```bib
-@article{feuer2024dry,
-    doi = {not available},
-    url = {https://doi.org/not available},
-    year = {2024},
-    volume = {not available},
-    number = {not available},
-    author = {Erez Feuer and Yakir Preisler and Dan Yakir and Yair Mau},
-    title = {Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does},
-    journal = {bioRxiv},
+@article{missik2025using,
+  title={Using a plant hydrodynamic model, FETCH4, to supplement measurements and characterize hydraulic traits in a mixed temperate forest},
+  author={Missik, Justine EC and Bohrer, Gil and Scyphers, Madeline E and Matheny, Ashley M and Restrepo Acevedo, Ana Maria and Silva, Marcela and Mirfenderesgi, Golnazalsadat and Mau, Yair},
+  journal={Journal of Geophysical Research: Biogeosciences},
+  volume={130},
+  number={4},
+  pages={e2024JG008198},
+  year={2025},
+  publisher={Wiley Online Library}
 }
 
 ```
@@ -77,6 +82,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 ```{=html}
 <hr/>
+```
+
+### 2024
+
+```{=html}
+</br>
 ```
 
 ###### <i class="fa-regular fa-file svv"></i> Laura Rez, Justine Missik, Gil Bohrer and Yair Mau. Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.  [*bioRxiv*](https://doi.org/10.1101/2024.09.29.615635){target="_blank"}, 2024. {#publication:rez2024stem}
@@ -141,11 +152,10 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 ```bib
 @article{kramer2024climate,
-    doi = {not available},
+    doi = {10.1016/j.agwat.2024.109223},
     url = {https://doi.org/10.1016/j.agwat.2024.109223},
     year = {2024},
-    volume = {not available},
-    number = {not available},
+    volume = {307},
     author = {Isaac Kramer and Nadav Peleg and Yair Mau},
     title = {Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions},
     journal = {Agricultural Water Management},
@@ -1173,7 +1183,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#e3c93220 .cell execution_count=3}
+::: {#f31dbd87 .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1246,7 +1256,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#2562a852 .cell execution_count=4}
+::: {#4787ab05 .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}
