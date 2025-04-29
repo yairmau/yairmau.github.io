@@ -26,15 +26,17 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <!-- ## Papers --> 
 
+### 2025
 <div class="alert alert-danger">
-  **New preprint!** 
+**NEW!** Accepted for publication in **Plant, Cell & Environment**
   </br>
   Tree Growth, Contraction, and Recovery: Disentangling Soil and Atmospheric Drought Effects.  
   Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir, Yair Mau.  
 [link to bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.24.650406v1){target="_blank"}
   </strong></div>
 
-### 2025
+---
+
 
 ```{=html}
 </br>
@@ -1183,7 +1185,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#f31dbd87 .cell execution_count=3}
+::: {#56cb798e .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1256,7 +1258,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#4787ab05 .cell execution_count=4}
+::: {#92ca3b0a .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}
