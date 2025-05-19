@@ -1,6 +1,7 @@
 ---
-title: '{{< fa file >}} Papers'
+title: "{{< fa file >}} Papers"
 echo: false
+jupyter: python3
 section-divs: false
 keep-md: true
 format:
@@ -8,10 +9,16 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Contents
-    code-summary: Show the code
+    code-summary: "Show the code"
+    # code-tools: 
+    #   source: true
+    #   toggle: false
 execute:
-  freeze: auto
+  freeze: auto  # re-render only when source changes
 ---
+
+
+
 
 
 <!-- collapsable bibtex is achieved thus:
@@ -24,22 +31,56 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 
 
-<!-- ## Papers --> 
+<!-- ## Papers -->
 
 ### 2025
-<div class="alert alert-danger">
-**NEW!** Accepted for publication in **Plant, Cell & Environment**
-  </br>
-  Tree Growth, Contraction, and Recovery: Disentangling Soil and Atmospheric Drought Effects.  
-  Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir, Yair Mau.  
-[link to bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.24.650406v1){target="_blank"}
-  </strong></div>
-
----
-
 
 ```{=html}
 </br>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir and Yair Mau. Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects.  [*Plant, Cell and Environment*](https://doi.org/10.1111/pce.15604){target="_blank"}, 2025. {#publication:feuer2025tree}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/feuer-2025-Tree Growth Contraction and Recovery Disentangling Soil and Atmospheric Drought.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#feuer2025tree" aria-expanded="false" aria-controls="feuer2025tree">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="feuer2025tree">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{feuer2025tree,
+    doi = {10.1111/pce.15604},
+    url = {https://doi.org/10.1111/pce.15604},
+    year = {2025},
+    volume = {not available},
+    number = {not available},
+    author = {Erez Feuer and Yakir Preisler and Eyal Rotenberg and Dan Yakir and Yair Mau},
+    title = {Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects},
+    journal = {Plant, Cell and Environment},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
 ```
 
 ###### <i class="fa-regular fa-file svv"></i> Justine E. C. Missik, Gil Bohrer, Madeline E. Scyphers, Ashley M. Matheny, Ana Maria Restrepo Acevedo, Marcela Silva, Golnazalsadat Mirfenderesgi, Yair Mau. Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest.  [*Journal of Geophysical Research: Biogeosciences*](https://doi.org/10.1029/2024JG008198){target="_blank"}, 2025. {#publication:missik2025using}
@@ -1185,7 +1226,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#56cb798e .cell execution_count=3}
+::: {#420359dc .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1258,7 +1299,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#92ca3b0a .cell execution_count=4}
+::: {#3128c5ff .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}

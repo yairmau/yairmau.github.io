@@ -11,7 +11,7 @@ section-divs: false
 
 ## [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
 
-## [{{< iconify whh solarsystem >}} Physics 1](/courses/physics1)
+## [{{< iconify whh solarsystem >}} Physics 1](/physics1)
 
 ## [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment)
 

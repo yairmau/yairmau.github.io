@@ -1,21 +1,22 @@
-feuer2024dry:
-- title: "feuer2024dry"
-  handle: "feuer2024dry"
-  authors: Erez Feuer, Yakir Preisler, Dan Yakir and Yair Mau
-  title: "Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does"
-  journal: bioRxiv
-  year: "2024"
-  doi: not available
+feuer2025tree:
+- title: "feuer2025tree"
+  handle: "feuer2025tree"
+  authors: Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir and Yair Mau
+  title: "Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects"
+  journal: Plant, Cell and Environment
+  year: "2025"
+  doi: 10.1111/pce.15604
+  pdf: archive/papers/feuer-2025-Tree Growth Contraction and Recovery Disentangling Soil and Atmospheric Drought.pdf
   bib: |
-      @article{feuer2024dry,
-          doi = {not available},
-          url = {https://doi.org/not available},
-          year = {2024},
+      @article{feuer2025tree,
+          doi = {10.1111/pce.15604},
+          url = {https://doi.org/10.1111/pce.15604},
+          year = {2025},
           volume = {not available},
           number = {not available},
-          author = {Erez Feuer and Yakir Preisler and Dan Yakir and Yair Mau},
-          title = {Dry Heatwaves Alone Do Not Reduce Tree Resilience, but Their Compounding with Soil Drought Does},
-          journal = {bioRxiv},
+          author = {Erez Feuer and Yakir Preisler and Eyal Rotenberg and Dan Yakir and Yair Mau},
+          title = {Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects},
+          journal = {Plant, Cell and Environment},
       }
 
 missik2025using:

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.41">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yair Mau</title>
+<title>parabola – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,10 +66,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-bb7a3ff63a1944bd7ba88bed100b3cb1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dd557361501cd259981bcea930a6ce6e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Yair Mau</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -139,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -183,14 +183,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 </div>
 <div class="cell-output cell-output-error">
-<pre><code>AttributeError: 'function' object has no attribute 'get_view_spec'</code></pre>
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[5], line 2</span>
+<span class="ansi-green-fg ansi-bold">      1</span> mywidget = interact(f, a=(-10,10,0.1), b=(-10,10,0.1), c=(-10,10,0.1))
+<span class="ansi-green-fg">----&gt; 2</span> embed_minimal_html('par.html', views=[mywidget], title='Widgets export - parabola')
+
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/ipywidgets/embed.py:302</span>, in <span class="ansi-cyan-fg">embed_minimal_html</span><span class="ansi-blue-fg">(fp, views, title, template, **kwargs)</span>
+<span class="ansi-green-fg ansi-bold">    286</span> @doc_subst(_doc_snippets)
+<span class="ansi-green-fg ansi-bold">    287</span> def embed_minimal_html(fp, views, title='IPyWidget export', template=None, **kwargs):
+<span class="ansi-green-fg ansi-bold">    288</span>     """Write a minimal HTML file with widget views embedded.
+<span class="ansi-green-fg ansi-bold">    289</span> 
+<span class="ansi-green-fg ansi-bold">    290</span>     Parameters
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-fg ansi-bold">    300</span>     {embed_kwargs}
+<span class="ansi-green-fg ansi-bold">    301</span>     """
+<span class="ansi-green-fg">--&gt; 302</span>     snippet = embed_snippet(views, **kwargs)
+<span class="ansi-green-fg ansi-bold">    304</span>     values = {
+<span class="ansi-green-fg ansi-bold">    305</span>         'title': title,
+<span class="ansi-green-fg ansi-bold">    306</span>         'snippet': snippet,
+<span class="ansi-green-fg ansi-bold">    307</span>     }
+<span class="ansi-green-fg ansi-bold">    308</span>     if template is None:
+
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/ipywidgets/embed.py:264</span>, in <span class="ansi-cyan-fg">embed_snippet</span><span class="ansi-blue-fg">(views, drop_defaults, state, indent, embed_url, requirejs, cors)</span>
+<span class="ansi-green-fg ansi-bold">    243</span> @doc_subst(_doc_snippets)
+<span class="ansi-green-fg ansi-bold">    244</span> def embed_snippet(views,
+<span class="ansi-green-fg ansi-bold">    245</span>                   drop_defaults=True,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-fg ansi-bold">    250</span>                   cors=True
+<span class="ansi-green-fg ansi-bold">    251</span>                  ):
+<span class="ansi-green-fg ansi-bold">    252</span>     """Return a snippet that can be embedded in an HTML file.
+<span class="ansi-green-fg ansi-bold">    253</span> 
+<span class="ansi-green-fg ansi-bold">    254</span>     Parameters
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-fg ansi-bold">    261</span>     A unicode string with an HTML snippet containing several `&lt;script&gt;` tags.
+<span class="ansi-green-fg ansi-bold">    262</span>     """
+<span class="ansi-green-fg">--&gt; 264</span>     data = embed_data(views, drop_defaults=drop_defaults, state=state)
+<span class="ansi-green-fg ansi-bold">    266</span>     widget_views = '\n'.join(
+<span class="ansi-green-fg ansi-bold">    267</span>         widget_view_template.format(view_spec=escape_script(json.dumps(view_spec)))
+<span class="ansi-green-fg ansi-bold">    268</span>         for view_spec in data['view_specs']
+<span class="ansi-green-fg ansi-bold">    269</span>     )
+<span class="ansi-green-fg ansi-bold">    271</span>     if embed_url is None:
+
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/ipywidgets/embed.py:226</span>, in <span class="ansi-cyan-fg">embed_data</span><span class="ansi-blue-fg">(views, drop_defaults, state)</span>
+<span class="ansi-green-fg ansi-bold">    223</span> # but plug in our own state
+<span class="ansi-green-fg ansi-bold">    224</span> json_data['state'] = state
+<span class="ansi-green-fg">--&gt; 226</span> view_specs = [w.get_view_spec() for w in views]
+<span class="ansi-green-fg ansi-bold">    228</span> return dict(manager_state=json_data, view_specs=view_specs)
+
+File <span class="ansi-green-fg">/opt/anaconda3/lib/python3.9/site-packages/ipywidgets/embed.py:226</span>, in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-fg ansi-bold">    223</span> # but plug in our own state
+<span class="ansi-green-fg ansi-bold">    224</span> json_data['state'] = state
+<span class="ansi-green-fg">--&gt; 226</span> view_specs = [w.get_view_spec() for w in views]
+<span class="ansi-green-fg ansi-bold">    228</span> return dict(manager_state=json_data, view_specs=view_specs)
+
+<span class="ansi-red-fg">AttributeError</span>: 'function' object has no attribute 'get_view_spec'</pre>
+</div>
 </div>
 </div>
 <div id="cell-3" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> IntSlider</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a>slider <span class="op">=</span> IntSlider(value<span class="op">=</span><span class="dv">40</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>embed_minimal_html(<span class="st">'export.html'</span>, views<span class="op">=</span>[slider], title<span class="op">=</span><span class="st">'Widgets export'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> IntSlider</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>slider <span class="op">=</span> IntSlider(value<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>embed_minimal_html(<span class="st">'export.html'</span>, views<span class="op">=</span>[slider], title<span class="op">=</span><span class="st">'Widgets export'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -231,18 +287,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -274,7 +319,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -282,7 +347,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -379,7 +444,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
