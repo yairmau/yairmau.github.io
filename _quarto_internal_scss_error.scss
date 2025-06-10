@@ -1,4 +1,4 @@
-// quarto-scss-analysis-annotation { "quarto-version": "1.6.41" }
+// quarto-scss-analysis-annotation { "quarto-version": "1.7.31" }
 
 // quarto-scss-analysis-annotation { "origin": "'use' section from format" }
 
@@ -5322,7 +5322,6 @@ $grid-default-toc-mid-body: minmax(
 @import "mixins/banner";
 @include bsBanner("");
 
-
 // scss-docs-start import-stack
 // Configuration
 @import "variables-dark";
@@ -5335,6 +5334,7 @@ $grid-default-toc-mid-body: minmax(
 @import "type";
 @import "images";
 @import "containers";
+@import "light-dark";
 @import "grid";
 @import "tables";
 @import "forms";
@@ -10401,10 +10401,6 @@ $mermaid-node-fg-color: $primary !default;
   margin-right: 5px;
   background-color: transparent;
   z-index: 3;
-}
-
-.code-copy-button:focus {
-  outline: none;
 }
 
 .code-copy-button-tooltip {

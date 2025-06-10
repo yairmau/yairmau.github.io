@@ -38,22 +38,6 @@ plant responses to drought and heatwaves
 ::::
 :::
 
-
-
-<!-- ------------ -->
-
-::: {layout="[30,20]"}
-:::: text_here
-## Nurit Goldberg
-### PhD student
-
-soil compaction, soil salinization
-
-::::
-:::: picture_here
-<img src="archive/images/group/nurit-goldberg.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
-:::
 <!-- ------------ -->
 
 ::: {layout="[30,20]"}
@@ -62,6 +46,8 @@ soil compaction, soil salinization
 ### MSc student
 
 Plant-plant interactions in a consumer-resource framework
+
+Co-advisor: [Niv DeMalach](https://plantscience.agri.huji.ac.il/people/niv-de-malach)
 
 ::::
 :::: picture_here
@@ -77,6 +63,9 @@ Plant-plant interactions in a consumer-resource framework
 ### MSc student
 
 Urban tree resilience across the globe
+
+Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
+
 ::::
 :::: picture_here
 <img src="archive/images/group/dolev-arav-450px.png" border="0" alt="" width="300px" class="rounded-circle"/>
@@ -87,16 +76,20 @@ Urban tree resilience across the globe
 
 ::: {layout="[30,20]"}
 :::: text_here
-## Matar Tal
-### Undergraduate student (Amirim)
+## Michael Ruggill
+### MSc student
 
-Water dynamics in the soil-plant-atmosphere continuum
+Urban tree monitoring and early-warning stress indices
+
+Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
 
 ::::
 :::: picture_here
-<img src="archive/images/group/matar-tal-380px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+<img src="archive/images/group/michael-ruggill-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
 ::::
 :::
+
+
 
 <!-- ------------ -->
 
@@ -104,20 +97,25 @@ Water dynamics in the soil-plant-atmosphere continuum
 
 # Former members
 
-<!-- vertical alignment
-https://quarto.org/docs/authoring/figures.html#vertical-alignment -->
-
-<!-- ::: {layout="[5,30]" layout-valign="center"}
-:::: picture_here
-<img src="archive/images/group/laura-500px.png" border="0" alt="" width="100px" class="rounded-circle zoom"/>
-::::
-:::: text_here
-##### Laura Rez
-**2020--2022**, MSc student  
-::::
-::: -->
 
 <!-- ------------ -->
+
+<!-- ------------ -->
+
+<br>
+
+::: {layout="[10,30,5]" layout-valign="center"}
+:::: picture_here
+<img src="archive/images/group/nurit-goldberg.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
+::::
+:::: text_here
+##### Nurit Goldberg
+**2020--2024**, PhD student  
+soil compaction, soil salinization
+::::
+:::: stam
+::::
+:::
 
 <br>
 
