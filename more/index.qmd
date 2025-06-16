@@ -5,7 +5,7 @@ echo: false
 section-divs: false
 ---
 
-## <i class="fab fa-python fa-fw fa-lg fa-notbold svv"></i> [Python tutorial](/tutorials/python/)
+## <i class="fab fa-python fa-fw fa-lg fa-notbold svv"></i> [Python tutorial](/python/)
 
 ## <i class="fa-solid fa-quote-left fa-fw fa-lg fa-notbold svv"></i> [Quotes](/more/quotes.html)
 
