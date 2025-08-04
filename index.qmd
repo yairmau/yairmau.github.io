@@ -7,20 +7,12 @@ execute:
   freeze: auto  # re-render only when source changes
 ---
 
-<!-- {{< fa thumbs-up >}}  -->
-
 <!-- trick from here
 https://stackoverflow.com/questions/18032220/how-to-change-source-of-img-tag-on-hover -->
 ::: {layout="[20,30]" layout-valign="center"}
 
 :::: image_here
-<!-- <img src="archive/images/group/yair2022_primitive.png" 
-    onmouseover="this.src='archive/images/group/yair2022.png'"
-    onmouseout="this.src='archive/images/group/yair2022_primitive.png'"
-    border="0" alt="" width="300px" class="rounded-circle"/> -->
-<!-- <img src="archive/images/group/150.png"
-    border="0" alt="" width="300px" class="rounded-circle"/> -->
-<img src="archive/images/group/6.png"
+<img src="archive/images/group/yairmau_headshot.png"
     border="0" alt="" width="300px"/>
 ::::
 
@@ -61,39 +53,9 @@ Besides the usual academic pages (Science, Papers, Group, Courses), I hid a lot 
 **2009:** [MSc](/papers.html#msc-thesis) in Physics, Ben-Gurion University of the Negev  
 **2005:** BSc in Physics, University of São Paulo  
 
-
-```{python}
-#| label: "software"
-#| id: "software"
-#| output: asis
-#| echo: false
-import yaml
-from IPython.display import display, Markdown, HTML
-
-display(HTML(
-"""
-<a class="btn my-btn-style btn-sm rounded", href="https://orcid.org/0000-0001-6987-7597" target="_blank">ORCID</a>
-"""
-))
-
-display(HTML(
-"""
-<a class="btn my-btn-style btn-sm rounded", href="https://scholar.google.com/citations?user=kiKmEQMAAAAJ&hl=en&oi=ao" target="_blank">Scholar</a>
-"""
-))
-
-display(HTML(
-"""
-<a class="btn my-btn-style btn-sm rounded", href="https://twitter.com/MauYair" target="_blank">Twitter</a>
-"""
-))
-
-display(HTML(
-"""
-<a class="btn my-btn-style btn-sm rounded", href="https://huji.zoom.us/my/yairmau" target="_blank">Zoom</a>
-"""
-))
-```
+<a href="https://orcid.org/0000-0001-6987-7597" class="btn my-btn-style btn-sm rounded" role="button">ORCID</a>
+<a href="https://scholar.google.com/citations?user=kiKmEQMAAAAJ&hl=en&oi=ao" class="btn my-btn-style btn-sm rounded" role="button">Scholar</a>
+<a href="https://huji.zoom.us/my/yairmau" class="btn my-btn-style btn-sm rounded" role="button">Zoom</a>
 
 ---
 
