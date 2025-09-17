@@ -5,16 +5,30 @@ echo: false
 section-divs: false
 ---
 
-## [<i class="bi bi-cloud-rain-fill"></i> Surface Hydrology](/surface-hydrology)
+**Stuff I teach or taught**
 
-## [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io)
+### [<i class="bi bi-cloud-rain-fill"></i> Surface Hydrology](/surface-hydrology)
 
-## [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
+### [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io)
 
-## [{{< iconify whh solarsystem >}} Physics 1](/physics1)
+### [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
 
-## [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment)
+### [{{< iconify whh solarsystem >}} Physics 1](/physics1) (2018--2022)
 
+</br>
+
+**Stuff I'm learning myself **
+
+### [{{< iconify foundation graph-bar >}} Statistics and ML](/statistics)
+
+</br>
+
+**Admin stuff, related to teaching**
+
+### [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment)
+
+
+</br></br>
 
 <div class="alert alert-success">
   True science teaches, above all, to doubt and to be ignorant.  
