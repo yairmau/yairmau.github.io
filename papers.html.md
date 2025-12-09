@@ -1,7 +1,6 @@
 ---
-title: "{{< fa file >}} Papers"
+title: '{{< fa file >}} Papers'
 echo: false
-jupyter: python3
 section-divs: false
 keep-md: true
 format:
@@ -9,16 +8,10 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Contents
-    code-summary: "Show the code"
-    # code-tools: 
-    #   source: true
-    #   toggle: false
+    code-summary: Show the code
 execute:
-  freeze: auto  # re-render only when source changes
+  freeze: auto
 ---
-
-
-
 
 
 <!-- collapsable bibtex is achieved thus:
@@ -37,6 +30,48 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 ```{=html}
 </br>
+```
+
+###### <i class="fa-regular fa-file svv"></i> Oded Hollander, Yair Mau and Niv DeMalach. Mechanisms behind facilitation-competition transition along rainfall gradients.  [*bioRxiv*](https://doi.org/10.1101/2025.11.24.690218){target="_blank"}, 2025. {#publication:hollander2025mechanisms}
+
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/hollander-2025-mechanisms behind facilitation-competition transition along rainfall gradients.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#hollander2025mechanisms" aria-expanded="false" aria-controls="hollander2025mechanisms">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+
+```{=html}
+
+            <div class="collapse" id="hollander2025mechanisms">
+            <div class="card card-body border-0">
+        
+```
+
+```bib
+@article{hollander2025mechanisms,
+    doi = {10.1101/2025.11.24.690218},
+    url = {https://doi.org/10.1101/2025.11.24.690218},
+    year = {2025},
+    author = {Hollander, Oded and Mau, Yair and DeMalach, Niv},
+    title = {Mechanisms behind facilitation-competition transition along rainfall gradients},
+    journal = {bioRxiv},
+}
+
+```
+
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+```{=html}
+<hr/>
 ```
 
 ###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir and Yair Mau. Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects.  [*Plant, Cell and Environment*](https://doi.org/10.1111/pce.15604){target="_blank"}, 2025. {#publication:feuer2025tree}
@@ -1226,7 +1261,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#420359dc .cell execution_count=3}
+::: {#10a4e1c2 .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1299,7 +1334,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#3128c5ff .cell execution_count=4}
+::: {#658230c4 .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}

@@ -124,6 +124,7 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 display(Markdown("### 2025"))
 display(HTML("</br>"))
+print_paper(yaml_data['hollander2025mechanisms'][0])
 print_paper(yaml_data['feuer2025tree'][0])
 print_paper(yaml_data['missik2025using'][0])
 

@@ -1,3 +1,22 @@
+hollander2025mechanisms:
+- title: "hollander2025mechanisms"
+  handle: "hollander2025mechanisms"
+  authors: Oded Hollander, Yair Mau and Niv DeMalach
+  title: "Mechanisms behind facilitation-competition transition along rainfall gradients"
+  journal: bioRxiv
+  year: "2025"
+  doi: 10.1101/2025.11.24.690218
+  pdf: archive/papers/hollander-2025-mechanisms behind facilitation-competition transition along rainfall gradients.pdf
+  bib: |
+      @article{hollander2025mechanisms,
+          doi = {10.1101/2025.11.24.690218},
+          url = {https://doi.org/10.1101/2025.11.24.690218},
+          year = {2025},
+          author = {Hollander, Oded and Mau, Yair and DeMalach, Niv},
+          title = {Mechanisms behind facilitation-competition transition along rainfall gradients},
+          journal = {bioRxiv},
+      }
+
 feuer2025tree:
 - title: "feuer2025tree"
   handle: "feuer2025tree"

@@ -19,7 +19,7 @@ https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html -->
 > --- **Piet Hein**
 ::::
 :::: picture_here
-<img src="archive/images/group/yair2022.png" border="0" alt="" width="300px" class="rounded-circle"/>
+<img src="archive/images/group/yair2025.jpg" border="0" alt="" width="300px" class="rounded-circle"/>
 ::::
 :::
 
