@@ -13,7 +13,6 @@ execute:
   freeze: auto
 ---
 
-
 <!-- collapsable bibtex is achieved thus:
 https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
@@ -27,13 +26,10 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 <!-- ## Papers -->
 
 ### 2025
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Oded Hollander, Yair Mau and Niv DeMalach. Mechanisms behind facilitation-competition transition along rainfall gradients.  [*bioRxiv*](https://doi.org/10.1101/2025.11.24.690218){target="_blank"}, 2025. {#publication:hollander2025mechanisms}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/hollander-2025-mechanisms behind facilitation-competition transition along rainfall gradients.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -43,14 +39,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="hollander2025mechanisms">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{hollander2025mechanisms,
     doi = {10.1101/2025.11.24.690218},
@@ -62,7 +56,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -70,12 +63,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Yakir Preisler, Eyal Rotenberg, Dan Yakir and Yair Mau. Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects.  [*Plant, Cell and Environment*](https://doi.org/10.1111/pce.15604){target="_blank"}, 2025. {#publication:feuer2025tree}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/feuer-2025-Tree Growth Contraction and Recovery Disentangling Soil and Atmospheric Drought.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -85,14 +77,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="feuer2025tree">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{feuer2025tree,
     doi = {10.1111/pce.15604},
@@ -106,7 +96,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -114,12 +103,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Justine E. C. Missik, Gil Bohrer, Madeline E. Scyphers, Ashley M. Matheny, Ana Maria Restrepo Acevedo, Marcela Silva, Golnazalsadat Mirfenderesgi, Yair Mau. Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest.  [*Journal of Geophysical Research: Biogeosciences*](https://doi.org/10.1029/2024JG008198){target="_blank"}, 2025. {#publication:missik2025using}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/missik2025-Using a Plant Hydrodynamic Model FETCH4 to Supplement Measurements and Characterize.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -129,14 +117,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="missik2025using">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{missik2025using,
   title={Using a plant hydrodynamic model, FETCH4, to supplement measurements and characterize hydraulic traits in a mixed temperate forest},
@@ -150,7 +136,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -158,32 +143,27 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2024
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Laura Rez, Justine Missik, Gil Bohrer and Yair Mau. Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.  [*bioRxiv*](https://doi.org/10.1101/2024.09.29.615635){target="_blank"}, 2024. {#publication:rez2024stem}
-
 ```{=html}
 <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#rez2024stem" aria-expanded="false" aria-controls="rez2024stem">
     <i class="bi bi-bookmarks-fill"></i> BIBTEX
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="rez2024stem">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{rez2024stem,
     doi = {10.1101/2024.09.29.615635},
@@ -197,7 +177,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -205,12 +184,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Nadav Peleg and Yair Mau. Climate Change Shifts Risk of Soil Salinity and Land Degradation in Water-Scarce Regions.  [*Agricultural Water Management*](https://doi.org/10.1016/j.agwat.2024.109223){target="_blank"}, 2024. {#publication:kramer2024climate}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2025-Climate change shifts risk of soil salinity and land degradation in water-scarce regions.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -220,14 +198,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2024climate">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2024climate,
     doi = {10.1016/j.agwat.2024.109223},
@@ -240,7 +216,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -248,12 +223,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Nurit Goldberg-Yehuda, Uri Nachshon, Shmuel Assouline and Yair Mau. The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning.  [*Catena*](https://doi.org/10.1016/j.catena.2024.108068){target="_blank"}, 2024. {#publication:goldberg2024effect}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/goldberg-2024-The effect of mechanical compaction on the soil water retention curve- Insights from a rapid image analysis of micro-CT scanning.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -263,14 +237,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="goldberg2024effect">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{goldberg2024effect,
     doi = {10.1016/j.catena.2024.108068},
@@ -284,7 +256,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -292,12 +263,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Mantova et al.. Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.  [*New Phytologist*](https://doi.org/10.1111/nph.19621){target="_blank"}, 2024. {#publication:mantova2024monitoring}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mantova-2024-monitoring urban trees across the world Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -307,14 +277,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mantova2024monitoring">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mantova2024monitoring,
     title = {Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network (<scp>UTEN</scp>) inaugural workshop: The Urban Trees Ecophysiology Network inaugural workshop,  Georgia Center at the University of Georgia,  Athens,  United States,  March 2023},
@@ -327,7 +295,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -335,18 +302,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2023
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Review: Modeling the Effects of Salinity and Sodicity in Agricultural Systems.  [*Water Resources Research*](https://doi.org/10.1029/2023WR034750){target="_blank"}, 2023. {#publication:kramer2023review}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2023-Review- Modeling the Effects of Salinity and Sodicity in Agricultural Systems.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -356,14 +320,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2023review">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2022effects,
     doi = {10.1029/2023WR034750},
@@ -377,7 +339,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -385,18 +346,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2022
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yaara Tsairi, Michael Buchdahl Roth, Alon Tal, and Yair Mau. Effects of population growth on Israel’s demand for desalinated water.  [*npj Clean Water*](https://doi.org/10.1038/s41545-022-00215-9){target="_blank"}, 2022. {#publication:kramer2022effects}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-Effects of population growth on Israels demand for desalinated water.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -406,14 +364,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2022effects">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2022effects,
     doi = {10.1038/s41545-022-00215-9},
@@ -425,7 +381,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -433,12 +388,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, and Yair Mau. The Sustainability of Treated Wastewater Irrigation: The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.  [*Water Resources Research*](https://doi.org/10.1029/2021WR031307){target="_blank"}, 2022. {#publication:kramer2022sustainability}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2022-The Sustainability of Treated Wastewater Irrigation- The Impact of Hysteresis on Saturated Soil Hydraulic Conductivity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -448,14 +402,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2022sustainability">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2022sustainability,
     doi = {10.1029/2021WR031307},
@@ -467,7 +419,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -475,12 +426,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Taiwo Adeyemo, Isaac Kramer, Guy J. Levy, and Yair Mau. Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.  [*Geoderma*](https://doi.org/10.1016/j.geoderma.2022.115765){target="_blank"}, 2022. {#publication:adeyemo2022salinity}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/adeyemo-2022-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -490,14 +440,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="adeyemo2022salinity">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{adeyemo2022salinity,
     doi = {10.1016/j.geoderma.2022.115765},
@@ -513,7 +461,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -521,12 +468,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Nurit Goldberg Yehuda, Shmuel Assouline, Yair Mau, and Uri Nachshon. Compaction effects on evaporation and salt precipitation in drying porous media.  [*HESS*](https://doi.org/10.5194/hess-26-2499-2022){target="_blank"}, 2022. {#publication:goldberg2022compaction}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/goldberg-2022-Compaction effects on evaporation and salt precipitation in drying porous media.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -536,14 +482,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="goldberg2022compaction">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{goldberg2022compaction,
     title={Compaction effects on evaporation and salt precipitation in drying porous media},
@@ -557,7 +501,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -565,18 +508,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2021
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yuval R. Zelnik, Yair Mau, Moshe Shachak, and Ehud Meron. High-integrity human intervention in ecosystems: Tracking self-organization modes.  [*PLOS Computational Biology*](https://doi.org/10.1371/journal.pcbi.1009427){target="_blank"}, 2021. {#publication:zelnik2021high}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/zelnik-2021-High-integrity human intervention in ecosystems- Tracking self-organization modes.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -586,14 +526,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="zelnik2021high">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{zelnik2021high,
       doi = {10.1371/journal.pcbi.1009427},
@@ -608,7 +546,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -616,12 +553,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and Yair Mau. Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework.  [*HESS*](https://doi.org/10.5194/hess-25-1993-2021){target="_blank"}, 2021. {#publication:kramer2021hysteresis}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2021-Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity- a modeling framework.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -634,14 +570,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2021hysteresis">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2020hysteresis,
       doi = {10.5194/hess-25-1993-2021},
@@ -656,7 +590,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -664,18 +597,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2020
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Isaac Kramer and Yair Mau. Soil degradation risks assessed by the SOTE model for salinity and sodicity.  [*Water Resources Research*](https://doi.org/10.1029/2020WR027456){target="_blank"}, 2020. {#publication:kramer2020soil}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kramer-2020-Soil degradation risks assessed by the SOTE model for salinity and sodicity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -688,14 +618,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kramer2020soil">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kramer2020soil,
       doi = {10.1029/2020WR027456},
@@ -710,7 +638,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -718,12 +645,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Xing Chen, Mukesh Kumar, Daniel de B. Richter, and Yair Mau. Impact of gully incision on hillslope hydrology.  [*Hydrological Processes*](https://doi.org/10.1002/hyp.13845){target="_blank"}, 2020. {#publication:chen2020impact}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/chen-2020-Impact of gully incision on hillslope hydrology.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -733,14 +659,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="chen2020impact">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{chen2020impact,
   doi = {10.1002/hyp.13845},
@@ -756,7 +680,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -764,12 +687,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Avigail Kaner, Yakir Preisler, José M. Grünzweig, and Yair Mau. Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.  [*bioRxiv*](https://doi.org/10.1101/2020.02.11.943563){target="_blank"}, 2020. {#publication:kaner2020internal}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/kaner-2020-Internal water storage buffering maintains plant function under drought as described by a general hydraulic model.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -779,14 +701,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="kaner2020internal">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{kaner2020internal,
   doi = {10.1101/2020.02.11.943563},
@@ -802,7 +722,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -810,18 +729,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2016
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. Optimal control solutions to sodic soil reclamation.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2016.02.014){target="_blank"}, 2016. {#publication:mau2016optimal}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2016-Optimal control solutions to sodic soil reclamation.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -831,14 +747,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2016optimal">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2016optimal,
   doi = {10.1016/j.advwatres.2016.02.014},
@@ -852,7 +766,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -860,18 +773,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2015
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Amilcare Porporato, Xue Feng, Stefano Manzoni, Yair Mau, Anthony J. Parolari, and Giulia Vico. Ecohydrological modeling in agroecosystems: Examples and challenges.  [*Water Resources Research*](https://doi.org/10.1002/2015WR017289){target="_blank"}, 2015. {#publication:porporato2015ecohydrological}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/porporato-2015-Ecohydrological modeling in agroecosystems-Examples and challenges.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -881,14 +791,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="porporato2015ecohydrological">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{porporato2015ecohydrological,
   doi = {10.1002/2015wr017289},
@@ -903,7 +811,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -911,12 +818,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau and Amilcare Porporato. A dynamical system approach to soil salinity and sodicity.  [*Advances in Water Resources*](https://doi.org/10.1016/j.advwatres.2015.05.010){target="_blank"}, 2015. {#publication:mau2015dynamical}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2015-A dynamical system approach to soil salinity and sodicity.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -926,14 +832,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2015dynamical">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2015dynamical,
   year  = {2015},
@@ -947,7 +851,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -955,12 +858,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, and Ehud Meron. Reversing desertification as a spatial resonance problem.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.91.012903){target="_blank"}, 2015. {#publication:mau2015reversing}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2015-Reversing desertification as a spatial resonance problem.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -970,14 +872,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2015reversing">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2015reversing,
   title={Reversing desertification as a spatial resonance problem},
@@ -992,7 +892,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -1000,18 +899,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2014
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau, Xue Feng, and Amilcare Porporato. Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.052128){target="_blank"}, 2014. {#publication:mau2014multiplicative}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2014-Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1021,14 +917,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2014multiplicative">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2014multiplicative,
   title={Multiplicative jump processes and applications to leaching of salt and contaminants in the soil},
@@ -1043,7 +937,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -1051,12 +944,11 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Lev Haim, Yair Mau, and Ehud Meron. Spatial forcing of pattern-forming systems that lack inversion symmetry.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.90.022904){target="_blank"}, 2014. {#publication:haim2014spatial}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/haim-2014-Spatial forcing of pattern-forming systems that lack inversion symmetry.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1066,14 +958,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="haim2014spatial">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{haim2014spatial,
   title={Spatial forcing of pattern-forming systems that lack inversion symmetry},
@@ -1088,7 +978,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -1096,18 +985,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2013
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau, Lev Haim, Aric Hagberg, and Ehud Meron. Competing resonances in spatially forced pattern-forming systems.  [*Physical Review E*](https://doi.org/10.1103/PhysRevE.88.032917){target="_blank"}, 2013. {#publication:mau2013competing}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2013-Competing resonances in spatially forced pattern-forming systems.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1117,14 +1003,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2013competing">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2013competing,
   title={Competing resonances in spatially forced pattern-forming systems},
@@ -1139,7 +1023,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -1147,18 +1030,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2012
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Spatial periodic forcing can displace patterns it is intended to control.  [*Physical Review Letters*](https://doi.org/10.1103/PhysRevLett.109.034102){target="_blank"}, 2012. {#publication:mau2012spatial}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2012-Spatial periodic forcing can displace patterns it is intended to control.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1168,14 +1048,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2012spatial">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2012spatial,
   title={Spatial periodic forcing can displace patterns it is intended to control},
@@ -1190,7 +1068,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 }
 
 ```
-
 ```{=html}
 
             </div>
@@ -1198,18 +1075,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 ### 2009
-
 ```{=html}
 </br>
 ```
-
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau, Aric Hagberg, and Ehud Meron. Dual-mode spiral vortices.  [*Physical Review E*](https://doi.org/10.1103/physreve.80.065203){target="_blank"}, 2009. {#publication:mau2009dual}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau-2009-Dual-mode spiral vortices.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1219,14 +1093,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 ```{=html}
 
             <div class="collapse" id="mau2009dual">
             <div class="card card-body border-0">
         
 ```
-
 ```bib
 @article{mau2009dual,
   title={Dual-mode spiral vortices},
@@ -1241,7 +1113,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 } 
 
 ```
-
 ```{=html}
 
             </div>
@@ -1249,10 +1120,10 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
             
 ```
 
+
 ```{=html}
 <hr/>
 ```
-
 
 
 ## Theses
@@ -1268,7 +1139,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/mau2013-phd_final_version.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1278,18 +1148,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 
             <div class="collapse" id="mau2013phdthesis">
             <div class="card card-body border-0">
         
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
@@ -1305,14 +1172,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 
             </div>
             </div>
             
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
@@ -1321,11 +1186,9 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 <hr/>
 ```
-
 :::
 :::
 
@@ -1341,7 +1204,6 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/msc_thesis_yair11.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
@@ -1351,18 +1213,15 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
     </button>
     
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 
             <div class="collapse" id="mau2009mscthesis">
             <div class="card card-body border-0">
         
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
@@ -1377,14 +1236,12 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 
             </div>
             </div>
             
 ```
-
 :::
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
@@ -1393,11 +1250,9 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 :::
 
 ::: {.cell-output .cell-output-display}
-
 ```{=html}
 <hr/>
 ```
-
 :::
 :::
 

@@ -15,9 +15,9 @@ section-divs: false
 
 ## <i class="fas fa-blog fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> [Blog](/blog)
 
-### Even more
+## <i class="fas fa-palette fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> [Color](/more/color/color.html)
 
-* <i class="fas fa-palette fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> [Color](/more/color/color.html)
+## <i class="fas fa-star fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> [Recommendations](/more/recommendations.html)
 
 ## How I made this website
 
