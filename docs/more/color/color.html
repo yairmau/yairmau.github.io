@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,15 +64,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-aa0006ec45185f41362e9cf29e779a84.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1d9754e6b7e1dc15a659fbcd6780067e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a5b1d8b91c1c2fb7295a750029b1d204.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-537292870f20439e03a7f38f4e0d293c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -114,8 +113,7 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
-    <img src="../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    <img src="../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yair Mau</span>
@@ -238,10 +236,10 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 <a href="https://jiffyclub.github.io/palettable/">Click Here</a></p>
 <p><img src="https://jiffyclub.github.io/palettable/colorbrewer/diverging/img/BrBG_11_continuous.png" class="img-fluid"><br>
 <img src="https://jiffyclub.github.io/palettable/colorbrewer/diverging/img/BrBG_11_discrete.png" class="img-fluid"></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># how to import colormap</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># how to import colormap</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">from</span> palettable.colorbrewer.qualitative <span class="im">import</span> Dark2_7</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># how to retrieve color list</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>Dark2_7.hex_colors</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4"></a>Dark2_7.hex_colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="image-color-picker" class="level2">
 <h2 class="anchored" data-anchor-id="image-color-picker">Image Color Picker</h2>
@@ -262,7 +260,7 @@ Upload your own image, use a picture from the internet, load a whole website!</p
 </section>
 <section id="changing-lightness-of-matplotlib-color" class="level2">
 <h2 class="anchored" data-anchor-id="changing-lightness-of-matplotlib-color">Changing Lightness of Matplotlib Color</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.colors</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> matplotlib.colors</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> colorsys</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="kw">def</span> add_lightness(color_name, L):</span>
@@ -278,7 +276,7 @@ Upload your own image, use a picture from the internet, load a whole website!</p
 <span id="cb2-14"><a href="#cb2-14"></a>    new_shade_rgb <span class="op">=</span> colorsys.hls_to_rgb(<span class="op">*</span>new_color_hls)</span>
 <span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">return</span> new_shade_rgb</span>
 <span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a>add_lightness(<span class="st">"gold"</span>, <span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-17"><a href="#cb2-17"></a>add_lightness(<span class="st">"gold"</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -335,14 +333,13 @@ Upload your own image, use a picture from the internet, load a whole website!</p
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

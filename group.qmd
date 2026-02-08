@@ -89,7 +89,20 @@ Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
 ::::
 :::
 
+<!-- ------------ -->
 
+::: {layout="[30,20]"}
+:::: text_here
+## Omer Tzuk
+### Postdoc
+
+Water-plant relations in drylands, active inference regarding plant behavior and decision-making
+
+::::
+:::: picture_here
+<img src="archive/images/group/omer-tzuk-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
 
 <!-- ------------ -->
 
