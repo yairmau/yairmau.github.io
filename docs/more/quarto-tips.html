@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title> Science Communication – Yair Mau</title>
+<title>quarto tips – Yair Mau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-050095ae66e8aec310293989169018f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -66,11 +102,54 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -120,13 +199,26 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cards" id="toc-cards" class="nav-link active" data-scroll-target="#cards">cards</a></li>
+  <li><a href="#offcanvas" id="toc-offcanvas" class="nav-link" data-scroll-target="#offcanvas">offcanvas</a></li>
+  <li><a href="#footnotes" id="toc-footnotes" class="nav-link" data-scroll-target="#footnotes">footnotes</a></li>
+  <li><a href="#callout" id="toc-callout" class="nav-link" data-scroll-target="#callout">callout</a></li>
+  <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">details</a></li>
+  <li><a href="#column-margin" id="toc-column-margin" class="nav-link" data-scroll-target="#column-margin">column margin</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><i class="fa-solid fa-microphone-alt" aria-label="microphone-alt"></i> Science Communication</h1>
+<h1 class="title">quarto tips</h1>
 </div>
 
 
@@ -143,53 +235,164 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 </header>
 
 
-<h2 id="talks" class="anchored">Talks</h2>
-<p>A scientific talk <strong>is not</strong> a scientific paper, it is a completely different medium! Here are a few tips that I find useful.</p>
-<h3 id="how-to-give-a-talk" class="anchored">How To Give a Talk</h3>
-<p>[<a href="http://www.howtogiveatalk.com/">How To Give a Talk, by David L Stern.</a>]</p>
-<p><strong>Excerpt:</strong></p>
-<blockquote class="blockquote">
-<p><strong>Principle 1 - Don’t Put Words On Slides</strong><br>
-It may not seem intuitive, but including words on slides has a bigger detrimental effect on the quality of a talk than any other issue I will address.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The slides in most science talks contain many words. This simple fact has many consequences, none positive. Most obviously, words on slides impel listeners to read the words on the slide. If you are talking while they are reading, then you generate cognitive dissonance that makes it difficult for the audience to understand either your spoken words or your written words. So, if you want your audience to read the words on a slide, then, presumably, you should shut up. But, I don’t recommend that. Instead, just cut all the words form your slides.</p>
-</blockquote>
-<h3 id="the-david-attenborough-style-of-scientific-presentation" class="anchored">The David Attenborough Style of Scientific Presentation</h3>
-<p>[<a href="https://www.dropbox.com/s/j1vv2baheiduvip/David%20Attenborough%20talk%20technique%202018.pdf?dl=0">The David Attenborough Style of Scientific Presentation.</a>]</p>
-<p><strong>Excerpt:</strong></p>
-<blockquote class="blockquote">
-<p>Get into this mindset: your main job is to be an entertainer, not a scientist. Most scientists don’t do this, which is why most scientific talks are bad. The fact of the matter is that if the audience doesn’t understand and enjoy your talk, they won’t care if your science is good.</p>
-</blockquote>
-<h3 id="a-latex-template" class="anchored">A LaTeX template</h3>
-<p>Check out a nice LaTeX template for presentations [<a href="../tutorials/latex/#presentation">here</a>].</p>
-<hr>
-<h2 id="visualizations" class="anchored">Visualizations</h2>
-<p>Visualizations can take a message very, very far. I put a lot of thinking into how to best express an idea. I believe that great graphs greatly improve a scientific paper, and a thoughful graph/animation surely brings home the main point of a talk. Here are a few thoughts on visualizations.</p>
-<h3 id="inspiration" class="anchored">Inspiration</h3>
+<section id="cards" class="level2">
+<h2 class="anchored" data-anchor-id="cards">cards</h2>
+<div class="card bg-info">
+<div class="card-header">
+<p><span class="h3">header here</span></p>
+</div>
+<div class="card-body pb-0">
+<p>Cards are really useful to give emphasis to whatever you need, such as tips, questions, warnings, etc. You can put <a href="https://yairmau.com" class="text-light text-decoration-underline">links</a>, images, whatever. Try other colors, such as <code>.bg-primary</code>, <code>.bg-secondary</code>, <code>.bg-success</code>, <code>.bg-danger</code>, <code>.bg-warning</code>, <code>.bg-dark</code>, etc.</p>
+</div>
+</div>
+<p><br></p>
+<p>another one</p>
+<div class="card bg-warning card-body pb-0">
+<p>This doesn’t have a header.</p>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.card .bg-info}</span>
+<span id="cb1-2"><a href="#cb1-2"></a>::: {.card-header}</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">[</span><span class="ot">header here</span><span class="co">]</span>{.h3}</span>
+<span id="cb1-4"><a href="#cb1-4"></a>:::</span>
+<span id="cb1-5"><a href="#cb1-5"></a>::: {.card-body .pb-0}</span>
+<span id="cb1-6"><a href="#cb1-6"></a>Cards are really useful to give emphasis to whatever you need, such as tips, questions, warnings, etc. You can put <span class="co">[</span><span class="ot">links</span><span class="co">](https://yairmau.com)</span>{.text-light .text-decoration-underline}, images, whatever. Try other colors, such as <span class="in">`.bg-primary`</span>, <span class="in">`.bg-secondary`</span>, <span class="in">`.bg-success`</span>, <span class="in">`.bg-danger`</span>, <span class="in">`.bg-warning`</span>, <span class="in">`.bg-dark`</span>, etc.</span>
+<span id="cb1-7"><a href="#cb1-7"></a>:::</span>
+<span id="cb1-8"><a href="#cb1-8"></a>:::</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>another one</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a>::: {.card .bg-warning .card-body .pb-0}</span>
+<span id="cb1-14"><a href="#cb1-14"></a>This doesn't have a header.</span>
+<span id="cb1-15"><a href="#cb1-15"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="offcanvas" class="level2">
+<h2 class="anchored" data-anchor-id="offcanvas">offcanvas</h2>
+<div id="offcanvasPythagoras" class="offcanvas offcanvas-start">
+<section id="answer" class="level3 unnumbered unlisted offcanvas-header">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="answer">Answer</h3>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+</button>
+</section>
+<div class="offcanvas-body">
+<p>Pythagoras’ formula:</p>
+<p><span class="math display">c = \sqrt{a^2 + b^2}</span></p>
+</div>
+</div>
+<p>Question: what is Pythagoras’ formula for the hypotenuse of a right triangle?</p>
+<div class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPythagoras" style="height: 2.5rem; line-height: 2.3rem; padding-top: 0; padding-bottom: 0;">
+<p>Answer here</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {#offcanvasPythagoras .offcanvas .offcanvas-start}</span>
+<span id="cb2-2"><a href="#cb2-2"></a>::: {.offcanvas-header}</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">### Answer {.unnumbered .unlisted}</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn-close"</span><span class="ot"> data-bs-dismiss</span><span class="op">=</span><span class="st">"offcanvas"</span><span class="dt">&gt;&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>:::</span>
+<span id="cb2-6"><a href="#cb2-6"></a>::: {.offcanvas-body}</span>
+<span id="cb2-7"><a href="#cb2-7"></a>Pythagoras' formula:</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a>$$c = \sqrt{a^2 + b^2}$$</span>
+<span id="cb2-10"><a href="#cb2-10"></a>:::</span>
+<span id="cb2-11"><a href="#cb2-11"></a>:::</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>Question: what is Pythagoras' formula for the hypotenuse of a right triangle?</span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a>::: {.btn .btn-warning data-bs-toggle="offcanvas" data-bs-target="#offcanvasPythagoras" style="height: 2.5rem; line-height: 2.3rem; padding-top: 0; padding-bottom: 0;"}</span>
+<span id="cb2-16"><a href="#cb2-16"></a>Answer here</span>
+<span id="cb2-17"><a href="#cb2-17"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="footnotes" class="level2">
+<h2 class="anchored" data-anchor-id="footnotes">footnotes</h2>
 <ul>
-<li>Hans Rosling, <a href="https://www.gapminder.org/" target="_blank">Gapminder</a></li>
-<li>Max Roser, <a href="https://ourworldindata.org/" target="_blank">Our World in Data</a></li>
-<li>Stephen Malinowski, <a href="https://www.youtube.com/user/smalin" target="_blank">Music Animation Machine</a></li>
-<li>The Economist, <a href="http://www.economist.com/blogs/graphicdetail" target="_blank">Daily Chart</a></li>
+<li>What is the capital of France?? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>What is the element with 77 protons? <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 </ul>
-<h3 id="colors" class="anchored">Colors</h3>
-<p>Don’t use the <span style="color:red">r</span><span style="color:orange">a</span><span style="color:olive">i</span><span style="color:green">n</span><span style="color:teal">b</span><span style="color:blue">o</span><span style="color:fuchsia">w</span> color map.<br>
-Why? [<a href="https://eagereyes.org/basics/rainbow-color-map" target="_blank">Read this</a>], by <a href="https://twitter.com/eagereyes" target="_blank">Robert Kosara</a>.</p>
-<p>So how should you choose the colors for a graph?</p>
-<ul>
-<li>Visit <a href="http://colorbrewer2.org/" target="_blank">colorbrewer</a>. It gives sequential, diverging and qualitative colormaps that can be chosen to be “colorblind safe”, “print safe”, or “photocopy safe”. Usually, it is the first and only tool I use. It’s just great!</li>
-<li>Visit <a href="https://color.adobe.com/create/color-wheel/" target="_blank">Adobe Color CC</a>. It gives you much more freedom to play with the colors than colorbrewer. Use it wisely!</li>
-</ul>
-<p>More on color: read <a href="https://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/" target="_blank">Subtleties of Color</a>, by Robert Simmon.</p>
-<h3 id="browse-for-ideas" class="anchored">Browse for ideas</h3>
-<ul>
-<li><a href="http://datavizcatalogue.com/index.html" target="_blank">The Data Visualisation Catalogue</a></li>
-</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="ss">* </span>What is the capital of France?? <span class="ot">[^1]</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="ss">* </span>What is the element with 77 protons? <span class="ot">[^2]</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="ot">[^1]: </span>Paris</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="ot">[^2]: </span>Iridium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="callout" class="level2">
+<h2 class="anchored" data-anchor-id="callout">callout</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note to self
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>asdf</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<iconify-icon inline="" icon="fa:question-circle-o"></iconify-icon> How many seconds are there in six weeks?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>10!</p>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.callout-important}</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">## Note to self</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>asdf</span>
+<span id="cb4-5"><a href="#cb4-5"></a>:::</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>::: {.callout-note collapse="true" icon=false}</span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="fu">##  How many seconds are there in six weeks?</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>10!</span>
+<span id="cb4-11"><a href="#cb4-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="details" class="level2">
+<h2 class="anchored" data-anchor-id="details">details</h2>
+<details>
+<summary>
+click here to see more
+</summary>
+more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more
+</details>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>click here to see more<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more </span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="column-margin" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="column-margin">column margin</h2>
+<p>Let’s say I’m writing something, and I would love to open some parenthesis and give extra context, but I don’t want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>This is the extra stuff I wanted to mention without breaking the flow of the text. I can put links, images, whatever I want here.</p>
+</div></div><p>Let’s say I’m writing something, and I would love to open some parenthesis and give extra context, but I don’t want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>Let's say I'm writing something, and I would love to open some parenthesis and give extra context, but I don't want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>::: {.column-margin}</span>
+<span id="cb6-4"><a href="#cb6-4"></a>This is the extra stuff I wanted to mention without breaking the flow of the text. I can put links, images, whatever I want here.</span>
+<span id="cb6-5"><a href="#cb6-5"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Paris<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Iridium<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

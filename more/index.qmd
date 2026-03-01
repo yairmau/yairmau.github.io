@@ -22,7 +22,7 @@ section-divs: false
 ## How I made this website
 
 This website was build using [Quarto](https://quarto.org), edited on [VSCode](https://code.visualstudio.com), hosted on [Github Pages](https://pages.github.com).
-The code for the whole website can be found on this [GitHub repository](https://github.com/yairmau/yairmau.github.io).
+The code for the whole website can be found on this [GitHub repository](https://github.com/yairmau/yairmau.github.io). Here are [some tips](/more/quarto-tips.html) (mainly for myself) on nice tools for quarto.
 
 
 <div class="alert alert-success">
