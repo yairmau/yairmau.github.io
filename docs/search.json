@@ -168,6 +168,13 @@
     "text": "xkcd colors that I like\nDon’t use them all together. Use black, some shade of gray, and one or two of the colors below. That’s more than enough. Source: xkcd color survey\n\n\ncolors that I like\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport matplotlib.colors as mcolors\nc_list = [\"xkcd:goldenrod\", \"xkcd:hot pink\", \"xkcd:forest\", \"xkcd:cerulean\", \"xkcd:vermillion\", \"xkcd:grass green\", \"xkcd:barney\", \"xkcd:royal blue\"]\nn_colors = len(c_list)\nnp.random.seed(4)\nN = 40\nfig, ax = plt.subplots(1, 2, figsize=(10, 3))\nfor i, c in enumerate(c_list):\n    d1 = (np.random.rand(N)-0.5).cumsum(); d1=d1-d1[0]\n    d2 = np.random.normal(0, 0.5, N).cumsum(); d2=d2-d2[0]\n    ax[0].plot(d1[::-1]+2*i, color=c, linewidth=5)\n    ax[1].plot(d2+2*i, color=c, linewidth=5)\n    ax[0].text(N*1.13, 2*i, c[5:], fontsize=8, color=c, va=\"center\", ha=\"center\")\n    hex_code = mcolors.to_hex(mcolors.to_rgb(c))\n    print(f\"{c} = {hex_code}\")\nax[0].set_axis_off()\nax[1].set_axis_off()\nax[0].set(ylim=(-3, 2*n_colors+2))\nax[1].set(ylim=(-3, 2*n_colors+2));\n\n\nxkcd:goldenrod = #fac205\nxkcd:hot pink = #ff028d\nxkcd:forest = #0b5509\nxkcd:cerulean = #0485d1\nxkcd:vermillion = #f4320c\nxkcd:grass green = #3f9b0b\nxkcd:barney = #ac1db8\nxkcd:royal blue = #0504aa"
   },
   {
+    "objectID": "more/color/color.html#sasha-trubetskoys-20-colors",
+    "href": "more/color/color.html#sasha-trubetskoys-20-colors",
+    "title": "Color",
+    "section": "Sasha Trubetskoy’s 20 colors",
+    "text": "Sasha Trubetskoy’s 20 colors\nSasha is awesome. He makes the best maps! Check him out.\nSasha came up with a list of 20 simple, distinct colors. You might like to use them in your visualizations."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yair Mau",
