@@ -7,25 +7,27 @@ section-divs: false
 
 **Stuff I teach or taught**
 
-### [<i class="bi bi-cloud-rain-fill"></i> Surface Hydrology](/surface-hydrology)
+### [<i class="bi bi-cloud-rain-fill"></i> Surface Hydrology](/surface-hydrology){target="_blank"}
 
-### [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io)
+### [{{< iconify carbon agriculture-analytics >}} Agrotech Lab](https://agrotech-lab.github.io){target="_blank"}
 
-### [{{< iconify bi clock-history >}} Time Series Analysis](/time-series)
+### [{{< iconify bi clock-history >}} Time Series Analysis](/time-series){target="_blank"}
 
-### [{{< iconify whh solarsystem >}} Physics 1](/physics1) (2018--2022)
+### [{{< iconify whh solarsystem >}} Physics 1](/physics1){target="_blank"} (2018--2022)
 
 </br>
 
 **Stuff I'm learning myself **
 
-### [{{< iconify foundation graph-bar >}} Statistics and ML](/statistics)
+### [{{< iconify foundation graph-bar >}} Statistics and ML](/statistics){target="_blank"}
+
+### [{{< iconify fa6-solid shapes >}} Mishmash of topics](/mishmash){target="_blank"}
 
 </br>
 
 **Admin stuff, related to teaching**
 
-### [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment)
+### [{{< fa seedling >}} Environmental Quality MSc Program](/courses/environment){target="_blank"}
 
 
 </br></br>

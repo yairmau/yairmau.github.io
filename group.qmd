@@ -59,6 +59,23 @@ Co-advisor: [Niv DeMalach](https://plantscience.agri.huji.ac.il/people/niv-de-ma
 
 ::: {layout="[30,20]"}
 :::: text_here
+## Yonatan Schwartz
+### MSc student
+
+Temperature heterogeneity in crop canopies
+
+Co-advisor: [David Helman](https://davidhelman.weebly.com/)
+
+::::
+:::: picture_here
+<img src="archive/images/group/yonatan-schwartz-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
+::::
+:::
+
+<!-- ------------ -->
+
+::: {layout="[30,20]"}
+:::: text_here
 ## Dolev Arav
 ### MSc student
 
