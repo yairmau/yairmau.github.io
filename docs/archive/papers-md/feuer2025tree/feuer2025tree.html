@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-8291caccebea3e7238bd0d3f61734ea6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-be0c2648ac05ed06cf54dceeb984c980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1 | Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">2 | Methods</a></li>
+  <li><a href="#study-site-and-experimental-design" id="toc-study-site-and-experimental-design" class="nav-link" data-scroll-target="#study-site-and-experimental-design">2.1 | Study Site and Experimental Design</a></li>
+  <li><a href="#season-classification" id="toc-season-classification" class="nav-link" data-scroll-target="#season-classification">2.2 | Season Classification</a></li>
+  <li><a href="#heatwave-classification-and-characterization" id="toc-heatwave-classification-and-characterization" class="nav-link" data-scroll-target="#heatwave-classification-and-characterization">2.3 | Heatwave Classification and Characterization</a></li>
+  <li><a href="#flux-measurements" id="toc-flux-measurements" class="nav-link" data-scroll-target="#flux-measurements">2.4 | Flux Measurements</a></li>
+  <li><a href="#dendrometer-measurements" id="toc-dendrometer-measurements" class="nav-link" data-scroll-target="#dendrometer-measurements">2.5 | Dendrometer Measurements</a>
+  <ul class="collapse">
+  <li><a href="#gro" id="toc-gro" class="nav-link" data-scroll-target="#gro">2.5.1 | GRO</a></li>
+  <li><a href="#growth-rate" id="toc-growth-rate" class="nav-link" data-scroll-target="#growth-rate">2.5.2 | Growth Rate</a></li>
+  <li><a href="#twd" id="toc-twd" class="nav-link" data-scroll-target="#twd">2.5.3 | TWD</a></li>
+  <li><a href="#dbh-slope" id="toc-dbh-slope" class="nav-link" data-scroll-target="#dbh-slope">2.5.4 | DBH Slope</a></li>
+  <li><a href="#omega" id="toc-omega" class="nav-link" data-scroll-target="#omega">2.5.5 | <span class="math inline">\Omega</span></a></li>
+  <li><a href="#t-rex" id="toc-t-rex" class="nav-link" data-scroll-target="#t-rex">2.5.6 | T-REX</a></li>
+  </ul></li>
+  <li><a href="#growth-modes" id="toc-growth-modes" class="nav-link" data-scroll-target="#growth-modes">2.6 | Growth Modes</a></li>
+  <li><a href="#atmospheric-events-and-response" id="toc-atmospheric-events-and-response" class="nav-link" data-scroll-target="#atmospheric-events-and-response">2.7 | Atmospheric Events and Response</a></li>
+  <li><a href="#statistical-analyses" id="toc-statistical-analyses" class="nav-link" data-scroll-target="#statistical-analyses">2.8 | Statistical Analyses</a>
+  <ul class="collapse">
+  <li><a href="#linear-mixed-effects-model" id="toc-linear-mixed-effects-model" class="nav-link" data-scroll-target="#linear-mixed-effects-model">2.8.1 | Linear Mixed-Effects Model</a></li>
+  <li><a href="#permutation-test" id="toc-permutation-test" class="nav-link" data-scroll-target="#permutation-test">2.8.2 | Permutation Test</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">3 | Results</a></li>
+  <li><a href="#growth-rate-1" id="toc-growth-rate-1" class="nav-link" data-scroll-target="#growth-rate-1">3.1 | Growth Rate</a></li>
+  <li><a href="#seasonal-responses-to-atmospheric-events" id="toc-seasonal-responses-to-atmospheric-events" class="nav-link" data-scroll-target="#seasonal-responses-to-atmospheric-events">3.2 | Seasonal Responses to Atmospheric Events</a></li>
+  <li><a href="#heatwave-impact" id="toc-heatwave-impact" class="nav-link" data-scroll-target="#heatwave-impact">3.3 | Heatwave Impact</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">4 | Discussion</a></li>
+  <li><a href="#growth-rates" id="toc-growth-rates" class="nav-link" data-scroll-target="#growth-rates">4.1 | Growth Rates</a></li>
+  <li><a href="#seasonal-responses-to-atmospheric-events-1" id="toc-seasonal-responses-to-atmospheric-events-1" class="nav-link" data-scroll-target="#seasonal-responses-to-atmospheric-events-1">4.2 | Seasonal Responses to Atmospheric Events</a></li>
+  <li><a href="#heatwave-impact-1" id="toc-heatwave-impact-1" class="nav-link" data-scroll-target="#heatwave-impact-1">4.3 | Heatwave Impact</a></li>
+  <li><a href="#last-considerations" id="toc-last-considerations" class="nav-link" data-scroll-target="#last-considerations">4.4 | Last Considerations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">5 | Conclusion</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#conflicts-of-interest" id="toc-conflicts-of-interest" class="nav-link" data-scroll-target="#conflicts-of-interest">Conflicts of Interest</a></li>
+  <li><a href="#data-availability-statement" id="toc-data-availability-statement" class="nav-link" data-scroll-target="#data-availability-statement">Data Availability Statement</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#supporting-information" id="toc-supporting-information" class="nav-link" data-scroll-target="#supporting-information">Supporting Information</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li><p>authors: Erez Feuer <span class="math inline">{ }^{1}</span> । Yakir Preisler <span class="math inline">{ }^{2,3,4}</span> । Eyal Rotenberg <span class="math inline">{ }^{4}</span> । Dan Yakir <span class="math inline">{ }^{4}</span> । Yair Mau <span class="math inline">{ }^{1}</span> <br><span class="math inline">{ }^{1}</span> Institute of Environmental Sciences, The Hebrew University of Jerusalem, Rehovot, Israel | <span class="math inline">{ }^{2}</span> Institute of Plant Science - Agricultural Research Organization Volcani Institute, Rishon LeZion, Israel | <span class="math inline">{ }^{3}</span> Department of Organismic and Evolutionary Biology, Harvard University, Cambridge, Massachusetts, USA | <span class="math inline">{ }^{4}</span> Earth and Planetary Science Department, Weizmann Institute of Science, Rehovot, Israel</p></li>
+<li><p>Plant, Cell &amp; Environment, 2025</p></li>
+<li><p>Correspondence: Yair Mau (yair.mau@mail.huji.ac.il)</p></li>
+<li><p>Received: 2 February 2025 | Revised: 26 April 2025 | Accepted: 28 April 2025</p></li>
+<li><p>Keywords: compound drought | dendrometer | dry forest | growth rate | recovery | resistance</p></li>
+<li><p>How to cite:</p>
+<blockquote class="blockquote">
+<p>Feuer, E., Preisler, Y., Rotenberg, E., Yakir, D. and Mau, Y. (2025), Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects. Plant, Cell &amp; Environment, 48: 6427-6439. https://doi.org/10.1111/pce.15604</p>
+</blockquote></li>
+</ul>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>We investigate how soil and atmospheric droughts jointly impact tree growth and recovery dynamics in a semi-arid pine forest, leveraging high-resolution stem diameter variation data and an irrigation experiment. The irrigated plot, where soil drought was mitigated, served as a benchmark to isolate the effects of atmospheric drought and distinguish them from the compound drought conditions experienced by control trees. Using a suite of tools based only on stem diameter variation, we identified growth modes that vary in accordance with soil water availability. Control trees showed negligible growth during the dry season but rapidly recovered with the onset of the wet season, matching the baseline growth rates of the irrigated trees, suggesting minimal compromise in hydraulic functioning. Our main finding is that heatwaves consistently depress stem-expansion rates, regardless of treatment. However, during the dry season, this negative impact diverges sharply between the treatments. Because irrigated trees benefit from a hydraulic buffer supplied by ample soil water and thus retain a positive growth baseline, the depression merely slows their expansion, whereas control trees already near zero are driven into net contraction. These findings offer new understanding of how trees balance growth, contraction, and recovery under varying drought conditions, revealing the pivotal role of soil water in shaping drought responses across seasons. As climate change intensifies the frequency and severity of drought events, this knowledge is critical for anticipating shifts in tree growth and resilience.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1 | Introduction</h2>
+<p>Large tree-mortality events have been recorded across the globe for many decades (Senf et al.&nbsp;2018; Yu et al.&nbsp;2019; Powers et al.&nbsp;2020; Hammond et al.&nbsp;2022). Atmospheric and soil droughts are two major stressors impacting tree growth and survival, often linked to shifts in rainfall patterns and intensifying atmospheric dryness (Breshears et al.&nbsp;2013; Trenberth et al.&nbsp;2014; McDowell et al.&nbsp;2022). Atmospheric drought relates to periods when the air is hot and dry, and it is usually quantified by high vapour pressure deficit (VPD) values. Trees’ response to high VPD values is often associated with decreased tree carbon reserves, decreased growth, and higher risk of hydraulic failure, among others (Novick et al.&nbsp;2024). Soil drought denotes periods of time of low soil water content, usually brought about by low precipitation. In the coming decades, we expect worsening of these two kinds of droughts, regarding their intensity, duration and frequency characteristics, posing an even greater threat to tree survival (Meehl and Tebaldi 2004; Dai 2013; Perkins-</p>
+<p>[^0]Kirkpatrick and Gibson 2017; Chiang et al.&nbsp;2021; Dore 2005; Xu et al.&nbsp;2019). Still worse, the compounding of soil and atmospheric droughts-when both occur together-creates a more complex and intensified stress regime, highlighting the need for a deeper understanding of their combined impacts on ecosystems (Zhou et al.&nbsp;2019; Yin et al.&nbsp;2023; Shekhar et al.&nbsp;2024).</p>
+<p>As drought conditions intensify, trees increasingly rely on internal water reserves to sustain essential physiological functions. Drawing on these reserves enables trees to maintain critical processes like photosynthesis, transpiration and osmoregulation while preventing hydraulic failure and loss of turgor (Meinzer et al.&nbsp;2009; Steppe et al.&nbsp;2015; Preisler et al.&nbsp;2022). As soils dry and canopy transpiration outpaces root water uptake, trees draw on internal water reserves, which gradually deplete. This decline in water status restricts growth, reduces carbon sequestration and increases vulnerability, eventually raising the risk of mortality (Steppe et al.&nbsp;2015; Peters et al.&nbsp;2021; McDowell et al.&nbsp;2022). Thus, water storage stands out as a crucial component, supporting tree functioning in the face of escalating drought pressures.</p>
+<p>The dynamics of stem growth and internal water storage have been increasingly studied through continuous, high-resolution stem diameter measurements using dendrometers. Dendrometers offer the advantage of real-time monitoring, providing insights into both water status and growth (Zweifel et al.&nbsp;2016). Dentrometry-based metrics can reveal how water storage supports immediate tree functioning while also illustrating the long-term depletion of water reserves (De Swaef et al.&nbsp;2015). For instance, analysis of stem diameter variations was used to derive early warning indicators of tree death (Preisler et al.&nbsp;2020; Andriantelomanana et al.&nbsp;2024). Zweifel et al.&nbsp;(2016) proposed two metrics: irreversible stem expansion (GRO), which quantifies the historical maximum stem diameter and indicates growth through wood formation, and tree water deficit (TWD), defined as the difference between GRO and the actual stem diameter, which reveals temporary stem shrinkage as trees tap into stored water reserves. This framework has provided useful concepts to talk about tree growth (Zweifel and Häsler 2001), water potential (Dietrich et al.&nbsp;2018), stomatal conductance (Ziegler et al.&nbsp;2024), water use strategies (Sánchez-Costa et al.&nbsp;2015) and the effects of elevated VPD on stem shrinkage (Salomón et al.&nbsp;2022).</p>
+<p>However, a significant question remains largely unanswered: how to disentangle the influence of atmospheric and soil drought on plant growth and resilience (Novick et al.&nbsp;2024). These two types of drought often occur together, compounding their effects (Yin et al.&nbsp;2023). Consequently, the same negative effects on trees associated with high VPD are also associated with low soil water content, making it difficult to determine the individual contribution of each factor to the overall stress on tree growth. Zweifel et al.&nbsp;(2005) proposed a phenomenological model to deal with this question, showing that physiological responses to VPD depend on soil water content. Preisler et al.&nbsp;(2023) found that when eliminating soil drought, even under extreme VPD conditions ( <span class="math inline">&gt;5 \mathrm{kPa}</span> ), Aleppo pine trees will maintain high assimilation despite the extreme conditions. Additionally, a recent study by Vargas Zeppetello et al.&nbsp;(2023) suggests that VPD has been overstated in its impact over ecosystem evapotranspiration, and that soil moisture is the most relevant state variable to understand surface water conductance. These findings underscore the need to reevaluate the relative roles of atmospheric and soil drought, with growing evidence pointing to soil moisture as a key driver of plant resilience and ecosystem function.</p>
+<p>Our goal here is to reveal how tree growth is impacted by soil and atmospheric droughts. We analyzed stem diameter variations from an irrigation experiment in a semi-arid pine forestan expansion of the experiment covered by Preisler et al.&nbsp;(2023). We developed new methods for heatwave characterization and introduced a suite of tools for assessing growth and resilience. These methods aim to deepen our understanding of tree functioning under complex drought conditions and to provide insights into the fate of forested ecosystems in a warming and more variable climate.</p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">2 | Methods</h2>
+</section>
+<section id="study-site-and-experimental-design" class="level2">
+<h2 class="anchored" data-anchor-id="study-site-and-experimental-design">2.1 | Study Site and Experimental Design</h2>
+<p>The study was conducted at the Yatir forest, a semi-arid forest located at the northern edge of the Negev desert in Israel <span class="math inline">\left(31.345^{\circ} \mathrm{N}, 35.052^{\circ} \mathrm{E}, 550-700 \mathrm{~m}\right.</span> elevation). The managed forest, predominated by Aleppo pine (Pinus halepensis), was planted in the 1960s. The climate in this region is Mediterranean, characterized by hot and dry summers (mean July temperature: <span class="math inline">25^{\circ} \mathrm{C}</span> ) and mild, wet winters (mean January temperature: <span class="math inline">10^{\circ} \mathrm{C}</span> ) with mean-annual rainfall 229 mm (calculated for the years 2000-2022), concentrated in months December-May. The forest is subjected to several dry and short heatwaves throughout the year, where VPD can reach values of up to 6.5 kPa (Tatarinov et al.&nbsp;2016).</p>
+<p>Two adjacent plots were established: a control plot with natural soil moisture levels and a plot that received additional irrigation. These plots, which are separated by a 30 -metre-wide buffer zone, have similar topographic and ecological features, including slope, tree density and tree age. Out of the <span class="math inline">20-30</span> trees in each plot, 7 in the control plot and 6 in the irrigation plot were equipped with band dendrometers. Irrigation began on 14 May 2017, with water supplied daily via drip irrigation according to the monthly average potential evapotranspiration (PET) data from the Israel Meteorological Service. In 2020 and 2021, the irrigation rate was reduced to <span class="math inline">80 \%</span> and <span class="math inline">50 \%</span> of PET, respectively. Additional details on the experimental site at the Yatir forest can be found in previous publications (Grünzweig et al.&nbsp;2007; Tatarinov et al.&nbsp;2016; Preisler et al.&nbsp;2019, 2023). Unlike the agricultural context, where irrigation is primarily used to boost yields, the aim of this setup was twofold. First, it allowed us to distinguish between the effects of compound droughts in the control plot and those of atmospheric droughts alone in the irrigated plot, where soil drought was mitigated. Second, the irrigated plot served as a soil drought-free benchmark against which the growth of the control trees could be compared.</p>
+</section>
+<section id="season-classification" class="level2">
+<h2 class="anchored" data-anchor-id="season-classification">2.2 | Season Classification</h2>
+<p>The precipitation regime in the Yatir forest imposes a clear seasonal pattern in soil moisture throughout the year (Preisler et al.&nbsp;2019). In order to capture qualitative differences of tree behaviour as a function of soil drought, we divided the year into four seasons: wetting, wet, drying and dry. The wetting season starts on the first rainfall event of the hydrological year, and ends when precipitation reaches 35 mm , which is approximately the rain needed to pass the transpirable soil water content threshold for the Yatir forest (Klein et al.&nbsp;2014; Preisler et al.&nbsp;2019). The wet season follows, lasting until the date corresponding to <span class="math inline">80 \%</span> of that year’s total precipitation. We found that <span class="math inline">80 \%</span> is approximately the time of divergence of growth rate between the trees in the control and irrigated plots, as described in Section 3. The drying season then begins, lasting for 60 days. Finally, the dry season follows, lasting until next year’s wetting season.</p>
+</section>
+<section id="heatwave-classification-and-characterization" class="level2">
+<h2 class="anchored" data-anchor-id="heatwave-classification-and-characterization">2.3 | Heatwave Classification and Characterization</h2>
+<p>In this study, we use dendrometer data to assess whole tree water status. Water status is the outcome of tree water balance, whose input is soil water uptake and output is transpiration. Transpiration’s major drivers are elevated atmospheric demand events, characterized by high VPD values, hereafter simply ‘heatwaves’. When discussing heatwaves, we have two main goals: identifying their duration, and attributing to each of them a severity score (see Rez et al.&nbsp;(2024) for an extended discussion).</p>
+<p>As will be shown in Section 3, there are rich seasonal dynamics to the tree water status. In order to fully capture these dynamics, we chose to classify season-specific heatwaves by analyzing instantaneous VPD percentiles rather than absolute values (Robinson 2001). We calculated VPD percentiles using 26 years of available <span class="math inline">10-\mathrm{min}</span> frequency weather data for the nearby meteorological station (Shani station; Israel Meteorological Service). The calculation was done by pooling (aggregating) all VPD values from a 2-week window around <span class="math inline">1-\mathrm{h}</span> intervals (Fischer and Schär 2010). For example, if the VPD percentile at 10:30 on 14 April 2019 is 80, it means that the VPD value at that time is in the 80th percentile of all VPD values from 10:00-11:00 in the 7-21 April span in the years 1997-2023. This method allows us to capture the shifts in VPD relative to the distribution with sub-daily resolution. Time periods that exhibited VPD percentile values above 50 , allowing for up to a 6-h tolerance in dips below 50, are considered potential ‘heatwave events’. This pooling of heatwaves separated by short intervals is called the inter-event time method, and it is standard in droughtidentification practices in hydrology (Tallaksen et al.&nbsp;1997). We are left with a large number of identified potential events, with interesting edge cases. There will be short events that last for just a few hours but are intense (high VPD percentiles), and other much longer events of many days, whose VPD percentile values hover just above 50 . In order to prioritize VPD percentile strength over long duration, we computed each event’s severity as</p>
+<p><span class="math display">
+\begin{equation*}
+\text { severity }=\int_{t_{1}}^{t_{2}}\left(\frac{\text { VPD percentile }}{50}-1\right)^{\phi} d t \tag{1}
+\end{equation*}
+</span></p>
+<p>where time, and therefore severity, are in days. The time instants <span class="math inline">t_{1}</span> and <span class="math inline">t_{2}</span> denote the beginning and end of a given event. A full day at VPD percentile <span class="math inline">=50</span> will yield a severity of 0 , while a full day at VPD percentile <span class="math inline">=100</span> will yield a severity of 1 . The parameter <span class="math inline">\phi</span> controls how much more the high-VPD percentile values count with respect to lower values. For <span class="math inline">\phi=1</span>, VPD percentile <span class="math inline">=100</span> counts twice as much as 75, while for <span class="math inline">\phi=2</span> it counts four times as much. In this paper, we chose <span class="math inline">\phi=2.5</span>, and potential heatwave events will be considered as such when their severity surpasses the threshold of 0.03 . To be sure, there will always be some arbitrariness in defining a heatwave event, but we tried to strike a balance between complexity and generality. In order to be more strict or lax regarding one’s definition of a heatwave event, it suffices to choose other values for <span class="math inline">\phi</span> and the severity threshold. See Figure S1 for a representation of heatwaves and their severity during an 8 -month interval. Normalized severity is defined as the severity divided by the duration of the event (i.e., divided by <span class="math inline">t_{2}-t_{1}</span> ), therefore, it is also interpreted as the mean daily heatwave severity.</p>
+</section>
+<section id="flux-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="flux-measurements">2.4 | Flux Measurements</h2>
+<p>Flux measurements were performed using the eddy covariance technique. An instrumented tower operates at the centre of Yatir Forest since 2000, following Euroflux methodology (Aubinet et al.&nbsp;1999; Grünzweig et al.&nbsp;2003). The system uses a 3D sonic anemometer (Gill R-50; Gill Instruments, Lymington, UK) and a closed-path infrared gas analyser (LI-7000, LI-COR, Lincoln, NE, USA) to measure <span class="math inline">\mathrm{H}_{2} \mathrm{O}</span> and <span class="math inline">\mathrm{CO}_{2}</span> fluxes. The tower is also equipped with a full meteorological station, providing measurements of air temperature, relative humidity, precipitation and wind speed. Raw data were analyzed with the use of EddyPro software (Li-Cor, Lincoln, NE, USA) in a half-hour time step. Outliers and spikes were detected and removed with the use of the double-differenced time series, using the median of absolute deviation about the median (Papale et al.&nbsp;2006). Gap filling was performed with the marginal distribution sampling (MDS) methodology and flux partitioning was based on the night-time fluxes method (Reichstein et al.&nbsp;2005). The above post-processing analyses were performed with the use of the REddyProc R-package (Wutzler et al.&nbsp;2018).</p>
+</section>
+<section id="dendrometer-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="dendrometer-measurements">2.5 | Dendrometer Measurements</h2>
+<p>Each tree in this study was equipped with a band dendrometer (EMS, Brno, Czech Republic) at breast height ( 1.3 m ) measuring variations in stem circumference. These measurements were divided by <span class="math inline">\pi</span> to obtain variations in diameter at breast height (DBH). In this study, we aimed to identify shifts in DBH dynamics driven by atmospheric events, beyond the usual daily expansion and contraction of the trunk. To isolate this broader trend, we applied a 1-day rolling average, effectively filtering out the daily signal while retaining the underlying temporal pattern. From DBH alone, we derive a number of useful metrics: absolute growth (GRO), absolute growth rate (GRO rate), TWD, resistance ratio <span class="math inline">(\Omega)</span>, Tree REecovery indeX (T-REX) and DBH slope, to be detailed below. The Python code that computes these metrics is available at https://doi.org/10.5281/zenodo.15382092.</p>
+<section id="gro" class="level3">
+<h3 class="anchored" data-anchor-id="gro">2.5.1 | GRO</h3>
+<p>The absolute growth is the historic maximum DBH, called GRO in the zero-growth model proposed by Zweifel et al.&nbsp;(2016).</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-04_981_1277_108_394.jpg" class="img-fluid"> FIGURE 1 | Calculation of Tree REcovery indeX (T-REX). T-REX captures daily trunk recovery ability, rising by 1 for every day with increased shrinkage and resetting when expanding to a prior state. Walk-through: The dotted grey line shows the GRO curve (Zweifel et al.&nbsp;2016), which can be understood as the historical maximum diameter. Whenever the tree diameter (black line) coincides with GRO, T-REX equals zero. Whenever the stem contracts over a span of 1 day (red blocks), T-REX is incremented by one (thus T-REX’s unit is ‘day’). Upon stem expansion (blue blocks), T-REX either stays the same or goes down in value. Its updated value is the same as the T-REX for the previous day with equal diameter at breast height (DBH) (see dashed grey arrows). [Color figure can be viewed at wileyonlinelibrary.com]</p>
+</section>
+<section id="growth-rate" class="level3">
+<h3 class="anchored" data-anchor-id="growth-rate">2.5.2 | Growth Rate</h3>
+<p>Growth rate is a non-negative quantity, defined as the smoothed time derivative of the GRO, obtained by a 45-day SavitzkyGolay differentiation filtering of order one. Because GRO consists of plateau periods interrupted by sudden jumps, smoothing is necessary to minimize sharp spikes in the derivatives, resulting in a more stable, easy to interpret time series. It is important to note that growth rate relates solely to the derivative of GRO, that is, it considers only the dynamics of the tree stem. To be sure, different parts of the tree, such as needles and stem, have their own seasonal growth patterns (Maseyk 2006; Maseyk et al.&nbsp;2008).</p>
+</section>
+<section id="twd" class="level3">
+<h3 class="anchored" data-anchor-id="twd">2.5.3 | TWD</h3>
+<p>TWD was calculated as the difference between the GRO and the DBH (Zweifel et al.&nbsp;2016).</p>
+</section>
+<section id="dbh-slope" class="level3">
+<h3 class="anchored" data-anchor-id="dbh-slope">2.5.4 | DBH Slope</h3>
+<p>The DBH slope represents the average rate of change in stem diameter over a given time window, serving as an indicator of expansion or shrinkage. It is calculated as the slope of a leastsquares linear fit.</p>
+</section>
+<section id="omega" class="level3">
+<h3 class="anchored" data-anchor-id="omega">2.5.5 | <span class="math inline">\Omega</span></h3>
+<p>The resistance ratio ( <span class="math inline">\Omega</span> ) is the proportion of days (unitless), within a given time window, that registered tree diameter expansion. As such, <span class="math inline">\Omega</span> ranges between 0 and 1 . High <span class="math inline">\Omega</span> values signify a tree’s ability to withstand disturbances over that period, while low values indicate susceptibility. We calculated <span class="math inline">\Omega</span> for all trees using a rolling window of 45 days.</p>
+</section>
+<section id="t-rex" class="level3">
+<h3 class="anchored" data-anchor-id="t-rex">2.5.6 | T-REX</h3>
+<p>T-REX evaluates tree recovery abilities from stem contractions. T-REX is calculated thus. First, the GRO and TWD are downsampled to daily frequency using the first value of each day. T-REX is zero whenever the DBH coincides with the GRO (i.e., TWD is zero). It is incremented by 1 for each day in which the TWD increases, therefore, the units of T-REX are day. If TWD decreases, T-REX takes the value it had when TWD last reached this level. A step-by-step demonstration of the calculation using a synthetic DBH time series is illustrated in Figure 1. T-REX values represent the effective number of days a tree has experienced stem shrinkage since it last registered absolute growth. An increasing T-REX indicates sustained contraction and a lack of recovery, whereas a rapid decline reflects a return to growth and successful recovery. As such, T-REX serves as a recovery index: higher values denote lower recovery capacity. Under similar environmental stress, trees with higher T-REX values are those that recovered less along the way. We propose a recursive algorithm for computing the T-REX in the Supporting Information, this algorithm was used for all T-REX calculations throughout this study.</p>
+</section>
+</section>
+<section id="growth-modes" class="level2">
+<h2 class="anchored" data-anchor-id="growth-modes">2.6 | Growth Modes</h2>
+<p>We classified tree growth into six modes, shown in Figure 2. The modes are determined for a given time window by their <span class="math inline">\Omega</span> and T-REX values. We differentiate between two main cases: modes with an increasing GRO (left half of the figure) and those with a stagnant GRO (right half). Among the increasing-GRO modes, as <span class="math inline">\Omega</span> decreases, there is a gradual shift from full growth, to disrupted growth, and then to spurt growth. We use the term full growth to describe stable and uninterrupted growth, while disrupted growth reflects active growth with transient setbacks, and spurt growth captures brief bursts of growth following prolonged periods of zero growth. Conversely, in stagnant-GRO modes, changes in the T-REX slope-from positive, to nearzero, to negative-reflect a transition from contraction to standstill, and finally to recovery. We refer to contraction as a phase of ongoing shrinkage, standstill as a state where contraction and expansion alternate without net growth-reflecting a balance between water loss and partial replenishment-and recovery as a period of expansion that restores previously lost volume, without yet reaching the point of renewed growth.</p>
+</section>
+<section id="atmospheric-events-and-response" class="level2">
+<h2 class="anchored" data-anchor-id="atmospheric-events-and-response">2.7 | Atmospheric Events and Response</h2>
+<p>The complete climatic time series was segmented and categorized into four types of atmospheric events: heatwave, post-heatwave, rain and post-rain. We have already discussed heatwave classification above. Rain events begin when precipitation is first recorded and end when it stops. Rain events occurring on the same day or on contiguous days were merged into a single rain event, starting with the first precipitation and ending with the last in that combined period. All periods following a heatwave or rain event that were not otherwise classified were labelled as post-heatwave and post-rain, respectively. We quantified the tree’s response to these short atmospheric events using the DBH slope.</p>
+</section>
+<section id="statistical-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-analyses">2.8 | Statistical Analyses</h2>
+<section id="linear-mixed-effects-model" class="level3">
+<h3 class="anchored" data-anchor-id="linear-mixed-effects-model">2.8.1 | Linear Mixed-Effects Model</h3>
+<p>The connection between heatwave severity and DBH slope was determined using a linear mixed-effects model. In this model, heatwave normalized severity, treatment (control or irrigated), and season were chosen as fixed effects, and individual tree IDs were included as a random effect. We examined both the twoway and three-way interactions involving heatwave normalized severity. We focused on only two seasons-the dry and the wet-as they represent the extremes in soil moisture conditions and exhibit less variability within each season. We chose the wet season as the default season because, during that time, water is generally available in the soil and similar across both plots. As the name suggests, control was used as the default treatment in this analysis. Fit was done using the statsmodels Python package. Marginal and conditional <span class="math inline">R^{2}</span> were calculated according to Nakagawa and Schielzeth (2013).</p>
+</section>
+<section id="permutation-test" class="level3">
+<h3 class="anchored" data-anchor-id="permutation-test">2.8.2 | Permutation Test</h3>
+<p>Quantifying the difference between the DBH slope of the control and irrigated groups requires special care. The responses of all trees to all atmospheric events are not independent-they consist of the responses of a few unique trees to many unique events, which are identical across all trees.</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-05_831_1771_1583_146.jpg" class="img-fluid"> FIGURE 2 | Growth mode classification. Each column illustrates an example of a growth mode, based on 1 month of real data. Rows show the DBH trend (solid black) and GRO (dotted grey), as well as the corresponding <span class="math inline">\Omega</span> (blue) and T-REX (red) values for that 1-month window. [Color figure can be viewed at wileyonlinelibrary.com]</p>
+<p>To compare the responses between trees in the control and irrigated plots, we used the median of the differences in their responses across all atmospheric events. Specifically, for each unique event (e.g., rain or heatwave), we first calculated the median response of the trees in the control plot and the median response of the irrigated trees. We then computed the difference between these two medians for each event. After obtaining the differences for all events, we took the median of those differences to quantify the overall response difference between the two groups. Our null hypothesis was that this median difference would be zero, meaning that the median responses of irrigated and control trees would be the same across all atmospheric events.</p>
+<p>Since each atmospheric event affects all trees in both groups, responses for a single event are dependent because they come from the same trees. To account for this dependency, we computed <span class="math inline">p</span>-values using an exact permutation test. In this test, we shuffled the treatments of the trees across all atmospheric events. This means that each permutation shuffles the treatment of all 13 trees ( 7 control and 6 irrigated), and this new labelling is applied to all atmospheric events. This approach preserves the dependence structure within each tree and accurately reflects how consistent tree responses affect all comparisons.</p>
+<p>The number of valid permutations was the total number of permutations, excluding permutations within the same group, as this would produce identical results. The exact number can be calculated using the binomial coefficient, in this study <span class="math inline">-n_{c}=7</span> control trees and <span class="math inline">n_{i}=6</span> irrigated trees, that is <span class="math inline">\binom{n_{c}+n_{i}}{n_{c}}=1716</span>. We then adjusted the <span class="math inline">p</span> values using the Benjamini-Hochberg procedure to account for the false discovery rate (Benjamini and Hochberg 1995).</p>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">3 | Results</h2>
+</section>
+<section id="growth-rate-1" class="level2">
+<h2 class="anchored" data-anchor-id="growth-rate-1">3.1 | Growth Rate</h2>
+<p>Irrigated trees exhibited growth rates strongly linked with average temperatures and sunlight hours: maximum growth rates occurred when temperatures were high and the photoperiod was long, and vice versa (see Figure 3). As the amount of irrigation decreased, the spread in growth rates among irrigated trees also decreased. In 2021, when irrigation was further reduced from <span class="math inline">80 \%</span> to <span class="math inline">50 \%</span> of PET, growth rates noticeably declined, with the peak mean growth rate being roughly half of that observed in previous years with higher irrigation levels.</p>
+<p>Trees in the control plot showed peak growth rates during the wet season with relatively low temperatures and light hours but high water availability. During that time, growth rates were comparable to the mean growth rates of the irrigated trees. The peak in growth rates coincided with the peak in Net Ecosystem Productivity (NEP), as measured by the adjacent flux tower. During the drying and dry periods, as soil water availability decreased, control growth rates declined to near-zero. This decline also corresponded with the NEP trend. The dry season of 2020 was unique, as control growth rates were higher than the previous years. That year also had elevated precipitation levels of 341 mm . Whenever the wetting period started, within a window of <span class="math inline">1-2</span> months, the growth rates of the control trees rose to match those of the irrigated trees, and remained similar until the drying period.</p>
+<p>A closer look at the growth differences and similarities between the control and irrigated plots is provided in Figure 4 using the <span class="math inline">\Omega</span> and T-REX metrics. The resistance ratio <span class="math inline">\Omega</span> of irrigated trees mirrors their growth rate trend, with high values (near 1) during the dry season and lower values (around 0.5) during the wet season. In contrast, the control plot maintained <span class="math inline">\Omega</span> values</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-06_581_1266_1551_401.jpg" class="img-fluid"> FIGURE 3 | Growth rates of trees in the irrigated and control plots vary seasonally, responding to temperature, photoperiod and water availability. Irrigated trees are by design not water-limited, peaking with high temperatures and long photoperiods, while control trees show water-limited growth, peaking during the wet season with high water availability. (a) Climate and irrigation data for the Yatir forest. Black numbers above the panel indicate annual precipitation for each hydrological year. Irrigation treatment started on 14 May 2017, and was set to the monthly average PET. In 2020 and 2021, irrigation was decreased to <span class="math inline">80 \%</span> and <span class="math inline">50 \%</span> of PET, respectively. The temperature curve represents the 30 -day rolling mean of the air temperature at 2 meters. The sunlight curve indicates the number of daylight hours per day, with a minimum of 10 h and a maximum of 14 h . (b) Growth rates of irrigated and control trees, shown as the GRO rate. Curves represent the derivative of the 45-day rolling mean of the GRO, with thin lines indicating individual trees and thick lines representing their mean (control: <span class="math inline">n_{c}=7</span>, irrigated: <span class="math inline">n_{i}=6</span> ). NEP data were acquired from the flux tower in Yatir, representing the entire Yatir forest, which is growing under the same conditions as the control trees. Wetting, wet, drying and dry seasons are determined according to the precipitation regime as described in Section 2. [Color figure can be viewed at wileyonlinelibrary.com]</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-07_1298_1767_108_148.jpg" class="img-fluid"> FIGURE <span class="math inline">4 \mid</span> Resistance ratio, T-REX and growth mode dynamics. The top 3 panels show the dynamics of GRO rate, <span class="math inline">\Omega</span> and T-REX. Thin lines indicate individual trees; thick lines represent the mean (control: <span class="math inline">n_{c}=7</span>, irrigated: <span class="math inline">n_{i}=6</span> ). GRO rate and <span class="math inline">\Omega</span> were calculated using a 45-day rolling window. The bottom panels show growth mode dynamics for irrigated and control trees. Stagnant-GRO modes were defined as periods when mean T-REX exceeded 7 days and ended once it dropped below 2 days. To better capture the onset, these modes were backdated by 7 days from the threshold crossing. Colour shading (orange to blue) reflects the T-REX slope over the 45-day window. All other days were classified as increasingGRO modes, with shading from white to green representing increasing <span class="math inline">\Omega</span> values. [Color figure can be viewed at wileyonlinelibrary.com]</p>
+<p>around 0.5 over the entire 5 -year period. On a seasonal scale, however, trees in both plots showed coinciding <span class="math inline">\Omega</span> values during the wet season. Notably, in the later years of the experiment (2020 and 2021), when irrigation amounts were reduced, the <span class="math inline">\Omega</span> values of the irrigated plot decreased, approaching those of the control plot.</p>
+<p>T-REX showed strong seasonal fluctuations in the control plot, with high values during the dry season (reaching above 30 ) and low values during the wet season (near 0 ). The opposite pattern was observed in the irrigated plot, where T-REX peaked during the wet season and was negligible during the dry. Here too, the two treatments showed similar T-REX values during the wet season. The relatively wet hydrological year of 2020 was followed by an anomaly in which T-REX registered low values for control trees during the dry season.</p>
+<p>Constructing a time series of growth modes reveals a clear picture of how each plot responded over the course of the experiment (see Figure 4). Irrigated trees remained in increasing-GRO modes for most of the year, typically showing full growth during the dry season and shifting towards spurt growth in the wet season. As irrigation levels declined, full growth became less frequent. In contrast, control trees exhibited minimal growth throughout the year. They spent most of the time in stagnant-GRO modes-cycling through contraction during the dry season, followed by standstill, and then recovery during the wetting and wet seasons-showing only brief periods of active growth.</p>
+</section>
+<section id="seasonal-responses-to-atmospheric-events" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-responses-to-atmospheric-events">3.2 | Seasonal Responses to Atmospheric Events</h2>
+<p>Aiming at revealing correlations between growth dynamics and both seasons and atmospheric events, we analyzed the statistics of change in DBH slope during these events, as shown in Figure 5, and as detailed in Section 2. Each panel shows probability distributions of the DBH slope for each treatment (control in yellow, irrigated in blue), for all combinations of seasons and atmospheric events, excluding the rain and postrain events in the dry season, due to insufficient data for a meaningful statistical analysis. Stem expansion and contraction</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-08_1631_1778_104_146.jpg" class="img-fluid"> FIGURE 5 | Control and irrigated trees respond indistinguishably during the wet season across all atmospheric conditions. The figure compares the distribution of the DBH slope across all atmospheric events (heatwave, post-heatwave, rain, post-rain) and seasons (wetting, wet, drying, dry) between control and irrigated trees. As detailed in the legend in the bottom right, probability densities for irrigated trees are coloured blue, and control are coloured yellow, both plotted in the vertical direction, and arranged in a configuration similar to violin plots. The median values are marked with a black line, while the interquartile range is shaded with a higher colour saturation. The fraction of number of samples to number of events is indicated over each distribution. Each panel, labeled with a lowercase letter from a-n, showcases a unique combination of atmospheric event and season to facilitate reference in the text. [Color figure can be viewed at wileyonlinelibrary.com]</p>
+<p>correspond to positive and negative DBH slope values, respectively.</p>
+<p>Across most combinations of seasons and atmospheric conditions, the control and irrigated trees showed statistically distinct DBH slope distributions (see Table S1). However, during the wet season, under all atmospheric conditions, the two treatments were not significantly different, with consistently high <span class="math inline">p</span> values indicating similar responses. A similar lack of difference was also observed during post-rain events in the drying season. During rainfall events, both control and irrigated trees exhibited stem expansion across all seasons. The irrigated trees generally showed higher median expansion rates than the control trees. Under heatwave conditions, control trees consistently showed negative median DBH slope values, indicating stem contraction. The irrigated trees under heatwaves, in contrast, mostly contracted during the wetting and wet seasons but expanded during the drying and dry seasons. When comparing heatwave and post-heatwave conditions within each treatment group, DBH slope values were consistently higher in the postheatwave period. In the dry season, the DBH slope distribution during and post-heatwaves showed a notably narrow interquartile range (IQR) in control trees, while the irrigated trees displayed a broader IQR.</p>
+<p><img src="./images/95fb60ad-f5ab-42da-9d2a-c7bd5b362d35-09_956_1525_104_271.jpg" class="img-fluid"> FIGURE 6 | More severe heatwaves are associated with decreasing DBH slopes. (a and b) Linear mixed model regression curves for wet and dry seasons and both treatments. Mean daily heatwave severity, treatment and season were chosen as fixed effects, and individual trees were included as a random effect. Dots represent the response of individual trees to each heatwave. Coefficients for regression curves can be seen in Table S2. (c-e) Illustration of the impact of heatwaves on DBH slope, for two individual trees (one control and one irrigated). (c) VPD time series with shading indicating heatwave severity. Periods classified as heatwaves are also marked with a light grey background across ( <span class="math inline">\mathrm{c}-\mathrm{e}</span> ) to provide contextual alignment. DBH time series for an irrigated (d) and a control (e) tree. The light shaded coloured lines denote half-hourly DBH data, while the thicker lines show the DBH trend, without the daily fluctuations. Black lines indicate the linear best fit for DBH during two distinct periods, one when a heatwave occurred, marked with a star, and one post-heatwave, marked with a circle. For the irrigated tree, the DBH slope was <span class="math inline">104.2 \mu \mathrm{~m} \cdot</span> day <span class="math inline">{ }^{-1}</span> post-heatwave and <span class="math inline">36.6 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> during the heatwave. For the control tree, the DBH slope was <span class="math inline">6.9 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> post-heatwave and <span class="math inline">-10.2 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> during the heatwave. [Color figure can be viewed at wileyonlinelibrary.com]</p>
+</section>
+<section id="heatwave-impact" class="level2">
+<h2 class="anchored" data-anchor-id="heatwave-impact">3.3 | Heatwave Impact</h2>
+<p>To assess how heatwave severity affects stem expansion and contraction, we employed a linear mixed-effects regression model. In this model, the DBH slope during heatwaves was modelled as a function of normalized heatwave severity, season (wet or dry), and treatment (control or irrigated), with individual trees included as a random effect. We focused on the wet and dry seasons, as they represent the two extremes of soil moisture availability, providing a clear contrast. The full model results are presented in Table S2. Marginal and conditional <span class="math inline">R^{2}</span> values were 0.20 and 0.23 , respectively.</p>
+<p>For both seasons and treatments, higher normalized heatwave severity was associated with increased stem contraction rates, as indicated by negative DBH slopes of greater magnitude (Figure 6a,b). The regression slope did not show statistically significant differences across seasons or treatments. In contrast, the intercept varied significantly: it was higher in the dry season for both treatments, with a much stronger increase observed for the irrigated plot. During the wet season (Figure 6a), control and irrigated trees exhibited similar responses-mild stem contraction during weaker heatwaves, with contraction rates increasing as heatwave severity intensified. In the dry season (Figure 6b), control trees followed a similar pattern, but irrigated trees displayed a qualitatively different response: their stems continued to expand during heatwaves, and greater heatwave severity only reduced the rate of expansion rather than reversing it into contraction.</p>
+<p>To illustrate this point, Figure 6d,e show the stem diameter change of a representative irrigated tree and control tree over a 45-day period during the dry season. To provide context, Figure 6c displays the corresponding VPD time series, with heatwave periods shaded according to their severity. When no heatwaves occur (e.g., the period marked with a black circle), both trees exhibit stem expansion, consistent with the pattern shown in Figure 5n. In contrast, during heatwaves (e.g., the period marked with a black star), the irrigated tree continues to expand-albeit at a reduced rate-while the control tree exhibits stem contraction, in agreement with the results shown in Figure 5 m .</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">4 | Discussion</h2>
+</section>
+<section id="growth-rates" class="level2">
+<h2 class="anchored" data-anchor-id="growth-rates">4.1 | Growth Rates</h2>
+<p>The comparison between the growth rates in the control and irrigated plots raises a few interesting patterns.</p>
+<p>First, the harsh environmental conditions in the Yatir forest result in high stem growth rates during the wet (and colder) season. This contrasts with the typical seasonal growth pattern observed in pine trees (Maseyk 2006; Maseyk et al.&nbsp;2008; Rotenberg and Yakir 2010), where peak growth generally occurs during the warm season. Interestingly, the irrigation experiment brings the pine trees closer to this usual growth pattern. Although phenology is not the main focus of this paper, it is important to note that not all tissues in the control trees grow best in the wet season. For instance, needles in control trees have been observed to reach their highest growth rates in June (Maseyk 2006; Maseyk et al.&nbsp;2008).</p>
+<p>Second, we see that the growth of trees in the control plot seems to be primarily water-limited, while irrigated trees are not (Littell et al.&nbsp;2008; Dudney et al.&nbsp;2023). For the irrigated trees, water limitation became evident in 2021 when irrigation was reduced to <span class="math inline">50 \%</span> of PET, which, although sufficient to support growth during the drying and dry seasons, led to diminished <span class="math inline">\Omega</span> values and growth rates, shifting from the typical full growth to disrupted or even spurt growth modes. In contrast, control trees exhibit a clear waterlimited response. During the drying and dry seasons, they shift into a stagnant-GRO mode, characterized by growth rates declining to near zero. During this period, T-REX initially rises (contraction mode), then stabilizes at a plateau (standstill mode) that persists as long as no precipitation occurs. This plateau coincides with the lowest xylem water potential values recorded throughout the year (Preisler et al.&nbsp;2022). We hypothesize that during this phase, trees adopt an extremely conservative water-use strategy to avoid the risk of irreversible hydraulic failure. The stagnant-GRO mode implies minimal to no actual stem growth, though some limited growth may still occur even under hydraulic deficit conditions (Zweifel et al.&nbsp;2016). Pine forests across a wide climatic range can exhibit plasticity in their growth patterns (Rotenberg and Yakir 2010), adapting the timing of their peak carbon assimilation to the most favourable conditions. Findings from the irrigation experiment indicate that individual pine trees also have this plasticity, enabling fast adaptation to favourable conditions within weeks or months (Preisler et al.&nbsp;2023). This is evidenced by the fast divergence between irrigated and control trees at the onset of the irrigation experiment, see Figures 3 and 4.</p>
+<p>Third, the analysis of the time series shows no evidence of irreversible damage to the control trees’ ability to grow following the prolonged dry season, during which they remain in standstill mode. As the wetting period begins, T-REX declines (recovery mode), and within <span class="math inline">3-4</span> weeks, the trees transition into increasing-GRO mode, with growth rates rising to match those of the irrigated trees. This pattern is corroborated by measurements of net photosynthesis and transpiration reported by Preisler et al.&nbsp;(2023). If there were some impairment in plant hydraulics such as high percent loss of conductivity (PLC), we would expect sub-optimal growth rates compared to the irrigated trees, which serve as a standard for trees with minimized hydraulic damage. Wagner et al.&nbsp;(2022) showed that the hydraulic damage to the trees in the Yatir forest is mainly in their needles and does not reach high embolism levels.</p>
+<p>Fourth, we observed a clear alignment between the growth rates of the trees in the control plot and the flux tower NEP trends. Generally, when growth rates are positive, NEP suggests that the forest acts as a carbon sink, while near-zero growth rates indicate a shift towards the forest acting as a carbon source. This qualitative agreement reinforces our decision to use the rate of change in GRO as a proxy for actual tree growth in the Yatir forest.</p>
+<p>The year of 2020 provided two interesting deviations from the patterns above, which we attribute to the above-average precipitation of the 2020 hydrological year. This year registered 63% greater precipitation than the average of the 20 preceding years, putting it in the 95th percentile. The first deviation is that most trees in the control plot showed unusual positive growth rates during the dry period. We hypothesize that higher than average soil water availability could have sustained positive growth rates even during the dry season. The second deviation is that although irrigated trees were provided only with <span class="math inline">80 \%</span> of PET, their growth rates seem comparable to previous years. Here, two hypotheses come to mind: higher soil water availability could have offset the decreased irrigation amounts, or irrigation at <span class="math inline">80 \%</span> of PET simply does not trigger water limitation responses.</p>
+<p>Lastly, we would like to raise our choice of dividing the year into seasons based on precipitation dynamics, instead of doing so based on measured soil water availability. In the spirit of this paper, we strived to extract maximal insight from easily measurable variables. In this sense, precipitation rates are a simpler measure than soil moisture content, since the interpretation of the latter depends on site-specific factors such as soil surface, depth of measurement, soil texture and its spatial heterogeneity, soil stoniness, etc. (Preisler et al.&nbsp;2019). This choice is validated by the alignment between season classification and observed growth modes. In irrigated trees, full growth occurs during the dry season, and spurt growth during the wet. In control trees, we generally observe increasing-GRO modes during the wet season, contraction during the drying season, standstill during the dry season and recovery during wetting. The time series of growth modes offers an effective and intuitive summary of the trees’ qualitative state. Importantly, this approach is independent of the absolute DBH length units and relies solely on timedependent metrics ( <span class="math inline">\Omega</span> and T-REX). We propose that such a framework will be especially useful for comparing tree states across individuals of different sizes, species and environments.</p>
+</section>
+<section id="seasonal-responses-to-atmospheric-events-1" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-responses-to-atmospheric-events-1">4.2 | Seasonal Responses to Atmospheric Events</h2>
+<p>The convergence of DBH slope distributions between control and irrigated trees during the wet season-across all atmospheric conditions-underscores the capacity of the two cohorts to exhibit similar growth dynamics when both soil and atmospheric conditions are similar (see Figure 5e-h). This alignment supports our earlier interpretation of comparable growth rates under high soil moisture availability and reinforces the idea of tree plasticity: when water is not limiting, even trees subjected to contrasting long-term treatments respond similarly. The consistent divergence in drier seasons, on the other hand, highlights the central role of soil water availability in shaping differences in growth responses.</p>
+<p>Rainfall events consistently triggered stem expansion across all seasons and treatments, likely reflecting a combination of growth and rapid water uptake (see Figure 5c,g,k). The elevated DBH slopes during these events highlight the trees’ ability to grow and quickly restore internal water reserves. Some of the observed expansion may also result from bark swelling due to wetting, independent of actual growth (Oberhuber et al.&nbsp;2020).</p>
+<p>Outside the wet season, irrigated trees generally exhibited higher DBH slopes than control trees, reflecting the effect of increased soil water. This pattern held even during rain events, where the same rainfall had different outcomes. We hypothesize that in the irrigated plot, the water was readily available for uptake, while in the control plot, part of it may have served to replenish depleted soil storage potentially explaining the slightly lower slopes (see Figure 5c,k).</p>
+<p>DBH slopes were consistently higher in the post-heatwave periods compared to the heatwave periods in the same season, reflecting relief from atmospheric stress. These post-heatwave conditionscharacterized by below-median VPD-were generally more favourable for tree growth across both treatments. Importantly, high atmospheric demand during heatwaves imposes a toll on trees regardless of soil water status. However, the nature of this tollwhether it leads to reduced growth rates or a transition to contraction-depends on soil moisture availability and season. These findings raise important questions about the role of heatwave severity (not considered in the analysis presented in Figure 5) in shaping DBH slope responses, particularly in driving the transition from expansion to contraction-an issue explored in more detail in the following subsection.</p>
+</section>
+<section id="heatwave-impact-1" class="level2">
+<h2 class="anchored" data-anchor-id="heatwave-impact-1">4.3 | Heatwave Impact</h2>
+<p>The regression analysis reveals a consistent pattern: as the mean daily heatwave severity becomes more intense, trees show increasingly reduced DBH slopes, indicating slower growth or faster contraction. This trend was similar across both treatments and seasons, suggesting that the effect of atmospheric stress on stem dynamics operates independently of soil water status. Specifically, increases in the mean daily severity of a heatwave were associated with proportional reductions in DBH slope, regardless of whether trees were in wet or dry conditions. While the model explained only a modest share of the overall variance (conditional <span class="math inline">R^{2}</span> of 0.23)-pointing to the role of additional influencing factorsthe negative relationship between heatwave severity and DBH slope was statistically robust (see Table S2).</p>
+<p>The differences in intercepts from the regression model help explain the contrasting DBH slope patterns observed during heatwaves in the wet and dry seasons (Figure 5e,m). In the wet season, both control and irrigated trees exhibited similar responses, with overlapping DBH slope distributions (Figure 5e) and comparable sensitivity to increasing heatwave severity (Figure 6a). In contrast, during the dry season, irrigated trees maintained positive DBH slopes-indicative of continued stem expansion-while control trees, that experienced compound drought, showed mild contraction (Figure 6b). This divergence can be attributed to the elevated intercept observed for irrigated trees in the dry season, reflecting a higher baseline growth rate. We hypothesize that growth is the key factor driving this difference: in the dry season, irrigated trees continue to grow actively due to long photoperiod combined with high soil water availability, allowing them to absorb the impact of heatwaves through a reduction in growth rate rather than a full transition to contraction. As mean daily heatwave severity increases, this expansion slows but rarely reverses. In contrast, control trees experience little to no growth during the dry season and thus lack the buffer of ongoing expansion, making them more susceptible to contraction under compound drought. This highlights the critical role of baseline growth dynamics in mediating stem responses to extreme atmospheric conditions.</p>
+<p>This pattern is clearly illustrated in the example shown in Figure 6c-e. Over a 45-day period during the dry season, both a representative irrigated tree and a control tree exhibit stem expansion in the absence of heatwaves (black circle), reflecting background (post-heatwave) conditions. However, during heatwaves (black star), their responses diverge sharply: the irrigated tree maintains stem expansion, though at a slower rate ( <span class="math inline">36.6 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> vs.&nbsp;<span class="math inline">104.2 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> ), while the control tree shifts to contraction. This case highlights the buffering capacity of high baseline growth in irrigated trees, which allows them to remain in expansion mode even under stress. In contrast, the control tree, with minimal baseline growth (DBH slope of <span class="math inline">6.9 \mu \mathrm{~m} \cdot</span> day <span class="math inline">^{-1}</span> ), lacks this buffer and responds to atmospheric demand with net stem shrinkage. These individual trajectories reinforce the broader findings: soil water availability does not eliminate the negative effect of heatwaves, but it significantly alters the outcome-slowing growth instead of reversing it.</p>
+</section>
+<section id="last-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="last-considerations">4.4 | Last Considerations</h2>
+<p>The analysis of DBH slope across seasons and atmospheric events (see Figures 5 and 6) also included the later years of the irrigation experiment, 2020 and 2021, when irrigated trees received <span class="math inline">80 \%</span> and <span class="math inline">50 \%</span> of PET, respectively. Notably, the 2020 hydrological year also exhibited growth rate anomalies, likely related to unusually high precipitation (see Figure 3). Despite these factors, the analysis still identified clear cases where trees in the control and irrigated plots differed significantly, highlighting the robustness of the observed patterns.</p>
+<p>In this study, we focused on dry heatwaves, a common feature of Mediterranean climates. To characterize these heatwaves, we prioritized VPD over temperature, as VPD more directly reflects the atmospheric demand for water. Our analysis centred on the impact of VPD on tree water status and growth. However, extreme temperatures, which we did not investigate in this study, pose a significant threat to tree health and functioning. It is important to acknowledge that our findings do not necessarily apply in cases of extreme heat. High temperatures alone can cause irreversible damage to tree tissues, including mortality (Wahid et al.&nbsp;2007; Teskey et al.&nbsp;2015; Still et al.&nbsp;2023).</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">5 | Conclusion</h2>
+<p>In this study, we explored how pine trees respond to the pressures of soil and atmospheric droughts, with a particular focus on stem growth dynamics. By leveraging continuous dendrometer measurements from an irrigation experiment in a semiarid Mediterranean forest, we disentangled the roles of soil water availability and atmospheric demand in shaping tree behaviour across seasons and atmospheric events.</p>
+<p>Our findings highlight the importance of soil water in sustaining growth and modulating responses to short-term atmospheric drought. When soil moisture was not limiting, treesregardless of long-term treatment-exhibited similar growth dynamics, underscoring their physiological plasticity. In contrast, under soil drought, trees displayed divergent responses: irrigated trees maintained growth during heatwaves, while control trees experienced contraction.</p>
+<p>To capture and interpret these dynamics, we utilized a suite of dendrometer-based metrics-GRO rate, <span class="math inline">\Omega</span> and T-REX-that together provide a robust framework for assessing growth, contraction and recovery. Notably, <span class="math inline">\Omega</span> and T-REX rely solely on stem diameter measurements and are unit-independent, making them broadly applicable across species, sizes, and measurement systems. GRO rate tracks irreversible stem expansion, <span class="math inline">\Omega</span> quantifies resistance through the fraction of time spent expanding, and T-REX captures recovery ability through the effective number of contraction days since irreversible growth last occurred. Together, these tools offer a multidimensional view of tree growth modes.</p>
+<p>As climate change intensifies the intensity, duration and frequency of droughts, there is a growing need to better understand how trees respond to shifting water availability. This study offers a new lens for interpreting high-resolution stem diameter variation data, revealing how growth dynamics-expansion, contraction, and recovery-unfold across a range of soil and atmospheric conditions. These insights enhance our ability to monitor tree functioning in real time, offering potential early warning indicators of stress and supporting efforts to track tree growth across natural, agricultural and urban environments.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>E.F. was supported by a PhD scholarship from the Israel Ministry of Environmental Protection and the Israel Council for Higher Education. D.Y. and E.R. were supported by grants from the Israel Science Foundation (ISF, Grant 2481/22), the Weizmann Institute SAERI/IES and the Keren Kayemet L’Israel (KKL-JNF, Grant 714798). Y.M. acknowledges the support of the Research Center for Agriculture, Environment and Natural Resources of the Hebrew University of Jerusalem. The authors would like to thank Jonathan Friedman and Niv DeMalach for useful discussion.</p>
+</section>
+<section id="conflicts-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="conflicts-of-interest">Conflicts of Interest</h2>
+<p>The authors declare no conflicts of interest.</p>
+</section>
+<section id="data-availability-statement" class="level2">
+<h2 class="anchored" data-anchor-id="data-availability-statement">Data Availability Statement</h2>
+<p>Data and code are available at <a href="https://doi.org/10.5281/zenodo.15382092" class="uri">https://doi.org/10.5281/zenodo.15382092</a>. Additional data will be provided upon request.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Andriantelomanana, T., T. Améglio, S. Delzon, H. Cochard, and S. Herbette. 2024. “Unpacking the Point of no Return Under Drought in Poplar: Insight From Stem Diameter Variation.” New Phytologist 242, no. 2: 466-478.</p>
+<p>Aubinet, M., A. Grelle, A. Ibrom, et al.&nbsp;1999. ” Estimates of the Annual Net Carbon and Water Exchange of Forests: The Euroflux Methodology.” In Advances in Ecological Research 30, 113-175. Elsevier.</p>
+<p>Benjamini, Y., and Y. Hochberg. 1995. “Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing.” Journal of the Royal Statistical Society: Series B (Methodological) 57, no. 1: 289-300.</p>
+<p>Breshears, D., H. Adams, D. Eamus, et al.&nbsp;2013. “The Critical Amplifying Role of Increasing Atmospheric Moisture Demand on Tree Mortality and Associated Regional Die-Off.” Frontiers in Plant Science 4: 4.</p>
+<p>Chiang, F., O. Mazdiyasni, and A. AghaKouchak. 2021. “Evidence of Anthropogenic Impacts on Global Drought Frequency, Duration, and Intensity.” Nature Communications 12, no. 1: 2754.</p>
+<p>Dai, A. 2013. “Increasing Drought Under Global Warming in Observations and Models.” Nature Climate Change 3, no. 1: 52-58.</p>
+<p>De Swaef, T., V. De Schepper, M. W. Vandegehuchte, and K. Steppe. 2015. “Stem Diameter Variations as a Versatile Research Tool in Ecophysiology.” Tree Physiology 35, no. 10: 1047-1061.</p>
+<p>Dietrich, L., R. Zweifel, and A. Kahmen. 2018. “Daily Stem Diameter Variations Can Predict the Canopy Water Status of Mature Temperate Trees.” Tree Physiology 38, no. 7: 941-952.</p>
+<p>Dore, M. H. 2005. “Climate Change and Changes in Global Precipitation Patterns: What Do We Know?” Environment International 31, no. 8: 1167-1181.</p>
+<p>Dudney, J., A. M. Latimer, P. van Mantgem, et al.&nbsp;2023. “The EnergyWater Limitation Threshold Explains Divergent Drought Responses in Tree Growth, Needle Length, and Stable Isotope Ratios.” Global Change Biology 29, no. 15: 4368-4382.</p>
+<p>Fischer, E. M., and C. Schär. 2010. “Consistent Geographical Patterns of Changes in High-Impact European Heatwaves.” Nature Geoscience 3, no. 6: 398-403.</p>
+<p>Grünzweig, J., I. Gelfand, Y. Fried, and D. Yakir. 2007. “Biogeochemical Factors Contributing to Enhanced Carbon Storage Following Afforestation of a Semi-Arid Shrubland.” Biogeosciences 4, no. 5: 891-904.</p>
+<p>Grünzweig, J., T. Lin, E. Rotenberg, A. Schwartz, and D. Yakir. 2003. “Carbon Sequestration in Arid-Land Forest.” Global Change Biology 9, no. 5: 791-799.</p>
+<p>Hammond, W. M., A. P. Williams, J. T. Abatzoglou, et al.&nbsp;2022. “Global Field Observations of Tree Die-Off Reveal Hotter-Drought Fingerprint for Earth’s Forests.” Nature Communications 13, no. 1: 1-11.</p>
+<p>Klein, T., E. Rotenberg, E. Cohen-Hilaleh, et al.&nbsp;2014. “Quantifying Transpirable Soil Water and Its Relations to Tree Water Use Dynamics in a Water-Limited Pine Forest.” Ecohydrology 7, no. 2: 409-419.</p>
+<p>Littell, J. S., D. L. Peterson, and M. Tjoelker. 2008. “Douglas-Fir Growth in Mountain Ecosystems: Water Limits Tree Growth From Stand to Region.” Ecological Monographs 78, no. 3: 349-368.</p>
+<p>Maseyk, K. 2006. “Carbon and Oxygen Isotope Composition of Phloem Sap Sucrose as an Indicator of Canopy Photosynthesis.” PhD thesis, Weizmann Institute of Science.</p>
+<p>Maseyk, K. S., T. Lin, E. Rotenberg, J. M. Grünzweig, A. Schwartz, and D. Yakir. 2008. “Physiology-Phenology Interactions in a Productive Semi-Arid Pine Forest.” New Phytologist 178, no. 3: 603-616.</p>
+<p>McDowell, N. G., G. Sapes, A. Pivovaroff, et al.&nbsp;2022. “Mechanisms of Woody-Plant Mortality Under Rising Drought, <span class="math inline">\mathrm{CO}_{2}</span> and Vapour Pressure Deficit.” Nature Reviews Earth &amp; Environment 3, no. 5: 294-308.</p>
+<p>Meehl, G. A., and C. Tebaldi. 2004. “More Intense, More Frequent, and Longer Lasting Heat Waves in the 21st Century.” Science 305, no. 5686: 994-997.</p>
+<p>Meinzer, F. C., D. M. Johnson, B. Lachenbruch, K. A. McCulloh, and D. R. Woodruff. 2009. “Xylem Hydraulic Safety Margins in Woody Plants: Coordination of Stomatal Control of Xylem Tension With Hydraulic Capacitance.” Functional Ecology 23, no. 5: 922-930.</p>
+<p>Nakagawa, S., and H. Schielzeth. 2013. “A General and Simple Method for Obtaining <span class="math inline">R^{2}</span> From Generalized Linear Mixed-Effects Models.” Methods in Ecology and Evolution 4, no. 2: 133-142.</p>
+<p>Novick, K. A., D. L. Ficklin, C. Grossiord, et al.&nbsp;2024. “The Impacts of Rising Vapour Pressure Deficit in Natural and Managed Ecosystems.” Plant, Cell &amp; Environment 47, no. 9: 3561-3589.</p>
+<p>Oberhuber, W., M. Sehrt, and F. Kitz. 2020. “Hygroscopic Properties of Thin Dead Outer Bark Layers Strongly Influence Stem Diameter Variations on Short and Long Time Scales in Scots Pine (Pinus sylvestris L.).” Agricultural and Forest Meteorology 290: 108026.</p>
+<p>Papale, D., M. Reichstein, M. Aubinet, et al.&nbsp;2006. “Towards a Standardized Processing of Net Ecosystem Exchange Measured With Eddy Covariance Technique: Algorithms and Uncertainty Estimation.” Biogeosciences 3, no. 4: 571-583. Perkins-Kirkpatrick, S., and P. Gibson. 2017. “Changes in Regional Heatwave Characteristics as a Function of Increasing Global Temperature.” Scientific Reports 7, no. 1: 1-12.</p>
+<p>Peters, R. L., K. Steppe, H. E. Cuny, et al.&nbsp;2021. “Turgor-A Limiting Factor for Radial Growth in Mature Conifers Along an Elevational Gradient.” New Phytologist 229, no. 1: 213-229.</p>
+<p>Powers, J. S., G. Vargas G, T. J. Brodribb, et al.&nbsp;2020. “A Catastrophic Tropical Drought Kills Hydraulically Vulnerable Tree Species.” Global Change Biology 26, no. 5: 3122-3133.</p>
+<p>Preisler, Y., J. M. Grünzweig, O. Ahiman, et al.&nbsp;2023. “Vapour Pressure Deficit Was not a Primary Limiting Factor for Gas Exchange in An Irrigated, Mature Dryland Aleppo Pine Forest.” Plant, Cell &amp; Environment 46, no. 12: 3775-3790.</p>
+<p>Preisler, Y., T. Hölttä, J. M. Grünzweig, et al.&nbsp;2022. “The Importance of Tree Internal Water Storage Under Drought Conditions.” Tree Physiology 42, no. 4: 771-783.</p>
+<p>Preisler, Y., F. Tatarinov, J. M. Grünzweig, et al.&nbsp;2019. “Mortality Versus Survival in Drought-Affected Aleppo Pine Forest Depends on the Extent of Rock Cover and Soil Stoniness.” Functional Ecology 33, no. 5: 901-912.</p>
+<p>Preisler, Y., F. Tatarinov, J. M. Grünzweig, and D. Yakir. 2020. “Seeking the ‘Point of no Return’ in the Sequence of Events Leading to Mortality of Mature Trees.” Plant, Cell &amp; Environment 44, no. 5: 1315-1328.</p>
+<p>Reichstein, M., E. Falge, D. Baldocchi, et al.&nbsp;2005. “On the Separation of Net Ecosystem Exchange Into Assimilation and Ecosystem Respiration: Review and Improved Algorithm.” Global Change Biology 11, no. 9: 1424-1439.</p>
+<p>Rez, L., J. E. Missik, G. Bohrer, and Y. Mau. 2024. “Stem Water Content Is Crucial to Support Fruit Tree Functioning During Heatwaves in a Mediterranean Climate.” Preprint, bioRxiv.</p>
+<p>Robinson, P. J. 2001. “On the Definition of a Heat Wave.” Journal of Applied Meteorology and Climatology 40, no. 4: 762-775.</p>
+<p>Rotenberg, E., and D. Yakir. 2010. “Contribution of Semi-Arid Forests to the Climate System.” Science 327, no. 5964: 451-454.</p>
+<p>Salomón, R. L., R. L. Peters, R. Zweifel, et al.&nbsp;2022. “The 2018 European Heatwave Led to Stem Dehydration but not to Consistent Growth Reductions in Forests.” Nature Communications 13, no. 1: 28.</p>
+<p>Sánchez-Costa, E., R. Poyatos, and S. Sabaté. 2015. “Contrasting Growth and Water Use Strategies in Four Co-Occurring Mediterranean Tree Species Revealed by Concurrent Measurements of Sap Flow and Stem Diameter Variations.” Agricultural and Forest Meteorology 207: 24-37.</p>
+<p>Senf, C., D. Pflugmacher, Y. Zhiqiang, et al.&nbsp;2018. “Canopy Mortality Has Doubled in Europe’s Temperate Forests Over the Last Three Decades.” Nature Communications 9, no. 1: 1-8.</p>
+<p>Shekhar, A., L. Hörtnagl, E. Paul-Limoges, et al.&nbsp;2024. “Contrasting Impact of Extreme Soil and Atmospheric Dryness on the Functioning of Trees and Forests.” Science of the Total Environment 916: 169931.</p>
+<p>Steppe, K., F. Sterck, and A. Deslauriers. 2015. “Diel Growth Dynamics in Tree Stems: Linking Anatomy and Ecophysiology.” Trends in Plant Science 20, no. 6: 335-343.</p>
+<p>Still, C. J., A. Sibley, D. DePinte, et al.&nbsp;2023. “Causes of Widespread Foliar Damage From the June 2021 Pacific Northwest Heat Dome: More Heat Than Drought.” Tree Physiology 43, no. 2: 203-209.</p>
+<p>Tallaksen, L. M., H. Madsen, and B. Clausen. 1997. “On the Definition and Modelling of Streamflow Drought Duration and Deficit Volume.” Hydrological Sciences Journal 42, no. 1: 15-33.</p>
+<p>Tatarinov, F., E. Rotenberg, K. Maseyk, J. Ogée, T. Klein, and D. Yakir. 2016. “Resilience to Seasonal Heat Wave Episodes in a Mediterranean Pine Forest.” New Phytologist 210, no. 2: 485-496.</p>
+<p>Teskey, R., T. Wertin, I. Bauweraerts, M. Ameye, M. A. McGuire, and K. Steppe. 2015. “Responses of Tree Species to Heat Waves and Extreme Heat Events.” Plant, Cell &amp; Environment 38, no. 9: 1699-1712.</p>
+<p>Trenberth, K. E., A. Dai, G. Van Der Schrier, et al.&nbsp;2014. “Global Warming and Changes in Drought.” Nature Climate Change 4, no. 1: 17-22.</p>
+<p>Vargas Zeppetello, L. R., K. A. McColl, J. A. Bernau, et al.&nbsp;2023. “Apparent Surface Conductance Sensitivity to Vapour Pressure Deficit in the Absence of Plants.” Nature Water 1, no. 11: 941-951.</p>
+<p>Wagner, Y., F. Feng, D. Yakir, T. Klein, and U. Hochberg. 2022. “In Situ, Direct Observation of Seasonal Embolism Dynamics in Aleppo Pine Trees Growing on the Dry Edge of Their Distribution.” New Phytologist 235, no. 4: 1344-1350.</p>
+<p>Wahid, A., S. Gelani, M. Ashraf, and M. R. Foolad. 2007. “Heat Tolerance in Plants: An Overview.” Environmental and Experimental Botany 61, no. 3: 199-223.</p>
+<p>Wutzler, T., A. Lucas-Moffat, M. Migliavacca, et al.&nbsp;2018. “Basic and Extensible Post-Processing of Eddy Covariance Flux Data With REddyProc.” Biogeosciences 15, no. 16: 5015-5030.</p>
+<p>Xu, C., N. G. McDowell, R. A. Fisher, et al.&nbsp;2019. “Increasing Impacts of Extreme Droughts on Vegetation Productivity Under Climate Change.” Nature Climate Change 9, no. 12: 948-953.</p>
+<p>Yin, J., P. Gentine, L. Slater, et al.&nbsp;2023. “Future Socio-Ecosystem Productivity Threatened by Compound Drought-Heatwave Events.” Nature Sustainability 6, no. 3: 259-272.</p>
+<p>Yu, K., W. K. Smith, A. T. Trugman, et al.&nbsp;2019. “Pervasive Decreases in Living Vegetation Carbon Turnover Time Across Forest Climate Zones.” Proceedings of the National Academy of Sciences 116, no. 49: 24662-24667.</p>
+<p>Zhou, S., Y. Zhang, A. Park Williams, and P. Gentine. 2019. “Projected Increases in Intensity, Frequency, and Terrestrial Carbon Costs of Compound Drought and Aridity Events.” Science Advances 5, no. 1: eaau5.</p>
+<p>Ziegler, Y., R. Grote, F. Alongi, T. Knüver, and N. K. Ruehr. 2024. “Capturing Drought Stress Signals: The Potential of Dendrometers for Monitoring Tree Water Status.” Tree Physiology 44, no. 12: tpae140.</p>
+<p>Zweifel, R., M. Haeni, N. Buchmann, and W. Eugster. 2016. “Are Trees Able to Grow in Periods of Stem Shrinkage?” New Phytologist 211, no. 3: 839-849.</p>
+<p>Zweifel, R., and R. Häsler. 2001. “Dynamics of Water Storage in Mature Subalpine Picea abies: Temporal and Spatial Patterns of Change in Stem Radius.” Tree Physiology 21, no. 9: 561-569.</p>
+<p>Zweifel, R., L. Zimmermann, and D. Newbery. 2005. “Modeling Tree Water Deficit From Microclimate: An Approach to Quantifying Drought Stress.” Tree Physiology 25, no. 2: 147-156.</p>
+</section>
+<section id="supporting-information" class="level2">
+<h2 class="anchored" data-anchor-id="supporting-information">Supporting Information</h2>
+<p>Additional supporting information can be found <a href="https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fpce.15604&amp;file=pce15604-sup-0001-SuppMat.pdf" target="_blank">here</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

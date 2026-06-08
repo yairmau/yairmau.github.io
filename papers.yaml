@@ -26,6 +26,7 @@ feuer2025tree:
   year: "2025"
   doi: 10.1111/pce.15604
   pdf: archive/papers/feuer-2025-Tree Growth Contraction and Recovery Disentangling Soil and Atmospheric Drought.pdf
+  md: archive/papers-md/feuer2025tree/feuer2025tree.qmd
   bib: |
       @article{feuer2025tree,
           doi = {10.1111/pce.15604},

@@ -1,0 +1,8 @@
+# Yair Mau — Personal webpage
+
+> Markdown versions of my published papers, made available for LLM consumption.
+
+## Papers
+
+- [
+Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects](https://yairmau.com/archive/papers-md/feuer2025tree): Disentangles soil vs. atmospheric drought effects on Aleppo pine growth using dendrometer data and an irrigation experiment. Yatir forest, Israel. Published PCE 2025.

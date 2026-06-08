@@ -84,6 +84,8 @@ def print_paper(data):
         buttons.append(button(data['website'], "PDF", "bi-file-earmark-pdf-fill"))
     if "github" in data:
         buttons.append(button(data['github'], "Github", "bi-github"))
+    if "md" in data:
+        buttons.append(button(data['md'], "Markdown", "bi-file-earmark-text-fill"))
     if "bib" in data:
         buttons.append(new_bib_button(data['handle'], data['bib']))
     # now show buttons
