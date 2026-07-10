@@ -118,11 +118,15 @@ def print_paper(data):
 yaml_data = yaml.safe_load(open("papers.yaml"))
 ```
 
-<!-- ## Papers -->
+<!-- ## Papers --> 
  
 
 ```{python}
 #| output: asis
+
+display(Markdown("### 2026"))
+display(HTML("</br>"))
+print_paper(yaml_data['rez2026stem'][0])
 
 display(Markdown("### 2025"))
 display(HTML("</br>"))
@@ -132,7 +136,6 @@ print_paper(yaml_data['missik2025using'][0])
 
 display(Markdown("### 2024"))
 display(HTML("</br>"))
-print_paper(yaml_data['rez2024stem'][0])
 print_paper(yaml_data['kramer2024climate'][0])
 print_paper(yaml_data['goldberg2024effect'][0])
 print_paper(yaml_data['mantova2024monitoring'][0])

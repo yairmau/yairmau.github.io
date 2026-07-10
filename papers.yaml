@@ -1,3 +1,24 @@
+rez2026stem:
+- title: "rez2026stem"
+  handle: "rez2026stem"
+  authors: Laura Rez, Justine Missik, Gil Bohrer and Yair Mau
+  title: "Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate"
+  journal: Agricultural and Forest Meteorology
+  year: "2026"
+  doi: 10.1016/j.agrformet.2026.111278
+  pdf: archive/papers/rez-2023-Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.pdf
+  bib: |
+      @article{rez2026stem,
+          doi = {10.1016/j.agrformet.2026.111278},
+          url = {https://doi.org/10.1016/j.agrformet.2026.111278},
+          year = {2026},
+          volume = {387},
+          pages = {111278},
+          author = {Laura Rez and Justine Missik and Gil Bohrer and Yair Mau},
+          title = {Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate},
+          journal = {Agricultural and Forest Meteorology},
+      }
+
 hollander2025mechanisms:
 - title: "hollander2025mechanisms"
   handle: "hollander2025mechanisms"
@@ -58,27 +79,6 @@ missik2025using:
         pages={e2024JG008198},
         year={2025},
         publisher={Wiley Online Library}
-      }
-
-
-rez2024stem:
-- title: "rez2024stem"
-  handle: "rez2024stem"
-  authors: Laura Rez, Justine Missik, Gil Bohrer and Yair Mau
-  title: "Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate"
-  journal: bioRxiv
-  year: "2024"
-  doi: 10.1101/2024.09.29.615635
-  bib: |
-      @article{rez2024stem,
-          doi = {10.1101/2024.09.29.615635},
-          url = {https://doi.org/10.1101/2024.09.29.615635},
-          year = {2024},
-          volume = {not available},
-          number = {not available},
-          author = {Laura Rez and Justine Missik and Gil Bohrer and Yair Mau},
-          title = {Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate},
-          journal = {bioRxiv},
       }
 
 kramer2024climate:
