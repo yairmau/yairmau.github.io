@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>quarto tips – Yair Mau</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -71,10 +68,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8291caccebea3e7238bd0d3f61734ea6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1d9754e6b7e1dc15a659fbcd6780067e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-be0c2648ac05ed06cf54dceeb984c980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-050095ae66e8aec310293989169018f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -133,7 +130,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -160,8 +157,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
-    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Yair Mau</span>
@@ -254,7 +250,7 @@ window.Quarto = {
 <div class="card bg-warning card-body pb-0">
 <p>This doesn’t have a header.</p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.card .bg-info}</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.card .bg-info}</span>
 <span id="cb1-2"><a href="#cb1-2"></a>::: {.card-header}</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co">[</span><span class="ot">header here</span><span class="co">]</span>{.h3}</span>
 <span id="cb1-4"><a href="#cb1-4"></a>:::</span>
@@ -268,7 +264,7 @@ window.Quarto = {
 <span id="cb1-12"><a href="#cb1-12"></a></span>
 <span id="cb1-13"><a href="#cb1-13"></a>::: {.card .bg-warning .card-body .pb-0}</span>
 <span id="cb1-14"><a href="#cb1-14"></a>This doesn't have a header.</span>
-<span id="cb1-15"><a href="#cb1-15"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-15"><a href="#cb1-15"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="offcanvas" class="level2">
 <h2 class="anchored" data-anchor-id="offcanvas">offcanvas</h2>
@@ -287,7 +283,7 @@ window.Quarto = {
 <div class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPythagoras" style="height: 2.5rem; line-height: 2.3rem; padding-top: 0; padding-bottom: 0;">
 <p>Answer here</p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {#offcanvasPythagoras .offcanvas .offcanvas-start}</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {#offcanvasPythagoras .offcanvas .offcanvas-start}</span>
 <span id="cb2-2"><a href="#cb2-2"></a>::: {.offcanvas-header}</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">### Answer {.unnumbered .unlisted}</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn-close"</span><span class="ot"> data-bs-dismiss</span><span class="op">=</span><span class="st">"offcanvas"</span><span class="dt">&gt;&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
@@ -303,7 +299,7 @@ window.Quarto = {
 <span id="cb2-14"><a href="#cb2-14"></a></span>
 <span id="cb2-15"><a href="#cb2-15"></a>::: {.btn .btn-warning data-bs-toggle="offcanvas" data-bs-target="#offcanvasPythagoras" style="height: 2.5rem; line-height: 2.3rem; padding-top: 0; padding-bottom: 0;"}</span>
 <span id="cb2-16"><a href="#cb2-16"></a>Answer here</span>
-<span id="cb2-17"><a href="#cb2-17"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-17"><a href="#cb2-17"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="footnotes" class="level2">
 <h2 class="anchored" data-anchor-id="footnotes">footnotes</h2>
@@ -311,11 +307,11 @@ window.Quarto = {
 <li>What is the capital of France?? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li>What is the element with 77 protons? <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="ss">* </span>What is the capital of France?? <span class="ot">[^1]</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="ss">* </span>What is the capital of France?? <span class="ot">[^1]</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="ss">* </span>What is the element with 77 protons? <span class="ot">[^2]</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="ot">[^1]: </span>Paris</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="ot">[^2]: </span>Iridium</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="ot">[^2]: </span>Iridium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="callout" class="level2">
 <h2 class="anchored" data-anchor-id="callout">callout</h2>
@@ -325,7 +321,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Note to self
+Note to self
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -333,12 +329,12 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><iconify-icon inline="" icon="fa:question-circle-o"></iconify-icon> How many seconds are there in six weeks?
+<iconify-icon inline="" icon="fa:question-circle-o"></iconify-icon> How many seconds are there in six weeks?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -348,7 +344,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.callout-important}</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a>::: {.callout-important}</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="fu">## Note to self</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
 <span id="cb4-4"><a href="#cb4-4"></a>asdf</span>
@@ -358,7 +354,7 @@ window.Quarto = {
 <span id="cb4-8"><a href="#cb4-8"></a><span class="fu">##  How many seconds are there in six weeks?</span></span>
 <span id="cb4-9"><a href="#cb4-9"></a></span>
 <span id="cb4-10"><a href="#cb4-10"></a>10!</span>
-<span id="cb4-11"><a href="#cb4-11"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-11"><a href="#cb4-11"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="details" class="level2">
 <h2 class="anchored" data-anchor-id="details">details</h2>
@@ -368,10 +364,10 @@ click here to see more
 </summary>
 more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more
 </details>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>click here to see more<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more </span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="column-margin" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="column-margin">column margin</h2>
@@ -380,11 +376,11 @@ more more more more more more more more more more more more more more more more 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>This is the extra stuff I wanted to mention without breaking the flow of the text. I can put links, images, whatever I want here.</p>
 </div></div><p>Let’s say I’m writing something, and I would love to open some parenthesis and give extra context, but I don’t want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>Let's say I'm writing something, and I would love to open some parenthesis and give extra context, but I don't want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>Let's say I'm writing something, and I would love to open some parenthesis and give extra context, but I don't want to break the flow of the text. I can use this nice trick to put extra stuff on the side of the paragraph.</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a>::: {.column-margin}</span>
 <span id="cb6-4"><a href="#cb6-4"></a>This is the extra stuff I wanted to mention without breaking the flow of the text. I can put links, images, whatever I want here.</span>
-<span id="cb6-5"><a href="#cb6-5"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-5"><a href="#cb6-5"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -448,14 +444,13 @@ more more more more more more more more more more more more more more more more 
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

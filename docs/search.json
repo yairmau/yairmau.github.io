@@ -53,7 +53,7 @@
     "href": "more/quarto-tips.html#callout",
     "title": "quarto tips",
     "section": "callout",
-    "text": "callout\n\n\n\n\n\n\nImportantNote to self\n\n\n\nasdf\n\n\n\n\n\n\n\n\nNote How many seconds are there in six weeks?\n\n\n\n\n\n10!\n\n\n\n::: {.callout-important}\n## Note to self\n\nasdf\n:::\n\n::: {.callout-note collapse=\"true\" icon=false}\n##  How many seconds are there in six weeks?\n\n10!\n:::"
+    "text": "callout\n\n\n\n\n\n\nNote to self\n\n\n\nasdf\n\n\n\n\n\n\n\n\n How many seconds are there in six weeks?\n\n\n\n\n\n10!\n\n\n\n::: {.callout-important}\n## Note to self\n\nasdf\n:::\n\n::: {.callout-note collapse=\"true\" icon=false}\n##  How many seconds are there in six weeks?\n\n10!\n:::"
   },
   {
     "objectID": "more/quarto-tips.html#details",
@@ -81,14 +81,21 @@
     "href": "more/color/color.html",
     "title": "Color",
     "section": "",
-    "text": "Click Here\nColormap Reference"
+    "text": "Search online for “Sanzo Wada” and his “Dictionary of Color Combinations” (volumes 1 and 2). Amazing stuff. The best.\nThere is one great website where you can browse some hundreds of his color combinations: https://colors.elwyn.co/\nCombination 300 is one of my favorites."
+  },
+  {
+    "objectID": "more/color/color.html#sanzo-wada",
+    "href": "more/color/color.html#sanzo-wada",
+    "title": "Color",
+    "section": "",
+    "text": "Search online for “Sanzo Wada” and his “Dictionary of Color Combinations” (volumes 1 and 2). Amazing stuff. The best.\nThere is one great website where you can browse some hundreds of his color combinations: https://colors.elwyn.co/\nCombination 300 is one of my favorites."
   },
   {
     "objectID": "more/color/color.html#default-matplotlib-colormaps",
     "href": "more/color/color.html#default-matplotlib-colormaps",
     "title": "Color",
-    "section": "",
-    "text": "Click Here\nColormap Reference"
+    "section": "Default Matplotlib colormaps",
+    "text": "Default Matplotlib colormaps\nClick Here\nColormap Reference"
   },
   {
     "objectID": "more/color/color.html#matplotlib-colormap-tricks",
