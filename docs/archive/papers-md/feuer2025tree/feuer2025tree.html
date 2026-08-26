@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects – Yair Mau</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1d9754e6b7e1dc15a659fbcd6780067e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-050095ae66e8aec310293989169018f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-be0c2648ac05ed06cf54dceeb984c980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -94,7 +97,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -121,7 +124,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Yair Mau</span>
@@ -247,8 +251,7 @@ window.Quarto = {
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">1 | Introduction</h2>
-<p>Large tree-mortality events have been recorded across the globe for many decades (Senf et al.&nbsp;2018; Yu et al.&nbsp;2019; Powers et al.&nbsp;2020; Hammond et al.&nbsp;2022). Atmospheric and soil droughts are two major stressors impacting tree growth and survival, often linked to shifts in rainfall patterns and intensifying atmospheric dryness (Breshears et al.&nbsp;2013; Trenberth et al.&nbsp;2014; McDowell et al.&nbsp;2022). Atmospheric drought relates to periods when the air is hot and dry, and it is usually quantified by high vapour pressure deficit (VPD) values. Trees’ response to high VPD values is often associated with decreased tree carbon reserves, decreased growth, and higher risk of hydraulic failure, among others (Novick et al.&nbsp;2024). Soil drought denotes periods of time of low soil water content, usually brought about by low precipitation. In the coming decades, we expect worsening of these two kinds of droughts, regarding their intensity, duration and frequency characteristics, posing an even greater threat to tree survival (Meehl and Tebaldi 2004; Dai 2013; Perkins-</p>
-<p>[^0]Kirkpatrick and Gibson 2017; Chiang et al.&nbsp;2021; Dore 2005; Xu et al.&nbsp;2019). Still worse, the compounding of soil and atmospheric droughts-when both occur together-creates a more complex and intensified stress regime, highlighting the need for a deeper understanding of their combined impacts on ecosystems (Zhou et al.&nbsp;2019; Yin et al.&nbsp;2023; Shekhar et al.&nbsp;2024).</p>
+<p>Large tree-mortality events have been recorded across the globe for many decades (Senf et al.&nbsp;2018; Yu et al.&nbsp;2019; Powers et al.&nbsp;2020; Hammond et al.&nbsp;2022). Atmospheric and soil droughts are two major stressors impacting tree growth and survival, often linked to shifts in rainfall patterns and intensifying atmospheric dryness (Breshears et al.&nbsp;2013; Trenberth et al.&nbsp;2014; McDowell et al.&nbsp;2022). Atmospheric drought relates to periods when the air is hot and dry, and it is usually quantified by high vapour pressure deficit (VPD) values. Trees’ response to high VPD values is often associated with decreased tree carbon reserves, decreased growth, and higher risk of hydraulic failure, among others (Novick et al.&nbsp;2024). Soil drought denotes periods of time of low soil water content, usually brought about by low precipitation. In the coming decades, we expect worsening of these two kinds of droughts, regarding their intensity, duration and frequency characteristics, posing an even greater threat to tree survival (Meehl and Tebaldi 2004; Dai 2013; Perkins-Kirkpatrick and Gibson 2017; Chiang et al.&nbsp;2021; Dore 2005; Xu et al.&nbsp;2019). Still worse, the compounding of soil and atmospheric droughts-when both occur together-creates a more complex and intensified stress regime, highlighting the need for a deeper understanding of their combined impacts on ecosystems (Zhou et al.&nbsp;2019; Yin et al.&nbsp;2023; Shekhar et al.&nbsp;2024).</p>
 <p>As drought conditions intensify, trees increasingly rely on internal water reserves to sustain essential physiological functions. Drawing on these reserves enables trees to maintain critical processes like photosynthesis, transpiration and osmoregulation while preventing hydraulic failure and loss of turgor (Meinzer et al.&nbsp;2009; Steppe et al.&nbsp;2015; Preisler et al.&nbsp;2022). As soils dry and canopy transpiration outpaces root water uptake, trees draw on internal water reserves, which gradually deplete. This decline in water status restricts growth, reduces carbon sequestration and increases vulnerability, eventually raising the risk of mortality (Steppe et al.&nbsp;2015; Peters et al.&nbsp;2021; McDowell et al.&nbsp;2022). Thus, water storage stands out as a crucial component, supporting tree functioning in the face of escalating drought pressures.</p>
 <p>The dynamics of stem growth and internal water storage have been increasingly studied through continuous, high-resolution stem diameter measurements using dendrometers. Dendrometers offer the advantage of real-time monitoring, providing insights into both water status and growth (Zweifel et al.&nbsp;2016). Dentrometry-based metrics can reveal how water storage supports immediate tree functioning while also illustrating the long-term depletion of water reserves (De Swaef et al.&nbsp;2015). For instance, analysis of stem diameter variations was used to derive early warning indicators of tree death (Preisler et al.&nbsp;2020; Andriantelomanana et al.&nbsp;2024). Zweifel et al.&nbsp;(2016) proposed two metrics: irreversible stem expansion (GRO), which quantifies the historical maximum stem diameter and indicates growth through wood formation, and tree water deficit (TWD), defined as the difference between GRO and the actual stem diameter, which reveals temporary stem shrinkage as trees tap into stored water reserves. This framework has provided useful concepts to talk about tree growth (Zweifel and Häsler 2001), water potential (Dietrich et al.&nbsp;2018), stomatal conductance (Ziegler et al.&nbsp;2024), water use strategies (Sánchez-Costa et al.&nbsp;2015) and the effects of elevated VPD on stem shrinkage (Salomón et al.&nbsp;2022).</p>
 <p>However, a significant question remains largely unanswered: how to disentangle the influence of atmospheric and soil drought on plant growth and resilience (Novick et al.&nbsp;2024). These two types of drought often occur together, compounding their effects (Yin et al.&nbsp;2023). Consequently, the same negative effects on trees associated with high VPD are also associated with low soil water content, making it difficult to determine the individual contribution of each factor to the overall stress on tree growth. Zweifel et al.&nbsp;(2005) proposed a phenomenological model to deal with this question, showing that physiological responses to VPD depend on soil water content. Preisler et al.&nbsp;(2023) found that when eliminating soil drought, even under extreme VPD conditions ( <span class="math inline">&gt;5 \mathrm{kPa}</span> ), Aleppo pine trees will maintain high assimilation despite the extreme conditions. Additionally, a recent study by Vargas Zeppetello et al.&nbsp;(2023) suggests that VPD has been overstated in its impact over ecosystem evapotranspiration, and that soil moisture is the most relevant state variable to understand surface water conductance. These findings underscore the need to reevaluate the relative roles of atmospheric and soil drought, with growing evidence pointing to soil moisture as a key driver of plant resilience and ecosystem function.</p>
@@ -530,13 +533,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

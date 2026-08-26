@@ -1,3 +1,23 @@
+hollander2026mechanisms:
+- title: "hollander2026mechanisms"
+  handle: "hollander2026mechanisms"
+  authors: Oded Hollander, Yair Mau and Niv DeMalach
+  title: "Mechanisms behind facilitation-competition transition along rainfall gradients"
+  journal: PNAS
+  year: "2026"
+  doi: 10.1073/pnas.2615937123
+  md: archive/papers-md/hollander2026mechanisms/hollander2026mechanisms.qmd
+  pdf: archive/papers/hollander-2026-mechanisms behind facilitation-competition transition along rainfall gradients.pdf
+  bib: |
+      @article{hollander2026mechanisms,
+          doi = {10.1073/pnas.2615937123},
+          url = {https://doi.org/10.1073/pnas.2615937123},
+          year = {2026},
+          author = {Hollander, Oded and Mau, Yair and DeMalach, Niv},
+          title = {Mechanisms behind facilitation-competition transition along rainfall gradients},
+          journal = {PNAS},
+      }
+
 rez2026stem:
 - title: "rez2026stem"
   handle: "rez2026stem"
@@ -6,7 +26,7 @@ rez2026stem:
   journal: Agricultural and Forest Meteorology
   year: "2026"
   doi: 10.1016/j.agrformet.2026.111278
-  pdf: archive/papers/rez-2023-Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.pdf
+  pdf: archive/papers/rez-2026-Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.pdf
   bib: |
       @article{rez2026stem,
           doi = {10.1016/j.agrformet.2026.111278},
@@ -17,25 +37,6 @@ rez2026stem:
           author = {Laura Rez and Justine Missik and Gil Bohrer and Yair Mau},
           title = {Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate},
           journal = {Agricultural and Forest Meteorology},
-      }
-
-hollander2025mechanisms:
-- title: "hollander2025mechanisms"
-  handle: "hollander2025mechanisms"
-  authors: Oded Hollander, Yair Mau and Niv DeMalach
-  title: "Mechanisms behind facilitation-competition transition along rainfall gradients"
-  journal: bioRxiv
-  year: "2025"
-  doi: 10.1101/2025.11.24.690218
-  pdf: archive/papers/hollander-2025-mechanisms behind facilitation-competition transition along rainfall gradients.pdf
-  bib: |
-      @article{hollander2025mechanisms,
-          doi = {10.1101/2025.11.24.690218},
-          url = {https://doi.org/10.1101/2025.11.24.690218},
-          year = {2025},
-          author = {Hollander, Oded and Mau, Yair and DeMalach, Niv},
-          title = {Mechanisms behind facilitation-competition transition along rainfall gradients},
-          journal = {bioRxiv},
       }
 
 feuer2025tree:
