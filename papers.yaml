@@ -6,7 +6,7 @@ hollander2026mechanisms:
   journal: PNAS
   year: "2026"
   doi: 10.1073/pnas.2615937123
-  md: archive/papers-md/hollander2026mechanisms/hollander2026mechanisms.qmd
+  md: archive/papers-md/hollander2026mechanisms/hollander2026mechanisms.md
   pdf: archive/papers/hollander-2026-mechanisms behind facilitation-competition transition along rainfall gradients.pdf
   bib: |
       @article{hollander2026mechanisms,

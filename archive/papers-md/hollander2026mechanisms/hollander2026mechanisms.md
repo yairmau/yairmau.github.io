@@ -5,7 +5,6 @@ echo: false
 section-divs: true
 toc: true
 keep-md: true
-html-math-method: katex
 ---
 
 * authors:
