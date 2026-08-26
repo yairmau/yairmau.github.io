@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-be0c2648ac05ed06cf54dceeb984c980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c1c257fa5e0ca5950549c08b59186bcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -183,6 +183,22 @@ window.Quarto = {
   <li><a href="#author-contributions" id="toc-author-contributions" class="nav-link" data-scroll-target="#author-contributions">Author contributions</a></li>
   <li><a href="#competing-interests" id="toc-competing-interests" class="nav-link" data-scroll-target="#competing-interests">Competing interests</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#supplementary-information" id="toc-supplementary-information" class="nav-link" data-scroll-target="#supplementary-information">Supplementary Information</a>
+  <ul class="collapse">
+  <li><a href="#si-1-tree-density-dependent-on-precipitation" id="toc-si-1-tree-density-dependent-on-precipitation" class="nav-link" data-scroll-target="#si-1-tree-density-dependent-on-precipitation">SI 1: Tree density dependent on precipitation</a></li>
+  <li><a href="#si-2-role-of-carrying-capacity-in-the-sgh-patterns" id="toc-si-2-role-of-carrying-capacity-in-the-sgh-patterns" class="nav-link" data-scroll-target="#si-2-role-of-carrying-capacity-in-the-sgh-patterns">SI 2: Role of carrying capacity in the SGH patterns</a></li>
+  <li><a href="#si-3-transient-dynamics" id="toc-si-3-transient-dynamics" class="nav-link" data-scroll-target="#si-3-transient-dynamics">SI 3: Transient dynamics</a></li>
+  <li><a href="#si-4-interaction-intensity" id="toc-si-4-interaction-intensity" class="nav-link" data-scroll-target="#si-4-interaction-intensity">SI 4: Interaction intensity</a></li>
+  <li><a href="#si-5-a-deeper-look-into-the-model" id="toc-si-5-a-deeper-look-into-the-model" class="nav-link" data-scroll-target="#si-5-a-deeper-look-into-the-model">SI 5: A deeper look into the model</a></li>
+  <li><a href="#si-6-logistic-growth-extension-effective-herbherb-interactions" id="toc-si-6-logistic-growth-extension-effective-herbherb-interactions" class="nav-link" data-scroll-target="#si-6-logistic-growth-extension-effective-herbherb-interactions">SI 6: Logistic growth extension: effective herb–herb interactions</a></li>
+  <li><a href="#si-7-a-gradient-of-evaporative-demand" id="toc-si-7-a-gradient-of-evaporative-demand" class="nav-link" data-scroll-target="#si-7-a-gradient-of-evaporative-demand">SI 7: A gradient of evaporative demand</a></li>
+  <li><a href="#si-8-choosing-the-right-resource-metric-for-the-sgh" id="toc-si-8-choosing-the-right-resource-metric-for-the-sgh" class="nav-link" data-scroll-target="#si-8-choosing-the-right-resource-metric-for-the-sgh">SI 8: Choosing the Right Resource Metric for the SGH</a></li>
+  <li><a href="#si-9-logistic-growth-extension-nutrient-limited-growth" id="toc-si-9-logistic-growth-extension-nutrient-limited-growth" class="nav-link" data-scroll-target="#si-9-logistic-growth-extension-nutrient-limited-growth">SI 9: Logistic growth extension: nutrient-limited growth</a></li>
+  <li><a href="#s10-combined-canopy-and-root-mechanisms" id="toc-s10-combined-canopy-and-root-mechanisms" class="nav-link" data-scroll-target="#s10-combined-canopy-and-root-mechanisms">S10: Combined canopy and root mechanisms</a></li>
+  <li><a href="#si-11-infiltration" id="toc-si-11-infiltration" class="nav-link" data-scroll-target="#si-11-infiltration">SI 11: Infiltration</a></li>
+  <li><a href="#si-12-parameter-values-and-their-ecological-basis" id="toc-si-12-parameter-values-and-their-ecological-basis" class="nav-link" data-scroll-target="#si-12-parameter-values-and-their-ecological-basis">SI 12: Parameter values and their ecological basis</a></li>
+  </ul></li>
+  <li><a href="#si-references" id="toc-si-references" class="nav-link" data-scroll-target="#si-references">SI references</a></li>
   </ul>
 </nav>
     </div>
@@ -1290,12 +1306,494 @@ f_r(S,d) = d\left[ \lambda_h + \varphi\, \max(0,S-S_h) - \varphi\, \max(0,S-S_{f
 <p><span class="citation">Y. Mau, yairmau/sgh: v1.0.0. Zenodo. <a href="https://doi.org/10.5281/zenodo.17641468">Crossref</a>. Deposited 18 November 2025.</span></p>
 </div>
 </div>
-
+</section>
+<section id="supplementary-information" class="level2">
+<h2 class="anchored" data-anchor-id="supplementary-information">Supplementary Information</h2>
+<section id="si-1-tree-density-dependent-on-precipitation" class="level3">
+<h3 class="anchored" data-anchor-id="si-1-tree-density-dependent-on-precipitation">SI 1: Tree density dependent on precipitation</h3>
+<p>The arguments in Supporting Information S2 will state that there can be no SGH transition in the absence of a carrying capacity term for constant tree density. This picture changes if instead we allow for precipitation-dependent tree density (as observed in many systems). Higher precipitation supports greater tree density, which, in turn, exerts a stronger shading impact on herbaceous species. We consider here two distinct functional forms of <span class="math inline">d(p)</span>:</p>
+<p><span class="math display">\begin{align}
+d(p) &amp;= \min\left(\frac{p}{1000},1\right) \tag{S1a} \\
+d(p) &amp;= \frac{p}{300 + p}. \tag{S1b}
+\end{align}</span></p>
+<p>While the model internally uses <span class="math inline">p</span> in , we present the equations <span class="math inline">d(p)</span> in for simplicity and practical relevance.</p>
+<p>Figure S1a illustrates the transition from facilitation to competition for these two functional forms. Figure S1b shows the absolute interaction intensity in the <span class="math inline">(p,d)</span> plane, and helps us interpret the graph on the top. When a dark curve in the bottom panel crosses the border between facilitation and competition, we see in the top panel that the dark curves cross the no-tree solution. For higher values of <span class="math inline">d</span>, when the dark curves in the bottom panel cross into the no-viable-biomass zone, we also see a collapse of the vegetated solutions in the top panel. Finally, Fig. S1b helps us understand, from another point of view, why there cannot be a transition from facilitation to competition in the case of no carrying capacity and constant tree density, as will be shown in Supporting Information S2. Constant density solutions (see for example the dotted line at <span class="math inline">d=0.2</span>) always cross from competition to facilitation as <span class="math inline">p</span> increases, never the other way around. By changing tree density from a constant value to increasing functions of precipitation, as depicted by the solid dark lines, one can get the usual transition pattern of the SGH.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/tree_cover_mechanism_II.png" class="img-fluid figure-img"></p>
+<figcaption><strong>The precipitation-dependent tree density mechanism produces the SGH transition even without a carrying capacity term.</strong> Panel a: Steady-state herb biomass solutions (Eq.S2b) for a scenario without any tree density (dotted line) and for two possible instantiations of the tree-density dependence on precipitation (dark curves). Panel b: The absolute interaction intensity is shown in the <span class="math inline">(p,d)</span> plane: warm colors denote positive interactions (facilitation), while cold colors denote negative interactions (competition). The hashed region in the top indicates no viable herb solutions (<span class="math inline">B=0</span>). The two functional forms for tree-density are plotted in solid dark curves. Parameters: <span class="math inline">\beta_a=0.9</span> and <span class="math inline">\beta_e=1.1</span>, and other parameters as shown in Table 1 in the main text.</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-2-role-of-carrying-capacity-in-the-sgh-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="si-2-role-of-carrying-capacity-in-the-sgh-patterns">SI 2: Role of carrying capacity in the SGH patterns</h3>
+<p>We explore here the model results for each of the two mechanisms in the case where the logistic growth term is rendered inactive. This is achieved by taking the carrying capacity <span class="math inline">k\to\infty</span>, which makes <span class="math inline">f_k(B) = \left(1 - B/k\right)\to 1</span>. We can now find analytical expressions for the steady-state solutions of the model described in Equations (1) in the main paper. The nontrivial (<span class="math inline">B\neq0</span>) steady-state solutions <span class="math inline">(B^\star,S^\star)</span> read:</p>
+<p><span class="math display">\begin{align*}
+    S^\star &amp;= \frac{m}{a f_a(d)} \tag{S2a}\\
+    B^\star &amp;= \frac{p-f_r(S^\star,d) - q_s \left(S^\star\right)^c}{e_0f_e(d)S^\star} \tag{S2b}
+\end{align*}</span></p>
+<p>These solutions are a typical instance of the R-star rule [<a href="#index.xhtml_rS1" class="biblioref" role="doc-biblioref" data-xml-rid="rS1">S1</a>], and from them we can express two important features:</p>
+<ol type="1">
+<li>The steady-state resource level <span class="math inline">S^\star</span> (generally called <span class="math inline">R^\star</span> in consumer-resource modeling, therefore the name of the rule) is independent of the resource supply rate, <span class="math inline">p</span>.</li>
+<li>The nontrivial <span class="math inline">(B\neq0)</span> steady-state consumer level <span class="math inline">B^\star</span> is linear in the resource input rate, <span class="math inline">p</span>.</li>
+</ol>
+<p>Figure S2 shows the steady-state biomass <span class="math inline">B^\star</span> (top panels) and relative soil water content <span class="math inline">S^\star</span> (bottom panels). The left and right columns correspond to the canopy mechanism and the root mechanism, respectively. A careful examination of the steady-state solutions teaches us that:</p>
+<ul>
+<li><strong>For the canopy mechanism</strong>, <span class="math inline">0\leq f_e(d) &lt; f_a(d)&lt;1</span> for any <span class="math inline">d&gt;0</span> (see inset in Fig. S2c). From these facts it follows that the linear function for the positive tree-density solution (<span class="math inline">B^\star(p,d&gt;0)</span>) has a higher slope and a lower intercept<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> than the no-tree solution (<span class="math inline">B^\star(p,d=0)</span>). Because of its lower intercept, the positive density solution surpasses the zero-tree density solution from below (lower <span class="math inline">B</span>). This means that eliminating the logistic growth term from the model described by the SGH: we have competition for <span class="math inline">p</span> below the transition point, and facilitation for <span class="math inline">p</span> above that point. Furthermore, for the parameter values we used here, the transition point occurs at extremely low values of <span class="math inline">p</span> and <span class="math inline">B</span>. Looking from `farther away’, the interactions appear facilitative for most of the precipitation gradient (Fig. S2a).</li>
+<li><strong>For the root mechanism</strong>, two straight-line solutions <span class="math inline">B^\star</span> always have the same slope, regardless of their <span class="math inline">d</span> value, and therefore never intersect. The root mechanism can be either facilitative or competitive, depending on the soil water content (see inset in Fig. S2d). Figure S2b shows a scenario where the interaction is always facilitative. By changing the model parameters <span class="math inline">m,a,d</span> (see Eq. S2a), one can also find higher soil water content levels that always yield competitive interactions.</li>
+</ul>
+<p>The arguments above demonstrate that, whenever tree density is constant, the <strong>introduction of an additional growth-limiting factor</strong> that strengthens with increasing precipitation is a for the emergence of the transition described by the SGH.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/steady_state_no_k_full.png" class="img-fluid figure-img"></p>
+<figcaption>Steady-state biomass (panels a,b) and soil water content (panels c,d) solutions as functions of precipitation. The left column corresponds to the canopy mechanism, and the right column corresponds to the root mechanism. The inset in panel a shows an extreme amplification in <span class="math inline">p</span> and <span class="math inline">B</span> of the solutions, emphasizing the intersection points between the no-tree solution (<span class="math inline">d=0</span>) and the other solutions with <span class="math inline">d&gt;0</span>. The insets in panels c and d are provided as reminders of the relevant functions of each mechanism.</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-3-transient-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="si-3-transient-dynamics">SI 3: Transient dynamics</h3>
+<p>The typical timescale for the dynamics of herb biomass (<span class="math inline">B</span>) is comparable to the length of the growing season used in this study, 180 days. Figure S3 shows the time dynamics (left column) and phase space (right column) for three precipitation levels (<span class="math inline">p=\{150,300,600\}</span> mm year<span class="math inline">^{-1}</span>) and three tree conditions: no tree (<span class="math inline">d=0</span>, top row), canopy mechanism (<span class="math inline">d=0.3</span>, middle row), and root mechanism (<span class="math inline">d=0.3</span>, bottom row). Linear stability analysis of the numerically found steady-state solutions (hollow circles) reveals them to be stable nodes (real and negative eigenvalues).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/dynamics.png" class="img-fluid figure-img"></p>
+<figcaption>Time dynamics (left) and phase-space portrait (right) of <span class="math inline">(B,S)</span> solutions. Panels a,b: zero tree density. Panels c,d: Tree density <span class="math inline">d=0.3</span>, canopy mechanism on. Panels e,f: Tree density <span class="math inline">d=0.3</span>, root mechanism on. Blue, red and black orbits denote precipitation levels of 150, 300 and 600 mm year<span class="math inline">^{-1}</span>, respectively. The same eight initial conditions were used for all cases: <span class="math inline">S=0.2</span> and <span class="math inline">B</span> ranging from 100 to 800, with 100 increments. Hollow circles denote the value of the solution with initial condition <span class="math inline">(B=400,S=0.2)</span> at time 500 days.</figcaption>
+</figure>
+</div>
+<p>Crucially, the facilitation–to–competition switch persists when we examine transient dynamics, not only steady‐state outcomes. In Fig. S4, we compare the steady‐state pattern (panel a) with solutions obtained by integrating Eqs. (1) in the main text for 180 days (panel b). The qualitative result is the same in both cases, with positive tree effects at low precipitation and negative effects at high precipitation. Temporal dynamics, however, alter the details: the magnitude of facilitation and competition, and the precipitation at which the switch occurs, differ between transient and steady‐state results.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/dynamics_transition.png" class="img-fluid figure-img"></p>
+<figcaption>The transition from facilitation to competition, for steady-state solutions (panel a), and for transient solutions after 180 days (panel b). The initial conditions for the transient solutions are <span class="math inline">(B=200\text{ g},S=0.2)</span>. For both panels we considered only the canopy mechanism, for tree density levels 0.0 and 0.4. Other parameters as reported in Table 1 in the main text.</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-4-interaction-intensity" class="level3">
+<h3 class="anchored" data-anchor-id="si-4-interaction-intensity">SI 4: Interaction intensity</h3>
+<p>As a rule, trees facilitate herb growth when their density is low and the system is under water stress (low <span class="math inline">p</span>). Competition over water arises at high tree density values and under low water stress. Focusing on the canopy mechanism, Figure S5 shows that in the <span class="math inline">(p,d)</span> parameter space, the boundary between facilitation and competition (solid black curve) follows a negative relation: as precipitation increases, a lower tree density is sufficient to shift the balance from facilitation to competition. This border is the same for both interaction intensities definitions, since zero interaction intensity means that the biomass solution with tree density (<span class="math inline">B_T</span>) equals the biomass solution with no tree density (<span class="math inline">B_0</span>). The area hatched in black at the top of both panels, where tree density is very high, indicates the region in the parameter space where there are only trivial (<span class="math inline">B=0</span>) vegetated solutions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/interaction_intensity_2d.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Interaction intensity varies jointly with precipitation and tree density.</strong> Interaction intensity in the canopy submodel is shown as a function of annual precipitation (<span class="math inline">p</span>) and tree density (<span class="math inline">d</span>), measured as (left) the absolute difference in herb biomass, <span class="math inline">B_{T}-B_{0}</span>, and (right) the relative log response ratio, <span class="math inline">\ln(B_{T}/B_{0})</span>, where <span class="math inline">B_{0}</span> and <span class="math inline">B_{T}</span> denote herb biomass in the absence and presence of trees, respectively. Hot shades (yellow to red) indicate facilitation (positive values) and cold shades (blue) indicate competition (negative values). Both metrics reveal a transition (black line) from facilitation at low rainfall and tree density to competition at high rainfall and tree density. The dashed black line on the left panel indicates the locus of maximum facilitation for a fixed tree density value <span class="math inline">[\frac{\partial}{\partial p} (\text{int. intensity})=0]</span>, for the absolute interaction intensity.</figcaption>
+</figure>
+</div>
+<p>As shown in Fig. 3a in the main text, we can get unimodal curves when using the absolute interaction intensity. The dashed black curve in Fig. S5a shows the location of the local maxima in the <span class="math inline">(p,d)</span> parameter space. To the left of this curve, the interaction intensity is positive and increases with precipitation. Once we cross this curve (from left to right), interaction intensity is still positive, but it decreases with precipitation. This ridge-like curve disappears when we use the relative interaction intensity instead: there is only monotonic decrease with precipitation.</p>
+</section>
+<section id="si-5-a-deeper-look-into-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="si-5-a-deeper-look-into-the-model">SI 5: A deeper look into the model</h3>
+<p>In order to find useful ways of thinking about the model, we perform a non-dimensionalization of the equations. For our purposes, it makes more sense to describe the second equation as the rate of change of absolute soil water content <span class="math inline">W=nz_rS</span>, instead of the equivalent <span class="math inline">nz_r\,dS/dt</span> as shown in Eqs.&nbsp;(1) in the main text. Since the active soil layer <span class="math inline">nz_r</span> has length dimension (<span class="math inline">z_r</span> is the depth of the herb rooting zone, while the porosity <span class="math inline">n</span> is non-dimensional), absolute soil water content <span class="math inline">W</span> is also a length (it is commonly called soil water depth). Finally, we note that 1 millimeter of water is equivalent to 1 liter per meter squared, so reporting <span class="math inline">W</span> as length is the same as volume per unit area. The full model equations now read:</p>
+<p><span class="math display">\begin{align*}
+\frac{dB}{dt} &amp;= a\, {f_a}(d)\, \left(1-\frac{B}{k}\right)B\, S
+- m\, B \tag{S3a}
+\\
+\frac{dW}{dt} &amp;= p - q_{s} S^c - e_0\, {f_e}(d) B\, S - {f_r}(S ,d).
+\tag{S3b}
+\end{align*}</span></p>
+<p>The independent and dependent variables of this dynamical system have the following dimensions:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Biomass density</td>
+<td style="text-align: left;"><span class="math inline">B</span></td>
+<td style="text-align: left;">density <span class="math inline">\rho</span></td>
+<td style="text-align: left;"><span class="math inline">\text{g/m}^2</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Absolute soil water content</td>
+<td style="text-align: left;"><span class="math inline">W</span></td>
+<td style="text-align: left;">length <span class="math inline">L</span></td>
+<td style="text-align: left;"><span class="math inline">\text{mm}</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Time</td>
+<td style="text-align: left;"><span class="math inline">t</span></td>
+<td style="text-align: left;">time <span class="math inline">T</span></td>
+<td style="text-align: left;">day</td>
+</tr>
+</tbody>
+</table>
+<p>Accounting for all the model parameters that have dimensions, we have eight: <span class="math inline">a,k,m,(nz_r),p,q_s,e_0,\lambda</span>. (Here we treat <span class="math inline">nz_r</span> as a single parameter.) The parameter <span class="math inline">\lambda</span> appears inside the function <span class="math inline">f_r(S,d)</span>. All of these parameters have dimensions that derive from the three basic ones shown in the table. According to Buckingham’s <span class="math inline">\Pi</span> Theorem, when performing non-dimensionalization of the equations, the number of independent dimensionless groups is equal to the number of dimensional parameters minus the number of fundamental dimensions. Since we have 8 dimensional parameters and 3 fundamental dimensions (biomass density, length, and time), we obtain <span class="math inline">8-3=5</span>. In simple terms, although the model contains eight dimensional parameters, its behavior can be fully captured by just five independent dimensionless combinations.</p>
+<p>We start now the non-dimensionalization process by defining the following new non-dimensional variables:</p>
+<p><span class="math display">\begin{align*}
+    \text{non-dimensional biomass}&amp;&amp; \tilde{b} &amp;=
+    B/\xi_1
+    % \frac{B}{\xi_1}
+    \tag{S4a}\\
+    \text{non-dimensional time}&amp;&amp; \tilde{t} &amp;= t/\xi_2. \tag{S4b} \\
+    \text{non-dimensional water}&amp;&amp; S &amp;= W/\xi_3. \tag{S4c}
+\end{align*}</span></p>
+<p>We have many choices for <span class="math inline">\xi_1,\xi_2,\xi_3</span>. A suitable choice here is</p>
+<p><span class="math display">\begin{align*}
+    \xi_1 &amp;= \frac{a}{e_0} \tag{S5a} \\
+    \xi_2 &amp;= \frac{1}{a} \tag{S5b}\\
+    \xi_3 &amp;= nz_r. \tag{S5c}
+\end{align*}</span></p>
+<p>Substituting Eqs. S4 and S5 into Eqs. S3 yields the non-dimensional dynamical system:</p>
+<p><span class="math display">\begin{align*}
+\frac{d\tilde{b}}{d\tilde{t}} &amp;= {f_a}(d)\, \left(1-\frac{\tilde{b}}{\tilde{k}}\right)\tilde{b}\, S
+- \tilde{m}\,\tilde{b} \tag{S6a}
+\\
+\frac{dS}{d\tilde{t}} &amp;= \tilde{p} - \tilde{q}_{s} S^c - {f_e}(d) \tilde{b} S - \tilde{f}_r(S ,d).
+\tag{S6b}
+\end{align*}</span></p>
+<p>As we can see, this choice of <span class="math inline">\xi_1,\xi_2,\xi_3</span> leaves us a non-dimensional system, where every single variable, parameter, term or function is dimensionless. For this specific choice of <span class="math inline">\xi</span> scaling factors, we have a system with unity growth rate and unity maximum evapotranspiration rate.</p>
+<p>The non-dimensional parameters (<span class="math inline">\Pi</span> parameters) for the equations above are:</p>
+<p><span class="math display">\begin{align*}
+    \text{non-dimensional herb mortality rate },\Pi_1&amp;&amp; \tilde{m} &amp;= \frac{m}{a} \tag{S7a}\\
+    \text{non-dimensional carrying capacity },\Pi_2&amp;&amp; \tilde{k} &amp;= \frac{k}{a/e_0} \tag{S7b}\\
+    \text{non-dimensional precipitation rate },\Pi_3&amp;&amp; \tilde{p} &amp;= \frac{p}{anz_r} \tag{S7c}\\
+    \text{non-dimensional sat.\ hyd.\ cond. },\Pi_4&amp;&amp; \tilde{q}_s &amp;= \frac{q_s}{anz_r} \tag{S7d}\\
+    \text{non-dimensional tree-root hydraulic rate },\Pi_5&amp;&amp; \tilde{\lambda} &amp;= \frac{\lambda}{anz_r} \tag{S7e}
+\end{align*}</span></p>
+<p>This exercise is instrumental in shedding light on the impact of various model parameters on its behavior:</p>
+<ul>
+<li>The active soil layer <span class="math inline">n z_r</span> (mm), where <span class="math inline">n</span> is soil porosity (dimensionless) and <span class="math inline">z_r</span> is the rooting depth of herbs (mm), sets the maximum volume of water that can be stored and made available to herbs. As Eqs. (1) in the main text indicate, <span class="math inline">n z_r</span> can only impact the transient dynamics of <span class="math inline">(B,S)</span>, never their steady-state solutions. Of course, due to the third conversion in Eq. S4, <span class="math inline">n z_r</span> rescales <span class="math inline">S</span> into <span class="math inline">W=nz_rS</span>.</li>
+<li>The denominator <span class="math inline">a n z_r</span> represents a characteristic water throughput, where <span class="math inline">a</span> sets the characteristic timescale and <span class="math inline">nz_r</span> is the volume of water per unit area (1 mm <span class="math inline">=</span> 1 L mm<span class="math inline">^{-2}</span>). It sets the scale for precipitation, drainage, and root uptake/uplift (<span class="math inline">\tilde{p},\tilde{q}_s,\tilde{\lambda}</span>): higher values correspond to processes faster than the characteristic resource throughput in the system.</li>
+<li>The ratio <span class="math inline">(a/e_0)</span> naturally emerges as a water-use efficiency, converting herb water uptake into biomass production. In fact, when tree density is zero (<span class="math inline">d=0</span>) and herb biomass is low (so that <span class="math inline">1-\tilde{b}/\tilde{k}\approx1</span>), the evapotranspiration loss term in Eq. S6b is identical to the biomass growth term in Eq. S6a. This symmetry highlights the direct coupling of growth and water loss. The conversion dictated by S4a means that whatever the non-dimensional steady state <span class="math inline">\tilde{b}</span> one gets by solving Eqs. S6, we divide it by the water-use efficiency <span class="math inline">a/e_0</span> to get the dimensional biomass <span class="math inline">B</span>.</li>
+<li>The typical growth timescale <span class="math inline">1/a</span> acts as a fundamental clock for all other remaining parameters (see S7).</li>
+<li><span class="math inline">\tilde{k}</span> shows how the dimensional carrying capacity <span class="math inline">k</span> is rescaled by water-use efficiency <span class="math inline">a/e_0</span>. This helps us understand that the logistic term is weaker (meaning that water is the main limiting factor) for either large <span class="math inline">k</span> or low water-use efficiency <span class="math inline">a/e_0</span>.</li>
+</ul>
+</section>
+<section id="si-6-logistic-growth-extension-effective-herbherb-interactions" class="level3">
+<h3 class="anchored" data-anchor-id="si-6-logistic-growth-extension-effective-herbherb-interactions">SI 6: Logistic growth extension: effective herb–herb interactions</h3>
+<p>In the main text, the logistic term is introduced as a phenomenological representation of density-dependent limitation of herb growth. In Section S9, we will show that such a term can arise mechanistically from nutrient limitation. Here, we provide an alternative interpretation in which density dependence emerges from unresolved interactions within a diverse herbaceous community.</p>
+<p>We consider a community composed of multiple herb species with biomass <span class="math inline">B_i</span> (<span class="math inline">i=1,\dots,n</span>), each interacting with soil water <span class="math inline">S</span>. A standard representation of competitive interactions is given by a Lotka–Volterra-type system:</p>
+<p><span class="math display">\begin{align*}
+\frac{dB_i}{dt} &amp;= a_i\, {f_a}(d)\, B_i\, S \left(1 - \sum_{j=1}^n \alpha_{ij} B_j \right) - m_i B_i,
+\tag{s8a}\\
+n z_r\frac{dS}{dt} &amp;= p - e_0\, {f_e}(d) \left(\sum_{i=1}^n B_i\right) S - {f_r}(S ,d) - q_{s} S^c,
+\tag{s8b}
+\end{align*}</span></p>
+<p>where <span class="math inline">\alpha_{ij}</span> represents the effect of species <span class="math inline">j</span> on species <span class="math inline">i</span>, capturing competition for non-water resources such as nutrients or space.</p>
+<p>We define the total herb biomass as: <span class="math display">\begin{equation}
+B = \sum_{i=1}^n B_i. \tag{S9}
+\end{equation}</span></p>
+<p>Summing Equation S8a over all species yields: <span class="math display">\begin{equation}
+\frac{dB}{dt}
+= \sum_{i=1}^n a_i\, {f_a}(d)\, B_i\, S
+- \sum_{i=1}^n m_i B_i
+- \sum_{i=1}^n a_i\, {f_a}(d)\, B_i\, S \sum_{j=1}^n \alpha_{ij} B_j. \tag{S10}
+\end{equation}</span></p>
+<p>At this stage, the dynamics of <span class="math inline">B</span> are not closed, as they depend on the full distribution of species biomasses and interaction coefficients. To obtain a tractable expression, we introduce a mean-field approximation. Specifically, we assume that species are sufficiently similar in their growth and interaction parameters such that:</p>
+<p><span class="math display">\begin{equation}
+a_i \approx a, \qquad m_i \approx m, \qquad \alpha_{ij} \approx \bar{\alpha}. \tag{S11}
+\end{equation}</span></p>
+<p>Under these assumptions, the above equation simplifies to:</p>
+<p><span class="math display">\begin{equation}
+\frac{dB}{dt}
+\approx a\, {f_a}(d)\, S \sum_{i=1}^n B_i
+- m B
+- a\, {f_a}(d)\, S\, \bar{\alpha} \sum_{i=1}^n \sum_{j=1}^n B_i B_j. \tag{S12}
+\end{equation}</span></p>
+<p>Using the identity <span class="math inline">\sum_{i,j} B_i B_j = \left(\sum_i B_i\right)^2 = B^2</span>, we obtain:</p>
+<p><span class="math display">\begin{equation}
+\frac{dB}{dt}
+\approx a\, {f_a}(d)\, B S
+- m B
+- a\, {f_a}(d)\, S\, \bar{\alpha} B^2. \tag{S13}
+\end{equation}</span></p>
+<p>This can be rewritten in logistic form:</p>
+<p><span class="math display">\begin{equation}
+\frac{dB}{dt}
+= a\, {f_a}(d)\, B \left(1 - \frac{B}{k}\right) S - m B, \tag{S14}
+\end{equation}</span></p>
+<p>where the effective carrying capacity is given by <span class="math inline">k = 1/\bar{\alpha}</span>.</p>
+<p>Thus, a quadratic saturation term in total herb biomass emerges naturally from pairwise competitive interactions when these are aggregated and approximated at the community level.</p>
+<p>This derivation shows that logistic-type density dependence can arise as an effective description of herb–herb interactions when species-level details are not resolved. However, several important caveats apply.</p>
+<p>First, the mean-field approximation assumes that species are sufficiently similar in their growth rates and interaction strengths. In real herbaceous communities, species often differ substantially in functional traits and resource-use strategies. As a result, competitive interactions may be highly structured rather than homogeneous.</p>
+<p>Second, the aggregation of species into a single biomass variable eliminates information about community composition, species richness, and trait variation. In particular, competitive effects that manifest as changes in species composition or diversity (e.g., shifts in dominance or richness decline) may not translate into a reduction in total biomass and are therefore not captured by the logistic term.</p>
+<p>Third, the quadratic term represents the net effect of all pairwise interactions and should be interpreted as a phenomenological closure rather than a mechanistic representation of specific competitive processes.</p>
+<p>Accordingly, in the main text, the herb biomass variable could be interpreted as an aggregated herbaceous compartment, and the logistic term as an effective density-dependent limitation that may arise from unresolved competition, crowding, or other non-water resource constraints. Explicit representation of multiple herb species or functional types would be required to capture compositional dynamics and trait-dependent responses.</p>
+</section>
+<section id="si-7-a-gradient-of-evaporative-demand" class="level3">
+<h3 class="anchored" data-anchor-id="si-7-a-gradient-of-evaporative-demand">SI 7: A gradient of evaporative demand</h3>
+<p>Here, we demonstrate that our model can produce a transition from facilitation to competition, not only along a precipitation gradient but also across an evaporative demand gradient (Figure S6).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/other_kinds_of_stress.png" class="img-fluid figure-img"></p>
+<figcaption><strong>The facilitation–competition transition extends across different abiotic stress axes.</strong> Panels a,c: Precipitation as the stress axis reproduces the classic SGH prediction, with facilitation at low supply and competition at high supply. Panel b,d: Evaporative demand, representing atmospheric drivers of water loss, yields the same qualitative pattern but on a reversed axis (higher demand corresponds to stronger stress).</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-8-choosing-the-right-resource-metric-for-the-sgh" class="level3">
+<h3 class="anchored" data-anchor-id="si-8-choosing-the-right-resource-metric-for-the-sgh">SI 8: Choosing the Right Resource Metric for the SGH</h3>
+<p>The Stress Gradient Hypothesis (SGH) predicts a shift from facilitation to competition as a resource increases. A critical question is which resource metric to use: resource supply rate (like precipitation) or resource abundance (like soil water content). We demonstrate here that the resource supply rate is the appropriate metric for assessing the SGH.</p>
+<p>When we analyze our model using precipitation as the <em>control parameter</em> (x-axis in a <span class="math inline">B</span> vs.&nbsp;<span class="math inline">p</span> plot), the results clearly demonstrate the SGH pattern. For both the canopy and root mechanisms, we observe a transition from positive to negative tree-herb interactions as precipitation increases, mirroring field observations.</p>
+<p>In contrast, if we use soil water content as the resource metric, the SGH pattern vanishes. Figure S7 shows the same herb biomass solutions as Figure 2 in the main text, but plotted against soil water content.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/biomass_vs_water.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Using soil water content as the stress axis eliminates the facilitation–competition transition.</strong> Steady-state herb biomass solutions are shown as a function of soil water content for the canopy mechanism (panel a) and the root mechanism (panel b). In the canopy mechanism, biomass with trees (<span class="math inline">d&gt;0</span>) is always lower than the no-tree baseline, because canopy directly reduces assimilation while water conservation effects are no longer represented. In the root mechanism, biomass becomes independent of tree density when soil water is fixed, since tree effects operate only by altering soil moisture levels. Accordingly, when stress is parameterized by soil water abundance rather than supply rate, the SGH pattern disappears.</figcaption>
+</figure>
+</div>
+<p>The nontrivial (<span class="math inline">B\neq 0</span>) solutions can be readily obtained by equating Eqs.~(1) in the main text to zero and solving for B:</p>
+<p><span class="math display">\begin{align*}
+    \text{Canopy mechanism: } B^\star(S) &amp;= k\left(1-\frac{m}{aSf_a(d)}\right) \tag{S15a} \\
+    \text{Root mechanism: } B^\star(S) &amp;= k\left(1-\frac{m}{aS}\right) \tag{S15b}
+\end{align*}</span></p>
+<p>From these solutions we learn:</p>
+<ul>
+<li><strong>Canopy mechanism:</strong> Because <span class="math inline">f_a(d&gt;0)&lt;f_a(d=0)</span>, the steady-state herb biomass with trees (<span class="math inline">B_T</span>) is always lower than the biomass without trees (<span class="math inline">B_0</span>). Trees always reduce light, which directly suppresses herb growth. Because the facilitative effect of water conservation is no longer a factor, the interaction intensity is always negative (competitive).</li>
+<li><strong>Root mechanism:</strong> Herb biomass becomes completely independent of tree density (it lacks the variable <span class="math inline">d</span>). Trees influence herbs solely by altering soil water levels, so if that level is fixed, the trees have no effect. The interaction intensity is always zero.</li>
+</ul>
+<p>This result, that the SGH pattern disappears when using soil water content as the metric, occurs for a fundamental reason: soil water content, unlike precipitation, is an intrinsic property of the ecosystem, not an external force. It is the result of multiple processes such as rainfall, evapotranspiration, drainage, etc; all of which interact with the tree’s presence to determine the final soil water content. By holding soil water constant, we are artificially decoupling the very mechanisms that create the SGH pattern. Therefore, using resource abundance (soil water content) as the metric of stress renders the SGH meaningless within this mechanistic framework, as it nullifies the resource component in our <strong>consumer-resource model</strong>.</p>
+<p>The <strong>resource supply rate</strong> (precipitation) is the external driver of the system’s state, making it the correct measure of abiotic stress for a resource-based SGH. It allows us to capture the full interplay of facilitative and competitive forces that are the core of the hypothesis.</p>
+</section>
+<section id="si-9-logistic-growth-extension-nutrient-limited-growth" class="level3">
+<h3 class="anchored" data-anchor-id="si-9-logistic-growth-extension-nutrient-limited-growth">SI 9: Logistic growth extension: nutrient-limited growth</h3>
+<p>To justify our choice of introducing a limiting factor to herb growth as a logistic term, we do the exercise of explicitly introducing a new essential resource, a nutrient <span class="math inline">N</span>. Our model can be extended to include the nutrient dynamics as follows:</p>
+<p><span class="math display">\begin{align*}
+\frac{dB}{dt} &amp;= a\, {f_a}(d)\, B\, N\,S
+- m\, B
+\tag{S16a}\\
+n z_r\frac{dS}{dt} &amp;= p - e_0\, {f_e}(d) B\, S - {f_r}(S ,d) - q_{s} S^c \tag{S16b} \\
+\frac{dN}{dt} &amp;= N_\text{in} -\mu N B - \nu N.\tag{S16c}
+\end{align*}</span></p>
+<p>The first equation, S16a, describes the herb biomass dynamics, where we have replaced our original logistic term <span class="math inline">f_k(B)</span> with a nutrient term, <span class="math inline">N</span>. Equation S16c describes the nutrient’s dynamics, where it is introduced at a constant rate <span class="math inline">N_\text{in}</span>, consumed by herbs (at a rate proportional to both herb biomass and nutrient availability, <span class="math inline">\mu NB</span>), and lost from the system at a rate proportional to its own abundance, <span class="math inline">\nu N</span>.</p>
+<p>We now assume that the nutrient dynamics are much faster than those of the herb biomass (<span class="math inline">B</span>) and soil water (<span class="math inline">S</span>). We can therefore perform an adiabatic elimination by setting the rate of change of the nutrient to zero to find its quasi-steady-state:</p>
+<p><span class="math display">\begin{align*}
+    0 &amp;= N_\text{in} -\mu N B - \nu N  \tag{S17a}\\
+    \implies N^\star &amp;= \frac{N_\text{in}}{\nu}\frac{1}{\frac{\mu}{\nu}B+1}, \tag{S17b}
+\end{align*}</span></p>
+<p>where <span class="math inline">N^\star</span> denotes the quasi-steady-state nutrient concentration. Substituting <span class="math inline">N^\star</span> into the herb biomass equation gives:</p>
+<p><span class="math display">\begin{equation}
+    \frac{dB}{dt} = a\, \frac{N_\text{in}}{\nu} {f_a}(d)\, B\left( \frac{1}{\frac{\mu}{\nu}B+1} \right) S - m\, B. \tag{S18}
+\end{equation}</span></p>
+<p>The term in the parenthesis acts as a saturating function of <span class="math inline">B</span>. When herb biomass is low, the term is close to one, and as biomass increases, the function decreases, effectively slowing the growth rate. This plays the same role as the logistic term we assumed in the main text.</p>
+<p>To derive the exact logistic form, we can make an additional assumption. If we assume that the herbs are highly inefficient at consuming the nutrient relative to its decay rate (<span class="math inline">\mu\ll\nu</span>), we can use a first-order Taylor series expansion:</p>
+<p><span class="math display">\begin{equation}
+    \frac{1}{\frac{\mu}{\nu}B+1} \approx 1 - \frac{\mu}{\nu}B . \tag{S19}
+\end{equation}</span></p>
+<p>Substituting this approximation into the herb biomass equation now reveals a classic logistic term:</p>
+<p><span class="math display">\begin{equation}
+    \frac{dB}{dt} = a\, \frac{N_\text{in}}{\nu} {f_a}(d)\, B\left( 1 -  \frac{B}{k} \right) S - m\, B, \tag{S20}
+\end{equation}</span></p>
+<p>where the carrying capacity can be identified with <span class="math inline">k=\nu/\mu</span>. If the factor <span class="math inline">N_\text{in}/\nu</span> is then incorporated into <span class="math inline">a</span>, we get exactly Equation (1a) in the main text.</p>
+</section>
+<section id="s10-combined-canopy-and-root-mechanisms" class="level3">
+<h3 class="anchored" data-anchor-id="s10-combined-canopy-and-root-mechanisms">S10: Combined canopy and root mechanisms</h3>
+<p>The combined model activates both the canopy shading terms and the root water function in Eq. (1) in the main text. No additional parameters are required: the canopy functions <span class="math inline">f_a(d)</span> and <span class="math inline">f_e(d)</span> reduce herb assimilation and evapotranspiration, while the root term <span class="math inline">f_r(S, d)</span> acts concurrently on the soil water balance.</p>
+<p>We first examine the combination of two of the most common mechanisms: canopy shading and competitive water uptake alone, setting hydraulic lift to zero (<span class="math inline">\lambda_h = 0</span>, Fig. S8c). Even in this conservative case, combining the two mechanisms still produces net facilitation at low precipitation (Fig. S8a): the facilitative benefit of shading outweighs the competitive cost of root water uptake. Adding root competition narrows the facilitation window relative to the canopy-only model and shifts the transition point to lower rainfall, but does not eliminate facilitation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/combined_nolift_test.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Canopy shading outweighs root competition in the conservative combined model.</strong> Panels a and b show steady-state herb biomass and soil water content as functions of annual precipitation for the canopy-only model (solid yellow) and the combined model with competitive water uptake but no hydraulic lift (<span class="math inline">\lambda_h = 0</span>, dark green dashed), relative to the treeless baseline (solid black). Facilitation (competition) occurs where biomass curves lie above (below) the baseline. Panel c shows the root function <span class="math inline">f_r(S, d)</span> for <span class="math inline">\lambda_h = 0</span>, which is purely competitive. Tree density <span class="math inline">d = 0.4</span>; other parameters as in Table 1 in the main text.</figcaption>
+</figure>
+</div>
+<p>Introducing hydraulic redistribution (<span class="math inline">\lambda_h &gt; 0</span>) changes the outcome in a density-dependent way, see Fig. S9. At moderate tree density (<span class="math inline">d = 0.4</span>), facilitation at low rainfall is preserved and the SGH transition is reproduced. At high tree density (<span class="math inline">d = 0.8</span>), competition dominates across the entire precipitation range.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/combined_canopy_root_paper.png" class="img-fluid figure-img"></p>
+<figcaption><strong>The full combined model reproduces the SGH transition at moderate tree density.</strong> Steady-state herb biomass (panels a–c) and relative soil water content (panels d–f) as functions of annual precipitation, for the canopy mechanism (left), root mechanism (center), and combined model (right). Solid black lines: treeless baseline (<span class="math inline">d = 0</span>). Light and dark solid curves: moderate (<span class="math inline">d = 0.4</span>) and high (<span class="math inline">d = 0.8</span>) tree density, respectively. Facilitation (competition) occurs where biomass curves lie above (below) the baseline. Other parameters as in Table 1 in the main text.</figcaption>
+</figure>
+</div>
+<p>The combined model is sub-additive, see Fig. S10. The actual joint biomass falls below the additive prediction (<span class="math inline">B_\mathrm{additive} = B_\mathrm{canopy} + B_\mathrm{root} - B_\mathrm{baseline}</span>) across the entire gradient, and the additive prediction substantially overestimates facilitation at low precipitation. This sub-additivity arises because the two mechanisms share the same soil water pool: canopy shading conserves water by reducing evapotranspiration, but this conserved water remains accessible to root uptake, partially offsetting the facilitative benefit of shading and amplifying competition.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/additivity_test.png" class="img-fluid figure-img"></p>
+<figcaption><strong>The combined model is sub-additive.</strong> Steady-state herb biomass as a function of annual precipitation for the treeless baseline (solid black), canopy-only model (yellow), root-only model (blue), combined model (light green solid), and additive prediction (dark green dashed), defined as <span class="math inline">B_\mathrm{additive} = B_\mathrm{canopy} + B_\mathrm{root} -  B_\mathrm{baseline}</span>. The combined biomass falls below both individual mechanisms and below the additive prediction across the entire gradient. Tree density <span class="math inline">d = 0.4</span>; other parameters as in Table 1 in the main text.</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-11-infiltration" class="level3">
+<h3 class="anchored" data-anchor-id="si-11-infiltration">SI 11: Infiltration</h3>
+<p>The infiltration mechanism is a variation of the canopy mechanism. In both, canopy shading reduces herb assimilation through <span class="math inline">f_a(d)</span>; here, however, the facilitative pathway is not a reduction in evapotranspiration but an increase in effective infiltration as tree density rises. The model therefore keeps the growth-side shading term and replaces the rainfall input with an infiltrated input <span class="math inline">p\,f_i(d)</span>:</p>
+<p><span class="math display">\begin{align*}
+\frac{dB}{dt} &amp;= a\,f_a(d)\,\Bigl(1-\frac{B}{k}\Bigr) B\,S \;-\; m\,B,
+\tag{S21a}\\
+n z_r\,\frac{dS}{dt} &amp;= p\,f_i(d) \;-\; q_{s}\,S^c \;-\; e_0\,B\,S , \tag{S21b}
+\end{align*}</span></p>
+<p>The infiltration factor <span class="math inline">f_i(d)</span> follows [<a href="#index.xhtml_rS2" class="biblioref" role="doc-biblioref" data-xml-rid="rS2">S2</a>]: <span class="math display">\begin{equation}
+f_i(d) \;=\; \frac{d+i_0\,\delta}{d+\delta}, \tag{S22}
+\end{equation}</span></p>
+<p>so that <span class="math inline">f_i(0)=i_0</span> (minimum infiltration without trees) and <span class="math inline">f_i(d)\to 1</span> as <span class="math inline">d</span> increases; see Fig. S11a. The parameter <span class="math inline">\delta</span> sets the density scale at which <span class="math inline">f_i</span> is midway between <span class="math inline">i_0</span> and 1. Figure S11b shows the SGH transition for the infiltration mechanism.</p>
+<p>This relationship captures two possible processes. The first is that canopy shading can suppress biological soil crusts (biocrusts), which often form a hardened surface layer that reduces infiltration. The second process is the compaction of the surface by the mechanical impact of rain drops, which also reduces infiltration. As tree density increases, the canopy limits biocrust activity and protects the surface from direct rain drop impacts, thus allowing more water to infiltrate into the soil, and increasing the effective water supply to herbs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/infiltration_mechanism2.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Infiltration mechanism as a canopy variant.</strong> (a) The infiltration factor <span class="math inline">f_i(d)</span> increases from <span class="math inline">i_0</span> at <span class="math inline">d=0</span> toward 1 as tree density rises (<span class="math inline">\delta</span> controls the transition scale). (b) The transition from facilitation to competition can be obtained from the infiltration mechanism.</figcaption>
+</figure>
+</div>
+</section>
+<section id="si-12-parameter-values-and-their-ecological-basis" class="level3">
+<h3 class="anchored" data-anchor-id="si-12-parameter-values-and-their-ecological-basis">SI 12: Parameter values and their ecological basis</h3>
+<p>The model parameters in Table 1 in the main text represent a generalized dryland ecosystem rather than a specific site. Where possible, the values and ranges were chosen to be consistent with published measurements from drylands; some parameters are modelling choices set to produce ecologically realistic order-of-magnitude behaviour rather than values derived from a single measurement, because direct measurements of these quantities are not available in the literature. Below we describe how each cited value connects to its source.</p>
+<section id="model-state-variables" class="level4">
+<h4 class="anchored" data-anchor-id="model-state-variables">Model state variables</h4>
+<p>The state variable <span class="math inline">B</span> is the herbaceous biomass density (gram per meter squared). Annual live aboveground biomass across dryland sites is predominantly in the range 0–1000 gram per meter squared [<a href="#index.xhtml_rS3" class="biblioref" role="doc-biblioref" data-xml-rid="rS3">S3</a>] (Fig. 4 therein), and the model’s carrying capacity keeps the biomass output in this range.</p>
+<p>The state variable <span class="math inline">S \in [0, 1]</span> is the relative soil water content, defined as the ratio of volumetric water content to total pore volume [<a href="#index.xhtml_rS4" class="biblioref" role="doc-biblioref" data-xml-rid="rS4">S4</a>]. <span class="math inline">S = 0</span> corresponds to completely dry soil and <span class="math inline">S = 1</span> to saturation; these bounds are set by physical constraints.</p>
+</section>
+<section id="tree-cover-range" class="level4">
+<h4 class="anchored" data-anchor-id="tree-cover-range">Tree cover range</h4>
+<p>The parameter <span class="math inline">d \in [0,1]</span> represents woody plant canopy density; it is treated as a fixed environmental parameter over which model outcomes are evaluated, rather than a dynamical variable.</p>
+</section>
+<section id="soil-hydraulic-parameters" class="level4">
+<h4 class="anchored" data-anchor-id="soil-hydraulic-parameters">Soil hydraulic parameters</h4>
+<p>The soil hydraulic parameters are chosen to be consistent with the range of values tabulated in [<a href="#index.xhtml_rS4" class="biblioref" role="doc-biblioref" data-xml-rid="rS4">S4</a>] for sandy to loam soils (Table 2.1 therein). The saturated hydraulic conductivity <span class="math inline">q_{sat} = 800</span> mm per day (<span class="math inline">= 80</span> cm per day) matches the sandy loam value in that table (<span class="math inline">K_s \approx 80</span> cm per day). The porosity <span class="math inline">n = 0.4</span> is close to the loamy sand and sandy loam values (<span class="math inline">n = 0.42</span>–<span class="math inline">0.43</span>). The field capacity <span class="math inline">S_{fc} = 0.6</span> falls between the sandy loam (<span class="math inline">s_{fc} = 0.56</span>) and loam (<span class="math inline">s_{fc} = 0.65</span>) entries. The drainage exponent <span class="math inline">c = 10</span> is of the same order as the sandy soil range in Table 2.1 (<span class="math inline">c = 11</span>–<span class="math inline">13</span>). The herb rooting depth <span class="math inline">z_r = 300</span> mm falls at the shallow end of the range used for illustrative examples in [<a href="#index.xhtml_rS4" class="biblioref" role="doc-biblioref" data-xml-rid="rS4">S4</a>] (<span class="math inline">Z_r =</span> 30–90 cm; Fig. 2.7 therein) and is representative of the effective root zone of dryland herbaceous grasses. The model uses a simplified two-threshold soil moisture balance with a single lower threshold <span class="math inline">S_h = 0.3</span> below which evapotranspiration is zero; this value is comparable to the stomatal-closure threshold <span class="math inline">s^\star = 0.31</span> reported for loamy sand in Table 2.1, and reflects the effective lower limit of plant-available water in a sandy dryland soil.</p>
+</section>
+<section id="precipitation-range" class="level4">
+<h4 class="anchored" data-anchor-id="precipitation-range">Precipitation range</h4>
+<p>Drylands can be defined using various criteria, including temperature, climate classification, or aridity indices. Here we follow [<a href="#index.xhtml_rS5" class="biblioref" role="doc-biblioref" data-xml-rid="rS5">S5</a>], who characterize drylands as regions with an annual precipitation of <span class="math inline">\approx 600</span> mm per year; our precipitation range <span class="math inline">p =</span> 0–600 mm per year therefore covers dryland climates well, from hyperarid deserts at the lower end to dry-subhumid conditions where grass–tree savannas are common at the upper end. In the model, precipitation above this threshold is sufficient to maintain soil moisture above the stress threshold, so that water ceases to be the primary limiting factor.</p>
+</section>
+<section id="assimilation-rate" class="level4">
+<h4 class="anchored" data-anchor-id="assimilation-rate">Assimilation rate</h4>
+<p>In the biomass equation, the assimilation rate <span class="math inline">a</span> corresponds to the intrinsic per-capita growth rate at low biomass, equivalent to the relative growth rate (RGR) of well-watered seedlings. [<a href="#index.xhtml_rS6" class="biblioref" role="doc-biblioref" data-xml-rid="rS6">S6</a>] report RGR values of 0.04–0.15 g g d<span class="math inline">^{-1}</span> across twelve native rangeland forb species; our value of <span class="math inline">a = 0.05</span> d<span class="math inline">^{-1}</span> falls at the lower end of this range, appropriate for slower-growing, dryland-adapted herbaceous vegetation.</p>
+</section>
+<section id="carrying-capacity-and-mortality" class="level4">
+<h4 class="anchored" data-anchor-id="carrying-capacity-and-mortality">Carrying capacity and mortality</h4>
+<p>The carrying capacity <span class="math inline">k = 1000</span> gram per meter squared equals the upper bound of the observed biomass range. Ecologically, <span class="math inline">k</span> represents the maximum standing biomass supported once water and light are non-limiting, i.e., constrained by nutrients or other factors (see also Section S9). The mortality rate <span class="math inline">m = 0.01</span> d<span class="math inline">^{-1}</span> implies a biomass turnover timescale of approximately 100 d, consistent with the growing-season lifespan of annual dryland grasses and the typical decay rates measured for dryland herbaceous biomass.</p>
+</section>
+<section id="evapotranspiration-rate-per-unit-biomass" class="level4">
+<h4 class="anchored" data-anchor-id="evapotranspiration-rate-per-unit-biomass">Evapotranspiration rate per unit biomass</h4>
+<p>The parameter <span class="math inline">e_0 = 0.005</span> mm d<span class="math inline">^{-1}</span> / g m<span class="math inline">^{-2}</span> is the maximum evapotranspiration rate per unit herb biomass density. Because no single source directly reports this quantity in the units used by the model, we derived it from two more commonly reported quantities: biomass-level water-use efficiency and the rate of biomass production.</p>
+<p>The available empirical information is usually reported as water-use efficiency, or transpiration efficiency, in units of gram biomass produced per kg water transpired. This quantity describes how much biomass is produced per amount of water used, but it does not by itself contain a time dimension. To convert it into a daily evapotranspiration rate, we also need the daily rate at which biomass is produced. In the model, the assimilation rate <span class="math inline">a</span> corresponds to the relative growth rate of herbaceous biomass under non-limiting conditions, while <span class="math inline">m</span> represents biomass loss through mortality. Thus, the net rate of biomass increase is <span class="math inline">a-m = 0.05 - 0.01 = 0.04</span> d<span class="math inline">^{-1}</span>.</p>
+<p>For a given herb biomass density <span class="math inline">B</span> (g m<span class="math inline">^{-2}</span>), the net daily biomass production is therefore <span class="math inline">(a-m)B</span>, with units of g m<span class="math inline">^{-2}</span> d<span class="math inline">^{-1}</span>. Dividing this biomass production rate by water-use efficiency converts biomass production into the amount of water required to support that production. Reported transpiration efficiency values for wheat, a C3 species, are approximately in the range of 4–12 g/kg [<a href="#index.xhtml_rS7" class="biblioref" role="doc-biblioref" data-xml-rid="rS7">S7</a>][<a href="#index.xhtml_rS8" class="biblioref" role="doc-biblioref" data-xml-rid="rS8">S8</a>]. We therefore used an intermediate value of 8 g/kg.</p>
+<p>With these units, dividing g m<span class="math inline">^{-2}</span> d<span class="math inline">^{-1}</span> by g/kg gives kg m<span class="math inline">^{-2}</span> d<span class="math inline">^{-1}</span>. This is easily converted to the model’s water-depth units because a water depth of 1 mm over 1 m<span class="math inline">^2</span> corresponds to 1 kg of water. Thus, kg m<span class="math inline">^{-2}</span> d<span class="math inline">^{-1}</span> is equivalent to mm d<span class="math inline">^{-1}</span>. The biomass-specific evapotranspiration coefficient is therefore obtained by dividing the net daily biomass production rate by water-use efficiency and expressing the result per unit standing biomass:</p>
+<p><span class="math display">\begin{equation*}
+e_0 =
+\frac{a-m}{\mathrm{WUE}}
+=
+\frac{0.04 \text{ d} ^{-1}}{8 \text{ g kg}^{-1}}
+= 0.005 \text{mm d}^{-1}/\text{ g m}^{-2}.
+\end{equation*}</span></p>
+</section>
+<section id="shading-function-exponents" class="level4">
+<h4 class="anchored" data-anchor-id="shading-function-exponents">Shading function exponents</h4>
+<p>The shading functions <span class="math inline">f_a(d) = (1-d)^{\beta_a}</span> and <span class="math inline">f_e(d) = (1-d)^{\beta_e}</span> were chosen as simple nonlinear functions that continuously interpolate between no shading (<span class="math inline">d=0</span>) and full canopy (<span class="math inline">d=1</span>). Analysis of the model shows that <span class="math inline">\beta_e &gt; \beta_a</span> is a necessary condition for the facilitation-to-competition transition: transpiration must be more sensitive to shading than assimilation (Results Section in the main text). This modelling requirement is qualitatively supported by empirical evidence. Experimental measurements on grapevines under mild shading (8% shade cloth) show that leaf transpiration is significantly reduced (<span class="math inline">\approx</span> 25%) while net CO<span class="math inline">_2</span> assimilation is statistically unaffected [<a href="#index.xhtml_rS9" class="biblioref" role="doc-biblioref" data-xml-rid="rS9">S9</a>]. Path analyses for poplar trees show that the standardized effect of PAR reduction on transpiration (path coefficient <span class="math inline">\approx 0.57</span>) is substantially larger than its effect on photosynthesis (<span class="math inline">\approx 0.37</span>) [<a href="#index.xhtml_rS10" class="biblioref" role="doc-biblioref" data-xml-rid="rS10">S10</a>]. Across many subtropical fruit species and shade intensities, shading consistently improves plant water-use efficiency, implying that transpiration losses are reduced proportionally more than carbon assimilation [<a href="#index.xhtml_rS11" class="biblioref" role="doc-biblioref" data-xml-rid="rS11">S11</a>]. The specific exponents <span class="math inline">\beta_a = 1/3</span> and <span class="math inline">\beta_e = 4</span> are modelling choices that satisfy this inequality and yield ecologically plausible shading curves; at <span class="math inline">d = 0.5</span>, for example, <span class="math inline">f_a \approx 0.79</span> while <span class="math inline">f_e \approx 0.06</span>, reflecting that a moderate canopy barely affects herb assimilation yet substantially suppresses transpiration.</p>
+</section>
+<section id="tree-water-uptake-and-hydraulic-redistribution" class="level4">
+<h4 class="anchored" data-anchor-id="tree-water-uptake-and-hydraulic-redistribution">Tree water uptake and hydraulic redistribution</h4>
+<p>The parameter <span class="math inline">\lambda_{fc} = 10</span> mm d<span class="math inline">^{-1}</span> is the maximum rate at which trees uptake soil water (attained at field capacity and full tree density <span class="math inline">d = 1</span>). [<a href="#index.xhtml_rS12" class="biblioref" role="doc-biblioref" data-xml-rid="rS12">S12</a>] measured daily evapotranspiration of dense stands, reporting a daily average of <span class="math inline">{\approx 3.7}</span> mm d<span class="math inline">^{-1}</span> with peak values approaching <span class="math inline">{\approx 9.5}</span> mm d<span class="math inline">^{-1}</span> during the growing season. Our value <span class="math inline">\lambda_{fc} = 10</span> mm d<span class="math inline">^{-1}</span> represents the upper physiological demand attained at full tree density and field capacity soil moisture.</p>
+<p>The parameter <span class="math inline">\lambda_h = -2</span> mm d<span class="math inline">^{-1}</span> sets the maximum rate of hydraulic redistribution, whereby trees add water to the shallow soil layer. The negative sign indicates a net water subsidy to the herb rooting zone. Field measurements across semi-arid systems report hydraulic redistribution fluxes of 0.04–1.3 mm d<span class="math inline">^{-1}</span> (empirical) and 0.1–3.23mm d<span class="math inline">^{-1}</span> (modeling estimates) [<a href="#index.xhtml_rS13" class="biblioref" role="doc-biblioref" data-xml-rid="rS13">S13</a>]; <span class="math inline">|\lambda_h| = 2</span> mm d<span class="math inline">^{-1}</span> therefore falls within the upper range of observed and modeled values.</p>
+<p>In our model, both parameters in most cases do not attain their maximum values: tree water uptake is maximized at field capacity (<span class="math inline">S = S_{fc}</span>), while hydraulic redistribution is maximized at the lower threshold (<span class="math inline">S = S_h</span>); under typical fluctuating dryland soil moisture, neither extreme is sustained.</p>
+</section>
+</section>
+</section>
+<section id="si-references" class="level2">
+<h2 class="anchored" data-anchor-id="si-references">SI references</h2>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S1.</p>
+</div>
+<div id="index.xhtml_rS1" class="citations">
+<p><span class="citation">D. Tilman, <em>Resource Competition and Community Structure, Monographs in Population Biology</em> (Princeton University Press, Princeton, NJ, 1982), vol.&nbsp;17.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S2.</p>
+</div>
+<div id="index.xhtml_rS2" class="citations">
+<p><span class="citation">Gilad, E., Von Hardenberg, J., Provenzale, A., Shachak, M., &amp; Meron, E. (2004). <em>Ecosystem engineers: from pattern formation to habitat creation.</em> Physical review letters, 93(9), 098105.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S3.</p>
+</div>
+<div id="index.xhtml_rS3" class="citations">
+<p><span class="citation">MacDougall, A. S., Esch, E., Chen, Q., Carroll, O., Bonner, C., Ohlert, T., … &amp; Seabloom, E. W. (2024). <em>Widening global variability in grassland biomass since the 1980s.</em> Nature ecology &amp; evolution, 8(10), 1877-1888.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S4.</p>
+</div>
+<div id="index.xhtml_rS4" class="citations">
+<p><span class="citation">Rodriguez-Iturbe, I., Porporato, A., Laio, F., &amp; Ridolfi, L. (2001). <em>Plants in water-controlled ecosystems: active role in hydrologic processes and response to water stress: I. Scope and general outline.</em> Advances in Water Resources, 24(7), 695-705.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S5.</p>
+</div>
+<div id="index.xhtml_rS5" class="citations">
+<p><span class="citation">Huang, J., Yu, H., Dai, A., Wei, Y., &amp; Kang, L. (2017). <em>Drylands face potential threat under 2 C global warming target.</em> Nature Climate Change, 7(6), 417-422.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S6.</p>
+</div>
+<div id="index.xhtml_rS6" class="citations">
+<p><span class="citation">James, J. J., &amp; Drenovsky, R. E. (2007). <em>A basis for relative growth rate differences between native and invasive forb seedlings.</em> Rangeland ecology &amp; management, 60(4), 395-400.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S7.</p>
+</div>
+<div id="index.xhtml_rS7" class="citations">
+<p><span class="citation">Fletcher, A., Christopher, J., Hunter, M., Rebetzke, G., &amp; Chenu, K. (2018). <em>A low-cost method to rapidly and accurately screen for transpiration efficiency in wheat.</em> Plant Methods, 14(1), 77.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S8.</p>
+</div>
+<div id="index.xhtml_rS8" class="citations">
+<p><span class="citation">Qiao, Y., Li, D., Qiao, W., Li, Y., Yang, H., Liu, W., … &amp; Dong, B. (2022). <em>Development and application of a relative soil water content–transpiration efficiency curve for screening high water use efficiency wheat cultivars.</em> Frontiers in Plant Science, 13, 967210.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S9.</p>
+</div>
+<div id="index.xhtml_rS9" class="citations">
+<p><span class="citation">Gutiérrez-Gamboa, G., Villalobos-Soublett, E., Garrido-Salinas, M., &amp; Verdugo-Vásquez, N. (2024). <em>Monofilament shading nets improved water use efficiency on high-temperature days in grapevines subjected to hyperarid conditions.</em> Horticulturae, 10(2), 176.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S10.</p>
+</div>
+<div id="index.xhtml_rS10" class="citations">
+<p><span class="citation">Wang, B., Wang, Z., Wang, C., Wang, X., Jia, Z., &amp; Liu, L. (2024). <em>Elevated aerosol enhances plant water‐use efficiency by increasing carbon uptake while reducing water loss.</em> New Phytologist, 243(2), 567-579.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S11.</p>
+</div>
+<div id="index.xhtml_rS11" class="citations">
+<p><span class="citation">Mditshwa, A., Magwaza, L. S., &amp; Tesfay, S. Z. (2019). <em>Shade netting on subtropical fruit: Effect on environmental conditions, tree physiology and fruit quality.</em> Scientia Horticulturae, 256, 108556.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S12.</p>
+</div>
+<div id="index.xhtml_rS12" class="citations">
+<p><span class="citation">Shiferaw, H., Alamirew, T., Dzikiti, S., Bewket, W., Zeleke, G., &amp; Schaffner, U. (2021). <em>Water use of Prosopis juliflora and its impacts on catchment water budget and rural livelihoods in Afar Region, Ethiopia.</em> Scientific reports, 11(1), 2688.</span></p>
+</div>
+</div>
+<div role="listitem" data-has="label">
+<div class="label">
+<p>S13.</p>
+</div>
+<div id="index.xhtml_rS13" class="citations">
+<p><span class="citation">Neumann, R. B., &amp; Cardon, Z. G. (2012). The magnitude of hydraulic redistribution by plant roots: a review and synthesis of empirical and modeling studies. New Phytologist, 194(2), 337-352.</span></p>
+</div>
+</div>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Slope <span class="math inline">\sigma</span>: for <span class="math inline">d=0</span> the slope is <span class="math inline">\sigma_{0}=a/(e_0m)</span>, whereas for <span class="math inline">d&gt;0</span> it is <span class="math inline">\sigma_d=\sigma_0 \cdot (f_a(d)/f_e(d))</span>. Since <span class="math inline">f_a(d)&gt;f_e(d)</span>, we have that <span class="math inline">\sigma_d&gt;\sigma_0</span>.<br>
+Intercept <span class="math inline">\omega</span>: for <span class="math inline">d=0</span> the intercept is <span class="math inline">\omega_0=-(q_s/e_0)(m/a)^{c-1}</span>, whereas for <span class="math inline">d&gt;0</span> it is <span class="math inline">\omega_d=\omega_0(1/f_e(d))(1/f_a^{c-1}(d))</span>. Since <span class="math inline">f_a(d),f_e(d)&lt;1</span> and <span class="math inline">c&gt;2</span>, we have that each of the parenthesis in the expression for <span class="math inline">\omega_d</span> is greater than 1, and therefore <span class="math inline">\omega_d&lt;\omega_0</span> (remember the minus sign in <span class="math inline">\omega_0</span>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
