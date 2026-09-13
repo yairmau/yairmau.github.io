@@ -1,3 +1,22 @@
+feuer2026losses:
+- title: "feuer2026losses"
+  handle: "feuer2026losses"
+  authors:  Erez Feuer, Stefan Klesse, Guy Amir, Nadav Peleg, Yair Mau
+  title: "Losses outlast gains in Northern Hemisphere tree growth under climate change"
+  journal: biorxiv
+  year: "2026"
+  doi: 10.64898/2026.09.06.749676
+  pdf: archive/papers/feuer-2026-Losses outlast gains in Northern Hemisphere tree growth under climate change.pdf
+  bib: |
+      @article{feuer2026losses,
+          doi = {10.64898/2026.09.06.749676},
+          url = {https://doi.org/10.64898/2026.09.06.749676},
+          year = {2026},
+          author = {Erez Feuer, Stefan Klesse, Guy Amir, Nadav Peleg and Yair Mau},
+          title = {Losses outlast gains in Northern Hemisphere tree growth under climate change},
+          journal = {biorxiv},
+      }
+
 hollander2026mechanisms:
 - title: "hollander2026mechanisms"
   handle: "hollander2026mechanisms"

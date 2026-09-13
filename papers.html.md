@@ -33,6 +33,44 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 ```{=html}
 </br>
 ```
+###### <i class="fa-regular fa-file svv"></i> Erez Feuer, Stefan Klesse, Guy Amir, Nadav Peleg, Yair Mau. Losses outlast gains in Northern Hemisphere tree growth under climate change.  [*biorxiv*](https://doi.org/10.64898/2026.09.06.749676){target="_blank"}, 2026. {#publication:feuer2026losses}
+```{=html}
+<a class="btn my-btn-style btn-sm rounded", href="archive/papers/feuer-2026-Losses outlast gains in Northern Hemisphere tree growth under climate change.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf-fill" role='img' aria-label='PDF'></i>
+        PDF
+    </a> <button class="btn my-btn-style btn-sm rounded" type="button" data-bs-toggle="collapse" data-bs-target="#feuer2026losses" aria-expanded="false" aria-controls="feuer2026losses">
+    <i class="bi bi-bookmarks-fill"></i> BIBTEX
+    </button>
+    
+```
+```{=html}
+
+            <div class="collapse" id="feuer2026losses">
+            <div class="card card-body border-0">
+        
+```
+```bib
+@article{feuer2026losses,
+    doi = {10.64898/2026.09.06.749676},
+    url = {https://doi.org/10.64898/2026.09.06.749676},
+    year = {2026},
+    author = {Erez Feuer, Stefan Klesse, Guy Amir, Nadav Peleg and Yair Mau},
+    title = {Losses outlast gains in Northern Hemisphere tree growth under climate change},
+    journal = {biorxiv},
+}
+
+```
+```{=html}
+
+            </div>
+            </div>
+            
+```
+
+
+```{=html}
+<hr/>
+```
 ###### <i class="fa-regular fa-file svv"></i> Oded Hollander, Yair Mau and Niv DeMalach. Mechanisms behind facilitation-competition transition along rainfall gradients.  [*PNAS*](https://doi.org/10.1073/pnas.2615937123){target="_blank"}, 2026. {#publication:hollander2026mechanisms}
 ```{=html}
 <a class="btn my-btn-style btn-sm rounded", href="archive/papers/hollander-2026-mechanisms behind facilitation-competition transition along rainfall gradients.pdf" target="_blank" rel="noopener noreferrer">
@@ -1149,7 +1187,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-82IhHkb1rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#e6025b0a .cell execution_count=3}
+::: {#a0e03440 .cell execution_count=3}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Pattern Formation in Spatially Forced Systems: Application to Vegetation Restoration. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *PhD Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2013. {#publication:mau2013phdthesis}
@@ -1214,7 +1252,7 @@ https://getbootstrap.com/docs/5.1/components/collapse/ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aE8mYeUUTZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-::: {#1b702a93 .cell execution_count=4}
+::: {#5874aa40 .cell execution_count=4}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ###### <i class="fa-regular fa-file svv"></i> Yair Mau. Localized Spatial Structures in Non-Equilibrium Systems. Advisor: [Prof. Ehud Meron](https://in.bgu.ac.il/en/bidr/SIDEER/DSEEP/Ehud_Meron/Pages/default.aspx).  *MSc Thesis, Physics Department, Ben-Gurion University of the Neveg, Israel*, 2009. {#publication:mau2009mscthesis}

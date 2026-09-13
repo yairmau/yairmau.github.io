@@ -126,6 +126,7 @@ yaml_data = yaml.safe_load(open("papers.yaml"))
 
 display(Markdown("### 2026"))
 display(HTML("</br>"))
+print_paper(yaml_data['feuer2026losses'][0]) 
 print_paper(yaml_data['hollander2026mechanisms'][0]) 
 print_paper(yaml_data['rez2026stem'][0])
 
