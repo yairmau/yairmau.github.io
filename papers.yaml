@@ -460,6 +460,7 @@ mau2015reversing:
   year: "2015"
   doi: 10.1103/PhysRevE.91.012903
   pdf: archive/papers/mau-2015-Reversing desertification as a spatial resonance problem.pdf
+  md: archive/papers-md/mau2015reversing/mau2015reversing.qmd
   bib: |
     @article{mau2015reversing,
       title={Reversing desertification as a spatial resonance problem},
