@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Spatial Forcing of Pattern-Forming Systems That Lack Inversion Symmetry – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Spatial Forcing of Pattern-Forming Systems That Lack Inversion Symmetry – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/haim2014spatial/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="Spatial Forcing of Pattern-Forming Systems That Lack Inversion Symmetry – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/haim2014spatial/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#i.-introduction" id="toc-i.-introduction" class="nav-link active" data-scroll-target="#i.-introduction">I. Introduction</a></li>
+  <li><a href="#ii.-the-model-equation" id="toc-ii.-the-model-equation" class="nav-link" data-scroll-target="#ii.-the-model-equation">II. The Model Equation</a></li>
+  <li><a href="#iii.-derivation-of-the-amplitude-equation" id="toc-iii.-derivation-of-the-amplitude-equation" class="nav-link" data-scroll-target="#iii.-derivation-of-the-amplitude-equation">III. Derivation of the Amplitude Equation</a></li>
+  <li><a href="#iv.-resonant-periodic-solutions" id="toc-iv.-resonant-periodic-solutions" class="nav-link" data-scroll-target="#iv.-resonant-periodic-solutions">IV. Resonant Periodic Solutions</a>
+  <ul class="collapse">
+  <li><a href="#a.-11-resonant-solutions" id="toc-a.-11-resonant-solutions" class="nav-link" data-scroll-target="#a.-11-resonant-solutions">A. 1:1 Resonant Solutions</a></li>
+  <li><a href="#b.-21-resonant-solutions" id="toc-b.-21-resonant-solutions" class="nav-link" data-scroll-target="#b.-21-resonant-solutions">B. 2:1 Resonant Solutions</a></li>
+  <li><a href="#c.-31-resonant-solutions" id="toc-c.-31-resonant-solutions" class="nav-link" data-scroll-target="#c.-31-resonant-solutions">C. 3:1 Resonant Solutions</a></li>
+  </ul></li>
+  <li><a href="#v.-phase-patterns" id="toc-v.-phase-patterns" class="nav-link" data-scroll-target="#v.-phase-patterns">V. Phase Patterns</a></li>
+  <li><a href="#vi.-conclusion" id="toc-vi.-conclusion" class="nav-link" data-scroll-target="#vi.-conclusion">VI. Conclusion</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Spatial Forcing of Pattern-Forming Systems That Lack Inversion Symmetry</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Lev Haim<sup>1,2,*</sup>, Yair Mau<sup>1,3,*,†</sup>, Ehud Meron<sup>1,4</sup></p>
+</div>
+<div class="paper-affil">
+<p><sup>1</sup> Physics Department, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel &nbsp;·&nbsp; <sup>2</sup> Department of Oncology, Soroka University Medical Center, Beer Sheva, 84101, Israel &nbsp;·&nbsp; <sup>3</sup> Department of Civil and Environmental Engineering, Duke University, Durham, North Carolina 27708, USA &nbsp;·&nbsp; <sup>4</sup> Department of Solar Energy and Environmental Physics, BIDR, Ben-Gurion University of the Negev, Sede Boqer Campus, 84990, Israel</p>
+<p><sup>*</sup> These authors contributed equally to this work. &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Physical Review E 90, 022904 · 2014 · doi: <a href="https://doi.org/10.1103/PhysRevE.90.022904">10.1103/PhysRevE.90.022904</a></p>
+<p>Received 20 May 2014; published 8 August 2014</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Haim, L., Mau, Y. and Meron, E. (2014). Spatial Forcing of Pattern-Forming Systems That Lack Inversion Symmetry. Physical Review E, 90, 022904. https://doi.org/10.1103/PhysRevE.90.022904</p>
+</blockquote>
+<hr>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>The entrainment of periodic patterns to spatially periodic parametric forcing is studied. Using a weak nonlinear analysis of a simple pattern formation model we study the resonant responses of one-dimensional systems that lack inversion symmetry. Focusing on the first three <span class="math inline">n{:}1</span> resonances, in which the system adjusts its wavenumber to one <span class="math inline">n</span>th of the forcing wavenumber, we delineate commonalities and differences among the resonances. Surprisingly, we find that all resonances show multiplicity of stable phase states, including the <span class="math inline">1{:}1</span> resonance. The phase states in the <span class="math inline">2{:}1</span> and <span class="math inline">3{:}1</span> resonances, however, differ from those in the <span class="math inline">1{:}1</span> resonance in remaining symmetric even when the inversion symmetry is broken. This is because of the existence of a discrete translation symmetry in the forced system. As a consequence, the <span class="math inline">2{:}1</span> and <span class="math inline">3{:}1</span> resonances show stationary phase fronts and patterns, whereas phase fronts within the <span class="math inline">1{:}1</span> resonance are propagating and phase patterns are transients. In addition, we find substantial differences between the <span class="math inline">2{:}1</span> resonance and the other two resonances. While the pattern forming instability in the <span class="math inline">2{:}1</span> resonance is supercritical, in the <span class="math inline">1{:}1</span> and <span class="math inline">3{:}1</span> resonances it is subcritical, and while the inversion asymmetry extends the ranges of resonant solutions in the <span class="math inline">1{:}1</span> and <span class="math inline">3{:}1</span> resonances, it has no effect on the <span class="math inline">2{:}1</span> resonance range. We conclude by discussing a few open questions.</p>
+</section>
+<section id="i.-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="i.-introduction">I. Introduction</h2>
+<p>Spatial periodic forcing can be used to control and manipulate pattern forming systems (<a href="#ref-1">1</a>–<a href="#ref-4">4</a>). In model equations the forcing appears either parametrically, by multiplying a dynamical variable, or additively. The latter case has been studied in the contexts of optical patterns in photorefractive feedback systems (<a href="#ref-5">5</a>), Rayleigh-Bénard convection (<a href="#ref-6">6</a>), and Turing patterns in chemical reactions (<a href="#ref-3">3</a>). Parametric forcing is relevant to the restoration of banded vegetation on hill slopes by water harvesting (<a href="#ref-7">7</a>–<a href="#ref-9">9</a>).</p>
+<p>General aspects of pattern-forming systems can often be captured by analyzing simple pattern formation models. A widely used model of this kind is the Swift-Hohenberg (SH) equation, originally introduced in the context of fluid convection (<a href="#ref-10">10</a>). The SH equation can be viewed as the simplest model that captures a nonuniform stationary instability, i.e., an instability that renders a uniform state unstable and gives rise to a stationary periodic pattern. In a series of recent works we used the SH equation to study spatial parametric forcing as a means of stabilizing patterns, extending their existence range, controlling their wavenumbers and amplitudes, and creating new patterns (<a href="#ref-11">11</a>–<a href="#ref-14">14</a>).</p>
+<p>In all these studies we used the original form of the SH equation, which has an inversion symmetry (<span class="math inline">u \to -u</span>). However, pattern forming systems often lack such a symmetry. In thermal convection, the so-called “up-down” symmetry is broken when fluids with temperature-dependent properties are used (non-Oberbeck-Boussinesq convection) (<a href="#ref-15">15</a>). Models of chemical reactions, such as the Lengyel-Epstein model for the CDIMA reaction (<a href="#ref-3">3</a>), generally lack inversion symmetry in all settings, and the same holds for models of dryland vegetation (<a href="#ref-16">16</a>).</p>
+<p>In this paper we use a modified SH equation that includes a quadratic term to study the effect of linear parametric forcing on pattern formation in 1D systems that lack inversion symmetry. Using a weak nonlinear analysis we study the first three resonances <span class="math inline">n{:}1</span>, <span class="math inline">n=1,2,3</span>, in which the system responds to the forcing with wavenumbers that are one <span class="math inline">n</span>th of the forcing wavenumber. Interestingly, the effect of the quadratic term on different resonances manifests itself differently; in some respects the <span class="math inline">1{:}1</span> resonance shows different behaviors from those of the other two, while in other respects the <span class="math inline">2{:}1</span> resonance stands out.</p>
+<p>The paper is organized as follows. We begin in Sec. II by presenting the modified SH equation that we study. In Sec. III we use a multiple scales analysis to derive an amplitude equation for one-dimensional <span class="math inline">n{:}1</span> wavenumber-locked solutions of the modified SH equation. In Sec. IV we study constant solutions of the amplitude equation for the different resonances, investigating their existence and stability ranges, both analytically and numerically. The implications of this study for phase patterns are addressed in Sec. V, while a summary of all results and a discussion of open questions conclude the paper in Sec. VI.</p>
+</section>
+<section id="ii.-the-model-equation" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-the-model-equation">II. The Model Equation</h2>
+<p>The modified SH equation to be studied here is</p>
+<p><span class="math display">
+\frac{\partial u}{\partial t} = \varepsilon u + \lambda u^2 - \left(\nabla^2 + k_0^2\right)^2 u - u^3 + \gamma u \cos(k_f x), \tag{1}
+</span></p>
+<p>where, in the unforced system, <span class="math inline">\varepsilon</span> represents the distance from the pattern forming instability of the zero state and <span class="math inline">k_0 \sim O(1)</span> is the wavenumber of the first mode to grow at the instability point and also the wavenumber of the resulting stationary pattern. The inversion symmetry, <span class="math inline">u \to -u</span>, is broken by the quadratic term, where <span class="math inline">\lambda</span> is assumed to be of order unity. The parametric forcing is controlled by the wavenumber <span class="math inline">k_f</span> and strength <span class="math inline">\gamma</span>. Since Eq. (1) is invariant under the transformation <span class="math inline">\gamma \to -\gamma</span> and <span class="math inline">x \to x + \pi/k_f</span>, we will choose to consider only positive values of the forcing <span class="math inline">\gamma</span>. We will also restrict ourselves to positive values of <span class="math inline">\lambda</span>; the results for negative <span class="math inline">\lambda</span> can then be obtained by changing the sign of <span class="math inline">u</span>.</p>
+<p>The forced SH Eq. (1) is gradient, i.e., it has a Lyapunov (or energy) functional <span class="math inline">L</span>, in terms of which it reads</p>
+<p><span class="math display">
+\frac{\partial u}{\partial t} = -\frac{\delta L}{\delta u}, \tag{2}
+</span></p>
+<p>where <span class="math inline">\delta</span> denotes the variational derivative, and</p>
+<p><span class="math display">
+L = \int d\mathbf{r}\left\{\frac{1}{2}\left(\nabla^2 u + k_0^2 u\right)^2 - \left[\varepsilon + \gamma\cos(k_fx)\right]\frac{u^2}{2} - \lambda\frac{u^3}{3} + \frac{u^4}{4}\right\}. \tag{3}
+</span></p>
+</section>
+<section id="iii.-derivation-of-the-amplitude-equation" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-derivation-of-the-amplitude-equation">III. Derivation of the Amplitude Equation</h2>
+<p>We consider Eq. (1) near the instability of the zero solution (<span class="math inline">|\varepsilon| \ll 1</span>) and assume weak forcing (<span class="math inline">\gamma \ll 1</span>). The periodic solutions that appear beyond the instability point have small amplitudes that vary weakly in time and space. Using <span class="math inline">\varepsilon</span> as a small parameter, we expand solutions of Eq. (1) as</p>
+<p><span class="math display">
+u = \sum_{i=1}^{\infty} |\varepsilon|^{i/2}\, u_i(x_0,x_1,t_1,x_2,t_2,\ldots), \tag{4}
+</span></p>
+<p>where <span class="math inline">x_j = |\varepsilon|^{j/2}x</span> and <span class="math inline">t_j = |\varepsilon|^{j/2}t</span> are the “slow” space and time variables for <span class="math inline">j \neq 0</span> and “fast” for <span class="math inline">j=0</span>. With these choices of space and time variables the derivatives in Eq. (1) transform according to</p>
+<p><span class="math display">
+\partial_x = \sum_{i=0}^{\infty} |\varepsilon|^{i/2}\,\partial_{x_i}, \qquad \partial_t = \sum_{i=1}^{\infty} |\varepsilon|^{i/2}\,\partial_{t_i}. \tag{5}
+</span></p>
+<p>We further expand the forcing strength as a power series in <span class="math inline">\varepsilon</span>:</p>
+<p><span class="math display">
+\gamma = \sum_{j=1}^{\infty} |\varepsilon|^{j/2}\,\Gamma_j, \qquad \Gamma_j \sim O(1). \tag{6}
+</span></p>
+<p>This form will allow us to use different scalings of <span class="math inline">\gamma</span> with <span class="math inline">\varepsilon</span> for different resonances, if needed. Finally, we assume that the forcing wavenumber, <span class="math inline">k_f</span>, is close to a multiple of <span class="math inline">k_0</span>, that is, <span class="math inline">k_f \approx nk_0</span>, where <span class="math inline">n</span> is an integer, and quantify this proximity to exact resonance by introducing a small detuning parameter <span class="math inline">\nu</span>:</p>
+<p><span class="math display">
+\nu = k_0 - k_f/n = |\varepsilon|^{1/2}\nu_1, \qquad \nu_1 \sim O(1). \tag{7}
+</span></p>
+<p>Substituting Eqs. (4)–(6) into Eq. (1) we obtain the following linear equations at successive orders of <span class="math inline">|\varepsilon|^{1/2}</span>:</p>
+<p><span class="math display">
+\begin{aligned}
+|\varepsilon|^{1/2}: \quad &amp; \mathcal{L}^2 u_1 = 0, \tag{8a}\\
+|\varepsilon|^{2/2}: \quad &amp; \mathcal{L}^2 u_2 = \lambda u_1^2 + \Gamma_1 u_1 \cos(x_0 k_f) - \partial_{t_1}u_1 - 4\mathcal{L}\mathcal{M}_{0,1}u_1, \tag{8b}\\
+|\varepsilon|^{3/2}: \quad &amp; \mathcal{L}^2 u_3 = u_1 + 2\lambda u_1 u_2 - u_1^3 - 4\mathcal{M}_{0,1}^2 u_1 - \partial_{t_2}u_1 - \partial_{t_1}u_2 \\
+&amp;\quad + (\Gamma_1 u_2 + \Gamma_2 u_1)\cos(x_0 k_f) - 2\mathcal{L}(2\mathcal{M}_{0,2}u_1 + \mathcal{M}_{1,1}u_1 + 2\mathcal{M}_{0,1}u_2), \tag{8c}
+\end{aligned}
+</span></p>
+<p>where <span class="math inline">\mathcal{L} = \mathcal{M}_{0,0} + k_0^2</span> and <span class="math inline">\mathcal{M}_{i,j} = \partial_{x_i}\partial_{x_j}</span>. The solution of Eq. (8a), which provides the leading order approximation, reads</p>
+<p><span class="math display">
+u_1 = A(x_1,t_1,\ldots)e^{ik_0x_0} + \text{c.c.}, \tag{9}
+</span></p>
+<p>where the complex-valued amplitude <span class="math inline">A</span> depends on the slow variables and c.c. stands for complex conjugate.</p>
+<p>The next order contribution, <span class="math inline">u_2</span>, satisfies Eq. (8b). The right-hand side of this equation contains secular terms that need to be eliminated in order for <span class="math inline">u_2</span> to represent a higher harmonics of <span class="math inline">\exp(ik_0x)</span>. Applying this solvability condition we find</p>
+<p><span class="math display">
+\partial_{t_1}A = \delta_{n,2}\frac{\Gamma_1}{2}A^\star e^{-2i\nu_1x_1}, \tag{10}
+</span></p>
+<p>where <span class="math inline">\delta_{i,j}</span> is the Kronecker <span class="math inline">\delta</span> and <span class="math inline">\star</span> denotes complex conjugation. For all resonances with <span class="math inline">n\neq2</span> the right-hand side of Eq. (10) vanishes and, consequently, the solvability condition does not contribute to the amplitude equations of these resonances. In the case of the <span class="math inline">2{:}1</span> resonance the right-hand side of Eq. (10) does not vanish. It, however, consists of a linear term that, on the time scale <span class="math inline">t_1</span>, can lead to exponentially growing solutions with no other terms to balance the exponential growth. Nonlinear terms capable of balancing exponential growth will appear at the next order of the analysis but such terms represent smaller contributions. To resolve this inconsistency we set <span class="math inline">\Gamma_1=0</span> for <span class="math inline">n=2</span>, which is equivalent to choosing a different scaling of <span class="math inline">\gamma</span> with <span class="math inline">\varepsilon</span> for the <span class="math inline">2{:}1</span> resonance [see Eq. (6)]. We accomplish this constraint on <span class="math inline">\Gamma_1</span> by multiplying it by the factor <span class="math inline">(1-\delta_{n,2})</span>. Thus, Eq. (10) effectively reduces to <span class="math inline">\partial_{t_1}A=0</span> for all resonances.</p>
+<p>Using Eq. (9), the solution of Eq. (8b) can be written as</p>
+<p><span class="math display">
+u_2 = \frac{\Gamma_1 d_+}{2}A\,e^{i(k_0+k_f)x_0} + \frac{\Gamma_1 d_-}{2}(1-\delta_{n,2})A\,e^{i(k_0-k_f)x_0} + \frac{\lambda}{9k_0^4}A^2 e^{2ik_0x_0} + \frac{2\lambda}{k_0^4}|A|^2 + \text{c.c.}, \tag{11}
+</span></p>
+<p>where <span class="math inline">d_\pm = [k_f(2k_0 \pm k_f)]^{-2}</span>.</p>
+<p>The highest order contribution to be considered here, <span class="math inline">u_3</span>, satisfies Eq. (8c). Applying the solvability condition in this case, using Eqs. (9) and (11) for <span class="math inline">u_1</span> and <span class="math inline">u_2</span>, we find</p>
+<p><span class="math display">
+\begin{aligned}
+\partial_{t_2}A &amp;= \left[\Gamma_2 + \frac{\Gamma_1^2}{4}(d_- + d_+ - d_-\delta_{n,2})\right]A - \eta|A|^2A + 4k_0^2\partial_{x_1}^2A \\
+&amp;\quad + \left[\Gamma_1\lambda\zeta_1\,e^{-3i\nu_1x_1}A^{\star2}\right]\delta_{n,3} + \left[\frac{\Gamma_2}{2}e^{-2i\nu_1x_1}A^\star\right]\delta_{n,2} \\
+&amp;\quad + \left[\Gamma_1\lambda\left(\zeta_1e^{i\nu_1x_1}A^2 + \zeta_2e^{-i\nu_1x_1}|A|^2\right) + \frac{\Gamma_1^2d_-}{4}e^{-2i\nu_1x_1}A^\star\right]\delta_{n,1},
+\end{aligned} \tag{12}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\zeta_1 \equiv d_- + \frac{1}{18k_0^4}, \qquad \zeta_2 \equiv d_- + d_+ + \frac{1}{k_0^4}, \qquad \eta \equiv 3 - \frac{38\lambda^2}{9k_0^4}. \tag{13}
+</span></p>
+<p>Note that <span class="math inline">\zeta_1</span> and <span class="math inline">\zeta_2</span> are positive. We also have to demand that <span class="math inline">\eta</span> is positive, otherwise the expansion has to be extended to fifth order in <span class="math inline">|\varepsilon|^{1/2}</span>. This constrains the coefficient of the quadratic term to <span class="math inline">\lambda &lt; k_0^2\sqrt{27/38}</span>.</p>
+<p>The amplitude equation can be now obtained by combining Eqs. (10) and (12) using the chain rule <span class="math inline">\partial_tA = \varepsilon^{1/2}\partial_{t_1}A + \varepsilon^{2/2}\partial_{t_2}A</span>. Rescaling back to the fast variables and to the original forcing strength <span class="math inline">\gamma</span> and detuning <span class="math inline">\nu</span>,</p>
+<p><span class="math display">
+\Gamma_1 = \frac{\gamma}{|\varepsilon|^{1/2}}(1-\delta_{n,2}), \qquad \Gamma_2 = \frac{\gamma}{|\varepsilon|}, \qquad \nu_1 = \frac{\nu}{|\varepsilon|^{1/2}},
+</span></p>
+<p>we obtain</p>
+<p><span class="math display">
+\begin{aligned}
+\partial_tB &amp;= \left[\varepsilon + \frac{\gamma^2}{4}(d_-+d_+)(1-\delta_{n,2})\right]B - \eta|B|^2B + 4k_0^2(\partial_x - i\nu)^2B \\
+&amp;\quad + \left[\gamma\lambda\zeta_1B^{\star2}\right]\delta_{n,3} + \left[\frac{\gamma}{2}B^\star\right]\delta_{n,2} + \left[\gamma\lambda(\zeta_1B^2+\zeta_2|B|^2) + \frac{\gamma^2d_-}{4}B^\star\right]\delta_{n,1},
+\end{aligned} \tag{14}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+B(x_1,t_1,\ldots) = |\varepsilon|^{1/2}A\,e^{i\nu_1x_1}. \tag{15}
+</span></p>
+<p>In terms of the amplitude <span class="math inline">B</span> the leading order form of the solution Eq. (4) is</p>
+<p><span class="math display">
+u(x_0,x_1,t_1,\ldots) \approx B\,e^{i\frac{k_f}{n}x_0} + \text{c.c.} \tag{16}
+</span></p>
+<p>This form is especially convenient, for constant solutions of Eq. (14) describe wavenumber-locked solutions of Eq. (1), the wavenumbers of which are related to the forcing wavenumber by the ratio <span class="math inline">k_f/n</span>. An equivalent form for the space-independent amplitude Eq. (14) is obtained by expressing <span class="math inline">B</span> and <span class="math inline">B^*</span> in terms of <span class="math inline">\rho=|B|</span> and <span class="math inline">\phi=\arg B</span>:</p>
+<p><span class="math display">
+\begin{aligned}
+\rho_t &amp;= \rho\left[\varepsilon - 4k_0^2\nu^2 + \frac{\gamma^2}{4}(d_-+d_+)(1-\delta_{n,2})\right] - \eta\rho^3 + \left[\gamma\lambda\zeta_1\rho^2\cos3\phi\right]\delta_{n,3} + \left[\frac{\gamma}{2}\rho\cos2\phi\right]\delta_{n,2} \\
+&amp;\quad + \left[\gamma\lambda(\zeta_1+\zeta_2)\rho^2\cos\phi + \frac{\gamma^2d_-}{4}\rho\cos2\phi\right]\delta_{n,1}, \\
+\phi_t &amp;= -\left[\gamma\lambda\zeta_1\rho\sin3\phi\right]\delta_{n,3} - \left[\frac{\gamma}{2}\sin2\phi\right]\delta_{n,2} - \left[\gamma(\zeta_2-\zeta_1)\lambda\rho\sin\phi + \frac{\gamma^2d_-}{4}\sin2\phi\right]\delta_{n,1}.
+\end{aligned} \tag{17}
+</span></p>
+<p>Note that for <span class="math inline">n\leqslant3</span>, up to the third-order analysis considered here, the phase equation in Eq. (17) has discrete phase solutions,</p>
+<p><span class="math display">
+\phi_1 = (2m+1)\frac{\pi}{n}, \qquad \phi_2 = 2m\frac{\pi}{n}, \qquad m=0,1,\ldots,n-1, \tag{18}
+</span></p>
+<p>where we distinguished between a group <span class="math inline">\phi_1</span> of odd-phase solutions and a group <span class="math inline">\phi_2</span> of even-phase solutions. The multiplicity of phase solutions within each group is related to the discrete translational symmetry, <span class="math inline">x \to x + 2m\pi/k_f</span>, of Eq. (1), which implies the invariance of the amplitude Eq. (14) under the transformation <span class="math inline">B \to B\exp(2\pi im/n)</span>. In the following we will refer to this symmetry as “translation symmetry.”</p>
+<p>In deriving the amplitude Eq. (14) we considered only particular solutions of Eqs. (8) for <span class="math inline">u_i</span>, instead of general solutions, which would contain undetermined amplitudes or “free fields” for the different modes. In principle, these fields can be determined by demanding commutativity between time derivatives of the amplitude (<a href="#ref-17">17</a>), e.g., <span class="math inline">\partial_{t_1}\partial_{t_2}A = \partial_{t_2}\partial_{t_1}A</span>. Implementing these conditions, however, turned out to be too hard. Nevertheless, the amplitude Eq. (14) does provide good quantitative approximations, at least for sufficiently small <span class="math inline">\gamma</span> and <span class="math inline">\lambda</span>, as we will shortly see. We note that Eq. (14) reduces to known equations when the inversion symmetry is reintroduced (<span class="math inline">\lambda=0</span>) (<a href="#ref-13">13</a>,<a href="#ref-14">14</a>).</p>
+</section>
+<section id="iv.-resonant-periodic-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-resonant-periodic-solutions">IV. Resonant Periodic Solutions</h2>
+<p>The existence range and stability properties of periodic wavenumber-locked solutions of Eq. (1) can be obtained by studying constant solutions of the amplitude Eq. (14) or its equivalent form Eq. (17). In the following subsections we describe such studies for different <span class="math inline">n{:}1</span> resonances. The stability analysis is restricted to uniform perturbations for which the space-derivative terms in Eq. (14) drop out. The dynamics of such perturbations are determined by the eigenvalues of the Jacobian matrix:</p>
+<p><span class="math display">
+J(B,n) = \begin{pmatrix} C &amp; D \\ D^\star &amp; C^\star \end{pmatrix}, \tag{19}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\begin{aligned}
+C &amp;= \left[\varepsilon - 4\nu^2k_0^2 + \frac{\gamma^2}{4}(d_-+d_+)(1-\delta_{n,2})\right] + \gamma\lambda(2B\zeta_1+B^\star\zeta_2)\delta_{n,1} - 2|B|^2\eta, \\
+D &amp;= -B^2\eta + \left(\frac{d_-\gamma^2}{4} + B_0\lambda\zeta_2\gamma\right)\delta_{n,1} + \frac{\gamma}{2}\delta_{n,2} + 2\gamma\lambda\zeta_1B^\star\delta_{n,3},
+\end{aligned} \tag{20}
+</span></p>
+<p>and <span class="math inline">B=\rho\exp(i\phi)</span> represents the constant solution considered. The eigenvalues of <span class="math inline">J</span> are determined using the formula</p>
+<p><span class="math display">
+\sigma = \frac{\text{Tr}(J)}{2} \pm \sqrt{\left[\frac{\text{Tr}(J)}{2}\right]^2 - \text{Det}(J)}. \tag{21}
+</span></p>
+<p>To test the analytical results for the existence ranges of the various solutions we conduct numerical continuation studies of Eq. (1) (<a href="#ref-18">18</a>).</p>
+<section id="a.-11-resonant-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="a.-11-resonant-solutions">A. 1:1 Resonant Solutions</h3>
+<p>For <span class="math inline">n=1</span>, Eqs. (17) reduce to</p>
+<p><span class="math display">
+\begin{aligned}
+\rho_t &amp;= \rho\left[\varepsilon - 4k_0^2\nu^2 + \frac{\gamma^2}{4}(d_-+d_+)\right] - \eta\rho^3 + \gamma\lambda(\zeta_1+\zeta_2)\rho^2\cos\phi + \frac{\gamma^2d_-}{4}\rho\cos2\phi, \\
+\phi_t &amp;= -\gamma(\zeta_2-\zeta_1)\lambda\rho\sin\phi - \frac{\gamma^2d_-}{4}\sin2\phi,
+\end{aligned} \tag{22}
+</span></p>
+<p>and admit the following solutions:</p>
+<p><span class="math display">
+\rho_\pm(\phi) = \frac{\gamma\lambda(\zeta_1+\zeta_2)}{2\eta}\cos\phi \pm \sqrt{\frac{\varepsilon-\varepsilon_1}{\eta}}, \qquad \phi=\{\phi_1,\phi_2\}, \tag{23}
+</span></p>
+<p>where <span class="math inline">\phi_1=\pi</span> is the odd-phase solution and <span class="math inline">\phi_2=0</span> is the even-phase solution [see Eq. (18)] and</p>
+<p><span class="math display">
+\varepsilon_1 = \varepsilon_2 - \frac{\gamma^2\lambda^2(\zeta_1+\zeta_2)^2}{4\eta}, \qquad \varepsilon_2 = 4k_0^2\nu^2 - \frac{\gamma^2}{4}(2d_-+d_+). \tag{24}
+</span></p>
+<p>According to Eq. (23), <span class="math inline">\rho_-(\phi_1)</span> is always negative and therefore cannot be a solution. Moreover, <span class="math inline">\rho_-(\phi_2)</span> exists for <span class="math inline">\varepsilon_1 \leqslant \varepsilon \leqslant \varepsilon_2</span>, but inserting this solution into the eigenvalue expression Eq. (21) reveals that it is always unstable.</p>
+<p>Figure 1(a) shows bifurcations diagrams for <span class="math inline">1{:}1</span> wavenumber-locked solutions for a system with an inversion symmetry (<span class="math inline">\lambda=0</span>) and for a system that lacks that symmetry (<span class="math inline">\lambda\neq0</span>). The solid lines (stable solutions) and the dashed lines (unstable solutions) were calculated using Eqs. (23) and (21). The dots show existence range results obtained numerically from Eq. (1) using a continuation method. In the symmetric case (gray line), the <span class="math inline">\phi_1</span> and <span class="math inline">\phi_2</span> solutions coincide and appear in a supercritical bifurcation at <span class="math inline">\varepsilon=\varepsilon_2</span>. Furthermore, the solutions are stable to uniform perturbations. In the asymmetric case (black lines) the degeneracy of the solution is lifted, and while the bifurcation of the <span class="math inline">\phi_1</span> solution is supercritical, the bifurcation of the <span class="math inline">\phi_2</span> solution is subcritical. In both bifurcations the zero solution is destabilized at <span class="math inline">\varepsilon=\varepsilon_2</span>, but the <span class="math inline">\phi_2</span> solution extends to lower <span class="math inline">\varepsilon</span> values and disappears in a fold bifurcation at <span class="math inline">\varepsilon=\varepsilon_1&lt;\varepsilon_2</span>, where a large-amplitude solution and a small-amplitude solution merge. The solution branch <span class="math inline">\rho_+(\phi_2)</span> is stable for all <span class="math inline">\varepsilon</span> values, while the solution branch <span class="math inline">\rho_+(\phi_1)</span> loses stability at <span class="math inline">\varepsilon=\varepsilon_3</span>, where</p>
+<p><span class="math display">
+\varepsilon_3 = \varepsilon_2 + \frac{\gamma^2d_-\left[\eta d_- + 2\lambda^2\left(\zeta_2^2-\zeta_1^2\right)\right]}{4\lambda^2(\zeta_1-\zeta_2)^2}. \tag{25}
+</span></p>
+<p>The <span class="math inline">1{:}1</span> resonance domains in the forcing-parameters plane (<span class="math inline">\gamma,k_f/k_0</span>) are shown in Fig. 1, where panels (b) and (c) correspond to the <span class="math inline">\phi_2</span> solution and panels (d) and (e) to the <span class="math inline">\phi_1</span> solution. For negative <span class="math inline">\varepsilon</span> the lack of inversion symmetry extends the resonance range of the <span class="math inline">\phi_2</span> solution [panel (b)] but leaves the resonance range of the <span class="math inline">\phi_1</span> solution unaffected [panel (d)]. For positive <span class="math inline">\varepsilon</span> the lack of inversion symmetry has opposite effects on the resonance ranges of stable <span class="math inline">\phi_1</span> and <span class="math inline">\phi_2</span> solutions; while the range is extended for the <span class="math inline">\phi_2</span> solution [panel (c)] it is reduced for the <span class="math inline">\phi_1</span> solution [panel (e)]. This range reduction occurs for relatively low values of <span class="math inline">\gamma</span>, as demarcated by the thin line in panel (e), below which solution <span class="math inline">\phi_1</span> exists but is unstable.</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>FIG. 1 | The 1:1 resonance.</strong> Panel (a) shows a bifurcation diagram of <span class="math inline">1{:}1</span> wavenumber-locked solutions. Solid (dashed) curves indicate the stable (unstable) analytical solutions Eq. (23), and the dots denote numerical solutions of Eq. (1). Black curves represent a system that lacks an inversion symmetry with (<span class="math inline">\lambda=0.6</span>), while gray curves represent a symmetric system (<span class="math inline">\lambda=0</span>). Parameters for panel (a): <span class="math inline">\gamma=0.02</span>, <span class="math inline">k_f/k_0=1.01</span>. Panels (b) through (e) show existence and stability domains of resonant solutions—the inner domains bounded by the black and gray curves, where black refers to an asymmetric system and gray to a symmetric system. Panels (b) and (c) show the domains of the <span class="math inline">\phi_2</span> solution below (<span class="math inline">\varepsilon=-0.02</span>) (b) and above (<span class="math inline">\varepsilon=0.02</span>) (c) the instability threshold <span class="math inline">\varepsilon=0</span> of the zero state in the unforced system. Panels (d) and (e) show the same information for the <span class="math inline">\phi_1</span> solution. The thin black line in panel (e) denotes marginal stability of the <span class="math inline">\phi_1</span> solution. Below this line the solution exists but is unstable.</p>
+</section>
+<section id="b.-21-resonant-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="b.-21-resonant-solutions">B. 2:1 Resonant Solutions</h3>
+<p>For <span class="math inline">n=2</span>, Eqs. (17) reduce to</p>
+<p><span class="math display">
+\rho_t = \rho(\varepsilon-4k_0^2\nu^2) - \eta\rho^3 + \frac{\gamma}{2}\rho\cos2\phi, \qquad \phi_t = -\frac{\gamma}{2}\sin2\phi, \tag{26}
+</span></p>
+<p>and admit the following solution sets:</p>
+<p><span class="math display">
+\rho(\phi) = \sqrt{\frac{\varepsilon-4k_0^2\nu^2+\frac{\gamma}{2}\cos2\phi}{\eta}}, \qquad \phi=\{\phi_1,\phi_2\}, \tag{27}
+</span></p>
+<p>where according to Eq. (18) <span class="math inline">\phi_1=\{\tfrac{\pi}{2},\tfrac{3\pi}{2}\}</span> and <span class="math inline">\phi_2=\{0,\pi\}</span>. Denoting</p>
+<p><span class="math display">
+\varepsilon_\pm \equiv 4k_0^2\nu^2 \pm \frac{\gamma}{2}, \tag{28}
+</span></p>
+<p>we find from Eqs. (27) that the <span class="math inline">\phi_1</span> solutions exist for <span class="math inline">\varepsilon \geqslant \varepsilon_+</span>, whereas the <span class="math inline">\phi_2</span> solutions exist for <span class="math inline">\varepsilon \geqslant \varepsilon_-</span>. Using the solutions <span class="math inline">B=\rho(\phi)\exp(i\phi)</span> with <span class="math inline">\phi=\phi_2</span> in Eq. (21) we find that these even-phase solutions are stable in their entire existence range while the odd-phase solutions with <span class="math inline">\phi=\phi_1</span> are unstable in their entire existence range. The bifurcation diagrams for these solutions for <span class="math inline">\lambda=0</span> and for <span class="math inline">\lambda&gt;0</span> are shown in Fig. 2(a). Note that the phase equation in Eq. (26) is independent of <span class="math inline">\lambda</span>. As a consequence the solutions Eq. (27) for the two even-phase solutions, <span class="math inline">\phi_2=\{0,\pi\}</span>, are identical, <span class="math inline">\rho(0)=\rho(\pi)</span>. This holds both in the symmetric case (<span class="math inline">\lambda=0</span>) and in the asymmetric case (<span class="math inline">\lambda&gt;0</span>). That is, each of the stable solution branches in the bifurcation diagram (in black and in gray) represents two overlapping solution branches, one for the even-phase solution <span class="math inline">\phi=0</span> and one for the even-phase solution <span class="math inline">\phi=\pi</span>. This is unlike the <span class="math inline">1{:}1</span> resonance, which is also characterized by bistability of <span class="math inline">\phi=0</span> and <span class="math inline">\phi=\pi</span> phase states, except that the former state is an even-phase solution, whereas the latter is an odd-phase solution [in the sense of Eq. (18)], and for <span class="math inline">\lambda&gt;0</span> they are not identical, as the two solution branches in Fig. 1 denoted by <span class="math inline">\rho_+(\phi_2)</span> and <span class="math inline">\rho_+(\phi_1)</span> indicate. The similarity of solutions for <span class="math inline">\lambda=0</span> and <span class="math inline">\lambda&gt;0</span> derive from the fact that <span class="math inline">\lambda</span> only appears in Eqs. (26) in the parameter <span class="math inline">\eta</span>, and the breaking of the up-down symmetry simply amounts to the renormalization of the coefficient of <span class="math inline">\rho^3</span>.</p>
+<p>It is interesting to note that for the <span class="math inline">2{:}1</span> resonance, the amplitude equation obtained for a system that undergoes a finite wavenumber instability subjected to spatial parametric forcing is similar in structure to that of a system that undergoes a Hopf bifurcation subjected to temporal parametric forcing (<a href="#ref-19">19</a>–<a href="#ref-22">22</a>). There is a fundamental difference, though; because of the parity symmetry <span class="math inline">x \to -x</span> of Eq. (1) all coefficients in Eq. (14) must be real and the equation is variational, i.e., has an energy functional, which rules out asymptotic dynamics. By contrast, the coefficients in the amplitude equation for forced oscillatory systems are complex valued in general, the equation is not necessarily variational and asymptotic dynamical behaviors are possible (see also Sec. V).</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>FIG. 2 | The 2:1 resonance.</strong> Panel (a) shows a bifurcation diagram of <span class="math inline">2{:}1</span> wavenumber-locked solutions. Solid (dashed) curves indicate the stable (unstable) analytical solutions Eq. (27), and the dots denote numerical solutions of Eq. (1). Black curves represent a system that lacks an inversion symmetry with (<span class="math inline">\lambda=0.5</span>), while gray curves represent a symmetric system (<span class="math inline">\lambda=0</span>). Each of the upper solution branches denoted by <span class="math inline">\rho(\phi_2)</span> represent two translationally symmetric even-phase solutions, <span class="math inline">\phi_2=\{0,\pi\}</span>. These solutions are stable in their entire existence range, unlike the lower solution branches, denoted by <span class="math inline">\rho(\phi_1)</span>, which represent two translationally symmetric odd-phase solutions, <span class="math inline">\phi_1=\{\tfrac{\pi}{2},\tfrac{3\pi}{2}\}</span> and are unstable. Parameters for panel (a): <span class="math inline">\gamma=0.02</span>, <span class="math inline">k_f/k_0=2.02</span>. Panels (b) and (c) show existence and stability domains of resonant even-phase solutions below (<span class="math inline">\varepsilon=-0.02</span>) (b) and above (<span class="math inline">\varepsilon=0.02</span>) (c) the instability threshold <span class="math inline">\varepsilon=0</span>. Note the overlap of the black and gray curves, both of the solid curves and of the curves delineated by the dots, which reflects the independence of the resonance domains on <span class="math inline">\lambda</span>.</p>
+<p>Figures 2(b) and 2(c) show the resonance range of stable even-phase solutions in the parameter space <span class="math inline">\gamma</span> versus <span class="math inline">k_f/k_0</span>, for <span class="math inline">\varepsilon&lt;0</span> and <span class="math inline">\varepsilon&gt;0</span>, respectively (the unstable odd-phase solutions <span class="math inline">\phi_1=\{\tfrac{\pi}{2},\tfrac{3\pi}{2}\}</span> are not shown). As can be seen from the expression for <span class="math inline">\rho</span> in Eq. (27) the existence range of the resonant solutions is independent of <span class="math inline">\lambda</span>, and the same holds for the stability range of these solutions which coincide with the existence range. As a result, the resonance ranges in symmetric and asymmetric systems coincide (black and gray lines or dots overlap). Again this is unlike the <span class="math inline">1{:}1</span> resonance where the asymmetry (<span class="math inline">\lambda&gt;0</span>) changes the resonance range.</p>
+</section>
+<section id="c.-31-resonant-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="c.-31-resonant-solutions">C. 3:1 Resonant Solutions</h3>
+<p>For <span class="math inline">n=3</span>, Eqs. (17) reduce to</p>
+<p><span class="math display">
+\rho_t = \rho(\varepsilon-\varepsilon_2) - \eta\rho^3 + \gamma\lambda\zeta_1\rho^2\cos3\phi, \qquad \phi_t = -\gamma\lambda\zeta_1\rho\sin3\phi, \tag{29}
+</span></p>
+<p>and admit the following solutions:</p>
+<p><span class="math display">
+\rho_\pm(\phi) = \frac{\gamma\zeta_1\lambda\cos(3\phi)}{2\eta} \pm \sqrt{\frac{\varepsilon-\varepsilon_1}{\eta}}, \qquad \phi=\{\phi_1,\phi_2\}, \tag{30}
+</span></p>
+<p>where the thresholds <span class="math inline">\varepsilon_1</span> and <span class="math inline">\varepsilon_2</span> [not to be confused with Eq. (24)] are given by</p>
+<p><span class="math display">
+\varepsilon_1 = \varepsilon_2 - \frac{\gamma^2\zeta_1^2\lambda^2}{4\eta}, \qquad \varepsilon_2 = 4k_0^2\nu^2 - \frac{\gamma^2}{4}(d_-+d_+), \tag{31}
+</span></p>
+<p>and according to Eq. (18) <span class="math inline">\phi_1=\{\tfrac{\pi}{3},\pi,\tfrac{5\pi}{3}\}</span>, <span class="math inline">\phi_2=\{0,\tfrac{2\pi}{3},\tfrac{4\pi}{3}\}</span>.</p>
+<p>According to Eqs. (21) and (30), the solutions <span class="math inline">\rho_+(\phi_1)</span> of an asymmetric system (<span class="math inline">\lambda\neq0</span>) exist for <span class="math inline">\varepsilon&gt;\varepsilon_2</span> but are always unstable, whereas the solutions <span class="math inline">\rho_-(\phi_1)</span> do not exist. The solutions <span class="math inline">\rho_+(\phi_2)</span> exist and are stable for <span class="math inline">\varepsilon&gt;\varepsilon_1</span>, whereas the solutions <span class="math inline">\rho_-(\phi_2)</span> exist in the range <span class="math inline">\varepsilon_1&lt;\varepsilon&lt;\varepsilon_2</span> but are unstable. This behavior is similar to the <span class="math inline">1{:}1</span> resonance in that the <span class="math inline">\rho_+(\phi_2)</span> solutions appear in a subcritical bifurcation and the <span class="math inline">\rho_+(\phi_1)</span> solutions appear in a supercritical bifurcation. Unlike the <span class="math inline">1{:}1</span> resonance the <span class="math inline">\rho_+(\phi_1)</span> solutions in the <span class="math inline">3{:}1</span> resonance are always unstable, thus no bistability range of even-phase solutions <span class="math inline">\rho_+(\phi_2)</span> and of odd-phase solutions <span class="math inline">\rho_+(\phi_1)</span> exists, as in the <span class="math inline">1{:}1</span> resonance. The <span class="math inline">3{:}1</span> resonance still gives rise to multiplicity of stable phase states—the three translationally symmetric even phases <span class="math inline">\phi_2=\{0,\tfrac{2\pi}{3},\tfrac{4\pi}{3}\}</span>. In the symmetric case (<span class="math inline">\lambda=0</span>) the solutions appear in a supercritical bifurcation at <span class="math inline">\varepsilon=\varepsilon_2</span> but the phase <span class="math inline">\phi</span> is undetermined, as the phase equation in Eq. (29) implies.</p>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>FIG. 3 | The 3:1 resonance.</strong> Panel (a) shows a bifurcation diagram of <span class="math inline">3{:}1</span> wavenumber-locked solutions. Solid (dashed) curves indicate the stable (unstable) analytical solutions Eq. (30), and the dots denote numerical solutions of Eq. (1). Black curves represent a system that lacks an inversion symmetry with (<span class="math inline">\lambda=0.7</span>), while gray curves represent a symmetric system (<span class="math inline">\lambda=0</span>). The stable solution branch <span class="math inline">\rho_+(\phi_2)</span> describes three translationally symmetric even-phase solutions <span class="math inline">\phi_2=\{0,\tfrac{2\pi}{3},\tfrac{4\pi}{3}\}</span>. The thresholds <span class="math inline">\varepsilon_1</span>, <span class="math inline">\varepsilon_2</span> are given in Eq. (31). Parameters for panel (a): <span class="math inline">\gamma=0.1</span>, <span class="math inline">k_f/k_0=3.02</span>. Panels (b) and (c) show existence and stability domains of resonant even-phase solutions below (<span class="math inline">\varepsilon=-0.002</span>) (b) and above (<span class="math inline">\varepsilon=0.002</span>) (c) the instability threshold <span class="math inline">\varepsilon=0</span> for asymmetric (black) and symmetric (gray) systems.</p>
+<p>Figures 3(b) and 3(c) show the resonance domains of stable even-phase solutions in the parameter space <span class="math inline">\gamma</span> versus <span class="math inline">k_f/k_0</span>, for <span class="math inline">\varepsilon&lt;0</span> and <span class="math inline">\varepsilon&gt;0</span>, respectively. Like in the <span class="math inline">1{:}1</span> resonance (but unlike the <span class="math inline">2{:}1</span> resonance) the asymmetry extends the boundaries of the resonance domains of even-phase solutions, but to a lesser extent.</p>
+</section>
+</section>
+<section id="v.-phase-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="v.-phase-patterns">V. Phase Patterns</h2>
+<p>All three resonances considered here involve multiplicity of stable phase states. In the <span class="math inline">1{:}1</span> resonance we found bistability of an even-phase solution, <span class="math inline">\phi=0</span>, and an odd-phase solution, <span class="math inline">\phi=\pi</span>. Breaking the inversion symmetry of the system breaks the symmetry between these two phase states, as Fig. 1(a) shows. In the two higher resonances the odd-phase solutions are unstable but the system shows multiplicity of stable even-phase solutions, <span class="math inline">\phi=0</span> and <span class="math inline">\phi=\pi</span> in the <span class="math inline">2{:}1</span> resonance, and <span class="math inline">\phi=0</span>, <span class="math inline">\phi=2\pi/3</span>, and <span class="math inline">\phi=4\pi/3</span> in the <span class="math inline">3{:}1</span> resonance. Moreover, these solutions remain translationally symmetric even for asymmetric systems (<span class="math inline">\lambda\neq0</span>).</p>
+<p>Multiplicity of phase states allow for phase-fronts that shift the phase from one state to another within narrow domains in the physical space. Such fronts and their stability properties have been thoroughly studied in the context of temporally forced oscillatory systems (<a href="#ref-23">23</a>–<a href="#ref-25">25</a>). These fronts constitute the building blocks for localized solutions (<a href="#ref-26">26</a>–<a href="#ref-28">28</a>) and for a variety of spatially extended patterns, including traveling waves, standing waves, and chaotic patterns (<a href="#ref-29">29</a>,<a href="#ref-30">30</a>), many of which have been observed in experiments (<a href="#ref-31">31</a>–<a href="#ref-35">35</a>). The existence of an energy functional in the present context [Eq. (3)] rules out asymptotic dynamical behaviors as observed in forced oscillatory systems. Yet, phase fronts do exist and form transient or stationary patterns as we now discuss.</p>
+<p>The bistability of uniform phase states within the <span class="math inline">1{:}1</span> resonance allows for phase fronts that shift the phase by <span class="math inline">\pi</span>. In asymmetric systems (<span class="math inline">\lambda\neq0</span>) the two states are not translationally symmetric and the phase fronts propagate so as to minimize the energy functional Eq. (3). This leads to transient patterns as the space-time plot in Fig. 4(a) implies. We verified that the same behavior holds for the original forced SH Eq. (1) (i.e., no front pinning has been found). The bistability of uniform phase states within the <span class="math inline">2{:}1</span> resonance allows for stationary phase patterns. This is because of the translation symmetry that relates the two phase states and their equal energies, which make the phase fronts stationary as the space-time plot in Fig. 4(b) shows. This behavior holds also for the tristability of translationally symmetric phase states within the <span class="math inline">3{:}1</span> resonance as Fig. 4(c) shows. We note that in terms of the solution Eq. (16) a phase pattern involving an array of phase fronts translates to a periodic pattern that is disrupted by an array of defects.</p>
+<p><img src="./images/figure4.png" class="img-fluid"></p>
+<p><strong>FIG. 4 | Phase-front dynamics in the absence of an inversion symmetry.</strong> Shown are space-time plots, obtained by numerical integration of Eq. (14), of phase fronts that separate different phase states, as labeled, within the <span class="math inline">1{:}1</span> (a), <span class="math inline">2{:}1</span> (b), and <span class="math inline">3{:}1</span> (c) resonances. Darker shades correspond to higher phase values. The translation asymmetry between the two phase states in the <span class="math inline">1{:}1</span> resonance induces front motion and the convergence to the zero-phase state. The translation symmetry that relates the phase states in the <span class="math inline">2{:}1</span> and <span class="math inline">3{:}1</span> resonances results in stationary fronts and phase patterns. Parameters: <span class="math inline">\varepsilon=0.01</span>, <span class="math inline">\lambda=0.5</span>, <span class="math inline">\gamma=0.3</span>, and <span class="math inline">k_f/k_0=0.02+n</span>.</p>
+</section>
+<section id="vi.-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="vi.-conclusion">VI. Conclusion</h2>
+<p>We have studied a parametrically forced SH equation with broken inversion symmetry as a simple model of pattern forming systems that are subjected to periodic spatial forcing. The study involved weak nonlinear analysis, complemented by numerical studies, of the three basic resonances <span class="math inline">n{:}1</span>, <span class="math inline">n=1,2,3</span>. Two aspects are shared by all resonances. The first is the higher-amplitude patterns obtained in asymmetric systems (<span class="math inline">\lambda\neq0</span>) compared to the symmetric ones (<span class="math inline">\lambda=0</span>). The second aspect is the stabilizing effect of the forcing, i.e., the appearance of stable patterns below the threshold <span class="math inline">\varepsilon=0</span> of unforced systems. There are, however, substantial differences between these resonances.</p>
+<p>The <span class="math inline">1{:}1</span> resonance is the only resonance that has stable odd-phase solutions. The existence of such an odd-phase solution (<span class="math inline">\phi_1=\pi</span>) along with a stable even-phase solution (<span class="math inline">\phi_2=0</span>) leads to bistability of phases states, a quite surprising result. In the presence of an inversion symmetry (<span class="math inline">\lambda=0</span>) these two phase states are translationally symmetric, as Fig. 1(a) shows, but breaking the inversion symmetry (<span class="math inline">\lambda\neq0</span>) removes the symmetry between the two phase states. Since their energy-functional values are no longer equal, phase fronts that are biasymptotic to the two phase states propagate. As a result, initial spatial distributions of the two phase states culminate in a single phase state, the state that minimizes the energy functional. The higher <span class="math inline">2{:}1</span> and <span class="math inline">3{:}1</span> resonances both have unstable odd-phase solutions, but show multiplicity of stable even-phase solutions, <span class="math inline">\phi_2=\{0,\pi\}</span> for the <span class="math inline">2{:}1</span> resonance, and <span class="math inline">\phi_2=\{0,\tfrac{2\pi}{3},\tfrac{4\pi}{3}\}</span> for the <span class="math inline">3{:}1</span> resonance. While the even-phase (<span class="math inline">\phi_2</span>) and the odd-phase (<span class="math inline">\phi_1</span>) solutions are not symmetric for <span class="math inline">\lambda\neq0</span> (because of the broken inversion symmetry) the even-phase solutions among themselves, i.e., within <span class="math inline">\phi_2</span>, are still translationally symmetric. As a consequence, phase fronts, and patterns consisting of widely separated phase fronts as building blocks, are stationary (Fig. 4).</p>
+<p>There is another substantial difference, this time between the <span class="math inline">2{:}1</span> resonance and the other two resonances. The pattern-forming instability of the zero state is supercritical in the <span class="math inline">2{:}1</span> resonance and subcritical in the <span class="math inline">1{:}1</span> and <span class="math inline">3{:}1</span> resonances, implying bistability ranges of the patterned states and the zero state in the latter two resonances. Furthermore, while the inversion asymmetry extends the ranges of resonant even-phase solutions in the <span class="math inline">1{:}1</span> and <span class="math inline">3{:}1</span> resonances, it has no effect on the <span class="math inline">2{:}1</span> resonance range.</p>
+<p>We restricted the analysis to <span class="math inline">n\leqslant3</span> because higher resonances require higher-order contributions to Eq. (14). Whether the <span class="math inline">3{:}1</span> resonance is a good representative of higher resonances in its basic properties—a subcritical pattern forming instability and multiplicity of <span class="math inline">n</span> translationally symmetric, stable even-phase solutions—remains an open question. In this study we considered parametric forcing of a linear term. We expect other forms of forcing, additive or parametric forcing of nonlinear terms, to result in different behaviors, which have yet to be explored.</p>
+<p>The results predicted here can be tested in controlled laboratory experiments. A possible candidate system is the CDIMA reaction in a quasi-1D cell that is spatially forced by modulating the cell temperature (to ensure parametric forcing)—in a parameter range of Turing patterns (<a href="#ref-3">3</a>). An example of a prediction that can be tested is the propagation of a phase front that shifts the pattern phase by <span class="math inline">\pi</span> in the <span class="math inline">1{:}1</span> resonance, and the nonpropagation of a similar front in the <span class="math inline">2{:}1</span> resonance [see Figs. 4(a) and 4(b)].</p>
+<p>We also restricted the analysis to one spatial dimension. Breaking the inversion symmetry in two-dimensional systems can have dramatic effects on the type of patterns that emerge from the unstable zero state. In the absence of forcing hexagonal patterns often emerge (<a href="#ref-36">36</a>). How are these patterns related to rectangular patterns found in symmetric forced systems (<a href="#ref-11">11</a>) when the inversion symmetry is removed, is yet another open pattern formation question. This question is also significant for practical applications of spatial forcing, particularly in restoration ecology where periodic ground modulations are used to restore degraded vegetation (<a href="#ref-9">9</a>). Finally, this work may provide useful insights into the study of localized structures in the Swift-Hohenberg equation (<a href="#ref-37">37</a>), especially with regard to resonances other than the <span class="math inline">1{:}1</span>.</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>The support of the United States-Israel Binational Science Foundation (Grant No.&nbsp;2008241), and of the Israel Science Foundation (Grant No.&nbsp;305/13) is gratefully acknowledged.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-1">1</span> M. Lowe, J. P. Gollub, and T. C. Lubensky, Phys. Rev.&nbsp;Lett. <strong>51</strong>, 786 (1983).</p>
+<p><span id="ref-2">2</span> G. Seiden, S. Weiss, J. H. McCoy, W. Pesch, and E. Bodenschatz, Phys. Rev.&nbsp;Lett. <strong>101</strong>, 214503 (2008).</p>
+<p><span id="ref-3">3</span> M. Dolnik, T. Bánsági, S. Ansari, I. Valent, and I. R. Epstein, Phys. Chem. Chem. Phys. <strong>13</strong>, 12578 (2011).</p>
+<p><span id="ref-4">4</span> S. Rüdiger, E. M. Nicola, J. Casademunt, and L. Kramer, Phys. Rep.&nbsp;<strong>447</strong>, 73 (2007).</p>
+<p><span id="ref-5">5</span> P.-Y. Wang and M. Saffman, Opt. Lett. <strong>24</strong>, 1118 (1999).</p>
+<p><span id="ref-6">6</span> G. Freund and W. Zimmermann, J. Fluid Mech. <strong>673</strong>, 318 (2011).</p>
+<p><span id="ref-7">7</span> C. Valentin, J.-M. d’Herbès, and J. Poesen, Catena <strong>37</strong>, 1 (1999).</p>
+<p><span id="ref-8">8</span> H. Yizhaq, E. Gilad, and E. Meron, Physica A <strong>356</strong>, 139 (2005).</p>
+<p><span id="ref-9">9</span> E. Meron, Ecol. Model. <strong>234</strong>, 70 (2012).</p>
+<p><span id="ref-10">10</span> J. Swift and P. C. Hohenberg, Phys. Rev.&nbsp;A <strong>15</strong>, 319 (1977).</p>
+<p><span id="ref-11">11</span> R. Manor, A. Hagberg, and E. Meron, Europhys. Lett. <strong>83</strong>, 10005 (2008).</p>
+<p><span id="ref-12">12</span> R. Manor, A. Hagberg, and E. Meron, New J. Phys. <strong>11</strong>, 063016 (2009).</p>
+<p><span id="ref-13">13</span> Y. Mau, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;Lett. <strong>109</strong>, 034102 (2012).</p>
+<p><span id="ref-14">14</span> Y. Mau, L. Haim, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;E <strong>88</strong>, 032917 (2013).</p>
+<p><span id="ref-15">15</span> E. Bodenschatz, J. R. de Bruyn, G. Ahlers, and D. S. Cannell, Phys. Rev.&nbsp;Lett. <strong>67</strong>, 3078 (1991).</p>
+<p><span id="ref-16">16</span> Y. R. Zelnik, S. Kinast, H. Yizhaq, G. Bel, and E. Meron, Phil. Trans. R. Soc. A <strong>371</strong>, 20120358 (2013).</p>
+<p><span id="ref-17">17</span> P. B. Kahn and Y. Zarmi, <em>Nonlinear Dynamics: Exploration through Normal Forms</em>, Vol. 1 (Wiley, New York, 1998).</p>
+<p><span id="ref-18">18</span> E. J. Doedel, Congr. Numer. <strong>30</strong>, 265 (1981).</p>
+<p><span id="ref-19">19</span> P. Coullet, Phys. Rev.&nbsp;Lett. <strong>56</strong>, 724 (1986).</p>
+<p><span id="ref-20">20</span> J.-M. Gambaudo, J. Diff. Equ. <strong>57</strong>, 172 (1985).</p>
+<p><span id="ref-21">21</span> C. Elphick, G. Iooss, and E. Tirapegui, Phys. Lett. A <strong>120</strong>, 459 (1987).</p>
+<p><span id="ref-22">22</span> I. S. Aranson and L. Kramer, Rev.&nbsp;Mod. Phys. <strong>74</strong>, 99 (2002).</p>
+<p><span id="ref-23">23</span> P. Coullet, J. Lega, B. Houchmanzadeh, and J. Lajzerowicz, Phys. Rev.&nbsp;Lett. <strong>65</strong>, 1352 (1990).</p>
+<p><span id="ref-24">24</span> P. Coullet and K. Emilsson, Physica D: Nonlin. Phenom. <strong>61</strong>, 119 (1992).</p>
+<p><span id="ref-25">25</span> C. Elphick, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;Lett. <strong>80</strong>, 5007 (1998).</p>
+<p><span id="ref-26">26</span> C. Elphick, A. Hagberg, B. A. Malomed, and E. Meron, Phys. Lett. A <strong>230</strong>, 33 (1997).</p>
+<p><span id="ref-27">27</span> I. V. Barashenkov and S. R. Woodford, Phys. Rev.&nbsp;E <strong>71</strong>, 026613 (2005).</p>
+<p><span id="ref-28">28</span> J. Burke, A. Yochelis, and E. Knobloch, SIAM J. Appl. Dynam. Syst. <strong>7</strong>, 651 (2008).</p>
+<p><span id="ref-29">29</span> E. Meron, Discrete Dynam. Nature Soc. <strong>4</strong>, 217 (2000).</p>
+<p><span id="ref-30">30</span> A. Mikhailov and K. Showalter, Phys. Rep.&nbsp;<strong>425</strong>, 79 (2006).</p>
+<p><span id="ref-31">31</span> A. L. Lin, M. Bertram, K. Martinez, H. L. Swinney, A. Ardelea, and G. F. Carey, Phys. Rev.&nbsp;Lett. <strong>84</strong>, 4240 (2000).</p>
+<p><span id="ref-32">32</span> A. L. Lin, A. Hagberg, A. Ardelea, M. Bertram, H. L. Swinney, and E. Meron, Phys. Rev.&nbsp;E <strong>62</strong>, 3790 (2000).</p>
+<p><span id="ref-33">33</span> A. L. Lin, A. Hagberg, E. Meron, and H. L. Swinney, Phys. Rev.&nbsp;E <strong>69</strong>, 066217 (2004).</p>
+<p><span id="ref-34">34</span> B. Marts, A. Hagberg, E. Meron, and A. L. Lin, Phys. Rev.&nbsp;Lett. <strong>93</strong>, 108305 (2004).</p>
+<p><span id="ref-35">35</span> A. Yochelis, A. Hagberg, E. Meron, A. Lin, and H. Swinney, SIAM J. Appl. Dynam. Syst. <strong>1</strong>, 236 (2002).</p>
+<p><span id="ref-36">36</span> M. Cross and P. Hohenberg, Rev.&nbsp;Mod. Phys. <strong>65</strong>, 851 (1993).</p>
+<p><span id="ref-37">37</span> H.-C. Kao, C. Beaume, and E. Knobloch, Phys. Rev.&nbsp;E <strong>89</strong>, 012903 (2014).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -503,6 +503,7 @@ haim2014spatial:
   year: "2014"
   doi: 10.1103/PhysRevE.90.022904
   pdf: archive/papers/haim-2014-Spatial forcing of pattern-forming systems that lack inversion symmetry.pdf
+  md: archive/papers-md/haim2014spatial/haim2014spatial.qmd
   bib: |
     @article{haim2014spatial,
       title={Spatial forcing of pattern-forming systems that lack inversion symmetry},
