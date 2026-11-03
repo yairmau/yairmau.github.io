@@ -113,6 +113,7 @@ kramer2024climate:
   year: "2024"
   doi: 10.1016/j.agwat.2024.109223
   pdf: archive/papers/kramer-2025-Climate change shifts risk of soil salinity and land degradation in water-scarce regions.pdf
+  md: archive/papers-md/kramer2024climate/kramer2024climate.qmd
   bib: |
       @article{kramer2024climate,
           doi = {10.1016/j.agwat.2024.109223},
