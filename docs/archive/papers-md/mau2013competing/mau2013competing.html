@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Competing Resonances in Spatially Forced Pattern-Forming Systems – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Competing Resonances in Spatially Forced Pattern-Forming Systems – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/mau2013competing/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="Competing Resonances in Spatially Forced Pattern-Forming Systems – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/mau2013competing/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#i.-introduction" id="toc-i.-introduction" class="nav-link active" data-scroll-target="#i.-introduction">I. Introduction</a></li>
+  <li><a href="#ii.-the-model-equation" id="toc-ii.-the-model-equation" class="nav-link" data-scroll-target="#ii.-the-model-equation">II. The Model Equation</a></li>
+  <li><a href="#iii.-resonant-stripe-patterns" id="toc-iii.-resonant-stripe-patterns" class="nav-link" data-scroll-target="#iii.-resonant-stripe-patterns">III. Resonant Stripe Patterns</a></li>
+  <li><a href="#iv.-interference-of-2d-patterns" id="toc-iv.-interference-of-2d-patterns" class="nav-link" data-scroll-target="#iv.-interference-of-2d-patterns">IV. Interference of 2D Patterns</a></li>
+  <li><a href="#v.-conclusion" id="toc-v.-conclusion" class="nav-link" data-scroll-target="#v.-conclusion">V. Conclusion</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#appendix-derivation-of-amplitude-equations" id="toc-appendix-derivation-of-amplitude-equations" class="nav-link" data-scroll-target="#appendix-derivation-of-amplitude-equations">Appendix: Derivation of Amplitude Equations</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Competing Resonances in Spatially Forced Pattern-Forming Systems</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Yair Mau<sup>1,*,†</sup>, Lev Haim<sup>1,*</sup>, Aric Hagberg<sup>2</sup>, Ehud Meron<sup>1,3</sup></p>
+</div>
+<div class="paper-affil">
+<p><sup>1</sup> Physics Department, Ben-Gurion University of the Negev, Beer-Sheva, Israel &nbsp;·&nbsp; <sup>2</sup> Center for Nonlinear Studies, Theoretical Division, Los Alamos National Laboratory, Los Alamos, New Mexico, USA &nbsp;·&nbsp; <sup>3</sup> Department of Solar Energy and Environmental Physics, Blaustein Institutes for Desert Research, Ben-Gurion University of the Negev, Sede Boqer Campus, Israel</p>
+<p><sup>*</sup> These authors contributed equally to this work. &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Physical Review E 88, 032917 · 2013 · doi: <a href="https://doi.org/10.1103/PhysRevE.88.032917">10.1103/PhysRevE.88.032917</a></p>
+<p>Received 1 August 2013; published 25 September 2013</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Mau, Y., Haim, L., Hagberg, A. and Meron, E. (2013). Competing Resonances in Spatially Forced Pattern-Forming Systems. Physical Review E, 88, 032917. https://doi.org/10.1103/PhysRevE.88.032917</p>
+</blockquote>
+<hr>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>Spatial periodic forcing can entrain a pattern-forming system in the same way as temporal periodic forcing can entrain an oscillator. The forcing can lock the pattern’s wave number to a fraction of the forcing wave number within tonguelike domains in the forcing parameter plane, it can increase the pattern’s amplitude, and it can also create patterns below their onset. We derive these results using a multiple-scale analysis of a spatially forced Swift-Hohenberg equation in one spatial dimension. In two spatial dimensions the one-dimensional forcing can induce a symmetry-breaking instability that leads to two-dimensional (2D) patterns, rectangular or oblique. These patterns resonate with the forcing by locking their wave-vector component in the forcing direction to half the forcing wave number. The range of this type of 2:1 resonance overlaps with the 1:1 resonance tongue of stripe patterns. Using a multiple-scale analysis in the overlap region we show that the 2D patterns can destabilize the 1:1 resonant stripes even at exact resonance. This result sheds new light on the use of spatial periodic forcing for controlling patterns.</p>
+</section>
+<section id="i.-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="i.-introduction">I. Introduction</h2>
+<p>In some contexts pattern formation is essential for a system to function. This is the case with embryonic pattern formation (<a href="#ref-1">1</a>) or with vegetation patterning—a mechanism by which vegetation copes with water stress (<a href="#ref-2">2</a>). In other contexts pattern formation is an undesired outcome. This is the case with spiral waves in the heart muscle (<a href="#ref-3">3</a>), dewetting of liquid films (<a href="#ref-4">4</a>), or spatial patterning in the transverse directions of a laser beam (<a href="#ref-5">5</a>). In order to create, modify, or eliminate patterns, means of controlling and manipulating them are needed. These means may consist of basic parameter tuning or may involve external intervention, such as feedback control (<a href="#ref-6">6</a>) or periodic forcing in time (<a href="#ref-7">7</a>) or space (<a href="#ref-8">8</a>).</p>
+<p>Temporal periodic forcing of an oscillatory system is a classical problem. An early realization is Kapitza’s pendulum (<a href="#ref-9">9</a>)—a rigid pendulum with a pivot point that is forced to vibrate in the vertical direction. When the vibration, or forcing frequency, is sufficiently high the unstable upper vertical position of the pendulum can be controlled and stabilized. Another control aspect of this and other examples of forced oscillations, including spatially extended systems, is frequency locking. An oscillatory system subjected to time-periodic (spatially uniform) forcing is capable of changing its oscillation frequency, <span class="math inline">\omega</span>, to lock at a fraction of the forcing frequency, <span class="math inline">\omega_f</span>, provided this fraction is close enough to the natural frequency <span class="math inline">\omega_0</span> of the unforced system. The frequency-locking, or entrainment, capability increases with the forcing strength, at least for relatively weak forcing. As a consequence, in the parameter plane spanned by the forcing strength and frequency, the entrainment occurs in a tonguelike domain, often called an Arnold tongue. Mathematically, if <span class="math inline">\omega_f</span> is close to <span class="math inline">(n/m)\omega_0</span>, where <span class="math inline">n,m\in\mathbb{Z}</span>, there exists a domain in the forcing parameter plane—the <span class="math inline">n{:}m</span> resonance tongue, within which the actual oscillation frequency can be controlled by varying the forcing frequency according to <span class="math inline">\omega = (m/n)\omega_f</span>.</p>
+<p>Numerous examples of oscillatory systems entrained by periodic temporal forcing exist. Entrainment of mammalian circadian rhythms by the day-night periodicity is one class of examples (<a href="#ref-10">10</a>). Additional physiological examples include the entrainment of the heart rate (<a href="#ref-11">11</a>), of the respiratory phase (<a href="#ref-12">12</a>), and of insulin and glucose oscillations (<a href="#ref-13">13</a>). Many more examples can be found in areas as varied as chemistry (<a href="#ref-14">14</a>–<a href="#ref-17">17</a>) and optics (<a href="#ref-18">18</a>,<a href="#ref-19">19</a>).</p>
+<p>There are two additional signatures of periodically forced oscillatory systems that relate to frequency locking. The first is multiplicity of stable oscillation states sharing the same frequency but differing in oscillation phase. Associated with this multistability are front structures and rich pattern-formation phenomena (<a href="#ref-16">16</a>,<a href="#ref-17">17</a>,<a href="#ref-20">20</a>–<a href="#ref-23">23</a>), including traveling waves that restrict the domain of resonant nonuniform oscillations (<a href="#ref-24">24</a>). The second signature is the possible generation of a symmetry-breaking instability by the periodic forcing. This instability can lead to 2:1 frequency-locked standing-wave patterns even outside the 2:1 resonance tongue of uniform oscillations. This is a reflection of the freedom of a spatially extended oscillatory system to resonate with a spatially uniform time-periodic forcing by forming spatial patterns that change the oscillation frequency through dispersion (<a href="#ref-25">25</a>–<a href="#ref-27">27</a>).</p>
+<p>Spatial forcing of a pattern-forming system is analogous to temporal forcing of an oscillating system; the system can respond to the forcing by locking its wave number <span class="math inline">k</span> to the forcing wave number <span class="math inline">k_f</span>. That is, for any <span class="math inline">k_f</span> close enough to <span class="math inline">(n/m)k_0</span>, where <span class="math inline">n,m\in\mathbb{Z}</span> and <span class="math inline">k_0</span> is the system’s natural wave number, the system can respond with a wave number <span class="math inline">k=(m/n)k_f</span>. In the forcing parameter plane (forcing strength versus forcing frequency) wave-number-locked or resonant patterns occupy tonguelike domains—the spatial analogs of Arnold tongues. Within such tongues the wave numbers of resonant patterns are controllable by tuning the forcing wave number.</p>
+<p>Spatially forced pattern-forming systems have been studied in various contexts including nematic liquid crystals (<a href="#ref-8">8</a>,<a href="#ref-28">28</a>), light-sensitive chemical reactions (<a href="#ref-8">8</a>), Rayleigh-Bénard convection (<a href="#ref-8">8</a>,<a href="#ref-29">29</a>), liquid-crystal light valve optical systems (<a href="#ref-30">30</a>), and bottom formation in slightly meandering channels (<a href="#ref-31">31</a>).</p>
+<p>The analogy to temporally forced oscillations extends also to the two additional signatures of periodic forcing, multistability of phase states and fronts (<a href="#ref-32">32</a>), and a symmetry-breaking instability induced by a one-dimensional (1D) spatially periodic forcing. In this case, the instability breaks the remaining symmetry in the direction orthogonal to the spatial forcing and leads to resonant two-dimensional (2D) rectangular or oblique patterns (<a href="#ref-29">29</a>,<a href="#ref-33">33</a>,<a href="#ref-34">34</a>). The patterns are wave-number locked to the forcing in a 2:1 resonance and extend far beyond the boundaries of the 2:1 resonant tongue of stripe patterns to a range that includes the 1:1 resonance (<span class="math inline">k_f\approx k_0</span>). The wide resonance range of the 2D patterns is a consequence of the development of a wave-vector component in the direction orthogonal to the forcing that compensates for the unfavorable wave number <span class="math inline">k_f/2</span> in the forcing direction.</p>
+<p>The basic 1:1 resonance of stripe patterns is generally the first choice for inducing, stabilizing, or controlling stripe patterns. This is the case, for example, in restoring degraded vegetation in water-limited landscapes by periodic arrays of microcatchments that concentrate runoff and form favorable conditions for vegetation growth in a fluctuating environment (<a href="#ref-2">2</a>). However, the influence of 2D patterns on 1:1 stripe patterns has not yet been studied. In this paper we use a simple pattern-formation model to study the interaction between 1:1 resonant stripes and 2:1 resonant rectangular and oblique patterns and the extent to which the 2D patterns interfere with the control of the resonant stripe patterns. We show that, although in one spatial dimension the forcing acts to reinforce the patterns, in two dimensions it acts to destabilize them by inducing these 2D patterns. The analysis and results to be described here extend earlier results reported in Ref. (<a href="#ref-35">35</a>).</p>
+</section>
+<section id="ii.-the-model-equation" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-the-model-equation">II. The Model Equation</h2>
+<p>We consider systems that go through a stationary finite-wave-number instability to stripe patterns and are subjected to time-independent, 1D spatial periodic forcing. A minimal model for such systems is the widely used Swift-Hohenberg (SH) equation for a single scalar field (<a href="#ref-36">36</a>–<a href="#ref-38">38</a>). The equation is gradient, i.e., it has a Lyapunov functional, and therefore does not have oscillatory solutions. The instability results in a stationary stripe pattern with a characteristic wave number that minimizes the Lyapunov functional.</p>
+<p>To study the effect of periodic spatial forcing we add to the SH equation a parametric forcing term. The forced SH equation then reads</p>
+<p><span class="math display">
+u_t = \epsilon u - \left(\nabla^2+k_0^2\right)^2 u - u^3 + \gamma u\cos(k_fx), \tag{1}
+</span></p>
+<p>where <span class="math inline">\epsilon</span> is the distance from the pattern-forming instability of the uniform stationary state, <span class="math inline">u=0</span>, of the unforced system and <span class="math inline">k_0\sim O(1)</span> is the wave number of the first mode to grow at the instability point and also the wave number of the resulting stationary pattern. The parametric forcing is generated with wave number <span class="math inline">k_f</span> and strength <span class="math inline">\gamma</span>. Since Eq. (1) is invariant under the transformation <span class="math inline">\gamma\to-\gamma</span> and <span class="math inline">x\to x+\pi/k_f</span> we will choose to consider only positive values of the forcing <span class="math inline">\gamma</span>. Note the inversion symmetry <span class="math inline">u\to-u</span> of Eq. (1), which excludes hexagonal patterns (<a href="#ref-38">38</a>). Note also that the forced SH equation is gradient as well (<a href="#ref-35">35</a>).</p>
+<p>We first study Eq. (1) in one dimension in order to identify the resonance tongues of stripe patterns (Sec. III). The general analysis is valid for any resonance <span class="math inline">n{:}1</span>, <span class="math inline">n\in\mathbb{Z}</span>, assuming the vicinity to the instability of the zero solution to stripes, weak forcing, and small detuning. We then focus on the 1:1 resonance and study the interaction between the 1:1 stripe mode, <span class="math inline">\exp(ik_0x)</span>, and two oblique modes, <span class="math inline">\exp(ik_xx\pm ik_yy)</span>, that resonate with the forcing, <span class="math inline">k_x=k_f/2</span>, and have the favorable wave number <span class="math inline">k_0=(k_x^2+k_y^2)^{1/2}</span> (Sec. IV). In both analyses we use the method of multiple scales using <span class="math inline">\epsilon</span> as the small parameter.</p>
+</section>
+<section id="iii.-resonant-stripe-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-resonant-stripe-patterns">III. Resonant Stripe Patterns</h2>
+<p>The zero solution of the unforced SH equation loses stability at <span class="math inline">\varepsilon=0</span>. Beyond the instability point (<span class="math inline">\varepsilon&gt;0</span>) a family of periodic stripe solutions exists with wave numbers <span class="math inline">k</span> spanning the range</p>
+<p><span class="math display">
+k_0 - \frac{\sqrt{\varepsilon}}{2k_0} &lt; k &lt; k_0 + \frac{\sqrt{\varepsilon}}{2k_0}. \tag{2}
+</span></p>
+<p>Assume now that the forcing wave number, <span class="math inline">k_f</span>, is close to a multiple of <span class="math inline">k_0</span>, that is,</p>
+<p><span class="math display">
+k_f \approx nk_0, \qquad n\in\mathbb{Z}, \tag{3}
+</span></p>
+<p>and let <span class="math inline">\nu</span> be the deviation or detuning from exact resonance:</p>
+<p><span class="math display">
+\nu = k_0 - k_f/n. \tag{4}
+</span></p>
+<p>The solution family of the unforced system that spans the wave-number range in Eq. (2) can increase the freedom of the system to resonate with the forcing. This is because for any forcing wave number <span class="math inline">k_f</span>, such that <span class="math inline">k_f/n</span> is within the range in Eq. (2), there exists a solution of the unforced system with that particular wave number. The forcing can further increase the resonance range by creating stripe solutions with wave numbers outside the range in Eq. (2). The manner in which it does it for various resonances <span class="math inline">k_f/k=n</span> is the problem we now address.</p>
+<p>We use multiple-scale analysis (<a href="#ref-36">36</a>), in which the state variable <span class="math inline">u</span> and the parameters <span class="math inline">\gamma</span> and <span class="math inline">k_f</span> are expanded as power series in <span class="math inline">|\varepsilon|\ll1</span>. The specific choice of scaling used below can be justified by balancing different terms in Eq. (1). Consider the case of weak forcing (<span class="math inline">\gamma\ll1</span>) near the instability of the zero solution (<span class="math inline">|\varepsilon|\ll1</span>). The stripe solutions that appear beyond the instability point have small amplitudes that vary slowly in time and space. We thus expand solutions of Eq. (1) as</p>
+<p><span class="math display">
+u = \sum_{i=1}^{\infty}|\varepsilon|^{i/2}u_i(x_0,x_1,t_1), \tag{5}
+</span></p>
+<p>where <span class="math inline">x_i=|\varepsilon|^{i/2}x</span> (<span class="math inline">i=0,1</span>) and <span class="math inline">t_1=|\varepsilon|t</span> are the slow space and time variables. We further assume the scaling <span class="math inline">\nu\sim|\varepsilon|^{1/2}</span> for the small detuning and expand the forcing strength as power series in <span class="math inline">|\varepsilon|^{1/2}</span>:</p>
+<p><span class="math display">
+\gamma = \sum_{i=1}^{\infty}|\varepsilon|^{i/2}\gamma_i, \qquad \gamma_i\sim O(1). \tag{6}
+</span></p>
+<p>This allows handling all resonances using a single analysis. With these choices of the slow space and time variables the derivatives in Eq. (1) transform according to</p>
+<p><span class="math display">
+\partial_x = \partial_{x_0} + |\varepsilon|^{1/2}\partial_{x_1}, \qquad \partial_t = |\varepsilon|\partial_{t_1}. \tag{7}
+</span></p>
+<p>Substituting Eqs. (5)–(7) into Eq. (1) we find at order <span class="math inline">|\varepsilon|^{1/2}</span></p>
+<p><span class="math display">
+\mathcal{L}^2u_1 = 0, \tag{8}
+</span></p>
+<p>where <span class="math inline">\mathcal{L} = (\partial_{x_0}^2+k_0^2)</span>. The solution of this equation can be written as</p>
+<p><span class="math display">
+u_1 = a(x_1,t_1)\,e^{ik_0x_0} + \text{c.c.}, \tag{9}
+</span></p>
+<p>where the amplitude <span class="math inline">a</span> depends on the slow variables <span class="math inline">x_1</span> and <span class="math inline">t_1</span> and c.c. stands for the complex conjugate.</p>
+<p>At order <span class="math inline">|\varepsilon|</span> we find</p>
+<p><span class="math display">
+\mathcal{L}^2u_2 = \frac{\gamma_1}{2}\left(e^{ik_fx_0}+e^{-ik_fx_0}\right)u_1 = \frac{\gamma_1}{2}\left(a\,e^{i(k_f+k_0)x_0} + a^*e^{i(k_f-k_0)x_0}\right) + \text{c.c.} \tag{10}
+</span></p>
+<p>Solvability of Eq. (10) requires the elimination of secular terms from the right-hand side of the equation. The secular terms are those in which the fast spatial dependence is described by the harmonic factor <span class="math inline">e^{\pm ik_0x_0}</span>. For all resonances <span class="math inline">n\neq2</span> the right-hand side does not contain secular terms and no solvability condition has to be imposed. For <span class="math inline">n=2</span>, however, there are secular terms, <span class="math inline">e^{\pm i(k_f-k_0)x_0}</span>, since <span class="math inline">k_f\approx2k_0</span> (see below). To eliminate the secular terms we must set <span class="math inline">\gamma_1=0</span> for the 2:1 resonance. We accomplish this condition by multiplying <span class="math inline">\gamma_1</span> by <span class="math inline">1-\delta_{n,2}</span>, where <span class="math inline">\delta_{i,j}</span> is the Kronecker delta. The general solution of Eq. (10) is a superposition of a particular solution and a general solution of the homogeneous problem:</p>
+<p><span class="math display">
+u_2 = (1-\delta_{n,2})\frac{\gamma_1}{2}\left[d_+a\,e^{i(k_f+k_0)x_0} + d_-a^*e^{i(k_f-k_0)x_0}\right] + c(x_1,x_2,t_1,t_2,\ldots)\,e^{ik_0x_0} + \text{c.c.}, \tag{11}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+d_\pm = \frac{1}{k_f^2(k_f\pm2k_0)^2}. \tag{12}
+</span></p>
+<p>Finally, at order <span class="math inline">|\varepsilon|^{3/2}</span> we find</p>
+<p><span class="math display">
+\mathcal{L}^2u_3 = u_1 - u_1^3 - \partial_{t_1}u_1 - \mathcal{M}^2u_1 - 2\mathcal{M}\mathcal{L}u_2 + \frac{1}{2}\left(e^{ik_fx_0}+e^{-ik_fx_0}\right)(\gamma_2u_1+\gamma_1u_2), \tag{13}
+</span></p>
+<p>where <span class="math inline">\mathcal{M} = 2\partial_{x_0}\partial_{x_1}</span>. In order to identify the secular terms we insert the solutions Eqs. (9) and (11) for <span class="math inline">u_1</span> and <span class="math inline">u_2</span> into the right-hand side of Eq. (13) and note that since the detuning is of order <span class="math inline">|\varepsilon|^{1/2}</span> we can write <span class="math inline">k_fx_0 = n(k_0x_0-\nu_1x_1)</span>, where <span class="math inline">\nu_1=|\varepsilon|^{-1/2}\nu\sim O(1)</span>. Summing up all contributions to the secular terms and setting their coefficients to zero gives</p>
+<p><span class="math display">
+a_{t_1} = a - 3|a|^2a + (2k_0)^2\partial_{x_1}^2a + \delta_{n,2}\frac{\gamma_2}{2}a^* + (1-\delta_{n,2})\left(\frac{\gamma_1}{2}\right)^2\left[\eta_1a + \delta_{n,1}d_-\,e^{-2i\nu_1x_1}a^*\right], \tag{14}
+</span></p>
+<p>where <span class="math inline">\eta_1 = d_+ + d_-</span>.</p>
+<p>Introducing the amplitude variable <span class="math inline">A = |\varepsilon|^{1/2}e^{i\nu_1x_1}a</span>, and going back to the fast time and space variables, we obtain the amplitude equation:</p>
+<p><span class="math display">
+A_t = \varepsilon A - 3|A|^2A - (2k_0)^2(i\partial_x+\nu)^2A + \delta_{n,2}\frac{|\varepsilon|\gamma_2}{2}A^* + (1-\delta_{n,2})\left(\frac{|\varepsilon|^{1/2}\gamma_1}{2}\right)^2\left[\eta_1A+\delta_{n,1}d_-A^*\right]. \tag{15}
+</span></p>
+<p>In terms of the amplitude <span class="math inline">A</span> the leading-order form of the solution is</p>
+<p><span class="math display">
+u \simeq A\,e^{i\frac{k_f}{n}x}. \tag{16}
+</span></p>
+<p>Constant solutions of the amplitude equation (15) represent <span class="math inline">n{:}1</span> wave-number-locked, or resonant, stationary stripe patterns. To find these solutions we consider the cases <span class="math inline">n\neq2</span> and <span class="math inline">n=2</span> separately. For <span class="math inline">n\neq2</span> Eq. (15) becomes</p>
+<p><span class="math display">
+A_t = \varepsilon A - 3|A|^2A - \left[2k_0(i\partial_x+\nu)\right]^2A + \left(\frac{\gamma}{2}\right)^2\left[\eta_1A+\delta_{n,1}d_-A^*\right], \tag{17}
+</span></p>
+<p>where <span class="math inline">\gamma=|\varepsilon|^{1/2}\gamma_1</span>, and solutions are of the form</p>
+<p><span class="math display">
+A = \rho_n\,e^{i\phi}, \qquad \rho_n = \sqrt{\frac{\varepsilon - (2k_0\nu)^2 + (\eta_1+\delta_{n,1}d_-)\frac{\gamma^2}{4}}{3}}, \tag{18}
+</span></p>
+<p>with <span class="math inline">\nu=k_0-k_f/n</span>. The phase <span class="math inline">\phi</span> is constant with <span class="math inline">\phi=\{0,\pi\}</span> for <span class="math inline">n=1</span> but undetermined for higher resonances for the order <span class="math inline">|\varepsilon|^{3/2}</span> of our calculation. The resonant stripe solutions exist for</p>
+<p><span class="math display">
+\gamma &gt; 2\sqrt{\frac{(2k_0\nu)^2-\varepsilon}{\eta_1+\delta_{n,1}d_-}}. \tag{19}
+</span></p>
+<p>For <span class="math inline">n=2</span> Eq. (15) becomes</p>
+<p><span class="math display">
+A_t = \varepsilon A - 3|A|^2A - \left[2k_0(i\partial_x+\nu)\right]^2A + \frac{\gamma}{2}A^*, \tag{20}
+</span></p>
+<p>where <span class="math inline">\gamma=|\varepsilon|\gamma_2</span>, and the solutions are of the form</p>
+<p><span class="math display">
+A = \rho_2\,e^{i\phi}, \qquad \rho_2 = \sqrt{\frac{\varepsilon-(2k_0\nu)^2+\gamma/2}{3}}, \tag{21}
+</span></p>
+<p>with <span class="math inline">\phi=\{0,\pi\}</span> (<a href="#ref-34">34</a>). These solutions exist for</p>
+<p><span class="math display">
+\gamma &gt; 2\left[(2k_0\nu)^2-\varepsilon\right]. \tag{22}
+</span></p>
+<p>Figure 1 shows the tongue-shaped existence ranges of <span class="math inline">n{:}1</span> resonant stripe patterns with <span class="math inline">n=1,\ldots,4</span>, for parameters above, <span class="math inline">\varepsilon&gt;0</span>, and below, <span class="math inline">\varepsilon&lt;0</span>, the pattern-forming instability. The solid lines in the figure are the results of the analysis from Eqs. (18) and (21) and the shaded regions are numerical results from solving for stationary solutions of the forced SH equation Eq. (1) using a continuation method (<a href="#ref-39">39</a>).</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>FIG. 1 | Existence domains of resonant stripe solutions of Eq. (1), (a) above (<span class="math inline">\varepsilon&gt;0</span>) and (b) below (<span class="math inline">\varepsilon&lt;0</span>) the pattern-forming instability.</strong> The shaded regions indicate the range of resonant solutions computed from stationary solutions of Eq. (1), and the solid curves show the region boundary approximations [Eqs. (19) and (22)] based on the amplitude equation approach. The agreement for the lower resonances is very good for sufficiently small <span class="math inline">\gamma</span> values, and for the higher resonances it remains surprisingly good even for large <span class="math inline">\gamma</span> values. Parameters: <span class="math inline">k_0=1</span> and (a) <span class="math inline">\varepsilon=0.001</span> and (b) <span class="math inline">\varepsilon=-0.001</span>.</p>
+<p>Note that for <span class="math inline">\varepsilon&gt;0</span> the tongues have finite width even at <span class="math inline">\gamma=0</span> [Fig. 1(a)]. This width corresponds to the band of stripe solutions of the unforced system that appears beyond the pattern-forming instability. The effect of a weak forcing with a detuning <span class="math inline">\nu</span> can be interpreted as follows. If the detuning is small enough the forcing selects the stripe solution within the band that resonates with <span class="math inline">k_f/n</span>. If the detuning lies outside the band the system can still yield to the forcing by changing the stripes wave number so as to resonate with <span class="math inline">k_f/n</span>. This behavior is analogous to the frequency adjustment that a periodically forced oscillator makes when it locks to a fraction of the forcing frequency. Note also that for <span class="math inline">\varepsilon&lt;0</span>, i.e., below the pattern-forming instability, resonant stripe solutions are still possible provided the forcing is strong enough [Fig. 1(b)]. The minimum forcing strength can be evaluated from Eqs. (19) and (22); e.g., the smallest <span class="math inline">\gamma</span> value that enables locking for the 2:1 resonance is <span class="math inline">-2\varepsilon</span>. The forcing has the additional effect of increasing the amplitude of the stripe pattern. This effect, however, becomes diminishingly small as the forcing wave number increases.</p>
+<p>The 2:1 resonance tongue stands out in being wider and, for <span class="math inline">\varepsilon&lt;0</span>, in extending to lower forcing strength <span class="math inline">\gamma</span>. The distinct character of the 2:1 resonance is already seen in the amplitude equation Eq. (20) for the 2:1 resonance, as compared with the amplitude equations Eqs. (17) for all other resonances. In the former the forcing strength appears to linear order, whereas in the latter it only appears at the second quadratic order, and therefore has a weaker effect. The different forms of the amplitude equations with respect to the forcing follow from the type of parametric forcing; forcing the cubic term in the forced SH equation Eq. (1), rather than the linear term, will result in a prominent 4:1 resonance.</p>
+</section>
+<section id="iv.-interference-of-2d-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-interference-of-2d-patterns">IV. Interference of 2D Patterns</h2>
+<p>In 2D domains, solutions of Eq. (1) can lock to the forcing wave vector <span class="math inline">\mathbf{k}_f=k_f\hat{x}</span>, where <span class="math inline">\hat{x}</span> is a unit vector in the <span class="math inline">x</span> direction, in a much wider range of forcing wave numbers <span class="math inline">k_f</span>. This is achieved by locking their wave-vector component in the forcing direction in a 2:1 resonance, <span class="math inline">k_x=k_f/2</span>, and compensating for a big mismatch by building a wave-vector component in the <span class="math inline">y</span> direction, <span class="math inline">k_y=(k_0^2-k_x^2)^{1/2}</span>, so that the total wave number is the favorable one, <span class="math inline">k=k_0</span> (<a href="#ref-33">33</a>,<a href="#ref-34">34</a>). The resonance range then is only limited by the requirement that <span class="math inline">k_y</span> is real valued, that is, <span class="math inline">0\leqslant k_f\leqslant2k_0</span>. The 2D patterns that form are described, to leading order, by a superposition of two oblique modes, <span class="math inline">\exp(ik_xx\pm ik_yy)</span>. For sufficiently strong forcing (<span class="math inline">\gamma&gt;\varepsilon</span>) the two modes have equal amplitudes in absolute value, and the superposition forms rectangular patterns. For weaker forcing the amplitudes are not equal and the superposition forms oblique patterns.</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>FIG. 2 | Two stable solutions of Eq. (1) at the same parameter values.</strong> The panel on the upper left side shows a 2:1 locked rectangular solution, and the panel below it shows a 1:1 locked stripe solution. The short panel on the lower left side shows the forcing <span class="math inline">\gamma\cos(k_fx)</span>. The panels on the right show the amplitude of the Fourier transform of the respective solutions in the two-dimensional wave-number space <span class="math inline">Q_x,Q_y</span>. The circle in light blue has radius <span class="math inline">k_0=1</span>, the most unstable wave number. Parameters: <span class="math inline">\varepsilon=0.1</span>, <span class="math inline">\gamma=0.2</span>, and <span class="math inline">k_f=1.08</span>.</p>
+<p>The resonance range of rectangular and oblique patterns overlaps with the much narrower 1:1 resonance tongue of stripe patterns. Within the overlap range we numerically find points of bistability of resonant 1:1 stripes and 2:1 2D patterns, as Fig. 2 demonstrates, but we also find points where the 2D patterns dominate. To study the dynamics within the overlap range we let the two types of patterns interact by approximating a solution of Eq. (1) as a superposition of a stripe mode with amplitude <span class="math inline">A</span> and two oblique modes with amplitudes <span class="math inline">a</span> and <span class="math inline">b</span>:</p>
+<p><span class="math display">
+u \simeq A\,e^{ik_0x} + a\,e^{i(k_xx+k_yy)} + b\,e^{i(k_xx-k_yy)} + \text{c.c.}, \tag{23}
+</span></p>
+<p>where the amplitudes <span class="math inline">A</span>, <span class="math inline">a</span>, and <span class="math inline">b</span> are small in absolute value and vary weakly in time and space. In the Appendix we describe a derivation of coupled partial differential equations for these amplitudes using a multiple-scale analysis, and the results are in Eqs. (A20).</p>
+<p>Constant solutions of the amplitude equations Eqs. (A20) of the form <span class="math inline">(A,0,0)</span> represent 1:1 resonant stripe patterns, while constant solutions of the form <span class="math inline">(0,a,b)</span> represent rectangular or oblique patterns locked in a 2:1 resonance in the <span class="math inline">\hat{x}</span> direction. The resonant stripe solutions are given by</p>
+<p><span class="math display">
+A_s = \rho_{s\pm}e^{i\phi_s}, \tag{24}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\rho_{s\pm} = 2\sqrt{8k_0^4\pm\left(k_0^2/\sqrt{3}\right)\sqrt{\varepsilon_s}}, \qquad \phi_s = m\frac{\pi}{2}. \tag{25}
+</span></p>
+<p>Here</p>
+<p><span class="math display">
+\varepsilon_s = -4\varepsilon + 16k_0^2\left(\nu^2+12k_0^2\right) - \gamma_1^2\left\{d_+ + \left[(-1)^m+1\right]d_-\right\},
+</span></p>
+<p>and <span class="math inline">m</span> is an integer.</p>
+<p>Resonant rectangular solutions are given by</p>
+<p><span class="math display">
+a = \rho_re^{i\phi_a}, \qquad b = \rho_re^{i\phi_b}, \tag{26}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\rho_{r\pm} = \sqrt{\frac{9\pm\sqrt{81-4c\varepsilon_r}}{2c}}, \qquad \phi_a+\phi_b = m\pi. \tag{27}
+</span></p>
+<p>Here</p>
+<p><span class="math display">
+\varepsilon_r = \varepsilon + (-1)^m\frac{\gamma_2}{2}, \qquad c = \frac{27}{4}\left[k_f^{-4}+\left(k_f^2-4\right)^{-2}\right], \tag{28}
+</span></p>
+<p>and we assumed weak forcing strength (<span class="math inline">\gamma_1=0</span>).</p>
+<p>To study the impact of the 2D rectangular patterns on 1:1 resonant stripes we use Eqs. (A20) to study the linear stability of the latter. The stability analysis to phase perturbations can be performed independently of that of amplitude perturbations and gives the result that solutions with odd values of <span class="math inline">m</span> are unstable. We thus restrict our further consideration to even <span class="math inline">m</span> and consider the stability of <span class="math inline">(A,a,b)=(\pm\rho_{s\pm},0,0)</span> to nonuniform perturbations of the form <span class="math inline">(\delta A_0,\delta a_0,\delta b_0)\exp(iq_xx+iq_yy)</span>. The Jacobian matrix for the solutions <span class="math inline">(\pm\rho_{s\pm},0,0)</span> has a block-diagonal form, with one block representing the stripe mode and the other block representing the oblique modes. Accordingly, one pair of eigenvalues, <span class="math inline">\sigma_{s\pm}</span>, describes the dynamics of perturbations along the stripe mode, and another eigenvalue pair of multiplicity two, <span class="math inline">\sigma_{r\pm}</span>, describes the dynamics of perturbations along the oblique modes. Of these only the eigenvalues <span class="math inline">\sigma_{s+}</span> and <span class="math inline">\sigma_{r+}</span> are potentially positive or have positive real parts.</p>
+<p>For the stripe solutions <span class="math inline">A=\pm\rho_{s+}</span>, both <span class="math inline">\sigma_{s+}</span> and <span class="math inline">\sigma_{r+}</span> are positive in the whole parameter range studied, and thus these solutions are always unstable and will not be considered any further. For the stripe solutions <span class="math inline">A=\pm\rho_{s-}</span>, the analysis of the eigenvalue <span class="math inline">\sigma_{r+}</span> shows that there exists a domain in the existence overlap region of 1:1 stripes and rectangular patterns where the resonant stripes are stable, but the size of this domain is reduced by the growth of oblique modes. Furthermore, the reduced stability domain has two distinct shapes depending on the value of <span class="math inline">\varepsilon</span>. For relatively large values, <span class="math inline">\varepsilon&gt;\varepsilon_c\simeq0.036</span> (with <span class="math inline">k_0=1</span>), there is a continuous <span class="math inline">\gamma</span> range in which stripe solutions are stable, while for <span class="math inline">\varepsilon&lt;\varepsilon_c</span>, the stability range is split into two regions, as Fig. 3 shows. The light-gray shades show the existence range of stripe solutions, <span class="math inline">A=\pm\rho_{s-}</span>, while the dark-gray shades show their stability ranges (where both <span class="math inline">\sigma_{s+}</span> and <span class="math inline">\sigma_{r+}</span> are negative) for (a) <span class="math inline">\varepsilon&gt;\varepsilon_c</span> and (b) <span class="math inline">\varepsilon&lt;\varepsilon_c</span>.</p>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>FIG. 3 | Existence and stability domains of 1:1 resonant stripe solutions of Eqs. (A20).</strong> The light gray shaded areas indicate the existence domains, and the dark gray shaded areas are the stability regions. (a) Above the critical value, <span class="math inline">\varepsilon&gt;\varepsilon_c</span>, where the stable region is contiguous. (b) Below the critical point, <span class="math inline">\varepsilon&lt;\varepsilon_c</span>, where the solution is not stable in a range of forcing strength <span class="math inline">\gamma</span> even at exact resonance <span class="math inline">k_f=k_0</span>. The hollow circles demarcate the borders of the numerically computed stability region. Parameters: <span class="math inline">k_0=1</span> and (a) <span class="math inline">\varepsilon=0.035</span> and (b) <span class="math inline">\varepsilon=0.045</span>.</p>
+<p>The surprising result is that for <span class="math inline">\varepsilon&lt;\varepsilon_c</span> there is an intermediate range of forcing strength <span class="math inline">\gamma</span> where the forcing destabilizes the stripe patterns even at exact resonance <span class="math inline">k_f=k_0</span>. In 1D systems the forcing acts to stabilize the stripe patterns (<a href="#ref-34">34</a>), but in 2D systems it induces the growth of rectangular and oblique patterns that can resonate with the forcing without paying any energy (Lyapunov functional) cost for off-resonance conditions, like in 1D systems (<a href="#ref-35">35</a>). This “advantage” of the resonant 2D patterns over stripes translates into lower stability or even instability of the latter.</p>
+<p>The asymmetry in the stability region for low <span class="math inline">\gamma</span> values is due to two different kinds of instabilities related to the eigenvalue <span class="math inline">\sigma_{s+}</span>. In the lower part of Fig. 3 (for values of <span class="math inline">\gamma</span> between 0 and approximately 0.1), the left border of the stable stripes region (dark gray) indicates a zigzag instability, associated with the growth of perturbations of the form <span class="math inline">e^{iq_yy}</span>. On the border on the right side, for very low values of <span class="math inline">\gamma</span> (between 0 and approximately 0.02), an Eckhaus instability, associated with the growth of perturbations of the form <span class="math inline">e^{iq_xx}</span>, occurs. These results are qualitatively similar to the effects of the zigzag and Eckhaus instabilities found in the 2:1 resonance of stripe patterns (<a href="#ref-34">34</a>).</p>
+<p>Numerical solutions of Eq. (1) confirm the predictions of the mathematical analysis. The hollow circles in Fig. 3 show the borders of the stability region, and the agreement between simulation and analysis is very good for low values of <span class="math inline">\gamma</span>. Because of the choice of weak forcing strength (<span class="math inline">\gamma_1=0</span>), the analysis is expected to better describe the simulations for small values of <span class="math inline">\gamma</span>, in line with the results shown in Fig. 3. The numerical integration performed was the explicit Euler method to advance time and a semispectral method to calculate the space derivatives, with a 1:1 stripe pattern as initial condition, with a small random noise added to it. The critical value we found was <span class="math inline">\varepsilon_c\simeq0.043</span>, which is about 15% from our theoretically calculated value of <span class="math inline">\varepsilon=0.036</span>.</p>
+</section>
+<section id="v.-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="v.-conclusion">V. Conclusion</h2>
+<p>We have seen that spatial periodic forcing reinforces 1D stripe solutions by increasing the amplitude and widening the wave-number range. The stripe solutions are also stable below threshold (<span class="math inline">\varepsilon&lt;0</span>), provided that a minimal forcing strength is applied.</p>
+<p>In 2D domains, oblique and rectangular patterns exist and are stable for a very wide range of forcing wave numbers (<a href="#ref-34">34</a>). These 2D patterns dramatically change the stability range of stripe patterns, determining a critical value <span class="math inline">\varepsilon_c</span> below which the stripe solution is unstable in a range of forcing strength <span class="math inline">\gamma</span>, even when <span class="math inline">k_f=k_0</span>. This seems counterintuitive because naively we would expect the 1:1 forcing to reinforce the stripe pattern, as in the 1D case. In 2D, though, the system can yield more easily to the forcing by responding in the orthogonal direction through the growth of oblique modes that destabilize stripe patterns.</p>
+<p>We have studied the SH equation as a simple model of pattern formation, which raises the question: to what extent are the results reported here applicable to real systems? One strong constraint in the SH equation is the inversion symmetry <span class="math inline">u\to-u</span>, which rules out hexagonal patterns. Real systems often do not have this symmetry and do show hexagonal patterns. Adding a quadratic term, <span class="math inline">\lambda u^2</span>, to the SH equation indeed induces an instability of the zero state to hexagonal patterns, which is a subcritical bifurcation (<a href="#ref-38">38</a>). The effects of parametric forcing in this nonsymmetric case will be the subject of a future study.</p>
+<p>We have also focused on parametric forcing rather than additive forcing. The latter case has been studied in the contexts of optical patterns in photorefractive feedback systems (<a href="#ref-40">40</a>), Rayleigh-Bénard convection (<a href="#ref-29">29</a>), and Turing patterns in chemical reactions (<a href="#ref-8">8</a>). Parametric forcing is relevant to the restoration of banded vegetation on hill slopes by water harvesting (<a href="#ref-2">2</a>,<a href="#ref-41">41</a>,<a href="#ref-42">42</a>). Water-harvesting methods consist of periodic arrays of microcatchments, e.g., parallel dikes, that intercept runoff and form favorable conditions for vegetation growth. The periodic modulation of the vegetation growth rate by the modulated soil-water distribution exerts parametric forcing.</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>The support of the United States-Israel Binational Science Foundation (Grant No.&nbsp;2008241) is gratefully acknowledged. Part of this work was funded by the Laboratory Directed Research and Development program at Los Alamos National Laboratory under the Department of Energy Contract No.&nbsp;DE-AC52-06NA25396.</p>
+</section>
+<section id="appendix-derivation-of-amplitude-equations" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-derivation-of-amplitude-equations">Appendix: Derivation of Amplitude Equations</h2>
+<p>We study the interaction between stripes and rectangular or oblique patterns by deriving equations for the amplitudes of a stripe mode and of two oblique modes using the leading-order approximation</p>
+<p><span class="math display">
+u \simeq A\,e^{ik_0x} + a\,e^{i(k_xx+k_yy)} + b\,e^{i(k_xx-k_yy)} + \text{c.c.}, \tag{A1}
+</span></p>
+<p>for the solutions of Eq. (1), where the amplitudes are assumed to vary slowly in space and time. Specifically, we define the slow variables</p>
+<p><span class="math display">
+x_i = \varepsilon^{i/4}x, \qquad y_i = \varepsilon^{i/4}y, \qquad t_i = \varepsilon^{i/4}t, \qquad i=1,2,\ldots, \tag{A2}
+</span></p>
+<p>and assume the following amplitude dependence:</p>
+<p><span class="math display">
+\begin{aligned}
+A &amp;= A(y_1,x_2,y_2,t_1,t_2,\ldots), \\
+a &amp;= a(x_2,y_2,t_1,t_2,\ldots), \qquad b = b(x_2,y_2,t_1,t_2,\ldots).
+\end{aligned} \tag{A3}
+</span></p>
+<p>We included a dependence of <span class="math inline">A</span> on <span class="math inline">y_1</span> in order to capture a possible zigzag instability of stripe solutions. We further assume the following scaling forms for the forcing parameters:</p>
+<p><span class="math display">
+\gamma = |\varepsilon|^{1/2}\gamma_1, \qquad \nu = |\varepsilon|^{1/2}\nu_1, \tag{A4}
+</span></p>
+<p>where <span class="math inline">\gamma_1</span> and <span class="math inline">\nu_1</span> are of order unity.</p>
+<p>In deriving the amplitude equation (17) for stripes we used the scaling <span class="math inline">\gamma\sim|\varepsilon|^{1/2}</span>, whereas in the derivation of the amplitude equations for the two oblique modes the scaling <span class="math inline">\gamma\sim|\varepsilon|</span> has been used (<a href="#ref-33">33</a>,<a href="#ref-34">34</a>). Because we are interested in deriving coupled equations for stripe and oblique modes we need to use the same scaling for <span class="math inline">\gamma</span>. Choosing <span class="math inline">\gamma\sim|\varepsilon|^{1/2}</span> and slow time scales <span class="math inline">t_i=\varepsilon^{i/2}t</span>, as in Ref. (<a href="#ref-35">35</a>), leads to the undesired result that the forcing terms in the amplitude equations for the oblique modes are the largest with no other terms of the same order of magnitude to balance them. We therefore choose the slow time scales as in Eq. (A2) and expand the solution in powers of <span class="math inline">|\varepsilon|^{1/4}</span>:</p>
+<p><span class="math display">
+u = \sum_{i=1}^{\infty}\varepsilon^{i/4}u_i. \tag{A5}
+</span></p>
+<p>Substituting Eqs. (A2), (A4), and (A5) into Eq. (1) we find at order <span class="math inline">|\varepsilon|^{1/4}</span></p>
+<p><span class="math display">
+\mathcal{L}^2u_1 = 0, \tag{A6}
+</span></p>
+<p>where <span class="math inline">\mathcal{L} = \mathcal{M}_{00}+k_0^2</span> and <span class="math inline">\mathcal{M}_{ij} = \partial_{x_i}\partial_{x_j}+\partial_{y_i}\partial_{y_j}</span>. Equation (A6) has a solution of the form</p>
+<p><span class="math display">
+u_1 = Ae^{ik_0x_0} + ae^{i(k_xx_0+k_yy_0)} + be^{i(k_xx_0-k_yy_0)} + \text{c.c.}, \tag{A7}
+</span></p>
+<p>where <span class="math inline">k_x^2+k_y^2=k_0^2</span>, which justifies the leading order approximation Eq. (A1).</p>
+<p>At order <span class="math inline">|\varepsilon|^{1/2}</span> we find</p>
+<p><span class="math display">
+\mathcal{L}^2u_2 = -\partial_{t_1}u_1 + \mathcal{L}\mathcal{M}_{01}u_1. \tag{A8}
+</span></p>
+<p>Note that the term <span class="math inline">\mathcal{L}\mathcal{M}_{01}u_1</span> that appears on the right side of Eq. (A8) equals to zero because the operators <span class="math inline">\mathcal{L}</span> and <span class="math inline">\mathcal{M}_{ij}</span> commute and <span class="math inline">\mathcal{L}u_1=0</span>. Therefore, from now on we will omit terms of the kind <span class="math inline">\mathcal{L}\mathcal{M}_{ij}u_1</span> from the analysis. Applying the solvability condition to secular terms on the right-hand side of Eq. (A8) we find that neither mode depends on <span class="math inline">t_1</span>:</p>
+<p><span class="math display">
+\partial_{t_1}A = 0, \qquad \partial_{t_1}a = 0, \qquad \partial_{t_1}b = 0. \tag{A9}
+</span></p>
+<p>Hence, <span class="math inline">u_2</span> satisfies the same equation as <span class="math inline">u_1</span> and we can choose the trivial zero solution, <span class="math inline">u_2=0</span>.</p>
+<p>At order <span class="math inline">|\varepsilon|^{3/4}</span> we have</p>
+<p><span class="math display">
+\mathcal{L}^2u_3 = -\partial_{t_2}u_1 - 4\mathcal{M}_{01}^2u_1 - u_1^3 + u_1\gamma_1\cos(k_fx_0). \tag{A10}
+</span></p>
+<p>We recall that we focus on the overlap range of the 1:1 resonance tongue, where <span class="math inline">k_f=k_0-\nu=k_0-|\varepsilon|^{1/2}\nu_1</span>, with 2:1 resonant rectangular or oblique patterns for which <span class="math inline">k_f=2k_x</span>. Substituting Eq. (A7) into Eq. (A10), and demanding solvability, we find</p>
+<p><span class="math display">
+\partial_{t_2}A = F(A), \qquad \partial_{t_2}a = F(a) + \frac{\gamma_1}{2}b^*, \qquad \partial_{t_2}b = F(b) + \frac{\gamma_1}{2}a^*, \tag{A11}
+</span></p>
+<p>where <span class="math inline">F(\zeta) = -3(2|A|^2+2|a|^2+2|b|^2-|\zeta|^2)\zeta</span>. If we were to stop the analysis here, the amplitude equation for the stripe pattern would not include any forcing term. Therefore, we continue the analysis to higher orders in <span class="math inline">|\varepsilon|</span> until a forcing term is achieved for the stripe equation. We will simplify the calculations from this point on by using the following symmetry argument. Since the forced SH equation is invariant under the reflection symmetry <span class="math inline">y\to-y</span>, <span class="math inline">u(x,-y)</span> must also be a solution. The solution form Eq. (A1) then implies that <span class="math inline">b</span> should satisfy the same amplitude equation as <span class="math inline">a</span> once <span class="math inline">a</span> and <span class="math inline">b</span> are exchanged and <span class="math inline">y</span> is replaced by <span class="math inline">-y</span>. Thus from now on we do not present the solvability conditions associated with <span class="math inline">b</span>.</p>
+<p>A particular solution to Eq. (A10) is given by</p>
+<p><span class="math display">
+\begin{aligned}
+u_3 &amp;= -\frac{1}{64k_0^4}\left(E_1^3+E_2^3+E_3^3\right) - 3d_2(E_2+E_3)E_2E_3 - 3p_+\left[E_1\left(E_2^2+E_3^2\right)+E_1^2(E_2+E_3)\right] - 6d_+E_1E_2E_3 \\
+&amp;\quad - 3p_-\left[E_1^*\left(E_2^2+E_3^2\right)+E_1^2(E_2^*+E_3^*)\right] - 6d_-E_1^*E_2E_3 - 3d_1\left[\left(E_3^*E_2^2+E_2^*E_3^2\right)+8(E_2E_3^*+E_2^*E_3)E_1\right] \\
+&amp;\quad + \frac{\gamma_1}{2}e^{ik_fx_0}\left[d_+E_1+d_2(E_2+E_3)+d_-E_1^*\right] + \text{c.c.}, \tag{A12}
+\end{aligned}
+</span></p>
+<p>where <span class="math inline">E_1 = A\,e^{ik_0x_0}</span>, <span class="math inline">E_2 = a\,e^{i(k_xx_0+k_yy_0)}</span>, <span class="math inline">E_3 = b\,e^{i(k_xx_0-k_yy_0)}</span>, <span class="math inline">d_\pm</span> is as given in Eq. (12), and the coefficients are</p>
+<p><span class="math display">
+d_1 = \frac{1}{64k_y^4}, \qquad d_2 = \frac{1}{4k_f^4}, \qquad p_\pm = \frac{k_f^2}{4k_0^2}d_\pm. \tag{A13}
+</span></p>
+<p>At order <span class="math inline">|\varepsilon|^{4/4}</span> we obtain</p>
+<p><span class="math display">
+\mathcal{L}^2u_4 = -\partial_{t_3}u_1 - 4\mathcal{M}_{01}\left[(\mathcal{M}_{11}+2\mathcal{M}_{02})u_1 + \mathcal{L}u_3\right]. \tag{A14}
+</span></p>
+<p>Requiring solvability we find that neither mode depends on <span class="math inline">t_3</span>:</p>
+<p><span class="math display">
+\partial_{t_3}A = 0, \qquad \partial_{t_3}a = 0, \qquad \partial_{t_3}b = 0. \tag{A15}
+</span></p>
+<p>There is no need to solve Eq. (A14) explicitly, because in the next and last order we consider the term that contains <span class="math inline">u_4</span> and <span class="math inline">(\mathcal{L}\mathcal{M}_{01}u_4)</span> is not secular and will not contribute to the amplitude equations up to the order <span class="math inline">|\varepsilon|^{5/4}</span> considered here. The final order <span class="math inline">|\varepsilon|^{5/4}</span> gives</p>
+<p><span class="math display">
+\begin{aligned}
+\mathcal{L}^2u_5 &amp;= -\partial_{t_4}u_1 - \partial_{t_2}u_3 - 4\mathcal{L}\mathcal{M}_{01}u_4 - 2\left[2\mathcal{M}_{01}^2+\mathcal{L}(2\mathcal{M}_{02}+\mathcal{M}_{11})\right]u_3 \\
+&amp;\quad - \left[(2\mathcal{M}_{02}+\mathcal{M}_{11})^2+8\mathcal{M}_{01}\mathcal{M}_{12}\right]u_1 - 3u_1^2u_3 + u_1 + \gamma_1u_3\cos k_fx_0. \tag{A16}
+\end{aligned}
+</span></p>
+<p>Applying the solvability condition, we find</p>
+<p><span class="math display">
+\begin{aligned}
+\partial_{t_4}A &amp;= A + G + \left(2k_0\partial_{x_2}-i\partial_{y_1}^2\right)^2A + 3\gamma_1\eta_1\left(\frac{\gamma_1}{12}-ab-a^*b^*\right)A \\
+&amp;\quad + e^{-2i\nu_1x_2}\left(\frac{d_-\gamma_1a^2}{4}-\frac{\gamma_1}{2}ab\eta_2+6a^2b^2\eta_4\right)A^*, \\
+\partial_{t_4}a &amp;= a + H(a,b) + 4\left(k_x\partial_{x_2}+k_y\partial_{y_2}\right)^2a + \frac{3\gamma_1d_2}{2}\left(\frac{\gamma_1}{6}-ab\right)a \tag{A17}\\
+&amp;\quad + \left[-3\gamma_1\left(|a|^2d_2+|b|^2\frac{d_2}{2}+|A|^2\eta_1\right) + e^{2i\nu_1x_2}\left(-\frac{\gamma_1}{2}\eta_3+3a^*b^*\eta_5\right)A^2\right]b^*,
+\end{aligned}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\eta_1=d_++d_-, \quad \eta_2=12(d_2+d_-), \quad \eta_4=3d_2+\eta_3, \quad \eta_3=3d_2+3p_-+6d_-, \quad \eta_5=3d_2+15p_-+12d_-, \tag{A18}
+</span></p>
+<p>and</p>
+<p><span class="math display">
+G = 3\left[\frac{|A|^4}{64k_0^4}+3(p_++p_-)\left(2|A|^2|a|^2+2|A|^2|b|^2+|a|^4+|b|^4\right)+12(\eta_1+8d_1)|a|^2|b|^2\right]A, \tag{A19}
+</span></p>
+<p><span class="math display">
+H(\zeta_1,\zeta_2) = 3\left[\frac{|\zeta_1|^4}{64k_0^4}+3|A|^2(|A|^2+2|\zeta_1|^2)(p_++p_-)+3|\zeta_2|^2(2|\zeta_1|^2+|\zeta_2|^2)(d_1+d_2)+12|A|^2|\zeta_2|^2(\eta_1+8d_1)\right]\zeta_1.
+</span></p>
+<p>The amplitude equations can now be obtained by combining Eqs. (A9), (A11), (A15), and (A17) (using the chain rule). Rescaling back to the “fast” space and time variables and rescaling the amplitudes <span class="math inline">A\to\varepsilon^{-1/4}e^{-i\nu_1x_2}A</span>, <span class="math inline">a\to\varepsilon^{-1/4}a</span>, <span class="math inline">b\to\varepsilon^{-1/4}b</span>, the detuning <span class="math inline">\nu_1=\varepsilon^{-1/2}\nu</span>, and the forcing strength as <span class="math inline">\gamma_1=\varepsilon^{-1/2}\gamma</span> gives the final form of the amplitude equations (we have also added the symmetric equation for <span class="math inline">b</span>):</p>
+<p><span class="math display">
+\begin{aligned}
+\partial_tA &amp;= \varepsilon A - 3(|A|^2+2|a|^2+2|b|^2)A - \left[2k_0(i\partial_x+\nu)+\partial_y^2\right]^2A + \left(\frac{\gamma}{2}\right)^2(\eta_1A+d_-A^*) + \hat{G}, \\
+\partial_ta &amp;= \varepsilon a - 3(|a|^2+2|b|^2+2|A|^2)a + 4(k_x\partial_x+k_y\partial_y)^2a + \frac{\gamma}{2}b^* + \hat{H}(a,b), \tag{A20}\\
+\partial_tb &amp;= \varepsilon b - 3(|b|^2+2|a|^2+2|A|^2)b + 4(k_x\partial_x-k_y\partial_y)^2b + \frac{\gamma}{2}a^* + \hat{H}(b,a),
+\end{aligned}
+</span></p>
+<p>with</p>
+<p><span class="math display">
+\begin{aligned}
+\hat{G} &amp;= -3\gamma\eta_1(ab+a^*b^*)A + \left[-\frac{\gamma}{2}ab\eta_2+6a^2b^2\eta_4\right]A^* + G, \\
+\hat{H}(a,b) &amp;= \frac{3\gamma d_2}{2}\left(\frac{\gamma}{6}-ab\right)a + \left(-\frac{\gamma}{2}\eta_3+3a^*b^*\eta_5\right)A^2b^* - 3\gamma\left[|a|^2d_2+|b|^2\frac{d_2}{2}+|A|^2\eta_1\right]b^* + H(a,b). \tag{A21}
+\end{aligned}
+</span></p>
+<p>In the derivation of Eq. (A20) we have considered particular solutions of the equations for <span class="math inline">u_i</span> instead of general solutions with free fields for the different modes. In principle, these fields can be determined by demanding commutativity between time derivatives for each mode, e.g., <span class="math inline">\partial_{t_4}(\partial_{t_2}A) = \partial_{t_2}(\partial_{t_4}A)</span> (<a href="#ref-43">43</a>). Implementing these conditions, however, turned out to be too hard. Nevertheless, the amplitude equations Eqs. (A20) capture the essential physics and provide good quantitative approximations, at least for sufficiently small <span class="math inline">\gamma</span>, as Fig. 3 indicates.</p>
+<p>We note that Eqs. (A20) reduce to known equations for either stripe patterns or 2D patterns when the appropriate limits are considered. For stripe solutions <span class="math inline">(A,0,0)</span> they coincide with Eq. (15) when <span class="math inline">n=1</span> and disregarding <span class="math inline">\hat{G}</span>, which contains higher-order (fifth-order) contributions. For rectangular and oblique solutions they reduce to the equations reported in Ref. (<a href="#ref-33">33</a>) when disregarding the fifth-order contributions in <span class="math inline">\hat{H}</span>.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-1">1</span> T. Gregor, W. Bialek, R. R. d.&nbsp;R. van Steveninck, D. W. Tank, and E. F. Wieschaus, Proc. Natl. Acad. Sci. USA <strong>102</strong>, 18403 (2005); J. Howard, S. W. Grill, and J. S. Bois, Nat. Rev.&nbsp;Mol. Cell Biol. <strong>12</strong>, 392 (2011).</p>
+<p><span id="ref-2">2</span> E. Meron, Ecological Modelling <strong>234</strong>, 70 (2012).</p>
+<p><span id="ref-3">3</span> S.-m. Hwang, T. Y. Kim, and K. J. Lee, Proc. Natl. Acad. Sci. USA <strong>102</strong>, 10363 (2005).</p>
+<p><span id="ref-4">4</span> R. Seemann, S. Herminghaus, and K. Jacobs, J. Phys.: Condens. Matter <strong>13</strong>, 4925 (2001).</p>
+<p><span id="ref-5">5</span> C. Denz, M. Schwab, and C. Weilnau, <em>Transverse-Pattern Formation in Photorefractive Optics</em>, Tracts in Modern Physics Vol. 188 (Springer, New York, 2003).</p>
+<p><span id="ref-6">6</span> L. G. Stanton and A. A. Golovin, Phys. Rev.&nbsp;E <strong>76</strong>, 036210 (2007).</p>
+<p><span id="ref-7">7</span> A. S. Mikhailov and K. Showalter, Phys. Rep.&nbsp;<strong>425</strong>, 79 (2006).</p>
+<p><span id="ref-8">8</span> M. Lowe, J. P. Gollub, and T. C. Lubensky, Phys. Rev.&nbsp;Lett. <strong>51</strong>, 786 (1983); G. Seiden, S. Weiss, J. H. McCoy, W. Pesch, and E. Bodenschatz, <em>ibid.</em> <strong>101</strong>, 214503 (2008); M. Dolnik, T. Bánsági, S. Ansari, I. Valent, and I. R. Epstein, Phys. Chem. Chem. Phys. <strong>13</strong>, 12578 (2011); S. Rüdiger, E. M. Nicola, J. Casademunt, and L. Kramer, Phys. Rep.&nbsp;<strong>447</strong>, 73 (2007).</p>
+<p><span id="ref-9">9</span> P. Kapitza, Usp. Fiz. Nauk <strong>44</strong>, 7 (1951).</p>
+<p><span id="ref-10">10</span> D. A. Golombek and R. E. Rosenstein, Physiol. Rev.&nbsp;<strong>90</strong>, 1063 (2010).</p>
+<p><span id="ref-11">11</span> G. V. Bordyugov, N. B. Janson, N. B. Igosheva, A. G. Balanov, and V. S. Anishchenko, Inter. J. Bifurcation and Chaos <strong>10</strong>, 2339 (2000).</p>
+<p><span id="ref-12">12</span> C. Graves, L. Glass, D. Laporta, R. Meloche, and A. Grassino, American Journal of Physiology-Regulatory, Integrative, and Comparative Physiology <strong>250</strong>, R902 (1986).</p>
+<p><span id="ref-13">13</span> J. Sturis et al., Chaos (Woodbury, NY) <strong>5</strong>, 193 (1995).</p>
+<p><span id="ref-14">14</span> I. Kevrekidis, R. Aris, and L. Schmidt, Chem. Eng. Sci. <strong>41</strong>, 1549 (1986).</p>
+<p><span id="ref-15">15</span> M. Eiswirth and G. Ertl, Phys. Rev.&nbsp;Lett. <strong>60</strong>, 1526 (1988).</p>
+<p><span id="ref-16">16</span> A. L. Lin, A. Hagberg, E. Meron, and H. L. Swinney, Phys. Rev.&nbsp;E <strong>69</strong>, 066217 (2004).</p>
+<p><span id="ref-17">17</span> A. L. Lin, M. Bertram, K. Martinez, H. L. Swinney, A. Ardelea, and G. F. Carey, Phys. Rev.&nbsp;Lett. <strong>84</strong>, 4240 (2000).</p>
+<p><span id="ref-18">18</span> P. M. Varangis, A. Gavrielides, T. Erneux, V. Kovanis, and L. F. Lester, Phys. Rev.&nbsp;Lett. <strong>78</strong>, 2353 (1997).</p>
+<p><span id="ref-19">19</span> A. N. Pisarchik, Y. O. Barmenkov, and A. V. Kir’yanov, in <em>Advanced Solid-State Photonics</em> (Optical Society of America, Washington DC, 2004).</p>
+<p><span id="ref-20">20</span> P. Coullet, J. Lega, B. Houchmanzadeh, and J. Lajzerowicz, Phys. Rev.&nbsp;Lett. <strong>65</strong>, 1352 (1990).</p>
+<p><span id="ref-21">21</span> C. Elphick, A. Hagberg, E. Meron, and B. Malomed, Phys. Lett. A <strong>230</strong>, 33 (1997).</p>
+<p><span id="ref-22">22</span> C. Elphick, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;Lett. <strong>80</strong>, 5007 (1998).</p>
+<p><span id="ref-23">23</span> C. Elphick, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;E <strong>59</strong>, 5285 (1999).</p>
+<p><span id="ref-24">24</span> B. Marts, A. Hagberg, E. Meron, and A. L. Lin, Chaos <strong>16</strong>, 037113 (2006).</p>
+<p><span id="ref-25">25</span> A. Yochelis, A. Hagberg, E. Meron, A. L. Lin, and H. L. Swinney, SIAM Journal on Applied Dynamical Systems <strong>1</strong>, 236 (2002).</p>
+<p><span id="ref-26">26</span> A. Yochelis, C. Elphick, A. Hagberg, and E. Meron, Physica D: Nonlinear Phenomena <strong>199</strong>, 201 (2004).</p>
+<p><span id="ref-27">27</span> A. Yochelis, C. Elphick, A. Hagberg, and E. Meron, Europhys. Lett. <strong>69</strong>, 170 (2005).</p>
+<p><span id="ref-28">28</span> P. Coullet, Phys. Rev.&nbsp;Lett. <strong>56</strong>, 724 (1986).</p>
+<p><span id="ref-29">29</span> G. Freund and W. Zimmermann, J. Fluid Mech. <strong>673</strong>, 318 (2011).</p>
+<p><span id="ref-30">30</span> R. Neubecker and A. Zimmermann, Phys. Rev.&nbsp;E <strong>65</strong>, 035205 (2002).</p>
+<p><span id="ref-31">31</span> A. Doelman and R. Schielen, SIAM Journal on Applied Mathematics <strong>58</strong>, 1901 (1998).</p>
+<p><span id="ref-32">32</span> L. Korzinov, M. I. Rabinovich, and L. S. Tsimring, Phys. Rev.&nbsp;A <strong>46</strong>, 7601 (1992).</p>
+<p><span id="ref-33">33</span> R. Manor, A. Hagberg, and E. Meron, Europhys. Lett. <strong>83</strong>, 10005 (2008).</p>
+<p><span id="ref-34">34</span> R. Manor, A. Hagberg, and E. Meron, New J. Phys. <strong>11</strong>, 063016 (2009).</p>
+<p><span id="ref-35">35</span> Y. Mau, A. Hagberg, and E. Meron, Phys. Rev.&nbsp;Lett. <strong>109</strong>, 034102 (2012).</p>
+<p><span id="ref-36">36</span> M. C. Cross and P. C. Hohenberg, Rev.&nbsp;Mod. Phys. <strong>65</strong>, 851 (1993).</p>
+<p><span id="ref-37">37</span> T. Passot and A. Newell, Physica D: Nonlinear Phenomena <strong>74</strong>, 301 (1994).</p>
+<p><span id="ref-38">38</span> M. Cross and H. Greenside, <em>Pattern Formation and Dynamics in Nonequilibrium Systems</em> (Cambridge University Press, Cambridge, 2009).</p>
+<p><span id="ref-39">39</span> E. J. Doedel, Congr. Numer. <strong>30</strong>, 265 (1981).</p>
+<p><span id="ref-40">40</span> P.-Y. Wang and M. Saffman, Opt. Lett. <strong>24</strong>, 1118 (1999).</p>
+<p><span id="ref-41">41</span> C. Valentin, J.-M. d’Herbès, and J. Poesen, Catena <strong>37</strong>, 1 (1999).</p>
+<p><span id="ref-42">42</span> H. Yizhaq, E. Gilad, and E. Meron, Physica A: Statistical Mechanics and its Applications <strong>356</strong>, 139 (2005).</p>
+<p><span id="ref-43">43</span> P. B. Kahn and Y. Zarmi, <em>Nonlinear Dynamics: Exploration through Normal Forms</em>, Wiley Series in Nonlinear Science Vol. 1 (Wiley, New York, 1998).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

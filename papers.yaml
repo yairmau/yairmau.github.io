@@ -530,6 +530,7 @@ mau2013competing:
   year: "2013"
   doi: 10.1103/PhysRevE.88.032917
   pdf: archive/papers/mau-2013-Competing resonances in spatially forced pattern-forming systems.pdf
+  md: archive/papers-md/mau2013competing/mau2013competing.qmd
   bib: |
     @article{mau2013competing,
       title={Competing resonances in spatially forced pattern-forming systems},

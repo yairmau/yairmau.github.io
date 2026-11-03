@@ -66,3 +66,4 @@ not doing even the lighter treatment. 24 actual papers left to process.
 | goldberg2024effect | done | 10pp Catena, single-column, pymupdf4llm clean, ~59 author-year refs |
 | mau2014multiplicative | done | 8pp PRE, stochastic jump-process theory, direct read + coordinate crop |
 | mau2015reversing | done | 8pp PRE, FSH+vegetation model, 7 figures cropped via full-page PIL screenshot method (faster than PDF-coordinate hunting for vector-heavy multi-panel figures) |
+| mau2013competing | done | 9pp PRE, long appendix with multi-scale perturbation derivation, 3 figures via PIL screenshot crop |
