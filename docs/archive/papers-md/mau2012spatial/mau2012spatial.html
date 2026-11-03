@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/mau2012spatial/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/mau2012spatial/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link active" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Yair Mau<sup>1</sup>, Aric Hagberg<sup>2</sup>, Ehud Meron<sup>1,3</sup></p>
+</div>
+<div class="paper-affil">
+<p><sup>1</sup> Physics Department, Ben-Gurion University of the Negev, Beer-Sheva 84105, Israel &nbsp;·&nbsp; <sup>2</sup> Center for Nonlinear Studies and Theoretical Division, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA &nbsp;·&nbsp; <sup>3</sup> Department of Solar Energy and Environmental Physics, BIDR, Ben-Gurion University of the Negev, Sede Boqer Campus, 84990, Israel</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Physical Review Letters 109, 034102 · 2012 · doi: <a href="https://doi.org/10.1103/PhysRevLett.109.034102">10.1103/PhysRevLett.109.034102</a></p>
+<p>Received 17 May 2012; published 17 July 2012</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Mau, Y., Hagberg, A. and Meron, E. (2012). Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control. Physical Review Letters, 109, 034102. https://doi.org/10.1103/PhysRevLett.109.034102</p>
+</blockquote>
+<hr>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>Spatial periodic forcing of pattern-forming systems is an important, but lightly studied, method of controlling patterns. It can be used to control the amplitude and wave number of one-dimensional periodic patterns, to stabilize unstable patterns, and to induce them below instability onset. We show that, although in one spatial dimension the forcing acts to reinforce the patterns, in two dimensions it acts to destabilize or displace them by inducing two-dimensional rectangular and oblique patterns.</p>
+<p>Pattern formation phenomena are found in a wide variety of physical, chemical, and biological contexts. Examples include embryonic pattern formation (<a href="#ref-1">1</a>), cardiac arrhythmias (<a href="#ref-2">2</a>), bacterial colonies (<a href="#ref-3">3</a>), nanoparticle assemblies (<a href="#ref-4">4</a>), two-phase mixtures (<a href="#ref-5">5</a>), thermal convection (<a href="#ref-6">6</a>), nonlinear optics (<a href="#ref-7">7</a>), chemical (<a href="#ref-8">8</a>) and electrochemical reactions (<a href="#ref-9">9</a>), and environmental pattern formation (<a href="#ref-10">10</a>). In some contexts, pattern formation is essential for the functioning of the system. This is the case with embryonic pattern formation or with vegetation patterning—a mechanism by which vegetation copes with water stress. In other contexts, pattern formation is an undesired outcome. This is the case with spiral waves in the heart muscle (<a href="#ref-11">11</a>), dewetting of liquid films (<a href="#ref-12">12</a>), or spatial patterning in the transverse directions of a laser beam (<a href="#ref-13">13</a>). In order to eliminate, modify, or induce patterns, means of controlling and manipulating them are needed. These means may consist of basic parameter tuning or may involve external intervention such as feedback control (<a href="#ref-14">14</a>) or periodic forcing in time (<a href="#ref-15">15</a>) and space (<a href="#ref-16">16</a>).</p>
+<p>Control of periodic patterns by spatial periodic forcing is achieved by locking the pattern’s wave number, <span class="math inline">k</span>, to a rational fraction of the forcing wave number, <span class="math inline">k_f</span>. The locking typically occurs over a limited wave-number range that increases with the forcing amplitude—the “resonance tongue.” Within this range, the wave number of the locked or resonant pattern is controllable by tuning the forcing wave number.</p>
+<p>Recent studies have shown that parametric one-dimensional (1d) spatial forcing of systems supporting stationary stripe patterns can also induce resonant two-dimensional (2d) patterns of rectangular and oblique forms (<a href="#ref-16">16</a>, <a href="#ref-17">17</a>). Such patterns exist over a wide range of forcing wave numbers that includes resonance tongues of stripe patterns, in particular, the basic 1:1 (<span class="math inline">k=k_f</span>) resonance, which would generally be the first choice for control. In this Letter, we address the question of how the 2d rectangular and oblique patterns interfere with the control of stripe patterns.</p>
+<p>Focusing on universal aspects of spatially forced pattern-forming systems, we study the Swift-Hohenberg (SH) equation as a minimal model that captures the relevant mathematical construct of a stationary nonuniform instability of a stationary uniform state (<a href="#ref-18">18</a>). Adding parametric forcing, the equation reads</p>
+<p><span class="math display">
+u_t = \varepsilon u - (\nabla^2 + k_0^2)^2 u - u^3 + \gamma u \cos(k_f x), \tag{1}
+</span></p>
+<p>where <span class="math inline">\varepsilon</span> is the distance from the pattern-forming instability of the uniform stationary state, <span class="math inline">u=0</span>, of the unforced system; <span class="math inline">k_0 \sim O(1)</span> is the wave number of the mode that begins to grow at the instability point; <span class="math inline">k_f</span> is the forcing wave number; and <span class="math inline">\gamma&gt;0</span> is the forcing amplitude (<a href="#ref-19">19</a>).</p>
+<p>Resonant stripe patterns of Eq. (1) exist in tongue-shaped domains in the forcing parameter plane <span class="math inline">k_f/k_0 - \gamma</span>. We begin by identifying these domains for patterns near the instability point <span class="math inline">|\varepsilon| \ll 1</span>. We consider Eq. (1) in 1d and approximate the resonant stripe solutions as</p>
+<p><span class="math display">
+u \approx A\exp(ikx) + \text{c.c.}, \qquad k = \frac{k_f}{n}, \tag{2}
+</span></p>
+<p>where the amplitude <span class="math inline">A</span> is small, <span class="math inline">|A| \sim O(\sqrt{|\varepsilon|})</span>, and slowly varying in space and time, <span class="math inline">|A_x| \sim O(|\varepsilon|)</span>, <span class="math inline">|A_t| \sim O(|\varepsilon|^{3/2})</span>, and c.c. stands for the complex conjugate. The parameter <span class="math inline">n=1,2,\ldots</span> is an integer representing the type of resonance <span class="math inline">k_f{:}k = n{:}1</span>. Within and in the vicinities of the resonant tongues, the detunings <span class="math inline">\nu_n = k_0 - k_f/n</span> from the exact resonances <span class="math inline">n{:}1</span> are small. Assuming <span class="math inline">\nu_n \sim O(\sqrt{|\varepsilon|})</span>, <span class="math inline">\gamma \sim O(\sqrt{|\varepsilon|})</span> and using multiple-scale analysis to order <span class="math inline">|\varepsilon|^{3/2}</span>, we find the amplitude equation</p>
+<p><span class="math display">
+A_t = \varepsilon A - 3|A|^2 A - (2ik_0\partial_x + 2k_0\nu_n)^2 A + \left(\frac{\gamma}{2}\right)^2\left[(d_+ + d_-)A + \delta_{n,1}d_-A^*\right], \tag{3}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+d_\pm = \frac{1}{k_f^2(k_f \mp 2k_0)^2} \tag{4}
+</span></p>
+<p>and <span class="math inline">\delta_{n,1}</span> is the Kronecker delta. Note that <span class="math inline">d_\pm</span> diverges for <span class="math inline">k_f = \mp 2k_0</span>, that is, for the exact 2:1 resonance. This resonance, which requires a different scaling of the forcing, <span class="math inline">\gamma \sim O(|\varepsilon|)</span>, was studied earlier (<a href="#ref-17">17</a>).</p>
+<p>Constant solutions of Eq. (3) represent <span class="math inline">n{:}1</span> wave-number-locked, or resonant, stationary stripe patterns. For <span class="math inline">n \neq 2</span>, they have the form</p>
+<p><span class="math display">
+A = \rho_n\exp(i\phi), \qquad \rho_n = \frac{1}{\sqrt{3}}\sqrt{\varepsilon - (2k_0\nu_n)^2 + \gamma^2 d^2/4}, \tag{5}
+</span></p>
+<p>with <span class="math inline">d = d_+ + (1+\delta_{n,1})d_-</span>. The phase <span class="math inline">\phi</span> is constant and equal to zero for <span class="math inline">n=1</span> but undetermined for higher resonances for the order <span class="math inline">|\varepsilon|^{3/2}</span> of our calculation. The resonant stripe solutions exist for <span class="math inline">\gamma &gt; \gamma_n</span>, where</p>
+<p><span class="math display">
+\gamma_n = 2\sqrt{\frac{(2k_0\nu_n)^2 - \varepsilon}{d}}. \tag{6}
+</span></p>
+<p>Wave-number-locked patterns corresponding to the 2:1 resonance have the form (<a href="#ref-17">17</a>)</p>
+<p><span class="math display">
+A = \rho_2\exp(i\phi), \qquad \rho_2 = \frac{1}{\sqrt{3}}\sqrt{\varepsilon - (2k_0\nu_2)^2 + \gamma^2/2}, \tag{7}
+</span></p>
+<p>with <span class="math inline">\phi=0,\pi</span>. These solutions exist for <span class="math inline">\gamma &gt; \gamma_2</span>, where</p>
+<p><span class="math display">
+\gamma_2 = 2\left[(2k_0\nu_2)^2 - \varepsilon\right]^{1/2}. \tag{8}
+</span></p>
+<p>Figure 1 shows the tongue-shaped existence ranges of <span class="math inline">n{:}1</span> resonant stripe patterns with <span class="math inline">n=1,\ldots,4</span>, for parameters above, <span class="math inline">\varepsilon&gt;0</span>, and below, <span class="math inline">\varepsilon&lt;0</span>, the pattern-forming instability. The solid lines in the figure are the results of the analysis from Eqs. (5) and (7), and the shaded regions are numerical results from solving for stationary solutions of the SH equation (1) using a continuation method (<a href="#ref-20">20</a>).</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>FIG. 1 | Existence domains of resonant stripe solutions of Eq. (1) (a) above the pattern-forming instability (<span class="math inline">\varepsilon&gt;0</span>) and (b) below it (<span class="math inline">\varepsilon&lt;0</span>).</strong> The shaded regions indicate the range of resonant solutions computed from stationary solutions of Eq. (1), and the solid curves show the approximate boundary of resonant solutions based on the amplitude equation approach. The agreement for the lower resonances is very good for sufficiently small <span class="math inline">\gamma</span> values, and for the higher resonances it remains surprisingly good, even for large <span class="math inline">\gamma</span> values. Parameters: (a) <span class="math inline">\varepsilon=0.001</span>, (b) <span class="math inline">\varepsilon=-0.001</span>.</p>
+<p>Of all resonances shown in Fig. 1, the 2:1 resonance region stands out in its robustness. It is wider and, for <span class="math inline">\varepsilon&lt;0</span>, i.e., below the pattern-forming instability, it appears at lower forcing amplitude <span class="math inline">\gamma</span>. This is because the forcing is parametric, involving the linear term in the SH equation. Parametric forcing of higher-order terms will single out higher resonances.</p>
+<p>A stronger expression of the special role the 2:1 resonance plays appears in two-space dimensions. In that case, a purely 1d forcing, <span class="math inline">\mathbf{k_f}=k_f\hat{x}</span>, can induce stable 2d patterns (<a href="#ref-17">17</a>)—oblique patterns for <span class="math inline">\gamma&lt;\varepsilon</span> and rectangular patterns for <span class="math inline">\gamma&gt;\varepsilon</span>. These are resonant patterns that respond to the spatial forcing by locking the wave vector components in the forcing direction in 2:1 resonance, <span class="math inline">k_x = k_f/2</span>, and creating a wave vector component in the orthogonal direction, <span class="math inline">k_y</span>, to compensate for the unfavorable forcing wave number, so that <span class="math inline">k_x^2 + k_y^2 = k_0^2</span>.</p>
+<p>The range of existence of these new 2d patterns is very wide in the forcing wave number <span class="math inline">k_f</span> but bounded from above by the 2:1 resonance of stripe patterns, i.e., <span class="math inline">0&lt;k_f&lt;2k_0</span>, since at <span class="math inline">k_f=2k_0</span> the component <span class="math inline">k_x</span> attains its maximal possible value, <span class="math inline">k_0</span>. Figure 2 shows the existence domains of resonant rectangular and oblique patterns superimposed onto the tongue diagram of resonant 1:1 and 2:1 stripe patterns.</p>
+<p>We now address the overlap domains of rectangular and oblique patterns with the 1:1 resonance tongue of stripe patterns. In order to study the interaction of the patterns, we approximate solutions to Eq. (1) as a superposition of a stripe mode and two oblique modes</p>
+<p><span class="math display">
+u \approx Ae^{ik_fx} + ae^{i(k_xx+k_yy)} + be^{i(k_xx-k_yy)} + \text{c.c.}, \tag{9}
+</span></p>
+<p>where <span class="math inline">k_x = k_f/2</span> and <span class="math inline">k_y = \sqrt{k_0^2-k_x^2}</span>. Using multiple-scale analysis, we find the amplitude equations (<a href="#ref-21">21</a>)</p>
+<p><span class="math display">
+\begin{aligned}
+A_t &amp;= \varepsilon A - 3(|A|^2 + 2|a|^2 + 2|b|^2)A - (2k_0\nu)^2 A + \left(\frac{\gamma}{2}\right)^2\left[A(d_++d_-) + A^*d_-\right], \\
+a_t &amp;= \varepsilon a - 3(|a|^2 + 2|b|^2 + 2|A|^2)a + \frac{\gamma}{2}b^* + \left(\frac{\gamma}{2}\right)^2 d_2 a, \\
+b_t &amp;= \varepsilon b - 3(|b|^2 + 2|a|^2 + 2|A|^2)b + \frac{\gamma}{2}a^* + \left(\frac{\gamma}{2}\right)^2 d_2 b,
+\end{aligned} \tag{10}
+</span></p>
+<p>where <span class="math inline">d_2 = 1/(2k_f^2)^2</span>.</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>FIG. 2 | The existence domains of resonant rectangular and oblique patterns are very wide and overlap with the resonance tongues of 1:1 and 2:1 stripe patterns.</strong> The domain size for all four patterns is <span class="math inline">30 \times 30</span>. Parameters: <span class="math inline">\varepsilon=0.1</span>.</p>
+<p>Solutions of (10) of the form <span class="math inline">(A,0,0)</span> represent 1:1 stripe patterns, while solutions of the form <span class="math inline">(0,a,b)</span> represent 2d patterns. Stationary stripe solutions are given by <span class="math inline">A=\rho_1</span>, where <span class="math inline">\rho_1</span> is given by Eq. (5) with <span class="math inline">n=1</span>. Stationary rectangular solutions are given by <span class="math inline">a=Re^{i\alpha}</span>, <span class="math inline">b=Re^{i\alpha}</span>, where <span class="math inline">\alpha</span> is an arbitrary phase and</p>
+<p><span class="math display">
+R = \frac{1}{3}\sqrt{\tilde\varepsilon + \frac{\gamma}{2}}, \qquad \tilde\varepsilon = \varepsilon + d_2\left(\frac{\gamma}{2}\right)^2, \tag{11}
+</span></p>
+<p>while stationary oblique solutions are given by <span class="math inline">a=\rho_O^\pm e^{i\alpha}</span>, <span class="math inline">b=\rho_O^\mp e^{-i\alpha}</span>, where</p>
+<p><span class="math display">
+\rho_O^\pm = \sqrt{\frac{\tilde\varepsilon \pm \sqrt{\tilde\varepsilon^2-\gamma^2}}{6}}. \tag{12}
+</span></p>
+<p>To see how the 2d resonant patterns affect the stability of the 1:1 resonant stripes, we analyze the stability of the solution <span class="math inline">(A,a,b)=(\rho_1,0,0)</span>. The eigenvalue analysis of the two oblique modes shows that the stability region of the stripe solution is smaller than the existence region and has two distinct shapes, depending on the value of <span class="math inline">\varepsilon</span>. For larger values, <span class="math inline">\varepsilon &gt; \varepsilon_c = 9/143</span>, there is a continuous <span class="math inline">\gamma</span> range in which stripe solutions are stable, while, for <span class="math inline">\varepsilon &lt; \varepsilon_c</span>, the stability range is split into two ranges. Figure 3 shows the shapes of the stable solution ranges for two values of <span class="math inline">\varepsilon</span>, one above and one below the critical value <span class="math inline">\varepsilon_c</span>. The significance is that for <span class="math inline">\varepsilon&lt;\varepsilon_c</span> there is an intermediate range of forcing amplitude <span class="math inline">\gamma</span> where the forcing destabilizes the stripe patterns even at exact resonance <span class="math inline">k_f=k_0</span> (<a href="#ref-22">22</a>). This is in contrast to the behavior of 1d systems for which the forcing always acts to stabilize the stripe patterns.</p>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>FIG. 3 | Existence and stability domains of 1:1 resonant stripe solutions of Eqs. (10).</strong> The shaded areas indicate the existence domains, and the dark shaded areas are the stability regions. (a) Above the critical value, <span class="math inline">\varepsilon&gt;\varepsilon_c</span>, the stable region is contiguous. (b) Below the critical point, <span class="math inline">\varepsilon&lt;\varepsilon_c</span>, the solution is not stable in a range of forcing amplitude <span class="math inline">\gamma</span>, even at exact resonance <span class="math inline">k_f=k_0</span>. Parameters: (a) <span class="math inline">\varepsilon=0.1</span>, (b) <span class="math inline">\varepsilon=-0.05</span>.</p>
+<p>The stability ranges of both the 1:1 and 2:1 stripe patterns are actually bistability ranges of the stripes and 2d patterns (<a href="#ref-23">23</a>). This raises the question of which pattern is dominant; that is, which pattern invades the other in these ranges. To study this question, we calculated the energy (Lyapunov) functional of Eq. (1),</p>
+<p><span class="math display">
+L = \int d\mathbf{r}\left(-\frac{1}{2}\left[\varepsilon+\gamma\cos(k_fx)\right]u^2 + \frac{1}{4}u^4 + \frac{1}{2}(\nabla^2u+k_0^2u)^2\right),
+</span></p>
+<p>using the analytic forms of the approximate stripe, rectangular, and oblique solutions; the pattern that has lower energy is dominant.</p>
+<p>Figure 4 shows the energies of rectangular patterns, resonant 1:1 stripe patterns, and resonant 2:1 stripe patterns, in their existence range along the <span class="math inline">k_f/k_0</span> axis. The energy of the 1:1 stripe pattern is higher than that of the rectangular pattern, implying that the latter is dominant. This is supported by numerical solutions of Eq. (1), according to which the rectangular patterns invade the 1:1 stripe, as the snapshots in Fig. 4(a) show. This result holds even at exact resonance (<span class="math inline">k_f=k_0</span>). The situation is different within the resonance range of 2:1 stripes; the energies of the stripe and rectangular patterns cross one another and split the range into a low-<span class="math inline">k_f</span> part where the rectangular patterns are dominant and a high-<span class="math inline">k_f</span> part where the stripe pattern is dominant. Indeed, numerical solutions of Eq. (1) show that in the low-<span class="math inline">k_f</span> part the rectangular pattern invades the stripe pattern [Fig. 4(b)] and in the high-<span class="math inline">k_f</span> part the stripe pattern invades the rectangular pattern [Fig. 4(c)].</p>
+<p><img src="./images/figure4.png" class="img-fluid"></p>
+<p><strong>FIG. 4 | (Top) The energy (Lyapunov functional values) of 1:1 resonant stripe patterns, 2:1 resonant stripe patterns, and rectangular patterns.</strong> (Bottom) Snapshots of the dynamics of fronts that separate stripe and rectangular patterns. Lower energy patterns invade the regions of higher energy patterns: (a) rectangular pattern invading 1:1 stripes (<span class="math inline">k_f/k_0=1.10</span>), (b) rectangular pattern invading 2:1 stripes (<span class="math inline">k_f/k_0=1.65</span>), and (c) 2:1 stripes invading a rectangular pattern (<span class="math inline">k_f/k_0=1.80</span>). The domain size of all snapshots is <span class="math inline">45\times45</span>. Parameters: <span class="math inline">\varepsilon=0.1</span>, <span class="math inline">\gamma=0.4</span>.</p>
+<p>Two intriguing results stand out in the analysis described above: (1) the most obvious control practice, i.e., 1:1 periodic forcing, can destabilize the stripe pattern it is intended to control and (2) even when the forcing leaves the stripes linearly stable, the stripes are displaced by the 2d patterns that the forcing induces. These are counterintuitive results because, naively, we would expect the forcing to reinforce the stripe patterns. The forcing indeed reinforces the stripe patterns by increasing their amplitudes [see Eq. (5)] and widening their wave-number range, but it also induces the growth of the oblique modes which either destabilize or displace the stripe patterns.</p>
+<p>These outcomes may have important implications for practical applications of spatial forcing in various fields of science, including nonlinear optics (<a href="#ref-24">24</a>, <a href="#ref-25">25</a>) and restoration ecology. An interesting example of the latter field is rehabilitation of banded vegetation on hill slopes by water harvesting (<a href="#ref-26">26</a>). Water-harvesting methods often involve parallel contour ditches that accumulate runoff and along which the vegetation is planted (<a href="#ref-27">27</a>). Our results suggest that the system may not respond as expected in a 1:1 resonance but rather form 2d patterns that involve long-lasting processes of mortality and regrowth. Because the analysis is based on universal amplitude equations near an instability point, we expect it to hold for a wide variety of spatially forced systems.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>The support of the United States–Israel Binational Science Foundation (Grant No.&nbsp;2008241) is gratefully acknowledged. Part of this work was funded by the Department of Energy at Los Alamos National Laboratory under Contract No.&nbsp;DE-AC52-06NA25396 and by the DOE Office of Science Advanced Computing Research (ASCR) program in Applied Mathematical Sciences.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-1">1</span> T. Gregor, W. Bialek, R. R. d.&nbsp;R. van Steveninck, D. W. Tank, and E. F. Wieschaus, Proc. Natl. Acad. Sci. U.S.A. <strong>102</strong>, 18403 (2005); J. Howard, S. W. Grill, and J. S. Bois, Nat. Rev.&nbsp;Mol. Cell Biol. <strong>12</strong>, 392 (2011).</p>
+<p><span id="ref-2">2</span> J. Jalife, M. Delmar, J. Anumonwo, O. Berenfeld, and J. Kalifa, <em>Rotors, Spirals, and Scroll Waves in the Heart</em> (Wiley, New York, 2009).</p>
+<p><span id="ref-3">3</span> M. Matsushita and H. Fujikawa, Physica (Amsterdam) <strong>168A</strong>, 498 (1990); E. Ben-Jacob, O. Shochet, A. Tenenbaum, I. Cohen, A. Czirók, and T. Vicsek, Nature (London) <strong>368</strong>, 46 (1994).</p>
+<p><span id="ref-4">4</span> <em>Self-Assembly, Pattern Formation and Growth Phenomena in Nano-Systems</em>, edited by A. A. Golovin and A. A. Nepomnyashchy (Springer, New York, 2006).</p>
+<p><span id="ref-5">5</span> E. Sam, Y. Hayase, G. Auernhammer, and D. Vollmer, Phys. Chem. Chem. Phys. <strong>13</strong>, 13333 (2011).</p>
+<p><span id="ref-6">6</span> M. Lappa, <em>Thermal Convection: Patterns, Evolution and Stability</em> (Wiley, New York, 2010).</p>
+<p><span id="ref-7">7</span> F. Arecchi, S. Boccaletti, and P. Ramazza, Phys. Rep.&nbsp;<strong>318</strong>, 1 (1999).</p>
+<p><span id="ref-8">8</span> R. Kapral and K. Showalter, <em>Chemical Waves and Patterns</em> (Springer, New York, 1995).</p>
+<p><span id="ref-9">9</span> K. Krischer, in <em>Modern Aspects of Electrochemistry</em>, edited by B. E. Conway, J. O. Bockris, and R. E. White (Springer, New York, 2002), Vol. 32, p.&nbsp;1.</p>
+<p><span id="ref-10">10</span> G. Feingold, I. Koren, H. Wang, H. Xue, and W. Brewer, Nature (London) <strong>466</strong>, 849 (2010); V. Deblauwe, B. Barbier, P. Couteron, O. Lejeune, and J. Bogaert, Global Ecol. Biogeogr. <strong>17</strong>, 715 (2008); L. Goehring, L. Mahadevan, and S. W. Morris, Proc. Natl. Acad. Sci. U.S.A. <strong>106</strong>, 387 (2009).</p>
+<p><span id="ref-11">11</span> S.-m. Hwang, T. Y. Kim, and K. J. Lee, Proc. Natl. Acad. Sci. U.S.A. <strong>102</strong>, 10363 (2005).</p>
+<p><span id="ref-12">12</span> R. Seemann, S. Herminghaus, and K. Jacobs, J. Phys. Condens. Matter <strong>13</strong>, 4925 (2001).</p>
+<p><span id="ref-13">13</span> C. Denz, M. Schwab, and C. Weilnau, <em>Transverse-Pattern Formation in Photorefractive Optics</em> (Springer, New York, 2003), Vol. 188.</p>
+<p><span id="ref-14">14</span> L. G. Stanton and A. A. Golovin, Phys. Rev.&nbsp;E <strong>76</strong>, 036210 (2007).</p>
+<p><span id="ref-15">15</span> A. Mikhailov and K. Showalter, Phys. Rep.&nbsp;<strong>425</strong>, 79 (2006).</p>
+<p><span id="ref-16">16</span> M. Lowe, J. P. Gollub, and T. C. Lubensky, Phys. Rev.&nbsp;Lett. <strong>51</strong>, 786 (1983); G. Seiden, S. Weiss, J. H. McCoy, W. Pesch, and E. Bodenschatz, <em>ibid.</em> <strong>101</strong>, 214503 (2008); M. Dolnik, T. Bánsági, S. Ansari, I. Valent, and I. Epstein, Phys. Chem. Chem. Phys. <strong>13</strong>, 12578 (2011); S. Rüdiger, E. M. Nicola, J. Casademunt, and L. Kramer, Phys. Rep.&nbsp;<strong>447</strong>, 73 (2007).</p>
+<p><span id="ref-17">17</span> R. Manor, A. Hagberg, and E. Meron, Europhys. Lett. <strong>83</strong>, 10005 (2008); New J. Phys. <strong>11</strong>, 063016 (2009); G. Freund, W. Pesch, and W. Zimmermann, J. Fluid Mech. <strong>673</strong>, 318 (2011).</p>
+<p><span id="ref-18">18</span> M. C. Cross and P. C. Hohenberg, Rev.&nbsp;Mod. Phys. <strong>65</strong>, 851 (1993).</p>
+<p><span id="ref-19">19</span> We can choose to consider only <span class="math inline">\gamma&gt;0</span>, since Eq. (1) is invariant under the transformations <span class="math inline">\gamma \to -\gamma</span> and <span class="math inline">x \to x + \pi/k_f</span>.</p>
+<p><span id="ref-20">20</span> E. J. Doedel, Congr. Numer. <strong>30</strong>, 265 (1981).</p>
+<p><span id="ref-21">21</span> In deriving Eqs. (10), we used the scaling <span class="math inline">\gamma \sim O(\sqrt{|\varepsilon|})</span>, <span class="math inline">|A| \sim |a| \sim |b| \sim O(\sqrt{|\varepsilon|})</span> and introduced two slow time scales, <span class="math inline">T_1=\sqrt{|\varepsilon|}t</span> and <span class="math inline">T_2=|\varepsilon|t</span>. The right sides of the equations for <span class="math inline">a</span> and <span class="math inline">b</span> contain terms, <span class="math inline">\gamma b^*/2</span> and <span class="math inline">\gamma a^*/2</span>, which formally are larger than all other terms and therefore cannot be balanced unless other terms grow to their size, in disagreement with the assumed scaling. However, for the range of <span class="math inline">\varepsilon</span> values considered here, these terms are in practice of the same order of magnitude as the other terms. Indeed, the results shown in Fig. 3 agree well with direct numerical studies of the forced SH equation. The derivation of the amplitude equations can be improved by considering the scaling <span class="math inline">|A| \sim |a| \sim |b| \sim O(|\varepsilon|^{1/4})</span>, but this leads to many more terms in the equations which we wish to avoid here.</p>
+<p><span id="ref-22">22</span> These results have been confirmed by direct numerical solutions of Eq. (1).</p>
+<p><span id="ref-23">23</span> The stability of the 2d patterns is not affected by the stripe mode <span class="math inline">A</span> in these ranges.</p>
+<p><span id="ref-24">24</span> P.-Y. Wang and M. Saffman, Opt. Lett. <strong>24</strong>, 1118 (1999).</p>
+<p><span id="ref-25">25</span> R. Neubecker and O. Jakoby, Phys. Rev.&nbsp;E <strong>67</strong>, 066221 (2003).</p>
+<p><span id="ref-26">26</span> C. Valentin, J. M. d’Herbès, and J. Poesen, Catena <strong>37</strong>, 1 (1999); H. Yizhaq, E. Gilad, and E. Meron, Physica (Amsterdam) <strong>356A</strong>, 139 (2005); E. Meron, Ecol. Model. <strong>234</strong>, 70 (2012).</p>
+<p><span id="ref-27">27</span> The water redistribution induced by the ditches modulates the biomass growth rate and thus exerts parametric forcing.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

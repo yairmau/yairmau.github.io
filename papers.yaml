@@ -7,6 +7,7 @@ feuer2026losses:
   year: "2026"
   doi: 10.64898/2026.09.06.749676
   pdf: archive/papers/feuer-2026-Losses outlast gains in Northern Hemisphere tree growth under climate change.pdf
+  md: archive/papers-md/feuer2026losses/feuer2026losses.qmd
   bib: |
       @article{feuer2026losses,
           doi = {10.64898/2026.09.06.749676},
@@ -545,6 +546,7 @@ mau2012spatial:
   year: "2012"
   doi: 10.1103/PhysRevLett.109.034102
   pdf: archive/papers/mau-2012-Spatial periodic forcing can displace patterns it is intended to control.pdf
+  md: archive/papers-md/mau2012spatial/mau2012spatial.qmd
   bib: |
     @article{mau2012spatial,
       title={Spatial periodic forcing can displace patterns it is intended to control},
@@ -567,6 +569,7 @@ mau2009dual:
   year: "2009"
   doi: 10.1103/physreve.80.065203
   pdf: archive/papers/mau-2009-Dual-mode spiral vortices.pdf
+  md: archive/papers-md/mau2009dual/mau2009dual.qmd
   bib: |
     @article{mau2009dual,
       title={Dual-mode spiral vortices},

@@ -4,5 +4,8 @@
 
 ## Papers
 
-- [
-Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects](https://yairmau.com/archive/papers-md/feuer2025tree): Disentangles soil vs. atmospheric drought effects on Aleppo pine growth using dendrometer data and an irrigation experiment. Yatir forest, Israel. Published PCE 2025.
+- [Tree Growth, Contraction and Recovery: Disentangling Soil and Atmospheric Drought Effects](https://yairmau.com/archive/papers-md/feuer2025tree): Disentangles soil vs. atmospheric drought effects on Aleppo pine growth using dendrometer data and an irrigation experiment. Yatir forest, Israel. Published PCE 2025.
+- [Mechanisms behind facilitation-competition transition along rainfall gradients](https://yairmau.com/archive/papers-md/hollander2026mechanisms): Consumer-resource model explaining when woody plants facilitate vs. inhibit herbaceous growth along precipitation gradients. Published PNAS 2026.
+- [Losses Outlast Gains in Northern Hemisphere Tree Growth Under Climate Change](https://yairmau.com/archive/papers-md/feuer2026losses): XGBoost-based analysis of 4,110 tree-ring chronologies shows climate-driven growth losses persist while gains fade under CMIP6 projections. bioRxiv preprint 2026.
+- [Dual-Mode Spiral Vortices](https://yairmau.com/archive/papers-md/mau2009dual): Shows spiral vortices in oscillatory reaction-diffusion systems can host a secondary mode at their core, leading to periodic oscillations or a novel form of spatiotemporal chaos. Published Physical Review E 2009.
+- [Spatial Periodic Forcing Can Displace Patterns It Is Intended to Control](https://yairmau.com/archive/papers-md/mau2012spatial): Shows that 1D spatial forcing of pattern-forming systems, meant to control stripe patterns, can instead destabilize or displace them via induced 2D rectangular/oblique patterns. Published Physical Review Letters 2012.

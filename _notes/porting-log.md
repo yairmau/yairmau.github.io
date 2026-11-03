@@ -1,0 +1,61 @@
+# Papers-to-Markdown Porting Log
+
+Started 2026-11-03. Autonomous run — Yair is away. This file collects
+questions, blockers, and decisions made along the way instead of
+interrupting. Read this when you're back.
+
+## Policy decisions made while you were away (flag if you disagree)
+
+- Committing locally after each paper (or small batch) so nothing is lost;
+  pushing to origin periodically at natural checkpoints, not after every
+  single paper.
+- Process: for each paper, use the local PDF already in archive/papers/,
+  extract with pymupdf4llm, clean up by hand into the established template
+  (header, linked citations, inline supplementary info), crop figures
+  directly from PDF coordinates (not pymupdf4llm's auto-crop, which proved
+  unreliable — see feuer2026losses S10/S11 incident).
+- If a PDF has no usable text layer (old scanned paper) or the extraction
+  quality is too poor to trust, I'll log it below and move to the next
+  paper rather than guess.
+
+## Open questions / requests for you
+
+(will be filled in as they come up)
+
+## Progress
+
+| Paper | Status | Notes |
+|---|---|---|
+| feuer2026losses | done (prior session) | pilot paper, template established |
+
+## Triage notes (2026-11-03)
+
+- **mau2009mscthesis**: `papers.yaml` points to `archive/papers/msc_thesis_yair11.pdf`,
+  but that file does not exist anywhere in the repo (not a git issue — it's just
+  never been added). The "PDF" button on the Papers page for this entry is
+  already broken, independent of anything I'm doing. **Need the actual MSc
+  thesis PDF from you to port it; skipping for now.**
+- **mau2013phdthesis** (112 pages): full chapter-by-chapter porting in the same
+  exhaustive per-paper format isn't practical or useful (it's a thesis, not a
+  paper — mostly restates published chapters). My call: give it a lighter
+  page — title, abstract, table of contents, and a link to the full PDF —
+  rather than transcribing all 112 pages. Say if you want it done in full
+  instead.
+- Noticed `archive/papers/kramer-2024-Climate Change Shifts Risk of Soil
+  Salinity and Land Degradation in Water-Scarce Regions.pdf` (42pp) is an
+  orphaned file not referenced by any `papers.yaml` entry — the real
+  `kramer2024climate` entry correctly points to the 10pp
+  `kramer-2025-Climate change shifts...pdf` (presumably the typeset journal
+  version vs. an old manuscript draft). Leaving the orphan alone, not deleting.
+- All other PDFs have a working embedded text layer (checked via pdftotext),
+  including the old 2009-2016 Physical Review papers. Some of those have
+  known OCR/encoding artifacts from old PDF fonts (e.g. "(R)" renders as a
+  garbled CJK-looking glyph) — I'll clean those by hand per paper.
+- Page counts range 4-50 for actual papers (112 for the PhD thesis, see above).
+  Processing roughly shortest-to-longest.
+
+**Update**: Yair says he has the LaTeX source for both theses and will handle
+those himself. Skipping mau2013phdthesis and mau2009mscthesis entirely —
+not doing even the lighter treatment. 24 actual papers left to process.
+| mau2009dual | done | 4pp PRL-style, direct-read + text-coordinate figure cropping (new reusable helper: _notes/crop_figures.py) |
+| mau2012spatial | done | 5pp PRL, same direct-read + coordinate-crop method |

@@ -111,3 +111,20 @@ code {
 //     display: inline;
 //     }
 
+// Paper metadata header (archive/papers-md pages)
+.paper-authors {
+  text-align: center;
+  font-weight: bold;
+  font-size: 105%;
+  margin-bottom: 0.3em;
+}
+
+.paper-affil,
+.paper-meta {
+  text-align: center;
+  color: #888;
+  font-size: 80%;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
