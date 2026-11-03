@@ -152,6 +152,7 @@ mantova2024monitoring:
   year: "2024"
   doi: 10.1111/nph.19621
   pdf: archive/papers/mantova-2024-monitoring urban trees across the world Report from the Urban Trees Ecophysiology Network UTEN inaugural workshop.pdf
+  md: archive/papers-md/mantova2024monitoring/mantova2024monitoring.qmd
   bib: |
       @article{mantova2024monitoring,
           title = {Monitoring urban trees across the world. Report from the Urban Trees Ecophysiology Network (<scp>UTEN</scp>) inaugural workshop: The Urban Trees Ecophysiology Network inaugural workshop,  Georgia Center at the University of Georgia,  Athens,  United States,  March 2023},
@@ -196,6 +197,7 @@ kramer2022effects:
   year: "2022"
   doi: 10.1038/s41545-022-00215-9
   pdf: archive/papers/kramer-2022-Effects of population growth on Israels demand for desalinated water.pdf
+  md: archive/papers-md/kramer2022effects/kramer2022effects.qmd
   bib: |
       @article{kramer2022effects,
           doi = {10.1038/s41545-022-00215-9},

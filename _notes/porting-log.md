@@ -59,3 +59,5 @@ those himself. Skipping mau2013phdthesis and mau2009mscthesis entirely —
 not doing even the lighter treatment. 24 actual papers left to process.
 | mau2009dual | done | 4pp PRL-style, direct-read + text-coordinate figure cropping (new reusable helper: _notes/crop_figures.py) |
 | mau2012spatial | done | 5pp PRL, same direct-read + coordinate-crop method |
+| mantova2024monitoring | done | 5pp New Phytologist forum report, single-column, pymupdf4llm extraction worked cleanly, author-year citation anchors |
+| kramer2022effects | done | 7pp npj Clean Water, single-column, pymupdf4llm extraction very clean (minimal manual cleanup), numbered citation ranges expanded to individual links |
