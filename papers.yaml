@@ -257,6 +257,7 @@ adeyemo2022salinity:
   year: "2022"
   doi: 10.1016/j.geoderma.2022.115765
   pdf: archive/papers/adeyemo-2022-Salinity and sodicity can cause hysteresis in soil hydraulic conductivity.pdf
+  md: archive/papers-md/adeyemo2022salinity/adeyemo2022salinity.qmd
   bib: |
       @article{adeyemo2022salinity,
           doi = {10.1016/j.geoderma.2022.115765},

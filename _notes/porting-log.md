@@ -61,3 +61,4 @@ not doing even the lighter treatment. 24 actual papers left to process.
 | mau2012spatial | done | 5pp PRL, same direct-read + coordinate-crop method |
 | mantova2024monitoring | done | 5pp New Phytologist forum report, single-column, pymupdf4llm extraction worked cleanly, author-year citation anchors |
 | kramer2022effects | done | 7pp npj Clean Water, single-column, pymupdf4llm extraction very clean (minimal manual cleanup), numbered citation ranges expanded to individual links |
+| adeyemo2022salinity | done | 8pp Geoderma, single-column, pymupdf4llm clean, author-year citations, table rendered, supplementary hosted externally (not available to inline) |
