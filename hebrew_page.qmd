@@ -5,7 +5,6 @@ dir: rtl
 echo: false
 jupyter: python3
 section-divs: false
-keep-md: true
 format:
   html:
     css: hebrew_style.css

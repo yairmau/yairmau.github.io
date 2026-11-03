@@ -150,6 +150,14 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="quarto tips – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/more/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="quarto tips – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/more/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -470,7 +478,7 @@ more more more more more more more more more more more more more more more more 
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

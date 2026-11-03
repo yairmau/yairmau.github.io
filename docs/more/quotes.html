@@ -74,6 +74,12 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content=" Quotes – Yair Mau">
+<meta property="og:image" content="https://yairmau.com/more/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content=" Quotes – Yair Mau">
+<meta name="twitter:image" content="https://yairmau.com/more/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -282,7 +288,7 @@ A slow stupefied silence crept over the men as they stared at the computer and t
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

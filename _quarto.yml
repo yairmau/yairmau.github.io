@@ -7,6 +7,11 @@ website:
   search: false
   favicon: archive/site_images/favicon.ico
   google-analytics: "G-43N4LS3BPR"
+  site-url: https://yairmau.com
+  open-graph:
+    image: archive/images/group/yairmau_headshot.png
+  twitter-card:
+    image: archive/images/group/yairmau_headshot.png
   navbar:
     logo: archive/site_images/site-logo-light.png
     pinned: false
@@ -18,14 +23,10 @@ website:
       - group.qmd
       - courses/index.qmd
       - more/index.qmd
-      # - blog.qmd
 format:
   html:
     theme:
-      # - litera
-      # - custom.scss
       light: [flatly, custom.scss, custom-light.scss]
-      # dark: [darkly, custom.scss, custom-dark.scss]
     css: styles.css
     highlight: false
     # https://quarto.org/docs/output-formats/html-code.html#highlighting
