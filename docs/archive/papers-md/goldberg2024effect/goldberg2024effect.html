@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Effect of Mechanical Compaction on the Soil Water Retention Curve: Insights from a Rapid Image Analysis of Micro-CT Scanning – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="The Effect of Mechanical Compaction on the Soil Water Retention Curve: Insights from a Rapid Image Analysis of Micro-CT Scanning – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/goldberg2024effect/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="The Effect of Mechanical Compaction on the Soil Water Retention Curve: Insights from a Rapid Image Analysis of Micro-CT Scanning – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/goldberg2024effect/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#compaction" id="toc-compaction" class="nav-link" data-scroll-target="#compaction">1.1. Compaction</a></li>
+  <li><a href="#water-retention-curve" id="toc-water-retention-curve" class="nav-link" data-scroll-target="#water-retention-curve">1.2. Water Retention Curve</a></li>
+  <li><a href="#micro-ct-and-image-analysis" id="toc-micro-ct-and-image-analysis" class="nav-link" data-scroll-target="#micro-ct-and-image-analysis">1.3. Micro-CT and Image Analysis</a></li>
+  </ul></li>
+  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods">2. Materials and Methods</a>
+  <ul class="collapse">
+  <li><a href="#muct-imaging-of-undisturbed-and-compacted-sand-samples" id="toc-muct-imaging-of-undisturbed-and-compacted-sand-samples" class="nav-link" data-scroll-target="#muct-imaging-of-undisturbed-and-compacted-sand-samples">2.1. <span class="math inline">\mu</span>CT Imaging of Undisturbed and Compacted Sand Samples</a></li>
+  <li><a href="#arrangement-of-soil-void-system" id="toc-arrangement-of-soil-void-system" class="nav-link" data-scroll-target="#arrangement-of-soil-void-system">2.2. Arrangement of Soil Void System</a></li>
+  <li><a href="#computing-soil-wrc-from-muct-data" id="toc-computing-soil-wrc-from-muct-data" class="nav-link" data-scroll-target="#computing-soil-wrc-from-muct-data">2.3. Computing Soil WRC from <span class="math inline">\mu</span>CT Data</a></li>
+  <li><a href="#wrc-physical-measurements" id="toc-wrc-physical-measurements" class="nav-link" data-scroll-target="#wrc-physical-measurements">2.4. WRC – Physical Measurements</a></li>
+  <li><a href="#modeling-the-effect-of-bulk-density" id="toc-modeling-the-effect-of-bulk-density" class="nav-link" data-scroll-target="#modeling-the-effect-of-bulk-density">2.5. Modeling the Effect of Bulk Density</a></li>
+  <li><a href="#linking-the-wrc-to-hydrological-and-agricultural-functions" id="toc-linking-the-wrc-to-hydrological-and-agricultural-functions" class="nav-link" data-scroll-target="#linking-the-wrc-to-hydrological-and-agricultural-functions">2.6. Linking the WRC to Hydrological and Agricultural Functions</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">3. Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#muct-scans-and-observed-impact-of-compaction-on-void-size-distribution" id="toc-muct-scans-and-observed-impact-of-compaction-on-void-size-distribution" class="nav-link" data-scroll-target="#muct-scans-and-observed-impact-of-compaction-on-void-size-distribution">3.1. <span class="math inline">\mu</span>CT Scans and Observed Impact of Compaction on Void Size Distribution</a></li>
+  <li><a href="#muct-image-analysis-to-assess-wrc" id="toc-muct-image-analysis-to-assess-wrc" class="nav-link" data-scroll-target="#muct-image-analysis-to-assess-wrc">3.2. <span class="math inline">\mu</span>CT Image Analysis to Assess WRC</a></li>
+  <li><a href="#impact-of-compaction-on-wrc-and-comparison-to-the-bulk-density-model" id="toc-impact-of-compaction-on-wrc-and-comparison-to-the-bulk-density-model" class="nav-link" data-scroll-target="#impact-of-compaction-on-wrc-and-comparison-to-the-bulk-density-model">3.3. Impact of Compaction on WRC and Comparison to the Bulk Density Model</a></li>
+  <li><a href="#linking-the-wrc-characteristic-to-hydrological-and-agricultural-functions" id="toc-linking-the-wrc-characteristic-to-hydrological-and-agricultural-functions" class="nav-link" data-scroll-target="#linking-the-wrc-characteristic-to-hydrological-and-agricultural-functions">3.4. Linking the WRC Characteristic to Hydrological and Agricultural Functions</a></li>
+  <li><a href="#limitations-of-the-image-analysis-procedures" id="toc-limitations-of-the-image-analysis-procedures" class="nav-link" data-scroll-target="#limitations-of-the-image-analysis-procedures">3.5. Limitations of the Image Analysis Procedures</a></li>
+  </ul></li>
+  <li><a href="#summary-and-conclusions" id="toc-summary-and-conclusions" class="nav-link" data-scroll-target="#summary-and-conclusions">4. Summary and Conclusions</a></li>
+  <li><a href="#open-research" id="toc-open-research" class="nav-link" data-scroll-target="#open-research">Open Research</a></li>
+  <li><a href="#declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" id="toc-declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" class="nav-link" data-scroll-target="#declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process">Declaration of Generative AI and AI-Assisted Technologies in the Writing Process</a></li>
+  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
+  <li><a href="#declaration-of-competing-interest" id="toc-declaration-of-competing-interest" class="nav-link" data-scroll-target="#declaration-of-competing-interest">Declaration of Competing Interest</a></li>
+  <li><a href="#data-availability" id="toc-data-availability" class="nav-link" data-scroll-target="#data-availability">Data Availability</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Effect of Mechanical Compaction on the Soil Water Retention Curve: Insights from a Rapid Image Analysis of Micro-CT Scanning</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Nurit Goldberg-Yehuda<sup>a,b</sup>, Uri Nachshon<sup>b</sup>, Shmuel Assouline<sup>b</sup>, Yair Mau<sup>a,*</sup></p>
+</div>
+<div class="paper-affil">
+<p><sup>a</sup> Institute of Environmental Sciences, The Robert H. Smith Faculty of Agriculture, Food and Environment, The Hebrew University of Jerusalem, Rehovot, Israel &nbsp;·&nbsp; <sup>b</sup> Institute of Soil, Water and Environmental Sciences, Agricultural Research Organization – Volcani Institute, Rishon Lezion, Israel</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Catena 242, 108068 · 2024 · doi: <a href="https://doi.org/10.1016/j.catena.2024.108068">10.1016/j.catena.2024.108068</a></p>
+<p>Received 24 December 2023; revised 18 March 2024; accepted 26 April 2024</p>
+<p>Correspondence: Yair Mau (yair.mau@mail.huji.ac.il)</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Goldberg-Yehuda, N., Nachshon, U., Assouline, S. and Mau, Y. (2024). The effect of mechanical compaction on the soil water retention curve: Insights from a rapid image analysis of micro-CT scanning. Catena, 242, 108068. https://doi.org/10.1016/j.catena.2024.108068</p>
+</blockquote>
+<hr>
+<p><strong>Keywords:</strong> Soil compaction, Water retention, Image analysis, Micro-CT, Void-size distribution</p>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>Soil hydrological and agricultural properties are highly affected by the soil water retention characteristics, which are closely related to the void size distribution and structure of the soil. Agricultural lands are often faced with the challenge of soil compaction, which alters the size, shape, connectivity, and morphology of soil voids. To determine the water retention curve and other hydrological and agricultural functions of un-compacted and compacted sandy soils, we used micro-CT techniques and image analysis procedures in both two and three dimensions. We found that these techniques were reliable, as they were validated against physical measurements and empirical physically-based models, and provided a relatively simple and fast way to characterize the key features of soil hydrological and agricultural properties. The findings highlight the impact of compaction on the soil void size distribution, resulting in increased water holding capacity, greater water availability for root uptake, and reduced hydraulic conductivity. We also discussed the differences between the two and three-dimensional analyses, highlighting the better ability to characterize soil hydrological and agricultural functions and soil water retention curve using the three-dimensional image analysis approach.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<section id="compaction" class="level3">
+<h3 class="anchored" data-anchor-id="compaction">1.1. Compaction</h3>
+<p>Compaction is a major cause of soil degradation in agricultural environments, and seems to be inevitable in modern agriculture (<a href="#ref-hamza2005">Hamza and Anderson, 2005</a>; <a href="#ref-nawaz2013">Nawaz et al., 2013</a>; <a href="#ref-mossadeghi2016">Mossadeghi-Bjorklund et al., 2016</a>; <a href="#ref-keller2022">Keller et al., 2022</a>). Compaction occurs at a variety of scales and may result from anthropogenic and natural processes such as vehicular traffic over the fields, cycles of wetting and drying after tillage, grazing animals, rainfall drops, and roots growth (<a href="#ref-or2000">Or et al., 2000</a>; <a href="#ref-assouline2004">Assouline, 2004</a>, <a href="#ref-assouline2006a">2006a</a>; <a href="#ref-hamza2005">Hamza and Anderson, 2005</a>; <a href="#ref-nawaz2013">Nawaz et al., 2013</a>). Soil compaction is characterized by the increase of soil bulk density and the related decrease of porosity (<a href="#ref-mossadeghi2016">Mossadeghi-Bjorklund et al., 2016</a>). It disturbs the soil void system and alters the void-size distribution, void geometry and morphology, and void connectivity (<a href="#ref-horn1995">Horn et al., 1995</a>; <a href="#ref-mossadeghi2016">Mossadeghi-Bjorklund et al., 2016</a>; <a href="#ref-goldberg2022">Goldberg-Yehuda et al., 2022</a>). These changes in soil structure have a significant impact on soil hydraulic properties, soil water retention characteristics, and soil hydraulic conductivity, resulting in the formation of preferential flow paths and reduced soil aeration (<a href="#ref-horn1995">Horn et al., 1995</a>; <a href="#ref-assouline1997">Assouline et al., 1997</a>; <a href="#ref-hendrickx2001">Hendrickx and Flury, 2001</a>; <a href="#ref-smith2001">Smith et al., 2001</a>; <a href="#ref-assouline2006a">Assouline, 2006a</a>,<a href="#ref-assouline2006b">b</a>; <a href="#ref-ngocong2021">Ngo-Cong et al., 2021</a>).</p>
+</section>
+<section id="water-retention-curve" class="level3">
+<h3 class="anchored" data-anchor-id="water-retention-curve">1.2. Water Retention Curve</h3>
+<p>The soil water retention curve (WRC) is a fundamental soil hydraulic characteristic that describes the relationship between the soil matric potential (or capillary head), <span class="math inline">\psi</span>, and the volumetric water content, <span class="math inline">\theta</span>. It is indispensable for the solution of the equations that describe water flow processes in soils (<a href="#ref-assoulineor2013">Assouline and Or, 2013</a>). The WRC is strongly related to the soil structure and the resulting void size distribution (<a href="#ref-assouline2005">Assouline, 2005</a>; <a href="#ref-pires2008">Pires et al., 2008</a>; <a href="#ref-zhou2017">Zhou et al., 2017</a>).</p>
+<p>In principle, large voids are the first to drain, due to their low matric suction, and the finer voids hold water at higher levels of water suction (<a href="#ref-or2002">Or et al., 2002</a>; <a href="#ref-easton2016">Easton and Bock, 2016</a>). Therefore, the shape of the WRC is related to the probability function of the void size of the soil, and its derivative with regards to <span class="math inline">\psi</span>, can express the corresponding void size distributions (<a href="#ref-tuller1999">Tuller et al., 1999</a>; <a href="#ref-assouline2005">Assouline, 2005</a>; <a href="#ref-assouline2021">Assouline, 2021</a>; <a href="#ref-jabro2022">Jabro and Stevens, 2022</a>).</p>
+<p>Several traditional methods are available for measuring the WRC, such as the hanging water column (<a href="#ref-dane2002">Dane and Hopmans, 2002</a>; <a href="#ref-schelle2013">Schelle et al., 2013</a>), the suction table (<a href="#ref-klute1986">Klute, 1986</a>; <a href="#ref-dane2002">Dane and Hopmans, 2002</a>), the pressure cell (<a href="#ref-klute1986">Klute, 1986</a>; <a href="#ref-dane2002">Dane and Hopmans, 2002</a>), the pressure plate extractor (<a href="#ref-klute1986">Klute, 1986</a>; <a href="#ref-dane2002">Dane and Hopmans, 2002</a>; <a href="#ref-schindler2012">Schindler et al., 2012</a>), and the HYdraulic PROPerty analyzer (<a href="#ref-schindler2015">Schindler et al., 2015</a>). Among these methods, the hanging water column and the pressure plate extractor are the most commonly used for measuring the WRC. In the hanging water column method, a negative pressure is applied to the soil sample, causing the water to flow out until hydraulic equilibrium is achieved (<a href="#ref-dane2002">Dane and Hopmans, 2002</a>; <a href="#ref-schelle2013">Schelle et al., 2013</a>). In the pressure plate extractor method, positive pressure is applied to the soil sample, and the water drainage is measured (<a href="#ref-dane2002">Dane and Hopmans, 2002</a>; <a href="#ref-schelle2013">Schelle et al., 2013</a>). However, both methods are laborious and time-consuming (<a href="#ref-assoulineor2013">Assouline and Or, 2013</a>).</p>
+<p>The WRC plays a crucial role in hydrological and agricultural functions as it provides direct and indirect information about soil hydraulic properties, including plant-available water in soil, hydraulic conductivity function, predicting unsaturated water flow, saturation degree at field capacity, infiltration capacity curve, and more (<a href="#ref-schelle2013">Schelle et al., 2013</a>; <a href="#ref-assouline2021">Assouline, 2021</a>). Numerous WRC models have been developed to model soil water dynamics and solute transport because of its importance (<a href="#ref-brooks1964">Brooks and Corey, 1964</a>; <a href="#ref-campbell1974">Campbell, 1974</a>; <a href="#ref-vangenuchten1980">van Genuchten, 1980</a>; <a href="#ref-arya1981">Arya and Paris, 1981</a>; <a href="#ref-assouline1998">Assouline et al., 1998</a>; <a href="#ref-zhou2017">Zhou et al., 2017</a>). The most widely used empirical models for WRC are the Brooks and Corey (1964) and the van Genuchten (1980) models. Additionally, different models use the WRC to describe unsaturated hydraulic conductivity of the soil (<a href="#ref-mualem1986">Mualem, 1986</a>; <a href="#ref-assouline2001">Assouline, 2001</a>), as well as other hydrological functions of the soil related to drainage, evaporation, and water availability for plants (<a href="#ref-assouline2021">Assouline, 2021</a>). Assouline (2006a) proposed an empirical approach that models the effect of changes in soil bulk density on the WRC, enabling relatively accurate predictions of the impact of compaction on the soil WRC. Therefore, this model will be used here and its predictions will be compared to the WRC data generated by Micro–computed tomography (<span class="math inline">\mu</span>CT) techniques and image analysis procedures, as detailed below.</p>
+</section>
+<section id="micro-ct-and-image-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="micro-ct-and-image-analysis">1.3. Micro-CT and Image Analysis</h3>
+<p><span class="math inline">\mu</span>CT is an effective method to characterize soil void networks (<a href="#ref-katuwal2015">Katuwal et al., 2015</a>; <a href="#ref-hamamoto2016">Hamamoto et al., 2016</a>; <a href="#ref-singh2021">Singh et al., 2021</a>). This technique generates two dimensional (2D) cross-sections of the scanned samples with a spatial resolution of a few microns (<a href="#ref-skarzynski2016">Skarzynski and Tejchman, 2016</a>). By assembling thousands of these cross-sections, three dimensional (3D) images of the sample can be generated (<a href="#ref-cnudde2013">Cnudde and Boone, 2013</a>; <a href="#ref-skarzynski2016">Skarzynski and Tejchman, 2016</a>). <span class="math inline">\mu</span>CT has become an essential research tool in various disciplines including physics (<a href="#ref-sheppard2014">Sheppard et al., 2014</a>), biology and toxicology (<a href="#ref-wise2013">Wise et al., 2013</a>), geosciences (<a href="#ref-cnudde2006">Cnudde et al., 2006</a>), and medical fields (<a href="#ref-swain2009">Swain and Xue, 2009</a>). Despite its advantages, the <span class="math inline">\mu</span>CT technique also has some noteworthy disadvantages. One of these is that it requires a significant amount of computing power to manipulate and analyze the 3D images. Additionally, removing noise and handling artifacts can be challenging and subjective, requiring expertise and experience. Finally, for soil science purposes, <span class="math inline">\mu</span>CT may not be suitable for very fine-textured soils due to resolution limitations (<a href="#ref-zhou2017">Zhou et al., 2017</a>).</p>
+<p>In recent years, <span class="math inline">\mu</span>CT and image analysis methods have been employed to quantify 3D soil structures from void scale to core scale (<a href="#ref-helliwell2013">Helliwell et al., 2013</a>; <a href="#ref-zhou2017">Zhou et al., 2017</a>), and to study soil structure, void network continuity and geometry (<a href="#ref-taina2008">Taina et al., 2008</a>; <a href="#ref-helliwell2013">Helliwell et al., 2013</a>). Quantitative understanding of these properties may allow for the generation of a WRC in a relatively simple, fast and nondestructive manner. Previous works have shown that WRC of coarse texture porous media can be estimated from three dimensional representation of the matrix as a complex network of pores and throats, generated from <span class="math inline">\mu</span>CT (<a href="#ref-bhattad2011">Bhattad et al., 2011</a>; <a href="#ref-mahabadi2016">Mahabadi et al., 2016</a>). However, as mentioned above, these procedures require high computing power in order to generate the three dimensional structures and to model the pore-throat network of the examined domain. Our study presents a new approach to generate soil WRC using high-resolution <span class="math inline">\mu</span>CT and image analysis procedures. This paper discusses the advantages and disadvantages of both 2D and 3D image analysis methods, while considering the possibility of analyzing pore size distribution only in 2D without the need of computing the complex three dimensional network of pores and throats. Recently Ngo-Cong et al.&nbsp;(2021) have shown experimentally, for fine textured soils, that changes in pore size distribution due to compaction is sufficient to estimate changes to soil WRC. Here we characterize the effect of soil compaction on WRC, for coarse textured soil, using the image analysis method and validate it by comparing it to the physically-based empirical model of Assouline (2006a).</p>
+</section>
+</section>
+<section id="materials-and-methods" class="level2">
+<h2 class="anchored" data-anchor-id="materials-and-methods">2. Materials and Methods</h2>
+<p>This study is composed of three parts. Firstly, the impact of compaction on sandy soil void size distribution is studied using X-ray <span class="math inline">\mu</span>CT and 2D and 3D image analyses. Secondly, soil WRC is generated for both compacted and un-compacted soils using the information about void size distribution acquired through the image analysis procedures, and the results will be compared to Assouline’s model predictions (<a href="#ref-assouline2006a">Assouline, 2006a</a>) for validation. Finally, the computed WRC is used to estimate the impact of compaction on various soil hydraulic and hydrological properties.</p>
+<section id="muct-imaging-of-undisturbed-and-compacted-sand-samples" class="level3">
+<h3 class="anchored" data-anchor-id="muct-imaging-of-undisturbed-and-compacted-sand-samples">2.1. <span class="math inline">\mu</span>CT Imaging of Undisturbed and Compacted Sand Samples</h3>
+<p>A non-destructive imaging technique using high-resolution <span class="math inline">\mu</span>CT (SKYSCAN 1172, Bruker, Kontich, Belgium) was employed to image sand samples before and after compaction. The X-ray source voltage was 80 kV, and the electrical current was 0.1 mA. Scans were conducted with aluminum and copper filters, and sample rotation of 0.2°. The software NRecon (Bruker, Kontich, Belgium) reconstructed images with a voxel resolution of 4.42 <span class="math inline">\mu</span>m. Image analyses were performed using Python and ParaView, as described below.</p>
+<p>Quarry coarse sand (quartz) with a mean grain diameter of approximately 500 <span class="math inline">\mu</span>m (sand characteristics can be found in <a href="#ref-nachshon2016">Nachshon, 2016</a>) was packed into Polyvinyl Chloride (PVC) tubes, which were open at the top and sealed at the bottom. The tubes were 20 mm long and had a diameter of 16 mm. The sand columns were scanned before and after mechanical compaction, which was achieved using a hand-operated press that fitted exactly into the inner diameter of the column. The sand samples were compressed by slowly pushing the shaft downward to generate a one-dimensional confined compression. The samples were compressed down to a decrease of 2 mm in the total length of the sand sample, resulting in an increase of approximately 10% in the bulk density of the samples. The soil bulk mass was 4.78 g.</p>
+<p>This sand was chosen because its grain and void texture is coarse, thus, with the 4.42 <span class="math inline">\mu</span>m resolution of the <span class="math inline">\mu</span>CT, the x-ray absorbance yields good image contrast between the dense medium (quartz, shown in dark shades) and voids (light shades). However, the resolution of the device would not allow us to distinguish between smaller particles and image noise in finer textured soils.</p>
+<p>The high-resolution <span class="math inline">\mu</span>CT scans were used to analyze the soil structure of the sand samples at two different depths: the top 7 mm and at a depth of 9–18 mm. Goldberg-Yehuda et al.&nbsp;(2022) found that the effect of compaction decreases with distance from the source of pressure, and in the specific sand and under the experimental conditions, the impact of compaction is not observed at depths greater than 9 mm. Henceforth, the top and lower levels of the scanned samples will be referred to as ‘compacted’ and ‘un-compacted’, respectively. The results of both levels were then utilized to characterize the impact of compaction on the void size distribution and void network of the sand. The obtained void data was further used to generate the WRC of both the compacted and uncompacted samples.</p>
+<p>Each <span class="math inline">\mu</span>CT scan generates hundreds of images of 2D transects of the sample with a 4.42 <span class="math inline">\mu</span>m distance between adjacent slices. For image analysis, both 2D and 3D procedures were performed. For the 2D analysis, 100 random transects were selected from the thousands of images, and for the 3D analysis, 1800 2D slices were assembled together to form the 3D structure. Both 2D and 3D images were analyzed using Python, as detailed below.</p>
+</section>
+<section id="arrangement-of-soil-void-system" class="level3">
+<h3 class="anchored" data-anchor-id="arrangement-of-soil-void-system">2.2. Arrangement of Soil Void System</h3>
+<p>It is important to note that this approach considers a full draining of the voids, which ignores the fact that the water content of any drained porous media cannot go below the residual water content of the matrix. Therefore, in the calculation process of water draining, we assumed that only 90% of the void was drained. For each <span class="math inline">\psi</span>, only 90% of the drained water volume was taken into account, and the remaining 10% was considered as residual water. This value was chosen as this is roughly the known residual water content of the examined coarse sand (<a href="#ref-nachshon2016">Nachshon, 2016</a>).</p>
+<p>To obtain the void size distribution from the scanned samples, Python was used for image analysis, as described below:</p>
+<p>For the 2D analysis, 100 vertical transects were randomly selected from both the compacted and un-compacted samples. The edges of the transects were removed to avoid boundary effects, resulting in images of size 1800×1800 pixels (7.96 mm each side). For the 3D analysis, 1800 2D transects were cropped from the center of the scanned sample to a size of 1800 × 1800 pixels and assembled together to generate the 3D structure (7.96 mm on each side).</p>
+<p>To reduce noise (reconstruction artifacts) in the 2D slices, the gray scale images were converted into binary images of black and white for the sand grains and voids, respectively. For the 3D analysis, both binary conversion and noise reduction were performed after constructing the 3D image. Noise reduction for both sets included ‘Dilation’ and ‘Erosion’ morphology and a Gaussian filter, all part of the Python’s Scipy library (<a href="#ref-virtanen2020">Virtanen et al., 2020</a>). For the 3D analysis, ‘Remove small objects’ morphology was performed using the Python’s scikit-image library (<a href="#ref-vanderwalt2014">Van Der Walt et al., 2014</a>).</p>
+<p>To generate 2D and 3D void network representations, we used the Python’s PoreSpy (<a href="#ref-gostick2019">Gostick et al., 2019</a>) and OpenPNM (<a href="#ref-gostick2016">Gostick et al., 2016</a>) packages. The process undertaken by the PoreSpy package, as outlined in Gostick et al.&nbsp;(2016) and <a href="#ref-gostick2017">Gostick (2017)</a>, involves the construction of void networks of throats and pores from the 2D or 3D images. The process comprises of several key steps: (1) the calculation of Euclidean distances in the empty regions and peak identification; (2) the segmentation of the distance map into different watersheds (pores); and (3) the conversion of the segmented watersheds into geometrical features, such as pore volume and throat size.</p>
+</section>
+<section id="computing-soil-wrc-from-muct-data" class="level3">
+<h3 class="anchored" data-anchor-id="computing-soil-wrc-from-muct-data">2.3. Computing Soil WRC from <span class="math inline">\mu</span>CT Data</h3>
+<p>The 2D and 3D image analysis procedures detailed above provided void network data and detailed information about size distribution of voids in the scanned samples. In the analyzed images, each void’s area or volume (for 2D and 3D, respectively) was represented by an effective circle or a sphere, from which the void radius was extracted. This radius represents the void’s ability to hold water under matric suction, as described by the Young–Laplace equation:</p>
+<p><span class="math display">
+\psi = \frac{2\gamma\cos\phi}{\rho g r}, \tag{1}
+</span></p>
+<p>Here, <span class="math inline">\psi</span> is the matric suction (m), <span class="math inline">\gamma</span> is the liquid surface tension (for water, it is 0.0727 kg/s²), <span class="math inline">\phi</span> is the contact angle between the liquid and solid phases (considered to be zero for water and quartz, with <span class="math inline">\cos\phi \approx 1</span>), <span class="math inline">\rho</span> is the water density (1000 kg/m³), <span class="math inline">g</span> is the acceleration due to gravity (9.8 m/s²), and <span class="math inline">r</span> is the void radius (m). For suctions greater than <span class="math inline">\psi</span>, the void is considered drained of its water.</p>
+<p>To calculate the volumetric water content (<span class="math inline">\theta</span>) of the entire sample, we divided the void volume by the total volume of the sample. For 2D images, the term “volume” should be understood as area. We then used void size distribution data to compute the volume of drained water from the void network at various matric potentials to generate the WRC from the <span class="math inline">\mu</span>CT scans. Equation (1) was used to calculate <span class="math inline">\psi</span> for each void in the system. The total drained water was calculated for each <span class="math inline">\psi</span> by summing up all voids drained at this specific suction. Finally, <span class="math inline">\theta(\psi)</span> was calculated as the remaining water (not drained) divided by the total volume.</p>
+</section>
+<section id="wrc-physical-measurements" class="level3">
+<h3 class="anchored" data-anchor-id="wrc-physical-measurements">2.4. WRC – Physical Measurements</h3>
+<p>The WRC was physically measured using the hanging column method (<a href="#ref-schelle2013">Schelle et al., 2013</a>), in which a 100 g sample of the undisturbed sand was placed on a porous cup that was hydraulically connected to a hanging water column. Initially, the sand was saturated, and the hanging water column was gradually lowered in 2 cm intervals to create conditions of an increasing suction. The amount of drained water from the sample was measured for each suction, and the corresponding water content versus matric potential was calculated. The hanging column was lowered only after reaching hydrostatic conditions for a few hours, with no further water drainage at the examined suction.</p>
+<p>The physical measurements revealed that the porosity values computed from the <span class="math inline">\mu</span>CT images were slightly underestimated. Therefore, the computed porosities were multiplied by a correction factor, <span class="math inline">f</span>, which is further explained in the results section.</p>
+</section>
+<section id="modeling-the-effect-of-bulk-density" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-the-effect-of-bulk-density">2.5. Modeling the Effect of Bulk Density</h3>
+<p>The validation of the undisturbed samples’ WRC, generated using the image analysis procedures, was performed by comparing the computed WRC with physically measured ones. In addition, the compacted WRC generated from <span class="math inline">\mu</span>CT scans was validated using Assouline’s (2006a) model. This model was selected because it incorporates the impact of changes in soil bulk density due to compaction on the soil WRC. It accounts for four parameters: saturated water content (<span class="math inline">\theta_s</span>), residual water content (<span class="math inline">\theta_r</span>), <span class="math inline">\alpha</span>, and <span class="math inline">\mu</span>. <span class="math inline">\alpha</span> and <span class="math inline">\mu</span> are fitting parameters in the WRC equation that relates the effective degree of saturation, <span class="math inline">S_e = (\theta-\theta_r)/(\theta_s-\theta_r)</span>, to <span class="math inline">\psi</span>:</p>
+<p><span class="math display">
+S_e(\psi) = 1 - \exp\left[-\alpha\left(|\psi|^{-1} - |\psi_L|^{-1}\right)^\mu\right], \qquad 0 \leqslant |\psi| \leqslant |\psi_L| \tag{2}
+</span></p>
+<p>Here, <span class="math inline">\psi_L</span> is the capillary head corresponding to a very low water content, <span class="math inline">\theta_L</span>, representing the limit of the WRC domain of interest. In this study, <span class="math inline">|\psi_L|</span> was 1 m and <span class="math inline">\theta_L = \theta_r</span>.</p>
+<p>The model states that for compacted soil conditions where soil bulk density has increased, the saturated water content of the compacted soil changes according to:</p>
+<p><span class="math display">
+\theta_{sc} = \theta_s\left(\frac{\rho_s-\rho_c}{\rho_s-\rho}\right), \tag{3}
+</span></p>
+<p>where <span class="math inline">\theta_{sc}</span> is the saturated water content of the compacted soil, <span class="math inline">\theta_s</span> is the initial saturated water content of the soil before compaction, <span class="math inline">\rho_s</span> is the soil particle density (2.65 g/cm³), <span class="math inline">\rho_c</span> is the compacted bulk density, and <span class="math inline">\rho</span> is the initial bulk density.</p>
+<p>The volumetric residual water content of the compacted soil is given by:</p>
+<p><span class="math display">
+\theta_{rc} = \left(\frac{\rho_c}{\rho}\right)\theta_r, \tag{4}
+</span></p>
+<p>where <span class="math inline">\theta_{rc}</span> is the volumetric residual water content of compacted soil, and <span class="math inline">\theta_r</span> is the residual water content before compaction.</p>
+<p>The impact of changes in soil bulk density on the <span class="math inline">\alpha</span> and <span class="math inline">\mu</span> parameters is described by:</p>
+<p><span class="math display">
+\alpha_c = \left(\frac{\rho_c}{\rho}\right)^{3.72}\alpha, \qquad \mu_c = \left(\frac{\rho_c}{\rho}\right)^{2.3}\mu, \tag{5,6}
+</span></p>
+<p>where <span class="math inline">\alpha_c</span> and <span class="math inline">\mu_c</span> are the fitting parameters of the compacted soil, while <span class="math inline">\alpha</span> and <span class="math inline">\mu</span> are for the initial undisturbed conditions.</p>
+</section>
+<section id="linking-the-wrc-to-hydrological-and-agricultural-functions" class="level3">
+<h3 class="anchored" data-anchor-id="linking-the-wrc-to-hydrological-and-agricultural-functions">2.6. Linking the WRC to Hydrological and Agricultural Functions</h3>
+<p>A recent study by <a href="#ref-assouline2021">Assouline (2021)</a> has demonstrated how the WRC can be used to characterize various agricultural and hydrological variables of soil, such as the effective saturation degree at field capacity (<span class="math inline">S_{eFC}</span>), relative hydraulic conductivity at field capacity (<span class="math inline">K_{rFC}</span>), soil available water capacity (AWC), and duration of stage one evaporation (<span class="math inline">t_{s1}</span>).</p>
+<p>These relationships were used here to demonstrate the impact of compaction on hydrological and agricultural functions of the soil. All the relationships use the coefficient of variation, <span class="math inline">\varepsilon</span> (–), to characterize the WRC:</p>
+<p><span class="math display">
+\varepsilon = \frac{\sqrt{\Gamma\left(1+\frac{2}{\mu}\right) - \Gamma\left(1+\frac{1}{\mu}\right)^2}}{\Gamma\left(1+\frac{1}{\mu}\right)\left(1+|\psi_L|^{-1}\right)}, \tag{7}
+</span></p>
+<p>where <span class="math inline">\Gamma</span> is the complete gamma function, and all other parameters are as detailed in Equation (2).</p>
+<p>Changes in the effective saturation degree at field capacity due to compaction can be described by the following linear expression:</p>
+<p><span class="math display">
+S_{eFC} = 0.22\,\varepsilon + 0.16. \tag{8}
+</span></p>
+<p>The following equations describe the impact of compaction on various soil agricultural and hydrological variables, specifically the relative hydraulic conductivity at field capacity (<span class="math inline">K_{rFC}</span>), available water capacity (AWC), and duration of stage one of evaporation (<span class="math inline">t_{s1}</span>), as a function of <span class="math inline">\varepsilon</span>:</p>
+<p><span class="math display">
+\begin{aligned}
+K_{rFC} &amp;= -0.0053\,\varepsilon + 0.0098 \tag{9}\\
+\text{AWC} &amp;= 0.075\,\varepsilon + 0.035 \tag{10}\\
+t_{s1} &amp;= -115.48\,\varepsilon^2 + 152.61\,\varepsilon - 24.525. \tag{11}
+\end{aligned}
+</span></p>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">3. Results and Discussion</h2>
+<p>The results are presented in four sections. The first section describes the impact of compaction on void size distribution. The second section focuses on estimating sand WRC using image analysis of 2D and 3D <span class="math inline">\mu</span>CT scans. The third section examines the effect of compaction on the WRC and validates the results obtained by the image analysis method with respect to the bulk density model of Assouline (2006a). The fourth and final section discusses the compaction effect on soil hydrological and agricultural functions.</p>
+<section id="muct-scans-and-observed-impact-of-compaction-on-void-size-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="muct-scans-and-observed-impact-of-compaction-on-void-size-distribution">3.1. <span class="math inline">\mu</span>CT Scans and Observed Impact of Compaction on Void Size Distribution</h3>
+<p>The study employed 2D and 3D image analysis procedures to examine the effects of compaction on void size distribution and void network characteristics of un-compacted and compacted sand samples. Fig. 1 illustrates the image analysis procedure for the 2D images for both conditions. The <span class="math inline">\mu</span>CT scan produces a 2D grayscale image, where gray levels indicate the density of the scanned element. Dark colors denote low density (air), while brighter colors high density (solid) (Fig. 1, panels a1 and b1). A cleaning procedure is applied to remove noise and artifacts and generate a binary image, where voids and sand particles are segmented (Fig. 1, panels a2 and b2). A void network is then computed based on the binary images, showing the locations and sizes of the voids (Fig. 1, panels a3 and b3).</p>
+<p>The images in Fig. 1 show that compaction of the sandy medium results in a reduction of total porosity and void sizes. This reduction is most noticeable in the void-network analysis. The un-compacted sample (Fig. 1a3) displays a greater proportion of reddish/warmer spheres, which represent larger voids, in comparison to the compacted state (Fig. 1b3).</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>Fig. 1 | 2D image analysis for un-compacted (a), and compacted (b) sand samples.</strong> Panels a1,b1: <span class="math inline">\mu</span>CT 2D grayscale cross-section scans (1800 × 1800 pixel). Panels a2, b2: Binary images after noise cleaning. Panels a3,b3: computed void networks. In (3) the variation of the colors in the void network indicates the different sizes of void radius, where warm (cold) colors denote larger (smaller) voids.</p>
+<p>A similar analysis was also performed on 3D images (Fig. 2) providing even greater clarity on how compaction decreases void sizes, as seen in the 3D network visualization. In this visualization, it is apparent that the compacted sample’s void network (Fig. 2b2) has a more complex and branched structure, containing many small voids and far fewer large voids compared to the un-compacted state (Fig. 2a2).</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>Fig. 2 | 3D image analysis for un-compacted (a), and compacted (b) sand samples.</strong> Panels a1,b1: 3D images (blue denotes solid and red void). Panels a2,b2: void network. Panels a3,b3: images together with void network, for un-compacted (top row) and compacted (bottom row) samples. The variation of the colors in the void network indicates the different sizes of void radius, where warm (cold) colors denote larger (smaller) voids.</p>
+<p>Continuing from the above observations, the data obtained from the 2D and 3D void-network analyses using the PoreSpy package were used to generate a quantitative representation of the void size distribution for both un-compacted and compacted samples. Fig. 3 shows the void size distribution for both un-compacted and compacted samples, indicating that the compacted samples’ radius distribution is skewed towards the smaller voids in both 2D and 3D analyses. The maximal probability density of 23 and 35 mm⁻¹ for void radii of ~0.022 mm and ~0.019 mm for the compacted sample is compared to a peak of 21 and 35 mm⁻¹ of void radii of ~0.023 mm and ~0.018 mm for the un-compacted sample (2D and 3D, respectively). Additionally, the un-compacted domain has a higher density for radii larger than 0.078 and 0.05 mm (2D and 3D, respectively).</p>
+<p>The porosity of the scanned medium can be determined by calculating the ratio of the void volume to the volume of the entire (binary) image. Table 1 displays the computed porosity of the un-compacted and compacted samples based on the 2D and 3D images, together with porosity values obtained from physical measurements of bulk density.</p>
+<p><strong>Table 1 | Porosity values from physical measurements and (2D and 3D) image analyses for the compacted and uncompacted samples.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Physical measurements</th>
+<th>2D Image analysis</th>
+<th>3D Image analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compacted porosity [-]</td>
+<td>0.37</td>
+<td>0.33</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>Uncompacted porosity [-]</td>
+<td>0.41</td>
+<td>0.36</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>Change of porosity due to compaction [%]</td>
+<td>9.75</td>
+<td>7.57</td>
+<td>4.42</td>
+</tr>
+</tbody>
+</table>
+<p>For the compacted porosity, a discrepancy of 12% and 9% is found between the physical measurements and image analysis (2D and 3D, respectively, see first row in the table). Also, the 2D and 3D analyses underestimate the change in porosity due to compaction (last row in the table). Nonetheless, a significant reduction in porosity, approximately between 5 and 10%, was measured for the compacted samples compared to the uncompacted, for both physical measurements and 2D/3D image analysis procedures. These observations are important as they indicate that the <span class="math inline">\mu</span>CT scans and image analysis procedures capture the physical changes and reduced porosity of the compacted sandy soil samples. However, the absolute values obtained from the <span class="math inline">\mu</span>CT scans are not entirely accurate due to the technical limitations such as imperfect cleaning and segmentation processes of the 2D and 3D images. To correct these disparities and to provide a comparative basis of the WRC that will be presented later, it is proposed to rescale the void size radii obtained from the <span class="math inline">\mu</span>CT scans by multiplying these readings by a correction factor, <span class="math inline">f^{1/n}</span>, where</p>
+<p><span class="math display">
+f = \frac{\theta_p}{\theta_{CT}}, \tag{12}
+</span></p>
+<p><span class="math inline">\theta_p</span> and <span class="math inline">\theta_{CT}</span> are physically measured porosity and <span class="math inline">\mu</span>CT scans obtained porosity, and <span class="math inline">n</span> is the dimension of the analyzed images (2 and 3). The intuition behind the exponent <span class="math inline">1/n</span> is that the porosity scales with the pore radii to the power <span class="math inline">n</span>. Table 2 presents the correction factor <span class="math inline">f</span>, which will be used for the 2D and 3D images under the un-compacted and compacted conditions.</p>
+<p><strong>Table 2 | <span class="math inline">f</span> values for un-compacted and compacted samples, for both 2D and 3D image analysis.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>3D Image analysis</th>
+<th>2D Image analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uncompacted <span class="math inline">f</span> [-]</td>
+<td>1.16</td>
+<td>1.15</td>
+</tr>
+<tr class="even">
+<td>Compacted <span class="math inline">f</span> [-]</td>
+<td>1.10</td>
+<td>1.13</td>
+</tr>
+</tbody>
+</table>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>Fig. 3 | Void size distribution for un-compacted and compacted sand samples obtained from the 2D and 3D <span class="math inline">\mu</span>CT analyses.</strong></p>
+<p>The reduction in porosity and void sizes observed in Figs. 1–3 and Table 1 is consistent with findings from previous studies on the impact of compaction on soil physical properties (<a href="#ref-liu2021">Liu et al., 2021</a>; <a href="#ref-goldberg2022">Goldberg-Yehuda et al., 2022</a>). However, assessing the quantitative impact of compaction on hydraulic properties, especially on the WRC, is more complex and there is limited literature on this topic (<a href="#ref-naveed2016">Naveed et al., 2016</a>). The following sections will discuss a relatively simple procedure that uses void size distribution data obtained from <span class="math inline">\mu</span>CT 2D and 3D images to characterize water retention properties of the sandy media before and after compaction.</p>
+</section>
+<section id="muct-image-analysis-to-assess-wrc" class="level3">
+<h3 class="anchored" data-anchor-id="muct-image-analysis-to-assess-wrc">3.2. <span class="math inline">\mu</span>CT Image Analysis to Assess WRC</h3>
+<p>As described in the Materials and Methods section, the WRC was estimated by considering the void size distribution of the scanned samples and computing the amount of water released by the sample at different successive matric suctions using the Young-Laplace Equation. The void radii obtained from image analyses, both 2D and 3D, were multiplied by <span class="math inline">f^{1/n}</span> as detailed in Table 2. The computed WRC of the uncompacted sand was compared to the measured WRC in four replicates using the hanging column method. Due to inherent variability of packing, the different replicates had slightly different levels of bulk density and porosity. Therefore, all measured WRCs were standardized to a porosity of 0.41 cm³/cm³ corresponding to a bulk density of 1.56 g/cm³, as detailed in Table 1, using Assouline’s (2006a) model that links changes in bulk density to WRC.</p>
+<p>Fig. 4 presents the measured and computed water retention curves of the un-compacted sand, for 2D image analysis (blue) and 3D image analysis (orange). The computed WRCs were found to be in agreement with the measured WRCs (four samples denoted by dotted lines, their average by the solid black line), and some differences were observed between the measured air entry value (~0.05 cm) and the computed air entry value obtained from the 2D images (~0.03 cm). The air entry value computed from the 3D image analysis (~0.05 cm) was in better agreement with the measured value. The good agreement between the WRCs obtained by the 2D/3D analyses and the measured curves demonstrates the strength of the proposed approach to compute WRC from 2D and 3D <span class="math inline">\mu</span>CT scans, and suggests that this method could be used to estimate the WRC of granular media.</p>
+<p><img src="./images/figure4.png" class="img-fluid"></p>
+<p><strong>Fig. 4 | WRC of the physically measured samples (dotted lines), their averaged WRC (solid black line), and computed WRC from void size distribution, obtained from the 2D and 3D <span class="math inline">\mu</span>CT analyses (blue and orange lines, respectively).</strong></p>
+</section>
+<section id="impact-of-compaction-on-wrc-and-comparison-to-the-bulk-density-model" class="level3">
+<h3 class="anchored" data-anchor-id="impact-of-compaction-on-wrc-and-comparison-to-the-bulk-density-model">3.3. Impact of Compaction on WRC and Comparison to the Bulk Density Model</h3>
+<p>The proposed approach to compute WRC from 2D/3D image analysis of <span class="math inline">\mu</span>CT scanned samples is user-friendly and enables the characterization of soil WRC for both disturbed (e.g., compacted) and undisturbed soil samples.</p>
+<p>As mentioned earlier, <a href="#ref-assouline2006a">Assouline (2006a)</a> developed a model that predicts the resulting WRC of a compacted soil based on the WRC at a reference bulk density and the actual bulk density after compaction. This model was used here to validate the <span class="math inline">\mu</span>CT image analysis approach for computing soil WRC after compaction. To this end, the soil WRCs of sand samples were computed using the 2D/3D image analysis procedures prior to and following compaction, and compared to the WRC resulting from the model for the corresponding conditions (Table 1). Fig. 5 depicts the WRCs obtained from both the image processing approach and the model. First, it can be seen that the image analysis approach accurately reproduced the expected effect of compaction on the WRC (as shown by the solid lines in panels a and b). Second, both the 2D and 3D curves show similar behavior to the WRC predicted by the model (dashed line). The root mean square error was 0.02 for the 2D image analysis and 0.007 for the 3D analysis.</p>
+<p>However, some differences were observed in the air entry value, which is influenced by the largest voids. The predicted air entry value after compaction was overestimated (by 47% in the 2D and 24% in the 3D) compared to the computed values obtained by the image analysis method. This could be due to inaccuracies in image cleaning and segmentation, particularly for the large voids.</p>
+<p><img src="./images/figure5.png" class="img-fluid"></p>
+<p><strong>Fig. 5 | WRC from 2D (a) and 3D (b) image analysis for the un-compacted and compacted samples, and the predicted curves by the model (dashed lines).</strong> Panels c and d show the normalized WRC to emphasize the differences induced by compaction.</p>
+<p>Fig. 5c,d shows the normalized WRCs obtained from the image analysis procedures for both the un-compacted and compacted samples. The curves were normalized with respect to <span class="math inline">\theta_s</span> to highlight the differences induced by compaction. The main differences are: (1) the air entry value; and (2) the curve shape, which is affected by the void size distribution of the sample.</p>
+<p>Compaction results in an increase in the air entry value (Fig. 5c,d), which is due to the reduction in void sizes in the compacted soils (Figs. 2 and 3). This leads to an increase in the soil water retention.</p>
+<p>With respect to the slope of the curves, it can be seen that the compacted sample curves have a more moderate slope compared to the uncompacted curves, for both 2D and 3D (Fig. 5c,d). The differences in curve slope reflect the variance in void size distribution, where a steep slope indicates a relatively uniform void size distribution, and a moderate slope indicates a wider range of void sizes. The changes in void size distribution of the compacted sand are a result of void compaction (Fig. 3), as well as breaking of some of the sand particles, which creates more voids at various sizes (<a href="#ref-goldberg2022">Goldberg-Yehuda et al., 2022</a>). These results are consistent with previous studies that used different experimental approaches (<a href="#ref-li2009">Li and Zhang, 2009</a>; <a href="#ref-lipiec2012">Lipiec et al., 2012</a>).</p>
+</section>
+<section id="linking-the-wrc-characteristic-to-hydrological-and-agricultural-functions" class="level3">
+<h3 class="anchored" data-anchor-id="linking-the-wrc-characteristic-to-hydrological-and-agricultural-functions">3.4. Linking the WRC Characteristic to Hydrological and Agricultural Functions</h3>
+<p>The WRC is a valuable tool for understanding several valuable hydrological and agricultural functions of soil (<a href="#ref-assouline2021">Assouline, 2021</a>). With the aid of <span class="math inline">\mu</span>CT 2D or 3D image analyses, it is easy to estimate the effect of compaction on the soil WRC and express how these functions are impacted. Table 3 summarizes the effect of compaction on the following soil hydrological and agricultural functions (Equations 7–11): (1) relative hydraulic conductivity at field capacity (<span class="math inline">K_{rFC}</span>); (2) saturation degree at field capacity (<span class="math inline">S_{eFC}</span>); (3) available water content in the soil (AWC); and (4) duration of stage-one evaporation (<span class="math inline">t_{s1}</span>).</p>
+<p>From the 2D and 3D analyses, it is apparent that the <span class="math inline">\varepsilon</span> value (Equation (7)) is higher for the compacted conditions compared to the uncompacted ones, resulting in increased <span class="math inline">S_{eFC}</span>, AWC and <span class="math inline">t_{s1}</span>. As previously mentioned, compaction mainly affects the void size distribution of the soil, decreasing larger voids and increasing the proportion of smaller voids. As a result, water content at higher levels of matric suction is elevated, leading to the observed changes in the hydrological and agricultural functions detailed above. At field capacity, where drainage has practically ceased (<a href="#ref-assoulineor2014">Assouline and Or, 2014</a>), <span class="math inline">K_{rFC}</span> is reduced and <span class="math inline">S_{eFC}</span> increases due to compaction. This is due to the increased proportion of the small voids, which limit drainage and increase water retention. For the same reason, AWC is higher for compacted conditions, as more water is held in the compacted soils, making more water available for uptake.</p>
+<p><strong>Table 3 | Hydraulic parameter before and after compaction based on mathematical expression of the soil WRC.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>3D Uncompacted</th>
+<th>3D Compacted</th>
+<th>2D Uncompacted</th>
+<th>2D Compacted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\varepsilon</span></td>
+<td>0.221</td>
+<td>0.255</td>
+<td>0.237</td>
+<td>0.251</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">K_{rFC}</span> (−)</td>
+<td>0.0086</td>
+<td>0.0084 ↓</td>
+<td>0.0085</td>
+<td>0.0084 ↓</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">S_{eFC}</span> (−)</td>
+<td>0.209</td>
+<td>0.216 ↑</td>
+<td>0.212</td>
+<td>0.215 ↑</td>
+</tr>
+<tr class="even">
+<td>AWC (cm³/cm³)</td>
+<td>0.052</td>
+<td>0.054 ↑</td>
+<td>0.053</td>
+<td>0.054 ↑</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">t_{s1}</span> (d)</td>
+<td>3.65</td>
+<td>6.90 ↑</td>
+<td>5.12</td>
+<td>6.544 ↑</td>
+</tr>
+</tbody>
+</table>
+<p>In terms of the duration of stage-1 evaporation, the increased water retention in smaller voids of the compacted soil results in better hydraulic connection between the wet matrix and its interface with the atmosphere, where evaporation occurs during stage-one of evaporation. This leads to more efficient water delivery to the evaporation front in compacted soils and longer <span class="math inline">t_{s1}</span> compared to un-compacted conditions. This was demonstrated by direct measurements in a previous study by <a href="#ref-goldberg2022">Goldberg-Yehuda et al.&nbsp;(2022)</a>.</p>
+<p>These results are consistent with trends previously reported in the literature, which strengthens the conclusion that the presented <span class="math inline">\mu</span>CT scanning and image analysis approach provides an efficient, quick, and easy-to-use tool for estimating soil WRCs in both undisturbed and compacted conditions.</p>
+</section>
+<section id="limitations-of-the-image-analysis-procedures" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-of-the-image-analysis-procedures">3.5. Limitations of the Image Analysis Procedures</h3>
+<p>It is important to mention some of the limitations of the image analysis procedures. First, for 3D, much greater processing time and computing power are needed in comparison to 2D. However, using PoreSpy and OpenPNM for 2D is less accurate than for 3D images as these packages were originally built for 3D. Additionally, the texture, voids and particle sizes of the scanned media must fit the <span class="math inline">\mu</span>CT resolution, in order to ensure high-quality imaging of the sample.</p>
+<p>Furthermore, it is important to note that the 2D transects are limited in their ability to capture information on void sizes in the axis perpendicular to the image. As a result, voids that are wide at the plane of the transect (x, y) but thin over the perpendicular axis (z) are considered large voids, even though their thin opening over the z-axis is the critical property that affects the hydraulic properties (Fig. 6). This bias is not present in the 3D analysis, as information in all axes is considered.</p>
+<p><img src="./images/figure6.png" class="img-fluid"></p>
+<p><strong>Fig. 6 | Conceptual explanation of large void density underestimation by the 2D analysis.</strong> Colored objects designate four different voids. Panel a: Top view over the x, y plane (2D view) all voids have identical radius (R1 = R2 = R3 = R4). Panel b is a side view over the x, z plane and it is seen that in reality R1 &gt; R4 &gt; R2 &gt; R3. This information is lost when considering only the original 2D view. In panel c, a 3D illustration of the four different voids is provided.</p>
+<p>The 2D analysis is satisfactory to understand the general trends in the hydraulic parameters (as seen in Table 3). However, in order to get a more accurate picture of the WRC, the 3D analysis should be preferred. As seen in Fig. 5, the model’s predictive power is higher when applied to the 3D analysis (panel b) in comparison to the 2D (panel a). Not surprisingly, there is a tradeoff between the computational demands of the analysis and the accuracy of the results.</p>
+</section>
+</section>
+<section id="summary-and-conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-conclusions">4. Summary and Conclusions</h2>
+<p>In this study, <span class="math inline">\mu</span>CT techniques were used to generate WRC based on void size distribution of both un-compacted and compacted soil samples. 2D and 3D image analysis procedures were applied to analyze the data, and the impact of soil compaction on hydrological and agricultural soil variables was investigated. The measured WRC and the computed uncompacted WRC were found to be in good agreement. Furthermore, the procedure used to compute the compacted WRC was successfully verified, as there was good agreement between it and the model’s predictions, in particular regarding the 3D analysis.</p>
+<p>Compaction was found to cause a reduction in the total porosity and a decrease in void sizes. The most notable changes in the compacted WRC (compared to un-compacted conditions) include: higher levels of air entry pressure; higher water content levels; and a wider distribution of void sizes. As a result of these changes, important agricultural functions are affected, such as an increase in water retention and availability for plant uptake, a reduction in hydraulic conductivity at field capacity, and an extension of the duration of stage-one of evaporation.</p>
+<p>This study demonstrates an efficient and non-destructive method for estimating soil WRC, successfully validated for coarse texture sand. Both the 2D and 3D image analysis procedures were found suitable for estimating WRC in undisturbed and compacted sand samples, with the 3D analysis providing more accurate results. Future research should explore the applicability of these procedures for soils with finer texture grains, using higher resolution <span class="math inline">\mu</span>CT scanners. Moreover, machine learning and deep learning methods can (and should) enhance our image analysis capabilities, especially in the segmentation process.</p>
+</section>
+<section id="open-research" class="level2">
+<h2 class="anchored" data-anchor-id="open-research">Open Research</h2>
+<p>Data is available through Goldberg-Yehuda et al.&nbsp;(2022).</p>
+</section>
+<section id="declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" class="level2">
+<h2 class="anchored" data-anchor-id="declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process">Declaration of Generative AI and AI-Assisted Technologies in the Writing Process</h2>
+<p>After completing the draft of the article, the authors employed ChatGPT solely to refine the wording and enhance the readability during the text editing phase. It is important to clarify that all the content presented in this paper is the original work of the authors, without any direct contribution from AI tools. Following the use of this tool, the authors meticulously reviewed and revised the content as necessary, and they assume full responsibility for the publication’s content.</p>
+</section>
+<section id="funding" class="level2">
+<h2 class="anchored" data-anchor-id="funding">Funding</h2>
+<p>This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.</p>
+</section>
+<section id="declaration-of-competing-interest" class="level2">
+<h2 class="anchored" data-anchor-id="declaration-of-competing-interest">Declaration of Competing Interest</h2>
+<p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p>
+</section>
+<section id="data-availability" class="level2">
+<h2 class="anchored" data-anchor-id="data-availability">Data Availability</h2>
+<p>Data will be made available on request.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-arya1981">Arya and Paris, 1981</span> Arya, L.M., Paris, J.F., 1981. A physicoempirical model to predict the soil moisture characteristic from particle-size distribution and bulk density data. Soil Sci. Soc. Am. J. 45 (6), 1023–1030.</p>
+<p><span id="ref-assouline2001">Assouline, 2001</span> Assouline, S., 2001. A model for soil relative hydraulic conductivity based on the water retention characteristic curve. Water Resour. Res. 37 (2), 265–271.</p>
+<p><span id="ref-assouline2004">Assouline, 2004</span> Assouline, S., 2004. Rainfall-induced soil surface sealing: a critical review of observations, conceptual models, and solutions. Vadose Zo. J. 3 (2), 570–591.</p>
+<p><span id="ref-assouline2005">Assouline, 2005</span> Assouline, S., 2005. On the relationships between the pore size distribution index and characteristics of the soil hydraulic functions. Water Resour. Res. 41 (7), 1–8.</p>
+<p><span id="ref-assouline2006a">Assouline, 2006a</span> Assouline, S., 2006a. Modeling the relationship between soil bulk density and the water retention curve. Vadose Zo. J. 5 (2), 554–563.</p>
+<p><span id="ref-assouline2006b">Assouline, 2006b</span> Assouline, S., 2006b. Modeling the relationship between soil bulk density and the hydraulic conductivity function. Vadose Zo. J. 5 (2), 697–705.</p>
+<p><span id="ref-assouline2021">Assouline, 2021</span> Assouline, S., 2021. What can we learn from the water retention characteristic of a soil regarding its hydrological and agricultural functions? Review and analysis of actual knowledge. Water Resour. Res. 57 (12), 1–16.</p>
+<p><span id="ref-assoulineor2013">Assouline and Or, 2013</span> Assouline, S., Or, D., 2013. Conceptual and parametric representation of soil hydraulic properties: a review. Vadose Zo. J. 12 (4).</p>
+<p><span id="ref-assoulineor2014">Assouline and Or, 2014</span> Assouline, S., Or, D., 2014. The concept of field capacity revisited: defining intrinsic static and dynamic criteria for soil internal drainage dynamics. Water Resour. Res. 50, 4787–4802.</p>
+<p><span id="ref-assouline1997">Assouline et al., 1997</span> Assouline, S., Tessier, D., Tavares-Filho, J., 1997. Effect of compaction on soil physical and hydraulic properties: experimental results and modeling. Soil Sci. Soc. Am. J. 61 (2), 390.</p>
+<p><span id="ref-assouline1998">Assouline et al., 1998</span> Assouline, S., Tessier, D., Bruand, A., 1998. A conceptual model of the soil water retention curve. Water Resour. Res. 34 (2), 223–231.</p>
+<p><span id="ref-bhattad2011">Bhattad et al., 2011</span> Bhattad, P., Willson, C.S., Thompson, K.E., 2011. Effect of network structure on characterization and flow modeling using X-ray Micro-tomography images of granular and fibrous porous media. Transport Porous Media 90 (2), 363–391.</p>
+<p><span id="ref-brooks1964">Brooks and Corey, 1964</span> Brooks, R.H., Corey, A.T., 1964. Hydraulic properties of porous media and their relation to drainage design. Trans. ASAE 7 (1), 0026–0028.</p>
+<p><span id="ref-campbell1974">Campbell, 1974</span> Campbell, G.S., 1974. A simple method for determining unsaturated conductivity from moisture retention data. Soil Sci. 117 (6), 311–314.</p>
+<p><span id="ref-cnudde2013">Cnudde and Boone, 2013</span> Cnudde, V., Boone, M.N., 2013. High-resolution X-ray computed tomography in geosciences: a review of the current technology and applications. Earth-Sci. Rev.&nbsp;123, 1–17.</p>
+<p><span id="ref-cnudde2006">Cnudde et al., 2006</span> Cnudde, V., Masschaele, B., Dierick, M., Vlassenbroeck, J., Van Hoorebeke, L., Jacobs, P., 2006. Recent progress in X-ray CT as a geosciences tool. Appl. Geochem. 21 (5), 826–832.</p>
+<p><span id="ref-dane2002">Dane and Hopmans, 2002</span> Dane, J., Hopmans, J.W., 2002. Water retention and storage: laboratory methods. Methods of Soil Analysis. Part 4 - Physical Methods. John Wiley &amp; Sons, Ltd.&nbsp;pp.&nbsp;675–720.</p>
+<p><span id="ref-easton2016">Easton and Bock, 2016</span> Easton, Z., Bock, E., 2016. Soil and Soil Water Relationships. Virginia Cooperative Extension.</p>
+<p><span id="ref-goldberg2022">Goldberg-Yehuda et al., 2022</span> Goldberg-Yehuda, N., Assouline, S., Mau, Y., Nachshon, U., 2022. Compaction effects on evaporation and salt precipitation in drying porous media. Hydrol. Earth Syst. Sci. 26 (9), 2499–2517.</p>
+<p><span id="ref-gostick2017">Gostick, 2017</span> Gostick, J.T., 2017. Versatile and efficient pore network extraction method using marker-based watershed segmentation. Phys. Rev.&nbsp;E 96 (2), 1–15.</p>
+<p><span id="ref-gostick2016">Gostick et al., 2016</span> Gostick, J., Aghighi, M., Hinebaugh, J., Tranter, T., Hoeh, M.A., Day, H., Spellacy, B., Sharqawy, M.H., Bazylak, A., Burns, A., Lehnert, W., Putz, A., 2016. OpenPNM: a pore network modeling package. Comput. Sci. Eng. 18 (4), 60–74.</p>
+<p><span id="ref-gostick2019">Gostick et al., 2019</span> Gostick, J., Khan, Z., Tranter, T., Kok, M., Agnaou, M., Sadeghi, M., Jervis, R., 2019. PoreSpy: a python toolkit for quantitative analysis of porous media images. J. Open Source Softw. 4 (37), 1296.</p>
+<p><span id="ref-hamamoto2016">Hamamoto et al., 2016</span> Hamamoto, S., Moldrup, P., Kawamoto, K., Sakaki, T., Nishimura, T., Komatsu, T., 2016. Pore network structure linked by X-ray CT to particle characteristics and transport parameters. Soils Found. 56 (4), 676–690.</p>
+<p><span id="ref-hamza2005">Hamza and Anderson, 2005</span> Hamza, M.A., Anderson, W.K., 2005. Soil compaction in cropping systems: a review of the nature, causes and possible solutions. Soil Tillage Res. 82 (2), 121–145.</p>
+<p><span id="ref-helliwell2013">Helliwell et al., 2013</span> Helliwell, J.R., Sturrock, C.J., Grayling, K.M., Tracy, S.R., Flavel, R.J., Young, I.M., Whalley, W.R., Mooney, S.J., 2013. Applications of X-ray computed tomography for examining biophysical interactions and structural development in soil systems: a review. Eur. J. Soil Sci. 64 (3), 279–297.</p>
+<p><span id="ref-hendrickx2001">Hendrickx and Flury, 2001</span> Hendrickx, J.M., Flury, M., 2001. Uniform and preferential flow mechanisms in the vadose zone. Conceptual Models of Flow and Transport in the Fractured Vadose Zone. National Academy Press, Washington, D.C. pp.&nbsp;149–187.</p>
+<p><span id="ref-horn1995">Horn et al., 1995</span> Horn, R., Domzal, H., Slowinska-Jurkiewicz, A., Van Ouwerkerk, C., 1995. Soil compaction processes and their effects on the structure of arable soils and the environment. Soil Tillage Res. 35 (1–2), 23–36.</p>
+<p><span id="ref-jabro2022">Jabro and Stevens, 2022</span> Jabro, J.D., Stevens, W.B., 2022. Soil-water characteristic curves and their estimated hydraulic parameters in no-tilled and conventionally tilled soils. Soil Tillage Res. 219, 105342.</p>
+<p><span id="ref-katuwal2015">Katuwal et al., 2015</span> Katuwal, S., Arthur, E., Tuller, M., Moldrup, P., de Jonge, L.W., 2015. Quantification of soil pore network complexity with X-ray computed tomography and gas transport measurements. Soil Sci. Soc. Am. J. 79 (6), 1577–1589.</p>
+<p><span id="ref-keller2022">Keller et al., 2022</span> Keller, T., Lamandé, M., Naderi-Boldaji, M., de Lima, R.P., 2022. Soil compaction due to agricultural field traffic: an overview of current knowledge and techniques for compaction quantification and mapping. In: Advances in Understanding Soil Degradation. Springer, Cham.</p>
+<p><span id="ref-klute1986">Klute, 1986</span> Klute, A. 1986. Water retention: Laboratory methods. Methods of Soil Analysis. Part 1: Physical and mineralogical methods, Agronomy Monograph vol.&nbsp;9, ASA–SSSA. pp.&nbsp;635–662.</p>
+<p><span id="ref-li2009">Li and Zhang, 2009</span> Li, X., Zhang, L.M., 2009. Characterization of dual-structure pore-size distribution of soil. Can. Geotech. J. 46 (2), 129–141.</p>
+<p><span id="ref-lipiec2012">Lipiec et al., 2012</span> Lipiec, J., Hajnos, M., Swieboda, R., 2012. Estimating effects of compaction on pore size distribution of soil aggregates by mercury porosimeter. Geoderma 179–180, 20–27.</p>
+<p><span id="ref-liu2021">Liu et al., 2021</span> Liu, B., Fan, H., Han, W., Zhu, L., Zhao, X., Zhang, Y., Ma, R., 2021. Linking soil water retention capacity to pore structure characteristics based on X-ray computed tomography: Chinese Mollisol under freeze-thaw effect. Geoderma 401, 115170.</p>
+<p><span id="ref-mahabadi2016">Mahabadi et al., 2016</span> Mahabadi, N., Dai, S., Seol, Y., Sup Yun, T., Jang, J., 2016. The water retention curve and relative permeability for gas production from hydrate-bearing sediments: pore-network model simulation. Geochem. Geophys. Geosyst. 17 (8), 3099–3110.</p>
+<p><span id="ref-mossadeghi2016">Mossadeghi-Bjorklund et al., 2016</span> Mossadeghi-Björklund, M., Arvidsson, J., Keller, T., Koestel, J., Lamandé, M., Larsbo, M., Jarvis, N., 2016. Effects of subsoil compaction on hydraulic properties and preferential flow in a Swedish clay soil. Soil Tillage Res. 156, 91–98.</p>
+<p><span id="ref-mualem1986">Mualem, 1986</span> Mualem, Y., 1986. Hydraulic conductivity of unsaturated soils: prediction and formulas. Methods of Soil Analysis. Part 1, Physical and Mineralogical Methods 9, 799–823.</p>
+<p><span id="ref-nachshon2016">Nachshon, 2016</span> Nachshon, U., 2016. Seepage weathering impacts on erosivity of arid stream banks: a new conceptual model. Geomorphology 261, 212–221.</p>
+<p><span id="ref-naveed2016">Naveed et al., 2016</span> Naveed, M., Schjønning, P., Keller, T., de Jonge, L.W., Moldrup, P., Lamandé, M., 2016. Quantifying vertical stress transmission and compaction-induced soil structure using sensor mat and X-ray computed tomography. Soil Tillage Res. 158, 110–122.</p>
+<p><span id="ref-nawaz2013">Nawaz et al., 2013</span> Nawaz, M.F., Bourrié, G., Trolard, F., 2013. Soil compaction impact and modelling. A review. Agron. Sustain. Dev. 33 (2), 291–309.</p>
+<p><span id="ref-ngocong2021">Ngo-Cong et al., 2021</span> Ngo-Cong, D., Antille, D.L., van Genuchten, M.T., Nguyen, H.Q., Tekeste, M.Z., Baillie, C.P., Godwin, R.J., 2021. A modeling framework to quantify the effects of compaction on soil water retention and infiltration. Soil Sci. Soc. Am. J. 85 (6), 1931–1945.</p>
+<p><span id="ref-or2000">Or et al., 2000</span> Or, D., Leij, F.J., Snyder, V., Ghezzehei, T.A., 2000. Stochastic model for posttillage soil pore space evolution. Water Resour. Res. 36 (7), 1641–1652.</p>
+<p><span id="ref-or2002">Or et al., 2002</span> Or, D., Wraith, J., Warrick, A. 2002. Soil water content and water potential relationships. Soil Physics Companion. pp.&nbsp;49–84.</p>
+<p><span id="ref-pires2008">Pires et al., 2008</span> Pires, L.F., Cassaro, F.A.M., Reichardt, K., Bacchi, O.O.S., 2008. Soil porous system changes quantified by analyzing soil water retention curve modifications. Soil Tillage Res. 100 (1–2), 72–77.</p>
+<p><span id="ref-schelle2013">Schelle et al., 2013</span> Schelle, H., Heise, L., Janicke, K., Durner, W., 2013. Water retention characteristics of soils over the whole moisture range: a comparison of laboratory methods. Eur. J. Soil Sci. 64 (6), 814–821.</p>
+<p><span id="ref-schindler2012">Schindler et al., 2012</span> Schindler, U., Mueller, L., da Veiga, M., Zhang, Y., Schlindwein, S., Hu, C., 2012. Comparison of water-retention functions obtained from the extended evaporation method and the standard methods sand/kaolin boxes and pressure plate extractor. J. Plant Nutr. Soil Sci. 175 (4), 527–534.</p>
+<p><span id="ref-schindler2015">Schindler et al., 2015</span> Schindler, U., Von Unold, G., Durner, W., Mueller, L., 2015. Recent Progress in Measuring Soil Hydraulic Properties.</p>
+<p><span id="ref-sheppard2014">Sheppard et al., 2014</span> Sheppard, A., Latham, S., Middleton, J., Kingston, A., Myers, G., Varslot, T., Fogden, A., Sawkins, T., Cruikshank, R., Saadatfar, M., Francios, N., Arns, C., Senden, T., 2014. Techniques in helical scanning, dynamic imaging and image segmentation for improved quantitative analysis with X-ray micro-CT. Nucl. Instr. Methods Phys. Res. Sect. B 324, 49–56.</p>
+<p><span id="ref-singh2021">Singh et al., 2021</span> Singh, N., Kumar, S., Udawatta, R.P., Anderson, S.H., de Jonge, L.W., Katuwal, S., 2021. X-ray micro-computed tomography characterized soil pore network as influenced by long-term application of manure and fertilizer. Geoderma 385.</p>
+<p><span id="ref-skarzynski2016">Skarzynski and Tejchman, 2016</span> Skarzynski, L., Tejchman, J., 2016. Experimental investigations of fracture process in concrete by means of X-ray micro-computed tomography. Strain 52 (1), 26–45.</p>
+<p><span id="ref-smith2001">Smith et al., 2001</span> Smith, C.W., Johnston, M.A., Lorentz, S.A., 2001. The effect of soil compaction on the water retention characteristics of soils in forest plantations. South Afr. J. Plant Soil 18 (3), 87–97.</p>
+<p><span id="ref-swain2009">Swain and Xue, 2009</span> Swain, M.V., Xue, J., 2009. State of the art of Micro-CT applications in dental research. Int. J. Oral Sci. 1 (4), 177–188.</p>
+<p><span id="ref-taina2008">Taina et al., 2008</span> Taina, I.A., Heck, R.J., Elliot, T.R., 2008. Application of X-ray computed tomography to soil science: a literature review. Can. J. Soil Sci. 88 (1), 1–20.</p>
+<p><span id="ref-tuller1999">Tuller et al., 1999</span> Tuller, M., Or, D., Dudley, L.M., 1999. Adsorption and capillary condensation in porous media: liquid retention and interfacial configurations in angular pores. Water Resour. Res. 35 (7), 1949–1964.</p>
+<p><span id="ref-vanderwalt2014">Van Der Walt et al., 2014</span> Van Der Walt, S., Schönberger, J.L., Nunez-Iglesias, J., Boulogne, F., Warner, J.D., Yager, N., Gouillart, E., Yu, T., 2014. Scikit-image: image processing in python. PeerJ 2014 (1).</p>
+<p><span id="ref-vangenuchten1980">van Genuchten, 1980</span> van Genuchten, M.T., 1980. A closed-form equation for predicting the hydraulic conductivity of unsaturated soils. Soil Sci. Soc. Am. J. 44 (5), 892–898.</p>
+<p><span id="ref-virtanen2020">Virtanen et al., 2020</span> Virtanen, P., Gommers, R., Oliphant, T.E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., et al., 2020. SciPy 1.0: fundamental algorithms for scientific computing in Python. Nat. Methods 17 (3), 261–272.</p>
+<p><span id="ref-wise2013">Wise et al., 2013</span> Wise, D.L., Winkelmann, C.T., Dogdas, B., Bagchi, A., 2013. Micro-computed tomography imaging and analysis in developmental biology and toxicology. Birth Defects Res. Part C 99 (2), 71–82.</p>
+<p><span id="ref-zhou2017">Zhou et al., 2017</span> Zhou, H., Mooney, S.J., Peng, X., 2017. Bimodal soil pore structure investigated by a combined soil water retention curve and X-ray computed tomography approach. Soil Sci. Soc. Am. J. 81 (6), 1270–1278.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

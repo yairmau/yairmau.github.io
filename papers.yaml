@@ -131,6 +131,7 @@ goldberg2024effect:
   year: "2024"
   doi: 10.1016/j.catena.2024.108068
   pdf: archive/papers/goldberg-2024-The effect of mechanical compaction on the soil water retention curve- Insights from a rapid image analysis of micro-CT scanning.pdf
+  md: archive/papers-md/goldberg2024effect/goldberg2024effect.qmd
   bib: |
       @article{goldberg2024effect,
           doi = {10.1016/j.catena.2024.108068},
