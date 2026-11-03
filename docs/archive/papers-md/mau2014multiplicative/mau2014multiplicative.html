@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Multiplicative Jump Processes and Applications to Leaching of Salt and Contaminants in the Soil – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Multiplicative Jump Processes and Applications to Leaching of Salt and Contaminants in the Soil – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/mau2014multiplicative/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="Multiplicative Jump Processes and Applications to Leaching of Salt and Contaminants in the Soil – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/mau2014multiplicative/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#i.-introduction" id="toc-i.-introduction" class="nav-link active" data-scroll-target="#i.-introduction">I. Introduction</a></li>
+  <li><a href="#ii.-model" id="toc-ii.-model" class="nav-link" data-scroll-target="#ii.-model">II. Model</a></li>
+  <li><a href="#iii.-steady-state-solution" id="toc-iii.-steady-state-solution" class="nav-link" data-scroll-target="#iii.-steady-state-solution">III. Steady-State Solution</a></li>
+  <li><a href="#iv.-dynamics-of-the-moments" id="toc-iv.-dynamics-of-the-moments" class="nav-link" data-scroll-target="#iv.-dynamics-of-the-moments">IV. Dynamics of the Moments</a></li>
+  <li><a href="#v.-crossing-properties" id="toc-v.-crossing-properties" class="nav-link" data-scroll-target="#v.-crossing-properties">V. Crossing Properties</a></li>
+  <li><a href="#vi.-applications" id="toc-vi.-applications" class="nav-link" data-scroll-target="#vi.-applications">VI. Applications</a></li>
+  <li><a href="#vii.-conclusion" id="toc-vii.-conclusion" class="nav-link" data-scroll-target="#vii.-conclusion">VII. Conclusion</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#appendix-a-steady-state-pdf" id="toc-appendix-a-steady-state-pdf" class="nav-link" data-scroll-target="#appendix-a-steady-state-pdf">Appendix A: Steady-State PDF</a></li>
+  <li><a href="#appendix-b-moments-dynamics" id="toc-appendix-b-moments-dynamics" class="nav-link" data-scroll-target="#appendix-b-moments-dynamics">Appendix B: Moments Dynamics</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Multiplicative Jump Processes and Applications to Leaching of Salt and Contaminants in the Soil</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Yair Mau<sup>*</sup>, Xue Feng, Amilcare Porporato<sup>†</sup></p>
+</div>
+<div class="paper-affil">
+<p>Department of Civil and Environmental Engineering, Duke University, Durham, North Carolina 27708, USA</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Physical Review E 90, 052128 · 2014 · doi: <a href="https://doi.org/10.1103/PhysRevE.90.052128">10.1103/PhysRevE.90.052128</a></p>
+<p>Received 23 July 2014; published 14 November 2014</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Mau, Y., Feng, X. and Porporato, A. (2014). Multiplicative Jump Processes and Applications to Leaching of Salt and Contaminants in the Soil. Physical Review E, 90, 052128. https://doi.org/10.1103/PhysRevE.90.052128</p>
+</blockquote>
+<hr>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>We consider simple systems driven multiplicatively by white shot noise, which appear in the modeling of the dynamics of soil nutrients and contaminants. The dynamics of these systems is analyzed in two ways: solving a hierarchy of linear ordinary differential equations for the moments, which gives a time scale of convergence of the stationary probability density function; and characterizing the crossing properties, such as the mean first-passage time and the mean frequency of level crossing. These results are readily applicable to the study of geophysical systems, such as the problem of accumulation of salt in the root zone, i.e., soil salinization.</p>
+</section>
+<section id="i.-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="i.-introduction">I. Introduction</h2>
+<p>Stochastic differential equations (SDEs) are used to model a diverse range of systems subjected to random fluctuations, including particle fluctuations in statistical physics (<a href="#ref-1">1</a>), birth and death processes in population dynamics (<a href="#ref-2">2</a>), and hydroclimatic variability in environmental sciences (<a href="#ref-3">3</a>). The most popular type of stochastic process incorporated into SDEs is a continuous white noise with zero mean and unit variance, which characterizes the Wiener process. This gives rise to diffusion-type processes that have been extensively studied (<a href="#ref-4">4</a>–<a href="#ref-6">6</a>). However, there is a plethora of problems in physics, engineering, and environmental sciences (<a href="#ref-7">7</a>–<a href="#ref-9">9</a>), where the fluctuations are intense and concentrated in time. In such cases the stochastic forcing term is better represented as a jump process, most commonly by a marked Poisson process. The resulting generalized Langevin equation (GLE) is an SDE with white jump noise <span class="math inline">\xi(t)</span>,</p>
+<p><span class="math display">
+\frac{dx}{dt} = f(x) + g(x)\xi(t), \tag{1}
+</span></p>
+<p>where <span class="math inline">f(x)</span> and <span class="math inline">g(x)</span> are deterministic functions.</p>
+<p>While the additive jump case <span class="math inline">g(x)=1</span> has been investigated in the context of virtual waiting-time processes (<a href="#ref-10">10</a>–<a href="#ref-12">12</a>), ecohydrology (<a href="#ref-13">13</a>–<a href="#ref-15">15</a>), and actuarial sciences (<a href="#ref-16">16</a>,<a href="#ref-17">17</a>), the case of multiplicative (state-dependent) jumps, i.e., when <span class="math inline">g</span> depends on <span class="math inline">x</span>, has been less studied (see, however, <a href="#ref-18">18</a>–<a href="#ref-22">22</a>). In particular, Eq. (1) does not define a stochastic process <span class="math inline">x(t)</span> unless an interpretation for the stochastic term <span class="math inline">g(x)\xi(t)</span> is given (<a href="#ref-23">23</a>). According to the Itô interpretation, the value of <span class="math inline">x</span> just before the jump should be used in the function <span class="math inline">g(x)</span>, while the Stratonovich interpretation takes the mean of the values of <span class="math inline">x</span> before and after the jump. This midpoint selection rule of the Stratonovich interpretation is related to the approximation of a colored noise with finite autocorrelation time by a white noise (<a href="#ref-22">22</a>). Because the real noise relevant to the applications in this work has a typical time scale much shorter than the time scales associated with the dynamics determined by <span class="math inline">f(x)</span>, we interpret Eq. (1) in the Stratonovich sense, with the advantage that the usual rules of calculus are maintained.</p>
+<p>The white shot noise</p>
+<p><span class="math display">
+\xi_{\lambda,\gamma}(t) = \sum_i^{N(t)} h_i\,\delta(t-t_i) \tag{2}
+</span></p>
+<p>is the formal derivative of a marked Poisson process, whose random marks <span class="math inline">h_i</span> are chosen to be drawn from an exponential distribution <span class="math inline">\rho(h) = \gamma\exp(-\gamma h)</span>, where <span class="math inline">\gamma^{-1}</span> is the mean of the marks and <span class="math inline">N(t)</span> is a Poisson counting process with mean frequency <span class="math inline">\lambda</span>. The master equation, which describes the evolution of the probability density function (PDF), associated with Eq. (1), is given by (<a href="#ref-20">20</a>,<a href="#ref-21">21</a>)</p>
+<p><span class="math display">
+\frac{\partial p(x,t)}{\partial t} = -\frac{\partial}{\partial x}\left[f(x)p(x,t)\right] - \lambda p(x,t) + \lambda\gamma\int_{-\infty}^{\infty} \exp\left[-\gamma(\eta(x)-\eta(u))\right]\frac{p(u,t)}{|g(x)|}\,du, \tag{3}
+</span></p>
+<p>where <span class="math inline">\eta(x) = \int^x du/g(u)</span>.</p>
+<p>Even in steady state, it is difficult to solve Eq. (3) in general. The goal of this paper is to give a probabilistic description of Eq. (1), for linear deterministic functions <span class="math inline">f</span> and <span class="math inline">g</span>. Here, in addition to a steady-state description of the PDF, we derive a hierarchy of linear ordinary differential equations for the transient dynamics of the moments, which yields a typical time scale for the convergence of the PDF. We also characterize the crossing properties of critical thresholds, both the mean first-passage time and the mean frequency of level crossing.</p>
+<p>The results of this paper can be readily applied. Our motivation is the problem of primary salinization, namely, the natural accumulation of salt in the soil root zone. Three main processes contribute to this phenomenon: the approximately constant input of salt by dry deposition, whose rate can vary by an order of magnitude depending on the proximity to the sea; plant uptake of salt dissolved in soil water; and intense rainfall events that can cause the leakage of water to deeper layers of the soil, leaching salt out of the root zone. Because of their short duration compared to the time scales related to dry deposition and plant uptake, the leaching events can be approximated by multiplicative negative jumps because the amount of salt leached is proportional to its concentration in the soil water. Understanding the dynamics of primary salinization is key in choosing suitable crops in rainfed agriculture and especially relevant to the desertification process in drylands in the face of climate change. More generally, the model presented below can describe the dynamics of other important soil nutrients, such as nitrates and sulfates, as well as contaminants.</p>
+<p>The paper is structured as follows. Section II presents a minimal SDE that describes the salt mass balance in the root zone. Section III shows steady-state solutions for the PDF of the model, Sec. IV derives dynamical equations for the moments of the state variable, Sec. V discusses crossing properties of the random variable <span class="math inline">x</span>, and Sec. VI considers applications of the results to the problem of primary salinization. Finally, we present a summary and conclusions in Sec. VII.</p>
+</section>
+<section id="ii.-model" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-model">II. Model</h2>
+<p>A minimal model to describe the salt mass balance in the root zone is (<a href="#ref-24">24</a>,<a href="#ref-25">25</a>)</p>
+<p><span class="math display">
+\frac{dx}{dt} = a - bx - cx\,\xi_{\lambda,\gamma}(t), \tag{4}
+</span></p>
+<p>where <span class="math inline">x</span> is the salt mass (in g/m²), <span class="math inline">a</span> represents a constant input flux of salt by dry deposition (in g/m²/d), <span class="math inline">bx</span> denotes the uptake of salt by plants (<span class="math inline">b</span> in d⁻¹), and the parameter <span class="math inline">c</span> (cm⁻¹ d⁻¹) is linked to the physical properties of the soil, such as porosity and hydraulic conductivity. The dimensions of <span class="math inline">\lambda</span> and <span class="math inline">\gamma</span> are d⁻¹ and cm⁻¹, respectively. This model, whose application will be described in Sec. VI, does not take into account secondary salinization, caused by human intervention, most commonly through irrigation.</p>
+<p>The deterministic part of Eq. (4), namely, <span class="math inline">dx/dt = a-bx</span>, has one stable fixed point <span class="math inline">x^\star = a/b</span>. Because of the negative sign of the stochastic term, the dynamics of a trajectory that starts at <span class="math inline">x_0 &gt; x^\star</span> is strictly decaying and once it crosses <span class="math inline">x^\star</span> through a jump event it stays confined in the range <span class="math inline">0&lt;x&lt;a/b</span>. Figure 1 shows two typical trajectories, starting from above and below <span class="math inline">x^\star</span>.</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>FIG. 1 | Two trajectories of Eq. (4), with initial conditions above and below <span class="math inline">x^\star = a/b</span>.</strong> The parameters are <span class="math inline">a=b=c=1</span>, <span class="math inline">\lambda=1.5</span>, and <span class="math inline">\gamma=2.0</span>.</p>
+<p>Transforming (4) according to</p>
+<p><span class="math display">
+x = \frac{a}{b}\chi, \qquad t = \frac{1}{b}\tau, \qquad \tilde\gamma = c\gamma, \qquad \tilde\lambda = b\lambda \tag{5}
+</span></p>
+<p>yields the dimensionless equation</p>
+<p><span class="math display">
+\frac{d\chi}{d\tau} = 1 - \chi - \chi\,\xi_{\tilde\lambda,\tilde\gamma}(\tau), \tag{6}
+</span></p>
+<p>which is more amenable to analysis. The corresponding master equation is</p>
+<p><span class="math display">
+\frac{\partial p_\chi(\chi,t)}{\partial\tau} = -\frac{\partial}{\partial\chi}\left[(1-\chi)p_\chi(\chi,\tau)\right] - \tilde\lambda p_\chi(\chi,\tau) + \tilde\lambda\tilde\gamma\chi^{\tilde\gamma-1}\int_\chi^\infty u^{-\tilde\gamma}p_\chi(u,\tau)\,du. \tag{7}
+</span></p>
+<p>In the next three sections we will characterize Eqs. (6) and (7), showing the steady-state solution, the dynamics of the moments and the crossing properties of <span class="math inline">x</span>.</p>
+<p>The numerical results presented throughout this paper were implemented using the Monte Carlo method for calculating the height <span class="math inline">h</span> of the random jump <span class="math inline">\xi(t)</span>, as described in Eq. (2), drawn from the exponential distribution <span class="math inline">\rho(h)</span>. The multiplicative impulse size <span class="math inline">x\xi(t)</span>, in the Stratonovich interpretation, then reads <span class="math inline">x\xi(t) = \eta^{-1}[\eta(x)+h]-x</span> [see <a href="#ref-21">21</a>, Eq. (14)]. Time was discretized using small <span class="math inline">\Delta t</span> and approximating the probability of a jump event at each time step as <span class="math inline">\lambda\Delta t</span>. Finally, the Euler method was used for numeric integration.</p>
+</section>
+<section id="iii.-steady-state-solution" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-steady-state-solution">III. Steady-State Solution</h2>
+<p>Using the fact that the Stratonovich interpretation of the GLE maintains the normal rules of calculus (<a href="#ref-2">2</a>), we transform the state variable according to <span class="math inline">\chi=e^y</span> so that Eq. (6) becomes an SDE with an additive jump term</p>
+<p><span class="math display">
+\frac{dy}{d\tau} = e^{-y} - 1 - \xi_{\tilde\lambda,\tilde\gamma}(\tau). \tag{8}
+</span></p>
+<p>The steady-state PDF <span class="math inline">p_y(y)</span> of the process above is the beta exponential distribution (<a href="#ref-26">26</a>,<a href="#ref-27">27</a>) and its derivation is shown in Appendix A. Using the derived distribution for <span class="math inline">\chi</span>,</p>
+<p><span class="math display">
+p_\chi(\chi) = p_y(y)\left|\frac{dy}{d\chi}\right| = \frac{p_y(y)}{\chi}, \tag{9}
+</span></p>
+<p>we find</p>
+<p><span class="math display">
+p_\chi(\chi) = \frac{\chi^{\tilde\gamma}(1-\chi)^{\tilde\lambda-1}}{B(\tilde\gamma+1,\tilde\lambda)}, \tag{10}
+</span></p>
+<p>where <span class="math inline">B</span> is the Beta function with shape parameters <span class="math inline">\tilde\gamma+1</span> and <span class="math inline">\tilde\lambda</span>.</p>
+<p>Returning to the physical variables and parameters, we have</p>
+<p><span class="math display">
+p_x(x) = \frac{a^{-\gamma/c-\lambda/b}b^{\gamma/c+1}}{B\left(\frac{\gamma}{c}+1,\frac{\lambda}{b}\right)}\,x^{\gamma/c}(a-bx)^{\lambda/b-1} \tag{11}
+</span></p>
+<p>and the <span class="math inline">k</span>th raw moment of <span class="math inline">x</span> is given by</p>
+<p><span class="math display">
+\langle x^k\rangle = \prod_{j=0}^{k-1}\frac{a[\gamma+c(1+j)]}{\lambda c + b[\gamma+c(1+j)]} \tag{12}
+</span></p>
+<p>or in a recursive form</p>
+<p><span class="math display">
+\langle x^k\rangle = \frac{a(\gamma+kc)}{\lambda c + b(\gamma+kc)}\langle x^{k-1}\rangle. \tag{13}
+</span></p>
+<p>The distribution has a mode <span class="math inline">\mathcal{M}</span> if <span class="math inline">\frac{\gamma}{c}&gt;0</span> and <span class="math inline">\lambda&gt;b</span>, given by</p>
+<p><span class="math display">
+\mathcal{M}[p_x(x)] = \frac{\gamma b}{\lambda c + b(\gamma-c)}. \tag{14}
+</span></p>
+<p>Figure 2 summarizes the findings above. Figure 2(a) shows the parameter space <span class="math inline">\lambda/b</span> versus <span class="math inline">\gamma/c</span>, where the solid shapes depict the probability density function <span class="math inline">p_x(x)</span> calculated at the grid points. Above the black solid line <span class="math inline">\lambda/b=1</span> all distributions are unimodal, i.e., they have a finite maximum, whereas the distributions below it have no mode, because the PDF diverges for <span class="math inline">\chi=1</span>. The black dashed line represents the curve <span class="math inline">\lambda/b = \gamma/c+1</span>. Along this line distributions have their mean at <span class="math inline">x=0.5</span>. To the right (left) of the dashed line, the mean of the distributions is at the right (left) of the center. Figure 2(b) shows the probability density function <span class="math inline">p_x(x)</span> calculated for three points in the parameter space. The dashed and dotted lines show the location of the mode and mean for one of the PDFs, respectively. In the limit <span class="math inline">a\to0</span> the PDF <span class="math inline">p_x(x)</span> becomes a Dirac delta function and in the limit <span class="math inline">b\to0</span> it becomes a gamma distribution (which in turn becomes a Gaussian distribution for large <span class="math inline">\gamma/c</span>).</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>FIG. 2 | Probability distribution function of <span class="math inline">x</span>, according to Eq. (11).</strong> (a) Colored shapes represent <span class="math inline">p_x(x)</span> calculated at the grid points of parameter space <span class="math inline">\lambda/b</span> versus <span class="math inline">\gamma/c</span>. (b) Blowup of <span class="math inline">p_x(x)</span> calculated for three values of <span class="math inline">(\gamma/c,\lambda/b)</span>: <span class="math inline">(3.0,1.5)</span> in red (black), <span class="math inline">(0.5,1.5)</span> in orange (dark gray), and <span class="math inline">(0.5,2.5)</span> in yellow (light gray). The red (black) dashed and dotted lines show the location of the mode and the mean, respectively, for <span class="math inline">(\gamma/c=3.0,\lambda/b=1.5)</span>.</p>
+</section>
+<section id="iv.-dynamics-of-the-moments" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-dynamics-of-the-moments">IV. Dynamics of the Moments</h2>
+<p>It is possible to obtain a system of equations that hierarchically describes the temporal dynamics of the moments of the state variable <span class="math inline">x</span>. Appendix B shows the detailed derivation of the recursive relation</p>
+<p><span class="math display">
+\frac{\partial\mu'_k}{\partial\tau} = k\mu'_{k-1} - k\frac{1}{c_k}\mu'_k, \tag{15}
+</span></p>
+<p>where the raw moments <span class="math inline">\mu'_k</span> are defined as</p>
+<p><span class="math display">
+\mu'_k = \int \chi^k p_\chi\, d\chi \tag{16}
+</span></p>
+<p>and</p>
+<p><span class="math display">
+c_k = \frac{\tilde\gamma+k}{\tilde\gamma+\tilde\lambda+k}. \tag{17}
+</span></p>
+<p>In the steady state, Eq. (15) yields the same recursion formula shown in Eq. (13) after a rescaling according to Eq. (5). Using the fact that <span class="math inline">\mu'_0=1</span>, we can calculate iteratively the solution of Eq. (15) for the raw moment of order <span class="math inline">n</span> as</p>
+<p><span class="math display">
+\mu'_n(\tau) = \prod_{j=1}^n c_j + \sum_{j=1}^n d_{n,j}\,e^{-\tau/(c_j/j)}. \tag{18}
+</span></p>
+<p>The first three moments read</p>
+<p><span class="math display">
+\begin{aligned}
+\mu'_1(\tau) &amp;= c_1 + d_{1,1}e^{-\tau/c_1}, \tag{19a}\\
+\mu'_2(\tau) &amp;= c_1c_2 + d_{2,1}e^{-\tau/c_1} + d_{2,2}e^{-\tau/(c_2/2)}, \tag{19b}\\
+\mu'_3(\tau) &amp;= c_1c_2c_3 + d_{3,1}e^{-\tau/c_1} + d_{3,2}e^{-\tau/(c_2/2)} + d_{3,3}e^{-\tau/(c_3/3)}, \tag{19c}
+\end{aligned}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+\begin{aligned}
+d_{1,1} &amp;= m_1-c_1, \qquad d_{2,1} = \frac{2c_1c_2(m_1-c_1)}{2c_1-c_2}, \\
+d_{2,2} &amp;= \frac{c_1c_2(c_2-2m_1)}{2c_1-c_2} + m_2, \qquad d_{3,1} = \frac{6c_1^2c_2c_3(m_1-c_1)}{(2c_1-c_2)(3c_1-c_3)}, \\
+d_{3,2} &amp;= \frac{3c_2c_3\left[c_1(-2c_2m_1+c_2^2+2m_2)-c_2m_2\right]}{(2c_1-c_2)(3c_2-2c_3)}, \\
+d_{3,3} &amp;= \frac{c_2c_3\left\{c_1\left[2c_3(c_3-3m_1)+9m_2\right]-3c_3m_2\right\}}{(3c_2-2c_3)(c_3-3c_1)} + m_3,
+\end{aligned}
+</span></p>
+<p>and <span class="math inline">m_i</span> denotes the initial condition of <span class="math inline">\mu'_i</span>. The successive terms added in Eq. (18) have decreasing time scales because <span class="math inline">c_{j+1}/(j+1) &lt; c_j/j</span>. Their effect on the dynamics is shown in Fig. 3(a), where all normalized raw moments saturate in comparable time scales, but higher moments grow slower for relatively small times. This means that for time scales of about 4 or 5 times <span class="math inline">c_1</span> (the largest time scale), all the moments are only a few percent off their steady-state values. Figure 3(b) shows solutions for the mean, standard deviation, skewness, and excess kurtosis, where analytical and numerical solutions agree well.</p>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>FIG. 3 | (a) Evolution of the first six normalized raw moments of <span class="math inline">\chi</span>.</strong> The curves for <span class="math inline">n=1,2,3</span> are according to Eqs. (19). (b) Evolution of the mean, standard deviation, skewness, and excess kurtosis. Dashed lines denote analytical solutions and solid lines denote numerical solutions, calculated from an ensemble of 10 000 simulations. The parameters are <span class="math inline">a=b=c=1</span>, <span class="math inline">\gamma=3.5</span>, <span class="math inline">\lambda=1.5</span>, and <span class="math inline">m_i=0</span>.</p>
+</section>
+<section id="v.-crossing-properties" class="level2">
+<h2 class="anchored" data-anchor-id="v.-crossing-properties">V. Crossing Properties</h2>
+<p>Physical systems can have critical thresholds that, when crossed for the first time, produce qualitative changes in the system’s behavior. In the context of salinization, the crossing of a threshold could mean that the salt concentration has risen to a critical value for which plants have their yield severely impaired (<a href="#ref-28">28</a>,<a href="#ref-29">29</a>) or conversely that remediation processes were successful in bringing the salinity below acceptable levels (<a href="#ref-24">24</a>).</p>
+<p>The mean first-passage time (MFPT) of processes driven by a marked Poisson noise has been analyzed before (<a href="#ref-30">30</a>–<a href="#ref-33">33</a>). For our purposes here, we will use Masoliver’s procedure (see <a href="#ref-30">30</a>, Eqs. (5.8)–(5.11)) to calculate the mean time it takes for the random variable <span class="math inline">x</span> to cross a certain threshold <span class="math inline">x_c</span>, starting from <span class="math inline">x_0</span>. For that we first transform (6) according to <span class="math inline">\chi=e^{-z}</span> to obtain an SDE with positive additive jumps:</p>
+<p><span class="math display">
+\frac{dz}{d\tau} = 1 - e^z + \xi_{\tilde\lambda,\tilde\gamma}(\tau). \tag{20}
+</span></p>
+<p>Since there is no rescaling of time <span class="math inline">\tau</span>, the mean first-passage time <span class="math inline">\langle T\rangle_{z_0,z_c}</span> for the random variable <span class="math inline">z</span> is equal to the mean first-passage time <span class="math inline">\langle T\rangle_{\chi_0,\chi_c}</span> for the random variable <span class="math inline">\chi</span>, where <span class="math inline">z_i = -\ln(\chi_i)</span>.</p>
+<p>We consider two possible scenarios in terms of the physical variable <span class="math inline">x</span>, as depicted in Fig. 4. The first is shown in the lower part of Fig. 4(a): Starting at <span class="math inline">x_0 &lt; x^\star = a/b</span>, all trajectories are bounded between <span class="math inline">0&lt;x&lt;x^\star</span> and they are calculated until they cross an upper boundary at <span class="math inline">x_c</span>. The second scenario is shown in the upper part: Starting at <span class="math inline">x_0&gt;x^\star</span>, all trajectories decay in time and they are calculated until they cross the lower boundary at <span class="math inline">x_c=x^\star</span>. Figures 4(b) and 4(c) show both the analytical and numerical MFPT as a function of <span class="math inline">x_0</span>, for the first and second scenarios, respectively. The integrals involved in the calculation were computed numerically.</p>
+<p>The mean first-passage time can be easily verified when the starting point tends to the threshold value. In the first scenario, the MFPT tends to zero when <span class="math inline">x_0\to x_c^-</span> and in the second scenario, when <span class="math inline">x_0\to x_c^+ = x^\star</span>, the MFPT tends to the inverse of the mean frequency, i.e., <span class="math inline">\lambda^{-1}</span>, because crossings can only occur through jump events.</p>
+<p>Another crossing problem of interest is the level crossing of the same threshold in steady-state conditions. In the steady state, <span class="math inline">p_x(x_c)dx</span> can be understood both as the probability of finding the system in the range <span class="math inline">r=[x_c,x_c+dx]</span> and as the proportion of time the system spends in this same range. Because negative jumps in Eq. (4) are instantaneous, the infinitesimal time <span class="math inline">dt</span> spent around <span class="math inline">x_c</span> is due only to upcrossings, which are governed by the deterministic equation <span class="math inline">dx/dt = f(x) = a-bx</span>, yielding <span class="math inline">dt = dx/f(x_c)</span>. Assume now that all consecutive crossing intervals can be represented by a mean time <span class="math inline">T</span> [see Fig. 4(d) for an illustration]. Then the infinitesimal time <span class="math inline">dt</span> divided by <span class="math inline">T</span> is the proportion of time the system spends to cross range <span class="math inline">r</span>, namely, <span class="math inline">p_x(x_c)dx</span>. In other words, the inverse of <span class="math inline">T</span>, or the mean frequency of crossing <span class="math inline">x_c</span>, is</p>
+<p><span class="math display">
+\nu(x_c) = p_x(x_c)f(x_c). \tag{21}
+</span></p>
+<p>The reasoning used to derive the above expression assumes only that the stochastic process is in the steady state. It has been used for a process with additive noise (<a href="#ref-14">14</a>,<a href="#ref-34">34</a>,<a href="#ref-35">35</a>), but is equally applicable to that with multiplicative noise. Figure 4(d) shows a typical scenario of upcrossings of a threshold <span class="math inline">x_c</span> and Fig. 4(e) shows the analytical result in Eq. (21) compared with the numerical results.</p>
+<p><img src="./images/figure4.png" class="img-fluid"></p>
+<p><strong>FIG. 4 | (a) Simulations of trajectories as a function of time, according to Eq. (4).</strong> In green (blue), all trajectories start at <span class="math inline">x_0=0.2</span> (<span class="math inline">x_0=1.8</span>) and are calculated until they reach the upper (lower) threshold <span class="math inline">x_c=0.8</span> (<span class="math inline">x_c=1.0</span>). (b) and (c) Mean first-passage time as a function of starting point <span class="math inline">x_0</span>, for processes with crossing thresholds <span class="math inline">x_c=0.8</span> and 1.0, respectively. Solid lines denote analytical results and open circles denote numerical simulations carried out for ensembles of 10 000 runs. (d) Successive upcrossings of the threshold <span class="math inline">x_c</span>. (e) Mean frequency of upcrossing <span class="math inline">\nu</span> as a function of the critical crossing threshold <span class="math inline">x_c</span>. The solid line denotes the analytical result shown in Eq. (21) and open circles denote numerical simulations carried out for ensembles of 5000 runs. The parameters are <span class="math inline">a=b=c=1</span> and (a)–(c) <span class="math inline">\gamma=1.0</span> and <span class="math inline">\lambda=2.0</span> and (d) and (e) <span class="math inline">\gamma=2.0</span> and <span class="math inline">\lambda=2.0</span>.</p>
+</section>
+<section id="vi.-applications" class="level2">
+<h2 class="anchored" data-anchor-id="vi.-applications">VI. Applications</h2>
+<p>A description of soil nutrients or contaminants (salt in our case) in the root zone should involve the coupled balance equations for the soil water and solute. However, under suitable assumptions, valid when focusing on long time scales, one can eliminate the soil water equation (<a href="#ref-24">24</a>) and embed the soil water controls into the parameters of Eq. (4).</p>
+<p>The parameters <span class="math inline">a</span>, <span class="math inline">b</span>, <span class="math inline">c</span>, <span class="math inline">\lambda</span>, and <span class="math inline">\gamma</span> contain several of the system’s physical properties. The parameter <span class="math inline">c</span>, for instance, has an inverse dependence on the soil moisture threshold for deep leakage. A low threshold (high values of <span class="math inline">c</span>) means that the soil is easily saturated by water and most rain events will produce deep leakage, which takes the solute from the root zone to deeper layers. On the other hand, <span class="math inline">\gamma^{-1}</span> represents the mean depth of water leakage as result of rain events. Higher mean depths (lower values of <span class="math inline">\gamma</span>) mean that most rain events will induce deep leakage. It is reasonable, therefore, that <span class="math inline">c</span> and <span class="math inline">\gamma</span> should have an inverse influence on the steady-state equation (11), which can be seen in Fig. 2(a): Both low values of <span class="math inline">\gamma</span> and high values of <span class="math inline">c</span> bring down the solute’s mean mass.</p>
+<p>We consider now one possible application of Eq. (4). The case of primary salinization without plant uptake of salt can be modeled by taking the limit <span class="math inline">b\to0</span> in Eq. (4). The steady-state solution was obtained by Suweis et al.&nbsp;(<a href="#ref-25">25</a>), in the form of a gamma distribution. Using the transformations <span class="math inline">x=a\chi</span>, <span class="math inline">t=\tau</span>, <span class="math inline">\gamma=c\tilde\gamma</span>, and <span class="math inline">\lambda=\tilde\lambda</span>, we obtain the dimensionless equation <span class="math inline">d\chi/d\tau = f(\chi)+g(\chi)\xi_{\tilde\lambda,\tilde\gamma}(\tau)</span>, where <span class="math inline">f(\chi)=1</span> and <span class="math inline">g(\chi)=-\chi</span>. The results obtained in Secs. III–V are readily applicable to this system. In order to obtain the steady-state PDF we take the limit <span class="math inline">b\to0</span> in Eq. (11). First we rewrite Eq. (11) as</p>
+<p><span class="math display">
+p_x(x) = a^{-\gamma/c-1}\frac{\Gamma\left(\frac{\lambda}{b}+\frac{\gamma}{c}+1\right)}{\Gamma\left(\frac{\gamma}{c}+1\right)\Gamma\left(\frac{\lambda}{b}\right)}\left(\frac{\lambda}{b}\right)^{\lambda/b}\,x^{\gamma/c}\left(1-\frac{x}{a/b}\right)^{\lambda/b-1}, \tag{22}
+</span></p>
+<p>where <span class="math inline">\Gamma</span> is the gamma function. Using the known limits</p>
+<p><span class="math display">
+\lim_{z\to\infty}\frac{\Gamma(z+\alpha)}{\Gamma(z)z^\alpha} = 1, \qquad \lim_{z\to\infty}\left(1-\frac{\alpha x}{z}\right)^z = e^{-\alpha x}, \tag{23}
+</span></p>
+<p>it is easy to see that</p>
+<p><span class="math display">
+\lim_{b\to0} p_x(x) = p_g(x) = \frac{(\lambda/a)^{\gamma/c+1}}{\Gamma\left(\frac{\gamma}{c}+1\right)}\,x^{\gamma/c}\,e^{-\frac{\lambda}{a}x}, \tag{24}
+</span></p>
+<p>which is the gamma distribution with shape <span class="math inline">\gamma/c+1</span> and rate <span class="math inline">\lambda/a</span>. Figure 5(a) shows three beta distributions <span class="math inline">p_x(x)</span> as in Eq. (11) for decreasing values of <span class="math inline">b</span> (thin lines) and the gamma distribution <span class="math inline">p_g(x)</span> as in Eq. (24) (thick line).</p>
+<p>The dynamics of the moments can be calculated as done in Sec. IV using <span class="math inline">f(\chi)=1</span>. This yields the same results as in Eqs. (15) and (18), but with the iteration constant <span class="math inline">c_k</span> redefined as <span class="math inline">c_k \to g_k = (\tilde\gamma+k)/\tilde\lambda</span>. The results shown in Fig. 5(b) provide a characterization of the time scales involved in soil salinity buildup.</p>
+<p><img src="./images/figure5.png" class="img-fluid"></p>
+<p><strong>FIG. 5 | (a) The PDF <span class="math inline">p_x(x)</span> for decreasing values of the parameter <span class="math inline">b</span> (d⁻¹) and the PDF <span class="math inline">p_g(x)</span> (thick line).</strong> (b) The thin gray lines denote the simulated dynamics of the salt mass, while the analytical dynamics for the mean salinity is shown in black, enclosed by one standard deviation in red dashed lines. (c) The steady-state PDF <span class="math inline">p_g(x)</span> is denoted by the black line and the histogram shows numerical results. (d) Crossing time as function of salinity threshold. The black line and circles correspond to analytical and numerical calculations of the MFPT, the green dashed line denotes the time <span class="math inline">t_c</span> for the mean to cross the threshold, according to Eq. (25), and the vertical dotted lines indicate the two salinity threshold levels considered, for pepper and tomato. The parameters are <span class="math inline">a=0.054</span> g m⁻² d⁻¹, <span class="math inline">c=9.26\times10^{-2}</span> cm⁻¹ d⁻¹, <span class="math inline">\gamma=0.93</span> cm⁻¹, and <span class="math inline">\lambda=1.18\times10^{-2}</span> d⁻¹.</p>
+<p>We took the same physical parameters used by Suweis et al.&nbsp;(<a href="#ref-25">25</a>) in order to model the dynamics of salt in a sandy-loam soil, in a semiarid climate (yearly precipitation of about 650 mm), subjected to dry (aerosol) deposition of salt. Figure 5(b) shows several realizations of the dynamics of the salt mass, starting from zero salinization. The thick black line denotes the dynamics of the mean soil salinity, according to Eq. (19a), and the two red dashed lines delimit the distance of one standard deviation from the mean. According to the parameters used, the largest typical time scale for the dynamics of the moments is <span class="math inline">g_1 \simeq 2.56</span> yr, which means that for <span class="math inline">t\sim10</span> yr the mean differs from its steady-state value by only 2%. The steady-state PDF of the process is shown in Fig. 5(c), the line denotes the analytical solution <span class="math inline">p_g(x)</span>, and the histogram represents simulations.</p>
+<p>Using the crossing properties and transient moments we can now investigate the constraints that the salt dynamics described in Fig. 5(b) can pose on the growth of crops. Because plants are sensitive to salt concentration and not to salt mass, we need to know the amount of water in the soil in order to convert the root zone salinity to its equivalent salt mass. This was computed using a soil moisture minimalist model (<a href="#ref-15">15</a>), resulting in a mean soil moisture <span class="math inline">\bar{s} = 56</span> l/m² for this type of climate and soil.</p>
+<p>We calculated the MFPT as a function of critical salinity thresholds, from an initial mass of 0.718 g/m². Analytical and numerical results are shown in Fig. 5(d) by the black line and circles, respectively. For example, the salinity threshold level (<a href="#ref-36">36</a>) for pepper (<em>Capsicum annuum</em>) and sweet potato (<em>Ipomoea batatas</em>) is 54 g/m⁻², while for tomato (<em>Lycopersicon esculentum</em>) and cucumber (<em>Cucumis sativus</em>) it is 90 g/m⁻² (<a href="#ref-37">37</a>). For these values the MFPT is approximately 7 and 80 yr, respectively, suggesting the time frames when these crops can be grown with little risk of salinization, before remediating measures need to be taken in order to reduce the soil salinity or a less sensitive crop needs to be chosen.</p>
+<p>From Eq. (19a) the time <span class="math inline">t_c</span> for the mean to cross a given threshold <span class="math inline">x_c</span> reads</p>
+<p><span class="math display">
+t_c = g_1\ln\left(\frac{g_1-m_1}{g_1-\chi_c}\right) = \frac{\gamma/c+1}{\lambda}\ln\left(\frac{1-\frac{c\lambda x_0}{a(c+\gamma)}}{1-\frac{c\lambda x_c}{a(c+\gamma)}}\right), \tag{25}
+</span></p>
+<p>where <span class="math inline">x_0</span> is the mean’s initial value and <span class="math inline">x_c</span> and <span class="math inline">x_0</span> are required to be both above or below the mean’s steady-state value <span class="math inline">\bar{x} = a(\gamma/c+1)/\lambda</span>. The dashed green line in Fig. 5(d) denotes <span class="math inline">t_c</span>, also from an initial mass of 0.718 g/m². First <span class="math inline">t_c</span> is very close to the MFPT, but as the threshold approaches the mean’s steady-state value it diverges. For salinity levels below <span class="math inline">\bar{x}</span>, <span class="math inline">t_c</span> is a good approximation of the MFPT and it is much easier to calculate.</p>
+</section>
+<section id="vii.-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="vii.-conclusion">VII. Conclusion</h2>
+<p>We presented here a stochastic differential equation driven by multiplicative Poisson noise with exponentially distributed jumps. This equation is applicable in the problem of leaching of soil nutrients and contaminants.</p>
+<p>The long-term dynamics of <span class="math inline">x</span> is confined between zero and <span class="math inline">x^\star</span>, described by a Beta distribution. The study of the dynamics of the moments revealed a time scale for the convergence of the PDF, while the analysis of crossing properties yielded time scales associated with the crossing of critical thresholds. The characterization of these time scales is the main result of this paper: They are readily applicable to various geophysical systems and provide useful information about processes such as the accumulation of salt in the root zone.</p>
+<p>The model presented here could be refined in order to produce a more realistic description of leaching of soil nutrients and contaminants. One extension would be including the solute’s influence on the soil water dynamics, which would mean that the parameter <span class="math inline">c</span> is a function of <span class="math inline">x</span>. For instance, a high relative concentration of sodium cations in the soil (condition called sodicity) alters the soil physical properties, greatly decreasing its hydraulic conductivity (<a href="#ref-38">38</a>). Another modification would be the expansion of the model to include the effects of human intervention through irrigation, especially with regard to the use of saline water and the risks of secondary salinization. This modification would require an additional equation for the water dynamics, coupled to that of the salt mass dynamics. Future research should address these points by developing a stochastic model for the integrated dynamics of water and solutes in the soil.</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>The authors would like to thank F. Laio for useful suggestions. Y.M. acknowledges support from BARD, the United States–Israel Binational Agricultural Research and Development Fund, Vaadia-BARD Postdoctoral Fellowship Award No.&nbsp;FI-517-14. X.F. acknowledges funding from the NSF Graduate Research Fellowship Program. A.P. acknowledges NSF Grants No.&nbsp;CBET 1033467, No.&nbsp;EAR 1331846, No.&nbsp;EAR 1316258, and No.&nbsp;FESD 1338694 as well as the US DOE through the Office of Biological and Environmental Research, Terrestrial Carbon Processes (Program No.&nbsp;de-sc0006967), the Agriculture and Food Research Initiative from the USDA National Institute of Food and Agriculture (Grant No.&nbsp;2011-67003-30222).</p>
+</section>
+<section id="appendix-a-steady-state-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-steady-state-pdf">Appendix A: Steady-State PDF</h2>
+<p>The master equation associated with Eq. (8) can be derived using Eq. (3) with <span class="math inline">f_y(y) = e^{-y}-1</span> and <span class="math inline">g_y(y)=-1</span>. Assuming a steady state, we are left with</p>
+<p><span class="math display">
+-\frac{d}{dy}\left[f_y(y)p_y(y)\right] - \tilde\lambda p_y(y) + \tilde\lambda\tilde\gamma e^{\tilde\gamma y}\int_y^\infty e^{-\tilde\gamma u}p_y(u)\,du = 0. \tag{A1}
+</span></p>
+<p>Multiplying the equation above by <span class="math inline">e^{-\tilde\gamma y}</span>, then differentiating it with respect to <span class="math inline">y</span>, and finally integrating once gives</p>
+<p><span class="math display">
+\gamma f_y(y)p_y(y) - \frac{d}{dy}\left[f_y(y)p_y(y)\right] - \tilde\lambda p_y(y) = \text{const.} \tag{A2}
+</span></p>
+<p>Taking the limit <span class="math inline">y\to\infty</span>, the whole left-hand side of the equation above vanishes, therefore the integration constant is also zero. Integrating Eq. (A2) and substituting <span class="math inline">f_y(y) = e^{-y}-1</span> gives after some manipulation</p>
+<p><span class="math display">
+p_y(y) = C\,e^{y(\tilde\gamma+1)}(1-e^y)^{\tilde\lambda-1}. \tag{A3}
+</span></p>
+<p>The PDF <span class="math inline">p_y(y)</span> is called the beta exponential distribution (<a href="#ref-26">26</a>,<a href="#ref-27">27</a>) and upon transformation back to the variable <span class="math inline">\chi</span>, according to <span class="math inline">\chi=e^y</span>, we have</p>
+<p><span class="math display">
+p_\chi(\chi) = C\,\chi^{\tilde\gamma}(1-\chi)^{\tilde\lambda-1}, \tag{A4}
+</span></p>
+<p>which is the beta distribution. By requiring that <span class="math inline">\int p_\chi(\chi)d\chi = 1</span> we have that <span class="math inline">C = 1/B(1+\tilde\gamma,\tilde\lambda)</span>, where <span class="math inline">B</span> is the Beta function.</p>
+</section>
+<section id="appendix-b-moments-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-b-moments-dynamics">Appendix B: Moments Dynamics</h2>
+<p>Applying the operator</p>
+<p><span class="math display">
+\mathcal{L}[f(\chi)] \equiv \int_0^\infty \chi^k f(\chi)\,d\chi \tag{B1}
+</span></p>
+<p>to Eq. (7), we can achieve an expression for the evolution of the raw moment of order <span class="math inline">k</span>, defined as <span class="math inline">\mu'_k = \int\chi^k p_\chi\,d\chi</span>. The left-hand side gives</p>
+<p><span class="math display">
+\int_0^\infty \chi^k\frac{\partial p_\chi(\chi,t)}{\partial\tau}\,d\chi = \frac{\partial\mu'_k}{\partial\tau}, \tag{B2}
+</span></p>
+<p>while the first term on the right-hand side becomes</p>
+<p><span class="math display">
+-\int_0^\infty \chi^k\frac{\partial}{\partial\chi}\left[(1-\chi)p_\chi(\chi,\tau)\right]d\chi = -\int_0^\infty\left[\chi^k\frac{\partial p_\chi(\chi,\tau)}{\partial\chi} - \chi^k p_\chi(\chi,\tau) - \chi^{k+1}\frac{\partial p_\chi(\chi,\tau)}{\partial\chi}\right]d\chi, \tag{B3}
+</span></p>
+<p>which upon integration by parts yields</p>
+<p><span class="math display">
+-\int_0^\infty \chi^k\frac{\partial}{\partial\chi}\left[(1-\chi)p_\chi(\chi,\tau)\right]d\chi = k\mu'_{k-1} - k\mu'_k. \tag{B4}
+</span></p>
+<p>The second term on the right-hand side of Eq. (7) becomes simply <span class="math inline">-\tilde\lambda\mu'_k</span>. In order to calculate the last term we start by defining</p>
+<p><span class="math display">
+F(\chi) = \tilde\lambda\tilde\gamma\chi^{\tilde\gamma+k}\int_\chi^\infty u^{-\tilde\gamma}p_\chi(u,\tau)\,du, \tag{B5}
+</span></p>
+<p>which differentiated gives</p>
+<p><span class="math display">
+\frac{dF}{d\chi} = \tilde\lambda\tilde\gamma(\tilde\gamma+k)\chi^{\tilde\gamma+k-1}\int_\chi^\infty u^{-\tilde\gamma}p_\chi(u,\tau)\,du - \tilde\lambda\tilde\gamma\chi^{\tilde\gamma+k}\chi^{-\tilde\gamma}p_\chi(\chi,\tau). \tag{B6}
+</span></p>
+<p>Multiplying the equation above by <span class="math inline">(\tilde\gamma+k)^{-1}</span> and then integrating with respect to <span class="math inline">\chi</span> gives</p>
+<p><span class="math display">
+\int_0^\infty d\chi\,\tilde\lambda\tilde\gamma\chi^{\tilde\gamma+k-1}\int_\chi^\infty u^{-\tilde\gamma}p_\chi(u,\tau)\,du = \frac{\tilde\lambda\tilde\gamma}{\tilde\gamma+k}\mu'_k. \tag{B7}
+</span></p>
+<p>Finally, putting all the terms together, a recursive relation for the dynamics of the moment of order <span class="math inline">k</span> can be obtained as</p>
+<p><span class="math display">
+\frac{\partial\mu'_k}{\partial\tau} = k\mu'_{k-1} - k\frac{1}{c_k}\mu'_k, \tag{B8}
+</span></p>
+<p>where</p>
+<p><span class="math display">
+c_k = \frac{\tilde\gamma+k}{\tilde\gamma+\tilde\lambda+k}. \tag{B9}
+</span></p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-1">1</span> C. W. Gardiner, <em>Handbook of Stochastic Methods</em> (Springer, Berlin, 1985), Vol. 3.</p>
+<p><span id="ref-2">2</span> N. G. van Kampen, <em>Stochastic Processes in Physics and Chemistry</em> (Elsevier, Amsterdam, 1992), Vol. 1.</p>
+<p><span id="ref-3">3</span> L. Ridolfi, P. D’Odorico, and F. Laio, <em>Noise-Induced Phenomena in the Environmental Sciences</em> (Cambridge University Press, Cambridge, 2011).</p>
+<p><span id="ref-4">4</span> H. Risken, <em>The Fokker-Planck Equation: Methods of Solution and Applications</em>, Lecture Notes in Mathematics (Springer, Berlin, 1996).</p>
+<p><span id="ref-5">5</span> W. Coffey, Y. Kalmykov, and J. Waldron, <em>The Langevin Equation: With Applications to Stochastic Problems in Physics, Chemistry, and Electrical Engineering</em> (World Scientific, Singapore, 2004).</p>
+<p><span id="ref-6">6</span> B. Øksendal, <em>Stochastic Differential Equations: An Introduction with Applications</em> (Springer, Berlin, 2010).</p>
+<p><span id="ref-7">7</span> Y. M. Blanter and M. Büttiker, Phys. Rep.&nbsp;<strong>336</strong>, 1 (2000).</p>
+<p><span id="ref-8">8</span> B. K. Øksendal and A. Sulem, <em>Applied Stochastic Control of Jump Diffusions</em> (Springer, Berlin, 2005), Vol. 498.</p>
+<p><span id="ref-9">9</span> P. D’Odorico, F. Laio, and L. Ridolfi, Proc. Natl. Acad. Sci. USA <strong>102</strong>, 10819 (2005).</p>
+<p><span id="ref-10">10</span> L. Takács, Acta Math. Hung. <strong>6</strong>, 101 (1955).</p>
+<p><span id="ref-11">11</span> D. Cox and V. Isham, Adv. Appl. Probab. <strong>18</strong>, 558 (1986).</p>
+<p><span id="ref-12">12</span> P. Brill, <em>Level Crossing Methods in Stochastic Models</em> (Springer, Berlin, 2008).</p>
+<p><span id="ref-13">13</span> I. Rodríguez-Iturbe, A. Porporato, L. Ridolfi, V. Isham, and D. Cox, Proc. R. Soc. London Ser. A <strong>455</strong>, 3789 (1999).</p>
+<p><span id="ref-14">14</span> I. Rodríguez-Iturbe and A. Porporato, <em>Ecohydrology of Water-Controlled Ecosystems: Soil Moisture and Plant Dynamics</em> (Cambridge University Press, Cambridge, 2004).</p>
+<p><span id="ref-15">15</span> A. Porporato, E. Daly, and I. Rodriguez-Iturbe, Am. Nat. <strong>164</strong>, 625 (2004).</p>
+<p><span id="ref-16">16</span> A. Dassios and J.-W. Jang, Finance Stoch. <strong>7</strong>, 73 (2003).</p>
+<p><span id="ref-17">17</span> A. Dassios and J.-W. Jang, J. Appl. Probab. <strong>42</strong>, 93 (2005).</p>
+<p><span id="ref-18">18</span> C. Van Den Broeck, J. Stat. Phys. <strong>31</strong>, 467 (1983).</p>
+<p><span id="ref-19">19</span> J. Sancho, M. San Miguel, L. Pesquera, and M. Rodriguez, Physica A <strong>142</strong>, 532 (1987).</p>
+<p><span id="ref-20">20</span> S. Denisov, W. Horsthemke, and P. Hänggi, Eur. Phys. J. B <strong>68</strong>, 567 (2009).</p>
+<p><span id="ref-21">21</span> S. Suweis, A. Porporato, A. Rinaldo, and A. Maritan, Phys. Rev.&nbsp;E <strong>83</strong>, 061119 (2011).</p>
+<p><span id="ref-22">22</span> W. Moon and J. S. Wettlaufer, New J. Phys. <strong>16</strong>, 055017 (2014).</p>
+<p><span id="ref-23">23</span> N. G. van Kampen, J. Stat. Phys. <strong>24</strong>, 175 (1981).</p>
+<p><span id="ref-24">24</span> S. Manzoni, A. Molini, and A. Porporato, Proc. R. Soc. London Ser. A <strong>467</strong>, 3188 (2011).</p>
+<p><span id="ref-25">25</span> S. Suweis, A. Rinaldo, S. E. A. T. M. Van der Zee, E. Daly, A. Maritan, and A. Porporato, Geophys. Res. Lett. <strong>37</strong>, L07404 (2010).</p>
+<p><span id="ref-26">26</span> S. Nadarajah and S. Kotz, Reliab. Eng. Syst. Safe. <strong>91</strong>, 689 (2006).</p>
+<p><span id="ref-27">27</span> W. Barreto-Souza, A. H. Santos, and G. M. Cordeiro, J. Stat. Comput. Simul. <strong>80</strong>, 159 (2010).</p>
+<p><span id="ref-28">28</span> E. V. Maas and G. J. Hoffman, J. Irrig. Drain. Div. <strong>103</strong>, 115 (1977).</p>
+<p><span id="ref-29">29</span> H. Steppuhn, M. T. Van Genuchten, and C. Grieve, Crop Sci. <strong>45</strong>, 209 (2005).</p>
+<p><span id="ref-30">30</span> J. Masoliver, Phys. Rev.&nbsp;A <strong>35</strong>, 3918 (1987).</p>
+<p><span id="ref-31">31</span> E. Hernandez-Garcia, L. Pesquera, M. A. Rodriguez, and M. San Miguel, Phys. Rev.&nbsp;A <strong>36</strong>, 5774 (1987).</p>
+<p><span id="ref-32">32</span> J. M. Porrà and J. Masoliver, Phys. Rev.&nbsp;E <strong>47</strong>, 1633 (1993).</p>
+<p><span id="ref-33">33</span> F. Laio, A. Porporato, L. Ridolfi, and I. Rodriguez-Iturbe, Phys. Rev.&nbsp;E <strong>63</strong>, 036105 (2001).</p>
+<p><span id="ref-34">34</span> A. Porporato, F. Laio, L. Ridolfi, and I. Rodriguez-Iturbe, Adv. Water Resour. <strong>24</strong>, 725 (2001).</p>
+<p><span id="ref-35">35</span> E. Daly and A. Porporato, Phys. Rev.&nbsp;E <strong>81</strong>, 061133 (2010).</p>
+<p><span id="ref-36">36</span> Usually, root zone salinity is measured by the electrical conductivity <span class="math inline">\kappa</span>, reported in dS/m. For dilute solutions we have the conversion formula (<a href="#ref-38">38</a>) between <span class="math inline">\kappa</span> and the total dissolved solutes <span class="math inline">\mathscr{T}</span> (in mg/l): <span class="math inline">640\kappa = \mathscr{T}</span>. The salinity threshold levels for pepper and tomato are 1.5 and 2.5 dS/m, respectively.</p>
+<p><span id="ref-37">37</span> R. Ayers and D. Westcot, <em>Water Quality for Agriculture</em> (Food and Agriculture Organization of the United Nations, Rome, 1985).</p>
+<p><span id="ref-38">38</span> D. Hillel, <em>Salinity Management for Sustainable Irrigation: Integrating Science, Environment, and Economics</em> (World Bank, Washington, DC, 2000).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

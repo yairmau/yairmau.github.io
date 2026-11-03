@@ -64,3 +64,4 @@ not doing even the lighter treatment. 24 actual papers left to process.
 | adeyemo2022salinity | done | 8pp Geoderma, single-column, pymupdf4llm clean, author-year citations, table rendered, supplementary hosted externally (not available to inline) |
 | haim2014spatial | done | 8pp PRE, heavy multi-scale perturbation theory, direct PDF read + coordinate figure cropping |
 | goldberg2024effect | done | 10pp Catena, single-column, pymupdf4llm clean, ~59 author-year refs |
+| mau2014multiplicative | done | 8pp PRE, stochastic jump-process theory, direct read + coordinate crop |

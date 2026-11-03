@@ -482,6 +482,7 @@ mau2014multiplicative:
   year: "2014"
   doi: 10.1103/PhysRevE.90.052128
   pdf: archive/papers/mau-2014-Multiplicative jump processes and applications to leaching of salt and contaminants in the soil.pdf
+  md: archive/papers-md/mau2014multiplicative/mau2014multiplicative.qmd
   bib: |
     @article{mau2014multiplicative,
       title={Multiplicative jump processes and applications to leaching of salt and contaminants in the soil},
