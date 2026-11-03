@@ -47,6 +47,7 @@ rez2026stem:
   year: "2026"
   doi: 10.1016/j.agrformet.2026.111278
   pdf: archive/papers/rez-2026-Stem water content is crucial to support fruit tree functioning during heatwaves in a Mediterranean climate.pdf
+  md: archive/papers-md/rez2026stem/rez2026stem.qmd
   bib: |
       @article{rez2026stem,
           doi = {10.1016/j.agrformet.2026.111278},
