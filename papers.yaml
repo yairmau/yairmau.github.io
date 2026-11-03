@@ -91,6 +91,7 @@ missik2025using:
   year: "2025"
   doi: 10.1029/2024JG008198
   pdf: archive/papers/missik2025-Using a Plant Hydrodynamic Model FETCH4 to Supplement Measurements and Characterize.pdf
+  md: archive/papers-md/missik2025using/missik2025using.qmd
   bib: |
       @article{missik2025using,
         title={Using a plant hydrodynamic model, FETCH4, to supplement measurements and characterize hydraulic traits in a mixed temperate forest},

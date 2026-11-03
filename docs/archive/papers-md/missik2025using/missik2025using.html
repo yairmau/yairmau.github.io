@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest – Yair Mau</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../../archive/site_images/favicon.ico" rel="icon">
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-43N4LS3BPR"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
+</script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest – Yair Mau">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://yairmau.com/archive/papers-md/missik2025using/archive/images/group/yairmau_headshot.png">
+<meta property="og:site_name" content="Yair Mau">
+<meta name="twitter:title" content="Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest – Yair Mau">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://yairmau.com/archive/papers-md/missik2025using/archive/images/group/yairmau_headshot.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../../../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Yair Mau</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../science.html"> 
+<span class="menu-text"><i class="fa-solid fa-compass-drafting" aria-label="compass-drafting"></i> Science</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../papers.html"> 
+<span class="menu-text"><i class="fa-solid fa-file" aria-label="file"></i> Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../group.html"> 
+<span class="menu-text"><i class="fa-solid fa-circle-user" aria-label="circle-user"></i> Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../courses/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Courses</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../more/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-magnifying-glass-plus" aria-label="magnifying-glass-plus"></i> More</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">2. Methods</a>
+  <ul class="collapse">
+  <li><a href="#model-description" id="toc-model-description" class="nav-link" data-scroll-target="#model-description">2.1. Model Description</a></li>
+  <li><a href="#simulation-of-multispecies-canopies" id="toc-simulation-of-multispecies-canopies" class="nav-link" data-scroll-target="#simulation-of-multispecies-canopies">2.1.1. Simulation of Multispecies Canopies</a></li>
+  <li><a href="#transpiration-module" id="toc-transpiration-module" class="nav-link" data-scroll-target="#transpiration-module">2.1.2. Transpiration Module</a></li>
+  <li><a href="#parameter-optimization" id="toc-parameter-optimization" class="nav-link" data-scroll-target="#parameter-optimization">2.1.3. Parameter Optimization</a></li>
+  <li><a href="#improvements-to-usability-and-performance" id="toc-improvements-to-usability-and-performance" class="nav-link" data-scroll-target="#improvements-to-usability-and-performance">2.1.4. Improvements to Usability and Performance</a></li>
+  <li><a href="#model-runs" id="toc-model-runs" class="nav-link" data-scroll-target="#model-runs">2.2. Model Runs</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">3. Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#model-performance" id="toc-model-performance" class="nav-link" data-scroll-target="#model-performance">3.1. Model Performance</a></li>
+  <li><a href="#characterization-of-hydraulic-limitation" id="toc-characterization-of-hydraulic-limitation" class="nav-link" data-scroll-target="#characterization-of-hydraulic-limitation">3.2. Characterization of Hydraulic Limitation</a></li>
+  <li><a href="#hysteresis" id="toc-hysteresis" class="nav-link" data-scroll-target="#hysteresis">3.3. Hysteresis</a></li>
+  <li><a href="#using-fetch4-with-additional-data-sets" id="toc-using-fetch4-with-additional-data-sets" class="nav-link" data-scroll-target="#using-fetch4-with-additional-data-sets">3.4. Using FETCH4 With Additional Data Sets</a></li>
+  <li><a href="#limitations-and-future-improvements" id="toc-limitations-and-future-improvements" class="nav-link" data-scroll-target="#limitations-and-future-improvements">3.5. Limitations and Future Improvements</a></li>
+  </ul></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">4. Conclusions</a></li>
+  <li><a href="#data-availability-statement" id="toc-data-availability-statement" class="nav-link" data-scroll-target="#data-availability-statement">Data Availability Statement</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using a Plant Hydrodynamic Model, FETCH4, to Supplement Measurements and Characterize Hydraulic Traits in a Mixed Temperate Forest</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-authors">
+<p>Justine E. C. Missik<sup>1</sup>, Gil Bohrer<sup>1</sup>, Madeline E. Scyphers<sup>1,2</sup>, Ashley M. Matheny<sup>3</sup>, Ana Maria Restrepo Acevedo<sup>4,5</sup>, Marcela Silva<sup>6</sup>, Golnazalsadat Mirfenderesgi<sup>7</sup>, Yair Mau<sup>8</sup></p>
+</div>
+<div class="paper-affil">
+<p><sup>1</sup> Department of Civil, Environmental &amp; Geodetic Engineering, The Ohio State University, Columbus, OH, USA &nbsp;·&nbsp; <sup>2</sup> Soil and Crop Sciences, Colorado State University, Fort Collins, CO, USA &nbsp;·&nbsp; <sup>3</sup> Department of Earth and Planetary Sciences, Jackson School of Geosciences, The University of Texas at Austin, Austin, TX, USA &nbsp;·&nbsp; <sup>4</sup> O’Neill School of Public &amp; Environmental Affairs, Indiana University Bloomington, Bloomington, IN, USA &nbsp;·&nbsp; <sup>5</sup> Department of Biology, West Virginia University, Morgantown, WV, USA &nbsp;·&nbsp; <sup>6</sup> Department of Civil Engineering, Monash University, Clayton, VIC, Australia &nbsp;·&nbsp; <sup>7</sup> Department of Mechanical and Aerospace Engineering, The Ohio State University, Columbus, OH, USA &nbsp;·&nbsp; <sup>8</sup> The Robert H. Smith Faculty of Agriculture, Food and Environment, Institute of Environmental Sciences, The Hebrew University of Jerusalem, Rehovot, Israel</p>
+</div>
+<hr>
+<div class="paper-meta">
+<p>Journal of Geophysical Research: Biogeosciences 130, e2024JG008198 · 2025 · doi: <a href="https://doi.org/10.1029/2024JG008198">10.1029/2024JG008198</a></p>
+<p>Received 12 April 2024; accepted 17 March 2025</p>
+<p>Correspondence: Justine E. C. Missik (missik.2@osu.edu)</p>
+</div>
+<blockquote class="blockquote">
+<p><strong>How to cite:</strong> Missik, J.E.C., Bohrer, G., Scyphers, M.E., Matheny, A.M., Restrepo Acevedo, A.M., Silva, M., Mirfenderesgi, G. and Mau, Y. (2025). Using a plant hydrodynamic model, FETCH4, to supplement measurements and characterize hydraulic traits in a mixed temperate forest. Journal of Geophysical Research: Biogeosciences, 130, e2024JG008198. https://doi.org/10.1029/2024JG008198</p>
+</blockquote>
+<hr>
+<section id="key-points" class="level4">
+<h4 class="anchored" data-anchor-id="key-points">Key Points</h4>
+<ul>
+<li>FETCH4 improves hydraulic trait representation in a vertically resolved, multiscale hydrodynamic model</li>
+<li>We used sapflow data and a Bayesian optimization framework to determine species-specific hydraulic parameters</li>
+<li>The model performed well in simulating sapflow of species with contrasting hydraulic strategies and captured higher-level emergent traits</li>
+</ul>
+</section>
+<section id="abstract" class="level4">
+<h4 class="anchored" data-anchor-id="abstract">Abstract</h4>
+<p>Species-specific hydraulic traits play an important role in ecosystem response to water stress; however, representation of biodiverse forest canopies remains a challenge in land surface models. We introduce FETCH4, a multispecies, canopy-level, hydrodynamic model, which builds upon previous versions of the finite-difference ecosystem-scale tree crown hydrodynamics model (FETCH). FETCH4 simulates water transport through the soil, roots, and stem as porous media flow. Stomatal conductance is controlled by xylem water potential, which is resolved along the vertical dimension. A key feature of FETCH4 is a multispecies canopy formulation, which uses crown and stem dimensional characteristics to allow the model to produce both tree-level and plot-level outputs and improves the representation of hydraulic traits and their variation among trees and species. We demonstrate the model’s performance in a mixed temperate forest in Michigan with species of contrasting hydraulic strategies. We optimize species-specific hydraulic parameters using a Bayesian optimization framework incorporating sapflow measurements. FETCH4 performed well in simulating sapflow of species with contrasting hydraulic strategies under conditions of water stress. In addition, the model was able to capture higher-level emergent traits, such as drought sensitivity. Using FETCH4 in combination with available observations can provide unique insights about difficult to measure hydraulic traits and plant hydrodynamics.</p>
+</section>
+<section id="plain-language-summary" class="level4">
+<h4 class="anchored" data-anchor-id="plain-language-summary">Plain Language Summary</h4>
+<p>Different species of trees have different strategies for how they respond to drought. However, most models have poor representation of the diversity in traits that control drought response. In this work, we developed FETCH4, a model for simulating plant water use, which allows for more detailed representation of the diversity among species in traits that control plant water use. We used field measurements of transpiration of multiple tree species in a temperate forest in Michigan to train and validate the model. Key findings underscore the model’s ability to capture the nuanced responses of different tree species to drought and highlight the fact that different tree species have very different responses to the same environmental conditions. Our results demonstrate that the model can provide useful insights about the traits that control these varied responses to environmental conditions, which are difficult to measure directly.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Stomatal conductance is a key control of evapotranspiration (ET) in terrestrial ecosystems and plays a crucial role in determining the surface energy balance between long-wave emitted radiation, sensible heat flux, and water vapor (latent) heat flux (<a href="#ref-seneviratne2010">Seneviratne et al., 2010</a>). Canopy resistance to water flux is governed by stomata, which can amplify or buffer the soil moisture feedback during periods of water limitations (<a href="#ref-dodorico2007">D’Odorico et al., 2007</a>; <a href="#ref-fatichi2016">Fatichi et al., 2016</a>; <a href="#ref-green2017">Green et al., 2017</a>). Stomatal conductance couples the processes of transpiration and photosynthesis and thus controls CO2 uptake by vegetation and water use efficiency (<a href="#ref-anderegg2019">Anderegg et al., 2019</a>). As a dynamic response to environmental cues, stomatal conductance exhibits variability across biomes, ecosystems, species, and even individual plants. This variability arises from diverse water-use strategies and environmental sensitivities, governed by hydraulic traits (<a href="#ref-anderegg2015">Anderegg, 2015</a>). Understanding and quantifying these hydraulic traits is vital for predicting ecosystem responses particularly under changing climate conditions, which impact stomatal conductance and subsequently ecosystem carbon uptake, transpiration, and drought-induced tree mortality (<a href="#ref-anderegg2016">Anderegg et al., 2016</a>; <a href="#ref-barros2019">Barros et al., 2019</a>; <a href="#ref-brodribb2020">Brodribb et al., 2020</a>; <a href="#ref-detto2022">Detto &amp; Pacala, 2022</a>; <a href="#ref-mathenymirfenderesgi2017">Matheny, Mirfenderesgi, &amp; Bohrer, 2017</a>). Thus, it is imperative for atmospheric, ecosystem, land surface, and earth system models to predict stomatal conductance accurately in order to reliably forecast the surface energy budget, the water cycle, and ecosystem carbon dynamics. Trait-based ecosystem modeling adopts a functional trait-based approach, categorizing plants into functional types based on their traits rather than species identity (<a href="#ref-zakharova2019">Zakharova et al., 2019</a>). The hydrodynamic approach allows models to explicitly resolve the effects of multiple leaf, xylem, and root traits on transpiration and stomatal conductance. This approach has gained traction in the last decade with many land surface models (some incorporated into Earth system models) utilizing a hydrodynamic approach for resolving transpiration. Notable examples include ELM-FATES-HYDRO (<a href="#ref-xu2023">C. Xu et al., 2023</a>); TFS (<a href="#ref-christoffersen2016">Christoffersen et al., 2016</a>); CLM5-PHS (<a href="#ref-kennedy2019">Kennedy et al., 2019</a>); ED2-hydro (<a href="#ref-xu2016">X. Xu et al., 2016</a>); STAC (<a href="#ref-massoud2019">Massoud et al., 2019</a>); SPAC (<a href="#ref-gentine2016">Gentine et al., 2016</a>); and Thetys-Chloris (<a href="#ref-fatichi2012">Fatichi et al., 2012</a>; <a href="#ref-paschalis2024">Paschalis et al., 2024</a>).</p>
+<p>The hydrodynamic approach is based on the following hypotheses: (a) water moves through the plant (roots, stems, and leaves) in a continuous pathway known as the hydraulic continuum; (b) water potential within plant tissues plays a significant and dynamic role as water moves through the hydraulic continuum; and (c) stomata respond to changes in water potential within the plant (leaf or stem xylem) rather than directly responding to soil moisture. Hydrodynamic models resolve plant water storage (in the leaves, stem, and/or roots) as a diagnostic variable. They can, therefore, resolve the role hydraulic capacitance plays in buffering transpiration against water stress. Hydrodynamic models represent different plant traits that control the dynamics of the transpiration response to water shortage through parameters in different equations that describe water and stomatal dynamics at the leaf, xylem, and roots (<a href="#ref-mirfenderesgi2019">Mirfenderesgi et al., 2019</a>).</p>
+<p>It has been demonstrated that for hydrodynamic modeling plants should be classified along hydraulic functional traits that do not always follow the common plant functional type conventions currently used by land surface models (<a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al., 2017</a>). Although the exact formulation and resolution varies among models, some of the most common trait representations across all models include parameters describing tree structural characteristics and response curves of the plant hydraulic system (<a href="#ref-chen2022">Chen et al., 2022</a>). Common examples for structural parameters include rooting depth and vertical distribution, ratio of leaf area to xylem area, leaf area index (LAI), crown diameter, stem diameter, vertical distribution of leaf density, and xylem taper with height. Parameters describing the hydrodynamic response of the conductive system include root xylem resistance, stem xylem resistance, the shape of the percent loss of conductivity (PLC) curve describing the xylem response to decreased water potential, xylem capacitance (static or dynamic), and the shape of the stomata response curve to water potential. The stomatal response to water potential is described as the degree of isohydricity and differentiates relatively isohydric plants, which tend to maintain constant xylem water potential by closing stomata early with a relatively small loss of xylem pressure versus more anisohydric plants that allow continued transpiration despite a drop in xylem water potential (<a href="#ref-martinezvilalta2017">Martínez-Vilalta &amp; Garcia-Forner, 2017</a>; <a href="#ref-mcdowell2008">McDowell et al., 2008</a>). Site-level and species-level variations in hydraulic traits are common worldwide, including in temperate and boreal ecosystems (<a href="#ref-anderegg2018">Anderegg et al., 2018</a>) and tropical forests (<a href="#ref-smithmartin2023">Smith-Martin et al., 2023</a>). Recent observations provide ample examples of the importance of plant hydraulic traits: diversity in hydraulic traits determines drought resilience and drought mortality patterns (<a href="#ref-johnson2018">Johnson et al., 2018</a>), buffers variation in ecosystem fluxes during dry periods (<a href="#ref-anderegg2018">Anderegg et al., 2018</a>), and affects the response to short-term dry conditions (<a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al., 2017</a>). Multiple hydraulic traits determine the climate change response of forests (<a href="#ref-madsenhepp2023">Madsen-Hepp et al., 2023</a>; <a href="#ref-mastrotheodoros2017">Mastrotheodoros et al., 2017</a>).</p>
+<p>Not all models employ identical equations or simulate the same subcomponents of the plant hydraulic system. Furthermore, for the system components they do simulate, various models may utilize different levels of resolution. For example, ED2-Hydro (<a href="#ref-xu2016">X. Xu et al., 2016</a>) uses a single stem xylem conductive element, whereas ELM-FATES-Hydro (<a href="#ref-fang2022">Fang et al., 2022</a>) uses vertically resolved xylem. Some models explicitly represent fine roots (e.g., <a href="#ref-siqueira2008">Siqueira et al., 2008</a>), others do not; some models resolve leaf water storage (e.g., ELM-FATES-Hydro), others neglect that and only resolve xylem water storage. Numerous uncertainties impacting model predictions have been identified, serving as key areas of interest for ongoing and future model refinement.</p>
+<p>In this work, we describe a new model version designed particularly to:</p>
+<ul>
+<li><em>Improve the multilayer canopy representation.</em> The importance of multilayer canopy representation versus a big-leaf representation was demonstrated by <a href="#ref-bonan2021">Bonan et al.&nbsp;(2021)</a>. The significance of a multilayer canopy representation becomes particularly pronounced in models considering plant hydraulics, whereas the impact of multilayer representation might be less pronounced in models employing simplified stomatal regulation linked to soil moisture (<a href="#ref-wozniak2020">Wozniak et al., 2020</a>).</li>
+<li><em>Represent functional diversity of hydraulic traits within a forest.</em> Representing functional diversity in hydraulic traits within forest ecosystems entails capturing the spectrum of species with varying hydraulic characteristics within mixed canopies. Although plant functional types (PFTs) currently serve as the common resolution level at which species composition is represented in most models, they often fail to adequately represent hydraulic behaviors and traits. They are classified based on biome (tropical, temperate, and arctic), photosynthesis (C3 vs.&nbsp;C4), leaf form (grass vs.&nbsp;trees, needleleaf vs.&nbsp;broadleaf), and phenology (evergreen vs.&nbsp;deciduous). However, plants in the same PFT can have significantly different hydraulic traits and behavior, and this functional diversity is important in determining ecosystem-scale drought response (<a href="#ref-chitratarak2021">Chitra-Tarak et al., 2021</a>). For instance, within the PFT for temperate broadleaf deciduous trees, there exist both deep-rooted and shallow-rooted trees exhibiting extreme isohydric and anisohydric behaviors (<a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al., 2017</a>). Several studies have highlighted substantial diversity in hydraulic functional traits across tropical (<a href="#ref-smithmartin2023">Smith-Martin et al., 2023</a>), temperate, and boreal forests (<a href="#ref-anderegg2018">Anderegg et al., 2018</a>). Moreover, substantial intraspecific variation in hydraulic traits, both spatially among individuals and temporally within the same individual, underscores the complexity of hydraulic trait dynamics (<a href="#ref-anderegg2015">Anderegg, 2015</a>).</li>
+</ul>
+<p>Here, we introduce the newest version of the FETCH model, FETCH4, which is focused on improving hydraulic trait variation representation in a vertically resolved, multiscale (individual, species, and whole canopy) hydrodynamic model. We demonstrate its performance in a mixed temperate forest at the University of Michigan Biological Station (UMBS) in Northern Michigan to gain insights into how hydraulic traits influence the emergent patterns of hydrodynamic responses to transpiration drivers.</p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">2. Methods</h2>
+<section id="model-description" class="level3">
+<h3 class="anchored" data-anchor-id="model-description">2.1. Model Description</h3>
+<p>FETCH4 is the latest version of the FETCH model. The development of FETCH4 is guided by the need to improve the representation of hydraulic traits and their variation among trees and species. FETCH was introduced by <a href="#ref-bohrer2005">Bohrer et al.&nbsp;(2005)</a> as a conceptual single-tree branch-level hydrodynamic model. Previous advanced versions include FETCH2 (<a href="#ref-mirfenderesgi2016">Mirfenderesgi et al., 2016</a>), which reduced the resolution from branch to single stem, added a root system, and converted the numerical solver approach from finite elements to finite difference, and FETCH3 (<a href="#ref-silva2021">Silva &amp; Missik, 2021</a>; <a href="#ref-silva2022">Silva et al., 2022</a>), which translated FETCH2 from MATLAB to Python, added a dynamic soil column, and further improved the numerical solver. Major advancements in FETCH4 include: (a) an added capability to simulate multispecies canopies and scaling from individual trees to species to whole canopy, (b) an improved vertically resolved transpiration model, (c) an integrated parameter optimization module, and (d) improvements to computational performance and usability of the model. We explicitly chose a simple approach for representing the tree structure. We do not explicitly represent the leaves or branches. We only consider vertical variation of hydraulic properties between the roots and the stem (above ground) xylem, the stem taper, and the leaf area density. We chose to focus on these as an effort to limit the number of parameters given observations available to constrain these. As such, direct observations of vertical variation of leaf area density and taper functions exist, whereas other hydraulic parameters are constrained by the end result of the sap flux and transpiration the model predicts and fitted through optimization. In our approach that guided the development of FETCH4, we utilize hydraulic plant functional types (H-PFTs), which can be flexibly defined to broad or narrow categories depending on the level of detail required. Trees of the same H-PFT share the same hydraulic parameters but can vary in structure (e.g., tree height and stem diameter). Here, we define the H-PFT at the species level, though this is not required by the model and could be generalized at a higher phylogenetic or ecological/functional level. FETCH4 produces tree-level (individual), species-level (functional type), and plot-level outputs of transpiration, sap flow, stem water content, and soil moisture and resolves the intra- and inter-daily dynamics of these variables. Furthermore, FETCH4 can resolve emergent hydraulic dynamics, such as hysteresis between transpiration and vapor pressure deficit (VPD) and photosynthetically active radiation (PAR) (<a href="#ref-mathenystoy2014">Matheny, Bohrer, Stoy, et al., 2014</a>) and stress response and recovery.</p>
+<p>The full formulation of the model was described with previous versions of FETCH (<a href="#ref-bohrer2005">Bohrer et al., 2005</a>; <a href="#ref-mirfenderesgi2016">Mirfenderesgi et al., 2016</a>; <a href="#ref-silva2022">Silva et al., 2022</a>) but we will repeat the core governing equations here. The model calculates the dynamics of water potential following the Richardson-Richards formulation in three connected columns: the soil, the root, and the stem. The soil and root columns occupy the same vertical space and share the same vertical layers. The stem is vertically connected above the top layer of the root column. Each column has no flow boundary conditions and interacts with other columns and the atmosphere through prescribed sink and source terms. The soil top layer has a source term equal to the net water flux (precipitation − evaporation). The soil and the roots exchange flow through the root water uptake (can be negative), which is applied at each common vertical layer. The root and the stem columns are numerically directly connected (a continuum of xylem water potential). The stem column loses water to the air through transpiration, prescribed at each vertical layer.</p>
+<p>The soil column governing equation:</p>
+<p><span class="math display">
+C_s \frac{\partial \Phi_s}{\partial t} = \frac{\partial}{\partial z}\left[K_s \left(\frac{\partial \Phi_s}{\partial z} + \rho g\right)\right] - S_r + S_a\big|_{z=0}, \tag{1}
+</span></p>
+<p>where <span class="math inline">C_s</span> (Pa<sup>−1</sup>) is the soil capacitance, <span class="math inline">\Phi_s</span> (Pa) is the soil water potential, <span class="math inline">K_s</span> (m² s<sup>−1</sup> Pa<sup>−1</sup>) is the effective soil hydraulic conductivity, <span class="math inline">\rho</span> (kg m<sup>−3</sup>) is the water density, <span class="math inline">g</span> (m s<sup>−2</sup>) is the gravitational acceleration, <span class="math inline">t</span> (s) is time, and <span class="math inline">z</span> (m) is distance along the vertical direction (positive upward, zero at the surface). <span class="math inline">S_a</span> (s<sup>−1</sup>) is the atmospheric water supply (precipitation − evaporation) and applies only at the top boundary of the soil column (<span class="math inline">z = 0</span>). It is provided as forcing. Note that the model applies to tree canopies; thus, by definition, the soil evaporation term refers only to the direct evaporation from the soil under the forest canopy, which under most conditions is a very small term. The relationships between <span class="math inline">K_s</span>, <span class="math inline">\Phi_s</span> and the soil volumetric water content, <span class="math inline">\theta_s</span>, are modeled according to <a href="#ref-vangenuchten1980">van Genuchten (1980)</a>. <span class="math inline">S_r</span> (s<sup>−1</sup>) is the root water uptake (<a href="#ref-gardner1960">Gardner, 1960</a>):</p>
+<p><span class="math display">
+S_r = k_{s,\text{rad}} f(\theta_s) A_{\text{ind}} \frac{r_z}{r_{\text{tot}}} (\Phi_s - \Phi_x), \tag{2}
+</span></p>
+<p>where <span class="math inline">k_{s,\text{rad}}</span> (m s<sup>−1</sup> Pa<sup>−1</sup>) is the soil-to-root radial conductance per unit of root surface area, <span class="math inline">f(\theta)</span> is a dimensionless reduction function due to soil moisture, <span class="math inline">A_{\text{ind}}</span> (m² root m<sup>−2</sup> ground) is an index defining the lateral root surface area per area of ground, <span class="math inline">r_z</span> is the root mass at each vertical layer, and <span class="math inline">r_{\text{tot}}</span> is total root mass. <span class="math inline">\Phi_x</span> (Pa) is the xylem water potential.</p>
+<p>The root column governing equation:</p>
+<p><span class="math display">
+C_r \frac{\partial \Phi_r}{\partial t} = \frac{\partial}{\partial z}\left[K_r \frac{A_r}{A_s} \left(\frac{\partial \Phi_x}{\partial z} + \rho g\right)\right] + S_r, \tag{3}
+</span></p>
+<p>where <span class="math inline">A_r/A_s</span> is the root cross-sectional area index. Subscript <span class="math inline">r</span> for <span class="math inline">C_r</span> and <span class="math inline">K_r</span> indicates the capacitance and conductance for the root xylem.</p>
+<p>The stem column governing equation:</p>
+<p><span class="math display">
+C_x \frac{\partial \Phi_x}{\partial t} = \frac{\partial}{\partial z}\left[K_x \frac{A_x}{A_s} \left(\frac{\partial \Phi_x}{\partial z} + \rho g\right)\right] - E_l \left(\text{NHL}_{\text{leaf}} \times \text{LAD} \times \Delta z\right), \tag{4}
+</span></p>
+<p>where <span class="math inline">A_x/A_s = \text{LAD} \times \Delta z</span>, is the leaf area index at each vertical layer, and LAD is leaf area density (m²/m³). Subscript <span class="math inline">x</span> for <span class="math inline">C_x</span> and <span class="math inline">K_x</span> indicates the capacitance and conductance for the stem xylem. NHL<sub>leaf</sub> is the nonhydraulically limited transpiration per leaf area (explained in Section 2.1.2). The hydrodynamic regulation of transpiration is enforced by the hydrodynamic limitation factor <span class="math inline">E_l</span> (unitless), defined as:</p>
+<p><span class="math display">
+E_l = \exp\left[-\left(\frac{\Phi_x}{\Phi_{50}}\right)^{c_3}\right], \tag{5}
+</span></p>
+<p>where <span class="math inline">\Phi_{50}</span> is an empirical shape parameter describing the inflection point of the stomata response curve. The sensitivity of the response function of transpirational water loss (as defined by the shape parameters <span class="math inline">\Phi_{50}</span> and <span class="math inline">c_3</span>) represents the plant’s leaf hydraulic strategy (i.e., the degree of (an)isohydric behavior).</p>
+<p>The response curve describing root conductivity as a function of water potential (often called the “xylem vulnerability curve”) is of the form:</p>
+<p><span class="math display">
+K_r = K_{r,\text{max}} \exp\left[-\left(\frac{\Phi_x}{c_{r1}}\right)^{c_{r2}}\right], \tag{6}
+</span></p>
+<p>where <span class="math inline">K_{r,\text{max}}</span> is the maximal conductivity (when xylem is saturated), and <span class="math inline">c_{r1}</span> and <span class="math inline">c_{r2}</span> are shape parameters, describing the PLC curve for the root xylem. Identical formulation is applied for the conductivity of the stem xylem <span class="math inline">K_x</span> but with different values for the shape parameters, <span class="math inline">c_{x1}</span> and <span class="math inline">c_{x2}</span>.</p>
+<p>The capacitance varies with water content following (<a href="#ref-bohrer2005">Bohrer et al., 2005</a>):</p>
+<p><span class="math display">
+C_r = \frac{p\,\theta_{r,\text{sat}}}{\Phi_0}\left(\frac{\Phi_{r,0} - \Phi_x}{\Phi_{r,0}}\right)^{-(p+1)}, \tag{7}
+</span></p>
+<p>where <span class="math inline">\theta_{r,\text{sat}}</span> is the saturated water content of the root xylem, <span class="math inline">\Phi_{r,0}</span> is the water potential at saturation, and <span class="math inline">p</span> is a shape parameter. Similar formulation is applied to <span class="math inline">C_x</span> but using a different set of parameters representing the stem xylem, <span class="math inline">\theta_{x,\text{sat}}</span> and <span class="math inline">\Phi_{x,0}</span>.</p>
+</section>
+<section id="simulation-of-multispecies-canopies" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-of-multispecies-canopies">2.1.1. Simulation of Multispecies Canopies</h3>
+<p>The previous version, FETCH3, was designed to simulate canopy transpiration at the plot to ecosystem scale using the assumption of a homogenous canopy (i.e., assuming all trees within the simulated area have similar structural characteristics and hydraulic traits). A key advancement in FETCH4 is the implementation of a multitype canopy formulation, including representation of type-specific hydraulic parameters. FETCH4 provides the flexibility to specify different hydraulic and/or structural parameters for different types of trees within a mixed forest. The model implements the scaling approach described by <a href="#ref-bohrer2022">Bohrer and Missik (2022)</a> to scale from individual trees to the plot or ecosystem scale. Using this approach, FETCH4 simulates individual representative trees each with their distinct structural and hydraulic traits. Each of these representative trees represents a functional group of trees of the same functional type and size-age range. The combined results for all representative trees (typically a small number of types per site, around 3–10) can be scaled to the plot level based on the composition of the canopy in the site. This formulation takes both canopy-scale and type-specific individual-scale properties into account when determining meteorological forcing. Plot-level canopy structure (e.g., mean LAI) is used to determine forcing related to canopy turbulence, such as wind speed, friction velocity, and CO2 concentration. Following <a href="#ref-bohrer2022">Bohrer and Missik (2022)</a>, radiation and precipitation forcing are prescribed as homogenous fluxes, directly from above, thus, each type has the same above canopy flux rate and precipitation water input and there is no direct competition for light or water. Light attenuation for each representative tree is based on crown size and type-specific vertical leaf area distribution. Wind and CO2 concentrations, which tend to be horizontally mixed by turbulence at scales larger than individual tree-crowns, are forced as a plot level mean and vary vertically throughout the canopy based on the mean plot level leaf area density. Simulations of individual model trees within the canopy are parallelized.</p>
+<p>A challenge for any hydrodynamic simulation is that atmospheric fluxes (evaporation, PAR, transpiration, and precipitation) are typically prescribed and implemented per unit ground area, whereas sap flow serves a discrete tree with a narrow stem and a wide crown (each with a distinct dimension, different than unit area). Water storage in the tree represents the tree-level water budget, and given multiple trees of different sizes, the tree crown dimensions must be accounted for when scaling from per tree to per canopy and per ground area fluxes. FETCH explicitly represents the crown by resolving flux from the leaves per leaf area, <span class="math inline">F^{\text{leaf}}_{\text{tp,tp}}</span> (kg m<sup>−2</sup> leaf s<sup>−1</sup>). It scales to the tree level flow, <span class="math inline">F^{\text{tree}}_{\text{tp}}</span> (kg s<sup>−1</sup>), as</p>
+<p><span class="math display">
+F^{\text{tree}}_{\text{tp}} = F^{\text{leaf}}_{\text{tp}} \times (\text{LAI}_{c\,\text{tp}} \times A_{c\,\text{tp}}), \tag{8}
+</span></p>
+<p>where <span class="math inline">A_c</span> is the area of the ground projection of the tree crown, and a subscript <span class="math inline">\text{tp}</span> represents dimensions of the individual representative trees (also representing the mean characteristics of a type-size group). Note that the plot-level species specific LAI, LAI<sub>sp</sub> (a relatively well reported canopy characteristic, which could be conveniently used in even aged plots by assuming that the “functional type” is represented by each, or sub-groups of the species) and the mean plot-level LAI, LAI<sub>p</sub> (the most commonly reported canopy characteristic, for example from coarse satellite observations) are each different and relate to each other as</p>
+<p><span class="math display">
+\text{LAI}_p = \sum_{tp} (\text{LAI}_{sp\,tp}) = \sum_{tp} (\text{LAI}_{c\,tp} \times A_{c\,tp} \times 0.0001\, n_{tp}), \tag{9}
+</span></p>
+<p>where <span class="math inline">n_{tp}</span> is the type-specific stand density (trees/hectare). The tree-level flow, <span class="math inline">F^{\text{tree}}_{\text{tp}}</span>, can be represented as a flux per ground area, <span class="math inline">F_{c\,tp}</span> (kg s<sup>−1</sup> m<sup>−2</sup>), for each functional type, as</p>
+<p><span class="math display">
+F_{c\,tp} = \frac{F^{\text{tree}}_{\text{tp}}}{A_{c\,tp}} = F^{\text{leaf}}_{\text{tp}} \times \text{LAI}_{c\,tp}. \tag{10}
+</span></p>
+<p>This representation of transpiration in terms of <span class="math inline">F_{c\,tp}</span> is convenient since LAI~c tp~ and <span class="math inline">A_{c\,tp}</span> must already be known in order to calculate flux drivers that are specified at the crown scale (e.g., radiation). In its most general form, scaling from each type-specific flux to the whole-plot flux to the atmosphere per unit ground area, <span class="math inline">F_p</span>, is represented as</p>
+<p><span class="math display">
+F_p = \sum_{tp} \left(F^{\text{tree}}_{\text{tp}} \times 0.0001\, n_{tp}\right). \tag{11}
+</span></p>
+<p>When representing the tree-level flow in terms of <span class="math inline">F_{c\,tp}</span>, the above equation becomes</p>
+<p><span class="math display">
+F_p = \sum_{tp} \left(F_{c\,tp} \times A_{c\,tp} \times 0.0001\, n_{tp}\right). \tag{12}
+</span></p>
+<p>This scaling approach provides flexibility regarding how “hydraulic functional types” are defined. For example, “types” could refer to different species, different age classes within a species, or groups of species with similar hydraulic traits. Since the model produces both tree-level and plot-level outputs, it can be calibrated and evaluated using multiple data sources. Tree-level model outputs can be compared to tree-level measurements of sap flow, stem water content, and stem water potential. Plot-scale outputs can be compared to eddy covariance measurements of ET. One limitation of this approach is that trees do not use water from a shared pool, that is, each tree occupies its own “bucket,” and the model does not account for the influence of a tree’s neighbors on soil water availability. Thus, the current version does not simulate dynamic competition for water.</p>
+</section>
+<section id="transpiration-module" class="level3">
+<h3 class="anchored" data-anchor-id="transpiration-module">2.1.2. Transpiration Module</h3>
+<p>Transpiration in FETCH4 is simulated using a response function, which reduces the nonhydrodynamically limited (NHL) transpirational demand. NHL transpirational demand is multiplied by hydrodynamic limitation factor, <span class="math inline">E_l</span> as a function of the water potential in the stem xylem, <span class="math inline">\Phi_x(z,t)</span> (see Equation 5). <span class="math inline">E_l</span> represents the degree of closure of stomata due to the hydrodynamic stress. In reality, it is driven by the water potential at the guard cells. Here, we make a simplifying assumption and only resolve water potential through the root-stem system, neglecting fine roots, branches, leaves, and further smaller structures within leaves and stems. We assume that given a continuous water potential cascade from the xylem to the leaves, the stomata regulation behavior could be simulated using xylem water potential as a driver, assuming calibration of the stomata response-shape parameters. Here, NHL transpirational demand refers to transpiration that would occur in the absence of hydraulic limitations. It predicts stomatal conductance as a function of photosynthetic capacity and atmospheric demand, assuming soil water is not limiting. It is vertically detailed, estimating the potential transpiration per unit leaf area (<a href="#ref-ewers2000">Ewers &amp; Oren, 2000</a>) at each vertical layer assuming boundary layer resistance formulation from <a href="#ref-monteith2013">Monteith and Unsworth (2013)</a> based on vertical profiles of within-canopy wind and PAR attenuation given a vertical profile of LAD.</p>
+<p>NHL transpiration is driven by half-hourly observations of PAR, air temperature (<span class="math inline">T_a</span>), wind speed, and VPD. NHL stomatal conductance is represented using the <a href="#ref-leuning1995">Leuning (1995)</a> model. Additional details describing the NHL formulation can be found in Supporting Information S1. The code of FETCH4 includes an option to utilize the Penman-Monteith (P-M) formulation, with transpiration distributed vertically through the canopy based on the leaf area distribution, as done in FETCH3 and described by <a href="#ref-silva2022">Silva et al.&nbsp;(2022)</a>, though the default in FETCH4 and the simulations in this work are set to the Leuning NHL. The FETCH4 formulation for NHL is similar to that in FETCH2 (<a href="#ref-mirfenderesgi2016">Mirfenderesgi et al., 2016</a>) with a key difference being that FETCH2 uses stem water potential from the preceding time step to calculate the stomatal regulation effect, whereas FETCH4 uses an explicit solution at the current time step. Another difference is that the term within the Leuning NHL that limits stomata based on VPD, <span class="math inline">\text{VPD}/D_0</span>, where <span class="math inline">D_0</span> is a fixed reference optimal vapor pressure, was replaced by <span class="math inline">\text{VPD}_{\text{opt}}/D_0</span> and since <span class="math inline">\text{VPD}_{\text{opt}} = D_0</span>, this term will always be = 1 and will not limit stomatal conductance. That is explicitly required for a fully nonhydrologically limited transpiration model (see complete formulation in Supporting Information S1).</p>
+</section>
+<section id="parameter-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="parameter-optimization">2.1.3. Parameter Optimization</h3>
+<p>Parameter optimization in FETCH4 is performed using Bayesian Optimization for Anything (BOA), a newly developed software package for Bayesian optimization (<a href="#ref-scyphers2023a">Scyphers et al., 2023a</a>, <a href="#ref-scyphers2024">2024</a>). FETCH4 includes a model wrapper that fully integrates BOA into the model workflow for parameter optimization. All information needed to set up an optimization run of the model can be specified through the model configuration file, including which parameters to optimize, parameter bounds, metrics and variables that should be used for the objective function (e.g., Root Mean Squared Error (RMSE) of sap flow and/or stem water content), number of trials to run, and acquisition functions used to generate the trials.</p>
+</section>
+<section id="improvements-to-usability-and-performance" class="level3">
+<h3 class="anchored" data-anchor-id="improvements-to-usability-and-performance">2.1.4. Improvements to Usability and Performance</h3>
+<p>FETCH4 incorporates several enhancements aimed at improving the model’s usability, making it more adaptable to various study sites and user-friendly for individuals without programming expertise.</p>
+<ul>
+<li><em>Code performance.</em> FETCH4 made substantial improvements to computational efficiency, reducing the model’s run time by around 75% compared to the FETCH3.</li>
+<li><em>Documentation.</em> The model documentation and user guide are available at https://fetch3-nhl.readthedocs.io/en/latest/index.html.</li>
+<li><em>Model configuration.</em> All parameter definitions have been moved from the model source code to a separate configuration file, so that the model can be run without requiring interaction with the source code. Details regarding the configuration file can be found in the model documentation.</li>
+<li><em>Model outputs.</em> The model produces comprehensive outputs including both vertically detailed and vertically integrated transpiration, stem water content, and stem water potential in netCDF format. These output files can be analyzed using any programming language. Additionally, FETCH4 includes a built-in module for examining and visualizing model outputs and analyzing the results of parameter optimization runs.</li>
+<li><em>Maintainability of the model code.</em> The model source code has been restructured in a more modular format, allowing for easier implementation of new features (e.g., different transpiration schemes). In addition, automated tests have been added to improve the stability and maintainability of the model code.</li>
+</ul>
+</section>
+<section id="model-runs" class="level3">
+<h3 class="anchored" data-anchor-id="model-runs">2.2. Model Runs</h3>
+<section id="site-description-and-data-sets" class="level4">
+<h4 class="anchored" data-anchor-id="site-description-and-data-sets">2.2.1. Site Description and Data Sets</h4>
+<p>For this study, we used FETCH4 to simulate transpiration in a deciduous forest at the University of Michigan Biological Station (UMBS), located in northern lower Michigan, USA (N 45°33′35″, W 84°42′48″). The site experiences a mean annual precipitation of 766 mm and a mean annual temperature of 5.5°C (<a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al., 2017</a>). The soil at UMBS consists of well-drained Haplorthods of the Rubicon, Blue Lake, or Cheboygan series with a composition of 92.2% sand, 6.5% silt, and 0.6% clay (<a href="#ref-nave2011">Nave et al., 2011</a>). The forest is characterized by a mix of early and mid-successional tree species, transitioning from predominantly bigtooth aspen (<em>Populus grandidentata</em>) and paper birch (<em>Betula papyrifera</em>) to increasingly dominated by red maple (<em>Acer rubrum</em>), red oak (<em>Quercus rubra</em>), and white pine (<em>Pinus strobus</em>). The mean canopy height is about 22 m and maximum tree heights are 30 m. The canopy reaches an LAI of around 4.0 m² m<sup>−2</sup> during the peak of the growing season.</p>
+<p>UMBS is home to AmeriFlux site US-UMB, where eddy covariance measurements of CO2 and water vapor fluxes have been collected since 1998 (<a href="#ref-gough2013">Gough et al., 2013</a>; <a href="#ref-schmid2000">Schmid, 2000</a>). For this study, measurements of ET, CO2 concentration, wind speed, friction velocity, precipitation, incoming shortwave radiation, PAR, air temperature, VPD, atmospheric pressure, and soil water content were obtained from the AmeriFlux database (<a href="#ref-gough2023">Gough et al., 2023</a>). Eddy covariance measurements of ET were partitioned into evaporation and transpiration using the Transpiration Estimation Algorithm (TEA) method (<a href="#ref-nelson2018">Nelson et al., 2018</a>, <a href="#ref-nelson2020">2020</a>).</p>
+<p>Sap flow was measured using Granier-style sap flux sensors in five species at the site: <em>Quercus rubra</em> (oak), <em>Acer rubrum</em> (maple), <em>Betula papyrifera</em> (birch), <em>Populus grandidentata</em> (aspen), and <em>Pinus strobus</em> (pine) as described by <a href="#ref-mathenyvogel2014">Matheny, Bohrer, Vogel, et al.&nbsp;(2014)</a>. The sap flow data were obtained through the SAPFLUXNET database (<a href="#ref-poyatos2021">Poyatos et al., 2021</a>). Intensive forest inventory data have been collected periodically at the site, providing detailed information about canopy characteristics and species composition. Optical measurements of mean canopy LAI are conducted throughout the growing season, and species-specific LAI is measured using leaf litter traps. In addition, tree structural measurements (height, crown area, diameter at breast height, and sapwood depth) have been collected for the trees instrumented with sap flux sensors.</p>
+</section>
+<section id="description-of-model-runs" class="level4">
+<h4 class="anchored" data-anchor-id="description-of-model-runs">2.2.2. Description of Model Runs</h4>
+<p>For this experiment, we selected one representative tree of each of the five primary species at the site (oak, maple, birch, aspen, and pine) based on the availability and quality of sap flow measurements. The model also produced an estimate of total canopy transpiration by scaling these representative trees to the plot scale based on the species composition of the site. We ran the model for the growing seasons of 2015 and 2016 with 2015 used for parameterization and 2016 data used for validation.</p>
+<p>The structural parameters include: number of simulated representative trees of different types, active xylem diameters, stem height, xylem taper, crown diameter, leaf area index, vertical profile of leaf density, rooting depth, and vertical area distribution. These were prescribed based on observations and kept constant throughout the simulation. Meteorological forcing included temperature, humidity, friction velocity, and wind speed above the canopy, incoming PAR, and precipitation. These were updated every model timestep based on half-hourly observations and interpolated linearly. Vertical distribution of soil water potential at the time of the simulation start was prescribed as initial conditions. Initial conditions for xylem water potential were assumed hydrostatic at equilibrium with soil water potential.</p>
+<p>The soil column was resolved in 10 cm increments up to 6 m. The soil conductivity and porosity were based on observations (<a href="#ref-he2014">He et al., 2014</a>) and represented a very sandy soil. To create a simulated lake aquifer, which is typical for this site, though deeper than our soil column, the bottom 50 cm of the soil were assumed to be of clay, and a saturated boundary condition was prescribed at the bottom of the soil column. Rooting depths were set to 0.6 m for maple, birch, and pine, 6.0 m for oak, and 5.4 m for aspen based (very loosely, with large degree of approximation) on the findings of <a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al.&nbsp;(2017)</a>, <a href="#ref-mathenygarrity2017">Matheny, Garrity, and Bohrer (2017)</a>, and <a href="#ref-mathenymirfenderesgi2017">Matheny, Mirfenderesgi, and Bohrer (2017)</a>. Combined with the way the soil column was defined, this arrangement of rooting depth created a realistic aquifer-water access pattern and kept maple, birch, and pine to the unsaturated shallow layers of the soil, whereas oak could access a mostly saturated layer, and aspen could always access the aquifer water. Other structural parameters were specific to each individual tree in which sap flow was measured. Each of the five species was parameterized individually using sap flow measurements from the 2015 growing season.</p>
+<p>We used a two-stage approach for optimizing other model parameters in which we optimized the nonhydraulic and hydraulic parameters in separate stages. This two-stage approach reduces the number of free parameters, helping to minimize equifinality concerns and leading to a more constrained and manageable optimization problem. Additionally, this approach greatly reduces the overall computational cost by reducing the number of runs of the full FETCH4 model that are needed for parameterization.</p>
+<p><em>Optimization of non-hydraulic parameters.</em> In the first stage, nonhydraulic parameters are optimized by utilizing the NHL transpiration module as a standalone model for a period during which site conditions were not hydraulically limiting. For this, we selected the period from 29 May 2015 to 20 June 2015 based on the criteria of relatively high soil moisture and being early in the growing season to avoid any stress legacy effects that might occur later in the season. We optimize the following parameters using RMSE of model sap flow scaled to the plot level versus observations of transpiration as the objective function:</p>
+<ol type="1">
+<li>Maximum carboxylation rate at 25°C (<span class="math inline">V_{\text{cmax}}</span>). Although in reality, hydraulic stress can reduce photosynthetic capacity (<a href="#ref-duursma2014">Duursma et al., 2014</a>; <a href="#ref-nadalsala2021">Nadal-Sala et al., 2021</a>), <span class="math inline">V_{\text{cmax}}</span> is currently treated as a static parameter in FETCH4 and is parameterized with observations from the nonstressed periods, and it is therefore independent of hydraulic limitation. We used the TRY Database (<a href="#ref-kattge2020">Kattge et al., 2020</a>) for the observed interquartile range for <span class="math inline">V_{\text{cmax}}</span> values for each species in our simulation. This observed range was imposed as the min-max limit for the parameterization.</li>
+<li>Scaling factor for NHL transpiration. There are many factors that can cause bias in sap flow measurements, and the accuracy of the magnitude of the measurements from an individual sap flow sensor are very uncertain (<a href="#ref-flo2019">Flo et al., 2019</a>). In our sap flow observations, there was large variation in the overall magnitude of sap flow measurements even among trees of the same species and size. To adjust for the large variation in overall bias of different sap flow sensors as well as other factors such as uncertainty in single tree-crown leaf area, ground projection area, and active xylem area, FETCH4 includes a linear scaling factor used to adjust the overall magnitude of NHL transpiration. This scaling factor addresses the mismatch between scaled sap flow measurements and plot-level transpiration; it should not have a substantial impact on determining hydraulic traits, since these traits are discerned based on relative changes in sap flow of an individual tree rather than the overall magnitude of the sap flow measurements.</li>
+</ol>
+<p><em>Optimization of hydraulic parameters</em>: After the nonhydraulic parameters (<span class="math inline">V_{\text{cmax}}</span> and NHL scaling factor) are optimized in the first step, they are treated as fixed parameters for the subsequent optimization of the hydraulic parameters. To reduce the number of free parameters in the optimization, we chose to optimize a subset of the available hydraulic parameters in FETCH4 and fix the remaining parameters to reasonable values reported in the literature. We chose the following parameters of interest for optimization:</p>
+<ol type="1">
+<li>Stomatal response parameters. We optimized two parameters controlling the shape and sensitivity of the stomatal response to stem water potential (<span class="math inline">\Phi_{50}</span> and <span class="math inline">c_3</span>). These parameters are used to represent the tree’s stomatal regulation strategy along the isohydric-anisohydric continuum.</li>
+<li>Xylem hydraulic parameters. We optimized <span class="math inline">K_{\text{max}}</span> (maximum conductivity of the stem xylem) and <span class="math inline">b_p</span> (shape parameter describing the xylem vulnerability curve).</li>
+</ol>
+<p>BOA was used to optimize these parameters by running the full FETCH4 model over the full growing season (May 29–August 5, 2015). Optimized parameter values can be found in Table 1. RMSE of normalized model sap flow versus observations was used as the objective function. Sap flow observations were not gap-filled; periods with missing observations were not included when calculating RMSE. For each optimization run, we ran 100 trials of the model as follows: (a) 30 trials with parameters sampled quasi-randomly within the search space using the Sobol algorithm and (b) 70 trials using a Gaussian process expected improvement (GPEI) acquisition function. This 30–70 split for Sobol-GPEI is based on sensitivity analysis by <a href="#ref-scyphers2024">Scyphers et al.&nbsp;(2024)</a>.</p>
+<p>We ran the parameterized model for the 2016 growing season as validation. Model performance for the calibration (2015) and validation (2016) runs was evaluated using the RMSE and <span class="math inline">R^2</span> of modeled versus observed sap flow. We evaluated performance using both 30-min and daily total sap flow.</p>
+<p><strong>Table 1 | Optimized Parameter Values.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tree type</th>
+<th><span class="math inline">V_{\text{cmax}}</span> (μmol m<sup>−2</sup> s<sup>−1</sup>)</th>
+<th><span class="math inline">c_3</span> (−)</th>
+<th><span class="math inline">\Phi_{50}</span> (Pa)</th>
+<th><span class="math inline">K_{x,\text{max}}</span> (m² s<sup>−1</sup> Pa<sup>−1</sup>)</th>
+<th><span class="math inline">c_{x1}</span> (Pa)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maple</td>
+<td>29.0</td>
+<td>13.6</td>
+<td>−1.08×10⁶</td>
+<td>1.32×10<sup>−9</sup></td>
+<td>−9.47×10⁶</td>
+</tr>
+<tr class="even">
+<td>Oak</td>
+<td>33.5</td>
+<td>16.7</td>
+<td>−5.91×10⁵</td>
+<td>2.36×10<sup>−9</sup></td>
+<td>−1.50×10⁷</td>
+</tr>
+<tr class="odd">
+<td>Birch</td>
+<td>26.1</td>
+<td>4.0</td>
+<td>−5.00×10⁶</td>
+<td>6.22×10<sup>−9</sup></td>
+<td>−4.40×10⁶</td>
+</tr>
+<tr class="even">
+<td>Pine</td>
+<td>37.7</td>
+<td>11.1</td>
+<td>−1.73×10⁵</td>
+<td>5.44×10<sup>−9</sup></td>
+<td>−8.14×10⁶</td>
+</tr>
+<tr class="odd">
+<td>Aspen</td>
+<td>36.2</td>
+<td>17.8</td>
+<td>−4.39×10⁵</td>
+<td>3.53×10<sup>−9</sup></td>
+<td>−1.52×10⁵</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">3. Results and Discussion</h2>
+<section id="model-performance" class="level3">
+<h3 class="anchored" data-anchor-id="model-performance">3.1. Model Performance</h3>
+<p>FETCH4 produces a detailed set of outputs for each species, including vertically resolved transpiration, stem water potential, hydraulic conductivity, and capacitance as well as tree-level sap flow and stem water storage. For this experiment, sap flow measurements were used for evaluating model performance.</p>
+<p><img src="./images/figure1.png" class="img-fluid"></p>
+<p><strong>Fig. 1 | Modeled versus observed 30-min (cm³ hr<sup>−1</sup>) and daily total (cm³ d<sup>−1</sup>) sap flow for each species for the 2015 and 2016 growing seasons.</strong> Bold line and gray shade represent the linear fit and confidence range in modeled versus observed regression.</p>
+<p>The model effectively simulated sap flow across the five species. We evaluated the <span class="math inline">R^2</span> values for modeled versus observed sap flow in each of the five species, for both the calibration year (2015) and validation year (2016), at both 30-min and daily time steps (Fig. 1). Overall, the model exhibited consistent performance across both the calibration and validation years. The <span class="math inline">R^2</span> values remained largely comparable for both the 30-min and daily timescales with only exceptions in the case of aspen in 2015. In 2015, the 30-min data <span class="math inline">R^2</span> values ranged from 0.80 for birch to 0.56 for pine. In 2016, oak had the highest <span class="math inline">R^2</span> value at 0.74, whereas pine had the lowest at 0.62.</p>
+<p>Figs. 2 and 3 show the time series of 30-min modeled and observed sap flow in each of the species for 2015 and 2016. The growing seasons of 2015 and 2016 both experienced substantial dry-down periods characterized by a marked reduction in available soil moisture. During 2015, a pronounced dry-down period occurred in July, where soil water content decreased by 70% from June 30 to August 2, 2015 (from 0.10 m³ m<sup>−3</sup> to 0.03 m³ m<sup>−3</sup>). In contrast, there were multiple substantial dry-down periods during the 2016, which began earlier in the season.</p>
+<p><img src="./images/figure2.png" class="img-fluid"></p>
+<p><strong>Fig. 2 | Modeled (blue lines) and observed (yellow lines) plot-level transpiration (mm 30 min<sup>−1</sup>) and sap flow (cm³ hr<sup>−1</sup>) for each species during the 2015 growing season.</strong> Observed precipitation (blue line) and volumetric soil water content (SWC; black line) are shown in the top panel. Species hydraulic parameters in the model were calibrated using the 2015 growing season data.</p>
+<p>During the period from June 15 to July 6, 2016, soil water content declined by 70% (from 0.10 m³ m<sup>−3</sup> to 0.03 m³ m<sup>−3</sup>). A similar reduction also occurred later in the season with soil water content decreasing from 0.09 m³ m<sup>−3</sup> on 18 July 2016 to 0.03 m³ m<sup>−3</sup> by 2 August 2016.</p>
+<p><img src="./images/figure3.png" class="img-fluid"></p>
+<p><strong>Fig. 3 | Modeled (blue lines) and observed (yellow lines) plot-level transpiration (mm 30 min<sup>−1</sup>) and sap flow (cm³ hr<sup>−1</sup>) for each species during the 2015 growing season.</strong> Observed precipitation (blue line) and volumetric soil water content (SWC; black line) are shown in the top panel. Model parameters were calibrated using data from the 2015 growing season, and the 2016 growing season data were used for validation.</p>
+<p>The response of sap flow to reduced soil water content during the dry-down periods varied substantially among the five species. For example, during the July 2015 dry-down period, sap flow was markedly reduced in all species except oak with daily maximum sap flow decreasing by &gt;60% from the beginning to the end of the dry-down period (Fig. 2). Pine exhibited the strongest reduction in sap flow during this time with daily maximum sap flow declining by 80%. In contrast, sap flow in oak remained relatively stable throughout the dry-down period. Notably, the model was able to effectively capture these observed interspecies differences in sap flow during dry-down periods. For example, during the July 2015 dry-down period, the model captures the marked reduction in sap flow in maple, birch, pine, and aspen, whereas sap flow in oak remains relatively stable.</p>
+</section>
+<section id="characterization-of-hydraulic-limitation" class="level3">
+<h3 class="anchored" data-anchor-id="characterization-of-hydraulic-limitation">3.2. Characterization of Hydraulic Limitation</h3>
+<p>A key focus of FETCH4 is the ability to capture species differences in hydraulic behavior. A first line of hydraulic behavior characterization is through quantitative definition of hydraulic traits. These are difficult to measure directly in the field, but if we accept the model representation, the model parameters define the functional hydraulic traits. Our resulting optimized model parameters demonstrate a model-aided approach to derive hydraulic traits from sap flow observations. Table 1 provides the parameter/trait values we observed, as determined by the model optimization results.</p>
+<p>Since transpiration is strongly influenced by various environmental variables that contribute to atmospheric demand, our aim was to quantify the portion attributable to hydraulic limitation. To discern the reduction in sap flow due to hydraulic limitation (as opposed to changes in atmospheric demand or PAR levels), we calculated hydraulic limitation in sap flow as the difference between potential sap flow (as determined by the NHL transpiration model) and actual sap flow normalized by the seasonal maximum value of sap flow. We consider this normalized hydraulic limitation of sap flow a measure of expressed hydraulic stress and its sensitivity to soil water content and VPD an <em>emergent hydraulic trait</em>. We define an emergent trait as the aggregate behavior of multiple explicitly described traits. The complex feedback loops between these traits and the environmental conditions are what characterizes the emergence, that is, the emergent trait cannot be broken down into smaller pieces. Fig. 4 illustrates the time series of both modeled and observed hydraulic limitations for each species during the 2015 growing season along with modeled stem water potential. Higher values of hydraulic limitation mean that actual sap flow more strongly underperforms its potential and are thus interpreted as a relative higher hydraulic stress. Overall, the model successfully captured the observed dynamics in hydraulic stress across different species. However, in some instances, notably in maple and pine, the model tended to overestimate sap flow and underestimate hydraulic limitation particularly during the later stages of the July 2015 dry-down period. This underestimation of hydraulic stress was especially evident in the model’s prediction of sap flow recovery following the rainfall event at the end of the July 2015 dry-down, a phenomenon most pronounced in pine, where observations indicated much slower sap flow recovery toward the end of July 2015.</p>
+<p><img src="./images/figure4.png" class="img-fluid"></p>
+<p><strong>Fig. 4 | Modeled (orange) and observed (yellow) hydraulic limitation in sap flow and modeled stem water potential (blue) for each species during the 2015 growing season.</strong> Hydraulic limitation was calculated as the difference between the daily total potential sap flow (modeled by the NHL transpiration module) and actual sap flow and normalized by the maximum value of sap flow. Points represent the daily values, and lines represent the 7-day centered rolling average. Observed soil water content (SWC; black) and precipitation (P; blue) are shown in the top panel.</p>
+<p>To examine the model’s representation of hydraulic behavior across different species, we examined the relationships between hydraulic limitation in sap flow (expressed hydraulic stress), soil water content, and VPD. Fig. 5 shows these relationships for both modeled and observed maple and oak. Notably, the model effectively captures the emergent relationships between soil water content or VPD and expressed hydraulic stress as well as species differences in these relationships. Observations of sap flow demonstrate pronounced differences between oak and maple. In oak, hydraulic limitation is most tightly coupled with VPD, whereas the relationship with soil water content is more scattered as expressed by the lower observed <span class="math inline">R^2</span> of the SWC relationship than the VPD relationship (Fig. 5). In maple, the relationship between hydraulic limitation and soil water content is tighter than oak (much higher <span class="math inline">R^2</span> for maple) with slightly less predictive relationship between VPD and water stress than oak (slightly lower <span class="math inline">R^2</span>) (Fig. 5). In all cases, the modeled correlations between SWC or VPD and water stress in maple or oak were stronger than in observations, indicating that the variability in the observations is larger than in the model. Furthermore, days during the dry-down period in the later part of the growing season appear to have a distinct relationship from the earlier part of the growing season. Notably, although hydraulic reduction of xylem conductivity in the model is solely a function of stem water potential, the model successfully captured these distinct patterns.</p>
+<p><img src="./images/figure5.png" class="img-fluid"></p>
+<p><strong>Fig. 5 | Relationships between hydraulic limitation in sap flow and soil water content (SWC, top row) and vapor pressure deficit (VPD, bottom row) in oak and maple for the model and observations in 2015.</strong></p>
+<p>We also examined the relationships between modeled daily minimum stem-water potential, soil-water content, and VPD (Fig. 6). Stem water potential in maple is more tightly (and significantly) correlated with soil-water content as compared to oak. On average, oak exhibits more negative stem water potential than maple, and its stem water potential is not as strongly affected by soil water content or VPD (Fig. 6). These patterns are consistent with previous observations of the hydraulic behavior of oak and maple in UMBS. <a href="#ref-mathenyfiorella2017">Matheny, Fiorella, et al.&nbsp;(2017)</a> examined the relationship between leaf water potential and VPD in oak and maple at UMBS based on pressure chamber measurements of leaf water potential. Their observations demonstrated that daytime leaf water potential in oak was generally more negative, though unlike our results, they observed that xylem water potential in oak was more strongly correlated with VPD compared to that in maple. We hypothesize that the cause of this difference is that their xylem water potential observations were conducted in leaves, which show much stronger fluctuation and are more directly affected by VPD, while we define stomatal conductance sensitivity to the stem xylem water potential. They also found that transpiration in maples was strongly reduced during periods of soil water limitation, whereas oaks were able to maintain higher transpiration. The emergent hydraulic strategies are a result of a combination of different hydraulic traits, including rooting depth, xylem architecture, and stomatal regulation. Oaks have deeper roots than maples and are not as dependent on shallow soil moisture. Oaks have ring-porous xylem architecture with a higher maximum conductivity, whereas maples have diffuse-porous xylem with a lower maximum conductivity. Oaks have an anisohydric hydraulic strategy, where high stomatal conductance and transpiration are maintained at highly negative plant water potential. In contrast, maples have an isohydric hydraulic strategy, preventing excessively negative water potentials and restricting transpiration during periods of water limitation.</p>
+<p><img src="./images/figure6.png" class="img-fluid"></p>
+<p><strong>Fig. 6 | Relationships between modeled daily minimum stem water potential and soil water content (SWC) and vapor pressure deficit (VPD) for oak and maple in 2015.</strong> The relationship between daily minimum stem water potential was fit using a natural log function for SWC and a linear function for VPD.</p>
+<p>In this experiment, the key parameters describing these hydraulic traits, including the stomatal response parameters (e.g., describing the degree of iso/anisohydry, or more/less conservative stomatal regulation), the maximum xylem conductivity, and the shape parameters describing the xylem vulnerability curve, were included in the parameter optimization. Rooting depth was prescribed with oaks having deeper roots than maple. Parameter optimization was performed using only sap flow data, since observations of other variables (e.g., leaf or stem water potential, plant water storage) were not available. Species-specific representation of these key hydraulic traits in FETCH4 allowed the model to capture the emergent species-specific hydraulic behaviors.</p>
+</section>
+<section id="hysteresis" class="level3">
+<h3 class="anchored" data-anchor-id="hysteresis">3.3. Hysteresis</h3>
+<p>Plants typically transpire more in the morning compared to the afternoon forming a daily transpiration-VPD hysteresis loop. This loop’s magnitude, influenced by factors such as the VPD-PAR time lag and internal water storage, reflects plant water dynamics and stress levels (<a href="#ref-mathenystoy2014">Matheny, Bohrer, Stoy, et al., 2014</a>; <a href="#ref-zhang2014">Zhang et al., 2014</a>). In our sap flow data, we observed this general hysteresis pattern across species in which morning transpiration rates surpass those in the afternoon at identical VPD (see Fig. 7a for a representative example of this hysteresis pattern in maple). Overall, FETCH4 was able to capture the general pattern of hysteresis in transpiration with respect to VPD albeit with some minor differences in the shape of the hysteresis loop (Fig. 7b). We also evaluated the model’s ability to capture the temporal variation in the magnitude of daily hysteresis by calculating the area enclosed by the daily transpiration-VPD hysteresis loop. The model was able to capture some of the temporal variability in hysteresis (maple <span class="math inline">R^2 = 0.18</span>, oak <span class="math inline">R^2 = 0.29</span>; Fig. 7c). Accurate representation of the transpiration-VPD hysteresis loop is an area of difficulty for many ecosystem and land-surface models, with many models underestimating transpiration during the morning and overestimating transpiration during the afternoon, possibly due to a lack of representation of hydrodynamic processes (<a href="#ref-mathenystoy2014">Matheny, Bohrer, Stoy, et al., 2014</a>).</p>
+<p><img src="./images/figure7.png" class="img-fluid"></p>
+<p><strong>Fig. 7 | (a, b) Hysteresis between diurnal average observed (a) and modeled (b) sap flow and VPD in maple.</strong> Both sap flow and VPD have been normalized by their daily maximum values. (c) Modeled versus observed daily hysteresis area for maple (blue) and oak (orange) in 2015.</p>
+</section>
+<section id="using-fetch4-with-additional-data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="using-fetch4-with-additional-data-sets">3.4. Using FETCH4 With Additional Data Sets</h3>
+<p>In our numerical experiment, we parameterized FETCH4 using only sap flow data, since species-level measurements of other variables were not available for this site. However, FETCH4 outputs several other variables (e.g., transpiration, stem water potential, stem water storage, and hydraulic conductivity) and has the capability to incorporate additional measurements into the parameterization if they are available. The integration of FETCH4 with BOA provides flexible options for utilizing multiscale, multivariate observations for model parameterization using multiobjective optimization approaches. Historically, the field of tree hydrodynamics has been data-poor (<a href="#ref-griffith2020">Griffith et al., 2020</a>); however, the availability of relevant data sets is increasing due to advances in measurement techniques and efforts to create centralized data repositories. Stem water content can be measured continuously by repurposing capacitance sensors typically used to measure soil water content (<a href="#ref-mathenygarrity2017">Matheny, Garrity, &amp; Bohrer, 2017</a>; <a href="#ref-matheny2015">Matheny et al., 2015</a>) or using high-resolution dendrometers (<a href="#ref-zweifel2021">Zweifel et al., 2021</a>). Although there is a dearth of available plant and soil water potential measurements (<a href="#ref-novick2022">Novick et al., 2022</a>), these measurements should become increasingly more available in the future. Stem psychrometers and microtensiometers have been successfully used to monitor stem water potential continuously for days to weeks at a time, providing detailed information about plant hydraulic behavior (<a href="#ref-blanco2021">Blanco &amp; Kalcsits, 2021</a>; <a href="#ref-guo2020">Guo et al., 2020</a>), and efforts are underway to aggregate plant and soil water potential measurements into a centralized database (PSInet, https://psinetrcn.github.io/). If additional measurements such as these are available, they can be readily incorporated into FETCH4’s optimization framework. Other databases of plant traits such as TRY (<a href="#ref-kattge2011">Kattge et al., 2011</a>, <a href="#ref-kattge2020">2020</a>) and the Xylem Functional Traits database (https://xylemfunctionaltraits.org/) (<a href="#ref-choat2012">Choat et al., 2012</a>) can be used to constrain model parameters.</p>
+</section>
+<section id="limitations-and-future-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-and-future-improvements">3.5. Limitations and Future Improvements</h3>
+<p>Overall, FETCH4 showed good performance in simulating sap flow and captured the observed dynamics in hydraulic stress across different species. We have identified the following limitations, which will be targeted for improvements in subsequent development of the model.</p>
+<p><em>Soil moisture.</em> In the current version of the model, SWC is simulated by calculating infiltration of precipitation through the soil layers, and there is not an option to prescribe soil moisture conditions. This approach can make it difficult for the model to represent SWC accurately, since simulated SWC is very sensitive to the specified soil parameters (particularly the van Genuchten parameters and hydraulic conductivity), which usually have a high degree of uncertainty. In our test cases, the errors in model predictions of sap flow were strongly related to errors in modeled SWC (see Supporting Information S1). In particular, the model overestimated SWC during the latter part of the growing season in both 2015 and 2016, and this corresponded with overestimated sap flow. In addition, the larger overestimation of sap flow during late season dry-down periods in 2016 also corresponded to larger overestimation of SWC. In a future version of the model, an option will be added to allow SWC to be forced based on available observations of SWC or soil water potential. In cases where these data sets are available, this option should improve the sap flow simulations.</p>
+<p><em>Competition and growth.</em> In the current version, each tree is resolved as an independent column with its own light forcing and soil. Trees do not directly and dynamically compete for light or water. Numerically, it is rather simple to model a common soil column for multiple parallel xylem columns, each representing a different model tree; however, that will increase the dimension of the solution matrix by an order of the number of trees and slow down the solution. Implementing such a solution will also require some strong assumptions about the degree of root overlap and exploration of soil volume beyond the lateral extent of the tree crown (see sensitivity analysis for that effect in <a href="#ref-agee2021">Agee et al.&nbsp;(2021)</a>). The effects of soil water and light competition may accumulate to affect long-term growth and mortality of trees. FETCH4 is currently designed as a short-term model, set to resolve days and seasons, and does not handle annual or long-term tree growth. Other dynamic vegetation models, such as ED2 (<a href="#ref-medvigy2009">Medvigy et al., 2009</a>) or Tethys-Chloris (<a href="#ref-fatichi2012">Fatichi et al., 2012</a>) include formulation that relate growth to seasonal photosynthesis and changes in the carbon pools, and such formulation could be adopted in future version.</p>
+<p><em>Drought legacy effects.</em> The current version of the model does not include mechanisms to represent legacy effects of water stress, which causes trees to recover too readily after water stress. In our experiments, this was particularly evident in the model’s prediction of sap flow recovery following the rainfall event in late July 2015. The model responds to increased water availability following stress events by increasing transpiration, whereas observations indicate that trees continue to have reduced transpiration during this recovery period. Xylem hydraulic conductivity in the model is simply a function of water potential, which is driven by water potential in the soil; there is not currently a mechanism in the model that causes any lasting reduction in conductivity following periods of low stem water potential. Currently, the model is designed for short-term simulations (days-season) and does not include growth related changes to the initially prescribed tree structure, including suppression of growth due to persistent hydraulic stress. The model also does not include mechanisms to represent stress-induced nonstomatal downregulation of transpiration (i.e., changes to photosynthetic capacity) or other structural changes such as leaf shedding (<a href="#ref-nadalsala2021">Nadal-Sala et al., 2021</a>; <a href="#ref-yang2019">Yang et al., 2019</a>). In future versions, such responses could be prescribed or modeled and added to a resolved growth function that will update the tree structure over a long (annual) timescale. Although the exact mechanisms governing stress legacy are not well-understood, representation of stress legacy effects is necessary to improve model performance during stress recovery periods. Future developments in the model will focus on incorporating mechanisms to account for stress legacy effects.</p>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">4. Conclusions</h2>
+<p>We used an advanced plant hydrodynamic model, FETCH4, to simulate the xylem water flow and storage and transpiration dynamics of multiple tree species. The model was forced by observed meteorological conditions at a site where detailed tree-level observations of sap flow are available for tens of trees, coupled with plot-level eddy covariance observations of carbon flux and evapotranspiration and well-characterized species-specific tree structure (stand density, crown diameter and height, species-specific leaf area, leaf area vertical distribution, stem diameter, and active xylem depth). We used an advanced Bayesian optimization framework (BOA) to determine the species-specific parameter values of the model equations that describe the tree hydrodynamics. The model provides resolved hydrodynamics at multiple scales: individual trees, species, and whole plot. The model was able to replicate the observed patterns of sap flow and transpiration very well. We argue that the model equations and the parameters they include provide a very narrow and specific definition for hydraulic traits. Although these parameters do not directly translate to genetic or physiological traits, they are critical in describing the different hydraulic behavior of different tree species. We demonstrated that the model captured higher-level emergent traits, such as “drought sensitivity.” These traits are often discussed but their definitions are also often highly debated. Here, we show that the model results capture the clear tradeoff between VPD or SWC and the degree of stomata closure due water limitation (i.e., “hydraulic limitation”). We argue that model-augmented observations can provide a unique source of insight into plant hydrodynamics and the variation in the traits that control it among individuals, species, and biomes.</p>
+</section>
+<section id="data-availability-statement" class="level2">
+<h2 class="anchored" data-anchor-id="data-availability-statement">Data Availability Statement</h2>
+<p>FETCH4 (<a href="#ref-missik2023">Missik et al., 2023</a>) is preserved at https://doi.org/10.5281/zenodo.7655405 available under MIT license and developed openly at https://github.com/jemissik/fetch3_nhl. Simulations in this study were performed using FETCH4 version 0.2.0 (<a href="#ref-missik2024">Missik et al., 2024</a>), which is preserved at https://doi.org/10.5281/zenodo.14297311. Parameter optimization in this study was performed using BOA version 0.10.2 (<a href="#ref-scyphers2023b">Scyphers et al., 2023b</a>), which is preserved at https://doi.org/10.5281/zenodo.10067681, available under MIT license and developed openly at https://github.com/madeline-scyphers/boa. Flux and meteorological data sets from US-UMB were accessed through the AmeriFlux database for site ID US-UMB (<a href="#ref-gough2023">Gough et al., 2023</a>). Sap flow data were accessed through the SAPFLUXNET database (<a href="#ref-poyatos2021">Poyatos et al., 2021</a>). Model configurations and outputs used in this study are available at https://doi.org/10.5281/zenodo.14296990 (<a href="#ref-missik2024b">Missik, 2024</a>).</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>This work was funded by NSF-Hydrological Science award 1521238 and the United States-Israel Binational Agricultural Research and Development Fund (BARD) (IS-5304-20). Funding for observations at the US-UMB AmeriFlux core site was provided by the U.S. Department of Energy’s Office of Science. BOA development was funded in part by NSF-CBET award 2036982. Simulations were performed at the Ohio Supercomputer Center.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Supporting Information S1 (full NHL transpiration formulation and soil-moisture error analysis) was not available to include inline on this page — only the main article PDF was on file. See the publisher’s version for the Supporting Information.</p>
+</div>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p><span id="ref-agee2021">Agee et al., 2021</span> Agee, E., He, L., Bisht, G., Couvreur, V., Shahbaz, P., Meunier, F., et al.&nbsp;(2021). Root lateral interactions drive water uptake patterns under water limitation. <em>Advances in Water Resources</em>, <em>151</em>, 103896. https://doi.org/10.1016/j.advwatres.2021.103896</p>
+<p><span id="ref-anderegg2015">Anderegg, 2015</span> Anderegg, W. R. L. (2015). Spatial and temporal variation in plant hydraulic traits and their relevance for climate change impacts on vegetation. <em>New Phytologist</em>, <em>205</em>(3), 1008–1014. https://doi.org/10.1111/nph.12907</p>
+<p><span id="ref-anderegg2016">Anderegg et al., 2016</span> Anderegg, W. R. L., Klein, T., Bartlett, M., Sack, L., Pellegrini, A. F. A., Choat, B., &amp; Jansen, S. (2016). Meta-analysis reveals that hydraulic traits explain cross-species patterns of drought-induced tree mortality across the globe. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, <em>113</em>(18), 5024–5029. https://doi.org/10.1073/pnas.1525678113</p>
+<p><span id="ref-anderegg2018">Anderegg et al., 2018</span> Anderegg, W. R. L., Konings, A. G., Trugman, A. T., Yu, K., Bowling, D. R., Gabbitas, R., et al.&nbsp;(2018). Hydraulic diversity of forests regulates ecosystem resilience during drought. <em>Nature</em>, <em>561</em>(7724), 538–541. https://doi.org/10.1038/s41586-018-0539-7</p>
+<p><span id="ref-anderegg2019">Anderegg et al., 2019</span> Anderegg, W. R. L., Trugman, A. T., Bowling, D. R., Salvucci, G., &amp; Tuttle, S. E. (2019). Plant functional traits and climate influence drought intensification and land–atmosphere feedbacks. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, <em>116</em>(28), 14071–14076. https://doi.org/10.1073/pnas.1904747116</p>
+<p><span id="ref-barros2019">Barros et al., 2019</span> Barros, F., Bittencourt, P. R. L., Brum, M., Restrepo-Coupe, N., Pereira, L., Teodoro, G. S., et al.&nbsp;(2019). Hydraulic traits explain differential responses of Amazonian forests to the 2015 El Niño-induced drought. <em>New Phytologist</em>, <em>223</em>(3), 1253–1266. https://doi.org/10.1111/nph.15909</p>
+<p><span id="ref-blanco2021">Blanco and Kalcsits, 2021</span> Blanco, V., &amp; Kalcsits, L. (2021). Microtensiometers accurately measure stem water potential in woody perennials. <em>Plants</em>, <em>10</em>(12), 2780. https://doi.org/10.3390/plants10122780</p>
+<p><span id="ref-bohrer2022">Bohrer and Missik, 2022</span> Bohrer, G., &amp; Missik, J. E. C. (2022). Formulation of a consistent multi-species canopy description for hydrodynamic models embedded in large-scale land-surface representations of mixed-forests. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>127</em>(7). https://doi.org/10.1029/2022JG006982</p>
+<p><span id="ref-bohrer2005">Bohrer et al., 2005</span> Bohrer, G., Mourad, H., Laursen, T. A., Drewry, D., Avissar, R., Poggi, D., et al.&nbsp;(2005). Finite element tree crown hydrodynamics model (FETCH) using porous media flow within branching elements: A new representation of tree hydrodynamics. <em>Water Resources Research</em>, <em>41</em>(11). https://doi.org/10.1029/2005WR004181</p>
+<p><span id="ref-bonan2021">Bonan et al., 2021</span> Bonan, G. B., Patton, E. G., Finnigan, J. J., Baldocchi, D. D., &amp; Harman, I. N. (2021). Moving beyond the incorrect but useful paradigm: Reevaluating big-leaf and multilayer plant canopies to model biosphere-atmosphere fluxes—A review. <em>Agricultural and Forest Meteorology</em>, <em>306</em>, 108435. https://doi.org/10.1016/j.agrformet.2021.108435</p>
+<p><span id="ref-brodribb2020">Brodribb et al., 2020</span> Brodribb, T. J., Powers, J., Cochard, H., &amp; Choat, B. (2020). Hanging by a thread? Forests and drought. <em>Science</em>, <em>368</em>(6488), 261–266. https://doi.org/10.1126/science.aat7631</p>
+<p><span id="ref-chen2022">Chen et al., 2022</span> Chen, Z., Li, S., Wan, X., &amp; Liu, S. (2022). Strategies of tree species to adapt to drought from leaf stomatal regulation and stem embolism resistance to root properties. <em>Frontiers in Plant Science</em>, <em>13</em>. https://doi.org/10.3389/fpls.2022.926535</p>
+<p><span id="ref-chitratarak2021">Chitra-Tarak et al., 2021</span> Chitra-Tarak, R., Xu, C., Aguilar, S., Anderson-Teixeira, K. J., Chambers, J., Detto, M., et al.&nbsp;(2021). Hydraulically-vulnerable trees survive on deep-water access during droughts in a tropical forest. <em>New Phytologist</em>, <em>231</em>(5), 1798–1813. https://doi.org/10.1111/nph.17464</p>
+<p><span id="ref-choat2012">Choat et al., 2012</span> Choat, B., Jansen, S., Brodribb, T. J., Cochard, H., Delzon, S., Bhaskar, R., et al.&nbsp;(2012). Global convergence in the vulnerability of forests to drought. <em>Nature</em>, <em>491</em>(7426), 752–756. https://doi.org/10.1038/nature11688</p>
+<p><span id="ref-christoffersen2016">Christoffersen et al., 2016</span> Christoffersen, B. O., Gloor, M., Fauset, S., Fyllas, N. M., Galbraith, D. R., Baker, T. R., et al.&nbsp;(2016). Linking hydraulic traits to tropical forest function in a size-structured and trait-driven model (TFS v.1-Hydro). <em>Geoscientific Model Development</em>, <em>9</em>(11), 4227–4255. https://doi.org/10.5194/gmd-9-4227-2016</p>
+<p><span id="ref-detto2022">Detto and Pacala, 2022</span> Detto, M., &amp; Pacala, S. W. (2022). Plant hydraulics, stomatal control, and the response of a tropical forest to water stress over multiple temporal scales. <em>Global Change Biology</em>, <em>28</em>(14), 4359–4376. https://doi.org/10.1111/gcb.16179</p>
+<p><span id="ref-dodorico2007">D’Odorico et al., 2007</span> D’Odorico, P., Caylor, K., Okin, G. S., &amp; Scanlon, T. M. (2007). On soil moisture–vegetation feedbacks and their possible effects on the dynamics of dryland ecosystems. <em>Journal of Geophysical Research</em>, <em>112</em>(G4). https://doi.org/10.1029/2006JG000379</p>
+<p><span id="ref-duursma2014">Duursma et al., 2014</span> Duursma, R. A., Barton, C. V. M., Lin, Y.-S., Medlyn, B. E., Eamus, D., Tissue, D. T., et al.&nbsp;(2014). The peaked response of transpiration rate to vapour pressure deficit in field conditions can be explained by the temperature optimum of photosynthesis. <em>Agricultural and Forest Meteorology</em>, <em>189–190</em>, 2–10. https://doi.org/10.1016/j.agrformet.2013.12.007</p>
+<p><span id="ref-ewers2000">Ewers and Oren, 2000</span> Ewers, B. E., &amp; Oren, R. (2000). Analyses of assumptions and errors in the calculation of stomatal conductance from sap flux measurements. <em>Tree Physiology</em>, <em>20</em>(9), 579–589. https://doi.org/10.1093/treephys/20.9.579</p>
+<p><span id="ref-fang2022">Fang et al., 2022</span> Fang, Y., Leung, L. R., Knox, R., Koven, C., &amp; Bond-Lamberty, B. (2022). Impact of the numerical solution approach of a plant hydrodynamic model (v0.1) on vegetation dynamics. <em>Geoscientific Model Development</em>, <em>15</em>(16), 6385–6398. https://doi.org/10.5194/gmd-15-6385-2022</p>
+<p><span id="ref-fatichi2012">Fatichi et al., 2012</span> Fatichi, S., Ivanov, V. Y., &amp; Caporali, E. (2012). A mechanistic ecohydrological model to investigate complex interactions in cold and warm water-controlled environments: 1. Theoretical framework and plot-scale analysis. <em>Journal of Advances in Modeling Earth Systems</em>, <em>4</em>(2). https://doi.org/10.1029/2011MS000086</p>
+<p><span id="ref-fatichi2016">Fatichi et al., 2016</span> Fatichi, S., Pappas, C., &amp; Ivanov, V. Y. (2016). Modeling plant–water interactions: An ecohydrological overview from the cell to the global scale. <em>WIREs Water</em>, <em>3</em>, 327–368. https://doi.org/10.1002/wat2.1125</p>
+<p><span id="ref-flo2019">Flo et al., 2019</span> Flo, V., Martinez-Vilalta, J., Steppe, K., Schuldt, B., &amp; Poyatos, R. (2019). A synthesis of bias and uncertainty in sap flow methods. <em>Agricultural and Forest Meteorology</em>, <em>271</em>, 362–374. https://doi.org/10.1016/j.agrformet.2019.03.012</p>
+<p><span id="ref-gardner1960">Gardner, 1960</span> Gardner, W. R. (1960). Dynamic aspects of water availability to plants. <em>Soil Science</em>, <em>89</em>(2), 63–73. https://doi.org/10.1097/00010694-196002000-00001</p>
+<p><span id="ref-gentine2016">Gentine et al., 2016</span> Gentine, P., Guérin, M., Uriarte, M., McDowell, N. G., &amp; Pockman, W. T. (2016). An allometry-based model of the survival strategies of hydraulic failure and carbon starvation. <em>Ecohydrology</em>, <em>9</em>(3), 529–546. https://doi.org/10.1002/eco.1654</p>
+<p><span id="ref-gough2023">Gough et al., 2023</span> Gough, C. M., Bohrer, G., &amp; Curtis, P. (2023). AmeriFlux FLUXNET-1F US-UMB Univ. of Mich [Dataset]. <em>Biological Station</em>. https://doi.org/10.17190/AMF/2204882</p>
+<p><span id="ref-gough2013">Gough et al., 2013</span> Gough, C. M., Hardiman, B. S., Nave, L. E., Bohrer, G., Maurer, K. D., Vogel, C. S., et al.&nbsp;(2013). Sustained carbon uptake and storage following moderate disturbance in a Great Lakes forest. <em>Ecological Applications</em>, <em>23</em>(5), 1202–1215. https://doi.org/10.1890/12-1554.1</p>
+<p><span id="ref-green2017">Green et al., 2017</span> Green, J. K., Konings, A. G., Alemohammad, S. H., Berry, J., Entekhabi, D., Kolassa, J., et al.&nbsp;(2017). Regionally strong feedbacks between the atmosphere and terrestrial biosphere. <em>Nature Geoscience</em>, <em>10</em>(6), 410–414. https://doi.org/10.1038/ngeo2957</p>
+<p><span id="ref-griffith2020">Griffith et al., 2020</span> Griffith, D. M., Osborne, C. P., Edwards, E. J., Bachle, S., Beerling, D. J., Bond, W. J., et al.&nbsp;(2020). Lineage-based functional types: Characterising functional diversity to enhance the representation of ecological behaviour in land surface models. <em>New Phytologist</em>, <em>228</em>(1), 15–23. https://doi.org/10.1111/nph.16773</p>
+<p><span id="ref-guo2020">Guo et al., 2020</span> Guo, J. S., Hultine, K. R., Koch, G. W., Kropp, H., &amp; Ogle, K. (2020). Temporal shifts in iso/anisohydry revealed from daily observations of plant water potential in a dominant desert shrub. <em>New Phytologist</em>, <em>225</em>(2), 713–726. https://doi.org/10.1111/nph.16196</p>
+<p><span id="ref-he2014">He et al., 2014</span> He, L., Ivanov, V. Y., Bohrer, G., Maurer, K. D., Vogel, C. S., &amp; Moghaddam, M. (2014). Effects of fine-scale soil moisture and canopy heterogeneity on energy and water fluxes in a northern temperate mixed forest. <em>Agricultural and Forest Meteorology</em>, <em>184</em>, 243–256. https://doi.org/10.1016/j.agrformet.2013.10.006</p>
+<p><span id="ref-johnson2018">Johnson et al., 2018</span> Johnson, D. M., Domec, J.-C., Carter Berry, Z., Schwantes, A. M., McCulloh, K. A., Woodruff, D. R., et al.&nbsp;(2018). Co-occurring woody species have diverse hydraulic strategies and mortality rates during an extreme drought. <em>Plant, Cell and Environment</em>, <em>41</em>(3), 576–588. https://doi.org/10.1111/pce.13121</p>
+<p><span id="ref-kattge2020">Kattge et al., 2020</span> Kattge, J., Bönisch, G., Díaz, S., Lavorel, S., Prentice, I. C., Leadley, P., et al.&nbsp;(2020). TRY plant trait database—Enhanced coverage and open access. <em>Global Change Biology</em>, <em>26</em>, 119–188. https://doi.org/10.1111/gcb.14904</p>
+<p><span id="ref-kattge2011">Kattge et al., 2011</span> Kattge, J., Díaz, S., Lavorel, S., Prentice, I. C., Leadley, P., Bönisch, G., et al.&nbsp;(2011). TRY—A global database of plant traits. <em>Global Change Biology</em>, <em>17</em>, 2905–2935. https://doi.org/10.1111/j.1365-2486.2011.02451.x</p>
+<p><span id="ref-kennedy2019">Kennedy et al., 2019</span> Kennedy, D., Swenson, S., Oleson, K. W., Lawrence, D. M., Fisher, R., Lola da Costa, A. C., &amp; Gentine, P. (2019). Implementing plant hydraulics in the community land model, version 5. <em>Journal of Advances in Modeling Earth Systems</em>, <em>11</em>(2), 485–513. https://doi.org/10.1029/2018MS001500</p>
+<p><span id="ref-leuning1995">Leuning, 1995</span> Leuning, R. (1995). A critical appraisal of a combined stomatal-photosynthesis model for C3 plants. <em>Plant, Cell and Environment</em>, <em>18</em>(4), 339–355. https://doi.org/10.1111/j.1365-3040.1995.tb00370.x</p>
+<p><span id="ref-madsenhepp2023">Madsen-Hepp et al., 2023</span> Madsen-Hepp, T. R., Franklin, J., McFaul, S., Schauer, L., &amp; Spasojevic, M. J. (2023). Plant functional traits predict heterogeneous distributional shifts in response to climate change. <em>Functional Ecology</em>, <em>37</em>(5), 1449–1462. https://doi.org/10.1111/1365-2435.14308</p>
+<p><span id="ref-martinezvilalta2017">Martínez-Vilalta and Garcia-Forner, 2017</span> Martínez-Vilalta, J., &amp; Garcia-Forner, N. (2017). Water potential regulation, stomatal behaviour and hydraulic transport under drought: Deconstructing the iso/anisohydric concept. <em>Plant, Cell and Environment</em>, <em>40</em>, 962–976. https://doi.org/10.1111/pce.12846</p>
+<p><span id="ref-massoud2019">Massoud et al., 2019</span> Massoud, E. C., Purdy, A. J., Christoffersen, B. O., Santiago, L. S., &amp; Xu, C. (2019). Bayesian inference of hydraulic properties in and around a white fir using a process-based ecohydrologic model. <em>Environmental Modelling &amp; Software</em>, <em>115</em>, 76–85. https://doi.org/10.1016/j.envsoft.2019.01.022</p>
+<p><span id="ref-mastrotheodoros2017">Mastrotheodoros et al., 2017</span> Mastrotheodoros, T., Pappas, C., Molnar, P., Burlando, P., Keenan, T. F., Gentine, P., et al.&nbsp;(2017). Linking plant functional trait plasticity and the large increase in forest water use efficiency. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>122</em>(9), 2393–2408. https://doi.org/10.1002/2017JG003890</p>
+<p><span id="ref-matheny2015">Matheny et al., 2015</span> Matheny, A. M., Bohrer, G., Garrity, S. R., Morin, T. H., Howard, C. J., &amp; Vogel, C. S. (2015). Observations of stem water storage in trees of opposing hydraulic strategies. <em>Ecosphere</em>, <em>6</em>(9), 1–13. https://doi.org/10.1890/ES15-00170.1</p>
+<p><span id="ref-mathenystoy2014">Matheny, Bohrer, Stoy, et al., 2014</span> Matheny, A. M., Bohrer, G., Stoy, P. C., Baker, I. T., Black, A. T., Desai, A. R., et al.&nbsp;(2014). Characterizing the diurnal patterns of errors in the prediction of evapotranspiration by several land-surface models: An NACP analysis. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>119</em>(7), 1458–1473. https://doi.org/10.1002/2014JG002623</p>
+<p><span id="ref-mathenyvogel2014">Matheny, Bohrer, Vogel, et al., 2014</span> Matheny, A. M., Bohrer, G., Vogel, C. S., Morin, T. H., He, L., Frasson, R. P., et al.&nbsp;(2014). Species-specific transpiration responses to intermediate disturbance in a northern hardwood forest. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>119</em>(12), 2292–2311. https://doi.org/10.1002/2014JG002804</p>
+<p><span id="ref-mathenyfiorella2017">Matheny, Fiorella, et al., 2017</span> Matheny, A. M., Fiorella, R. P., Bohrer, G., Poulsen, C. J., Morin, T. H., Wunderlich, A., et al.&nbsp;(2017). Contrasting strategies of hydraulic control in two codominant temperate tree species. <em>Ecohydrology</em>, <em>10</em>(3), e1815. https://doi.org/10.1002/eco.1815</p>
+<p><span id="ref-mathenygarrity2017">Matheny, Garrity, and Bohrer, 2017</span> Matheny, A. M., Garrity, S. R., &amp; Bohrer, G. (2017). The calibration and use of capacitance sensors to monitor stem water content in trees. <em>Journal of Visualized Experiments</em>, <em>130</em>, 57062. https://doi.org/10.3791/57062</p>
+<p><span id="ref-mathenymirfenderesgi2017">Matheny, Mirfenderesgi, and Bohrer, 2017</span> Matheny, A. M., Mirfenderesgi, G., &amp; Bohrer, G. (2017). Trait-based representation of hydrological functional properties of plants in weather and ecosystem models. <em>Plant Diversity</em>, <em>39</em>, 1–12. https://doi.org/10.1016/j.pld.2016.10.001</p>
+<p><span id="ref-mcdowell2008">McDowell et al., 2008</span> McDowell, N., Pockman, W. T., Allen, C. D., Breshears, D. D., Cobb, N., Kolb, T., et al.&nbsp;(2008). Mechanisms of plant survival and mortality during drought: Why do some plants survive while others succumb to drought? <em>New Phytologist</em>, <em>178</em>(4), 719–739. https://doi.org/10.1111/j.1469-8137.2008.02436.x</p>
+<p><span id="ref-medvigy2009">Medvigy et al., 2009</span> Medvigy, D., Wofsy, S. C., Munger, J. W., Hollinger, D. Y., &amp; Moorcroft, P. R. (2009). Mechanistic scaling of ecosystem function and dynamics in space and time: Ecosystem Demography model version 2. <em>Journal of Geophysical Research</em>, <em>114</em>(G1), 2008JG000812. https://doi.org/10.1029/2008JG000812</p>
+<p><span id="ref-mirfenderesgi2016">Mirfenderesgi et al., 2016</span> Mirfenderesgi, G., Bohrer, G., Matheny, A. M., Fatichi, S., Frasson, R. P., &amp; Schäfer, K. V. R. (2016). Tree level hydrodynamic approach for resolving aboveground water storage and stomatal conductance and modeling the effects of tree hydraulic strategy. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>121</em>(7), 1792–1813. https://doi.org/10.1002/2016JG003467</p>
+<p><span id="ref-mirfenderesgi2019">Mirfenderesgi et al., 2019</span> Mirfenderesgi, G., Matheny, A. M., &amp; Bohrer, G. (2019). Hydrodynamic trait coordination and cost-benefit trade-offs throughout the isohydric-anisohydric continuum in trees. <em>Ecohydrology</em>, <em>12</em>(1), e2041. https://doi.org/10.1002/eco.2041</p>
+<p><span id="ref-missik2024b">Missik, 2024</span> Missik, J. (2024). FETCH4 simulation datasets [Dataset]. https://doi.org/10.5281/zenodo.14296990</p>
+<p><span id="ref-missik2023">Missik et al., 2023</span> Missik, J., Bohrer, G., Silva, M., &amp; Scyphers, M. (2023). FETCH4 hydrodynamic canopy transpiration model (all versions) [Software]. https://doi.org/10.5281/zenodo.7655405</p>
+<p><span id="ref-missik2024">Missik et al., 2024</span> Missik, J., Bohrer, G., Silva, M., &amp; Scyphers, M. (2024). FETCH4 hydrodynamic canopy transpiration model v0.2.0 [Software]. https://doi.org/10.5281/zenodo.14297311</p>
+<p><span id="ref-monteith2013">Monteith and Unsworth, 2013</span> Monteith, J. L., &amp; Unsworth, M. H. (2013). <em>Principles of environmental physics: Plants, animals, and the atmosphere</em> (4th ed.). Elsevier/Academic Press.</p>
+<p><span id="ref-nadalsala2021">Nadal-Sala et al., 2021</span> Nadal-Sala, D., Grote, R., Birami, B., Knüver, T., Rehschuh, R., Schwarz, S., &amp; Ruehr, N. K. (2021). Leaf shedding and non-stomatal limitations of photosynthesis mitigate hydraulic conductance losses in scots pine saplings during severe drought stress. <em>Frontiers in Plant Science</em>, <em>12</em>, 715127. https://doi.org/10.3389/fpls.2021.715127</p>
+<p><span id="ref-nave2011">Nave et al., 2011</span> Nave, L. E., Gough, C. M., Maurer, K. D., Bohrer, G., Hardiman, B. S., Le Moine, J., et al.&nbsp;(2011). Disturbance and the resilience of coupled carbon and nitrogen cycling in a north temperate forest. <em>Journal of Geophysical Research</em>, <em>116</em>(G4), G04016. https://doi.org/10.1029/2011JG001758</p>
+<p><span id="ref-nelson2018">Nelson et al., 2018</span> Nelson, J. A., Carvalhais, N., Cuntz, M., Delpierre, N., Knauer, J., Ogée, J., et al.&nbsp;(2018). Coupling water and carbon fluxes to constrain estimates of transpiration: The TEA algorithm. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>123</em>(12), 3617–3632. https://doi.org/10.1029/2018JG004727</p>
+<p><span id="ref-nelson2020">Nelson et al., 2020</span> Nelson, J. A., Pérez-Priego, O., Zhou, S., Poyatos, R., Zhang, Y., Blanken, P. D., et al.&nbsp;(2020). Ecosystem transpiration and evaporation: Insights from three water flux partitioning methods across FLUXNET sites. <em>Global Change Biology</em>, <em>26</em>, 6916–6930. https://doi.org/10.1111/gcb.15314</p>
+<p><span id="ref-novick2022">Novick et al., 2022</span> Novick, K. A., Ficklin, D. L., Baldocchi, D., Davis, K. J., Ghezzehei, T. A., Konings, A. G., et al.&nbsp;(2022). Confronting the water potential information gap. <em>Nature Geoscience</em>, <em>15</em>(3), 158–164. https://doi.org/10.1038/s41561-022-00909-2</p>
+<p><span id="ref-paschalis2024">Paschalis et al., 2024</span> Paschalis, A., De Kauwe, M. G., Sabot, M., &amp; Fatichi, S. (2024). When do plant hydraulics matter in terrestrial biosphere modelling? <em>Global Change Biology</em>, <em>30</em>(1), e17022. https://doi.org/10.1111/gcb.17022</p>
+<p><span id="ref-poyatos2021">Poyatos et al., 2021</span> Poyatos, R., Granda, V., Flo, V., Adams, M. A., Adorján, B., Aguadé, D., et al.&nbsp;(2021). Global transpiration data from sap flow measurements: The SAPFLUXNET database. <em>Earth System Science Data</em>, <em>13</em>(6), 2607–2649. https://doi.org/10.5194/essd-13-2607-2021</p>
+<p><span id="ref-schmid2000">Schmid, 2000</span> Schmid, H. (2000). Measurements of CO2 and energy fluxes over a mixed hardwood forest in the mid-western United States. <em>Agricultural and Forest Meteorology</em>, <em>103</em>(4), 357–374. https://doi.org/10.1016/S0168-1923(00)00140-4</p>
+<p><span id="ref-scyphers2023a">Scyphers et al., 2023a</span> Scyphers, M. E., Missik, J., Paulson, J., &amp; Bohrer, G. (2023a). Bayesian optimization for anything (BOA) (all versions) [Software]. https://doi.org/10.5281/zenodo.7655353</p>
+<p><span id="ref-scyphers2023b">Scyphers et al., 2023b</span> Scyphers, M. E., Missik, J., Paulson, J., &amp; Bohrer, G. (2023b). Bayesian optimization for anything (BOA) (0.10.2) [Software]. https://doi.org/10.5281/zenodo.10067681</p>
+<p><span id="ref-scyphers2024">Scyphers et al., 2024</span> Scyphers, M. E., Missik, J. E. C., Kujawa, H., Paulson, J. A., &amp; Bohrer, G. (2024). Bayesian optimization for anything (BOA): An open-source framework for accessible, user-friendly Bayesian optimization. <em>Environmental Modelling &amp; Software</em>, <em>182</em>, 106191. https://doi.org/10.1016/j.envsoft.2024.106191</p>
+<p><span id="ref-seneviratne2010">Seneviratne et al., 2010</span> Seneviratne, S. I., Corti, T., Davin, E. L., Hirschi, M., Jaeger, E. B., Lehner, I., et al.&nbsp;(2010). Investigating soil moisture–climate interactions in a changing climate: A review. <em>Earth-Science Reviews</em>, <em>99</em>(3–4), 125–161. https://doi.org/10.1016/j.earscirev.2010.02.004</p>
+<p><span id="ref-silva2022">Silva et al., 2022</span> Silva, M., Matheny, A. M., Pauwels, V. R. N., Triadis, D., Missik, J. E., Bohrer, G., &amp; Daly, E. (2022). Tree hydrodynamic modelling of the soil–plant–atmosphere continuum using FETCH3. <em>Geoscientific Model Development</em>, <em>15</em>(6), 2619–2634. https://doi.org/10.5194/gmd-15-2619-2022</p>
+<p><span id="ref-silva2021">Silva and Missik, 2021</span> Silva, M., &amp; Missik, J. E. (2021). mdef0001/FETCH3_modular_NHL: FETCH3_modular_NHL. https://doi.org/10.5281/zenodo.5775300</p>
+<p><span id="ref-siqueira2008">Siqueira et al., 2008</span> Siqueira, M., Katul, G., &amp; Porporato, A. (2008). Onset of water stress, hysteresis in plant conductance, and hydraulic lift: Scaling soil water dynamics from millimeters to meters. <em>Water Resources Research</em>, <em>44</em>(1). https://doi.org/10.1029/2007WR006094</p>
+<p><span id="ref-smithmartin2023">Smith-Martin et al., 2023</span> Smith-Martin, C. M., Muscarella, R., Hammond, W. M., Jansen, S., Brodribb, T. J., Choat, B., et al.&nbsp;(2023). Hydraulic variability of tropical forests is largely independent of water availability. <em>Ecology Letters</em>, <em>26</em>(11), 1829–1839. https://doi.org/10.1111/ele.14314</p>
+<p><span id="ref-vangenuchten1980">van Genuchten, 1980</span> Van Genuchten, M. T. (1980). A closed-form equation for predicting the hydraulic conductivity of unsaturated soils. <em>Soil Science Society of America Journal</em>, <em>44</em>(5), 892–898. https://doi.org/10.2136/sssaj1980.03615995004400050002x</p>
+<p><span id="ref-wozniak2020">Wozniak et al., 2020</span> Wozniak, M. C., Bonan, G. B., Keppel-Aleks, G., &amp; Steiner, A. L. (2020). Influence of vertical heterogeneities in the canopy microenvironment on interannual variability of carbon uptake in temperate deciduous forests. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>125</em>(8), e2020JG005658. https://doi.org/10.1029/2020JG005658</p>
+<p><span id="ref-xu2023">C. Xu et al., 2023</span> Xu, C., Christoffersen, B., Robbins, Z., Knox, R., Fisher, R. A., Chitra-Tarak, R., et al.&nbsp;(2023). Quantification of hydraulic trait control on plant hydrodynamics and risk of hydraulic failure within a demographic structured vegetation model in a tropical forest (FATES–HYDRO V1.0). <em>Geoscientific Model Development</em>, <em>16</em>(21), 6267–6283. https://doi.org/10.5194/gmd-16-6267-2023</p>
+<p><span id="ref-xu2016">X. Xu et al., 2016</span> Xu, X., Medvigy, D., Powers, J. S., Becknell, J. M., &amp; Guan, K. (2016). Diversity in plant hydraulic traits explains seasonal and inter-annual variations of vegetation dynamics in seasonally dry tropical forests. <em>New Phytologist</em>, <em>212</em>(1), 80–95. https://doi.org/10.1111/nph.14009</p>
+<p><span id="ref-yang2019">Yang et al., 2019</span> Yang, J., Duursma, R. A., De Kauwe, M. G., Kumarathunge, D., Jiang, M., Mahmud, K., et al.&nbsp;(2019). Incorporating non-stomatal limitation improves the performance of leaf and canopy models at high vapour pressure deficit. <em>Tree Physiology</em>, tpz103. https://doi.org/10.1093/treephys/tpz103</p>
+<p><span id="ref-zakharova2019">Zakharova et al., 2019</span> Zakharova, L., Meyer, K. M., &amp; Seifan, M. (2019). Trait-based modelling in ecology: A review of two decades of research. <em>Ecological Modelling</em>, <em>407</em>, 108703. https://doi.org/10.1016/j.ecolmodel.2019.05.008</p>
+<p><span id="ref-zhang2014">Zhang et al., 2014</span> Zhang, Q., Manzoni, S., Katul, G., Porporato, A., &amp; Yang, D. W. (2014). The hysteretic evapotranspiration–vapor pressure deficit relation. <em>Journal of Geophysical Research: Biogeosciences</em>, <em>119</em>(2), 125–140. https://doi.org/10.1002/2013jg002484</p>
+<p><span id="ref-zweifel2021">Zweifel et al., 2021</span> Zweifel, R., Etzold, S., Basler, D., Bischoff, R., Braun, S., Buchmann, N., et al.&nbsp;(2021). TreeNet–The biological drought and growth indicator network. <em>Frontiers in Forests and Global Change</em>, <em>4</em>. https://doi.org/10.3389/ffgc.2021.776905</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yairmau\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
