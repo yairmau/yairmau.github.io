@@ -5,238 +5,162 @@ echo: false
 section-divs: false
 ---
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 
 
 <!-- learn more about fenced divs here:
 https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html -->
 
-::: {layout="[30,20]" layout-valign="center"}
-:::: text_here
+<!-- Each person is a .person block: text first, then the photo.
+Styles live in custom.scss. Photos should be square. -->
+
+:::: {.person}
+::: {.person-text}
 ## Yair Mau
 ### Principal Investigator
 > *Problems worthy of attack prove their worth by fighting back.*  
 > --- **Piet Hein**
-::::
-:::: picture_here
-<img src="archive/images/group/yair2025.jpg" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/yair2025.jpg" alt="Yair Mau" class="person-photo"/>
+::::
 
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
+:::: {.person}
+::: {.person-text}
 ## Erez Feuer
 ### PhD student
 
 plant responses to drought and heatwaves
-
-::::
-:::: picture_here
-<img src="archive/images/group/erez-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/erez-500px.png" alt="Erez Feuer" class="person-photo"/>
+::::
 
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
-## Oded Hollander
-### MSc student
-
-Plant-plant interactions in a consumer-resource framework
-
-Co-advisor: [Niv DeMalach](https://plantscience.agri.huji.ac.il/people/niv-de-malach)
-
-::::
-:::: picture_here
-<img src="archive/images/group/oded-hollander-350px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
-:::
-
-<!-- ------------ -->
-
-::: {layout="[30,20]"}
-:::: text_here
+:::: {.person}
+::: {.person-text}
 ## Yonatan Schwartz
 ### MSc student
 
 Temperature heterogeneity in crop canopies
 
 Co-advisor: [David Helman](https://davidhelman.weebly.com/)
-
-::::
-:::: picture_here
-<img src="archive/images/group/yonatan-schwartz-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/yonatan-schwartz-500px.png" alt="Yonatan Schwartz" class="person-photo"/>
+::::
 
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
+:::: {.person}
+::: {.person-text}
 ## Dolev Arav
 ### MSc student
 
 Urban tree resilience across the globe
 
 Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
-
-::::
-:::: picture_here
-<img src="archive/images/group/dolev-arav-450px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/dolev-arav-450px.png" alt="Dolev Arav" class="person-photo"/>
+::::
 
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
+:::: {.person}
+::: {.person-text}
 ## Michael Ruggill
 ### MSc student
 
 Urban tree monitoring and early-warning stress indices
 
 Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
-
-::::
-:::: picture_here
-<img src="archive/images/group/michael-ruggill-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/michael-ruggill-500px.png" alt="Michael Ruggill" class="person-photo"/>
+::::
 
 <!-- ------------ -->
 
-::: {layout="[30,20]"}
-:::: text_here
+:::: {.person}
+::: {.person-text}
 ## Omer Tzuk
 ### Postdoc
 
 Water-plant relations in drylands, active inference regarding plant behavior and decision-making
-
-::::
-:::: picture_here
-<img src="archive/images/group/omer-tzuk-500px.png" border="0" alt="" width="300px" class="rounded-circle"/>
-::::
 :::
+<img src="archive/images/group/omer-tzuk-500px.png" alt="Omer Tzuk" class="person-photo"/>
+::::
 
 <!-- ------------ -->
-
-
 
 # Former members
 
+::::: {.former-grid}
 
-<!-- ------------ -->
+:::: {.former}
+<img src="archive/images/group/oded-hollander-350px.png" alt="Oded Hollander" class="person-photo"/>
 
-<!-- ------------ -->
-
-<br>
-
-::: {layout="[10,30,5]" layout-valign="center"}
-:::: picture_here
-<img src="archive/images/group/nurit-goldberg.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
+##### Oded Hollander
+**2024--2026**, MSc student  
+Plant-plant interactions in a consumer-resource framework  
+Co-advisor: [Niv DeMalach](https://plantscience.agri.huji.ac.il/people/niv-de-malach)
 ::::
-:::: text_here
+
+:::: {.former}
+<img src="archive/images/group/nurit-goldberg.png" alt="Nurit Goldberg" class="person-photo"/>
+
 ##### Nurit Goldberg
 **2020--2024**, PhD student  
 soil compaction, soil salinization
 ::::
-:::: stam
-::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/isaac-500px.jpg" alt="Isaac Kramer" class="person-photo"/>
 
-::: {layout="[5,10,30]"  layout-valign="center"}
-:::: stam
-::::
-:::: picture_here
-<img src="archive/images/group/isaac-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Isaac Kramer
 **2018--2022**, PhD student  
 soil salinization, irreversible soil degradation processes, sustainable resource use  
 [website](https://github.com/isaackramer)
 ::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/laura-500px.png" alt="Laura Rez" class="person-photo"/>
 
-::: {layout="[10,30,5]" layout-valign="center"}
-:::: picture_here
-<img src="archive/images/group/laura-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Laura Rez
 **2020--2022**, MSc student  
 plant water fluxes, heatwave impact on fruit trees
 ::::
-:::: stam
-::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/yuval-500px.png" alt="Yuval Bayer" class="person-photo"/>
 
-::: {layout="[5,10,30]"  layout-valign="center"}
-:::: stam
-::::
-:::: picture_here
-<img src="archive/images/group/yuval-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Yuval Bayer
 **2020--2022**, BSc Amirim project  
 Optimal stomatal control
 ::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/avi-500px.jpg" alt="Avi Gross" class="person-photo"/>
 
-::: {layout="[10,30,5]" layout-valign="center"}
-:::: picture_here
-<img src="archive/images/group/avi-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Avi Gross
 **2018--2020**, MSc student  
 Plant water storage dynamics
 ::::
-:::: stam
-::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/taiwo-500px.png" alt="Taiwo Adeyemo" class="person-photo"/>
 
-::: {layout="[5,10,30]" layout-valign="center"}
-:::: stam
-::::
-:::: picture_here
-<img src="archive/images/group/taiwo-500px.png" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Taiwo Adeyemo
 **2018--2020**, MSc student  
 Irreversible soil degradation
 ::::
-:::
 
-<br>
+:::: {.former}
+<img src="archive/images/group/avigail-500px.jpg" alt="Avigail Kaner" class="person-photo"/>
 
-::: {layout="[10,30,5]" layout-valign="center"}
-:::: picture_here
-<img src="archive/images/group/avigail-500px.jpg" border="0" alt="" width="150px" class="rounded-circle zoom"/>
-::::
-:::: text_here
 ##### Avigail Kaner
-**2017--2021**, Research Specialist  
+**2017--2021**, Research Specialist
 ::::
-:::: stam
-::::
-:::
 
-<div class="alert alert-success">
-  Theory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.  
-  <strong>— Unknown</strong></div>
+:::::
+
+> Theory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one knows why.  
+> **— Unknown**

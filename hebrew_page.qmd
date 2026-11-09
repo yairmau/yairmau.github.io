@@ -3,7 +3,6 @@ title: ""
 lang: he
 dir: rtl
 echo: false
-jupyter: python3
 section-divs: false
 format:
   html:

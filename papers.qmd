@@ -83,8 +83,9 @@ def print_paper(data):
         buttons.append(button(data['website'], "PDF", "bi-file-earmark-pdf-fill"))
     if "github" in data:
         buttons.append(button(data['github'], "Github", "bi-github"))
-    if "md" in data:
-        buttons.append(button(data['md'], "Markdown", "bi-file-earmark-text-fill"))
+    # Markdown button hidden for now; uncomment to bring it back
+    # if "md" in data:
+    #     buttons.append(button(data['md'], "Markdown", "bi-file-earmark-text-fill"))
     if "bib" in data:
         buttons.append(new_bib_button(data['handle'], data['bib']))
     # now show buttons
@@ -209,6 +210,5 @@ print_paper(yaml_data['mau2013phdthesis'][0])
 print_paper(yaml_data['mau2009mscthesis'][0])
 ```
 
-<div class="alert alert-success">
-  The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.  
-  <strong>— Pedro Domingos, The Master Algorithm</strong></div>
+> The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part.  
+> **— Pedro Domingos, The Master Algorithm**

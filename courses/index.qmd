@@ -34,7 +34,5 @@ section-divs: false
 
 </br></br>
 
-<div class="alert alert-success">
-  True science teaches, above all, to doubt and to be ignorant.  
-  <strong>— Miguel de Unamuno</strong>
-</div>
+> True science teaches, above all, to doubt and to be ignorant.  
+> **— Miguel de Unamuno**

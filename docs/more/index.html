@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title> More – Yair Mau</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,10 +33,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-830249afaf38a3b8ef87761716dd66f9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1d9754e6b7e1dc15a659fbcd6780067e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c992148a46b83bc6031e1954a95d8b24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7330974749f31be1051296dda8e2c4c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -70,7 +67,6 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 
 
-<link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content=" More – Yair Mau">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://yairmau.com/more/archive/images/group/yairmau_headshot.png">
@@ -89,8 +85,7 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo light-content">
-    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo dark-content">
+    <img src="../archive/site_images/site-logo-light.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Yair Mau</span>
@@ -164,10 +159,10 @@ gtag('config', 'G-43N4LS3BPR', { 'anonymize_ip': true});
 <h2 id="recommendations" class="anchored"><i class="fas fa-star fa-fw fa-lg fa-notbold svv" aria-hidden="true"></i> <a href="../more/recommendations.html">Recommendations</a></h2>
 <h2 id="how-i-made-this-website" class="anchored">How I made this website</h2>
 <p>This website was build using <a href="https://quarto.org">Quarto</a>, edited on <a href="https://code.visualstudio.com">VSCode</a>, hosted on <a href="https://pages.github.com">Github Pages</a>. The code for the whole website can be found on this <a href="https://github.com/yairmau/yairmau.github.io">GitHub repository</a>. Here are <a href="../more/quarto-tips.html">some tips</a> (mainly for myself) on nice tools for quarto.</p>
-<div class="alert alert-success">
-Computers are useless. They can only give you answers.<br>
-<strong>— Pablo Picasso</strong>
-</div>
+<blockquote class="blockquote">
+<p>Computers are useless. They can only give you answers.<br>
+<strong>— Pablo Picasso</strong></p>
+</blockquote>
 
 
 
@@ -223,14 +218,13 @@ Computers are useless. They can only give you answers.<br>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
