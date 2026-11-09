@@ -27,7 +27,6 @@ format:
   html:
     theme:
       light: [flatly, custom.scss, custom-light.scss]
-    css: styles.css
     highlight: false
     # https://quarto.org/docs/output-formats/html-code.html#highlighting
     highlight-style: gruvbox

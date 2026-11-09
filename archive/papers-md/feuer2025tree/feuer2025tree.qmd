@@ -4,7 +4,6 @@ echo: false
 # jupyter: python3
 section-divs: true
 toc: true
-keep-md: true
 ---
 
 * authors: Erez Feuer ${ }^{1}$ । Yakir Preisler ${ }^{2,3,4}$ । Eyal Rotenberg ${ }^{4}$ । Dan Yakir ${ }^{4}$ । Yair Mau ${ }^{1}$ <br>${ }^{1}$ Institute of Environmental Sciences, The Hebrew University of Jerusalem, Rehovot, Israel | ${ }^{2}$ Institute of Plant Science - Agricultural Research Organization Volcani Institute, Rishon LeZion, Israel | ${ }^{3}$ Department of Organismic and Evolutionary Biology, Harvard University, Cambridge, Massachusetts, USA | ${ }^{4}$ Earth and Planetary Science Department, Weizmann Institute of Science, Rehovot, Israel

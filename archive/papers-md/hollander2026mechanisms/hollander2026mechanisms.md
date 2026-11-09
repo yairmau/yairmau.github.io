@@ -4,7 +4,6 @@ echo: false
 # jupyter: python3
 section-divs: true
 toc: true
-keep-md: true
 ---
 
 * authors:
