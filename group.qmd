@@ -91,6 +91,19 @@ Water-plant relations in drylands, active inference regarding plant behavior and
 
 <!-- ------------ -->
 
+:::: {.person}
+::: {.person-text}
+## Ziv Peleg
+### MSc student
+
+Separating Physical Shading from Transpiration to Quantify Tree Cooling in Urban Environments
+
+Co-advisor: [Yakir Preisler](https://urbanforestlab.wordpress.com/)
+:::
+<img src="archive/images/group/ziv-peleg-300px.png" alt="Ziv Peleg" class="person-photo"/>
+::::
+<!-- ------------ -->
+
 # Former members
 
 ::::: {.former-grid}
