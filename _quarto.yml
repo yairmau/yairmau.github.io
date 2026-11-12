@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "**/*.qmd"
+    - "**/*.ipynb"
+    - "**/*.md"
+    - "!AGENTS.md"
+    - "!CLAUDE.md"
   resources:
     - archive/logo/favicon.ico
     - archive/logo/apple-touch-icon.png
