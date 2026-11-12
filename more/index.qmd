@@ -24,6 +24,16 @@ section-divs: false
 This website was build using [Quarto](https://quarto.org), edited on [VSCode](https://code.visualstudio.com), hosted on [Github Pages](https://pages.github.com).
 The code for the whole website can be found on this [GitHub repository](https://github.com/yairmau/yairmau.github.io). Here are [some tips](/more/quarto-tips.html) (mainly for myself) on nice tools for quarto.
 
+## The logo
+
+<img src="/archive/logo/primary-vertical-navy.svg" class="logo-aside" alt="The logo: a right triangle with a circle cut out of its slanted side">
+
+The logo starts from a classic construction of the golden ratio: a right triangle with legs 1 and 2, and a circle of diameter 1 centred on its slanted side. The circle takes the middle unit of that side and leaves two ends of exactly 1/φ, so from the top tip you meet the circle after 1/φ and leave it after φ.
+
+Stand it up and it reads as a planet with a tilted axis, leaning 26.6°, not far from Earth's 23.4°. Lay it on its side and it becomes a ball on an inclined plane, the setup of Galileo's experiments on falling motion. The small φ in the navigation bar keeps only the circle and the line through it.
+
+The full story, and the code that draws every version, is in the [logo system notebook](/python/jupyter/new_logo.html).
+
 
 > Computers are useless. They can only give you answers.  
 > **— Pablo Picasso**

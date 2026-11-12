@@ -1,11 +1,14 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - archive/logo/favicon.ico
+    - archive/logo/apple-touch-icon.png
 
 website:
   title: "Yair Mau"
   search: false
-  favicon: archive/site_images/favicon.ico
+  favicon: archive/logo/favicon.svg
   google-analytics: "G-43N4LS3BPR"
   site-url: https://yairmau.com
   open-graph:
@@ -13,7 +16,8 @@ website:
   twitter-card:
     image: archive/images/group/yairmau_headshot.png
   navbar:
-    logo: archive/site_images/site-logo-light.png
+    logo: archive/logo/phi-mark-white.svg
+    logo-alt: "Yair Mau"
     pinned: false
     collapse: true
     search: false

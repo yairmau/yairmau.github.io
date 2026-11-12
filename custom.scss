@@ -84,7 +84,52 @@ code {
 .navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
   max-width: 800px;
   margin: 0 auto;
-} 
+}
+
+// Navbar logo: the φ mark is tall and narrow, so it gets more height than Quarto's default
+.navbar .navbar-logo {
+  height: 32px;
+  max-height: 32px;
+  min-height: 0;
+}
+
+// Logo beside text (More page): the long straight edge faces the text like a wall
+.logo-aside {
+  float: right;
+  height: 190px;
+  margin: 0.3rem 0 1rem 2rem;
+}
+
+@media (max-width: 576px) {
+  .logo-aside {
+    height: 120px;
+    margin-left: 1rem;
+  }
+}
+
+// Home page: the logo stands to the right of the Contact block, its straight edge acting as a wall
+.contact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.contact-mark {
+  display: block;
+  height: 150px;
+}
+
+// On phones the contact lines need the full width; the navbar φ is still there
+@media (max-width: 576px) {
+  .contact-row {
+    display: block;
+  }
+
+  .contact-mark {
+    display: none;
+  }
+}
 
 // Paper metadata header (archive/papers-md pages)
 .paper-authors {
